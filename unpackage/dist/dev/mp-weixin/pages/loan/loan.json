@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "uni-segmented-control": "/components/uni-segmented-control/uni-segmented-control",
+    "uni-list": "/components/uni-list/uni-list",
+    "uni-list-item": "/components/uni-list-item/uni-list-item",
+    "u-line": "/node-modules/uview-ui/components/u-line/u-line",
+    "u-field": "/node-modules/uview-ui/components/u-field/u-field",
+    "uni-popup": "/components/uni-popup/uni-popup"
+  }
+}
