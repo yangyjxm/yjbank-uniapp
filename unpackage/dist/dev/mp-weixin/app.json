@@ -8,6 +8,9 @@
     "pages/footprint/index/index",
     "pages/footprint/location/location",
     "pages/wishlist/wishlist",
+    "pages/wishlist/add",
+    "pages/bet/betlist",
+    "pages/bet/add",
     "pages/signin/signin",
     "pages/calendar/calendar"
   ],

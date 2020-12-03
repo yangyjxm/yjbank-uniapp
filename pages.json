@@ -19,8 +19,13 @@
 	}, {
 		"path": "pages/wishlist/wishlist"
 	}, {
-		"path": "pages/signin/signin",
-		"style": {}
+		"path": "pages/wishlist/add"
+	}, {
+		"path": "pages/bet/betlist"
+	}, {
+		"path": "pages/bet/add"
+	}, {
+		"path": "pages/signin/signin"
 	}, {
 		"path": "pages/calendar/calendar",
 		"style": {

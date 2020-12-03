@@ -10243,15 +10243,30 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 /* 51 */,
 /* 52 */,
 /* 53 */,
-/* 54 */,
-/* 55 */,
-/* 56 */,
-/* 57 */,
-/* 58 */,
-/* 59 */,
-/* 60 */,
-/* 61 */,
-/* 62 */
+/* 54 */
+/*!************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js ***!
+  \************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(global, uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _createSuper(Derived) {return function () {var Super = _getPrototypeOf(Derived),result;if (_isNativeReflectConstruct()) {var NewTarget = _getPrototypeOf(this).constructor;result = Reflect.construct(Super, arguments, NewTarget);} else {result = Super.apply(this, arguments);}return _possibleConstructorReturn(this, result);};}function _possibleConstructorReturn(self, call) {if (call && (typeof call === "object" || typeof call === "function")) {return call;}return _assertThisInitialized(self);}function _assertThisInitialized(self) {if (self === void 0) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function");}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } });if (superClass) _setPrototypeOf(subClass, superClass);}function _wrapNativeSuper(Class) {var _cache = typeof Map === "function" ? new Map() : undefined;_wrapNativeSuper = function _wrapNativeSuper(Class) {if (Class === null || !_isNativeFunction(Class)) return Class;if (typeof Class !== "function") {throw new TypeError("Super expression must either be null or a function");}if (typeof _cache !== "undefined") {if (_cache.has(Class)) return _cache.get(Class);_cache.set(Class, Wrapper);}function Wrapper() {return _construct(Class, arguments, _getPrototypeOf(this).constructor);}Wrapper.prototype = Object.create(Class.prototype, { constructor: { value: Wrapper, enumerable: false, writable: true, configurable: true } });return _setPrototypeOf(Wrapper, Class);};return _wrapNativeSuper(Class);}function _construct(Parent, args, Class) {if (_isNativeReflectConstruct()) {_construct = Reflect.construct;} else {_construct = function _construct(Parent, args, Class) {var a = [null];a.push.apply(a, args);var Constructor = Function.bind.apply(Parent, a);var instance = new Constructor();if (Class) _setPrototypeOf(instance, Class.prototype);return instance;};}return _construct.apply(null, arguments);}function _isNativeReflectConstruct() {if (typeof Reflect === "undefined" || !Reflect.construct) return false;if (Reflect.construct.sham) return false;if (typeof Proxy === "function") return true;try {Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));return true;} catch (e) {return false;}}function _isNativeFunction(fn) {return Function.toString.call(fn).indexOf("[native code]") !== -1;}function _setPrototypeOf(o, p) {_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {o.__proto__ = p;return o;};return _setPrototypeOf(o, p);}function _getPrototypeOf(o) {_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {return o.__proto__ || Object.getPrototypeOf(o);};return _getPrototypeOf(o);}var e = "undefined" != typeof globalThis ? globalThis : "undefined" != typeof window ? window : "undefined" != typeof global ? global : "undefined" != typeof self ? self : {};function t(e) {return e && e.__esModule && Object.prototype.hasOwnProperty.call(e, "default") ? e.default : e;}function n(e, t, n) {return e(n = { path: t, exports: {}, require: function require(e, t) {return function () {throw new Error("Dynamic requires are not currently supported by @rollup/plugin-commonjs");}(null == t && n.path);} }, n.exports), n.exports;}var r = n(function (e, t) {var n;e.exports = (n = n || function (e, t) {var n = Object.create || function () {function e() {}return function (t) {var n;return e.prototype = t, n = new e(), e.prototype = null, n;};}(),r = {},o = r.lib = {},s = o.Base = { extend: function extend(e) {var t = n(this);return e && t.mixIn(e), t.hasOwnProperty("init") && this.init !== t.init || (t.init = function () {t.$super.init.apply(this, arguments);}), t.init.prototype = t, t.$super = this, t;}, create: function create() {var e = this.extend();return e.init.apply(e, arguments), e;}, init: function init() {}, mixIn: function mixIn(e) {for (var t in e) {e.hasOwnProperty(t) && (this[t] = e[t]);}e.hasOwnProperty("toString") && (this.toString = e.toString);}, clone: function clone() {return this.init.prototype.extend(this);} },i = o.WordArray = s.extend({ init: function init(e, t) {e = this.words = e || [], this.sigBytes = null != t ? t : 4 * e.length;}, toString: function toString(e) {return (e || c).stringify(this);}, concat: function concat(e) {var t = this.words,n = e.words,r = this.sigBytes,o = e.sigBytes;if (this.clamp(), r % 4) for (var s = 0; s < o; s++) {var i = n[s >>> 2] >>> 24 - s % 4 * 8 & 255;t[r + s >>> 2] |= i << 24 - (r + s) % 4 * 8;} else for (s = 0; s < o; s += 4) {t[r + s >>> 2] = n[s >>> 2];}return this.sigBytes += o, this;}, clamp: function clamp() {var t = this.words,n = this.sigBytes;t[n >>> 2] &= 4294967295 << 32 - n % 4 * 8, t.length = e.ceil(n / 4);}, clone: function clone() {var e = s.clone.call(this);return e.words = this.words.slice(0), e;}, random: function random(t) {for (var n, r = [], o = function o(t) {t = t;var n = 987654321,r = 4294967295;return function () {var o = ((n = 36969 * (65535 & n) + (n >> 16) & r) << 16) + (t = 18e3 * (65535 & t) + (t >> 16) & r) & r;return o /= 4294967296, (o += .5) * (e.random() > .5 ? 1 : -1);};}, s = 0; s < t; s += 4) {var a = o(4294967296 * (n || e.random()));n = 987654071 * a(), r.push(4294967296 * a() | 0);}return new i.init(r, t);} }),a = r.enc = {},c = a.Hex = { stringify: function stringify(e) {for (var t = e.words, n = e.sigBytes, r = [], o = 0; o < n; o++) {var s = t[o >>> 2] >>> 24 - o % 4 * 8 & 255;r.push((s >>> 4).toString(16)), r.push((15 & s).toString(16));}return r.join("");}, parse: function parse(e) {for (var t = e.length, n = [], r = 0; r < t; r += 2) {n[r >>> 3] |= parseInt(e.substr(r, 2), 16) << 24 - r % 8 * 4;}return new i.init(n, t / 2);} },u = a.Latin1 = { stringify: function stringify(e) {for (var t = e.words, n = e.sigBytes, r = [], o = 0; o < n; o++) {var s = t[o >>> 2] >>> 24 - o % 4 * 8 & 255;r.push(String.fromCharCode(s));}return r.join("");}, parse: function parse(e) {for (var t = e.length, n = [], r = 0; r < t; r++) {n[r >>> 2] |= (255 & e.charCodeAt(r)) << 24 - r % 4 * 8;}return new i.init(n, t);} },l = a.Utf8 = { stringify: function stringify(e) {try {return decodeURIComponent(escape(u.stringify(e)));} catch (e) {throw new Error("Malformed UTF-8 data");}}, parse: function parse(e) {return u.parse(unescape(encodeURIComponent(e)));} },f = o.BufferedBlockAlgorithm = s.extend({ reset: function reset() {this._data = new i.init(), this._nDataBytes = 0;}, _append: function _append(e) {"string" == typeof e && (e = l.parse(e)), this._data.concat(e), this._nDataBytes += e.sigBytes;}, _process: function _process(t) {var n = this._data,r = n.words,o = n.sigBytes,s = this.blockSize,a = o / (4 * s),c = (a = t ? e.ceil(a) : e.max((0 | a) - this._minBufferSize, 0)) * s,u = e.min(4 * c, o);if (c) {for (var l = 0; l < c; l += s) {this._doProcessBlock(r, l);}var f = r.splice(0, c);n.sigBytes -= u;}return new i.init(f, u);}, clone: function clone() {var e = s.clone.call(this);return e._data = this._data.clone(), e;}, _minBufferSize: 0 }),p = (o.Hasher = f.extend({ cfg: s.extend(), init: function init(e) {this.cfg = this.cfg.extend(e), this.reset();}, reset: function reset() {f.reset.call(this), this._doReset();}, update: function update(e) {return this._append(e), this._process(), this;}, finalize: function finalize(e) {return e && this._append(e), this._doFinalize();}, blockSize: 16, _createHelper: function _createHelper(e) {return function (t, n) {return new e.init(n).finalize(t);};}, _createHmacHelper: function _createHmacHelper(e) {return function (t, n) {return new p.HMAC.init(e, n).finalize(t);};} }), r.algo = {});return r;}(Math), n);}),o = (n(function (e, t) {var n;e.exports = (n = r, function (e) {var t = n,r = t.lib,o = r.WordArray,s = r.Hasher,i = t.algo,a = [];!function () {for (var t = 0; t < 64; t++) {a[t] = 4294967296 * e.abs(e.sin(t + 1)) | 0;}}();var c = i.MD5 = s.extend({ _doReset: function _doReset() {this._hash = new o.init([1732584193, 4023233417, 2562383102, 271733878]);}, _doProcessBlock: function _doProcessBlock(e, t) {for (var n = 0; n < 16; n++) {var r = t + n,o = e[r];e[r] = 16711935 & (o << 8 | o >>> 24) | 4278255360 & (o << 24 | o >>> 8);}var s = this._hash.words,i = e[t + 0],c = e[t + 1],h = e[t + 2],d = e[t + 3],y = e[t + 4],g = e[t + 5],v = e[t + 6],_ = e[t + 7],m = e[t + 8],b = e[t + 9],w = e[t + 10],T = e[t + 11],E = e[t + 12],S = e[t + 13],O = e[t + 14],k = e[t + 15],A = s[0],P = s[1],I = s[2],N = s[3];A = u(A, P, I, N, i, 7, a[0]), N = u(N, A, P, I, c, 12, a[1]), I = u(I, N, A, P, h, 17, a[2]), P = u(P, I, N, A, d, 22, a[3]), A = u(A, P, I, N, y, 7, a[4]), N = u(N, A, P, I, g, 12, a[5]), I = u(I, N, A, P, v, 17, a[6]), P = u(P, I, N, A, _, 22, a[7]), A = u(A, P, I, N, m, 7, a[8]), N = u(N, A, P, I, b, 12, a[9]), I = u(I, N, A, P, w, 17, a[10]), P = u(P, I, N, A, T, 22, a[11]), A = u(A, P, I, N, E, 7, a[12]), N = u(N, A, P, I, S, 12, a[13]), I = u(I, N, A, P, O, 17, a[14]), A = l(A, P = u(P, I, N, A, k, 22, a[15]), I, N, c, 5, a[16]), N = l(N, A, P, I, v, 9, a[17]), I = l(I, N, A, P, T, 14, a[18]), P = l(P, I, N, A, i, 20, a[19]), A = l(A, P, I, N, g, 5, a[20]), N = l(N, A, P, I, w, 9, a[21]), I = l(I, N, A, P, k, 14, a[22]), P = l(P, I, N, A, y, 20, a[23]), A = l(A, P, I, N, b, 5, a[24]), N = l(N, A, P, I, O, 9, a[25]), I = l(I, N, A, P, d, 14, a[26]), P = l(P, I, N, A, m, 20, a[27]), A = l(A, P, I, N, S, 5, a[28]), N = l(N, A, P, I, h, 9, a[29]), I = l(I, N, A, P, _, 14, a[30]), A = f(A, P = l(P, I, N, A, E, 20, a[31]), I, N, g, 4, a[32]), N = f(N, A, P, I, m, 11, a[33]), I = f(I, N, A, P, T, 16, a[34]), P = f(P, I, N, A, O, 23, a[35]), A = f(A, P, I, N, c, 4, a[36]), N = f(N, A, P, I, y, 11, a[37]), I = f(I, N, A, P, _, 16, a[38]), P = f(P, I, N, A, w, 23, a[39]), A = f(A, P, I, N, S, 4, a[40]), N = f(N, A, P, I, i, 11, a[41]), I = f(I, N, A, P, d, 16, a[42]), P = f(P, I, N, A, v, 23, a[43]), A = f(A, P, I, N, b, 4, a[44]), N = f(N, A, P, I, E, 11, a[45]), I = f(I, N, A, P, k, 16, a[46]), A = p(A, P = f(P, I, N, A, h, 23, a[47]), I, N, i, 6, a[48]), N = p(N, A, P, I, _, 10, a[49]), I = p(I, N, A, P, O, 15, a[50]), P = p(P, I, N, A, g, 21, a[51]), A = p(A, P, I, N, E, 6, a[52]), N = p(N, A, P, I, d, 10, a[53]), I = p(I, N, A, P, w, 15, a[54]), P = p(P, I, N, A, c, 21, a[55]), A = p(A, P, I, N, m, 6, a[56]), N = p(N, A, P, I, k, 10, a[57]), I = p(I, N, A, P, v, 15, a[58]), P = p(P, I, N, A, S, 21, a[59]), A = p(A, P, I, N, y, 6, a[60]), N = p(N, A, P, I, T, 10, a[61]), I = p(I, N, A, P, h, 15, a[62]), P = p(P, I, N, A, b, 21, a[63]), s[0] = s[0] + A | 0, s[1] = s[1] + P | 0, s[2] = s[2] + I | 0, s[3] = s[3] + N | 0;}, _doFinalize: function _doFinalize() {var t = this._data,n = t.words,r = 8 * this._nDataBytes,o = 8 * t.sigBytes;n[o >>> 5] |= 128 << 24 - o % 32;var s = e.floor(r / 4294967296),i = r;n[15 + (o + 64 >>> 9 << 4)] = 16711935 & (s << 8 | s >>> 24) | 4278255360 & (s << 24 | s >>> 8), n[14 + (o + 64 >>> 9 << 4)] = 16711935 & (i << 8 | i >>> 24) | 4278255360 & (i << 24 | i >>> 8), t.sigBytes = 4 * (n.length + 1), this._process();for (var a = this._hash, c = a.words, u = 0; u < 4; u++) {var l = c[u];c[u] = 16711935 & (l << 8 | l >>> 24) | 4278255360 & (l << 24 | l >>> 8);}return a;}, clone: function clone() {var e = s.clone.call(this);return e._hash = this._hash.clone(), e;} });function u(e, t, n, r, o, s, i) {var a = e + (t & n | ~t & r) + o + i;return (a << s | a >>> 32 - s) + t;}function l(e, t, n, r, o, s, i) {var a = e + (t & r | n & ~r) + o + i;return (a << s | a >>> 32 - s) + t;}function f(e, t, n, r, o, s, i) {var a = e + (t ^ n ^ r) + o + i;return (a << s | a >>> 32 - s) + t;}function p(e, t, n, r, o, s, i) {var a = e + (n ^ (t | ~r)) + o + i;return (a << s | a >>> 32 - s) + t;}t.MD5 = s._createHelper(c), t.HmacMD5 = s._createHmacHelper(c);}(Math), n.MD5);}), n(function (e, t) {var n, o, s;e.exports = (o = (n = r).lib.Base, s = n.enc.Utf8, void (n.algo.HMAC = o.extend({ init: function init(e, t) {e = this._hasher = new e.init(), "string" == typeof t && (t = s.parse(t));var n = e.blockSize,r = 4 * n;t.sigBytes > r && (t = e.finalize(t)), t.clamp();for (var o = this._oKey = t.clone(), i = this._iKey = t.clone(), a = o.words, c = i.words, u = 0; u < n; u++) {a[u] ^= 1549556828, c[u] ^= 909522486;}o.sigBytes = i.sigBytes = r, this.reset();}, reset: function reset() {var e = this._hasher;e.reset(), e.update(this._iKey);}, update: function update(e) {return this._hasher.update(e), this;}, finalize: function finalize(e) {var t = this._hasher,n = t.finalize(e);return t.reset(), t.finalize(this._oKey.clone().concat(n));} })));}), n(function (e, t) {e.exports = r.HmacMD5;}));function s(e) {return function (t) {if (!((t = t || {}).success || t.fail || t.complete)) return e.call(this, t);e.call(this, t).then(function (e) {t.success && t.success(e), t.complete && t.complete(e);}).catch(function (e) {t.fail && t.fail(e), t.complete && t.complete(e);});};}var i = /*#__PURE__*/function (_Error) {_inherits(i, _Error);var _super = _createSuper(i);function i(e) {var _this;_classCallCheck(this, i);_this = _super.call(this, e.message), _this.errMsg = e.message || "", Object.defineProperties(_assertThisInitialized(_this), { code: { get: function get() {return e.code;} }, requestId: { get: function get() {return e.requestId;} }, message: { get: function get() {return this.errMsg;}, set: function set(e) {this.errMsg = e;} } });return _this;}return i;}( /*#__PURE__*/_wrapNativeSuper(Error));var a;try {a = __webpack_require__(/*! uni-stat-config */ 55).default || __webpack_require__(/*! uni-stat-config */ 55);} catch (e) {a = { appid: "" };}var c, u;function l() {var e = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 8;var t = "";for (; t.length < e;) {t += Math.random().toString(32).substring(2);}return t.substring(0, e);}function f() {if ("n" === p()) {try {c = plus.runtime.getDCloudId();} catch (e) {c = "";}return c;}return c || (c = l(32), uni.setStorage({ key: "__DC_CLOUD_UUID", data: c })), c;}function p() {return { "app-plus": "n", h5: "h5", "mp-weixin": "wx", "mp-alipay": "ali", "mp-baidu": "bd", "mp-toutiao": "tt", "mp-qq": "qq", "quickapp-native": "qn" }["mp-weixin"];}var h = { sign: function sign(e, t) {var n = "";return Object.keys(e).sort().forEach(function (t) {e[t] && (n = n + "&" + t + "=" + e[t]);}), n = n.slice(1), o(n, t).toString();}, wrappedRequest: function wrappedRequest(e, t) {return new Promise(function (n, r) {t(Object.assign(e, { complete: function complete(e) {e || (e = {}),  false && false;var t = e.data && e.data.header && e.data.header["x-serverless-request-id"] || e.header && e.header["request-id"];if (!e.statusCode || e.statusCode >= 400) return r(new i({ code: "SYS_ERR", message: e.errMsg || "request:fail", requestId: t }));var o = e.data;if (o.error) return r(new i({ code: o.error.code, message: o.error.message, requestId: t }));o.result = o.data, o.requestId = t, delete o.data, n(o);} }));});} };var d = { image: "image/*", jpg: "image/jpeg", jpeg: "image/jpeg", png: "image/png", gif: "image/gif", webp: "image/webp", svg: "image/svg+xml", mp3: "audio/mp3", mp4: "video/mp4", ogg: "audio/ogg", webm: "video/webm" };function y(e) {return d[e.toLowerCase()];}var g = /*#__PURE__*/function () {function g(e) {_classCallCheck(this, g);["spaceId", "clientSecret"].forEach(function (t) {if (!Object.prototype.hasOwnProperty.call(e, t)) throw new Error("缺少参数" + t);}), this.config = Object.assign({}, { endpoint: "https://api.bspapp.com" }, e), this.config.provider = "aliyun", this.config.requestUrl = this.config.endpoint + "/client", this.config.envType = this.config.envType || "public", this.config.accessTokenKey = "access_token_" + this.config.spaceId;}_createClass(g, [{ key: "setAccessToken", value: function setAccessToken(e) {this.accessToken = e;} }, { key: "requestWrapped", value: function requestWrapped(e) {return h.wrappedRequest(e, this.adapter.request);} }, { key: "requestAuth", value: function requestAuth(e) {return this.requestWrapped(e);} }, { key: "request", value: function request(e, t) {var _this2 = this;return this.hasAccessToken ? t ? this.requestWrapped(e) : this.requestWrapped(e).catch(function (t) {return new Promise(function (e, n) {!t || "GATEWAY_INVALID_TOKEN" !== t.code && "InvalidParameter.InvalidToken" !== t.code ? n(t) : e();}).then(function () {return _this2.getAccessToken();}).then(function () {var t = _this2.rebuildRequest(e);return _this2.request(t, !0);});}) : this.getAccessToken().then(function () {var t = _this2.rebuildRequest(e);return _this2.request(t, !0);});} }, { key: "rebuildRequest", value: function rebuildRequest(e) {var t = Object.assign({}, e);return t.data.token = this.accessToken, t.header["x-basement-token"] = this.accessToken, t.header["x-serverless-sign"] = h.sign(t.data, this.config.clientSecret), t;} }, { key: "setupRequest", value: function setupRequest(e, t) {var n = Object.assign({}, e, { spaceId: this.config.spaceId, timestamp: Date.now() }),r = { "Content-Type": "application/json" };return "auth" !== t && (n.token = this.accessToken, r["x-basement-token"] = this.accessToken), r["x-serverless-sign"] = h.sign(n, this.config.clientSecret), { url: this.config.requestUrl, method: "POST", data: n, dataType: "json", header: r };} }, { key: "getAccessToken", value: function getAccessToken() {var _this3 = this;return this.requestAuth(this.setupRequest({ method: "serverless.auth.user.anonymousAuthorize", params: "{}" }, "auth")).then(function (e) {return new Promise(function (t, n) {e.result && e.result.accessToken ? (_this3.setAccessToken(e.result.accessToken), t(_this3.accessToken)) : n(new i({ code: "AUTH_FAILED", message: "获取accessToken失败" }));});});} }, { key: "authorize", value: function authorize() {this.getAccessToken();} }, { key: "callFunction", value: function callFunction(e) {var t = { method: "serverless.function.runtime.invoke", params: JSON.stringify({ functionTarget: e.name, functionArgs: e.data || {} }) };return this.request(this.setupRequest(t));} }, { key: "getOSSUploadOptionsFromPath", value: function getOSSUploadOptionsFromPath(e) {var t = { method: "serverless.file.resource.generateProximalSign", params: JSON.stringify(e) };return this.request(this.setupRequest(t));} }, { key: "uploadFileToOSS", value: function uploadFileToOSS(_ref) {var _this4 = this;var e = _ref.url,t = _ref.formData,n = _ref.name,r = _ref.filePath,o = _ref.fileType,s = _ref.onUploadProgress;return new Promise(function (a, c) {var u = _this4.adapter.uploadFile({ url: e, formData: t, name: n, filePath: r, fileType: o, header: { "X-OSS-server-side-encrpytion": "AES256" }, success: function success(e) {e && e.statusCode < 400 ? a(e) : c(new i({ code: "UPLOAD_FAILED", message: "文件上传失败" }));}, fail: function fail(e) {c(e);} });"function" == typeof s && u && "function" == typeof u.onProgressUpdate && u.onProgressUpdate(function (e) {s({ loaded: e.totalBytesSent, total: e.totalBytesExpectedToSend });});});} }, { key: "reportOSSUpload", value: function reportOSSUpload(e) {var t = { method: "serverless.file.resource.report", params: JSON.stringify(e) };return this.request(this.setupRequest(t));} }, { key: "uploadFile", value: function uploadFile(_ref2) {var _this5 = this;var e = _ref2.filePath,t = _ref2.cloudPath,_ref2$fileType = _ref2.fileType,n = _ref2$fileType === void 0 ? "image" : _ref2$fileType,r = _ref2.onUploadProgress,o = _ref2.config;if (!t) throw new i({ code: "CLOUDPATH_REQUIRED", message: "cloudPath不可为空" });var s = o && o.envType || this.config.envType;var a, c, u;var l = t.split("?")[0].split(".").pop();if (!y(l)) throw new i({ code: "UNSUPPORTED_FILE_TYPE", message: "不支持的文件类型" });return this.getOSSUploadOptionsFromPath({ env: s, filename: t }).then(function (t) {var o = t.result;a = y(l), c = o.id, u = "https://" + o.cdnDomain + "/" + o.ossPath;var s = { url: "https://" + o.host, formData: { "Cache-Control": "max-age=2592000", "Content-Disposition": "attachment", OSSAccessKeyId: o.accessKeyId, Signature: o.signature, host: o.host, id: c, key: o.ossPath, policy: o.policy, success_action_status: 200 }, fileName: "file", name: "file", filePath: e, fileType: n, contentType: a };return _this5.uploadFileToOSS(Object.assign({}, s, { onUploadProgress: r }));}).then(function () {return _this5.reportOSSUpload({ id: c, contentType: a });}).then(function (t) {return new Promise(function (n, r) {t.success ? n({ success: !0, filePath: e, fileID: u }) : r(new i({ code: "UPLOAD_FAILED", message: "文件上传失败" }));});});} }, { key: "deleteFile", value: function deleteFile(_ref3) {var e = _ref3.fileList;var t = { method: "serverless.file.resource.delete", params: JSON.stringify({ id: e[0] }) };return this.request(this.setupRequest(t));} }, { key: "hasAccessToken", get: function get() {return !!this.accessToken;} }]);return g;}();var v = { init: function init(e) {var t = new g(e);["uploadFile", "deleteFile"].forEach(function (e) {t[e] = s(t[e]).bind(t);});var n = { signInAnonymously: function signInAnonymously() {return t.authorize();}, getLoginState: function getLoginState() {return Promise.resolve(!1);} };return t.auth = function () {return n;}, t;} };var _;function m(e, t, n) {void 0 === n && (n = {});var r = /\?/.test(t),o = "";for (var s in n) {"" === o ? !r && (t += "?") : o += "&", o += s + "=" + encodeURIComponent(n[s]);}return /^http(s)?\:\/\//.test(t += o) ? t : "" + e + t;}!function (e) {e.local = "local", e.none = "none", e.session = "session";}(_ || (_ = {}));var _b,w = (_b = function b(e, t) {return (_b = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (e, t) {e.__proto__ = t;} || function (e, t) {for (var n in t) {t.hasOwnProperty(n) && (e[n] = t[n]);}})(e, t);}, function (e, t) {function n() {this.constructor = e;}_b(e, t), e.prototype = null === t ? Object.create(t) : (n.prototype = t.prototype, new n());}),_T = function T() {return (_T = Object.assign || function (e) {for (var t, n = 1, r = arguments.length; n < r; n++) {for (var o in t = arguments[n]) {Object.prototype.hasOwnProperty.call(t, o) && (e[o] = t[o]);}}return e;}).apply(this, arguments);};var E = function (e) {function t() {return null !== e && e.apply(this, arguments) || this;}return w(t, e), t.prototype.post = function (e) {var t = e.url,n = e.data,r = e.headers;return new Promise(function (e, o) {uni.request({ url: m("https:", t), data: n, method: "POST", header: r, success: function success(t) {e(t);}, fail: function fail(e) {o(e);} });});}, t.prototype.upload = function (e) {return new Promise(function (t, n) {var r = e.url,o = e.file,s = e.data,i = e.headers,a = e.fileType,c = uni.uploadFile({ url: m("https:", r), name: "file", formData: Object.assign({}, s), filePath: o, fileType: a, header: i, success: function success(e) {var n = { statusCode: e.statusCode, data: e.data || {} };200 === e.statusCode && s.success_action_status && (n.statusCode = parseInt(s.success_action_status, 10)), t(n);}, fail: function fail(e) { false && false, n(new Error(e.errMsg || "uploadFile:fail"));} });"function" == typeof e.onUploadProgress && c && "function" == typeof c.onProgressUpdate && c.onProgressUpdate(function (t) {e.onUploadProgress({ loaded: t.totalBytesSent, total: t.totalBytesExpectedToSend });});});}, t.prototype.download = function (e) {var t = e.url,n = e.headers;return new Promise(function (e, r) {uni.downloadFile({ url: m("https:", t), header: n, success: function success(t) {200 === t.statusCode && t.tempFilePath ? e({ statusCode: 200, tempFilePath: t.tempFilePath }) : e(t);}, fail: function fail(e) {r(e);} });});}, t;}(function () {}),S = { setItem: function setItem(e, t) {uni.setStorageSync(e, t);}, getItem: function getItem(e) {return uni.getStorageSync(e);}, removeItem: function removeItem(e) {uni.removeStorageSync(e);}, clear: function clear() {uni.clearStorageSync();} },O = function O(e, t) {void 0 === t && (t = {});var n = uni.connectSocket(_T({ url: e }, t));return { set onopen(e) {n.onOpen(e);}, set onmessage(e) {n.onMessage(e);}, set onclose(e) {n.onClose(e);}, set onerror(e) {n.onError(e);}, send: function send(e) {return n.send({ data: e });}, close: function close(e, t) {return n.close({ code: e, reason: t });}, get readyState() {return n.readyState;}, CONNECTING: 0, OPEN: 1, CLOSING: 2, CLOSED: 3 };};var k,A,P = { genAdapter: function genAdapter() {return { root: {}, reqClass: E, wsClass: O, localStorage: S, primaryStorage: _.local };}, isMatch: function isMatch() {return "undefined" != typeof uni && !!uni.request;}, runtime: "uni_app" },I = n(function (e, t) {Object.defineProperty(t, "__esModule", { value: !0 }), t.getQuery = function (e, t) {if ("undefined" == typeof window) return !1;var n = t || window.location.search,r = new RegExp("(^|&)" + e + "=([^&]*)(&|$)"),o = n.substr(n.indexOf("?") + 1).match(r);return null != o ? o[2] : "";}, t.getHash = function (e) {var t = window.location.hash.match(new RegExp("[#?&/]" + e + "=([^&#]*)"));return t ? t[1] : "";}, t.removeParam = function (e, t) {var n = t.split("?")[0],r = [],o = -1 !== t.indexOf("?") ? t.split("?")[1] : "";if ("" !== o) {for (var s = (r = o.split("&")).length - 1; s >= 0; s -= 1) {r[s].split("=")[0] === e && r.splice(s, 1);}n = n + "?" + r.join("&");}return n;}, t.createPromiseCallback = function () {var e;if (!Promise) {(e = function e() {}).promise = {};var t = function t() {throw new Error('Your Node runtime does support ES6 Promises. Set "global.Promise" to your preferred implementation of promises.');};return Object.defineProperty(e.promise, "then", { get: t }), Object.defineProperty(e.promise, "catch", { get: t }), e;}var n = new Promise(function (t, n) {e = function e(_e, r) {return _e ? n(_e) : t(r);};});return e.promise = n, e;}, t.getWeixinCode = function () {return t.getQuery("code") || t.getHash("code");}, t.getMiniAppCode = function () {return new Promise(function (e, t) {wx.login({ success: function success(t) {e(t.code);}, fail: function fail(e) {t(e);} });});}, t.isArray = function (e) {return "[object Array]" === Object.prototype.toString.call(e);}, t.isString = function (e) {return "string" == typeof e;}, t.isUndefined = function (e) {return void 0 === e;}, t.isInstanceOf = function (e, t) {return e instanceof t;}, t.isFormData = function (e) {return "[object FormData]" === Object.prototype.toString.call(e);}, t.genSeqId = function () {return Math.random().toString(16).slice(2);}, t.getArgNames = function (e) {var t = e.toString();return t.slice(t.indexOf("(") + 1, t.indexOf(")")).match(/([^\s,]+)/g);}, t.formatUrl = function (e, t, n) {void 0 === n && (n = {});var r = /\?/.test(t),o = "";for (var s in n) {"" === o ? !r && (t += "?") : o += "&", o += s + "=" + encodeURIComponent(n[s]);}return /^http(s)?\:\/\//.test(t += o) ? t : "" + e + t;};}),N = "dist/index.js",C = "./dist/index.d.ts",x = { build: "npm run tsc && webpack", tsc: "tsc -p tsconfig.json", "tsc:w": "tsc -p tsconfig.json -w", test: "jest --verbose false -i", e2e: 'NODE_ENV=e2e webpack && jest --config="./jest.e2e.config.js"  --verbose false -i "e2e"', start: "webpack-dev-server --hot --open", eslint: 'eslint "./**/*.js" "./**/*.ts"', "eslint-fix": 'eslint --fix "./**/*.js" "./**/*.ts"', test_web: "npm run tsc && webpack-dev-server --devtool eval-source-map --progress --colors --hot --inline --content-base ./dist --host jimmytest-088bef.tcb.qcloud.la --port 80 --disableHostCheck true --mode development --config webpack.test.js" },R = { type: "git", url: "https://github.com/TencentCloudBase/tcb-js-sdk" },q = ["tcb", "js-sdk"],U = { "@cloudbase/adapter-interface": "^0.2.0", "@cloudbase/adapter-wx_mp": "^0.2.1", "@cloudbase/database": "^0.9.8" },j = { "@babel/core": "^7.6.2", "@babel/plugin-proposal-class-properties": "^7.5.5", "@babel/plugin-proposal-object-rest-spread": "^7.6.2", "@babel/plugin-transform-runtime": "^7.6.2", "@babel/preset-env": "^7.6.2", "@babel/preset-typescript": "^7.6.0", "@babel/runtime": "^7.6.2", "@types/jest": "^23.1.4", "@types/node": "^10.14.4", "@types/superagent": "^4.1.4", axios: "^0.19.0", "babel-eslint": "^10.0.1", "babel-loader": "^8.0.6", "babel-polyfill": "^6.26.0", eslint: "^5.16.0", "eslint-config-alloy": "^1.4.2", "eslint-config-prettier": "^4.1.0", "eslint-plugin-prettier": "^3.0.1", "eslint-plugin-typescript": "^1.0.0-rc.3", express: "^4.17.1", husky: "^3.1.0", jest: "^24.7.1", "jest-puppeteer": "^4.3.0", "lint-staged": "^9.5.0", "power-assert": "^1.6.1", puppeteer: "^1.20.0", "serve-static": "^1.14.1", "ts-jest": "^23.10.4", "ts-loader": "^6.2.1", typescript: "^3.4.3", "typescript-eslint-parser": "^22.0.0", webpack: "^4.41.3", "webpack-bundle-analyzer": "^3.4.1", "webpack-cli": "^3.3.0", "webpack-dev-server": "^3.3.1", "webpack-merge": "^4.2.2", "webpack-visualizer-plugin": "^0.1.11" },L = { hooks: { "pre-commit": "lint-staged" } },D = { name: "tcb-js-sdk", version: "1.3.5", description: "js sdk for tcb", main: N, types: C, scripts: x, repository: R, keywords: q, author: "jimmyjzhang", license: "ISC", dependencies: U, devDependencies: j, husky: L, "lint-staged": { "*.{js,ts}": ["eslint --fix", "git add"] } },M = (k = Object.freeze({ __proto__: null, name: "tcb-js-sdk", version: "1.3.5", description: "js sdk for tcb", main: N, types: C, scripts: x, repository: R, keywords: q, author: "jimmyjzhang", license: "ISC", dependencies: U, devDependencies: j, husky: L, default: D })) && k.default || k,K = n(function (t, n) {var r = e && e.__importStar || function (e) {if (e && e.__esModule) return e;var t = {};if (null != e) for (var n in e) {Object.hasOwnProperty.call(e, n) && (t[n] = e[n]);}return t.default = e, t;};Object.defineProperty(n, "__esModule", { value: !0 });var o = r(M);n.SDK_VERISON = o.version, n.ACCESS_TOKEN = "access_token", n.ACCESS_TOKEN_Expire = "access_token_expire", n.REFRESH_TOKEN = "refresh_token", n.ANONYMOUS_UUID = "anonymous_uuid", n.LOGIN_TYPE_KEY = "login_type", n.protocol = "undefined" != typeof location && "http:" === location.protocol ? "http:" : "https:", n.BASE_URL =  false ? undefined : "//tcb-api.tencentcloudapi.com/web";});!function (e) {e.local = "local", e.none = "none", e.session = "session";}(A || (A = {}));var F = function F() {},G = function G() {};var H = Object.freeze({ __proto__: null, get StorageType() {return A;}, AbstractSDKRequest: F, AbstractStorage: G, formatUrl: function formatUrl(e, t, n) {void 0 === n && (n = {});var r = /\?/.test(t),o = "";for (var s in n) {"" === o ? !r && (t += "?") : o += "&", o += s + "=" + encodeURIComponent(n[s]);}return /^http(s)?\:\/\//.test(t += o) ? t : "" + e + t;} }),V = n(function (t, n) {var r = e && e.__extends || function () {var _e2 = function e(t, n) {return (_e2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (e, t) {e.__proto__ = t;} || function (e, t) {for (var n in t) {t.hasOwnProperty(n) && (e[n] = t[n]);}})(t, n);};return function (t, n) {function r() {this.constructor = t;}_e2(t, n), t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r());};}(),o = e && e.__assign || function () {return (o = Object.assign || function (e) {for (var t, n = 1, r = arguments.length; n < r; n++) {for (var o in t = arguments[n]) {Object.prototype.hasOwnProperty.call(t, o) && (e[o] = t[o]);}}return e;}).apply(this, arguments);},s = e && e.__awaiter || function (e, t, n, r) {return new (n || (n = Promise))(function (o, s) {function i(e) {try {c(r.next(e));} catch (e) {s(e);}}function a(e) {try {c(r.throw(e));} catch (e) {s(e);}}function c(e) {var t;e.done ? o(e.value) : (t = e.value, t instanceof n ? t : new n(function (e) {e(t);})).then(i, a);}c((r = r.apply(e, t || [])).next());});},i = e && e.__generator || function (e, t) {var n,r,o,s,i = { label: 0, sent: function sent() {if (1 & o[0]) throw o[1];return o[1];}, trys: [], ops: [] };return s = { next: a(0), throw: a(1), return: a(2) }, "function" == typeof Symbol && (s[Symbol.iterator] = function () {return this;}), s;function a(s) {return function (a) {return function (s) {if (n) throw new TypeError("Generator is already executing.");for (; i;) {try {if (n = 1, r && (o = 2 & s[0] ? r.return : s[0] ? r.throw || ((o = r.return) && o.call(r), 0) : r.next) && !(o = o.call(r, s[1])).done) return o;switch (r = 0, o && (s = [2 & s[0], o.value]), s[0]) {case 0:case 1:o = s;break;case 4:return i.label++, { value: s[1], done: !1 };case 5:i.label++, r = s[1], s = [0];continue;case 7:s = i.ops.pop(), i.trys.pop();continue;default:if (!(o = i.trys, (o = o.length > 0 && o[o.length - 1]) || 6 !== s[0] && 2 !== s[0])) {i = 0;continue;}if (3 === s[0] && (!o || s[1] > o[0] && s[1] < o[3])) {i.label = s[1];break;}if (6 === s[0] && i.label < o[1]) {i.label = o[1], o = s;break;}if (o && i.label < o[2]) {i.label = o[2], i.ops.push(s);break;}o[2] && i.ops.pop(), i.trys.pop();continue;}s = t.call(e, i);} catch (e) {s = [6, e], r = 0;} finally {n = o = 0;}}if (5 & s[0]) throw s[1];return { value: s[0] ? s[1] : void 0, done: !0 };}([s, a]);};}};Object.defineProperty(n, "__esModule", { value: !0 });var a = function (e) {function t() {return null !== e && e.apply(this, arguments) || this;}return r(t, e), t.prototype.get = function (e) {return this._request(o(o({}, e), { method: "get" }));}, t.prototype.post = function (e) {return this._request(o(o({}, e), { method: "post" }));}, t.prototype.upload = function (e) {var t = e.data,n = e.file,r = e.name,s = new FormData();for (var i in t) {s.append(i, t[i]);}return s.append("key", r), s.append("file", n), this._request(o(o({}, e), { data: s, method: "post" }));}, t.prototype.download = function (e) {return s(this, void 0, void 0, function () {var t, n;return i(this, function (r) {return t = decodeURIComponent(new URL(e.url).pathname.split("/").pop() || ""), (n = document.createElement("a")).href = e.url, n.setAttribute("download", t), n.setAttribute("target", "_blank"), document.body.appendChild(n), n.click(), [2, new Promise(function (t) {t({ statusCode: 200, tempFilePath: e.url });})];});});}, t.prototype._request = function (e) {var t = String(e.method).toLowerCase() || "get";return new Promise(function (n) {var r = e.url,o = e.headers,s = void 0 === o ? {} : o,i = e.data,a = e.responseType,c = I.formatUrl(K.protocol, r, "get" === t ? i : {}),u = new XMLHttpRequest();for (var l in u.open(t, c), a && (u.responseType = a), s) {u.setRequestHeader(l, s[l]);}u.onreadystatechange = function () {if (4 === u.readyState) {var e = { statusCode: u.status };try {e.data = JSON.parse(u.responseText);} catch (e) {}n(e);}}, u.send("post" === t && I.isFormData(i) ? i : JSON.stringify(i || {}));});}, t;}(H.AbstractSDKRequest);n.WebRequest = a, n.genAdapter = function () {return { root: window, reqClass: a, wsClass: WebSocket, localStorage: localStorage, sessionStorage: sessionStorage };};}),Y = n(function (t, n) {var r = e && e.__importStar || function (e) {if (e && e.__esModule) return e;var t = {};if (null != e) for (var n in e) {Object.hasOwnProperty.call(e, n) && (t[n] = e[n]);}return t.default = e, t;};Object.defineProperty(n, "__esModule", { value: !0 });var o,s = r(V);!function (e) {e.WEB = "web", e.WX_MP = "wx_mp";}(o = n.RUNTIME || (n.RUNTIME = {})), n.useAdapters = function (e) {for (var t = 0, n = I.isArray(e) ? e : [e]; t < n.length; t++) {var r = n[t],o = r.isMatch,s = r.genAdapter,i = r.runtime;if (o()) return { adapter: s(), runtime: i };}}, n.useDefaultAdapter = function () {return { adapter: s.genAdapter(), runtime: o.WEB };}, n.Adapter = { adapter: null, runtime: void 0 };}),B = n(function (t, n) {var r = e && e.__extends || function () {var _e3 = function e(t, n) {return (_e3 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (e, t) {e.__proto__ = t;} || function (e, t) {for (var n in t) {t.hasOwnProperty(n) && (e[n] = t[n]);}})(t, n);};return function (t, n) {function r() {this.constructor = t;}_e3(t, n), t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r());};}();Object.defineProperty(n, "__esModule", { value: !0 });var o = function () {function e(e) {switch (Y.Adapter.adapter.primaryStorage || e) {case "local":this.storageClass = Y.Adapter.adapter.localStorage || new s();break;case "none":this.storageClass = new s();break;default:this.storageClass = Y.Adapter.adapter.sessionStorage || new s();}}return e.prototype.setStore = function (e, t, n) {try {if (!this.storageClass) return;} catch (e) {return;}var r,o = {};o.version = n || "localCachev1", o.content = t, r = JSON.stringify(o);try {this.storageClass.setItem(e, r);} catch (e) {return;}}, e.prototype.getStore = function (e, t) {try {if (!this.storageClass) return;} catch (e) {return "";}t = t || "localCachev1";var n = this.storageClass.getItem(e);return n && n.indexOf(t) >= 0 ? JSON.parse(n).content : "";}, e.prototype.removeStore = function (e) {this.storageClass.removeItem(e);}, e;}();n.Cache = o;var s = function (e) {function t() {var t = e.call(this) || this;return Y.Adapter.adapter.root.tcbObject || (Y.Adapter.adapter.root.tcbObject = {}), t;}return r(t, e), t.prototype.setItem = function (e, t) {Y.Adapter.adapter.root.tcbObject[e] = t;}, t.prototype.getItem = function (e) {return Y.Adapter.adapter.root.tcbObject[e];}, t.prototype.removeItem = function (e) {delete Y.Adapter.adapter.root.tcbObject[e];}, t.prototype.clear = function () {delete Y.Adapter.adapter.root.tcbObject;}, t;}(H.AbstractStorage);}),W = n(function (t, n) {var r = e && e.__extends || function () {var _e4 = function e(t, n) {return (_e4 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (e, t) {e.__proto__ = t;} || function (e, t) {for (var n in t) {t.hasOwnProperty(n) && (e[n] = t[n]);}})(t, n);};return function (t, n) {function r() {this.constructor = t;}_e4(t, n), t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r());};}(),o = e && e.__spreadArrays || function () {for (var e = 0, t = 0, n = arguments.length; t < n; t++) {e += arguments[t].length;}var r = Array(e),o = 0;for (t = 0; t < n; t++) {for (var s = arguments[t], i = 0, a = s.length; i < a; i++, o++) {r[o] = s[i];}}return r;};Object.defineProperty(n, "__esModule", { value: !0 });var s = function s(e, t) {this.data = t || null, this.name = e;};n.IEvent = s;var i = function (e) {function t(t, n) {var r = e.call(this, "error", { error: t, data: n }) || this;return r.error = t, r;}return r(t, e), t;}(s);n.IErrorEvent = i;var a = function () {function e() {this._listeners = {};}return e.prototype.on = function (e, t) {return function (e, t, n) {n[e] = n[e] || [], n[e].push(t);}(e, t, this._listeners), this;}, e.prototype.off = function (e, t) {return function (e, t, n) {if (n && n[e]) {var r = n[e].indexOf(t);-1 !== r && n[e].splice(r, 1);}}(e, t, this._listeners), this;}, e.prototype.fire = function (e, t) {if (I.isInstanceOf(e, i)) return console.error(e.error), this;var n = I.isString(e) ? new s(e, t || {}) : e,r = n.name;if (this._listens(r)) {n.target = this;for (var a = 0, c = this._listeners[r] ? o(this._listeners[r]) : []; a < c.length; a++) {c[a].call(this, n);}}return this;}, e.prototype._listens = function (e) {return this._listeners[e] && this._listeners[e].length > 0;}, e;}();n.IEventEmitter = a;var c = new a();n.addEventListener = function (e, t) {c.on(e, t);}, n.activateEvent = function (e, t) {void 0 === t && (t = {}), c.fire(e, t);}, n.removeEventListener = function (e, t) {c.off(e, t);}, n.EVENTS = { LOGIN_STATE_CHANGED: "loginStateChanged", LOGIN_STATE_EXPIRE: "loginStateExpire", LOGIN_TYPE_CHANGE: "loginTypeChanged", ANONYMOUS_CONVERTED: "anonymousConverted", REFRESH_ACCESS_TOKEN: "refreshAccessToken" };}),z = n(function (t, n) {var r = e && e.__assign || function () {return (r = Object.assign || function (e) {for (var t, n = 1, r = arguments.length; n < r; n++) {for (var o in t = arguments[n]) {Object.prototype.hasOwnProperty.call(t, o) && (e[o] = t[o]);}}return e;}).apply(this, arguments);},o = e && e.__awaiter || function (e, t, n, r) {return new (n || (n = Promise))(function (o, s) {function i(e) {try {c(r.next(e));} catch (e) {s(e);}}function a(e) {try {c(r.throw(e));} catch (e) {s(e);}}function c(e) {var t;e.done ? o(e.value) : (t = e.value, t instanceof n ? t : new n(function (e) {e(t);})).then(i, a);}c((r = r.apply(e, t || [])).next());});},s = e && e.__generator || function (e, t) {var n,r,o,s,i = { label: 0, sent: function sent() {if (1 & o[0]) throw o[1];return o[1];}, trys: [], ops: [] };return s = { next: a(0), throw: a(1), return: a(2) }, "function" == typeof Symbol && (s[Symbol.iterator] = function () {return this;}), s;function a(s) {return function (a) {return function (s) {if (n) throw new TypeError("Generator is already executing.");for (; i;) {try {if (n = 1, r && (o = 2 & s[0] ? r.return : s[0] ? r.throw || ((o = r.return) && o.call(r), 0) : r.next) && !(o = o.call(r, s[1])).done) return o;switch (r = 0, o && (s = [2 & s[0], o.value]), s[0]) {case 0:case 1:o = s;break;case 4:return i.label++, { value: s[1], done: !1 };case 5:i.label++, r = s[1], s = [0];continue;case 7:s = i.ops.pop(), i.trys.pop();continue;default:if (!(o = i.trys, (o = o.length > 0 && o[o.length - 1]) || 6 !== s[0] && 2 !== s[0])) {i = 0;continue;}if (3 === s[0] && (!o || s[1] > o[0] && s[1] < o[3])) {i.label = s[1];break;}if (6 === s[0] && i.label < o[1]) {i.label = o[1], o = s;break;}if (o && i.label < o[2]) {i.label = o[2], i.ops.push(s);break;}o[2] && i.ops.pop(), i.trys.pop();continue;}s = t.call(e, i);} catch (e) {s = [6, e], r = 0;} finally {n = o = 0;}}if (5 & s[0]) throw s[1];return { value: s[0] ? s[1] : void 0, done: !0 };}([s, a]);};}};Object.defineProperty(n, "__esModule", { value: !0 });var i = ["auth.getJwt", "auth.logout", "auth.signInWithTicket", "auth.signInAnonymously"],a = { "X-SDK-Version": K.SDK_VERISON };function c(e, t, n) {var o = e[t];e[t] = function (t) {var s = {},i = {};n.forEach(function (n) {var r = n.call(e, t),o = r.data,a = r.headers;Object.assign(s, o), Object.assign(i, a);});var a = t.data;return a && function () {if (I.isFormData(a)) for (var e in s) {a.append(e, s[e]);} else t.data = r(r({}, a), s);}(), t.headers = r(r({}, t.headers || {}), i), o.call(e, t);};}function u() {var e = I.genSeqId();return { data: { seqId: e }, headers: r(r({}, a), { "x-seqid": e }) };}var l = function () {function e(e) {void 0 === e && (e = {}), this.config = e, this.cache = new B.Cache(e.persistence), this.accessTokenKey = K.ACCESS_TOKEN + "_" + e.env, this.accessTokenExpireKey = K.ACCESS_TOKEN_Expire + "_" + e.env, this.refreshTokenKey = K.REFRESH_TOKEN + "_" + e.env, this.anonymousUuidKey = K.ANONYMOUS_UUID + "_" + e.env, this.loginTypeKey = K.LOGIN_TYPE_KEY + "_" + e.env, this._reqClass = new Y.Adapter.adapter.reqClass(), c(this._reqClass, "post", [u]), c(this._reqClass, "upload", [u]), c(this._reqClass, "download", [u]);}return e.prototype.post = function (e) {return o(this, void 0, void 0, function () {return s(this, function (t) {switch (t.label) {case 0:return [4, this._reqClass.post(e)];case 1:return [2, t.sent()];}});});}, e.prototype.upload = function (e) {return o(this, void 0, void 0, function () {return s(this, function (t) {switch (t.label) {case 0:return [4, this._reqClass.upload(e)];case 1:return [2, t.sent()];}});});}, e.prototype.download = function (e) {return o(this, void 0, void 0, function () {return s(this, function (t) {switch (t.label) {case 0:return [4, this._reqClass.download(e)];case 1:return [2, t.sent()];}});});}, e.prototype.refreshAccessToken = function () {return o(this, void 0, void 0, function () {var e, t, n;return s(this, function (r) {switch (r.label) {case 0:this._refreshAccessTokenPromise || (this._refreshAccessTokenPromise = this._refreshAccessToken()), r.label = 1;case 1:return r.trys.push([1, 3,, 4]), [4, this._refreshAccessTokenPromise];case 2:return e = r.sent(), [3, 4];case 3:return n = r.sent(), t = n, [3, 4];case 4:if (this._refreshAccessTokenPromise = null, this._shouldRefreshAccessTokenHook = null, t) throw t;return [2, e];}});});}, e.prototype._refreshAccessToken = function () {return o(this, void 0, void 0, function () {var e, t, n, r;return s(this, function (o) {switch (o.label) {case 0:if (this.cache.removeStore(this.accessTokenKey), this.cache.removeStore(this.accessTokenExpireKey), !(e = this.cache.getStore(this.refreshTokenKey))) throw new Error("[tcb-js-sdk] 未登录CloudBase");return t = { refresh_token: e }, this.cache.getStore(this.loginTypeKey) === J.LOGINTYPE.ANONYMOUS && (t.anonymous_uuid = this.cache.getStore(this.anonymousUuidKey)), [4, this.request("auth.getJwt", t)];case 1:if ((n = o.sent()).data.code) throw "SIGN_PARAM_INVALID" !== (r = n.data.code) && "REFRESH_TOKEN_EXPIRED" !== r && "INVALID_REFRESH_TOKEN" !== r || (W.activateEvent(W.EVENTS.LOGIN_STATE_EXPIRE), this.cache.removeStore(this.refreshTokenKey)), new Error("[tcb-js-sdk] 刷新access token失败：" + n.data.code);return n.data.access_token ? (W.activateEvent(W.EVENTS.REFRESH_ACCESS_TOKEN), this.cache.setStore(this.accessTokenKey, n.data.access_token), this.cache.setStore(this.accessTokenExpireKey, n.data.access_token_expire + Date.now()), W.activateEvent(W.EVENTS.LOGIN_TYPE_CHANGE, n.data.login_type), [2, { accessToken: n.data.access_token, accessTokenExpire: n.data.access_token_expire }]) : (n.data.refresh_token && (this.cache.removeStore(this.refreshTokenKey), this.cache.setStore(this.refreshTokenKey, n.data.refresh_token), this._refreshAccessToken()), [2]);}});});}, e.prototype.getAccessToken = function () {return o(this, void 0, void 0, function () {var e, t, n, r;return s(this, function (o) {switch (o.label) {case 0:return e = this.cache.getStore(this.accessTokenKey), t = this.cache.getStore(this.accessTokenExpireKey), n = !0, (r = this._shouldRefreshAccessTokenHook) ? [4, this._shouldRefreshAccessTokenHook(e, t)] : [3, 2];case 1:r = !o.sent(), o.label = 2;case 2:return r && (n = !1), (!e || !t || t < Date.now()) && n ? [2, this.refreshAccessToken()] : [2, { accessToken: e, accessTokenExpire: t }];}});});}, e.prototype.request = function (e, t, n) {return o(this, void 0, void 0, function () {var o, a, c, u, l, f, p, h, d, y, g, v;return s(this, function (s) {switch (s.label) {case 0:return o = "application/x-www-form-urlencoded", a = r({ action: e, env: this.config.env, dataVersion: "2019-08-16" }, t), -1 !== i.indexOf(e) ? [3, 2] : (c = a, [4, this.getAccessToken()]);case 1:c.access_token = s.sent().accessToken, s.label = 2;case 2:if ("storage.uploadFile" === e) {for (l in u = new FormData()) {u.hasOwnProperty(l) && void 0 !== u[l] && u.append(l, a[l]);}o = "multipart/form-data";} else o = "application/json;charset=UTF-8", u = a;return f = { headers: { "content-type": o } }, n && n.onUploadProgress && (f.onUploadProgress = n.onUploadProgress), p = t.parse, h = t.query, d = t.search, y = { env: this.config.env }, p && (y.parse = !0), h && (y = r(r({}, h), y)), g = I.formatUrl(K.protocol, K.BASE_URL, y), d && (g += d), [4, this.post(r({ url: g, data: u }, f))];case 3:if (v = s.sent(), 200 !== Number(v.status) && 200 !== Number(v.statusCode) || !v.data) throw new Error("network request error");return [2, v];}});});}, e.prototype.send = function (e, t) {return void 0 === t && (t = {}), o(this, void 0, void 0, function () {var n, r, o;return s(this, function (s) {switch (s.label) {case 0:return n = setTimeout(function () {console.warn("Database operation is longer than 3s. Please check query performance and your network environment.");}, 3e3), [4, this.request(e, t, { onUploadProgress: t.onUploadProgress })];case 1:return r = s.sent(), clearTimeout(n), "ACCESS_TOKEN_EXPIRED" !== r.data.code || -1 !== i.indexOf(e) ? [3, 4] : [4, this.refreshAccessToken()];case 2:return s.sent(), [4, this.request(e, t, { onUploadProgress: t.onUploadProgress })];case 3:if ((o = s.sent()).data.code) throw new Error("[" + o.data.code + "] " + o.data.message);return [2, o.data];case 4:if (r.data.code) throw new Error("[" + r.data.code + "] " + r.data.message);return [2, r.data];}});});}, e;}();n.Request = l;}),J = n(function (t, n) {var r,o = e && e.__awaiter || function (e, t, n, r) {return new (n || (n = Promise))(function (o, s) {function i(e) {try {c(r.next(e));} catch (e) {s(e);}}function a(e) {try {c(r.throw(e));} catch (e) {s(e);}}function c(e) {var t;e.done ? o(e.value) : (t = e.value, t instanceof n ? t : new n(function (e) {e(t);})).then(i, a);}c((r = r.apply(e, t || [])).next());});},s = e && e.__generator || function (e, t) {var n,r,o,s,i = { label: 0, sent: function sent() {if (1 & o[0]) throw o[1];return o[1];}, trys: [], ops: [] };return s = { next: a(0), throw: a(1), return: a(2) }, "function" == typeof Symbol && (s[Symbol.iterator] = function () {return this;}), s;function a(s) {return function (a) {return function (s) {if (n) throw new TypeError("Generator is already executing.");for (; i;) {try {if (n = 1, r && (o = 2 & s[0] ? r.return : s[0] ? r.throw || ((o = r.return) && o.call(r), 0) : r.next) && !(o = o.call(r, s[1])).done) return o;switch (r = 0, o && (s = [2 & s[0], o.value]), s[0]) {case 0:case 1:o = s;break;case 4:return i.label++, { value: s[1], done: !1 };case 5:i.label++, r = s[1], s = [0];continue;case 7:s = i.ops.pop(), i.trys.pop();continue;default:if (!(o = i.trys, (o = o.length > 0 && o[o.length - 1]) || 6 !== s[0] && 2 !== s[0])) {i = 0;continue;}if (3 === s[0] && (!o || s[1] > o[0] && s[1] < o[3])) {i.label = s[1];break;}if (6 === s[0] && i.label < o[1]) {i.label = o[1], o = s;break;}if (o && i.label < o[2]) {i.label = o[2], i.ops.push(s);break;}o[2] && i.ops.pop(), i.trys.pop();continue;}s = t.call(e, i);} catch (e) {s = [6, e], r = 0;} finally {n = o = 0;}}if (5 & s[0]) throw s[1];return { value: s[0] ? s[1] : void 0, done: !0 };}([s, a]);};}};Object.defineProperty(n, "__esModule", { value: !0 }), function (e) {e.ANONYMOUS = "ANONYMOUS", e.WECHAT = "WECHAT", e.CUSTOM = "CUSTOM", e.NULL = "NULL";}(r = n.LOGINTYPE || (n.LOGINTYPE = {}));var i = function () {function e(e) {this._loginType = r.NULL, this.config = e, this.onLoginTypeChanged = this.onLoginTypeChanged.bind(this), W.addEventListener(W.EVENTS.LOGIN_TYPE_CHANGE, this.onLoginTypeChanged);}return e.prototype.init = function () {this.httpRequest = new z.Request(this.config), this.cache = new B.Cache(this.config.persistence), this.accessTokenKey = K.ACCESS_TOKEN + "_" + this.config.env, this.accessTokenExpireKey = K.ACCESS_TOKEN_Expire + "_" + this.config.env, this.refreshTokenKey = K.REFRESH_TOKEN + "_" + this.config.env, this.loginTypeKey = K.LOGIN_TYPE_KEY + "_" + this.config.env;}, e.prototype.onLoginTypeChanged = function (e) {this._loginType = e.data, this.cache.setStore(this.loginTypeKey, this._loginType);}, Object.defineProperty(e.prototype, "loginType", { get: function get() {return this._loginType;}, enumerable: !0, configurable: !0 }), e.prototype.setRefreshToken = function (e) {this.cache.removeStore(this.accessTokenKey), this.cache.removeStore(this.accessTokenExpireKey), this.cache.setStore(this.refreshTokenKey, e);}, e.prototype.getRefreshTokenByWXCode = function (e, t, n) {return o(this, void 0, void 0, function () {var r;return s(this, function (o) {return "auth.getJwt", r = Y.Adapter.runtime === Y.RUNTIME.WX_MP ? "1" : "0", [2, this.httpRequest.send("auth.getJwt", { appid: e, loginType: t, code: n, hybridMiniapp: r }).then(function (e) {if (e.code) throw new Error("[tcb-js-sdk] 微信登录失败: " + e.code);if (e.refresh_token) return { refreshToken: e.refresh_token, accessToken: e.access_token, accessTokenExpire: e.access_token_expire };throw new Error("[tcb-js-sdk] getJwt未返回refreshToken");})];});});}, e;}();n.default = i;}),X = n(function (t, n) {var r = e && e.__extends || function () {var _e5 = function e(t, n) {return (_e5 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (e, t) {e.__proto__ = t;} || function (e, t) {for (var n in t) {t.hasOwnProperty(n) && (e[n] = t[n]);}})(t, n);};return function (t, n) {function r() {this.constructor = t;}_e5(t, n), t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r());};}(),o = e && e.__awaiter || function (e, t, n, r) {return new (n || (n = Promise))(function (o, s) {function i(e) {try {c(r.next(e));} catch (e) {s(e);}}function a(e) {try {c(r.throw(e));} catch (e) {s(e);}}function c(e) {var t;e.done ? o(e.value) : (t = e.value, t instanceof n ? t : new n(function (e) {e(t);})).then(i, a);}c((r = r.apply(e, t || [])).next());});},s = e && e.__generator || function (e, t) {var n,r,o,s,i = { label: 0, sent: function sent() {if (1 & o[0]) throw o[1];return o[1];}, trys: [], ops: [] };return s = { next: a(0), throw: a(1), return: a(2) }, "function" == typeof Symbol && (s[Symbol.iterator] = function () {return this;}), s;function a(s) {return function (a) {return function (s) {if (n) throw new TypeError("Generator is already executing.");for (; i;) {try {if (n = 1, r && (o = 2 & s[0] ? r.return : s[0] ? r.throw || ((o = r.return) && o.call(r), 0) : r.next) && !(o = o.call(r, s[1])).done) return o;switch (r = 0, o && (s = [2 & s[0], o.value]), s[0]) {case 0:case 1:o = s;break;case 4:return i.label++, { value: s[1], done: !1 };case 5:i.label++, r = s[1], s = [0];continue;case 7:s = i.ops.pop(), i.trys.pop();continue;default:if (!(o = i.trys, (o = o.length > 0 && o[o.length - 1]) || 6 !== s[0] && 2 !== s[0])) {i = 0;continue;}if (3 === s[0] && (!o || s[1] > o[0] && s[1] < o[3])) {i.label = s[1];break;}if (6 === s[0] && i.label < o[1]) {i.label = o[1], o = s;break;}if (o && i.label < o[2]) {i.label = o[2], i.ops.push(s);break;}o[2] && i.ops.pop(), i.trys.pop();continue;}s = t.call(e, i);} catch (e) {s = [6, e], r = 0;} finally {n = o = 0;}}if (5 & s[0]) throw s[1];return { value: s[0] ? s[1] : void 0, done: !0 };}([s, a]);};}},i = e && e.__importStar || function (e) {if (e && e.__esModule) return e;var t = {};if (null != e) for (var n in e) {Object.hasOwnProperty.call(e, n) && (t[n] = e[n]);}return t.default = e, t;};Object.defineProperty(n, "__esModule", { value: !0 });var a,c,u = i(I),l = i(J);!function (e) {e.snsapi_base = "snsapi_base", e.snsapi_userinfo = "snsapi_userinfo", e.snsapi_login = "snsapi_login";}(a || (a = {})), function (e) {e.redirect = "redirect", e.prompt = "prompt";}(c || (c = {}));var f = {},p = function (e) {function t(t, n, r, o, s) {var i = e.call(this, t) || this;return i.config = t, i.appid = n, i.scope = Y.Adapter.runtime === Y.RUNTIME.WX_MP ? "snsapi_base" : r, i.state = s || "weixin", i.loginMode = o || "redirect", i;}return r(t, e), t.prototype.signIn = function () {return o(this, void 0, void 0, function () {var e, t, n;return s(this, function (r) {switch (r.label) {case 0:f[this.config.env] || (f[this.config.env] = this._signIn()), r.label = 1;case 1:return r.trys.push([1, 3,, 4]), [4, f[this.config.env]];case 2:return e = r.sent(), [3, 4];case 3:return n = r.sent(), t = n, [3, 4];case 4:if (f[this.config.env] = null, t) throw t;return [2, e];}});});}, t.prototype._signIn = function () {return o(this, void 0, void 0, function () {var e, t, n, r, o, i;return s(this, function (s) {switch (s.label) {case 0:if (e = this.cache.getStore(this.accessTokenKey), t = this.cache.getStore(this.accessTokenExpireKey), e) {if (t && t > Date.now()) return [2, { credential: { accessToken: e, refreshToken: this.cache.getStore(this.refreshTokenKey) } }];this.cache.removeStore(this.accessTokenKey), this.cache.removeStore(this.accessTokenExpireKey);}if (!1 === Object.values(a).includes(a[this.scope])) throw new Error("错误的scope类型");return Y.Adapter.runtime !== Y.RUNTIME.WX_MP ? [3, 2] : [4, u.getMiniAppCode()];case 1:return n = s.sent(), [3, 4];case 2:return [4, u.getWeixinCode()];case 3:if (!(n = s.sent())) return [2, this.redirect()];s.label = 4;case 4:return r = function (e) {switch (e) {case a.snsapi_login:return "WECHAT-OPEN";default:return "WECHAT-PUBLIC";}}(this.scope), [4, this.getRefreshTokenByWXCode(this.appid, r, n)];case 5:return o = s.sent(), i = o.refreshToken, this.cache.setStore(this.refreshTokenKey, i), o.accessToken && this.cache.setStore(this.accessTokenKey, o.accessToken), o.accessTokenExpire && this.cache.setStore(this.accessTokenExpireKey, o.accessTokenExpire + Date.now()), W.activateEvent(W.EVENTS.LOGIN_STATE_CHANGED), W.activateEvent(W.EVENTS.LOGIN_TYPE_CHANGE, l.LOGINTYPE.WECHAT), [2, { credential: { refreshToken: i } }];}});});}, t.prototype.redirect = function () {var e = u.removeParam("code", location.href);e = u.removeParam("state", e), e = encodeURIComponent(e);var t = "//open.weixin.qq.com/connect/oauth2/authorize";"snsapi_login" === this.scope && (t = "//open.weixin.qq.com/connect/qrconnect"), "redirect" === c[this.loginMode] && (location.href = t + "?appid=" + this.appid + "&redirect_uri=" + e + "&response_type=code&scope=" + this.scope + "&state=" + this.state + "#wechat_redirect");}, t;}(l.default);n.default = p;}),$ = n(function (t, n) {var r = e && e.__extends || function () {var _e6 = function e(t, n) {return (_e6 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (e, t) {e.__proto__ = t;} || function (e, t) {for (var n in t) {t.hasOwnProperty(n) && (e[n] = t[n]);}})(t, n);};return function (t, n) {function r() {this.constructor = t;}_e6(t, n), t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r());};}(),o = e && e.__assign || function () {return (o = Object.assign || function (e) {for (var t, n = 1, r = arguments.length; n < r; n++) {for (var o in t = arguments[n]) {Object.prototype.hasOwnProperty.call(t, o) && (e[o] = t[o]);}}return e;}).apply(this, arguments);},s = e && e.__awaiter || function (e, t, n, r) {return new (n || (n = Promise))(function (o, s) {function i(e) {try {c(r.next(e));} catch (e) {s(e);}}function a(e) {try {c(r.throw(e));} catch (e) {s(e);}}function c(e) {var t;e.done ? o(e.value) : (t = e.value, t instanceof n ? t : new n(function (e) {e(t);})).then(i, a);}c((r = r.apply(e, t || [])).next());});},i = e && e.__generator || function (e, t) {var n,r,o,s,i = { label: 0, sent: function sent() {if (1 & o[0]) throw o[1];return o[1];}, trys: [], ops: [] };return s = { next: a(0), throw: a(1), return: a(2) }, "function" == typeof Symbol && (s[Symbol.iterator] = function () {return this;}), s;function a(s) {return function (a) {return function (s) {if (n) throw new TypeError("Generator is already executing.");for (; i;) {try {if (n = 1, r && (o = 2 & s[0] ? r.return : s[0] ? r.throw || ((o = r.return) && o.call(r), 0) : r.next) && !(o = o.call(r, s[1])).done) return o;switch (r = 0, o && (s = [2 & s[0], o.value]), s[0]) {case 0:case 1:o = s;break;case 4:return i.label++, { value: s[1], done: !1 };case 5:i.label++, r = s[1], s = [0];continue;case 7:s = i.ops.pop(), i.trys.pop();continue;default:if (!(o = i.trys, (o = o.length > 0 && o[o.length - 1]) || 6 !== s[0] && 2 !== s[0])) {i = 0;continue;}if (3 === s[0] && (!o || s[1] > o[0] && s[1] < o[3])) {i.label = s[1];break;}if (6 === s[0] && i.label < o[1]) {i.label = o[1], o = s;break;}if (o && i.label < o[2]) {i.label = o[2], i.ops.push(s);break;}o[2] && i.ops.pop(), i.trys.pop();continue;}s = t.call(e, i);} catch (e) {s = [6, e], r = 0;} finally {n = o = 0;}}if (5 & s[0]) throw s[1];return { value: s[0] ? s[1] : void 0, done: !0 };}([s, a]);};}},a = e && e.__importStar || function (e) {if (e && e.__esModule) return e;var t = {};if (null != e) for (var n in e) {Object.hasOwnProperty.call(e, n) && (t[n] = e[n]);}return t.default = e, t;};Object.defineProperty(n, "__esModule", { value: !0 });var c = a(J),u = function (e) {function t(t) {var n = e.call(this, o(o({}, t), { persistence: "local" })) || this;return n._anonymousUuidKey = K.ANONYMOUS_UUID + "_" + n.config.env, n._loginTypeKey = K.LOGIN_TYPE_KEY + "_" + n.config.env, n;}return r(t, e), t.prototype.init = function () {e.prototype.init.call(this);}, t.prototype.signIn = function () {return s(this, void 0, void 0, function () {var e, t, n;return i(this, function (r) {switch (r.label) {case 0:return e = this.cache.getStore(this._anonymousUuidKey) || void 0, t = this.cache.getStore(this.refreshTokenKey) || void 0, [4, this.httpRequest.send("auth.signInAnonymously", { anonymous_uuid: e, refresh_token: t })];case 1:return (n = r.sent()).uuid && n.refresh_token ? (this._setAnonymousUUID(n.uuid), this.setRefreshToken(n.refresh_token), [4, this.httpRequest.refreshAccessToken()]) : [3, 3];case 2:return r.sent(), W.activateEvent(W.EVENTS.LOGIN_STATE_CHANGED), W.activateEvent(W.EVENTS.LOGIN_TYPE_CHANGE, c.LOGINTYPE.ANONYMOUS), [2, { credential: { refreshToken: n.refresh_token } }];case 3:throw new Error("[tcb-js-sdk] 匿名登录失败");}});});}, t.prototype.linkAndRetrieveDataWithTicket = function (e) {return s(this, void 0, void 0, function () {var t, n, r;return i(this, function (o) {switch (o.label) {case 0:return t = this.cache.getStore(this._anonymousUuidKey), n = this.cache.getStore(this.refreshTokenKey), [4, this.httpRequest.send("auth.linkAndRetrieveDataWithTicket", { anonymous_uuid: t, refresh_token: n, ticket: e })];case 1:return (r = o.sent()).refresh_token ? (this._clearAnonymousUUID(), this.setRefreshToken(r.refresh_token), [4, this.httpRequest.refreshAccessToken()]) : [3, 3];case 2:return o.sent(), W.activateEvent(W.EVENTS.ANONYMOUS_CONVERTED, { refresh_token: r.refresh_token }), W.activateEvent(W.EVENTS.LOGIN_TYPE_CHANGE, c.LOGINTYPE.CUSTOM), [2, { credential: { refreshToken: r.refresh_token } }];case 3:throw new Error("[tcb-js-sdk] 匿名转化失败");}});});}, t.prototype.getAllStore = function () {var e = {};return e[this.refreshTokenKey] = this.cache.getStore(this.refreshTokenKey) || "", e[this._loginTypeKey] = this.cache.getStore(this._loginTypeKey) || "", e[this.accessTokenKey] = this.cache.getStore(this.accessTokenKey) || "", e[this.accessTokenExpireKey] = this.cache.getStore(this.accessTokenExpireKey) || "", e;}, t.prototype._setAnonymousUUID = function (e) {this.cache.removeStore(this._anonymousUuidKey), this.cache.setStore(this._anonymousUuidKey, e), this.cache.setStore(this._loginTypeKey, c.LOGINTYPE.ANONYMOUS);}, t.prototype._clearAnonymousUUID = function () {this.cache.removeStore(this._anonymousUuidKey);}, t;}(c.default);n.AnonymousAuthProvider = u;}),Q = n(function (t, n) {var r = e && e.__extends || function () {var _e7 = function e(t, n) {return (_e7 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (e, t) {e.__proto__ = t;} || function (e, t) {for (var n in t) {t.hasOwnProperty(n) && (e[n] = t[n]);}})(t, n);};return function (t, n) {function r() {this.constructor = t;}_e7(t, n), t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r());};}(),o = e && e.__assign || function () {return (o = Object.assign || function (e) {for (var t, n = 1, r = arguments.length; n < r; n++) {for (var o in t = arguments[n]) {Object.prototype.hasOwnProperty.call(t, o) && (e[o] = t[o]);}}return e;}).apply(this, arguments);},s = e && e.__awaiter || function (e, t, n, r) {return new (n || (n = Promise))(function (o, s) {function i(e) {try {c(r.next(e));} catch (e) {s(e);}}function a(e) {try {c(r.throw(e));} catch (e) {s(e);}}function c(e) {var t;e.done ? o(e.value) : (t = e.value, t instanceof n ? t : new n(function (e) {e(t);})).then(i, a);}c((r = r.apply(e, t || [])).next());});},i = e && e.__generator || function (e, t) {var n,r,o,s,i = { label: 0, sent: function sent() {if (1 & o[0]) throw o[1];return o[1];}, trys: [], ops: [] };return s = { next: a(0), throw: a(1), return: a(2) }, "function" == typeof Symbol && (s[Symbol.iterator] = function () {return this;}), s;function a(s) {return function (a) {return function (s) {if (n) throw new TypeError("Generator is already executing.");for (; i;) {try {if (n = 1, r && (o = 2 & s[0] ? r.return : s[0] ? r.throw || ((o = r.return) && o.call(r), 0) : r.next) && !(o = o.call(r, s[1])).done) return o;switch (r = 0, o && (s = [2 & s[0], o.value]), s[0]) {case 0:case 1:o = s;break;case 4:return i.label++, { value: s[1], done: !1 };case 5:i.label++, r = s[1], s = [0];continue;case 7:s = i.ops.pop(), i.trys.pop();continue;default:if (!(o = i.trys, (o = o.length > 0 && o[o.length - 1]) || 6 !== s[0] && 2 !== s[0])) {i = 0;continue;}if (3 === s[0] && (!o || s[1] > o[0] && s[1] < o[3])) {i.label = s[1];break;}if (6 === s[0] && i.label < o[1]) {i.label = o[1], o = s;break;}if (o && i.label < o[2]) {i.label = o[2], i.ops.push(s);break;}o[2] && i.ops.pop(), i.trys.pop();continue;}s = t.call(e, i);} catch (e) {s = [6, e], r = 0;} finally {n = o = 0;}}if (5 & s[0]) throw s[1];return { value: s[0] ? s[1] : void 0, done: !0 };}([s, a]);};}},a = e && e.__importDefault || function (e) {return e && e.__esModule ? e : { default: e };},c = e && e.__importStar || function (e) {if (e && e.__esModule) return e;var t = {};if (null != e) for (var n in e) {Object.hasOwnProperty.call(e, n) && (t[n] = e[n]);}return t.default = e, t;};Object.defineProperty(n, "__esModule", { value: !0 });var u = a(X),l = c(J),f = function (e) {function t(t) {var n = e.call(this, t) || this;return n.config = t, n;}return r(t, e), t.prototype.init = function () {e.prototype.init.call(this), this.customAuthProvider = new l.default(this.config), this.customAuthProvider.init();}, t.prototype.weixinAuthProvider = function (e) {var t = e.appid,n = e.scope,r = e.loginMode,o = e.state,s = new u.default(this.config, t, n, r, o);return s.init(), s;}, t.prototype.signInAnonymously = function () {return s(this, void 0, void 0, function () {var e = this;return i(this, function (t) {switch (t.label) {case 0:return this._anonymousAuthProvider || (this._anonymousAuthProvider = new $.AnonymousAuthProvider(this.config), this._anonymousAuthProvider.init()), W.addEventListener(W.EVENTS.LOGIN_TYPE_CHANGE, function (t) {if (t && t.data === l.LOGINTYPE.ANONYMOUS) {var n = e._anonymousAuthProvider.getAllStore();for (var r in n) {n[r] && e.httpRequest.cache.setStore(r, n[r]);}}}), [4, this._anonymousAuthProvider.signIn()];case 1:return [2, t.sent()];}});});}, t.prototype.linkAndRetrieveDataWithTicket = function (e) {return s(this, void 0, void 0, function () {var t = this;return i(this, function (n) {switch (n.label) {case 0:return this._anonymousAuthProvider || (this._anonymousAuthProvider = new $.AnonymousAuthProvider(this.config), this._anonymousAuthProvider.init()), W.addEventListener(W.EVENTS.ANONYMOUS_CONVERTED, function (e) {var n = e.data.refresh_token;n && t.httpRequest.cache.setStore(t.refreshTokenKey, n);}), [4, this._anonymousAuthProvider.linkAndRetrieveDataWithTicket(e)];case 1:return [2, n.sent()];}});});}, t.prototype.signOut = function () {return s(this, void 0, void 0, function () {var e, t, n, r, o, s, a;return i(this, function (i) {switch (i.label) {case 0:if (this.loginType === l.LOGINTYPE.ANONYMOUS) throw new Error("[tcb-js-sdk] 匿名用户不支持登出操作");return e = this.httpRequest, t = e.cache, n = e.refreshTokenKey, r = e.accessTokenKey, o = e.accessTokenExpireKey, "auth.logout", (s = t.getStore(n)) ? [4, this.httpRequest.send("auth.logout", { refresh_token: s })] : [2];case 1:return a = i.sent(), t.removeStore(n), t.removeStore(r), t.removeStore(o), W.activateEvent(W.EVENTS.LOGIN_STATE_CHANGED), W.activateEvent(W.EVENTS.LOGIN_TYPE_CHANGE, l.LOGINTYPE.NULL), [2, a];}});});}, t.prototype.getAccessToken = function () {return s(this, void 0, void 0, function () {var e;return i(this, function (t) {switch (t.label) {case 0:return e = {}, [4, this.httpRequest.getAccessToken()];case 1:return [2, (e.accessToken = t.sent().accessToken, e.env = this.config.env, e)];}});});}, t.prototype.onLoginStateExpire = function (e) {W.addEventListener("loginStateExpire", e);}, t.prototype.getLoginState = function () {return s(this, void 0, void 0, function () {var e, t, n, r, o;return i(this, function (s) {switch (s.label) {case 0:if (e = this.httpRequest, t = e.cache, n = e.refreshTokenKey, r = e.accessTokenKey, !(o = t.getStore(n))) return [3, 5];s.label = 1;case 1:return s.trys.push([1, 3,, 4]), [4, this.httpRequest.refreshAccessToken()];case 2:return s.sent(), [3, 4];case 3:return s.sent(), [2, null];case 4:return [2, { isAnonymous: this.loginType === l.LOGINTYPE.ANONYMOUS, credential: { refreshToken: o, accessToken: t.getStore(r) } }];case 5:return [2, null];}});});}, t.prototype.signInWithTicket = function (e) {return s(this, void 0, void 0, function () {var t, n, r, o;return i(this, function (s) {switch (s.label) {case 0:if ("string" != typeof e) throw new Error("ticket must be a string");return t = this.httpRequest, n = t.cache, r = t.refreshTokenKey, [4, this.httpRequest.send("auth.signInWithTicket", { ticket: e, refresh_token: n.getStore(r) || "" })];case 1:return (o = s.sent()).refresh_token ? (this.customAuthProvider.setRefreshToken(o.refresh_token), [4, this.httpRequest.refreshAccessToken()]) : [3, 3];case 2:return s.sent(), W.activateEvent(W.EVENTS.LOGIN_STATE_CHANGED), W.activateEvent(W.EVENTS.LOGIN_TYPE_CHANGE, l.LOGINTYPE.CUSTOM), [2, { credential: { refreshToken: o.refresh_token } }];case 3:throw new Error("[tcb-js-sdk] 自定义登录失败");}});});}, t.prototype.shouldRefreshAccessToken = function (e) {this.httpRequest._shouldRefreshAccessTokenHook = e.bind(this);}, t.prototype.getUserInfo = function () {return this.httpRequest.send("auth.getUserInfo", {}).then(function (e) {return e.code ? e : o(o({}, e.data), { requestId: e.seqId });});}, t;}(l.default);n.default = f;}),Z = n(function (t, n) {var r = e && e.__awaiter || function (e, t, n, r) {return new (n || (n = Promise))(function (o, s) {function i(e) {try {c(r.next(e));} catch (e) {s(e);}}function a(e) {try {c(r.throw(e));} catch (e) {s(e);}}function c(e) {var t;e.done ? o(e.value) : (t = e.value, t instanceof n ? t : new n(function (e) {e(t);})).then(i, a);}c((r = r.apply(e, t || [])).next());});},o = e && e.__generator || function (e, t) {var n,r,o,s,i = { label: 0, sent: function sent() {if (1 & o[0]) throw o[1];return o[1];}, trys: [], ops: [] };return s = { next: a(0), throw: a(1), return: a(2) }, "function" == typeof Symbol && (s[Symbol.iterator] = function () {return this;}), s;function a(s) {return function (a) {return function (s) {if (n) throw new TypeError("Generator is already executing.");for (; i;) {try {if (n = 1, r && (o = 2 & s[0] ? r.return : s[0] ? r.throw || ((o = r.return) && o.call(r), 0) : r.next) && !(o = o.call(r, s[1])).done) return o;switch (r = 0, o && (s = [2 & s[0], o.value]), s[0]) {case 0:case 1:o = s;break;case 4:return i.label++, { value: s[1], done: !1 };case 5:i.label++, r = s[1], s = [0];continue;case 7:s = i.ops.pop(), i.trys.pop();continue;default:if (!(o = i.trys, (o = o.length > 0 && o[o.length - 1]) || 6 !== s[0] && 2 !== s[0])) {i = 0;continue;}if (3 === s[0] && (!o || s[1] > o[0] && s[1] < o[3])) {i.label = s[1];break;}if (6 === s[0] && i.label < o[1]) {i.label = o[1], o = s;break;}if (o && i.label < o[2]) {i.label = o[2], i.ops.push(s);break;}o[2] && i.ops.pop(), i.trys.pop();continue;}s = t.call(e, i);} catch (e) {s = [6, e], r = 0;} finally {n = o = 0;}}if (5 & s[0]) throw s[1];return { value: s[0] ? s[1] : void 0, done: !0 };}([s, a]);};}};Object.defineProperty(n, "__esModule", { value: !0 }), n.uploadFile = function (e, t) {t = t || I.createPromiseCallback();var n = new z.Request(this.config),r = e.cloudPath,o = e.filePath,s = e.onUploadProgress,i = e.fileType || "image";return n.send("storage.getUploadMetadata", { path: r }).then(function (e) {var a = e.data,c = a.url,u = a.authorization,l = a.token,f = a.fileId,p = a.cosFileId,h = e.requestId,d = { key: r, signature: u, "x-cos-meta-fileid": p, success_action_status: "201", "x-cos-security-token": l };n.upload({ url: c, data: d, file: o, name: r, fileType: i, onUploadProgress: s }).then(function (e) {201 === e.statusCode ? t(null, { fileID: f, requestId: h }) : t(new Error("STORAGE_REQUEST_FAIL: " + e.data));}).catch(function (e) {t(e);});}).catch(function (e) {t(e);}), t.promise;}, n.deleteFile = function (e, t) {var n = e.fileList;if (t = t || I.createPromiseCallback(), !n || !Array.isArray(n)) return { code: "INVALID_PARAM", message: "fileList必须是非空的数组" };for (var r = 0, o = n; r < o.length; r++) {var s = o[r];if (!s || "string" != typeof s) return { code: "INVALID_PARAM", message: "fileList的元素必须是非空的字符串" };}var i = { fileid_list: n };return new z.Request(this.config).send("storage.batchDeleteFile", i).then(function (e) {e.code ? t(null, e) : t(null, { fileList: e.data.delete_list, requestId: e.requestId });}).catch(function (e) {t(e);}), t.promise;}, n.getTempFileURL = function (e, t) {var n = e.fileList;t = t || I.createPromiseCallback(), n && Array.isArray(n) || t(null, { code: "INVALID_PARAM", message: "fileList必须是非空的数组" });for (var r = [], o = 0, s = n; o < s.length; o++) {var i = s[o];"object" == typeof i ? (i.hasOwnProperty("fileID") && i.hasOwnProperty("maxAge") || t(null, { code: "INVALID_PARAM", message: "fileList的元素必须是包含fileID和maxAge的对象" }), r.push({ fileid: i.fileID, max_age: i.maxAge })) : "string" == typeof i ? r.push({ fileid: i }) : t(null, { code: "INVALID_PARAM", message: "fileList的元素必须是字符串" });}var a = { file_list: r };return new z.Request(this.config).send("storage.batchGetDownloadUrl", a).then(function (e) {e.code ? t(null, e) : t(null, { fileList: e.data.download_list, requestId: e.requestId });}).catch(function (e) {t(e);}), t.promise;}, n.downloadFile = function (e, t) {var s = e.fileID;return r(this, void 0, void 0, function () {var e, r, i, a, c;return o(this, function (o) {switch (o.label) {case 0:return [4, n.getTempFileURL.call(this, { fileList: [{ fileID: s, maxAge: 600 }] })];case 1:return e = o.sent(), "SUCCESS" !== (r = e.fileList[0]).code ? [2, t ? t(r) : new Promise(function (e) {e(r);})] : (i = r.download_url, i = encodeURI(i), a = new z.Request(this.config), t ? [4, a.download({ url: i })] : [3, 3]);case 2:return c = o.sent(), t(c), [3, 4];case 3:return [2, a.download({ url: i })];case 4:return [2];}});});};}),ee = n(function (e, t) {Object.defineProperty(t, "__esModule", { value: !0 }), t.callFunction = function (e, t) {var n,r = e.name,o = e.data,s = e.query,i = e.parse,a = e.search,c = t || I.createPromiseCallback();try {n = o ? JSON.stringify(o) : "";} catch (e) {return Promise.reject(e);}if (!r) return Promise.reject(new Error("函数名不能为空"));var u = { query: s, parse: i, search: a, function_name: r, request_data: n };return new z.Request(this.config).send("functions.invokeFunction", u).then(function (e) {if (e.code) c(null, e);else {var t = e.data.response_data;if (i) c(null, { result: t, requestId: e.requestId });else try {t = JSON.parse(e.data.response_data), c(null, { result: t, requestId: e.requestId });} catch (e) {c(new Error("response data must be json"));}}return c.promise;}).catch(function (e) {c(e);}), c.promise;};}),te = t(n(function (t) {var n = e && e.__assign || function () {return (n = Object.assign || function (e) {for (var t, n = 1, r = arguments.length; n < r; n++) {for (var o in t = arguments[n]) {Object.prototype.hasOwnProperty.call(t, o) && (e[o] = t[o]);}}return e;}).apply(this, arguments);},r = e && e.__importDefault || function (e) {return e && e.__esModule ? e : { default: e };},o = e && e.__importStar || function (e) {if (e && e.__esModule) return e;var t = {};if (null != e) for (var n in e) {Object.hasOwnProperty.call(e, n) && (t[n] = e[n]);}return t.default = e, t;},s = r(P),i = r(Q),a = o(Z),c = o(ee),u = { timeout: 15e3 },l = new (function () {function e(e) {var t = this;this.config = e || this.config, this.authObj = void 0, W.addEventListener(W.EVENTS.LOGIN_TYPE_CHANGE, function (e) {e.data === J.LOGINTYPE.ANONYMOUS && (t.config.persistence = "local");});}return e.prototype.init = function (t) {return this.config = n(n({}, u), t), Y.Adapter.adapter || this._useDefaultAdapter(), new e(this.config);}, e.prototype.auth = function (e) {var t = (void 0 === e ? {} : e).persistence;return this.authObj || (this.config = n(n({}, this.config), { persistence: t || Y.Adapter.adapter.primaryStorage || "session" }), this.authObj = new i.default(this.config), this.authObj.init()), this.authObj;}, e.prototype.on = function (e, t) {return W.addEventListener.apply(this, [e, t]);}, e.prototype.off = function (e, t) {return W.removeEventListener.apply(this, [e, t]);}, e.prototype.callFunction = function (e, t) {return c.callFunction.apply(this, [e, t]);}, e.prototype.deleteFile = function (e, t) {return a.deleteFile.apply(this, [e, t]);}, e.prototype.getTempFileURL = function (e, t) {return a.getTempFileURL.apply(this, [e, t]);}, e.prototype.downloadFile = function (e, t) {return a.downloadFile.apply(this, [e, t]);}, e.prototype.uploadFile = function (e, t) {return a.uploadFile.apply(this, [e, t]);}, e.prototype.useAdapters = function (e) {var t = Y.useAdapters(e) || {},n = t.adapter,r = t.runtime;n && (Y.Adapter.adapter = n), r && (Y.Adapter.runtime = r);}, e.prototype._useDefaultAdapter = function () {var e = Y.useDefaultAdapter(),t = e.adapter,n = e.runtime;Y.Adapter.adapter = t, Y.Adapter.runtime = n;}, e;}())();l.useAdapters(s.default);try {window.tcb = l;} catch (e) {}t.exports = l;}));te.useAdapters(P);var ne = te,re = ne.init;ne.init = function (e) {e.env = e.spaceId;var t = re.call(this, e);t.config.provider = "tencent", t.config.spaceId = e.spaceId;var n = t.auth;t.auth = function (e) {var t = n.call(this, e);return ["linkAndRetrieveDataWithTicket", "signInAnonymously", "signOut", "getAccessToken", "getLoginState", "signInWithTicket", "getUserInfo"].forEach(function (e) {t[e] = s(t[e]).bind(t);}), t;};return ["uploadFile", "deleteFile", "getTempFileURL", "downloadFile"].forEach(function (e) {t[e] = s(t[e]).bind(t);}), t;};var oe, se;function ie(e) {oe || (oe = { PLATFORM: "mp-weixin", OS: u, APPID: a.appid, CLIENT_SDK_VERSION: "1.0.0" }, se = { ak: a.appid, p: "android" === u ? "a" : "i", ut: p(), uuid: f() });var t = JSON.parse(JSON.stringify(e.data || {})),n = e.name,r = this.config.spaceId,o = { tencent: "t", aliyun: "a" }[this.config.provider],s = Object.assign({}, se, { fn: n, sid: r, pvd: o });Object.assign(t, { clientInfo: oe, uniCloudClientInfo: encodeURIComponent(JSON.stringify(s)) });var i = this.adapter.getStore("uni_id_token") || this.adapter.getStore("uniIdToken");return i && (t.uniIdToken = i), e.data = t, e;}var ae = { request: function request(e) {return uni.request(e);}, uploadFile: function uploadFile(e) {return uni.uploadFile(e);}, setStore: function setStore(e, t) {return  false ? undefined : uni.setStorageSync(e, t);}, getStore: function getStore(e) {return  false ? undefined : uni.getStorageSync(e);} };var ce = new ( /*#__PURE__*/function () {function _class() {_classCallCheck(this, _class);this.adapter = ae;}_createClass(_class, [{ key: "init", value: function init(e) {var t = {};var n = !1 !== e.debugFunction && "development" === "development" && ( false || "app-plus" === "mp-weixin");switch (e.provider) {case "tencent":t = ne.init(Object.assign(e, { useDebugFunction: n }));break;case "aliyun":t = v.init(Object.assign(e, { useDebugFunction: n }));break;default:throw new Error("未提供正确的provider参数");}if (t.isReady = !1, !1 !== e.autoSignIn) {var _e8 = t.auth();t.initSignIn = _e8.getLoginState().then(function (t) {return t ? Promise.resolve() : _e8.signInAnonymously();}).then(function () {return new Promise(function (e) { false ? (undefined) : setTimeout(function () {u = uni.getSystemInfoSync().platform, c = uni.getStorageSync("__DC_CLOUD_UUID") || l(32), e();}, 0);});}).then(function () {t.isReady = !0;});}return function (e) {var t = e.callFunction;e.callFunction = function (e) {var _this6 = this;var n;return n = this.isReady ? Promise.resolve() : this.initSignIn, n.then(function () {var n = ie.call(_this6, e),r = { aliyun: "aliyun", tencent: "tcb" }[_this6.config.provider];return new Promise(function (o, s) {t.call(_this6, n).then(function (t) {if (_this6.config.useDebugFunction && t && t.requestId) {var _n = JSON.stringify({ spaceId: _this6.config.spaceId, functionName: e.name, requestId: t.requestId });console.log("[".concat(r, "-request]").concat(_n, "[/").concat(r, "-request]"));}o(t);}).catch(function (t) {if (_this6.config.useDebugFunction && t && t.requestId) {var _n2 = JSON.stringify({ spaceId: _this6.config.spaceId, functionName: e.name, requestId: t.requestId });console.log("[".concat(r, "-request]").concat(_n2, "[/").concat(r, "-request]"));}t && t.message && (t.message = "[".concat(e.name, "]: ").concat(t.message)), s(t);});});});};var n = e.callFunction;e.callFunction = function (e) {return s(n).call(this, e);};}(t), t.init = this.init, t.adapter = this.adapter, t;} }, { key: "setAdapter", value: function setAdapter(e) {this.adapter = e;} }]);return _class;}())();try {var _e9 = {};1 === [{"provider":"tencent","spaceName":"yangyjxm-serverless","spaceId":"tcb-hjvrlkwoghdn1s3b45f22-387090"}].length && (_e9 = [{"provider":"tencent","spaceName":"yangyjxm-serverless","spaceId":"tcb-hjvrlkwoghdn1s3b45f22-387090"}][0]), ce = ce.init(_e9);} catch (e) {["auth", "callFunction", "uploadFile", "deleteFile", "getTempFileURL", "downloadFile"].forEach(function (e) {ce[e] = function () {var e = [{"provider":"tencent","spaceName":"yangyjxm-serverless","spaceId":"tcb-hjvrlkwoghdn1s3b45f22-387090"}].length > 0 ? "应用有多个服务空间，请通过uniCloud.init方法指定要使用的服务空间" : "应用未关联服务空间，请在cloudfunctions目录右键关联服务空间";return console.error(e), Promise.reject(new i({ code: "SYS_ERR", message: e }));};});}var ue = ce;var _default = ue;exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../webpack/buildin/global.js */ 3), __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+/* 55 */
+/*!*********************************************************************************!*\
+  !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/pages.json?{"type":"stat"} ***!
+  \*********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "appid": "__UNI__35400E8" };exports.default = _default;
+
+/***/ }),
+/* 56 */
 /*!************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/moment.js ***!
   \************************************************************************************/
@@ -12348,7 +12363,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
       try {
         oldLocale = globalLocale._abbr;
         aliasedRequire = require;
-        __webpack_require__(64)("./" + name);
+        __webpack_require__(58)("./" + name);
         getSetGlobalLocale(oldLocale);
       } catch (e) {
         // mark as not found to avoid repeating expensive file require call causing high CPU
@@ -15927,10 +15942,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
   return hooks;
 
 });
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../../Applications/HBuilderX 2.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/webpack/buildin/module.js */ 63)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../../Applications/HBuilderX 2.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/webpack/buildin/module.js */ 57)(module)))
 
 /***/ }),
-/* 63 */
+/* 57 */
 /*!***********************************!*\
   !*** (webpack)/buildin/module.js ***!
   \***********************************/
@@ -15962,7 +15977,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 64 */
+/* 58 */
 /*!***********************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale sync ^\.\/.*$ ***!
   \***********************************************************************************************/
@@ -15970,276 +15985,276 @@ module.exports = function(module) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./af": 65,
-	"./af.js": 65,
-	"./ar": 66,
-	"./ar-dz": 67,
-	"./ar-dz.js": 67,
-	"./ar-kw": 68,
-	"./ar-kw.js": 68,
-	"./ar-ly": 69,
-	"./ar-ly.js": 69,
-	"./ar-ma": 70,
-	"./ar-ma.js": 70,
-	"./ar-sa": 71,
-	"./ar-sa.js": 71,
-	"./ar-tn": 72,
-	"./ar-tn.js": 72,
-	"./ar.js": 66,
-	"./az": 73,
-	"./az.js": 73,
-	"./be": 74,
-	"./be.js": 74,
-	"./bg": 75,
-	"./bg.js": 75,
-	"./bm": 76,
-	"./bm.js": 76,
-	"./bn": 77,
-	"./bn-bd": 78,
-	"./bn-bd.js": 78,
-	"./bn.js": 77,
-	"./bo": 79,
-	"./bo.js": 79,
-	"./br": 80,
-	"./br.js": 80,
-	"./bs": 81,
-	"./bs.js": 81,
-	"./ca": 82,
-	"./ca.js": 82,
-	"./cs": 83,
-	"./cs.js": 83,
-	"./cv": 84,
-	"./cv.js": 84,
-	"./cy": 85,
-	"./cy.js": 85,
-	"./da": 86,
-	"./da.js": 86,
-	"./de": 87,
-	"./de-at": 88,
-	"./de-at.js": 88,
-	"./de-ch": 89,
-	"./de-ch.js": 89,
-	"./de.js": 87,
-	"./dv": 90,
-	"./dv.js": 90,
-	"./el": 91,
-	"./el.js": 91,
-	"./en-au": 92,
-	"./en-au.js": 92,
-	"./en-ca": 93,
-	"./en-ca.js": 93,
-	"./en-gb": 94,
-	"./en-gb.js": 94,
-	"./en-ie": 95,
-	"./en-ie.js": 95,
-	"./en-il": 96,
-	"./en-il.js": 96,
-	"./en-in": 97,
-	"./en-in.js": 97,
-	"./en-nz": 98,
-	"./en-nz.js": 98,
-	"./en-sg": 99,
-	"./en-sg.js": 99,
-	"./eo": 100,
-	"./eo.js": 100,
-	"./es": 101,
-	"./es-do": 102,
-	"./es-do.js": 102,
-	"./es-mx": 103,
-	"./es-mx.js": 103,
-	"./es-us": 104,
-	"./es-us.js": 104,
-	"./es.js": 101,
-	"./et": 105,
-	"./et.js": 105,
-	"./eu": 106,
-	"./eu.js": 106,
-	"./fa": 107,
-	"./fa.js": 107,
-	"./fi": 108,
-	"./fi.js": 108,
-	"./fil": 109,
-	"./fil.js": 109,
-	"./fo": 110,
-	"./fo.js": 110,
-	"./fr": 111,
-	"./fr-ca": 112,
-	"./fr-ca.js": 112,
-	"./fr-ch": 113,
-	"./fr-ch.js": 113,
-	"./fr.js": 111,
-	"./fy": 114,
-	"./fy.js": 114,
-	"./ga": 115,
-	"./ga.js": 115,
-	"./gd": 116,
-	"./gd.js": 116,
-	"./gl": 117,
-	"./gl.js": 117,
-	"./gom-deva": 118,
-	"./gom-deva.js": 118,
-	"./gom-latn": 119,
-	"./gom-latn.js": 119,
-	"./gu": 120,
-	"./gu.js": 120,
-	"./he": 121,
-	"./he.js": 121,
-	"./hi": 122,
-	"./hi.js": 122,
-	"./hr": 123,
-	"./hr.js": 123,
-	"./hu": 124,
-	"./hu.js": 124,
-	"./hy-am": 125,
-	"./hy-am.js": 125,
-	"./id": 126,
-	"./id.js": 126,
-	"./is": 127,
-	"./is.js": 127,
-	"./it": 128,
-	"./it-ch": 129,
-	"./it-ch.js": 129,
-	"./it.js": 128,
-	"./ja": 130,
-	"./ja.js": 130,
-	"./jv": 131,
-	"./jv.js": 131,
-	"./ka": 132,
-	"./ka.js": 132,
-	"./kk": 133,
-	"./kk.js": 133,
-	"./km": 134,
-	"./km.js": 134,
-	"./kn": 135,
-	"./kn.js": 135,
-	"./ko": 136,
-	"./ko.js": 136,
-	"./ku": 137,
-	"./ku.js": 137,
-	"./ky": 138,
-	"./ky.js": 138,
-	"./lb": 139,
-	"./lb.js": 139,
-	"./lo": 140,
-	"./lo.js": 140,
-	"./lt": 141,
-	"./lt.js": 141,
-	"./lv": 142,
-	"./lv.js": 142,
-	"./me": 143,
-	"./me.js": 143,
-	"./mi": 144,
-	"./mi.js": 144,
-	"./mk": 145,
-	"./mk.js": 145,
-	"./ml": 146,
-	"./ml.js": 146,
-	"./mn": 147,
-	"./mn.js": 147,
-	"./mr": 148,
-	"./mr.js": 148,
-	"./ms": 149,
-	"./ms-my": 150,
-	"./ms-my.js": 150,
-	"./ms.js": 149,
-	"./mt": 151,
-	"./mt.js": 151,
-	"./my": 152,
-	"./my.js": 152,
-	"./nb": 153,
-	"./nb.js": 153,
-	"./ne": 154,
-	"./ne.js": 154,
-	"./nl": 155,
-	"./nl-be": 156,
-	"./nl-be.js": 156,
-	"./nl.js": 155,
-	"./nn": 157,
-	"./nn.js": 157,
-	"./oc-lnc": 158,
-	"./oc-lnc.js": 158,
-	"./pa-in": 159,
-	"./pa-in.js": 159,
-	"./pl": 160,
-	"./pl.js": 160,
-	"./pt": 161,
-	"./pt-br": 162,
-	"./pt-br.js": 162,
-	"./pt.js": 161,
-	"./ro": 163,
-	"./ro.js": 163,
-	"./ru": 164,
-	"./ru.js": 164,
-	"./sd": 165,
-	"./sd.js": 165,
-	"./se": 166,
-	"./se.js": 166,
-	"./si": 167,
-	"./si.js": 167,
-	"./sk": 168,
-	"./sk.js": 168,
-	"./sl": 169,
-	"./sl.js": 169,
-	"./sq": 170,
-	"./sq.js": 170,
-	"./sr": 171,
-	"./sr-cyrl": 172,
-	"./sr-cyrl.js": 172,
-	"./sr.js": 171,
-	"./ss": 173,
-	"./ss.js": 173,
-	"./sv": 174,
-	"./sv.js": 174,
-	"./sw": 175,
-	"./sw.js": 175,
-	"./ta": 176,
-	"./ta.js": 176,
-	"./te": 177,
-	"./te.js": 177,
-	"./tet": 178,
-	"./tet.js": 178,
-	"./tg": 179,
-	"./tg.js": 179,
-	"./th": 180,
-	"./th.js": 180,
-	"./tk": 181,
-	"./tk.js": 181,
-	"./tl-ph": 182,
-	"./tl-ph.js": 182,
-	"./tlh": 183,
-	"./tlh.js": 183,
-	"./tr": 184,
-	"./tr.js": 184,
-	"./tzl": 185,
-	"./tzl.js": 185,
-	"./tzm": 186,
-	"./tzm-latn": 187,
-	"./tzm-latn.js": 187,
-	"./tzm.js": 186,
-	"./ug-cn": 188,
-	"./ug-cn.js": 188,
-	"./uk": 189,
-	"./uk.js": 189,
-	"./ur": 190,
-	"./ur.js": 190,
-	"./uz": 191,
-	"./uz-latn": 192,
-	"./uz-latn.js": 192,
-	"./uz.js": 191,
-	"./vi": 193,
-	"./vi.js": 193,
-	"./x-pseudo": 194,
-	"./x-pseudo.js": 194,
-	"./yo": 195,
-	"./yo.js": 195,
-	"./zh-cn": 196,
-	"./zh-cn.js": 196,
-	"./zh-hk": 197,
-	"./zh-hk.js": 197,
-	"./zh-mo": 198,
-	"./zh-mo.js": 198,
-	"./zh-tw": 199,
-	"./zh-tw.js": 199
+	"./af": 59,
+	"./af.js": 59,
+	"./ar": 60,
+	"./ar-dz": 61,
+	"./ar-dz.js": 61,
+	"./ar-kw": 62,
+	"./ar-kw.js": 62,
+	"./ar-ly": 63,
+	"./ar-ly.js": 63,
+	"./ar-ma": 64,
+	"./ar-ma.js": 64,
+	"./ar-sa": 65,
+	"./ar-sa.js": 65,
+	"./ar-tn": 66,
+	"./ar-tn.js": 66,
+	"./ar.js": 60,
+	"./az": 67,
+	"./az.js": 67,
+	"./be": 68,
+	"./be.js": 68,
+	"./bg": 69,
+	"./bg.js": 69,
+	"./bm": 70,
+	"./bm.js": 70,
+	"./bn": 71,
+	"./bn-bd": 72,
+	"./bn-bd.js": 72,
+	"./bn.js": 71,
+	"./bo": 73,
+	"./bo.js": 73,
+	"./br": 74,
+	"./br.js": 74,
+	"./bs": 75,
+	"./bs.js": 75,
+	"./ca": 76,
+	"./ca.js": 76,
+	"./cs": 77,
+	"./cs.js": 77,
+	"./cv": 78,
+	"./cv.js": 78,
+	"./cy": 79,
+	"./cy.js": 79,
+	"./da": 80,
+	"./da.js": 80,
+	"./de": 81,
+	"./de-at": 82,
+	"./de-at.js": 82,
+	"./de-ch": 83,
+	"./de-ch.js": 83,
+	"./de.js": 81,
+	"./dv": 84,
+	"./dv.js": 84,
+	"./el": 85,
+	"./el.js": 85,
+	"./en-au": 86,
+	"./en-au.js": 86,
+	"./en-ca": 87,
+	"./en-ca.js": 87,
+	"./en-gb": 88,
+	"./en-gb.js": 88,
+	"./en-ie": 89,
+	"./en-ie.js": 89,
+	"./en-il": 90,
+	"./en-il.js": 90,
+	"./en-in": 91,
+	"./en-in.js": 91,
+	"./en-nz": 92,
+	"./en-nz.js": 92,
+	"./en-sg": 93,
+	"./en-sg.js": 93,
+	"./eo": 94,
+	"./eo.js": 94,
+	"./es": 95,
+	"./es-do": 96,
+	"./es-do.js": 96,
+	"./es-mx": 97,
+	"./es-mx.js": 97,
+	"./es-us": 98,
+	"./es-us.js": 98,
+	"./es.js": 95,
+	"./et": 99,
+	"./et.js": 99,
+	"./eu": 100,
+	"./eu.js": 100,
+	"./fa": 101,
+	"./fa.js": 101,
+	"./fi": 102,
+	"./fi.js": 102,
+	"./fil": 103,
+	"./fil.js": 103,
+	"./fo": 104,
+	"./fo.js": 104,
+	"./fr": 105,
+	"./fr-ca": 106,
+	"./fr-ca.js": 106,
+	"./fr-ch": 107,
+	"./fr-ch.js": 107,
+	"./fr.js": 105,
+	"./fy": 108,
+	"./fy.js": 108,
+	"./ga": 109,
+	"./ga.js": 109,
+	"./gd": 110,
+	"./gd.js": 110,
+	"./gl": 111,
+	"./gl.js": 111,
+	"./gom-deva": 112,
+	"./gom-deva.js": 112,
+	"./gom-latn": 113,
+	"./gom-latn.js": 113,
+	"./gu": 114,
+	"./gu.js": 114,
+	"./he": 115,
+	"./he.js": 115,
+	"./hi": 116,
+	"./hi.js": 116,
+	"./hr": 117,
+	"./hr.js": 117,
+	"./hu": 118,
+	"./hu.js": 118,
+	"./hy-am": 119,
+	"./hy-am.js": 119,
+	"./id": 120,
+	"./id.js": 120,
+	"./is": 121,
+	"./is.js": 121,
+	"./it": 122,
+	"./it-ch": 123,
+	"./it-ch.js": 123,
+	"./it.js": 122,
+	"./ja": 124,
+	"./ja.js": 124,
+	"./jv": 125,
+	"./jv.js": 125,
+	"./ka": 126,
+	"./ka.js": 126,
+	"./kk": 127,
+	"./kk.js": 127,
+	"./km": 128,
+	"./km.js": 128,
+	"./kn": 129,
+	"./kn.js": 129,
+	"./ko": 130,
+	"./ko.js": 130,
+	"./ku": 131,
+	"./ku.js": 131,
+	"./ky": 132,
+	"./ky.js": 132,
+	"./lb": 133,
+	"./lb.js": 133,
+	"./lo": 134,
+	"./lo.js": 134,
+	"./lt": 135,
+	"./lt.js": 135,
+	"./lv": 136,
+	"./lv.js": 136,
+	"./me": 137,
+	"./me.js": 137,
+	"./mi": 138,
+	"./mi.js": 138,
+	"./mk": 139,
+	"./mk.js": 139,
+	"./ml": 140,
+	"./ml.js": 140,
+	"./mn": 141,
+	"./mn.js": 141,
+	"./mr": 142,
+	"./mr.js": 142,
+	"./ms": 143,
+	"./ms-my": 144,
+	"./ms-my.js": 144,
+	"./ms.js": 143,
+	"./mt": 145,
+	"./mt.js": 145,
+	"./my": 146,
+	"./my.js": 146,
+	"./nb": 147,
+	"./nb.js": 147,
+	"./ne": 148,
+	"./ne.js": 148,
+	"./nl": 149,
+	"./nl-be": 150,
+	"./nl-be.js": 150,
+	"./nl.js": 149,
+	"./nn": 151,
+	"./nn.js": 151,
+	"./oc-lnc": 152,
+	"./oc-lnc.js": 152,
+	"./pa-in": 153,
+	"./pa-in.js": 153,
+	"./pl": 154,
+	"./pl.js": 154,
+	"./pt": 155,
+	"./pt-br": 156,
+	"./pt-br.js": 156,
+	"./pt.js": 155,
+	"./ro": 157,
+	"./ro.js": 157,
+	"./ru": 158,
+	"./ru.js": 158,
+	"./sd": 159,
+	"./sd.js": 159,
+	"./se": 160,
+	"./se.js": 160,
+	"./si": 161,
+	"./si.js": 161,
+	"./sk": 162,
+	"./sk.js": 162,
+	"./sl": 163,
+	"./sl.js": 163,
+	"./sq": 164,
+	"./sq.js": 164,
+	"./sr": 165,
+	"./sr-cyrl": 166,
+	"./sr-cyrl.js": 166,
+	"./sr.js": 165,
+	"./ss": 167,
+	"./ss.js": 167,
+	"./sv": 168,
+	"./sv.js": 168,
+	"./sw": 169,
+	"./sw.js": 169,
+	"./ta": 170,
+	"./ta.js": 170,
+	"./te": 171,
+	"./te.js": 171,
+	"./tet": 172,
+	"./tet.js": 172,
+	"./tg": 173,
+	"./tg.js": 173,
+	"./th": 174,
+	"./th.js": 174,
+	"./tk": 175,
+	"./tk.js": 175,
+	"./tl-ph": 176,
+	"./tl-ph.js": 176,
+	"./tlh": 177,
+	"./tlh.js": 177,
+	"./tr": 178,
+	"./tr.js": 178,
+	"./tzl": 179,
+	"./tzl.js": 179,
+	"./tzm": 180,
+	"./tzm-latn": 181,
+	"./tzm-latn.js": 181,
+	"./tzm.js": 180,
+	"./ug-cn": 182,
+	"./ug-cn.js": 182,
+	"./uk": 183,
+	"./uk.js": 183,
+	"./ur": 184,
+	"./ur.js": 184,
+	"./uz": 185,
+	"./uz-latn": 186,
+	"./uz-latn.js": 186,
+	"./uz.js": 185,
+	"./vi": 187,
+	"./vi.js": 187,
+	"./x-pseudo": 188,
+	"./x-pseudo.js": 188,
+	"./yo": 189,
+	"./yo.js": 189,
+	"./zh-cn": 190,
+	"./zh-cn.js": 190,
+	"./zh-hk": 191,
+	"./zh-hk.js": 191,
+	"./zh-mo": 192,
+	"./zh-mo.js": 192,
+	"./zh-tw": 193,
+	"./zh-tw.js": 193
 };
 
 
@@ -16261,10 +16276,10 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 64;
+webpackContext.id = 58;
 
 /***/ }),
-/* 65 */
+/* 59 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/af.js ***!
   \***************************************************************************************/
@@ -16276,7 +16291,7 @@ webpackContext.id = 64;
 //! author : Werner Mollentze : https://github.com/wernerm
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -16353,7 +16368,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 66 */
+/* 60 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/ar.js ***!
   \***************************************************************************************/
@@ -16367,7 +16382,7 @@ webpackContext.id = 64;
 //! author : forabi https://github.com/forabi
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -16560,7 +16575,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 67 */
+/* 61 */
 /*!******************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/ar-dz.js ***!
   \******************************************************************************************/
@@ -16576,7 +16591,7 @@ webpackContext.id = 64;
 //! author : Noureddine LOUAHEDJ : https://github.com/noureddinem
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -16734,7 +16749,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 68 */
+/* 62 */
 /*!******************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/ar-kw.js ***!
   \******************************************************************************************/
@@ -16746,7 +16761,7 @@ webpackContext.id = 64;
 //! author : Nusret Parlak: https://github.com/nusretparlak
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -16806,7 +16821,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 69 */
+/* 63 */
 /*!******************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/ar-ly.js ***!
   \******************************************************************************************/
@@ -16818,7 +16833,7 @@ webpackContext.id = 64;
 //! author : Ali Hmer: https://github.com/kikoanis
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -16995,7 +17010,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 70 */
+/* 64 */
 /*!******************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/ar-ma.js ***!
   \******************************************************************************************/
@@ -17008,7 +17023,7 @@ webpackContext.id = 64;
 //! author : Abdel Said : https://github.com/abdelsaid
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -17068,7 +17083,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 71 */
+/* 65 */
 /*!******************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/ar-sa.js ***!
   \******************************************************************************************/
@@ -17080,7 +17095,7 @@ webpackContext.id = 64;
 //! author : Suhail Alkowaileet : https://github.com/xsoh
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -17190,7 +17205,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 72 */
+/* 66 */
 /*!******************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/ar-tn.js ***!
   \******************************************************************************************/
@@ -17202,7 +17217,7 @@ webpackContext.id = 64;
 //! author : Nader Toukabri : https://github.com/naderio
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -17262,7 +17277,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 73 */
+/* 67 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/az.js ***!
   \***************************************************************************************/
@@ -17274,7 +17289,7 @@ webpackContext.id = 64;
 //! author : topchiyev : https://github.com/topchiyev
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -17381,7 +17396,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 74 */
+/* 68 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/be.js ***!
   \***************************************************************************************/
@@ -17395,7 +17410,7 @@ webpackContext.id = 64;
 //! Author : Menelion Elensúle : https://github.com/Oire
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -17540,7 +17555,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 75 */
+/* 69 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/bg.js ***!
   \***************************************************************************************/
@@ -17552,7 +17567,7 @@ webpackContext.id = 64;
 //! author : Krasen Borisov : https://github.com/kraz
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -17645,7 +17660,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 76 */
+/* 70 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/bm.js ***!
   \***************************************************************************************/
@@ -17657,7 +17672,7 @@ webpackContext.id = 64;
 //! author : Estelle Comment : https://github.com/estellecomment
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -17714,7 +17729,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 77 */
+/* 71 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/bn.js ***!
   \***************************************************************************************/
@@ -17726,7 +17741,7 @@ webpackContext.id = 64;
 //! author : Kaushik Gandhi : https://github.com/kaushikgandhi
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -17850,7 +17865,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 78 */
+/* 72 */
 /*!******************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/bn-bd.js ***!
   \******************************************************************************************/
@@ -17862,7 +17877,7 @@ webpackContext.id = 64;
 //! author : Asraf Hossain Patoary : https://github.com/ashwoolford
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -17996,7 +18011,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 79 */
+/* 73 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/bo.js ***!
   \***************************************************************************************/
@@ -18008,7 +18023,7 @@ webpackContext.id = 64;
 //! author : Thupten N. Chakrishar : https://github.com/vajradog
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -18136,7 +18151,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 80 */
+/* 74 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/br.js ***!
   \***************************************************************************************/
@@ -18148,7 +18163,7 @@ webpackContext.id = 64;
 //! author : Jean-Baptiste Le Duigou : https://github.com/jbleduigou
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -18319,7 +18334,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 81 */
+/* 75 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/bs.js ***!
   \***************************************************************************************/
@@ -18332,7 +18347,7 @@ webpackContext.id = 64;
 //! based on (hr) translation by Bojan Marković
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -18486,7 +18501,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 82 */
+/* 76 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/ca.js ***!
   \***************************************************************************************/
@@ -18498,7 +18513,7 @@ webpackContext.id = 64;
 //! author : Juan G. Hurtado : https://github.com/juanghurtado
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -18601,7 +18616,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 83 */
+/* 77 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/cs.js ***!
   \***************************************************************************************/
@@ -18613,7 +18628,7 @@ webpackContext.id = 64;
 //! author : petrbela : https://github.com/petrbela
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -18790,7 +18805,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 84 */
+/* 78 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/cv.js ***!
   \***************************************************************************************/
@@ -18802,7 +18817,7 @@ webpackContext.id = 64;
 //! author : Anatoly Mironov : https://github.com/mirontoli
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -18870,7 +18885,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 85 */
+/* 79 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/cy.js ***!
   \***************************************************************************************/
@@ -18883,7 +18898,7 @@ webpackContext.id = 64;
 //! author : https://github.com/ryangreaves
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -18985,7 +19000,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 86 */
+/* 80 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/da.js ***!
   \***************************************************************************************/
@@ -18997,7 +19012,7 @@ webpackContext.id = 64;
 //! author : Ulrik Nielsen : https://github.com/mrbase
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -19056,7 +19071,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 87 */
+/* 81 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/de.js ***!
   \***************************************************************************************/
@@ -19070,7 +19085,7 @@ webpackContext.id = 64;
 //! author : Mikolaj Dadela : https://github.com/mik01aj
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -19152,7 +19167,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 88 */
+/* 82 */
 /*!******************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/de-at.js ***!
   \******************************************************************************************/
@@ -19167,7 +19182,7 @@ webpackContext.id = 64;
 //! author : Mikolaj Dadela : https://github.com/mik01aj
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -19249,7 +19264,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 89 */
+/* 83 */
 /*!******************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/de-ch.js ***!
   \******************************************************************************************/
@@ -19261,7 +19276,7 @@ webpackContext.id = 64;
 //! author : sschueller : https://github.com/sschueller
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -19343,7 +19358,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 90 */
+/* 84 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/dv.js ***!
   \***************************************************************************************/
@@ -19355,7 +19370,7 @@ webpackContext.id = 64;
 //! author : Jawish Hameed : https://github.com/jawish
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -19451,7 +19466,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 91 */
+/* 85 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/el.js ***!
   \***************************************************************************************/
@@ -19463,7 +19478,7 @@ webpackContext.id = 64;
 //! author : Aggelos Karalias : https://github.com/mehiel
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -19573,7 +19588,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 92 */
+/* 86 */
 /*!******************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/en-au.js ***!
   \******************************************************************************************/
@@ -19585,7 +19600,7 @@ webpackContext.id = 64;
 //! author : Jared Morse : https://github.com/jarcoal
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -19659,7 +19674,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 93 */
+/* 87 */
 /*!******************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/en-ca.js ***!
   \******************************************************************************************/
@@ -19671,7 +19686,7 @@ webpackContext.id = 64;
 //! author : Jonathan Abourbih : https://github.com/jonbca
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -19741,7 +19756,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 94 */
+/* 88 */
 /*!******************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/en-gb.js ***!
   \******************************************************************************************/
@@ -19753,7 +19768,7 @@ webpackContext.id = 64;
 //! author : Chris Gedrim : https://github.com/chrisgedrim
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -19827,7 +19842,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 95 */
+/* 89 */
 /*!******************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/en-ie.js ***!
   \******************************************************************************************/
@@ -19839,7 +19854,7 @@ webpackContext.id = 64;
 //! author : Chris Cartlidge : https://github.com/chriscartlidge
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -19913,7 +19928,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 96 */
+/* 90 */
 /*!******************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/en-il.js ***!
   \******************************************************************************************/
@@ -19925,7 +19940,7 @@ webpackContext.id = 64;
 //! author : Chris Gedrim : https://github.com/chrisgedrim
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -19995,7 +20010,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 97 */
+/* 91 */
 /*!******************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/en-in.js ***!
   \******************************************************************************************/
@@ -20007,7 +20022,7 @@ webpackContext.id = 64;
 //! author : Jatin Agrawal : https://github.com/jatinag22
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -20081,7 +20096,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 98 */
+/* 92 */
 /*!******************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/en-nz.js ***!
   \******************************************************************************************/
@@ -20093,7 +20108,7 @@ webpackContext.id = 64;
 //! author : Luke McGregor : https://github.com/lukemcgregor
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -20167,7 +20182,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 99 */
+/* 93 */
 /*!******************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/en-sg.js ***!
   \******************************************************************************************/
@@ -20179,7 +20194,7 @@ webpackContext.id = 64;
 //! author : Matthew Castrillon-Madrigal : https://github.com/techdimension
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -20253,7 +20268,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 100 */
+/* 94 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/eo.js ***!
   \***************************************************************************************/
@@ -20268,7 +20283,7 @@ webpackContext.id = 64;
 //! comment : Vivakvo corrected the translation by colindean and miestasmia
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -20339,7 +20354,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 101 */
+/* 95 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/es.js ***!
   \***************************************************************************************/
@@ -20351,7 +20366,7 @@ webpackContext.id = 64;
 //! author : Julio Napurí : https://github.com/julionc
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -20463,7 +20478,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 102 */
+/* 96 */
 /*!******************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/es-do.js ***!
   \******************************************************************************************/
@@ -20474,7 +20489,7 @@ webpackContext.id = 64;
 //! locale : Spanish (Dominican Republic) [es-do]
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -20585,7 +20600,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 103 */
+/* 97 */
 /*!******************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/es-mx.js ***!
   \******************************************************************************************/
@@ -20597,7 +20612,7 @@ webpackContext.id = 64;
 //! author : JC Franco : https://github.com/jcfranco
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -20709,7 +20724,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 104 */
+/* 98 */
 /*!******************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/es-us.js ***!
   \******************************************************************************************/
@@ -20722,7 +20737,7 @@ webpackContext.id = 64;
 //! author : chrisrodz : https://github.com/chrisrodz
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -20833,7 +20848,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 105 */
+/* 99 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/et.js ***!
   \***************************************************************************************/
@@ -20846,7 +20861,7 @@ webpackContext.id = 64;
 //! improvements : Illimar Tambek : https://github.com/ragulka
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -20929,7 +20944,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 106 */
+/* 100 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/eu.js ***!
   \***************************************************************************************/
@@ -20941,7 +20956,7 @@ webpackContext.id = 64;
 //! author : Eneko Illarramendi : https://github.com/eillarra
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -21010,7 +21025,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 107 */
+/* 101 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/fa.js ***!
   \***************************************************************************************/
@@ -21022,7 +21037,7 @@ webpackContext.id = 64;
 //! author : Ebrahim Byagowi : https://github.com/ebraminio
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -21138,7 +21153,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 108 */
+/* 102 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/fi.js ***!
   \***************************************************************************************/
@@ -21150,7 +21165,7 @@ webpackContext.id = 64;
 //! author : Tarmo Aidantausta : https://github.com/bleadof
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -21277,7 +21292,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 109 */
+/* 103 */
 /*!****************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/fil.js ***!
   \****************************************************************************************/
@@ -21290,7 +21305,7 @@ webpackContext.id = 64;
 //! author : Matthew Co : https://github.com/matthewdeeco
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -21353,7 +21368,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 110 */
+/* 104 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/fo.js ***!
   \***************************************************************************************/
@@ -21366,7 +21381,7 @@ webpackContext.id = 64;
 //! author : Kristian Sakarisson : https://github.com/sakarisson
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -21427,7 +21442,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 111 */
+/* 105 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/fr.js ***!
   \***************************************************************************************/
@@ -21439,7 +21454,7 @@ webpackContext.id = 64;
 //! author : John Fischer : https://github.com/jfroffice
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -21549,7 +21564,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 112 */
+/* 106 */
 /*!******************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/fr-ca.js ***!
   \******************************************************************************************/
@@ -21561,7 +21576,7 @@ webpackContext.id = 64;
 //! author : Jonathan Abourbih : https://github.com/jonbca
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -21636,7 +21651,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 113 */
+/* 107 */
 /*!******************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/fr-ch.js ***!
   \******************************************************************************************/
@@ -21648,7 +21663,7 @@ webpackContext.id = 64;
 //! author : Gaspard Bucher : https://github.com/gaspard
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -21727,7 +21742,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 114 */
+/* 108 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/fy.js ***!
   \***************************************************************************************/
@@ -21739,7 +21754,7 @@ webpackContext.id = 64;
 //! author : Robin van der Vliet : https://github.com/robin0van0der0v
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -21822,7 +21837,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 115 */
+/* 109 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/ga.js ***!
   \***************************************************************************************/
@@ -21834,7 +21849,7 @@ webpackContext.id = 64;
 //! author : André Silva : https://github.com/askpt
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -21935,7 +21950,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 116 */
+/* 110 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/gd.js ***!
   \***************************************************************************************/
@@ -21947,7 +21962,7 @@ webpackContext.id = 64;
 //! author : Jon Ashdown : https://github.com/jonashdown
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -22048,7 +22063,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 117 */
+/* 111 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/gl.js ***!
   \***************************************************************************************/
@@ -22060,7 +22075,7 @@ webpackContext.id = 64;
 //! author : Juan G. Hurtado : https://github.com/juanghurtado
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -22140,7 +22155,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 118 */
+/* 112 */
 /*!*********************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/gom-deva.js ***!
   \*********************************************************************************************/
@@ -22152,7 +22167,7 @@ webpackContext.id = 64;
 //! author : The Discoverer : https://github.com/WikiDiscoverer
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -22282,7 +22297,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 119 */
+/* 113 */
 /*!*********************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/gom-latn.js ***!
   \*********************************************************************************************/
@@ -22294,7 +22309,7 @@ webpackContext.id = 64;
 //! author : The Discoverer : https://github.com/WikiDiscoverer
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -22424,7 +22439,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 120 */
+/* 114 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/gu.js ***!
   \***************************************************************************************/
@@ -22436,7 +22451,7 @@ webpackContext.id = 64;
 //! author : Kaushik Thanki : https://github.com/Kaushik1987
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -22563,7 +22578,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 121 */
+/* 115 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/he.js ***!
   \***************************************************************************************/
@@ -22577,7 +22592,7 @@ webpackContext.id = 64;
 //! author : Tal Ater : https://github.com/TalAter
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -22675,7 +22690,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 122 */
+/* 116 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/hi.js ***!
   \***************************************************************************************/
@@ -22687,7 +22702,7 @@ webpackContext.id = 64;
 //! author : Mayank Singhal : https://github.com/mayanksinghal
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -22857,7 +22872,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 123 */
+/* 117 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/hr.js ***!
   \***************************************************************************************/
@@ -22869,7 +22884,7 @@ webpackContext.id = 64;
 //! author : Bojan Marković : https://github.com/bmarkovic
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -23029,7 +23044,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 124 */
+/* 118 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/hu.js ***!
   \***************************************************************************************/
@@ -23042,7 +23057,7 @@ webpackContext.id = 64;
 //! author : Peter Viszt  : https://github.com/passatgt
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -23165,7 +23180,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 125 */
+/* 119 */
 /*!******************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/hy-am.js ***!
   \******************************************************************************************/
@@ -23177,7 +23192,7 @@ webpackContext.id = 64;
 //! author : Armendarabyan : https://github.com/armendarabyan
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -23275,7 +23290,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 126 */
+/* 120 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/id.js ***!
   \***************************************************************************************/
@@ -23288,7 +23303,7 @@ webpackContext.id = 64;
 //! reference: http://id.wikisource.org/wiki/Pedoman_Umum_Ejaan_Bahasa_Indonesia_yang_Disempurnakan
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -23369,7 +23384,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 127 */
+/* 121 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/is.js ***!
   \***************************************************************************************/
@@ -23381,7 +23396,7 @@ webpackContext.id = 64;
 //! author : Hinrik Örn Sigurðsson : https://github.com/hinrik
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -23526,7 +23541,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 128 */
+/* 122 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/it.js ***!
   \***************************************************************************************/
@@ -23540,7 +23555,7 @@ webpackContext.id = 64;
 //! author: Marco : https://github.com/Manfre98
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -23650,7 +23665,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 129 */
+/* 123 */
 /*!******************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/it-ch.js ***!
   \******************************************************************************************/
@@ -23662,7 +23677,7 @@ webpackContext.id = 64;
 //! author : xfh : https://github.com/xfh
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -23732,7 +23747,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 130 */
+/* 124 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/ja.js ***!
   \***************************************************************************************/
@@ -23744,7 +23759,7 @@ webpackContext.id = 64;
 //! author : LI Long : https://github.com/baryon
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -23898,7 +23913,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 131 */
+/* 125 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/jv.js ***!
   \***************************************************************************************/
@@ -23911,7 +23926,7 @@ webpackContext.id = 64;
 //! reference: http://jv.wikipedia.org/wiki/Basa_Jawa
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -23992,7 +24007,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 132 */
+/* 126 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/ka.js ***!
   \***************************************************************************************/
@@ -24004,7 +24019,7 @@ webpackContext.id = 64;
 //! author : Irakli Janiashvili : https://github.com/IrakliJani
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -24102,7 +24117,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 133 */
+/* 127 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/kk.js ***!
   \***************************************************************************************/
@@ -24114,7 +24129,7 @@ webpackContext.id = 64;
 //! authors : Nurlan Rakhimzhanov : https://github.com/nurlan
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -24202,7 +24217,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 134 */
+/* 128 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/km.js ***!
   \***************************************************************************************/
@@ -24214,7 +24229,7 @@ webpackContext.id = 64;
 //! author : Kruy Vanna : https://github.com/kruyvanna
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -24322,7 +24337,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 135 */
+/* 129 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/kn.js ***!
   \***************************************************************************************/
@@ -24334,7 +24349,7 @@ webpackContext.id = 64;
 //! author : Rajeev Naik : https://github.com/rajeevnaikte
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -24463,7 +24478,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 136 */
+/* 130 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/ko.js ***!
   \***************************************************************************************/
@@ -24476,7 +24491,7 @@ webpackContext.id = 64;
 //! author : Jeeeyul Lee <jeeeyul@gmail.com>
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -24556,7 +24571,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 137 */
+/* 131 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/ku.js ***!
   \***************************************************************************************/
@@ -24568,7 +24583,7 @@ webpackContext.id = 64;
 //! author : Shahram Mebashar : https://github.com/ShahramMebashar
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -24692,7 +24707,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 138 */
+/* 132 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/ky.js ***!
   \***************************************************************************************/
@@ -24704,7 +24719,7 @@ webpackContext.id = 64;
 //! author : Chyngyz Arystan uulu : https://github.com/chyngyz
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -24794,7 +24809,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 139 */
+/* 133 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/lb.js ***!
   \***************************************************************************************/
@@ -24807,7 +24822,7 @@ webpackContext.id = 64;
 //! author : David Raison : https://github.com/kwisatz
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -24947,7 +24962,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 140 */
+/* 134 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/lo.js ***!
   \***************************************************************************************/
@@ -24959,7 +24974,7 @@ webpackContext.id = 64;
 //! author : Ryan Hart : https://github.com/ryanhart2
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -25030,7 +25045,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 141 */
+/* 135 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/lt.js ***!
   \***************************************************************************************/
@@ -25042,7 +25057,7 @@ webpackContext.id = 64;
 //! author : Mindaugas Mozūras : https://github.com/mmozuras
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -25171,7 +25186,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 142 */
+/* 136 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/lv.js ***!
   \***************************************************************************************/
@@ -25184,7 +25199,7 @@ webpackContext.id = 64;
 //! author : Jānis Elmeris : https://github.com/JanisE
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -25282,7 +25297,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 143 */
+/* 137 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/me.js ***!
   \***************************************************************************************/
@@ -25294,7 +25309,7 @@ webpackContext.id = 64;
 //! author : Miodrag Nikač <miodrag@restartit.me> : https://github.com/miodragnikac
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -25418,7 +25433,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 144 */
+/* 138 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/mi.js ***!
   \***************************************************************************************/
@@ -25430,7 +25445,7 @@ webpackContext.id = 64;
 //! author : John Corrigan <robbiecloset@gmail.com> : https://github.com/johnideal
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -25495,7 +25510,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 145 */
+/* 139 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/mk.js ***!
   \***************************************************************************************/
@@ -25508,7 +25523,7 @@ webpackContext.id = 64;
 //! author : Sashko Todorov : https://github.com/bkyceh
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -25599,7 +25614,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 146 */
+/* 140 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/ml.js ***!
   \***************************************************************************************/
@@ -25611,7 +25626,7 @@ webpackContext.id = 64;
 //! author : Floyd Pink : https://github.com/floydpink
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -25697,7 +25712,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 147 */
+/* 141 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/mn.js ***!
   \***************************************************************************************/
@@ -25709,7 +25724,7 @@ webpackContext.id = 64;
 //! author : Javkhlantugs Nyamdorj : https://github.com/javkhaanj7
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -25814,7 +25829,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 148 */
+/* 142 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/mr.js ***!
   \***************************************************************************************/
@@ -25827,7 +25842,7 @@ webpackContext.id = 64;
 //! author : Vivek Athalye : https://github.com/vnathalye
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -26034,7 +26049,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 149 */
+/* 143 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/ms.js ***!
   \***************************************************************************************/
@@ -26046,7 +26061,7 @@ webpackContext.id = 64;
 //! author : Weldan Jamili : https://github.com/weldan
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -26127,7 +26142,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 150 */
+/* 144 */
 /*!******************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/ms-my.js ***!
   \******************************************************************************************/
@@ -26140,7 +26155,7 @@ webpackContext.id = 64;
 //! author : Weldan Jamili : https://github.com/weldan
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -26221,7 +26236,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 151 */
+/* 145 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/mt.js ***!
   \***************************************************************************************/
@@ -26233,7 +26248,7 @@ webpackContext.id = 64;
 //! author : Alessandro Maruccia : https://github.com/alesma
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -26294,7 +26309,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 152 */
+/* 146 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/my.js ***!
   \***************************************************************************************/
@@ -26308,7 +26323,7 @@ webpackContext.id = 64;
 //! author : Tin Aung Lin : https://github.com/thanyawzinmin
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -26403,7 +26418,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 153 */
+/* 147 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/nb.js ***!
   \***************************************************************************************/
@@ -26417,7 +26432,7 @@ webpackContext.id = 64;
 //!           Stephen Ramthun : https://github.com/stephenramthun
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -26482,7 +26497,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 154 */
+/* 148 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/ne.js ***!
   \***************************************************************************************/
@@ -26494,7 +26509,7 @@ webpackContext.id = 64;
 //! author : suvash : https://github.com/suvash
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -26620,7 +26635,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 155 */
+/* 149 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/nl.js ***!
   \***************************************************************************************/
@@ -26633,7 +26648,7 @@ webpackContext.id = 64;
 //! author : Jacob Middag : https://github.com/middagj
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -26742,7 +26757,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 156 */
+/* 150 */
 /*!******************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/nl-be.js ***!
   \******************************************************************************************/
@@ -26755,7 +26770,7 @@ webpackContext.id = 64;
 //! author : Jacob Middag : https://github.com/middagj
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -26862,7 +26877,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 157 */
+/* 151 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/nn.js ***!
   \***************************************************************************************/
@@ -26875,7 +26890,7 @@ webpackContext.id = 64;
 //!           Stephen Ramthun : https://github.com/stephenramthun
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -26940,7 +26955,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 158 */
+/* 152 */
 /*!*******************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/oc-lnc.js ***!
   \*******************************************************************************************/
@@ -26952,7 +26967,7 @@ webpackContext.id = 64;
 //! author : Quentin PAGÈS : https://github.com/Quenty31
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -27041,7 +27056,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 159 */
+/* 153 */
 /*!******************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/pa-in.js ***!
   \******************************************************************************************/
@@ -27053,7 +27068,7 @@ webpackContext.id = 64;
 //! author : Harpreet Singh : https://github.com/harpreetkhalsagtbit
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -27180,7 +27195,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 160 */
+/* 154 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/pl.js ***!
   \***************************************************************************************/
@@ -27192,7 +27207,7 @@ webpackContext.id = 64;
 //! author : Rafal Hirsz : https://github.com/evoL
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -27337,7 +27352,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 161 */
+/* 155 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/pt.js ***!
   \***************************************************************************************/
@@ -27349,7 +27364,7 @@ webpackContext.id = 64;
 //! author : Jefferson : https://github.com/jalex79
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -27417,7 +27432,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 162 */
+/* 156 */
 /*!******************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/pt-br.js ***!
   \******************************************************************************************/
@@ -27429,7 +27444,7 @@ webpackContext.id = 64;
 //! author : Caio Ribeiro Pereira : https://github.com/caio-ribeiro-pereira
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -27492,7 +27507,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 163 */
+/* 157 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/ro.js ***!
   \***************************************************************************************/
@@ -27506,7 +27521,7 @@ webpackContext.id = 64;
 //! author : Emanuel Cepoi : https://github.com/cepem
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -27585,7 +27600,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 164 */
+/* 158 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/ru.js ***!
   \***************************************************************************************/
@@ -27599,7 +27614,7 @@ webpackContext.id = 64;
 //! author : Коренберг Марк : https://github.com/socketpair
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -27809,7 +27824,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 165 */
+/* 159 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/sd.js ***!
   \***************************************************************************************/
@@ -27821,7 +27836,7 @@ webpackContext.id = 64;
 //! author : Narain Sagar : https://github.com/narainsagar
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -27908,7 +27923,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 166 */
+/* 160 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/se.js ***!
   \***************************************************************************************/
@@ -27920,7 +27935,7 @@ webpackContext.id = 64;
 //! authors : Bård Rolstad Henriksen : https://github.com/karamell
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -27983,7 +27998,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 167 */
+/* 161 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/si.js ***!
   \***************************************************************************************/
@@ -27995,7 +28010,7 @@ webpackContext.id = 64;
 //! author : Sampath Sitinamaluwa : https://github.com/sampathsris
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -28069,7 +28084,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 168 */
+/* 162 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/sk.js ***!
   \***************************************************************************************/
@@ -28082,7 +28097,7 @@ webpackContext.id = 64;
 //! based on work of petrbela : https://github.com/petrbela
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -28231,7 +28246,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 169 */
+/* 163 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/sl.js ***!
   \***************************************************************************************/
@@ -28243,7 +28258,7 @@ webpackContext.id = 64;
 //! author : Robert Sedovšek : https://github.com/sedovsek
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -28419,7 +28434,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 170 */
+/* 164 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/sq.js ***!
   \***************************************************************************************/
@@ -28433,7 +28448,7 @@ webpackContext.id = 64;
 //! author : Oerd Cukalla : https://github.com/oerd
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -28502,7 +28517,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 171 */
+/* 165 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/sr.js ***!
   \***************************************************************************************/
@@ -28515,7 +28530,7 @@ webpackContext.id = 64;
 //! author : Stefan Crnjaković <stefan@hotmail.rs> : https://github.com/crnjakovic
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -28638,7 +28653,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 172 */
+/* 166 */
 /*!********************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/sr-cyrl.js ***!
   \********************************************************************************************/
@@ -28651,7 +28666,7 @@ webpackContext.id = 64;
 //! author : Stefan Crnjaković <stefan@hotmail.rs> : https://github.com/crnjakovic
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -28772,7 +28787,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 173 */
+/* 167 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/ss.js ***!
   \***************************************************************************************/
@@ -28784,7 +28799,7 @@ webpackContext.id = 64;
 //! author : Nicolai Davies<mail@nicolai.io> : https://github.com/nicolaidavies
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -28873,7 +28888,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 174 */
+/* 168 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/sv.js ***!
   \***************************************************************************************/
@@ -28885,7 +28900,7 @@ webpackContext.id = 64;
 //! author : Jens Alm : https://github.com/ulmus
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -28959,7 +28974,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 175 */
+/* 169 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/sw.js ***!
   \***************************************************************************************/
@@ -28971,7 +28986,7 @@ webpackContext.id = 64;
 //! author : Fahad Kassim : https://github.com/fadsel
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -29031,7 +29046,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 176 */
+/* 170 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/ta.js ***!
   \***************************************************************************************/
@@ -29043,7 +29058,7 @@ webpackContext.id = 64;
 //! author : Arjunkumar Krishnamoorthy : https://github.com/tk120404
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -29178,7 +29193,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 177 */
+/* 171 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/te.js ***!
   \***************************************************************************************/
@@ -29190,7 +29205,7 @@ webpackContext.id = 64;
 //! author : Krishna Chaitanya Thota : https://github.com/kcthota
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -29282,7 +29297,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 178 */
+/* 172 */
 /*!****************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/tet.js ***!
   \****************************************************************************************/
@@ -29296,7 +29311,7 @@ webpackContext.id = 64;
 //! author : Sonia Simoes : https://github.com/soniasimoes
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -29368,7 +29383,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 179 */
+/* 173 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/tg.js ***!
   \***************************************************************************************/
@@ -29380,7 +29395,7 @@ webpackContext.id = 64;
 //! author : Orif N. Jr. : https://github.com/orif-jr
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -29502,7 +29517,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 180 */
+/* 174 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/th.js ***!
   \***************************************************************************************/
@@ -29514,7 +29529,7 @@ webpackContext.id = 64;
 //! author : Kridsada Thanabulpong : https://github.com/sirn
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -29584,7 +29599,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 181 */
+/* 175 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/tk.js ***!
   \***************************************************************************************/
@@ -29596,7 +29611,7 @@ webpackContext.id = 64;
 //! author : Atamyrat Abdyrahmanov : https://github.com/atamyratabdy
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -29693,7 +29708,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 182 */
+/* 176 */
 /*!******************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/tl-ph.js ***!
   \******************************************************************************************/
@@ -29705,7 +29720,7 @@ webpackContext.id = 64;
 //! author : Dan Hagman : https://github.com/hagmandan
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -29768,7 +29783,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 183 */
+/* 177 */
 /*!****************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/tlh.js ***!
   \****************************************************************************************/
@@ -29780,7 +29795,7 @@ webpackContext.id = 64;
 //! author : Dominika Kruk : https://github.com/amaranthrose
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -29911,7 +29926,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 184 */
+/* 178 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/tr.js ***!
   \***************************************************************************************/
@@ -29924,7 +29939,7 @@ webpackContext.id = 64;
 //!           Burak Yiğit Kaya: https://github.com/BYK
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -30035,7 +30050,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 185 */
+/* 179 */
 /*!****************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/tzl.js ***!
   \****************************************************************************************/
@@ -30048,7 +30063,7 @@ webpackContext.id = 64;
 //! author : Iustì Canun
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -30142,7 +30157,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 186 */
+/* 180 */
 /*!****************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/tzm.js ***!
   \****************************************************************************************/
@@ -30154,7 +30169,7 @@ webpackContext.id = 64;
 //! author : Abdel Said : https://github.com/abdelsaid
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -30213,7 +30228,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 187 */
+/* 181 */
 /*!*********************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/tzm-latn.js ***!
   \*********************************************************************************************/
@@ -30225,7 +30240,7 @@ webpackContext.id = 64;
 //! author : Abdel Said : https://github.com/abdelsaid
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -30284,7 +30299,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 188 */
+/* 182 */
 /*!******************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/ug-cn.js ***!
   \******************************************************************************************/
@@ -30296,7 +30311,7 @@ webpackContext.id = 64;
 //! author: boyaq : https://github.com/boyaq
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -30412,7 +30427,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 189 */
+/* 183 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/uk.js ***!
   \***************************************************************************************/
@@ -30425,7 +30440,7 @@ webpackContext.id = 64;
 //! Author : Menelion Elensúle : https://github.com/Oire
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -30593,7 +30608,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 190 */
+/* 184 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/ur.js ***!
   \***************************************************************************************/
@@ -30606,7 +30621,7 @@ webpackContext.id = 64;
 //! author : Zack : https://github.com/ZackVision
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -30693,7 +30708,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 191 */
+/* 185 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/uz.js ***!
   \***************************************************************************************/
@@ -30705,7 +30720,7 @@ webpackContext.id = 64;
 //! author : Sardor Muminov : https://github.com/muminoff
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -30762,7 +30777,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 192 */
+/* 186 */
 /*!********************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/uz-latn.js ***!
   \********************************************************************************************/
@@ -30774,7 +30789,7 @@ webpackContext.id = 64;
 //! author : Rasulbek Mirzayev : github.com/Rasulbeeek
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -30833,7 +30848,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 193 */
+/* 187 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/vi.js ***!
   \***************************************************************************************/
@@ -30846,7 +30861,7 @@ webpackContext.id = 64;
 //! author : Chien Kira : https://github.com/chienkira
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -30930,7 +30945,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 194 */
+/* 188 */
 /*!*********************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/x-pseudo.js ***!
   \*********************************************************************************************/
@@ -30942,7 +30957,7 @@ webpackContext.id = 64;
 //! author : Andrew Hood : https://github.com/andrewhood125
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -31019,7 +31034,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 195 */
+/* 189 */
 /*!***************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/yo.js ***!
   \***************************************************************************************/
@@ -31031,7 +31046,7 @@ webpackContext.id = 64;
 //! author : Atolagbe Abisoye : https://github.com/andela-batolagbe
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -31090,7 +31105,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 196 */
+/* 190 */
 /*!******************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/zh-cn.js ***!
   \******************************************************************************************/
@@ -31104,7 +31119,7 @@ webpackContext.id = 64;
 //! author : uu109 : https://github.com/uu109
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -31228,7 +31243,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 197 */
+/* 191 */
 /*!******************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/zh-hk.js ***!
   \******************************************************************************************/
@@ -31243,7 +31258,7 @@ webpackContext.id = 64;
 //! author : Anthony : https://github.com/anthonylau
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -31347,7 +31362,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 198 */
+/* 192 */
 /*!******************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/zh-mo.js ***!
   \******************************************************************************************/
@@ -31361,7 +31376,7 @@ webpackContext.id = 64;
 //! author : Tan Yuanhong : https://github.com/le0tan
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -31465,7 +31480,7 @@ webpackContext.id = 64;
 });
 
 /***/ }),
-/* 199 */
+/* 193 */
 /*!******************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/moment/locale/zh-tw.js ***!
   \******************************************************************************************/
@@ -31478,7 +31493,7 @@ webpackContext.id = 64;
 //! author : Chris Lam : https://github.com/hehachris
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 62)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -31582,6 +31597,12 @@ webpackContext.id = 64;
 });
 
 /***/ }),
+/* 194 */,
+/* 195 */,
+/* 196 */,
+/* 197 */,
+/* 198 */,
+/* 199 */,
 /* 200 */,
 /* 201 */,
 /* 202 */,
@@ -31614,7 +31635,9 @@ webpackContext.id = 64;
 /* 229 */,
 /* 230 */,
 /* 231 */,
-/* 232 */
+/* 232 */,
+/* 233 */,
+/* 234 */
 /*!**************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/components/u-charts/u-charts.js ***!
   \**************************************************************************************/
@@ -37287,8 +37310,6 @@ if ( true && typeof module.exports === "object") {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
-/* 233 */,
-/* 234 */,
 /* 235 */,
 /* 236 */,
 /* 237 */,
@@ -37352,9 +37373,794 @@ if ( true && typeof module.exports === "object") {
 /* 295 */,
 /* 296 */,
 /* 297 */,
-/* 298 */,
-/* 299 */,
-/* 300 */,
+/* 298 */
+/*!*********************************************************************************************!*\
+  !*** ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/regenerator/index.js ***!
+  \*********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! regenerator-runtime */ 299);
+
+/***/ }),
+/* 299 */
+/*!************************************************************!*\
+  !*** ./node_modules/regenerator-runtime/runtime-module.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+// This method of obtaining a reference to the global object needs to be
+// kept identical to the way it is obtained in runtime.js
+var g = (function() {
+  return this || (typeof self === "object" && self);
+})() || Function("return this")();
+
+// Use `getOwnPropertyNames` because not all browsers support calling
+// `hasOwnProperty` on the global `self` object in a worker. See #183.
+var hadRuntime = g.regeneratorRuntime &&
+  Object.getOwnPropertyNames(g).indexOf("regeneratorRuntime") >= 0;
+
+// Save the old regeneratorRuntime in case it needs to be restored later.
+var oldRuntime = hadRuntime && g.regeneratorRuntime;
+
+// Force reevalutation of runtime.js.
+g.regeneratorRuntime = undefined;
+
+module.exports = __webpack_require__(/*! ./runtime */ 300);
+
+if (hadRuntime) {
+  // Restore the original runtime.
+  g.regeneratorRuntime = oldRuntime;
+} else {
+  // Remove the global property added by runtime.js.
+  try {
+    delete g.regeneratorRuntime;
+  } catch(e) {
+    g.regeneratorRuntime = undefined;
+  }
+}
+
+
+/***/ }),
+/* 300 */
+/*!*****************************************************!*\
+  !*** ./node_modules/regenerator-runtime/runtime.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+!(function(global) {
+  "use strict";
+
+  var Op = Object.prototype;
+  var hasOwn = Op.hasOwnProperty;
+  var undefined; // More compressible than void 0.
+  var $Symbol = typeof Symbol === "function" ? Symbol : {};
+  var iteratorSymbol = $Symbol.iterator || "@@iterator";
+  var asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator";
+  var toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
+
+  var inModule = typeof module === "object";
+  var runtime = global.regeneratorRuntime;
+  if (runtime) {
+    if (inModule) {
+      // If regeneratorRuntime is defined globally and we're in a module,
+      // make the exports object identical to regeneratorRuntime.
+      module.exports = runtime;
+    }
+    // Don't bother evaluating the rest of this file if the runtime was
+    // already defined globally.
+    return;
+  }
+
+  // Define the runtime globally (as expected by generated code) as either
+  // module.exports (if we're in a module) or a new, empty object.
+  runtime = global.regeneratorRuntime = inModule ? module.exports : {};
+
+  function wrap(innerFn, outerFn, self, tryLocsList) {
+    // If outerFn provided and outerFn.prototype is a Generator, then outerFn.prototype instanceof Generator.
+    var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator;
+    var generator = Object.create(protoGenerator.prototype);
+    var context = new Context(tryLocsList || []);
+
+    // The ._invoke method unifies the implementations of the .next,
+    // .throw, and .return methods.
+    generator._invoke = makeInvokeMethod(innerFn, self, context);
+
+    return generator;
+  }
+  runtime.wrap = wrap;
+
+  // Try/catch helper to minimize deoptimizations. Returns a completion
+  // record like context.tryEntries[i].completion. This interface could
+  // have been (and was previously) designed to take a closure to be
+  // invoked without arguments, but in all the cases we care about we
+  // already have an existing method we want to call, so there's no need
+  // to create a new function object. We can even get away with assuming
+  // the method takes exactly one argument, since that happens to be true
+  // in every case, so we don't have to touch the arguments object. The
+  // only additional allocation required is the completion record, which
+  // has a stable shape and so hopefully should be cheap to allocate.
+  function tryCatch(fn, obj, arg) {
+    try {
+      return { type: "normal", arg: fn.call(obj, arg) };
+    } catch (err) {
+      return { type: "throw", arg: err };
+    }
+  }
+
+  var GenStateSuspendedStart = "suspendedStart";
+  var GenStateSuspendedYield = "suspendedYield";
+  var GenStateExecuting = "executing";
+  var GenStateCompleted = "completed";
+
+  // Returning this object from the innerFn has the same effect as
+  // breaking out of the dispatch switch statement.
+  var ContinueSentinel = {};
+
+  // Dummy constructor functions that we use as the .constructor and
+  // .constructor.prototype properties for functions that return Generator
+  // objects. For full spec compliance, you may wish to configure your
+  // minifier not to mangle the names of these two functions.
+  function Generator() {}
+  function GeneratorFunction() {}
+  function GeneratorFunctionPrototype() {}
+
+  // This is a polyfill for %IteratorPrototype% for environments that
+  // don't natively support it.
+  var IteratorPrototype = {};
+  IteratorPrototype[iteratorSymbol] = function () {
+    return this;
+  };
+
+  var getProto = Object.getPrototypeOf;
+  var NativeIteratorPrototype = getProto && getProto(getProto(values([])));
+  if (NativeIteratorPrototype &&
+      NativeIteratorPrototype !== Op &&
+      hasOwn.call(NativeIteratorPrototype, iteratorSymbol)) {
+    // This environment has a native %IteratorPrototype%; use it instead
+    // of the polyfill.
+    IteratorPrototype = NativeIteratorPrototype;
+  }
+
+  var Gp = GeneratorFunctionPrototype.prototype =
+    Generator.prototype = Object.create(IteratorPrototype);
+  GeneratorFunction.prototype = Gp.constructor = GeneratorFunctionPrototype;
+  GeneratorFunctionPrototype.constructor = GeneratorFunction;
+  GeneratorFunctionPrototype[toStringTagSymbol] =
+    GeneratorFunction.displayName = "GeneratorFunction";
+
+  // Helper for defining the .next, .throw, and .return methods of the
+  // Iterator interface in terms of a single ._invoke method.
+  function defineIteratorMethods(prototype) {
+    ["next", "throw", "return"].forEach(function(method) {
+      prototype[method] = function(arg) {
+        return this._invoke(method, arg);
+      };
+    });
+  }
+
+  runtime.isGeneratorFunction = function(genFun) {
+    var ctor = typeof genFun === "function" && genFun.constructor;
+    return ctor
+      ? ctor === GeneratorFunction ||
+        // For the native GeneratorFunction constructor, the best we can
+        // do is to check its .name property.
+        (ctor.displayName || ctor.name) === "GeneratorFunction"
+      : false;
+  };
+
+  runtime.mark = function(genFun) {
+    if (Object.setPrototypeOf) {
+      Object.setPrototypeOf(genFun, GeneratorFunctionPrototype);
+    } else {
+      genFun.__proto__ = GeneratorFunctionPrototype;
+      if (!(toStringTagSymbol in genFun)) {
+        genFun[toStringTagSymbol] = "GeneratorFunction";
+      }
+    }
+    genFun.prototype = Object.create(Gp);
+    return genFun;
+  };
+
+  // Within the body of any async function, `await x` is transformed to
+  // `yield regeneratorRuntime.awrap(x)`, so that the runtime can test
+  // `hasOwn.call(value, "__await")` to determine if the yielded value is
+  // meant to be awaited.
+  runtime.awrap = function(arg) {
+    return { __await: arg };
+  };
+
+  function AsyncIterator(generator) {
+    function invoke(method, arg, resolve, reject) {
+      var record = tryCatch(generator[method], generator, arg);
+      if (record.type === "throw") {
+        reject(record.arg);
+      } else {
+        var result = record.arg;
+        var value = result.value;
+        if (value &&
+            typeof value === "object" &&
+            hasOwn.call(value, "__await")) {
+          return Promise.resolve(value.__await).then(function(value) {
+            invoke("next", value, resolve, reject);
+          }, function(err) {
+            invoke("throw", err, resolve, reject);
+          });
+        }
+
+        return Promise.resolve(value).then(function(unwrapped) {
+          // When a yielded Promise is resolved, its final value becomes
+          // the .value of the Promise<{value,done}> result for the
+          // current iteration.
+          result.value = unwrapped;
+          resolve(result);
+        }, function(error) {
+          // If a rejected Promise was yielded, throw the rejection back
+          // into the async generator function so it can be handled there.
+          return invoke("throw", error, resolve, reject);
+        });
+      }
+    }
+
+    var previousPromise;
+
+    function enqueue(method, arg) {
+      function callInvokeWithMethodAndArg() {
+        return new Promise(function(resolve, reject) {
+          invoke(method, arg, resolve, reject);
+        });
+      }
+
+      return previousPromise =
+        // If enqueue has been called before, then we want to wait until
+        // all previous Promises have been resolved before calling invoke,
+        // so that results are always delivered in the correct order. If
+        // enqueue has not been called before, then it is important to
+        // call invoke immediately, without waiting on a callback to fire,
+        // so that the async generator function has the opportunity to do
+        // any necessary setup in a predictable way. This predictability
+        // is why the Promise constructor synchronously invokes its
+        // executor callback, and why async functions synchronously
+        // execute code before the first await. Since we implement simple
+        // async functions in terms of async generators, it is especially
+        // important to get this right, even though it requires care.
+        previousPromise ? previousPromise.then(
+          callInvokeWithMethodAndArg,
+          // Avoid propagating failures to Promises returned by later
+          // invocations of the iterator.
+          callInvokeWithMethodAndArg
+        ) : callInvokeWithMethodAndArg();
+    }
+
+    // Define the unified helper method that is used to implement .next,
+    // .throw, and .return (see defineIteratorMethods).
+    this._invoke = enqueue;
+  }
+
+  defineIteratorMethods(AsyncIterator.prototype);
+  AsyncIterator.prototype[asyncIteratorSymbol] = function () {
+    return this;
+  };
+  runtime.AsyncIterator = AsyncIterator;
+
+  // Note that simple async functions are implemented on top of
+  // AsyncIterator objects; they just return a Promise for the value of
+  // the final result produced by the iterator.
+  runtime.async = function(innerFn, outerFn, self, tryLocsList) {
+    var iter = new AsyncIterator(
+      wrap(innerFn, outerFn, self, tryLocsList)
+    );
+
+    return runtime.isGeneratorFunction(outerFn)
+      ? iter // If outerFn is a generator, return the full iterator.
+      : iter.next().then(function(result) {
+          return result.done ? result.value : iter.next();
+        });
+  };
+
+  function makeInvokeMethod(innerFn, self, context) {
+    var state = GenStateSuspendedStart;
+
+    return function invoke(method, arg) {
+      if (state === GenStateExecuting) {
+        throw new Error("Generator is already running");
+      }
+
+      if (state === GenStateCompleted) {
+        if (method === "throw") {
+          throw arg;
+        }
+
+        // Be forgiving, per 25.3.3.3.3 of the spec:
+        // https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generatorresume
+        return doneResult();
+      }
+
+      context.method = method;
+      context.arg = arg;
+
+      while (true) {
+        var delegate = context.delegate;
+        if (delegate) {
+          var delegateResult = maybeInvokeDelegate(delegate, context);
+          if (delegateResult) {
+            if (delegateResult === ContinueSentinel) continue;
+            return delegateResult;
+          }
+        }
+
+        if (context.method === "next") {
+          // Setting context._sent for legacy support of Babel's
+          // function.sent implementation.
+          context.sent = context._sent = context.arg;
+
+        } else if (context.method === "throw") {
+          if (state === GenStateSuspendedStart) {
+            state = GenStateCompleted;
+            throw context.arg;
+          }
+
+          context.dispatchException(context.arg);
+
+        } else if (context.method === "return") {
+          context.abrupt("return", context.arg);
+        }
+
+        state = GenStateExecuting;
+
+        var record = tryCatch(innerFn, self, context);
+        if (record.type === "normal") {
+          // If an exception is thrown from innerFn, we leave state ===
+          // GenStateExecuting and loop back for another invocation.
+          state = context.done
+            ? GenStateCompleted
+            : GenStateSuspendedYield;
+
+          if (record.arg === ContinueSentinel) {
+            continue;
+          }
+
+          return {
+            value: record.arg,
+            done: context.done
+          };
+
+        } else if (record.type === "throw") {
+          state = GenStateCompleted;
+          // Dispatch the exception by looping back around to the
+          // context.dispatchException(context.arg) call above.
+          context.method = "throw";
+          context.arg = record.arg;
+        }
+      }
+    };
+  }
+
+  // Call delegate.iterator[context.method](context.arg) and handle the
+  // result, either by returning a { value, done } result from the
+  // delegate iterator, or by modifying context.method and context.arg,
+  // setting context.delegate to null, and returning the ContinueSentinel.
+  function maybeInvokeDelegate(delegate, context) {
+    var method = delegate.iterator[context.method];
+    if (method === undefined) {
+      // A .throw or .return when the delegate iterator has no .throw
+      // method always terminates the yield* loop.
+      context.delegate = null;
+
+      if (context.method === "throw") {
+        if (delegate.iterator.return) {
+          // If the delegate iterator has a return method, give it a
+          // chance to clean up.
+          context.method = "return";
+          context.arg = undefined;
+          maybeInvokeDelegate(delegate, context);
+
+          if (context.method === "throw") {
+            // If maybeInvokeDelegate(context) changed context.method from
+            // "return" to "throw", let that override the TypeError below.
+            return ContinueSentinel;
+          }
+        }
+
+        context.method = "throw";
+        context.arg = new TypeError(
+          "The iterator does not provide a 'throw' method");
+      }
+
+      return ContinueSentinel;
+    }
+
+    var record = tryCatch(method, delegate.iterator, context.arg);
+
+    if (record.type === "throw") {
+      context.method = "throw";
+      context.arg = record.arg;
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    var info = record.arg;
+
+    if (! info) {
+      context.method = "throw";
+      context.arg = new TypeError("iterator result is not an object");
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    if (info.done) {
+      // Assign the result of the finished delegate to the temporary
+      // variable specified by delegate.resultName (see delegateYield).
+      context[delegate.resultName] = info.value;
+
+      // Resume execution at the desired location (see delegateYield).
+      context.next = delegate.nextLoc;
+
+      // If context.method was "throw" but the delegate handled the
+      // exception, let the outer generator proceed normally. If
+      // context.method was "next", forget context.arg since it has been
+      // "consumed" by the delegate iterator. If context.method was
+      // "return", allow the original .return call to continue in the
+      // outer generator.
+      if (context.method !== "return") {
+        context.method = "next";
+        context.arg = undefined;
+      }
+
+    } else {
+      // Re-yield the result returned by the delegate method.
+      return info;
+    }
+
+    // The delegate iterator is finished, so forget it and continue with
+    // the outer generator.
+    context.delegate = null;
+    return ContinueSentinel;
+  }
+
+  // Define Generator.prototype.{next,throw,return} in terms of the
+  // unified ._invoke helper method.
+  defineIteratorMethods(Gp);
+
+  Gp[toStringTagSymbol] = "Generator";
+
+  // A Generator should always return itself as the iterator object when the
+  // @@iterator function is called on it. Some browsers' implementations of the
+  // iterator prototype chain incorrectly implement this, causing the Generator
+  // object to not be returned from this call. This ensures that doesn't happen.
+  // See https://github.com/facebook/regenerator/issues/274 for more details.
+  Gp[iteratorSymbol] = function() {
+    return this;
+  };
+
+  Gp.toString = function() {
+    return "[object Generator]";
+  };
+
+  function pushTryEntry(locs) {
+    var entry = { tryLoc: locs[0] };
+
+    if (1 in locs) {
+      entry.catchLoc = locs[1];
+    }
+
+    if (2 in locs) {
+      entry.finallyLoc = locs[2];
+      entry.afterLoc = locs[3];
+    }
+
+    this.tryEntries.push(entry);
+  }
+
+  function resetTryEntry(entry) {
+    var record = entry.completion || {};
+    record.type = "normal";
+    delete record.arg;
+    entry.completion = record;
+  }
+
+  function Context(tryLocsList) {
+    // The root entry object (effectively a try statement without a catch
+    // or a finally block) gives us a place to store values thrown from
+    // locations where there is no enclosing try statement.
+    this.tryEntries = [{ tryLoc: "root" }];
+    tryLocsList.forEach(pushTryEntry, this);
+    this.reset(true);
+  }
+
+  runtime.keys = function(object) {
+    var keys = [];
+    for (var key in object) {
+      keys.push(key);
+    }
+    keys.reverse();
+
+    // Rather than returning an object with a next method, we keep
+    // things simple and return the next function itself.
+    return function next() {
+      while (keys.length) {
+        var key = keys.pop();
+        if (key in object) {
+          next.value = key;
+          next.done = false;
+          return next;
+        }
+      }
+
+      // To avoid creating an additional object, we just hang the .value
+      // and .done properties off the next function object itself. This
+      // also ensures that the minifier will not anonymize the function.
+      next.done = true;
+      return next;
+    };
+  };
+
+  function values(iterable) {
+    if (iterable) {
+      var iteratorMethod = iterable[iteratorSymbol];
+      if (iteratorMethod) {
+        return iteratorMethod.call(iterable);
+      }
+
+      if (typeof iterable.next === "function") {
+        return iterable;
+      }
+
+      if (!isNaN(iterable.length)) {
+        var i = -1, next = function next() {
+          while (++i < iterable.length) {
+            if (hasOwn.call(iterable, i)) {
+              next.value = iterable[i];
+              next.done = false;
+              return next;
+            }
+          }
+
+          next.value = undefined;
+          next.done = true;
+
+          return next;
+        };
+
+        return next.next = next;
+      }
+    }
+
+    // Return an iterator with no values.
+    return { next: doneResult };
+  }
+  runtime.values = values;
+
+  function doneResult() {
+    return { value: undefined, done: true };
+  }
+
+  Context.prototype = {
+    constructor: Context,
+
+    reset: function(skipTempReset) {
+      this.prev = 0;
+      this.next = 0;
+      // Resetting context._sent for legacy support of Babel's
+      // function.sent implementation.
+      this.sent = this._sent = undefined;
+      this.done = false;
+      this.delegate = null;
+
+      this.method = "next";
+      this.arg = undefined;
+
+      this.tryEntries.forEach(resetTryEntry);
+
+      if (!skipTempReset) {
+        for (var name in this) {
+          // Not sure about the optimal order of these conditions:
+          if (name.charAt(0) === "t" &&
+              hasOwn.call(this, name) &&
+              !isNaN(+name.slice(1))) {
+            this[name] = undefined;
+          }
+        }
+      }
+    },
+
+    stop: function() {
+      this.done = true;
+
+      var rootEntry = this.tryEntries[0];
+      var rootRecord = rootEntry.completion;
+      if (rootRecord.type === "throw") {
+        throw rootRecord.arg;
+      }
+
+      return this.rval;
+    },
+
+    dispatchException: function(exception) {
+      if (this.done) {
+        throw exception;
+      }
+
+      var context = this;
+      function handle(loc, caught) {
+        record.type = "throw";
+        record.arg = exception;
+        context.next = loc;
+
+        if (caught) {
+          // If the dispatched exception was caught by a catch block,
+          // then let that catch block handle the exception normally.
+          context.method = "next";
+          context.arg = undefined;
+        }
+
+        return !! caught;
+      }
+
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        var record = entry.completion;
+
+        if (entry.tryLoc === "root") {
+          // Exception thrown outside of any try block that could handle
+          // it, so set the completion value of the entire function to
+          // throw the exception.
+          return handle("end");
+        }
+
+        if (entry.tryLoc <= this.prev) {
+          var hasCatch = hasOwn.call(entry, "catchLoc");
+          var hasFinally = hasOwn.call(entry, "finallyLoc");
+
+          if (hasCatch && hasFinally) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            } else if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+
+          } else if (hasCatch) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            }
+
+          } else if (hasFinally) {
+            if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+
+          } else {
+            throw new Error("try statement without catch or finally");
+          }
+        }
+      }
+    },
+
+    abrupt: function(type, arg) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc <= this.prev &&
+            hasOwn.call(entry, "finallyLoc") &&
+            this.prev < entry.finallyLoc) {
+          var finallyEntry = entry;
+          break;
+        }
+      }
+
+      if (finallyEntry &&
+          (type === "break" ||
+           type === "continue") &&
+          finallyEntry.tryLoc <= arg &&
+          arg <= finallyEntry.finallyLoc) {
+        // Ignore the finally entry if control is not jumping to a
+        // location outside the try/catch block.
+        finallyEntry = null;
+      }
+
+      var record = finallyEntry ? finallyEntry.completion : {};
+      record.type = type;
+      record.arg = arg;
+
+      if (finallyEntry) {
+        this.method = "next";
+        this.next = finallyEntry.finallyLoc;
+        return ContinueSentinel;
+      }
+
+      return this.complete(record);
+    },
+
+    complete: function(record, afterLoc) {
+      if (record.type === "throw") {
+        throw record.arg;
+      }
+
+      if (record.type === "break" ||
+          record.type === "continue") {
+        this.next = record.arg;
+      } else if (record.type === "return") {
+        this.rval = this.arg = record.arg;
+        this.method = "return";
+        this.next = "end";
+      } else if (record.type === "normal" && afterLoc) {
+        this.next = afterLoc;
+      }
+
+      return ContinueSentinel;
+    },
+
+    finish: function(finallyLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.finallyLoc === finallyLoc) {
+          this.complete(entry.completion, entry.afterLoc);
+          resetTryEntry(entry);
+          return ContinueSentinel;
+        }
+      }
+    },
+
+    "catch": function(tryLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc === tryLoc) {
+          var record = entry.completion;
+          if (record.type === "throw") {
+            var thrown = record.arg;
+            resetTryEntry(entry);
+          }
+          return thrown;
+        }
+      }
+
+      // The context.catch method must only be called with a location
+      // argument that corresponds to a known catch block.
+      throw new Error("illegal catch attempt");
+    },
+
+    delegateYield: function(iterable, resultName, nextLoc) {
+      this.delegate = {
+        iterator: values(iterable),
+        resultName: resultName,
+        nextLoc: nextLoc
+      };
+
+      if (this.method === "next") {
+        // Deliberately forget the last sent value so that we don't
+        // accidentally pass it on to the delegate.
+        this.arg = undefined;
+      }
+
+      return ContinueSentinel;
+    }
+  };
+})(
+  // In sloppy mode, unbound `this` refers to the global object, fallback to
+  // Function constructor if we're in global strict mode. That is sadly a form
+  // of indirect eval which violates Content Security Policy.
+  (function() {
+    return this || (typeof self === "object" && self);
+  })() || Function("return this")()
+);
+
+
+/***/ }),
 /* 301 */,
 /* 302 */,
 /* 303 */,
@@ -37362,7 +38168,14 @@ if ( true && typeof module.exports === "object") {
 /* 305 */,
 /* 306 */,
 /* 307 */,
-/* 308 */
+/* 308 */,
+/* 309 */,
+/* 310 */,
+/* 311 */,
+/* 312 */,
+/* 313 */,
+/* 314 */,
+/* 315 */
 /*!*************************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/uview-ui/libs/util/emitter.js ***!
   \*************************************************************************************************/
@@ -37421,7 +38234,7 @@ function _broadcast(componentName, eventName, params) {
     } } };exports.default = _default;
 
 /***/ }),
-/* 309 */
+/* 316 */
 /*!*********************************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/node_modules/uview-ui/libs/util/async-validator.js ***!
   \*********************************************************************************************************/
@@ -38784,10 +39597,10 @@ Schema.warning = warning;
 Schema.messages = messages;var _default =
 
 Schema;exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../../../../Applications/HBuilderX 2.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/node-libs-browser/mock/process.js */ 310)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../../../../Applications/HBuilderX 2.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/node-libs-browser/mock/process.js */ 317)))
 
 /***/ }),
-/* 310 */
+/* 317 */
 /*!********************************************************!*\
   !*** ./node_modules/node-libs-browser/mock/process.js ***!
   \********************************************************/
@@ -38818,7 +39631,7 @@ exports.binding = function (name) {
     var path;
     exports.cwd = function () { return cwd };
     exports.chdir = function (dir) {
-        if (!path) path = __webpack_require__(/*! path */ 311);
+        if (!path) path = __webpack_require__(/*! path */ 318);
         cwd = path.resolve(dir, cwd);
     };
 })();
@@ -38831,7 +39644,7 @@ exports.features = {};
 
 
 /***/ }),
-/* 311 */
+/* 318 */
 /*!***********************************************!*\
   !*** ./node_modules/path-browserify/index.js ***!
   \***********************************************/
@@ -39141,16 +39954,9 @@ var substr = 'ab'.substr(-1) === 'b'
     }
 ;
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node-libs-browser/mock/process.js */ 310)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node-libs-browser/mock/process.js */ 317)))
 
 /***/ }),
-/* 312 */,
-/* 313 */,
-/* 314 */,
-/* 315 */,
-/* 316 */,
-/* 317 */,
-/* 318 */,
 /* 319 */,
 /* 320 */,
 /* 321 */,
@@ -39158,794 +39964,9 @@ var substr = 'ab'.substr(-1) === 'b'
 /* 323 */,
 /* 324 */,
 /* 325 */,
-/* 326 */
-/*!*********************************************************************************************!*\
-  !*** ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/regenerator/index.js ***!
-  \*********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! regenerator-runtime */ 327);
-
-/***/ }),
-/* 327 */
-/*!************************************************************!*\
-  !*** ./node_modules/regenerator-runtime/runtime-module.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/**
- * Copyright (c) 2014-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-// This method of obtaining a reference to the global object needs to be
-// kept identical to the way it is obtained in runtime.js
-var g = (function() {
-  return this || (typeof self === "object" && self);
-})() || Function("return this")();
-
-// Use `getOwnPropertyNames` because not all browsers support calling
-// `hasOwnProperty` on the global `self` object in a worker. See #183.
-var hadRuntime = g.regeneratorRuntime &&
-  Object.getOwnPropertyNames(g).indexOf("regeneratorRuntime") >= 0;
-
-// Save the old regeneratorRuntime in case it needs to be restored later.
-var oldRuntime = hadRuntime && g.regeneratorRuntime;
-
-// Force reevalutation of runtime.js.
-g.regeneratorRuntime = undefined;
-
-module.exports = __webpack_require__(/*! ./runtime */ 328);
-
-if (hadRuntime) {
-  // Restore the original runtime.
-  g.regeneratorRuntime = oldRuntime;
-} else {
-  // Remove the global property added by runtime.js.
-  try {
-    delete g.regeneratorRuntime;
-  } catch(e) {
-    g.regeneratorRuntime = undefined;
-  }
-}
-
-
-/***/ }),
-/* 328 */
-/*!*****************************************************!*\
-  !*** ./node_modules/regenerator-runtime/runtime.js ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/**
- * Copyright (c) 2014-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-!(function(global) {
-  "use strict";
-
-  var Op = Object.prototype;
-  var hasOwn = Op.hasOwnProperty;
-  var undefined; // More compressible than void 0.
-  var $Symbol = typeof Symbol === "function" ? Symbol : {};
-  var iteratorSymbol = $Symbol.iterator || "@@iterator";
-  var asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator";
-  var toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
-
-  var inModule = typeof module === "object";
-  var runtime = global.regeneratorRuntime;
-  if (runtime) {
-    if (inModule) {
-      // If regeneratorRuntime is defined globally and we're in a module,
-      // make the exports object identical to regeneratorRuntime.
-      module.exports = runtime;
-    }
-    // Don't bother evaluating the rest of this file if the runtime was
-    // already defined globally.
-    return;
-  }
-
-  // Define the runtime globally (as expected by generated code) as either
-  // module.exports (if we're in a module) or a new, empty object.
-  runtime = global.regeneratorRuntime = inModule ? module.exports : {};
-
-  function wrap(innerFn, outerFn, self, tryLocsList) {
-    // If outerFn provided and outerFn.prototype is a Generator, then outerFn.prototype instanceof Generator.
-    var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator;
-    var generator = Object.create(protoGenerator.prototype);
-    var context = new Context(tryLocsList || []);
-
-    // The ._invoke method unifies the implementations of the .next,
-    // .throw, and .return methods.
-    generator._invoke = makeInvokeMethod(innerFn, self, context);
-
-    return generator;
-  }
-  runtime.wrap = wrap;
-
-  // Try/catch helper to minimize deoptimizations. Returns a completion
-  // record like context.tryEntries[i].completion. This interface could
-  // have been (and was previously) designed to take a closure to be
-  // invoked without arguments, but in all the cases we care about we
-  // already have an existing method we want to call, so there's no need
-  // to create a new function object. We can even get away with assuming
-  // the method takes exactly one argument, since that happens to be true
-  // in every case, so we don't have to touch the arguments object. The
-  // only additional allocation required is the completion record, which
-  // has a stable shape and so hopefully should be cheap to allocate.
-  function tryCatch(fn, obj, arg) {
-    try {
-      return { type: "normal", arg: fn.call(obj, arg) };
-    } catch (err) {
-      return { type: "throw", arg: err };
-    }
-  }
-
-  var GenStateSuspendedStart = "suspendedStart";
-  var GenStateSuspendedYield = "suspendedYield";
-  var GenStateExecuting = "executing";
-  var GenStateCompleted = "completed";
-
-  // Returning this object from the innerFn has the same effect as
-  // breaking out of the dispatch switch statement.
-  var ContinueSentinel = {};
-
-  // Dummy constructor functions that we use as the .constructor and
-  // .constructor.prototype properties for functions that return Generator
-  // objects. For full spec compliance, you may wish to configure your
-  // minifier not to mangle the names of these two functions.
-  function Generator() {}
-  function GeneratorFunction() {}
-  function GeneratorFunctionPrototype() {}
-
-  // This is a polyfill for %IteratorPrototype% for environments that
-  // don't natively support it.
-  var IteratorPrototype = {};
-  IteratorPrototype[iteratorSymbol] = function () {
-    return this;
-  };
-
-  var getProto = Object.getPrototypeOf;
-  var NativeIteratorPrototype = getProto && getProto(getProto(values([])));
-  if (NativeIteratorPrototype &&
-      NativeIteratorPrototype !== Op &&
-      hasOwn.call(NativeIteratorPrototype, iteratorSymbol)) {
-    // This environment has a native %IteratorPrototype%; use it instead
-    // of the polyfill.
-    IteratorPrototype = NativeIteratorPrototype;
-  }
-
-  var Gp = GeneratorFunctionPrototype.prototype =
-    Generator.prototype = Object.create(IteratorPrototype);
-  GeneratorFunction.prototype = Gp.constructor = GeneratorFunctionPrototype;
-  GeneratorFunctionPrototype.constructor = GeneratorFunction;
-  GeneratorFunctionPrototype[toStringTagSymbol] =
-    GeneratorFunction.displayName = "GeneratorFunction";
-
-  // Helper for defining the .next, .throw, and .return methods of the
-  // Iterator interface in terms of a single ._invoke method.
-  function defineIteratorMethods(prototype) {
-    ["next", "throw", "return"].forEach(function(method) {
-      prototype[method] = function(arg) {
-        return this._invoke(method, arg);
-      };
-    });
-  }
-
-  runtime.isGeneratorFunction = function(genFun) {
-    var ctor = typeof genFun === "function" && genFun.constructor;
-    return ctor
-      ? ctor === GeneratorFunction ||
-        // For the native GeneratorFunction constructor, the best we can
-        // do is to check its .name property.
-        (ctor.displayName || ctor.name) === "GeneratorFunction"
-      : false;
-  };
-
-  runtime.mark = function(genFun) {
-    if (Object.setPrototypeOf) {
-      Object.setPrototypeOf(genFun, GeneratorFunctionPrototype);
-    } else {
-      genFun.__proto__ = GeneratorFunctionPrototype;
-      if (!(toStringTagSymbol in genFun)) {
-        genFun[toStringTagSymbol] = "GeneratorFunction";
-      }
-    }
-    genFun.prototype = Object.create(Gp);
-    return genFun;
-  };
-
-  // Within the body of any async function, `await x` is transformed to
-  // `yield regeneratorRuntime.awrap(x)`, so that the runtime can test
-  // `hasOwn.call(value, "__await")` to determine if the yielded value is
-  // meant to be awaited.
-  runtime.awrap = function(arg) {
-    return { __await: arg };
-  };
-
-  function AsyncIterator(generator) {
-    function invoke(method, arg, resolve, reject) {
-      var record = tryCatch(generator[method], generator, arg);
-      if (record.type === "throw") {
-        reject(record.arg);
-      } else {
-        var result = record.arg;
-        var value = result.value;
-        if (value &&
-            typeof value === "object" &&
-            hasOwn.call(value, "__await")) {
-          return Promise.resolve(value.__await).then(function(value) {
-            invoke("next", value, resolve, reject);
-          }, function(err) {
-            invoke("throw", err, resolve, reject);
-          });
-        }
-
-        return Promise.resolve(value).then(function(unwrapped) {
-          // When a yielded Promise is resolved, its final value becomes
-          // the .value of the Promise<{value,done}> result for the
-          // current iteration.
-          result.value = unwrapped;
-          resolve(result);
-        }, function(error) {
-          // If a rejected Promise was yielded, throw the rejection back
-          // into the async generator function so it can be handled there.
-          return invoke("throw", error, resolve, reject);
-        });
-      }
-    }
-
-    var previousPromise;
-
-    function enqueue(method, arg) {
-      function callInvokeWithMethodAndArg() {
-        return new Promise(function(resolve, reject) {
-          invoke(method, arg, resolve, reject);
-        });
-      }
-
-      return previousPromise =
-        // If enqueue has been called before, then we want to wait until
-        // all previous Promises have been resolved before calling invoke,
-        // so that results are always delivered in the correct order. If
-        // enqueue has not been called before, then it is important to
-        // call invoke immediately, without waiting on a callback to fire,
-        // so that the async generator function has the opportunity to do
-        // any necessary setup in a predictable way. This predictability
-        // is why the Promise constructor synchronously invokes its
-        // executor callback, and why async functions synchronously
-        // execute code before the first await. Since we implement simple
-        // async functions in terms of async generators, it is especially
-        // important to get this right, even though it requires care.
-        previousPromise ? previousPromise.then(
-          callInvokeWithMethodAndArg,
-          // Avoid propagating failures to Promises returned by later
-          // invocations of the iterator.
-          callInvokeWithMethodAndArg
-        ) : callInvokeWithMethodAndArg();
-    }
-
-    // Define the unified helper method that is used to implement .next,
-    // .throw, and .return (see defineIteratorMethods).
-    this._invoke = enqueue;
-  }
-
-  defineIteratorMethods(AsyncIterator.prototype);
-  AsyncIterator.prototype[asyncIteratorSymbol] = function () {
-    return this;
-  };
-  runtime.AsyncIterator = AsyncIterator;
-
-  // Note that simple async functions are implemented on top of
-  // AsyncIterator objects; they just return a Promise for the value of
-  // the final result produced by the iterator.
-  runtime.async = function(innerFn, outerFn, self, tryLocsList) {
-    var iter = new AsyncIterator(
-      wrap(innerFn, outerFn, self, tryLocsList)
-    );
-
-    return runtime.isGeneratorFunction(outerFn)
-      ? iter // If outerFn is a generator, return the full iterator.
-      : iter.next().then(function(result) {
-          return result.done ? result.value : iter.next();
-        });
-  };
-
-  function makeInvokeMethod(innerFn, self, context) {
-    var state = GenStateSuspendedStart;
-
-    return function invoke(method, arg) {
-      if (state === GenStateExecuting) {
-        throw new Error("Generator is already running");
-      }
-
-      if (state === GenStateCompleted) {
-        if (method === "throw") {
-          throw arg;
-        }
-
-        // Be forgiving, per 25.3.3.3.3 of the spec:
-        // https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generatorresume
-        return doneResult();
-      }
-
-      context.method = method;
-      context.arg = arg;
-
-      while (true) {
-        var delegate = context.delegate;
-        if (delegate) {
-          var delegateResult = maybeInvokeDelegate(delegate, context);
-          if (delegateResult) {
-            if (delegateResult === ContinueSentinel) continue;
-            return delegateResult;
-          }
-        }
-
-        if (context.method === "next") {
-          // Setting context._sent for legacy support of Babel's
-          // function.sent implementation.
-          context.sent = context._sent = context.arg;
-
-        } else if (context.method === "throw") {
-          if (state === GenStateSuspendedStart) {
-            state = GenStateCompleted;
-            throw context.arg;
-          }
-
-          context.dispatchException(context.arg);
-
-        } else if (context.method === "return") {
-          context.abrupt("return", context.arg);
-        }
-
-        state = GenStateExecuting;
-
-        var record = tryCatch(innerFn, self, context);
-        if (record.type === "normal") {
-          // If an exception is thrown from innerFn, we leave state ===
-          // GenStateExecuting and loop back for another invocation.
-          state = context.done
-            ? GenStateCompleted
-            : GenStateSuspendedYield;
-
-          if (record.arg === ContinueSentinel) {
-            continue;
-          }
-
-          return {
-            value: record.arg,
-            done: context.done
-          };
-
-        } else if (record.type === "throw") {
-          state = GenStateCompleted;
-          // Dispatch the exception by looping back around to the
-          // context.dispatchException(context.arg) call above.
-          context.method = "throw";
-          context.arg = record.arg;
-        }
-      }
-    };
-  }
-
-  // Call delegate.iterator[context.method](context.arg) and handle the
-  // result, either by returning a { value, done } result from the
-  // delegate iterator, or by modifying context.method and context.arg,
-  // setting context.delegate to null, and returning the ContinueSentinel.
-  function maybeInvokeDelegate(delegate, context) {
-    var method = delegate.iterator[context.method];
-    if (method === undefined) {
-      // A .throw or .return when the delegate iterator has no .throw
-      // method always terminates the yield* loop.
-      context.delegate = null;
-
-      if (context.method === "throw") {
-        if (delegate.iterator.return) {
-          // If the delegate iterator has a return method, give it a
-          // chance to clean up.
-          context.method = "return";
-          context.arg = undefined;
-          maybeInvokeDelegate(delegate, context);
-
-          if (context.method === "throw") {
-            // If maybeInvokeDelegate(context) changed context.method from
-            // "return" to "throw", let that override the TypeError below.
-            return ContinueSentinel;
-          }
-        }
-
-        context.method = "throw";
-        context.arg = new TypeError(
-          "The iterator does not provide a 'throw' method");
-      }
-
-      return ContinueSentinel;
-    }
-
-    var record = tryCatch(method, delegate.iterator, context.arg);
-
-    if (record.type === "throw") {
-      context.method = "throw";
-      context.arg = record.arg;
-      context.delegate = null;
-      return ContinueSentinel;
-    }
-
-    var info = record.arg;
-
-    if (! info) {
-      context.method = "throw";
-      context.arg = new TypeError("iterator result is not an object");
-      context.delegate = null;
-      return ContinueSentinel;
-    }
-
-    if (info.done) {
-      // Assign the result of the finished delegate to the temporary
-      // variable specified by delegate.resultName (see delegateYield).
-      context[delegate.resultName] = info.value;
-
-      // Resume execution at the desired location (see delegateYield).
-      context.next = delegate.nextLoc;
-
-      // If context.method was "throw" but the delegate handled the
-      // exception, let the outer generator proceed normally. If
-      // context.method was "next", forget context.arg since it has been
-      // "consumed" by the delegate iterator. If context.method was
-      // "return", allow the original .return call to continue in the
-      // outer generator.
-      if (context.method !== "return") {
-        context.method = "next";
-        context.arg = undefined;
-      }
-
-    } else {
-      // Re-yield the result returned by the delegate method.
-      return info;
-    }
-
-    // The delegate iterator is finished, so forget it and continue with
-    // the outer generator.
-    context.delegate = null;
-    return ContinueSentinel;
-  }
-
-  // Define Generator.prototype.{next,throw,return} in terms of the
-  // unified ._invoke helper method.
-  defineIteratorMethods(Gp);
-
-  Gp[toStringTagSymbol] = "Generator";
-
-  // A Generator should always return itself as the iterator object when the
-  // @@iterator function is called on it. Some browsers' implementations of the
-  // iterator prototype chain incorrectly implement this, causing the Generator
-  // object to not be returned from this call. This ensures that doesn't happen.
-  // See https://github.com/facebook/regenerator/issues/274 for more details.
-  Gp[iteratorSymbol] = function() {
-    return this;
-  };
-
-  Gp.toString = function() {
-    return "[object Generator]";
-  };
-
-  function pushTryEntry(locs) {
-    var entry = { tryLoc: locs[0] };
-
-    if (1 in locs) {
-      entry.catchLoc = locs[1];
-    }
-
-    if (2 in locs) {
-      entry.finallyLoc = locs[2];
-      entry.afterLoc = locs[3];
-    }
-
-    this.tryEntries.push(entry);
-  }
-
-  function resetTryEntry(entry) {
-    var record = entry.completion || {};
-    record.type = "normal";
-    delete record.arg;
-    entry.completion = record;
-  }
-
-  function Context(tryLocsList) {
-    // The root entry object (effectively a try statement without a catch
-    // or a finally block) gives us a place to store values thrown from
-    // locations where there is no enclosing try statement.
-    this.tryEntries = [{ tryLoc: "root" }];
-    tryLocsList.forEach(pushTryEntry, this);
-    this.reset(true);
-  }
-
-  runtime.keys = function(object) {
-    var keys = [];
-    for (var key in object) {
-      keys.push(key);
-    }
-    keys.reverse();
-
-    // Rather than returning an object with a next method, we keep
-    // things simple and return the next function itself.
-    return function next() {
-      while (keys.length) {
-        var key = keys.pop();
-        if (key in object) {
-          next.value = key;
-          next.done = false;
-          return next;
-        }
-      }
-
-      // To avoid creating an additional object, we just hang the .value
-      // and .done properties off the next function object itself. This
-      // also ensures that the minifier will not anonymize the function.
-      next.done = true;
-      return next;
-    };
-  };
-
-  function values(iterable) {
-    if (iterable) {
-      var iteratorMethod = iterable[iteratorSymbol];
-      if (iteratorMethod) {
-        return iteratorMethod.call(iterable);
-      }
-
-      if (typeof iterable.next === "function") {
-        return iterable;
-      }
-
-      if (!isNaN(iterable.length)) {
-        var i = -1, next = function next() {
-          while (++i < iterable.length) {
-            if (hasOwn.call(iterable, i)) {
-              next.value = iterable[i];
-              next.done = false;
-              return next;
-            }
-          }
-
-          next.value = undefined;
-          next.done = true;
-
-          return next;
-        };
-
-        return next.next = next;
-      }
-    }
-
-    // Return an iterator with no values.
-    return { next: doneResult };
-  }
-  runtime.values = values;
-
-  function doneResult() {
-    return { value: undefined, done: true };
-  }
-
-  Context.prototype = {
-    constructor: Context,
-
-    reset: function(skipTempReset) {
-      this.prev = 0;
-      this.next = 0;
-      // Resetting context._sent for legacy support of Babel's
-      // function.sent implementation.
-      this.sent = this._sent = undefined;
-      this.done = false;
-      this.delegate = null;
-
-      this.method = "next";
-      this.arg = undefined;
-
-      this.tryEntries.forEach(resetTryEntry);
-
-      if (!skipTempReset) {
-        for (var name in this) {
-          // Not sure about the optimal order of these conditions:
-          if (name.charAt(0) === "t" &&
-              hasOwn.call(this, name) &&
-              !isNaN(+name.slice(1))) {
-            this[name] = undefined;
-          }
-        }
-      }
-    },
-
-    stop: function() {
-      this.done = true;
-
-      var rootEntry = this.tryEntries[0];
-      var rootRecord = rootEntry.completion;
-      if (rootRecord.type === "throw") {
-        throw rootRecord.arg;
-      }
-
-      return this.rval;
-    },
-
-    dispatchException: function(exception) {
-      if (this.done) {
-        throw exception;
-      }
-
-      var context = this;
-      function handle(loc, caught) {
-        record.type = "throw";
-        record.arg = exception;
-        context.next = loc;
-
-        if (caught) {
-          // If the dispatched exception was caught by a catch block,
-          // then let that catch block handle the exception normally.
-          context.method = "next";
-          context.arg = undefined;
-        }
-
-        return !! caught;
-      }
-
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        var record = entry.completion;
-
-        if (entry.tryLoc === "root") {
-          // Exception thrown outside of any try block that could handle
-          // it, so set the completion value of the entire function to
-          // throw the exception.
-          return handle("end");
-        }
-
-        if (entry.tryLoc <= this.prev) {
-          var hasCatch = hasOwn.call(entry, "catchLoc");
-          var hasFinally = hasOwn.call(entry, "finallyLoc");
-
-          if (hasCatch && hasFinally) {
-            if (this.prev < entry.catchLoc) {
-              return handle(entry.catchLoc, true);
-            } else if (this.prev < entry.finallyLoc) {
-              return handle(entry.finallyLoc);
-            }
-
-          } else if (hasCatch) {
-            if (this.prev < entry.catchLoc) {
-              return handle(entry.catchLoc, true);
-            }
-
-          } else if (hasFinally) {
-            if (this.prev < entry.finallyLoc) {
-              return handle(entry.finallyLoc);
-            }
-
-          } else {
-            throw new Error("try statement without catch or finally");
-          }
-        }
-      }
-    },
-
-    abrupt: function(type, arg) {
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        if (entry.tryLoc <= this.prev &&
-            hasOwn.call(entry, "finallyLoc") &&
-            this.prev < entry.finallyLoc) {
-          var finallyEntry = entry;
-          break;
-        }
-      }
-
-      if (finallyEntry &&
-          (type === "break" ||
-           type === "continue") &&
-          finallyEntry.tryLoc <= arg &&
-          arg <= finallyEntry.finallyLoc) {
-        // Ignore the finally entry if control is not jumping to a
-        // location outside the try/catch block.
-        finallyEntry = null;
-      }
-
-      var record = finallyEntry ? finallyEntry.completion : {};
-      record.type = type;
-      record.arg = arg;
-
-      if (finallyEntry) {
-        this.method = "next";
-        this.next = finallyEntry.finallyLoc;
-        return ContinueSentinel;
-      }
-
-      return this.complete(record);
-    },
-
-    complete: function(record, afterLoc) {
-      if (record.type === "throw") {
-        throw record.arg;
-      }
-
-      if (record.type === "break" ||
-          record.type === "continue") {
-        this.next = record.arg;
-      } else if (record.type === "return") {
-        this.rval = this.arg = record.arg;
-        this.method = "return";
-        this.next = "end";
-      } else if (record.type === "normal" && afterLoc) {
-        this.next = afterLoc;
-      }
-
-      return ContinueSentinel;
-    },
-
-    finish: function(finallyLoc) {
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        if (entry.finallyLoc === finallyLoc) {
-          this.complete(entry.completion, entry.afterLoc);
-          resetTryEntry(entry);
-          return ContinueSentinel;
-        }
-      }
-    },
-
-    "catch": function(tryLoc) {
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        if (entry.tryLoc === tryLoc) {
-          var record = entry.completion;
-          if (record.type === "throw") {
-            var thrown = record.arg;
-            resetTryEntry(entry);
-          }
-          return thrown;
-        }
-      }
-
-      // The context.catch method must only be called with a location
-      // argument that corresponds to a known catch block.
-      throw new Error("illegal catch attempt");
-    },
-
-    delegateYield: function(iterable, resultName, nextLoc) {
-      this.delegate = {
-        iterator: values(iterable),
-        resultName: resultName,
-        nextLoc: nextLoc
-      };
-
-      if (this.method === "next") {
-        // Deliberately forget the last sent value so that we don't
-        // accidentally pass it on to the delegate.
-        this.arg = undefined;
-      }
-
-      return ContinueSentinel;
-    }
-  };
-})(
-  // In sloppy mode, unbound `this` refers to the global object, fallback to
-  // Function constructor if we're in global strict mode. That is sadly a form
-  // of indirect eval which violates Content Security Policy.
-  (function() {
-    return this || (typeof self === "object" && self);
-  })() || Function("return this")()
-);
-
-
-/***/ }),
+/* 326 */,
+/* 327 */,
+/* 328 */,
 /* 329 */,
 /* 330 */,
 /* 331 */,
@@ -39999,10 +40020,7 @@ if (hadRuntime) {
 /* 379 */,
 /* 380 */,
 /* 381 */,
-/* 382 */,
-/* 383 */,
-/* 384 */,
-/* 385 */
+/* 382 */
 /*!************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/components/uni-popup/popup.js ***!
   \************************************************************************************/
@@ -40010,7 +40028,7 @@ if (hadRuntime) {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _message = _interopRequireDefault(__webpack_require__(/*! ./message.js */ 386));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _message = _interopRequireDefault(__webpack_require__(/*! ./message.js */ 383));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 // 定义 type 类型:弹出类型：top/bottom/center
 var config = {
   // 顶部弹出
@@ -40036,7 +40054,7 @@ var config = {
   mixins: [_message.default] };exports.default = _default;
 
 /***/ }),
-/* 386 */
+/* 383 */
 /*!**************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/components/uni-popup/message.js ***!
   \**************************************************************************************/
@@ -40073,6 +40091,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
   } }), _created$created$meth);exports.default = _default;
 
 /***/ }),
+/* 384 */,
+/* 385 */,
+/* 386 */,
 /* 387 */,
 /* 388 */,
 /* 389 */,
@@ -40080,7 +40101,32 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 /* 391 */,
 /* 392 */,
 /* 393 */,
-/* 394 */
+/* 394 */,
+/* 395 */,
+/* 396 */,
+/* 397 */,
+/* 398 */,
+/* 399 */,
+/* 400 */,
+/* 401 */,
+/* 402 */,
+/* 403 */,
+/* 404 */,
+/* 405 */,
+/* 406 */,
+/* 407 */,
+/* 408 */,
+/* 409 */,
+/* 410 */,
+/* 411 */,
+/* 412 */,
+/* 413 */,
+/* 414 */,
+/* 415 */,
+/* 416 */,
+/* 417 */,
+/* 418 */,
+/* 419 */
 /*!************************************************************************************!*\
   !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/components/uni-icons/icons.js ***!
   \************************************************************************************/
@@ -40219,83 +40265,6 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
   "cloud-download-filled": "\uE8E9",
   "headphones": "\uE8BF",
   "shop": "\uE609" };exports.default = _default;
-
-/***/ }),
-/* 395 */,
-/* 396 */,
-/* 397 */,
-/* 398 */,
-/* 399 */,
-/* 400 */,
-/* 401 */,
-/* 402 */,
-/* 403 */,
-/* 404 */,
-/* 405 */,
-/* 406 */,
-/* 407 */,
-/* 408 */,
-/* 409 */,
-/* 410 */,
-/* 411 */,
-/* 412 */,
-/* 413 */,
-/* 414 */,
-/* 415 */,
-/* 416 */,
-/* 417 */,
-/* 418 */,
-/* 419 */,
-/* 420 */,
-/* 421 */,
-/* 422 */,
-/* 423 */,
-/* 424 */,
-/* 425 */,
-/* 426 */,
-/* 427 */,
-/* 428 */,
-/* 429 */,
-/* 430 */,
-/* 431 */,
-/* 432 */,
-/* 433 */,
-/* 434 */,
-/* 435 */,
-/* 436 */,
-/* 437 */,
-/* 438 */,
-/* 439 */,
-/* 440 */,
-/* 441 */,
-/* 442 */,
-/* 443 */,
-/* 444 */,
-/* 445 */,
-/* 446 */,
-/* 447 */,
-/* 448 */,
-/* 449 */
-/*!************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js ***!
-  \************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(global, uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _createSuper(Derived) {return function () {var Super = _getPrototypeOf(Derived),result;if (_isNativeReflectConstruct()) {var NewTarget = _getPrototypeOf(this).constructor;result = Reflect.construct(Super, arguments, NewTarget);} else {result = Super.apply(this, arguments);}return _possibleConstructorReturn(this, result);};}function _possibleConstructorReturn(self, call) {if (call && (typeof call === "object" || typeof call === "function")) {return call;}return _assertThisInitialized(self);}function _assertThisInitialized(self) {if (self === void 0) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function");}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } });if (superClass) _setPrototypeOf(subClass, superClass);}function _wrapNativeSuper(Class) {var _cache = typeof Map === "function" ? new Map() : undefined;_wrapNativeSuper = function _wrapNativeSuper(Class) {if (Class === null || !_isNativeFunction(Class)) return Class;if (typeof Class !== "function") {throw new TypeError("Super expression must either be null or a function");}if (typeof _cache !== "undefined") {if (_cache.has(Class)) return _cache.get(Class);_cache.set(Class, Wrapper);}function Wrapper() {return _construct(Class, arguments, _getPrototypeOf(this).constructor);}Wrapper.prototype = Object.create(Class.prototype, { constructor: { value: Wrapper, enumerable: false, writable: true, configurable: true } });return _setPrototypeOf(Wrapper, Class);};return _wrapNativeSuper(Class);}function _construct(Parent, args, Class) {if (_isNativeReflectConstruct()) {_construct = Reflect.construct;} else {_construct = function _construct(Parent, args, Class) {var a = [null];a.push.apply(a, args);var Constructor = Function.bind.apply(Parent, a);var instance = new Constructor();if (Class) _setPrototypeOf(instance, Class.prototype);return instance;};}return _construct.apply(null, arguments);}function _isNativeReflectConstruct() {if (typeof Reflect === "undefined" || !Reflect.construct) return false;if (Reflect.construct.sham) return false;if (typeof Proxy === "function") return true;try {Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));return true;} catch (e) {return false;}}function _isNativeFunction(fn) {return Function.toString.call(fn).indexOf("[native code]") !== -1;}function _setPrototypeOf(o, p) {_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {o.__proto__ = p;return o;};return _setPrototypeOf(o, p);}function _getPrototypeOf(o) {_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {return o.__proto__ || Object.getPrototypeOf(o);};return _getPrototypeOf(o);}var e = "undefined" != typeof globalThis ? globalThis : "undefined" != typeof window ? window : "undefined" != typeof global ? global : "undefined" != typeof self ? self : {};function t(e) {return e && e.__esModule && Object.prototype.hasOwnProperty.call(e, "default") ? e.default : e;}function n(e, t, n) {return e(n = { path: t, exports: {}, require: function require(e, t) {return function () {throw new Error("Dynamic requires are not currently supported by @rollup/plugin-commonjs");}(null == t && n.path);} }, n.exports), n.exports;}var r = n(function (e, t) {var n;e.exports = (n = n || function (e, t) {var n = Object.create || function () {function e() {}return function (t) {var n;return e.prototype = t, n = new e(), e.prototype = null, n;};}(),r = {},o = r.lib = {},s = o.Base = { extend: function extend(e) {var t = n(this);return e && t.mixIn(e), t.hasOwnProperty("init") && this.init !== t.init || (t.init = function () {t.$super.init.apply(this, arguments);}), t.init.prototype = t, t.$super = this, t;}, create: function create() {var e = this.extend();return e.init.apply(e, arguments), e;}, init: function init() {}, mixIn: function mixIn(e) {for (var t in e) {e.hasOwnProperty(t) && (this[t] = e[t]);}e.hasOwnProperty("toString") && (this.toString = e.toString);}, clone: function clone() {return this.init.prototype.extend(this);} },i = o.WordArray = s.extend({ init: function init(e, t) {e = this.words = e || [], this.sigBytes = null != t ? t : 4 * e.length;}, toString: function toString(e) {return (e || c).stringify(this);}, concat: function concat(e) {var t = this.words,n = e.words,r = this.sigBytes,o = e.sigBytes;if (this.clamp(), r % 4) for (var s = 0; s < o; s++) {var i = n[s >>> 2] >>> 24 - s % 4 * 8 & 255;t[r + s >>> 2] |= i << 24 - (r + s) % 4 * 8;} else for (s = 0; s < o; s += 4) {t[r + s >>> 2] = n[s >>> 2];}return this.sigBytes += o, this;}, clamp: function clamp() {var t = this.words,n = this.sigBytes;t[n >>> 2] &= 4294967295 << 32 - n % 4 * 8, t.length = e.ceil(n / 4);}, clone: function clone() {var e = s.clone.call(this);return e.words = this.words.slice(0), e;}, random: function random(t) {for (var n, r = [], o = function o(t) {t = t;var n = 987654321,r = 4294967295;return function () {var o = ((n = 36969 * (65535 & n) + (n >> 16) & r) << 16) + (t = 18e3 * (65535 & t) + (t >> 16) & r) & r;return o /= 4294967296, (o += .5) * (e.random() > .5 ? 1 : -1);};}, s = 0; s < t; s += 4) {var a = o(4294967296 * (n || e.random()));n = 987654071 * a(), r.push(4294967296 * a() | 0);}return new i.init(r, t);} }),a = r.enc = {},c = a.Hex = { stringify: function stringify(e) {for (var t = e.words, n = e.sigBytes, r = [], o = 0; o < n; o++) {var s = t[o >>> 2] >>> 24 - o % 4 * 8 & 255;r.push((s >>> 4).toString(16)), r.push((15 & s).toString(16));}return r.join("");}, parse: function parse(e) {for (var t = e.length, n = [], r = 0; r < t; r += 2) {n[r >>> 3] |= parseInt(e.substr(r, 2), 16) << 24 - r % 8 * 4;}return new i.init(n, t / 2);} },u = a.Latin1 = { stringify: function stringify(e) {for (var t = e.words, n = e.sigBytes, r = [], o = 0; o < n; o++) {var s = t[o >>> 2] >>> 24 - o % 4 * 8 & 255;r.push(String.fromCharCode(s));}return r.join("");}, parse: function parse(e) {for (var t = e.length, n = [], r = 0; r < t; r++) {n[r >>> 2] |= (255 & e.charCodeAt(r)) << 24 - r % 4 * 8;}return new i.init(n, t);} },l = a.Utf8 = { stringify: function stringify(e) {try {return decodeURIComponent(escape(u.stringify(e)));} catch (e) {throw new Error("Malformed UTF-8 data");}}, parse: function parse(e) {return u.parse(unescape(encodeURIComponent(e)));} },f = o.BufferedBlockAlgorithm = s.extend({ reset: function reset() {this._data = new i.init(), this._nDataBytes = 0;}, _append: function _append(e) {"string" == typeof e && (e = l.parse(e)), this._data.concat(e), this._nDataBytes += e.sigBytes;}, _process: function _process(t) {var n = this._data,r = n.words,o = n.sigBytes,s = this.blockSize,a = o / (4 * s),c = (a = t ? e.ceil(a) : e.max((0 | a) - this._minBufferSize, 0)) * s,u = e.min(4 * c, o);if (c) {for (var l = 0; l < c; l += s) {this._doProcessBlock(r, l);}var f = r.splice(0, c);n.sigBytes -= u;}return new i.init(f, u);}, clone: function clone() {var e = s.clone.call(this);return e._data = this._data.clone(), e;}, _minBufferSize: 0 }),p = (o.Hasher = f.extend({ cfg: s.extend(), init: function init(e) {this.cfg = this.cfg.extend(e), this.reset();}, reset: function reset() {f.reset.call(this), this._doReset();}, update: function update(e) {return this._append(e), this._process(), this;}, finalize: function finalize(e) {return e && this._append(e), this._doFinalize();}, blockSize: 16, _createHelper: function _createHelper(e) {return function (t, n) {return new e.init(n).finalize(t);};}, _createHmacHelper: function _createHmacHelper(e) {return function (t, n) {return new p.HMAC.init(e, n).finalize(t);};} }), r.algo = {});return r;}(Math), n);}),o = (n(function (e, t) {var n;e.exports = (n = r, function (e) {var t = n,r = t.lib,o = r.WordArray,s = r.Hasher,i = t.algo,a = [];!function () {for (var t = 0; t < 64; t++) {a[t] = 4294967296 * e.abs(e.sin(t + 1)) | 0;}}();var c = i.MD5 = s.extend({ _doReset: function _doReset() {this._hash = new o.init([1732584193, 4023233417, 2562383102, 271733878]);}, _doProcessBlock: function _doProcessBlock(e, t) {for (var n = 0; n < 16; n++) {var r = t + n,o = e[r];e[r] = 16711935 & (o << 8 | o >>> 24) | 4278255360 & (o << 24 | o >>> 8);}var s = this._hash.words,i = e[t + 0],c = e[t + 1],h = e[t + 2],d = e[t + 3],y = e[t + 4],g = e[t + 5],v = e[t + 6],_ = e[t + 7],m = e[t + 8],b = e[t + 9],w = e[t + 10],T = e[t + 11],E = e[t + 12],S = e[t + 13],O = e[t + 14],k = e[t + 15],A = s[0],P = s[1],I = s[2],N = s[3];A = u(A, P, I, N, i, 7, a[0]), N = u(N, A, P, I, c, 12, a[1]), I = u(I, N, A, P, h, 17, a[2]), P = u(P, I, N, A, d, 22, a[3]), A = u(A, P, I, N, y, 7, a[4]), N = u(N, A, P, I, g, 12, a[5]), I = u(I, N, A, P, v, 17, a[6]), P = u(P, I, N, A, _, 22, a[7]), A = u(A, P, I, N, m, 7, a[8]), N = u(N, A, P, I, b, 12, a[9]), I = u(I, N, A, P, w, 17, a[10]), P = u(P, I, N, A, T, 22, a[11]), A = u(A, P, I, N, E, 7, a[12]), N = u(N, A, P, I, S, 12, a[13]), I = u(I, N, A, P, O, 17, a[14]), A = l(A, P = u(P, I, N, A, k, 22, a[15]), I, N, c, 5, a[16]), N = l(N, A, P, I, v, 9, a[17]), I = l(I, N, A, P, T, 14, a[18]), P = l(P, I, N, A, i, 20, a[19]), A = l(A, P, I, N, g, 5, a[20]), N = l(N, A, P, I, w, 9, a[21]), I = l(I, N, A, P, k, 14, a[22]), P = l(P, I, N, A, y, 20, a[23]), A = l(A, P, I, N, b, 5, a[24]), N = l(N, A, P, I, O, 9, a[25]), I = l(I, N, A, P, d, 14, a[26]), P = l(P, I, N, A, m, 20, a[27]), A = l(A, P, I, N, S, 5, a[28]), N = l(N, A, P, I, h, 9, a[29]), I = l(I, N, A, P, _, 14, a[30]), A = f(A, P = l(P, I, N, A, E, 20, a[31]), I, N, g, 4, a[32]), N = f(N, A, P, I, m, 11, a[33]), I = f(I, N, A, P, T, 16, a[34]), P = f(P, I, N, A, O, 23, a[35]), A = f(A, P, I, N, c, 4, a[36]), N = f(N, A, P, I, y, 11, a[37]), I = f(I, N, A, P, _, 16, a[38]), P = f(P, I, N, A, w, 23, a[39]), A = f(A, P, I, N, S, 4, a[40]), N = f(N, A, P, I, i, 11, a[41]), I = f(I, N, A, P, d, 16, a[42]), P = f(P, I, N, A, v, 23, a[43]), A = f(A, P, I, N, b, 4, a[44]), N = f(N, A, P, I, E, 11, a[45]), I = f(I, N, A, P, k, 16, a[46]), A = p(A, P = f(P, I, N, A, h, 23, a[47]), I, N, i, 6, a[48]), N = p(N, A, P, I, _, 10, a[49]), I = p(I, N, A, P, O, 15, a[50]), P = p(P, I, N, A, g, 21, a[51]), A = p(A, P, I, N, E, 6, a[52]), N = p(N, A, P, I, d, 10, a[53]), I = p(I, N, A, P, w, 15, a[54]), P = p(P, I, N, A, c, 21, a[55]), A = p(A, P, I, N, m, 6, a[56]), N = p(N, A, P, I, k, 10, a[57]), I = p(I, N, A, P, v, 15, a[58]), P = p(P, I, N, A, S, 21, a[59]), A = p(A, P, I, N, y, 6, a[60]), N = p(N, A, P, I, T, 10, a[61]), I = p(I, N, A, P, h, 15, a[62]), P = p(P, I, N, A, b, 21, a[63]), s[0] = s[0] + A | 0, s[1] = s[1] + P | 0, s[2] = s[2] + I | 0, s[3] = s[3] + N | 0;}, _doFinalize: function _doFinalize() {var t = this._data,n = t.words,r = 8 * this._nDataBytes,o = 8 * t.sigBytes;n[o >>> 5] |= 128 << 24 - o % 32;var s = e.floor(r / 4294967296),i = r;n[15 + (o + 64 >>> 9 << 4)] = 16711935 & (s << 8 | s >>> 24) | 4278255360 & (s << 24 | s >>> 8), n[14 + (o + 64 >>> 9 << 4)] = 16711935 & (i << 8 | i >>> 24) | 4278255360 & (i << 24 | i >>> 8), t.sigBytes = 4 * (n.length + 1), this._process();for (var a = this._hash, c = a.words, u = 0; u < 4; u++) {var l = c[u];c[u] = 16711935 & (l << 8 | l >>> 24) | 4278255360 & (l << 24 | l >>> 8);}return a;}, clone: function clone() {var e = s.clone.call(this);return e._hash = this._hash.clone(), e;} });function u(e, t, n, r, o, s, i) {var a = e + (t & n | ~t & r) + o + i;return (a << s | a >>> 32 - s) + t;}function l(e, t, n, r, o, s, i) {var a = e + (t & r | n & ~r) + o + i;return (a << s | a >>> 32 - s) + t;}function f(e, t, n, r, o, s, i) {var a = e + (t ^ n ^ r) + o + i;return (a << s | a >>> 32 - s) + t;}function p(e, t, n, r, o, s, i) {var a = e + (n ^ (t | ~r)) + o + i;return (a << s | a >>> 32 - s) + t;}t.MD5 = s._createHelper(c), t.HmacMD5 = s._createHmacHelper(c);}(Math), n.MD5);}), n(function (e, t) {var n, o, s;e.exports = (o = (n = r).lib.Base, s = n.enc.Utf8, void (n.algo.HMAC = o.extend({ init: function init(e, t) {e = this._hasher = new e.init(), "string" == typeof t && (t = s.parse(t));var n = e.blockSize,r = 4 * n;t.sigBytes > r && (t = e.finalize(t)), t.clamp();for (var o = this._oKey = t.clone(), i = this._iKey = t.clone(), a = o.words, c = i.words, u = 0; u < n; u++) {a[u] ^= 1549556828, c[u] ^= 909522486;}o.sigBytes = i.sigBytes = r, this.reset();}, reset: function reset() {var e = this._hasher;e.reset(), e.update(this._iKey);}, update: function update(e) {return this._hasher.update(e), this;}, finalize: function finalize(e) {var t = this._hasher,n = t.finalize(e);return t.reset(), t.finalize(this._oKey.clone().concat(n));} })));}), n(function (e, t) {e.exports = r.HmacMD5;}));function s(e) {return function (t) {if (!((t = t || {}).success || t.fail || t.complete)) return e.call(this, t);e.call(this, t).then(function (e) {t.success && t.success(e), t.complete && t.complete(e);}).catch(function (e) {t.fail && t.fail(e), t.complete && t.complete(e);});};}var i = /*#__PURE__*/function (_Error) {_inherits(i, _Error);var _super = _createSuper(i);function i(e) {var _this;_classCallCheck(this, i);_this = _super.call(this, e.message), _this.errMsg = e.message || "", Object.defineProperties(_assertThisInitialized(_this), { code: { get: function get() {return e.code;} }, requestId: { get: function get() {return e.requestId;} }, message: { get: function get() {return this.errMsg;}, set: function set(e) {this.errMsg = e;} } });return _this;}return i;}( /*#__PURE__*/_wrapNativeSuper(Error));var a;try {a = __webpack_require__(/*! uni-stat-config */ 450).default || __webpack_require__(/*! uni-stat-config */ 450);} catch (e) {a = { appid: "" };}var c, u;function l() {var e = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 8;var t = "";for (; t.length < e;) {t += Math.random().toString(32).substring(2);}return t.substring(0, e);}function f() {if ("n" === p()) {try {c = plus.runtime.getDCloudId();} catch (e) {c = "";}return c;}return c || (c = l(32), uni.setStorage({ key: "__DC_CLOUD_UUID", data: c })), c;}function p() {return { "app-plus": "n", h5: "h5", "mp-weixin": "wx", "mp-alipay": "ali", "mp-baidu": "bd", "mp-toutiao": "tt", "mp-qq": "qq", "quickapp-native": "qn" }["mp-weixin"];}var h = { sign: function sign(e, t) {var n = "";return Object.keys(e).sort().forEach(function (t) {e[t] && (n = n + "&" + t + "=" + e[t]);}), n = n.slice(1), o(n, t).toString();}, wrappedRequest: function wrappedRequest(e, t) {return new Promise(function (n, r) {t(Object.assign(e, { complete: function complete(e) {e || (e = {}),  false && false;var t = e.data && e.data.header && e.data.header["x-serverless-request-id"] || e.header && e.header["request-id"];if (!e.statusCode || e.statusCode >= 400) return r(new i({ code: "SYS_ERR", message: e.errMsg || "request:fail", requestId: t }));var o = e.data;if (o.error) return r(new i({ code: o.error.code, message: o.error.message, requestId: t }));o.result = o.data, o.requestId = t, delete o.data, n(o);} }));});} };var d = { image: "image/*", jpg: "image/jpeg", jpeg: "image/jpeg", png: "image/png", gif: "image/gif", webp: "image/webp", svg: "image/svg+xml", mp3: "audio/mp3", mp4: "video/mp4", ogg: "audio/ogg", webm: "video/webm" };function y(e) {return d[e.toLowerCase()];}var g = /*#__PURE__*/function () {function g(e) {_classCallCheck(this, g);["spaceId", "clientSecret"].forEach(function (t) {if (!Object.prototype.hasOwnProperty.call(e, t)) throw new Error("缺少参数" + t);}), this.config = Object.assign({}, { endpoint: "https://api.bspapp.com" }, e), this.config.provider = "aliyun", this.config.requestUrl = this.config.endpoint + "/client", this.config.envType = this.config.envType || "public", this.config.accessTokenKey = "access_token_" + this.config.spaceId;}_createClass(g, [{ key: "setAccessToken", value: function setAccessToken(e) {this.accessToken = e;} }, { key: "requestWrapped", value: function requestWrapped(e) {return h.wrappedRequest(e, this.adapter.request);} }, { key: "requestAuth", value: function requestAuth(e) {return this.requestWrapped(e);} }, { key: "request", value: function request(e, t) {var _this2 = this;return this.hasAccessToken ? t ? this.requestWrapped(e) : this.requestWrapped(e).catch(function (t) {return new Promise(function (e, n) {!t || "GATEWAY_INVALID_TOKEN" !== t.code && "InvalidParameter.InvalidToken" !== t.code ? n(t) : e();}).then(function () {return _this2.getAccessToken();}).then(function () {var t = _this2.rebuildRequest(e);return _this2.request(t, !0);});}) : this.getAccessToken().then(function () {var t = _this2.rebuildRequest(e);return _this2.request(t, !0);});} }, { key: "rebuildRequest", value: function rebuildRequest(e) {var t = Object.assign({}, e);return t.data.token = this.accessToken, t.header["x-basement-token"] = this.accessToken, t.header["x-serverless-sign"] = h.sign(t.data, this.config.clientSecret), t;} }, { key: "setupRequest", value: function setupRequest(e, t) {var n = Object.assign({}, e, { spaceId: this.config.spaceId, timestamp: Date.now() }),r = { "Content-Type": "application/json" };return "auth" !== t && (n.token = this.accessToken, r["x-basement-token"] = this.accessToken), r["x-serverless-sign"] = h.sign(n, this.config.clientSecret), { url: this.config.requestUrl, method: "POST", data: n, dataType: "json", header: r };} }, { key: "getAccessToken", value: function getAccessToken() {var _this3 = this;return this.requestAuth(this.setupRequest({ method: "serverless.auth.user.anonymousAuthorize", params: "{}" }, "auth")).then(function (e) {return new Promise(function (t, n) {e.result && e.result.accessToken ? (_this3.setAccessToken(e.result.accessToken), t(_this3.accessToken)) : n(new i({ code: "AUTH_FAILED", message: "获取accessToken失败" }));});});} }, { key: "authorize", value: function authorize() {this.getAccessToken();} }, { key: "callFunction", value: function callFunction(e) {var t = { method: "serverless.function.runtime.invoke", params: JSON.stringify({ functionTarget: e.name, functionArgs: e.data || {} }) };return this.request(this.setupRequest(t));} }, { key: "getOSSUploadOptionsFromPath", value: function getOSSUploadOptionsFromPath(e) {var t = { method: "serverless.file.resource.generateProximalSign", params: JSON.stringify(e) };return this.request(this.setupRequest(t));} }, { key: "uploadFileToOSS", value: function uploadFileToOSS(_ref) {var _this4 = this;var e = _ref.url,t = _ref.formData,n = _ref.name,r = _ref.filePath,o = _ref.fileType,s = _ref.onUploadProgress;return new Promise(function (a, c) {var u = _this4.adapter.uploadFile({ url: e, formData: t, name: n, filePath: r, fileType: o, header: { "X-OSS-server-side-encrpytion": "AES256" }, success: function success(e) {e && e.statusCode < 400 ? a(e) : c(new i({ code: "UPLOAD_FAILED", message: "文件上传失败" }));}, fail: function fail(e) {c(e);} });"function" == typeof s && u && "function" == typeof u.onProgressUpdate && u.onProgressUpdate(function (e) {s({ loaded: e.totalBytesSent, total: e.totalBytesExpectedToSend });});});} }, { key: "reportOSSUpload", value: function reportOSSUpload(e) {var t = { method: "serverless.file.resource.report", params: JSON.stringify(e) };return this.request(this.setupRequest(t));} }, { key: "uploadFile", value: function uploadFile(_ref2) {var _this5 = this;var e = _ref2.filePath,t = _ref2.cloudPath,_ref2$fileType = _ref2.fileType,n = _ref2$fileType === void 0 ? "image" : _ref2$fileType,r = _ref2.onUploadProgress,o = _ref2.config;if (!t) throw new i({ code: "CLOUDPATH_REQUIRED", message: "cloudPath不可为空" });var s = o && o.envType || this.config.envType;var a, c, u;var l = t.split("?")[0].split(".").pop();if (!y(l)) throw new i({ code: "UNSUPPORTED_FILE_TYPE", message: "不支持的文件类型" });return this.getOSSUploadOptionsFromPath({ env: s, filename: t }).then(function (t) {var o = t.result;a = y(l), c = o.id, u = "https://" + o.cdnDomain + "/" + o.ossPath;var s = { url: "https://" + o.host, formData: { "Cache-Control": "max-age=2592000", "Content-Disposition": "attachment", OSSAccessKeyId: o.accessKeyId, Signature: o.signature, host: o.host, id: c, key: o.ossPath, policy: o.policy, success_action_status: 200 }, fileName: "file", name: "file", filePath: e, fileType: n, contentType: a };return _this5.uploadFileToOSS(Object.assign({}, s, { onUploadProgress: r }));}).then(function () {return _this5.reportOSSUpload({ id: c, contentType: a });}).then(function (t) {return new Promise(function (n, r) {t.success ? n({ success: !0, filePath: e, fileID: u }) : r(new i({ code: "UPLOAD_FAILED", message: "文件上传失败" }));});});} }, { key: "deleteFile", value: function deleteFile(_ref3) {var e = _ref3.fileList;var t = { method: "serverless.file.resource.delete", params: JSON.stringify({ id: e[0] }) };return this.request(this.setupRequest(t));} }, { key: "hasAccessToken", get: function get() {return !!this.accessToken;} }]);return g;}();var v = { init: function init(e) {var t = new g(e);["uploadFile", "deleteFile"].forEach(function (e) {t[e] = s(t[e]).bind(t);});var n = { signInAnonymously: function signInAnonymously() {return t.authorize();}, getLoginState: function getLoginState() {return Promise.resolve(!1);} };return t.auth = function () {return n;}, t;} };var _;function m(e, t, n) {void 0 === n && (n = {});var r = /\?/.test(t),o = "";for (var s in n) {"" === o ? !r && (t += "?") : o += "&", o += s + "=" + encodeURIComponent(n[s]);}return /^http(s)?\:\/\//.test(t += o) ? t : "" + e + t;}!function (e) {e.local = "local", e.none = "none", e.session = "session";}(_ || (_ = {}));var _b,w = (_b = function b(e, t) {return (_b = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (e, t) {e.__proto__ = t;} || function (e, t) {for (var n in t) {t.hasOwnProperty(n) && (e[n] = t[n]);}})(e, t);}, function (e, t) {function n() {this.constructor = e;}_b(e, t), e.prototype = null === t ? Object.create(t) : (n.prototype = t.prototype, new n());}),_T = function T() {return (_T = Object.assign || function (e) {for (var t, n = 1, r = arguments.length; n < r; n++) {for (var o in t = arguments[n]) {Object.prototype.hasOwnProperty.call(t, o) && (e[o] = t[o]);}}return e;}).apply(this, arguments);};var E = function (e) {function t() {return null !== e && e.apply(this, arguments) || this;}return w(t, e), t.prototype.post = function (e) {var t = e.url,n = e.data,r = e.headers;return new Promise(function (e, o) {uni.request({ url: m("https:", t), data: n, method: "POST", header: r, success: function success(t) {e(t);}, fail: function fail(e) {o(e);} });});}, t.prototype.upload = function (e) {return new Promise(function (t, n) {var r = e.url,o = e.file,s = e.data,i = e.headers,a = e.fileType,c = uni.uploadFile({ url: m("https:", r), name: "file", formData: Object.assign({}, s), filePath: o, fileType: a, header: i, success: function success(e) {var n = { statusCode: e.statusCode, data: e.data || {} };200 === e.statusCode && s.success_action_status && (n.statusCode = parseInt(s.success_action_status, 10)), t(n);}, fail: function fail(e) { false && false, n(new Error(e.errMsg || "uploadFile:fail"));} });"function" == typeof e.onUploadProgress && c && "function" == typeof c.onProgressUpdate && c.onProgressUpdate(function (t) {e.onUploadProgress({ loaded: t.totalBytesSent, total: t.totalBytesExpectedToSend });});});}, t.prototype.download = function (e) {var t = e.url,n = e.headers;return new Promise(function (e, r) {uni.downloadFile({ url: m("https:", t), header: n, success: function success(t) {200 === t.statusCode && t.tempFilePath ? e({ statusCode: 200, tempFilePath: t.tempFilePath }) : e(t);}, fail: function fail(e) {r(e);} });});}, t;}(function () {}),S = { setItem: function setItem(e, t) {uni.setStorageSync(e, t);}, getItem: function getItem(e) {return uni.getStorageSync(e);}, removeItem: function removeItem(e) {uni.removeStorageSync(e);}, clear: function clear() {uni.clearStorageSync();} },O = function O(e, t) {void 0 === t && (t = {});var n = uni.connectSocket(_T({ url: e }, t));return { set onopen(e) {n.onOpen(e);}, set onmessage(e) {n.onMessage(e);}, set onclose(e) {n.onClose(e);}, set onerror(e) {n.onError(e);}, send: function send(e) {return n.send({ data: e });}, close: function close(e, t) {return n.close({ code: e, reason: t });}, get readyState() {return n.readyState;}, CONNECTING: 0, OPEN: 1, CLOSING: 2, CLOSED: 3 };};var k,A,P = { genAdapter: function genAdapter() {return { root: {}, reqClass: E, wsClass: O, localStorage: S, primaryStorage: _.local };}, isMatch: function isMatch() {return "undefined" != typeof uni && !!uni.request;}, runtime: "uni_app" },I = n(function (e, t) {Object.defineProperty(t, "__esModule", { value: !0 }), t.getQuery = function (e, t) {if ("undefined" == typeof window) return !1;var n = t || window.location.search,r = new RegExp("(^|&)" + e + "=([^&]*)(&|$)"),o = n.substr(n.indexOf("?") + 1).match(r);return null != o ? o[2] : "";}, t.getHash = function (e) {var t = window.location.hash.match(new RegExp("[#?&/]" + e + "=([^&#]*)"));return t ? t[1] : "";}, t.removeParam = function (e, t) {var n = t.split("?")[0],r = [],o = -1 !== t.indexOf("?") ? t.split("?")[1] : "";if ("" !== o) {for (var s = (r = o.split("&")).length - 1; s >= 0; s -= 1) {r[s].split("=")[0] === e && r.splice(s, 1);}n = n + "?" + r.join("&");}return n;}, t.createPromiseCallback = function () {var e;if (!Promise) {(e = function e() {}).promise = {};var t = function t() {throw new Error('Your Node runtime does support ES6 Promises. Set "global.Promise" to your preferred implementation of promises.');};return Object.defineProperty(e.promise, "then", { get: t }), Object.defineProperty(e.promise, "catch", { get: t }), e;}var n = new Promise(function (t, n) {e = function e(_e, r) {return _e ? n(_e) : t(r);};});return e.promise = n, e;}, t.getWeixinCode = function () {return t.getQuery("code") || t.getHash("code");}, t.getMiniAppCode = function () {return new Promise(function (e, t) {wx.login({ success: function success(t) {e(t.code);}, fail: function fail(e) {t(e);} });});}, t.isArray = function (e) {return "[object Array]" === Object.prototype.toString.call(e);}, t.isString = function (e) {return "string" == typeof e;}, t.isUndefined = function (e) {return void 0 === e;}, t.isInstanceOf = function (e, t) {return e instanceof t;}, t.isFormData = function (e) {return "[object FormData]" === Object.prototype.toString.call(e);}, t.genSeqId = function () {return Math.random().toString(16).slice(2);}, t.getArgNames = function (e) {var t = e.toString();return t.slice(t.indexOf("(") + 1, t.indexOf(")")).match(/([^\s,]+)/g);}, t.formatUrl = function (e, t, n) {void 0 === n && (n = {});var r = /\?/.test(t),o = "";for (var s in n) {"" === o ? !r && (t += "?") : o += "&", o += s + "=" + encodeURIComponent(n[s]);}return /^http(s)?\:\/\//.test(t += o) ? t : "" + e + t;};}),N = "dist/index.js",C = "./dist/index.d.ts",x = { build: "npm run tsc && webpack", tsc: "tsc -p tsconfig.json", "tsc:w": "tsc -p tsconfig.json -w", test: "jest --verbose false -i", e2e: 'NODE_ENV=e2e webpack && jest --config="./jest.e2e.config.js"  --verbose false -i "e2e"', start: "webpack-dev-server --hot --open", eslint: 'eslint "./**/*.js" "./**/*.ts"', "eslint-fix": 'eslint --fix "./**/*.js" "./**/*.ts"', test_web: "npm run tsc && webpack-dev-server --devtool eval-source-map --progress --colors --hot --inline --content-base ./dist --host jimmytest-088bef.tcb.qcloud.la --port 80 --disableHostCheck true --mode development --config webpack.test.js" },R = { type: "git", url: "https://github.com/TencentCloudBase/tcb-js-sdk" },q = ["tcb", "js-sdk"],U = { "@cloudbase/adapter-interface": "^0.2.0", "@cloudbase/adapter-wx_mp": "^0.2.1", "@cloudbase/database": "^0.9.8" },j = { "@babel/core": "^7.6.2", "@babel/plugin-proposal-class-properties": "^7.5.5", "@babel/plugin-proposal-object-rest-spread": "^7.6.2", "@babel/plugin-transform-runtime": "^7.6.2", "@babel/preset-env": "^7.6.2", "@babel/preset-typescript": "^7.6.0", "@babel/runtime": "^7.6.2", "@types/jest": "^23.1.4", "@types/node": "^10.14.4", "@types/superagent": "^4.1.4", axios: "^0.19.0", "babel-eslint": "^10.0.1", "babel-loader": "^8.0.6", "babel-polyfill": "^6.26.0", eslint: "^5.16.0", "eslint-config-alloy": "^1.4.2", "eslint-config-prettier": "^4.1.0", "eslint-plugin-prettier": "^3.0.1", "eslint-plugin-typescript": "^1.0.0-rc.3", express: "^4.17.1", husky: "^3.1.0", jest: "^24.7.1", "jest-puppeteer": "^4.3.0", "lint-staged": "^9.5.0", "power-assert": "^1.6.1", puppeteer: "^1.20.0", "serve-static": "^1.14.1", "ts-jest": "^23.10.4", "ts-loader": "^6.2.1", typescript: "^3.4.3", "typescript-eslint-parser": "^22.0.0", webpack: "^4.41.3", "webpack-bundle-analyzer": "^3.4.1", "webpack-cli": "^3.3.0", "webpack-dev-server": "^3.3.1", "webpack-merge": "^4.2.2", "webpack-visualizer-plugin": "^0.1.11" },L = { hooks: { "pre-commit": "lint-staged" } },D = { name: "tcb-js-sdk", version: "1.3.5", description: "js sdk for tcb", main: N, types: C, scripts: x, repository: R, keywords: q, author: "jimmyjzhang", license: "ISC", dependencies: U, devDependencies: j, husky: L, "lint-staged": { "*.{js,ts}": ["eslint --fix", "git add"] } },M = (k = Object.freeze({ __proto__: null, name: "tcb-js-sdk", version: "1.3.5", description: "js sdk for tcb", main: N, types: C, scripts: x, repository: R, keywords: q, author: "jimmyjzhang", license: "ISC", dependencies: U, devDependencies: j, husky: L, default: D })) && k.default || k,K = n(function (t, n) {var r = e && e.__importStar || function (e) {if (e && e.__esModule) return e;var t = {};if (null != e) for (var n in e) {Object.hasOwnProperty.call(e, n) && (t[n] = e[n]);}return t.default = e, t;};Object.defineProperty(n, "__esModule", { value: !0 });var o = r(M);n.SDK_VERISON = o.version, n.ACCESS_TOKEN = "access_token", n.ACCESS_TOKEN_Expire = "access_token_expire", n.REFRESH_TOKEN = "refresh_token", n.ANONYMOUS_UUID = "anonymous_uuid", n.LOGIN_TYPE_KEY = "login_type", n.protocol = "undefined" != typeof location && "http:" === location.protocol ? "http:" : "https:", n.BASE_URL =  false ? undefined : "//tcb-api.tencentcloudapi.com/web";});!function (e) {e.local = "local", e.none = "none", e.session = "session";}(A || (A = {}));var F = function F() {},G = function G() {};var H = Object.freeze({ __proto__: null, get StorageType() {return A;}, AbstractSDKRequest: F, AbstractStorage: G, formatUrl: function formatUrl(e, t, n) {void 0 === n && (n = {});var r = /\?/.test(t),o = "";for (var s in n) {"" === o ? !r && (t += "?") : o += "&", o += s + "=" + encodeURIComponent(n[s]);}return /^http(s)?\:\/\//.test(t += o) ? t : "" + e + t;} }),V = n(function (t, n) {var r = e && e.__extends || function () {var _e2 = function e(t, n) {return (_e2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (e, t) {e.__proto__ = t;} || function (e, t) {for (var n in t) {t.hasOwnProperty(n) && (e[n] = t[n]);}})(t, n);};return function (t, n) {function r() {this.constructor = t;}_e2(t, n), t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r());};}(),o = e && e.__assign || function () {return (o = Object.assign || function (e) {for (var t, n = 1, r = arguments.length; n < r; n++) {for (var o in t = arguments[n]) {Object.prototype.hasOwnProperty.call(t, o) && (e[o] = t[o]);}}return e;}).apply(this, arguments);},s = e && e.__awaiter || function (e, t, n, r) {return new (n || (n = Promise))(function (o, s) {function i(e) {try {c(r.next(e));} catch (e) {s(e);}}function a(e) {try {c(r.throw(e));} catch (e) {s(e);}}function c(e) {var t;e.done ? o(e.value) : (t = e.value, t instanceof n ? t : new n(function (e) {e(t);})).then(i, a);}c((r = r.apply(e, t || [])).next());});},i = e && e.__generator || function (e, t) {var n,r,o,s,i = { label: 0, sent: function sent() {if (1 & o[0]) throw o[1];return o[1];}, trys: [], ops: [] };return s = { next: a(0), throw: a(1), return: a(2) }, "function" == typeof Symbol && (s[Symbol.iterator] = function () {return this;}), s;function a(s) {return function (a) {return function (s) {if (n) throw new TypeError("Generator is already executing.");for (; i;) {try {if (n = 1, r && (o = 2 & s[0] ? r.return : s[0] ? r.throw || ((o = r.return) && o.call(r), 0) : r.next) && !(o = o.call(r, s[1])).done) return o;switch (r = 0, o && (s = [2 & s[0], o.value]), s[0]) {case 0:case 1:o = s;break;case 4:return i.label++, { value: s[1], done: !1 };case 5:i.label++, r = s[1], s = [0];continue;case 7:s = i.ops.pop(), i.trys.pop();continue;default:if (!(o = i.trys, (o = o.length > 0 && o[o.length - 1]) || 6 !== s[0] && 2 !== s[0])) {i = 0;continue;}if (3 === s[0] && (!o || s[1] > o[0] && s[1] < o[3])) {i.label = s[1];break;}if (6 === s[0] && i.label < o[1]) {i.label = o[1], o = s;break;}if (o && i.label < o[2]) {i.label = o[2], i.ops.push(s);break;}o[2] && i.ops.pop(), i.trys.pop();continue;}s = t.call(e, i);} catch (e) {s = [6, e], r = 0;} finally {n = o = 0;}}if (5 & s[0]) throw s[1];return { value: s[0] ? s[1] : void 0, done: !0 };}([s, a]);};}};Object.defineProperty(n, "__esModule", { value: !0 });var a = function (e) {function t() {return null !== e && e.apply(this, arguments) || this;}return r(t, e), t.prototype.get = function (e) {return this._request(o(o({}, e), { method: "get" }));}, t.prototype.post = function (e) {return this._request(o(o({}, e), { method: "post" }));}, t.prototype.upload = function (e) {var t = e.data,n = e.file,r = e.name,s = new FormData();for (var i in t) {s.append(i, t[i]);}return s.append("key", r), s.append("file", n), this._request(o(o({}, e), { data: s, method: "post" }));}, t.prototype.download = function (e) {return s(this, void 0, void 0, function () {var t, n;return i(this, function (r) {return t = decodeURIComponent(new URL(e.url).pathname.split("/").pop() || ""), (n = document.createElement("a")).href = e.url, n.setAttribute("download", t), n.setAttribute("target", "_blank"), document.body.appendChild(n), n.click(), [2, new Promise(function (t) {t({ statusCode: 200, tempFilePath: e.url });})];});});}, t.prototype._request = function (e) {var t = String(e.method).toLowerCase() || "get";return new Promise(function (n) {var r = e.url,o = e.headers,s = void 0 === o ? {} : o,i = e.data,a = e.responseType,c = I.formatUrl(K.protocol, r, "get" === t ? i : {}),u = new XMLHttpRequest();for (var l in u.open(t, c), a && (u.responseType = a), s) {u.setRequestHeader(l, s[l]);}u.onreadystatechange = function () {if (4 === u.readyState) {var e = { statusCode: u.status };try {e.data = JSON.parse(u.responseText);} catch (e) {}n(e);}}, u.send("post" === t && I.isFormData(i) ? i : JSON.stringify(i || {}));});}, t;}(H.AbstractSDKRequest);n.WebRequest = a, n.genAdapter = function () {return { root: window, reqClass: a, wsClass: WebSocket, localStorage: localStorage, sessionStorage: sessionStorage };};}),Y = n(function (t, n) {var r = e && e.__importStar || function (e) {if (e && e.__esModule) return e;var t = {};if (null != e) for (var n in e) {Object.hasOwnProperty.call(e, n) && (t[n] = e[n]);}return t.default = e, t;};Object.defineProperty(n, "__esModule", { value: !0 });var o,s = r(V);!function (e) {e.WEB = "web", e.WX_MP = "wx_mp";}(o = n.RUNTIME || (n.RUNTIME = {})), n.useAdapters = function (e) {for (var t = 0, n = I.isArray(e) ? e : [e]; t < n.length; t++) {var r = n[t],o = r.isMatch,s = r.genAdapter,i = r.runtime;if (o()) return { adapter: s(), runtime: i };}}, n.useDefaultAdapter = function () {return { adapter: s.genAdapter(), runtime: o.WEB };}, n.Adapter = { adapter: null, runtime: void 0 };}),B = n(function (t, n) {var r = e && e.__extends || function () {var _e3 = function e(t, n) {return (_e3 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (e, t) {e.__proto__ = t;} || function (e, t) {for (var n in t) {t.hasOwnProperty(n) && (e[n] = t[n]);}})(t, n);};return function (t, n) {function r() {this.constructor = t;}_e3(t, n), t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r());};}();Object.defineProperty(n, "__esModule", { value: !0 });var o = function () {function e(e) {switch (Y.Adapter.adapter.primaryStorage || e) {case "local":this.storageClass = Y.Adapter.adapter.localStorage || new s();break;case "none":this.storageClass = new s();break;default:this.storageClass = Y.Adapter.adapter.sessionStorage || new s();}}return e.prototype.setStore = function (e, t, n) {try {if (!this.storageClass) return;} catch (e) {return;}var r,o = {};o.version = n || "localCachev1", o.content = t, r = JSON.stringify(o);try {this.storageClass.setItem(e, r);} catch (e) {return;}}, e.prototype.getStore = function (e, t) {try {if (!this.storageClass) return;} catch (e) {return "";}t = t || "localCachev1";var n = this.storageClass.getItem(e);return n && n.indexOf(t) >= 0 ? JSON.parse(n).content : "";}, e.prototype.removeStore = function (e) {this.storageClass.removeItem(e);}, e;}();n.Cache = o;var s = function (e) {function t() {var t = e.call(this) || this;return Y.Adapter.adapter.root.tcbObject || (Y.Adapter.adapter.root.tcbObject = {}), t;}return r(t, e), t.prototype.setItem = function (e, t) {Y.Adapter.adapter.root.tcbObject[e] = t;}, t.prototype.getItem = function (e) {return Y.Adapter.adapter.root.tcbObject[e];}, t.prototype.removeItem = function (e) {delete Y.Adapter.adapter.root.tcbObject[e];}, t.prototype.clear = function () {delete Y.Adapter.adapter.root.tcbObject;}, t;}(H.AbstractStorage);}),W = n(function (t, n) {var r = e && e.__extends || function () {var _e4 = function e(t, n) {return (_e4 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (e, t) {e.__proto__ = t;} || function (e, t) {for (var n in t) {t.hasOwnProperty(n) && (e[n] = t[n]);}})(t, n);};return function (t, n) {function r() {this.constructor = t;}_e4(t, n), t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r());};}(),o = e && e.__spreadArrays || function () {for (var e = 0, t = 0, n = arguments.length; t < n; t++) {e += arguments[t].length;}var r = Array(e),o = 0;for (t = 0; t < n; t++) {for (var s = arguments[t], i = 0, a = s.length; i < a; i++, o++) {r[o] = s[i];}}return r;};Object.defineProperty(n, "__esModule", { value: !0 });var s = function s(e, t) {this.data = t || null, this.name = e;};n.IEvent = s;var i = function (e) {function t(t, n) {var r = e.call(this, "error", { error: t, data: n }) || this;return r.error = t, r;}return r(t, e), t;}(s);n.IErrorEvent = i;var a = function () {function e() {this._listeners = {};}return e.prototype.on = function (e, t) {return function (e, t, n) {n[e] = n[e] || [], n[e].push(t);}(e, t, this._listeners), this;}, e.prototype.off = function (e, t) {return function (e, t, n) {if (n && n[e]) {var r = n[e].indexOf(t);-1 !== r && n[e].splice(r, 1);}}(e, t, this._listeners), this;}, e.prototype.fire = function (e, t) {if (I.isInstanceOf(e, i)) return console.error(e.error), this;var n = I.isString(e) ? new s(e, t || {}) : e,r = n.name;if (this._listens(r)) {n.target = this;for (var a = 0, c = this._listeners[r] ? o(this._listeners[r]) : []; a < c.length; a++) {c[a].call(this, n);}}return this;}, e.prototype._listens = function (e) {return this._listeners[e] && this._listeners[e].length > 0;}, e;}();n.IEventEmitter = a;var c = new a();n.addEventListener = function (e, t) {c.on(e, t);}, n.activateEvent = function (e, t) {void 0 === t && (t = {}), c.fire(e, t);}, n.removeEventListener = function (e, t) {c.off(e, t);}, n.EVENTS = { LOGIN_STATE_CHANGED: "loginStateChanged", LOGIN_STATE_EXPIRE: "loginStateExpire", LOGIN_TYPE_CHANGE: "loginTypeChanged", ANONYMOUS_CONVERTED: "anonymousConverted", REFRESH_ACCESS_TOKEN: "refreshAccessToken" };}),z = n(function (t, n) {var r = e && e.__assign || function () {return (r = Object.assign || function (e) {for (var t, n = 1, r = arguments.length; n < r; n++) {for (var o in t = arguments[n]) {Object.prototype.hasOwnProperty.call(t, o) && (e[o] = t[o]);}}return e;}).apply(this, arguments);},o = e && e.__awaiter || function (e, t, n, r) {return new (n || (n = Promise))(function (o, s) {function i(e) {try {c(r.next(e));} catch (e) {s(e);}}function a(e) {try {c(r.throw(e));} catch (e) {s(e);}}function c(e) {var t;e.done ? o(e.value) : (t = e.value, t instanceof n ? t : new n(function (e) {e(t);})).then(i, a);}c((r = r.apply(e, t || [])).next());});},s = e && e.__generator || function (e, t) {var n,r,o,s,i = { label: 0, sent: function sent() {if (1 & o[0]) throw o[1];return o[1];}, trys: [], ops: [] };return s = { next: a(0), throw: a(1), return: a(2) }, "function" == typeof Symbol && (s[Symbol.iterator] = function () {return this;}), s;function a(s) {return function (a) {return function (s) {if (n) throw new TypeError("Generator is already executing.");for (; i;) {try {if (n = 1, r && (o = 2 & s[0] ? r.return : s[0] ? r.throw || ((o = r.return) && o.call(r), 0) : r.next) && !(o = o.call(r, s[1])).done) return o;switch (r = 0, o && (s = [2 & s[0], o.value]), s[0]) {case 0:case 1:o = s;break;case 4:return i.label++, { value: s[1], done: !1 };case 5:i.label++, r = s[1], s = [0];continue;case 7:s = i.ops.pop(), i.trys.pop();continue;default:if (!(o = i.trys, (o = o.length > 0 && o[o.length - 1]) || 6 !== s[0] && 2 !== s[0])) {i = 0;continue;}if (3 === s[0] && (!o || s[1] > o[0] && s[1] < o[3])) {i.label = s[1];break;}if (6 === s[0] && i.label < o[1]) {i.label = o[1], o = s;break;}if (o && i.label < o[2]) {i.label = o[2], i.ops.push(s);break;}o[2] && i.ops.pop(), i.trys.pop();continue;}s = t.call(e, i);} catch (e) {s = [6, e], r = 0;} finally {n = o = 0;}}if (5 & s[0]) throw s[1];return { value: s[0] ? s[1] : void 0, done: !0 };}([s, a]);};}};Object.defineProperty(n, "__esModule", { value: !0 });var i = ["auth.getJwt", "auth.logout", "auth.signInWithTicket", "auth.signInAnonymously"],a = { "X-SDK-Version": K.SDK_VERISON };function c(e, t, n) {var o = e[t];e[t] = function (t) {var s = {},i = {};n.forEach(function (n) {var r = n.call(e, t),o = r.data,a = r.headers;Object.assign(s, o), Object.assign(i, a);});var a = t.data;return a && function () {if (I.isFormData(a)) for (var e in s) {a.append(e, s[e]);} else t.data = r(r({}, a), s);}(), t.headers = r(r({}, t.headers || {}), i), o.call(e, t);};}function u() {var e = I.genSeqId();return { data: { seqId: e }, headers: r(r({}, a), { "x-seqid": e }) };}var l = function () {function e(e) {void 0 === e && (e = {}), this.config = e, this.cache = new B.Cache(e.persistence), this.accessTokenKey = K.ACCESS_TOKEN + "_" + e.env, this.accessTokenExpireKey = K.ACCESS_TOKEN_Expire + "_" + e.env, this.refreshTokenKey = K.REFRESH_TOKEN + "_" + e.env, this.anonymousUuidKey = K.ANONYMOUS_UUID + "_" + e.env, this.loginTypeKey = K.LOGIN_TYPE_KEY + "_" + e.env, this._reqClass = new Y.Adapter.adapter.reqClass(), c(this._reqClass, "post", [u]), c(this._reqClass, "upload", [u]), c(this._reqClass, "download", [u]);}return e.prototype.post = function (e) {return o(this, void 0, void 0, function () {return s(this, function (t) {switch (t.label) {case 0:return [4, this._reqClass.post(e)];case 1:return [2, t.sent()];}});});}, e.prototype.upload = function (e) {return o(this, void 0, void 0, function () {return s(this, function (t) {switch (t.label) {case 0:return [4, this._reqClass.upload(e)];case 1:return [2, t.sent()];}});});}, e.prototype.download = function (e) {return o(this, void 0, void 0, function () {return s(this, function (t) {switch (t.label) {case 0:return [4, this._reqClass.download(e)];case 1:return [2, t.sent()];}});});}, e.prototype.refreshAccessToken = function () {return o(this, void 0, void 0, function () {var e, t, n;return s(this, function (r) {switch (r.label) {case 0:this._refreshAccessTokenPromise || (this._refreshAccessTokenPromise = this._refreshAccessToken()), r.label = 1;case 1:return r.trys.push([1, 3,, 4]), [4, this._refreshAccessTokenPromise];case 2:return e = r.sent(), [3, 4];case 3:return n = r.sent(), t = n, [3, 4];case 4:if (this._refreshAccessTokenPromise = null, this._shouldRefreshAccessTokenHook = null, t) throw t;return [2, e];}});});}, e.prototype._refreshAccessToken = function () {return o(this, void 0, void 0, function () {var e, t, n, r;return s(this, function (o) {switch (o.label) {case 0:if (this.cache.removeStore(this.accessTokenKey), this.cache.removeStore(this.accessTokenExpireKey), !(e = this.cache.getStore(this.refreshTokenKey))) throw new Error("[tcb-js-sdk] 未登录CloudBase");return t = { refresh_token: e }, this.cache.getStore(this.loginTypeKey) === J.LOGINTYPE.ANONYMOUS && (t.anonymous_uuid = this.cache.getStore(this.anonymousUuidKey)), [4, this.request("auth.getJwt", t)];case 1:if ((n = o.sent()).data.code) throw "SIGN_PARAM_INVALID" !== (r = n.data.code) && "REFRESH_TOKEN_EXPIRED" !== r && "INVALID_REFRESH_TOKEN" !== r || (W.activateEvent(W.EVENTS.LOGIN_STATE_EXPIRE), this.cache.removeStore(this.refreshTokenKey)), new Error("[tcb-js-sdk] 刷新access token失败：" + n.data.code);return n.data.access_token ? (W.activateEvent(W.EVENTS.REFRESH_ACCESS_TOKEN), this.cache.setStore(this.accessTokenKey, n.data.access_token), this.cache.setStore(this.accessTokenExpireKey, n.data.access_token_expire + Date.now()), W.activateEvent(W.EVENTS.LOGIN_TYPE_CHANGE, n.data.login_type), [2, { accessToken: n.data.access_token, accessTokenExpire: n.data.access_token_expire }]) : (n.data.refresh_token && (this.cache.removeStore(this.refreshTokenKey), this.cache.setStore(this.refreshTokenKey, n.data.refresh_token), this._refreshAccessToken()), [2]);}});});}, e.prototype.getAccessToken = function () {return o(this, void 0, void 0, function () {var e, t, n, r;return s(this, function (o) {switch (o.label) {case 0:return e = this.cache.getStore(this.accessTokenKey), t = this.cache.getStore(this.accessTokenExpireKey), n = !0, (r = this._shouldRefreshAccessTokenHook) ? [4, this._shouldRefreshAccessTokenHook(e, t)] : [3, 2];case 1:r = !o.sent(), o.label = 2;case 2:return r && (n = !1), (!e || !t || t < Date.now()) && n ? [2, this.refreshAccessToken()] : [2, { accessToken: e, accessTokenExpire: t }];}});});}, e.prototype.request = function (e, t, n) {return o(this, void 0, void 0, function () {var o, a, c, u, l, f, p, h, d, y, g, v;return s(this, function (s) {switch (s.label) {case 0:return o = "application/x-www-form-urlencoded", a = r({ action: e, env: this.config.env, dataVersion: "2019-08-16" }, t), -1 !== i.indexOf(e) ? [3, 2] : (c = a, [4, this.getAccessToken()]);case 1:c.access_token = s.sent().accessToken, s.label = 2;case 2:if ("storage.uploadFile" === e) {for (l in u = new FormData()) {u.hasOwnProperty(l) && void 0 !== u[l] && u.append(l, a[l]);}o = "multipart/form-data";} else o = "application/json;charset=UTF-8", u = a;return f = { headers: { "content-type": o } }, n && n.onUploadProgress && (f.onUploadProgress = n.onUploadProgress), p = t.parse, h = t.query, d = t.search, y = { env: this.config.env }, p && (y.parse = !0), h && (y = r(r({}, h), y)), g = I.formatUrl(K.protocol, K.BASE_URL, y), d && (g += d), [4, this.post(r({ url: g, data: u }, f))];case 3:if (v = s.sent(), 200 !== Number(v.status) && 200 !== Number(v.statusCode) || !v.data) throw new Error("network request error");return [2, v];}});});}, e.prototype.send = function (e, t) {return void 0 === t && (t = {}), o(this, void 0, void 0, function () {var n, r, o;return s(this, function (s) {switch (s.label) {case 0:return n = setTimeout(function () {console.warn("Database operation is longer than 3s. Please check query performance and your network environment.");}, 3e3), [4, this.request(e, t, { onUploadProgress: t.onUploadProgress })];case 1:return r = s.sent(), clearTimeout(n), "ACCESS_TOKEN_EXPIRED" !== r.data.code || -1 !== i.indexOf(e) ? [3, 4] : [4, this.refreshAccessToken()];case 2:return s.sent(), [4, this.request(e, t, { onUploadProgress: t.onUploadProgress })];case 3:if ((o = s.sent()).data.code) throw new Error("[" + o.data.code + "] " + o.data.message);return [2, o.data];case 4:if (r.data.code) throw new Error("[" + r.data.code + "] " + r.data.message);return [2, r.data];}});});}, e;}();n.Request = l;}),J = n(function (t, n) {var r,o = e && e.__awaiter || function (e, t, n, r) {return new (n || (n = Promise))(function (o, s) {function i(e) {try {c(r.next(e));} catch (e) {s(e);}}function a(e) {try {c(r.throw(e));} catch (e) {s(e);}}function c(e) {var t;e.done ? o(e.value) : (t = e.value, t instanceof n ? t : new n(function (e) {e(t);})).then(i, a);}c((r = r.apply(e, t || [])).next());});},s = e && e.__generator || function (e, t) {var n,r,o,s,i = { label: 0, sent: function sent() {if (1 & o[0]) throw o[1];return o[1];}, trys: [], ops: [] };return s = { next: a(0), throw: a(1), return: a(2) }, "function" == typeof Symbol && (s[Symbol.iterator] = function () {return this;}), s;function a(s) {return function (a) {return function (s) {if (n) throw new TypeError("Generator is already executing.");for (; i;) {try {if (n = 1, r && (o = 2 & s[0] ? r.return : s[0] ? r.throw || ((o = r.return) && o.call(r), 0) : r.next) && !(o = o.call(r, s[1])).done) return o;switch (r = 0, o && (s = [2 & s[0], o.value]), s[0]) {case 0:case 1:o = s;break;case 4:return i.label++, { value: s[1], done: !1 };case 5:i.label++, r = s[1], s = [0];continue;case 7:s = i.ops.pop(), i.trys.pop();continue;default:if (!(o = i.trys, (o = o.length > 0 && o[o.length - 1]) || 6 !== s[0] && 2 !== s[0])) {i = 0;continue;}if (3 === s[0] && (!o || s[1] > o[0] && s[1] < o[3])) {i.label = s[1];break;}if (6 === s[0] && i.label < o[1]) {i.label = o[1], o = s;break;}if (o && i.label < o[2]) {i.label = o[2], i.ops.push(s);break;}o[2] && i.ops.pop(), i.trys.pop();continue;}s = t.call(e, i);} catch (e) {s = [6, e], r = 0;} finally {n = o = 0;}}if (5 & s[0]) throw s[1];return { value: s[0] ? s[1] : void 0, done: !0 };}([s, a]);};}};Object.defineProperty(n, "__esModule", { value: !0 }), function (e) {e.ANONYMOUS = "ANONYMOUS", e.WECHAT = "WECHAT", e.CUSTOM = "CUSTOM", e.NULL = "NULL";}(r = n.LOGINTYPE || (n.LOGINTYPE = {}));var i = function () {function e(e) {this._loginType = r.NULL, this.config = e, this.onLoginTypeChanged = this.onLoginTypeChanged.bind(this), W.addEventListener(W.EVENTS.LOGIN_TYPE_CHANGE, this.onLoginTypeChanged);}return e.prototype.init = function () {this.httpRequest = new z.Request(this.config), this.cache = new B.Cache(this.config.persistence), this.accessTokenKey = K.ACCESS_TOKEN + "_" + this.config.env, this.accessTokenExpireKey = K.ACCESS_TOKEN_Expire + "_" + this.config.env, this.refreshTokenKey = K.REFRESH_TOKEN + "_" + this.config.env, this.loginTypeKey = K.LOGIN_TYPE_KEY + "_" + this.config.env;}, e.prototype.onLoginTypeChanged = function (e) {this._loginType = e.data, this.cache.setStore(this.loginTypeKey, this._loginType);}, Object.defineProperty(e.prototype, "loginType", { get: function get() {return this._loginType;}, enumerable: !0, configurable: !0 }), e.prototype.setRefreshToken = function (e) {this.cache.removeStore(this.accessTokenKey), this.cache.removeStore(this.accessTokenExpireKey), this.cache.setStore(this.refreshTokenKey, e);}, e.prototype.getRefreshTokenByWXCode = function (e, t, n) {return o(this, void 0, void 0, function () {var r;return s(this, function (o) {return "auth.getJwt", r = Y.Adapter.runtime === Y.RUNTIME.WX_MP ? "1" : "0", [2, this.httpRequest.send("auth.getJwt", { appid: e, loginType: t, code: n, hybridMiniapp: r }).then(function (e) {if (e.code) throw new Error("[tcb-js-sdk] 微信登录失败: " + e.code);if (e.refresh_token) return { refreshToken: e.refresh_token, accessToken: e.access_token, accessTokenExpire: e.access_token_expire };throw new Error("[tcb-js-sdk] getJwt未返回refreshToken");})];});});}, e;}();n.default = i;}),X = n(function (t, n) {var r = e && e.__extends || function () {var _e5 = function e(t, n) {return (_e5 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (e, t) {e.__proto__ = t;} || function (e, t) {for (var n in t) {t.hasOwnProperty(n) && (e[n] = t[n]);}})(t, n);};return function (t, n) {function r() {this.constructor = t;}_e5(t, n), t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r());};}(),o = e && e.__awaiter || function (e, t, n, r) {return new (n || (n = Promise))(function (o, s) {function i(e) {try {c(r.next(e));} catch (e) {s(e);}}function a(e) {try {c(r.throw(e));} catch (e) {s(e);}}function c(e) {var t;e.done ? o(e.value) : (t = e.value, t instanceof n ? t : new n(function (e) {e(t);})).then(i, a);}c((r = r.apply(e, t || [])).next());});},s = e && e.__generator || function (e, t) {var n,r,o,s,i = { label: 0, sent: function sent() {if (1 & o[0]) throw o[1];return o[1];}, trys: [], ops: [] };return s = { next: a(0), throw: a(1), return: a(2) }, "function" == typeof Symbol && (s[Symbol.iterator] = function () {return this;}), s;function a(s) {return function (a) {return function (s) {if (n) throw new TypeError("Generator is already executing.");for (; i;) {try {if (n = 1, r && (o = 2 & s[0] ? r.return : s[0] ? r.throw || ((o = r.return) && o.call(r), 0) : r.next) && !(o = o.call(r, s[1])).done) return o;switch (r = 0, o && (s = [2 & s[0], o.value]), s[0]) {case 0:case 1:o = s;break;case 4:return i.label++, { value: s[1], done: !1 };case 5:i.label++, r = s[1], s = [0];continue;case 7:s = i.ops.pop(), i.trys.pop();continue;default:if (!(o = i.trys, (o = o.length > 0 && o[o.length - 1]) || 6 !== s[0] && 2 !== s[0])) {i = 0;continue;}if (3 === s[0] && (!o || s[1] > o[0] && s[1] < o[3])) {i.label = s[1];break;}if (6 === s[0] && i.label < o[1]) {i.label = o[1], o = s;break;}if (o && i.label < o[2]) {i.label = o[2], i.ops.push(s);break;}o[2] && i.ops.pop(), i.trys.pop();continue;}s = t.call(e, i);} catch (e) {s = [6, e], r = 0;} finally {n = o = 0;}}if (5 & s[0]) throw s[1];return { value: s[0] ? s[1] : void 0, done: !0 };}([s, a]);};}},i = e && e.__importStar || function (e) {if (e && e.__esModule) return e;var t = {};if (null != e) for (var n in e) {Object.hasOwnProperty.call(e, n) && (t[n] = e[n]);}return t.default = e, t;};Object.defineProperty(n, "__esModule", { value: !0 });var a,c,u = i(I),l = i(J);!function (e) {e.snsapi_base = "snsapi_base", e.snsapi_userinfo = "snsapi_userinfo", e.snsapi_login = "snsapi_login";}(a || (a = {})), function (e) {e.redirect = "redirect", e.prompt = "prompt";}(c || (c = {}));var f = {},p = function (e) {function t(t, n, r, o, s) {var i = e.call(this, t) || this;return i.config = t, i.appid = n, i.scope = Y.Adapter.runtime === Y.RUNTIME.WX_MP ? "snsapi_base" : r, i.state = s || "weixin", i.loginMode = o || "redirect", i;}return r(t, e), t.prototype.signIn = function () {return o(this, void 0, void 0, function () {var e, t, n;return s(this, function (r) {switch (r.label) {case 0:f[this.config.env] || (f[this.config.env] = this._signIn()), r.label = 1;case 1:return r.trys.push([1, 3,, 4]), [4, f[this.config.env]];case 2:return e = r.sent(), [3, 4];case 3:return n = r.sent(), t = n, [3, 4];case 4:if (f[this.config.env] = null, t) throw t;return [2, e];}});});}, t.prototype._signIn = function () {return o(this, void 0, void 0, function () {var e, t, n, r, o, i;return s(this, function (s) {switch (s.label) {case 0:if (e = this.cache.getStore(this.accessTokenKey), t = this.cache.getStore(this.accessTokenExpireKey), e) {if (t && t > Date.now()) return [2, { credential: { accessToken: e, refreshToken: this.cache.getStore(this.refreshTokenKey) } }];this.cache.removeStore(this.accessTokenKey), this.cache.removeStore(this.accessTokenExpireKey);}if (!1 === Object.values(a).includes(a[this.scope])) throw new Error("错误的scope类型");return Y.Adapter.runtime !== Y.RUNTIME.WX_MP ? [3, 2] : [4, u.getMiniAppCode()];case 1:return n = s.sent(), [3, 4];case 2:return [4, u.getWeixinCode()];case 3:if (!(n = s.sent())) return [2, this.redirect()];s.label = 4;case 4:return r = function (e) {switch (e) {case a.snsapi_login:return "WECHAT-OPEN";default:return "WECHAT-PUBLIC";}}(this.scope), [4, this.getRefreshTokenByWXCode(this.appid, r, n)];case 5:return o = s.sent(), i = o.refreshToken, this.cache.setStore(this.refreshTokenKey, i), o.accessToken && this.cache.setStore(this.accessTokenKey, o.accessToken), o.accessTokenExpire && this.cache.setStore(this.accessTokenExpireKey, o.accessTokenExpire + Date.now()), W.activateEvent(W.EVENTS.LOGIN_STATE_CHANGED), W.activateEvent(W.EVENTS.LOGIN_TYPE_CHANGE, l.LOGINTYPE.WECHAT), [2, { credential: { refreshToken: i } }];}});});}, t.prototype.redirect = function () {var e = u.removeParam("code", location.href);e = u.removeParam("state", e), e = encodeURIComponent(e);var t = "//open.weixin.qq.com/connect/oauth2/authorize";"snsapi_login" === this.scope && (t = "//open.weixin.qq.com/connect/qrconnect"), "redirect" === c[this.loginMode] && (location.href = t + "?appid=" + this.appid + "&redirect_uri=" + e + "&response_type=code&scope=" + this.scope + "&state=" + this.state + "#wechat_redirect");}, t;}(l.default);n.default = p;}),$ = n(function (t, n) {var r = e && e.__extends || function () {var _e6 = function e(t, n) {return (_e6 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (e, t) {e.__proto__ = t;} || function (e, t) {for (var n in t) {t.hasOwnProperty(n) && (e[n] = t[n]);}})(t, n);};return function (t, n) {function r() {this.constructor = t;}_e6(t, n), t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r());};}(),o = e && e.__assign || function () {return (o = Object.assign || function (e) {for (var t, n = 1, r = arguments.length; n < r; n++) {for (var o in t = arguments[n]) {Object.prototype.hasOwnProperty.call(t, o) && (e[o] = t[o]);}}return e;}).apply(this, arguments);},s = e && e.__awaiter || function (e, t, n, r) {return new (n || (n = Promise))(function (o, s) {function i(e) {try {c(r.next(e));} catch (e) {s(e);}}function a(e) {try {c(r.throw(e));} catch (e) {s(e);}}function c(e) {var t;e.done ? o(e.value) : (t = e.value, t instanceof n ? t : new n(function (e) {e(t);})).then(i, a);}c((r = r.apply(e, t || [])).next());});},i = e && e.__generator || function (e, t) {var n,r,o,s,i = { label: 0, sent: function sent() {if (1 & o[0]) throw o[1];return o[1];}, trys: [], ops: [] };return s = { next: a(0), throw: a(1), return: a(2) }, "function" == typeof Symbol && (s[Symbol.iterator] = function () {return this;}), s;function a(s) {return function (a) {return function (s) {if (n) throw new TypeError("Generator is already executing.");for (; i;) {try {if (n = 1, r && (o = 2 & s[0] ? r.return : s[0] ? r.throw || ((o = r.return) && o.call(r), 0) : r.next) && !(o = o.call(r, s[1])).done) return o;switch (r = 0, o && (s = [2 & s[0], o.value]), s[0]) {case 0:case 1:o = s;break;case 4:return i.label++, { value: s[1], done: !1 };case 5:i.label++, r = s[1], s = [0];continue;case 7:s = i.ops.pop(), i.trys.pop();continue;default:if (!(o = i.trys, (o = o.length > 0 && o[o.length - 1]) || 6 !== s[0] && 2 !== s[0])) {i = 0;continue;}if (3 === s[0] && (!o || s[1] > o[0] && s[1] < o[3])) {i.label = s[1];break;}if (6 === s[0] && i.label < o[1]) {i.label = o[1], o = s;break;}if (o && i.label < o[2]) {i.label = o[2], i.ops.push(s);break;}o[2] && i.ops.pop(), i.trys.pop();continue;}s = t.call(e, i);} catch (e) {s = [6, e], r = 0;} finally {n = o = 0;}}if (5 & s[0]) throw s[1];return { value: s[0] ? s[1] : void 0, done: !0 };}([s, a]);};}},a = e && e.__importStar || function (e) {if (e && e.__esModule) return e;var t = {};if (null != e) for (var n in e) {Object.hasOwnProperty.call(e, n) && (t[n] = e[n]);}return t.default = e, t;};Object.defineProperty(n, "__esModule", { value: !0 });var c = a(J),u = function (e) {function t(t) {var n = e.call(this, o(o({}, t), { persistence: "local" })) || this;return n._anonymousUuidKey = K.ANONYMOUS_UUID + "_" + n.config.env, n._loginTypeKey = K.LOGIN_TYPE_KEY + "_" + n.config.env, n;}return r(t, e), t.prototype.init = function () {e.prototype.init.call(this);}, t.prototype.signIn = function () {return s(this, void 0, void 0, function () {var e, t, n;return i(this, function (r) {switch (r.label) {case 0:return e = this.cache.getStore(this._anonymousUuidKey) || void 0, t = this.cache.getStore(this.refreshTokenKey) || void 0, [4, this.httpRequest.send("auth.signInAnonymously", { anonymous_uuid: e, refresh_token: t })];case 1:return (n = r.sent()).uuid && n.refresh_token ? (this._setAnonymousUUID(n.uuid), this.setRefreshToken(n.refresh_token), [4, this.httpRequest.refreshAccessToken()]) : [3, 3];case 2:return r.sent(), W.activateEvent(W.EVENTS.LOGIN_STATE_CHANGED), W.activateEvent(W.EVENTS.LOGIN_TYPE_CHANGE, c.LOGINTYPE.ANONYMOUS), [2, { credential: { refreshToken: n.refresh_token } }];case 3:throw new Error("[tcb-js-sdk] 匿名登录失败");}});});}, t.prototype.linkAndRetrieveDataWithTicket = function (e) {return s(this, void 0, void 0, function () {var t, n, r;return i(this, function (o) {switch (o.label) {case 0:return t = this.cache.getStore(this._anonymousUuidKey), n = this.cache.getStore(this.refreshTokenKey), [4, this.httpRequest.send("auth.linkAndRetrieveDataWithTicket", { anonymous_uuid: t, refresh_token: n, ticket: e })];case 1:return (r = o.sent()).refresh_token ? (this._clearAnonymousUUID(), this.setRefreshToken(r.refresh_token), [4, this.httpRequest.refreshAccessToken()]) : [3, 3];case 2:return o.sent(), W.activateEvent(W.EVENTS.ANONYMOUS_CONVERTED, { refresh_token: r.refresh_token }), W.activateEvent(W.EVENTS.LOGIN_TYPE_CHANGE, c.LOGINTYPE.CUSTOM), [2, { credential: { refreshToken: r.refresh_token } }];case 3:throw new Error("[tcb-js-sdk] 匿名转化失败");}});});}, t.prototype.getAllStore = function () {var e = {};return e[this.refreshTokenKey] = this.cache.getStore(this.refreshTokenKey) || "", e[this._loginTypeKey] = this.cache.getStore(this._loginTypeKey) || "", e[this.accessTokenKey] = this.cache.getStore(this.accessTokenKey) || "", e[this.accessTokenExpireKey] = this.cache.getStore(this.accessTokenExpireKey) || "", e;}, t.prototype._setAnonymousUUID = function (e) {this.cache.removeStore(this._anonymousUuidKey), this.cache.setStore(this._anonymousUuidKey, e), this.cache.setStore(this._loginTypeKey, c.LOGINTYPE.ANONYMOUS);}, t.prototype._clearAnonymousUUID = function () {this.cache.removeStore(this._anonymousUuidKey);}, t;}(c.default);n.AnonymousAuthProvider = u;}),Q = n(function (t, n) {var r = e && e.__extends || function () {var _e7 = function e(t, n) {return (_e7 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (e, t) {e.__proto__ = t;} || function (e, t) {for (var n in t) {t.hasOwnProperty(n) && (e[n] = t[n]);}})(t, n);};return function (t, n) {function r() {this.constructor = t;}_e7(t, n), t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r());};}(),o = e && e.__assign || function () {return (o = Object.assign || function (e) {for (var t, n = 1, r = arguments.length; n < r; n++) {for (var o in t = arguments[n]) {Object.prototype.hasOwnProperty.call(t, o) && (e[o] = t[o]);}}return e;}).apply(this, arguments);},s = e && e.__awaiter || function (e, t, n, r) {return new (n || (n = Promise))(function (o, s) {function i(e) {try {c(r.next(e));} catch (e) {s(e);}}function a(e) {try {c(r.throw(e));} catch (e) {s(e);}}function c(e) {var t;e.done ? o(e.value) : (t = e.value, t instanceof n ? t : new n(function (e) {e(t);})).then(i, a);}c((r = r.apply(e, t || [])).next());});},i = e && e.__generator || function (e, t) {var n,r,o,s,i = { label: 0, sent: function sent() {if (1 & o[0]) throw o[1];return o[1];}, trys: [], ops: [] };return s = { next: a(0), throw: a(1), return: a(2) }, "function" == typeof Symbol && (s[Symbol.iterator] = function () {return this;}), s;function a(s) {return function (a) {return function (s) {if (n) throw new TypeError("Generator is already executing.");for (; i;) {try {if (n = 1, r && (o = 2 & s[0] ? r.return : s[0] ? r.throw || ((o = r.return) && o.call(r), 0) : r.next) && !(o = o.call(r, s[1])).done) return o;switch (r = 0, o && (s = [2 & s[0], o.value]), s[0]) {case 0:case 1:o = s;break;case 4:return i.label++, { value: s[1], done: !1 };case 5:i.label++, r = s[1], s = [0];continue;case 7:s = i.ops.pop(), i.trys.pop();continue;default:if (!(o = i.trys, (o = o.length > 0 && o[o.length - 1]) || 6 !== s[0] && 2 !== s[0])) {i = 0;continue;}if (3 === s[0] && (!o || s[1] > o[0] && s[1] < o[3])) {i.label = s[1];break;}if (6 === s[0] && i.label < o[1]) {i.label = o[1], o = s;break;}if (o && i.label < o[2]) {i.label = o[2], i.ops.push(s);break;}o[2] && i.ops.pop(), i.trys.pop();continue;}s = t.call(e, i);} catch (e) {s = [6, e], r = 0;} finally {n = o = 0;}}if (5 & s[0]) throw s[1];return { value: s[0] ? s[1] : void 0, done: !0 };}([s, a]);};}},a = e && e.__importDefault || function (e) {return e && e.__esModule ? e : { default: e };},c = e && e.__importStar || function (e) {if (e && e.__esModule) return e;var t = {};if (null != e) for (var n in e) {Object.hasOwnProperty.call(e, n) && (t[n] = e[n]);}return t.default = e, t;};Object.defineProperty(n, "__esModule", { value: !0 });var u = a(X),l = c(J),f = function (e) {function t(t) {var n = e.call(this, t) || this;return n.config = t, n;}return r(t, e), t.prototype.init = function () {e.prototype.init.call(this), this.customAuthProvider = new l.default(this.config), this.customAuthProvider.init();}, t.prototype.weixinAuthProvider = function (e) {var t = e.appid,n = e.scope,r = e.loginMode,o = e.state,s = new u.default(this.config, t, n, r, o);return s.init(), s;}, t.prototype.signInAnonymously = function () {return s(this, void 0, void 0, function () {var e = this;return i(this, function (t) {switch (t.label) {case 0:return this._anonymousAuthProvider || (this._anonymousAuthProvider = new $.AnonymousAuthProvider(this.config), this._anonymousAuthProvider.init()), W.addEventListener(W.EVENTS.LOGIN_TYPE_CHANGE, function (t) {if (t && t.data === l.LOGINTYPE.ANONYMOUS) {var n = e._anonymousAuthProvider.getAllStore();for (var r in n) {n[r] && e.httpRequest.cache.setStore(r, n[r]);}}}), [4, this._anonymousAuthProvider.signIn()];case 1:return [2, t.sent()];}});});}, t.prototype.linkAndRetrieveDataWithTicket = function (e) {return s(this, void 0, void 0, function () {var t = this;return i(this, function (n) {switch (n.label) {case 0:return this._anonymousAuthProvider || (this._anonymousAuthProvider = new $.AnonymousAuthProvider(this.config), this._anonymousAuthProvider.init()), W.addEventListener(W.EVENTS.ANONYMOUS_CONVERTED, function (e) {var n = e.data.refresh_token;n && t.httpRequest.cache.setStore(t.refreshTokenKey, n);}), [4, this._anonymousAuthProvider.linkAndRetrieveDataWithTicket(e)];case 1:return [2, n.sent()];}});});}, t.prototype.signOut = function () {return s(this, void 0, void 0, function () {var e, t, n, r, o, s, a;return i(this, function (i) {switch (i.label) {case 0:if (this.loginType === l.LOGINTYPE.ANONYMOUS) throw new Error("[tcb-js-sdk] 匿名用户不支持登出操作");return e = this.httpRequest, t = e.cache, n = e.refreshTokenKey, r = e.accessTokenKey, o = e.accessTokenExpireKey, "auth.logout", (s = t.getStore(n)) ? [4, this.httpRequest.send("auth.logout", { refresh_token: s })] : [2];case 1:return a = i.sent(), t.removeStore(n), t.removeStore(r), t.removeStore(o), W.activateEvent(W.EVENTS.LOGIN_STATE_CHANGED), W.activateEvent(W.EVENTS.LOGIN_TYPE_CHANGE, l.LOGINTYPE.NULL), [2, a];}});});}, t.prototype.getAccessToken = function () {return s(this, void 0, void 0, function () {var e;return i(this, function (t) {switch (t.label) {case 0:return e = {}, [4, this.httpRequest.getAccessToken()];case 1:return [2, (e.accessToken = t.sent().accessToken, e.env = this.config.env, e)];}});});}, t.prototype.onLoginStateExpire = function (e) {W.addEventListener("loginStateExpire", e);}, t.prototype.getLoginState = function () {return s(this, void 0, void 0, function () {var e, t, n, r, o;return i(this, function (s) {switch (s.label) {case 0:if (e = this.httpRequest, t = e.cache, n = e.refreshTokenKey, r = e.accessTokenKey, !(o = t.getStore(n))) return [3, 5];s.label = 1;case 1:return s.trys.push([1, 3,, 4]), [4, this.httpRequest.refreshAccessToken()];case 2:return s.sent(), [3, 4];case 3:return s.sent(), [2, null];case 4:return [2, { isAnonymous: this.loginType === l.LOGINTYPE.ANONYMOUS, credential: { refreshToken: o, accessToken: t.getStore(r) } }];case 5:return [2, null];}});});}, t.prototype.signInWithTicket = function (e) {return s(this, void 0, void 0, function () {var t, n, r, o;return i(this, function (s) {switch (s.label) {case 0:if ("string" != typeof e) throw new Error("ticket must be a string");return t = this.httpRequest, n = t.cache, r = t.refreshTokenKey, [4, this.httpRequest.send("auth.signInWithTicket", { ticket: e, refresh_token: n.getStore(r) || "" })];case 1:return (o = s.sent()).refresh_token ? (this.customAuthProvider.setRefreshToken(o.refresh_token), [4, this.httpRequest.refreshAccessToken()]) : [3, 3];case 2:return s.sent(), W.activateEvent(W.EVENTS.LOGIN_STATE_CHANGED), W.activateEvent(W.EVENTS.LOGIN_TYPE_CHANGE, l.LOGINTYPE.CUSTOM), [2, { credential: { refreshToken: o.refresh_token } }];case 3:throw new Error("[tcb-js-sdk] 自定义登录失败");}});});}, t.prototype.shouldRefreshAccessToken = function (e) {this.httpRequest._shouldRefreshAccessTokenHook = e.bind(this);}, t.prototype.getUserInfo = function () {return this.httpRequest.send("auth.getUserInfo", {}).then(function (e) {return e.code ? e : o(o({}, e.data), { requestId: e.seqId });});}, t;}(l.default);n.default = f;}),Z = n(function (t, n) {var r = e && e.__awaiter || function (e, t, n, r) {return new (n || (n = Promise))(function (o, s) {function i(e) {try {c(r.next(e));} catch (e) {s(e);}}function a(e) {try {c(r.throw(e));} catch (e) {s(e);}}function c(e) {var t;e.done ? o(e.value) : (t = e.value, t instanceof n ? t : new n(function (e) {e(t);})).then(i, a);}c((r = r.apply(e, t || [])).next());});},o = e && e.__generator || function (e, t) {var n,r,o,s,i = { label: 0, sent: function sent() {if (1 & o[0]) throw o[1];return o[1];}, trys: [], ops: [] };return s = { next: a(0), throw: a(1), return: a(2) }, "function" == typeof Symbol && (s[Symbol.iterator] = function () {return this;}), s;function a(s) {return function (a) {return function (s) {if (n) throw new TypeError("Generator is already executing.");for (; i;) {try {if (n = 1, r && (o = 2 & s[0] ? r.return : s[0] ? r.throw || ((o = r.return) && o.call(r), 0) : r.next) && !(o = o.call(r, s[1])).done) return o;switch (r = 0, o && (s = [2 & s[0], o.value]), s[0]) {case 0:case 1:o = s;break;case 4:return i.label++, { value: s[1], done: !1 };case 5:i.label++, r = s[1], s = [0];continue;case 7:s = i.ops.pop(), i.trys.pop();continue;default:if (!(o = i.trys, (o = o.length > 0 && o[o.length - 1]) || 6 !== s[0] && 2 !== s[0])) {i = 0;continue;}if (3 === s[0] && (!o || s[1] > o[0] && s[1] < o[3])) {i.label = s[1];break;}if (6 === s[0] && i.label < o[1]) {i.label = o[1], o = s;break;}if (o && i.label < o[2]) {i.label = o[2], i.ops.push(s);break;}o[2] && i.ops.pop(), i.trys.pop();continue;}s = t.call(e, i);} catch (e) {s = [6, e], r = 0;} finally {n = o = 0;}}if (5 & s[0]) throw s[1];return { value: s[0] ? s[1] : void 0, done: !0 };}([s, a]);};}};Object.defineProperty(n, "__esModule", { value: !0 }), n.uploadFile = function (e, t) {t = t || I.createPromiseCallback();var n = new z.Request(this.config),r = e.cloudPath,o = e.filePath,s = e.onUploadProgress,i = e.fileType || "image";return n.send("storage.getUploadMetadata", { path: r }).then(function (e) {var a = e.data,c = a.url,u = a.authorization,l = a.token,f = a.fileId,p = a.cosFileId,h = e.requestId,d = { key: r, signature: u, "x-cos-meta-fileid": p, success_action_status: "201", "x-cos-security-token": l };n.upload({ url: c, data: d, file: o, name: r, fileType: i, onUploadProgress: s }).then(function (e) {201 === e.statusCode ? t(null, { fileID: f, requestId: h }) : t(new Error("STORAGE_REQUEST_FAIL: " + e.data));}).catch(function (e) {t(e);});}).catch(function (e) {t(e);}), t.promise;}, n.deleteFile = function (e, t) {var n = e.fileList;if (t = t || I.createPromiseCallback(), !n || !Array.isArray(n)) return { code: "INVALID_PARAM", message: "fileList必须是非空的数组" };for (var r = 0, o = n; r < o.length; r++) {var s = o[r];if (!s || "string" != typeof s) return { code: "INVALID_PARAM", message: "fileList的元素必须是非空的字符串" };}var i = { fileid_list: n };return new z.Request(this.config).send("storage.batchDeleteFile", i).then(function (e) {e.code ? t(null, e) : t(null, { fileList: e.data.delete_list, requestId: e.requestId });}).catch(function (e) {t(e);}), t.promise;}, n.getTempFileURL = function (e, t) {var n = e.fileList;t = t || I.createPromiseCallback(), n && Array.isArray(n) || t(null, { code: "INVALID_PARAM", message: "fileList必须是非空的数组" });for (var r = [], o = 0, s = n; o < s.length; o++) {var i = s[o];"object" == typeof i ? (i.hasOwnProperty("fileID") && i.hasOwnProperty("maxAge") || t(null, { code: "INVALID_PARAM", message: "fileList的元素必须是包含fileID和maxAge的对象" }), r.push({ fileid: i.fileID, max_age: i.maxAge })) : "string" == typeof i ? r.push({ fileid: i }) : t(null, { code: "INVALID_PARAM", message: "fileList的元素必须是字符串" });}var a = { file_list: r };return new z.Request(this.config).send("storage.batchGetDownloadUrl", a).then(function (e) {e.code ? t(null, e) : t(null, { fileList: e.data.download_list, requestId: e.requestId });}).catch(function (e) {t(e);}), t.promise;}, n.downloadFile = function (e, t) {var s = e.fileID;return r(this, void 0, void 0, function () {var e, r, i, a, c;return o(this, function (o) {switch (o.label) {case 0:return [4, n.getTempFileURL.call(this, { fileList: [{ fileID: s, maxAge: 600 }] })];case 1:return e = o.sent(), "SUCCESS" !== (r = e.fileList[0]).code ? [2, t ? t(r) : new Promise(function (e) {e(r);})] : (i = r.download_url, i = encodeURI(i), a = new z.Request(this.config), t ? [4, a.download({ url: i })] : [3, 3]);case 2:return c = o.sent(), t(c), [3, 4];case 3:return [2, a.download({ url: i })];case 4:return [2];}});});};}),ee = n(function (e, t) {Object.defineProperty(t, "__esModule", { value: !0 }), t.callFunction = function (e, t) {var n,r = e.name,o = e.data,s = e.query,i = e.parse,a = e.search,c = t || I.createPromiseCallback();try {n = o ? JSON.stringify(o) : "";} catch (e) {return Promise.reject(e);}if (!r) return Promise.reject(new Error("函数名不能为空"));var u = { query: s, parse: i, search: a, function_name: r, request_data: n };return new z.Request(this.config).send("functions.invokeFunction", u).then(function (e) {if (e.code) c(null, e);else {var t = e.data.response_data;if (i) c(null, { result: t, requestId: e.requestId });else try {t = JSON.parse(e.data.response_data), c(null, { result: t, requestId: e.requestId });} catch (e) {c(new Error("response data must be json"));}}return c.promise;}).catch(function (e) {c(e);}), c.promise;};}),te = t(n(function (t) {var n = e && e.__assign || function () {return (n = Object.assign || function (e) {for (var t, n = 1, r = arguments.length; n < r; n++) {for (var o in t = arguments[n]) {Object.prototype.hasOwnProperty.call(t, o) && (e[o] = t[o]);}}return e;}).apply(this, arguments);},r = e && e.__importDefault || function (e) {return e && e.__esModule ? e : { default: e };},o = e && e.__importStar || function (e) {if (e && e.__esModule) return e;var t = {};if (null != e) for (var n in e) {Object.hasOwnProperty.call(e, n) && (t[n] = e[n]);}return t.default = e, t;},s = r(P),i = r(Q),a = o(Z),c = o(ee),u = { timeout: 15e3 },l = new (function () {function e(e) {var t = this;this.config = e || this.config, this.authObj = void 0, W.addEventListener(W.EVENTS.LOGIN_TYPE_CHANGE, function (e) {e.data === J.LOGINTYPE.ANONYMOUS && (t.config.persistence = "local");});}return e.prototype.init = function (t) {return this.config = n(n({}, u), t), Y.Adapter.adapter || this._useDefaultAdapter(), new e(this.config);}, e.prototype.auth = function (e) {var t = (void 0 === e ? {} : e).persistence;return this.authObj || (this.config = n(n({}, this.config), { persistence: t || Y.Adapter.adapter.primaryStorage || "session" }), this.authObj = new i.default(this.config), this.authObj.init()), this.authObj;}, e.prototype.on = function (e, t) {return W.addEventListener.apply(this, [e, t]);}, e.prototype.off = function (e, t) {return W.removeEventListener.apply(this, [e, t]);}, e.prototype.callFunction = function (e, t) {return c.callFunction.apply(this, [e, t]);}, e.prototype.deleteFile = function (e, t) {return a.deleteFile.apply(this, [e, t]);}, e.prototype.getTempFileURL = function (e, t) {return a.getTempFileURL.apply(this, [e, t]);}, e.prototype.downloadFile = function (e, t) {return a.downloadFile.apply(this, [e, t]);}, e.prototype.uploadFile = function (e, t) {return a.uploadFile.apply(this, [e, t]);}, e.prototype.useAdapters = function (e) {var t = Y.useAdapters(e) || {},n = t.adapter,r = t.runtime;n && (Y.Adapter.adapter = n), r && (Y.Adapter.runtime = r);}, e.prototype._useDefaultAdapter = function () {var e = Y.useDefaultAdapter(),t = e.adapter,n = e.runtime;Y.Adapter.adapter = t, Y.Adapter.runtime = n;}, e;}())();l.useAdapters(s.default);try {window.tcb = l;} catch (e) {}t.exports = l;}));te.useAdapters(P);var ne = te,re = ne.init;ne.init = function (e) {e.env = e.spaceId;var t = re.call(this, e);t.config.provider = "tencent", t.config.spaceId = e.spaceId;var n = t.auth;t.auth = function (e) {var t = n.call(this, e);return ["linkAndRetrieveDataWithTicket", "signInAnonymously", "signOut", "getAccessToken", "getLoginState", "signInWithTicket", "getUserInfo"].forEach(function (e) {t[e] = s(t[e]).bind(t);}), t;};return ["uploadFile", "deleteFile", "getTempFileURL", "downloadFile"].forEach(function (e) {t[e] = s(t[e]).bind(t);}), t;};var oe, se;function ie(e) {oe || (oe = { PLATFORM: "mp-weixin", OS: u, APPID: a.appid, CLIENT_SDK_VERSION: "1.0.0" }, se = { ak: a.appid, p: "android" === u ? "a" : "i", ut: p(), uuid: f() });var t = JSON.parse(JSON.stringify(e.data || {})),n = e.name,r = this.config.spaceId,o = { tencent: "t", aliyun: "a" }[this.config.provider],s = Object.assign({}, se, { fn: n, sid: r, pvd: o });Object.assign(t, { clientInfo: oe, uniCloudClientInfo: encodeURIComponent(JSON.stringify(s)) });var i = this.adapter.getStore("uni_id_token") || this.adapter.getStore("uniIdToken");return i && (t.uniIdToken = i), e.data = t, e;}var ae = { request: function request(e) {return uni.request(e);}, uploadFile: function uploadFile(e) {return uni.uploadFile(e);}, setStore: function setStore(e, t) {return  false ? undefined : uni.setStorageSync(e, t);}, getStore: function getStore(e) {return  false ? undefined : uni.getStorageSync(e);} };var ce = new ( /*#__PURE__*/function () {function _class() {_classCallCheck(this, _class);this.adapter = ae;}_createClass(_class, [{ key: "init", value: function init(e) {var t = {};var n = !1 !== e.debugFunction && "development" === "development" && ( false || "app-plus" === "mp-weixin");switch (e.provider) {case "tencent":t = ne.init(Object.assign(e, { useDebugFunction: n }));break;case "aliyun":t = v.init(Object.assign(e, { useDebugFunction: n }));break;default:throw new Error("未提供正确的provider参数");}if (t.isReady = !1, !1 !== e.autoSignIn) {var _e8 = t.auth();t.initSignIn = _e8.getLoginState().then(function (t) {return t ? Promise.resolve() : _e8.signInAnonymously();}).then(function () {return new Promise(function (e) { false ? (undefined) : setTimeout(function () {u = uni.getSystemInfoSync().platform, c = uni.getStorageSync("__DC_CLOUD_UUID") || l(32), e();}, 0);});}).then(function () {t.isReady = !0;});}return function (e) {var t = e.callFunction;e.callFunction = function (e) {var _this6 = this;var n;return n = this.isReady ? Promise.resolve() : this.initSignIn, n.then(function () {var n = ie.call(_this6, e),r = { aliyun: "aliyun", tencent: "tcb" }[_this6.config.provider];return new Promise(function (o, s) {t.call(_this6, n).then(function (t) {if (_this6.config.useDebugFunction && t && t.requestId) {var _n = JSON.stringify({ spaceId: _this6.config.spaceId, functionName: e.name, requestId: t.requestId });console.log("[".concat(r, "-request]").concat(_n, "[/").concat(r, "-request]"));}o(t);}).catch(function (t) {if (_this6.config.useDebugFunction && t && t.requestId) {var _n2 = JSON.stringify({ spaceId: _this6.config.spaceId, functionName: e.name, requestId: t.requestId });console.log("[".concat(r, "-request]").concat(_n2, "[/").concat(r, "-request]"));}t && t.message && (t.message = "[".concat(e.name, "]: ").concat(t.message)), s(t);});});});};var n = e.callFunction;e.callFunction = function (e) {return s(n).call(this, e);};}(t), t.init = this.init, t.adapter = this.adapter, t;} }, { key: "setAdapter", value: function setAdapter(e) {this.adapter = e;} }]);return _class;}())();try {var _e9 = {};1 === [{"provider":"tencent","spaceName":"yangyjxm-serverless","spaceId":"tcb-hjvrlkwoghdn1s3b45f22-387090"}].length && (_e9 = [{"provider":"tencent","spaceName":"yangyjxm-serverless","spaceId":"tcb-hjvrlkwoghdn1s3b45f22-387090"}][0]), ce = ce.init(_e9);} catch (e) {["auth", "callFunction", "uploadFile", "deleteFile", "getTempFileURL", "downloadFile"].forEach(function (e) {ce[e] = function () {var e = [{"provider":"tencent","spaceName":"yangyjxm-serverless","spaceId":"tcb-hjvrlkwoghdn1s3b45f22-387090"}].length > 0 ? "应用有多个服务空间，请通过uniCloud.init方法指定要使用的服务空间" : "应用未关联服务空间，请在cloudfunctions目录右键关联服务空间";return console.error(e), Promise.reject(new i({ code: "SYS_ERR", message: e }));};});}var ue = ce;var _default = ue;exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../webpack/buildin/global.js */ 3), __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
-
-/***/ }),
-/* 450 */
-/*!*********************************************************************************!*\
-  !*** /Users/yangyjxm/Documents/HBuilderProjects/yjb/pages.json?{"type":"stat"} ***!
-  \*********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "appid": "__UNI__35400E8" };exports.default = _default;
 
 /***/ })
 ]]);

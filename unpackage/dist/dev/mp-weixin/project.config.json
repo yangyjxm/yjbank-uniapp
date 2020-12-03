@@ -5,22 +5,8 @@
 	},
 	"setting": {
 		"urlCheck": false,
-		"es6": true,
-		"postcss": true,
 		"minified": true,
-		"newFeature": true,
-		"coverView": true,
-		"autoAudits": false,
-		"showShadowRootInWxmlPanel": true,
-		"scopeDataCheck": false,
-		"checkInvalidKey": true,
-		"checkSiteMap": true,
-		"uploadWithSourceMap": true,
-		"babelSetting": {
-			"ignore": [],
-			"disablePlugins": [],
-			"outputPath": ""
-		}
+		"es6": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "",
@@ -35,7 +21,15 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
+			"current": -1,
+			"list": []
+		},
+		"gamePlugin": {
 			"current": -1,
 			"list": []
 		},
@@ -43,34 +37,54 @@
 			"current": 0,
 			"list": [
 				{
-					"name": "小匀称打卡机",
 					"id": 0,
-					"pathName": "pages/calendar/calendar"
+					"name": "小匀称打卡机",
+					"pathName": "pages/calendar/calendar",
+					"query": ""
 				},
 				{
-					"name": "新增动态",
 					"id": 1,
-					"pathName": "pages/home/addMessage/addMessage"
+					"name": "新增动态",
+					"pathName": "pages/home/addMessage/addMessage",
+					"query": ""
 				},
 				{
-					"name": "贷款",
 					"id": 2,
-					"pathName": "pages/loan/loan"
+					"name": "贷款",
+					"pathName": "pages/loan/loan",
+					"query": ""
 				},
 				{
-					"name": "树洞",
 					"id": 3,
-					"pathName": "pages/treehole/treehole"
+					"name": "树洞",
+					"pathName": "pages/treehole/treehole",
+					"query": ""
 				},
 				{
-					"name": "足迹",
 					"id": 4,
-					"pathName": "pages/footprint/index/index"
+					"name": "足迹",
+					"pathName": "pages/footprint/index/index",
+					"query": ""
 				},
 				{
-					"name": "定位",
 					"id": 5,
-					"pathName": "pages/footprint/location/location"
+					"name": "定位",
+					"pathName": "pages/footprint/location/location",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "pages/wishlist/wishlist",
+					"pathName": "pages/wishlist/wishlist",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "pages/bet/betlist",
+					"pathName": "pages/bet/betlist",
+					"query": "",
+					"scene": null
 				}
 			]
 		}

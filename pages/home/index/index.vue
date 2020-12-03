@@ -41,7 +41,7 @@
 			{{item.intro}}
 		</uni-card> -->
 		<uni-load-more :status="loadStatus"></uni-load-more>
-		<u-tabbar v-model="current" @change="addMessage()" :list="list" :mid-button="true" border-top :height="50"></u-tabbar>
+		<!-- <u-tabbar v-model="current" @change="addMessage()" :list="list" :mid-button="true" border-top :height="50"></u-tabbar> -->
 	</view>
 </template>
 
@@ -128,14 +128,14 @@
 						})
 						break
 					case 5:
-						uni.navigateTo({
-							url: '/pages/wishlist/wishlist'
-						})
+						// uni.navigateTo({
+						// 	url: '/pages/wishlist/wishlist'
+						// })
 						break
 					case 6:
-						// uni.navigateTo({
-						// 	url: '/pages/footprint/index/index'
-						// })
+						uni.navigateTo({
+							url: '/pages/bet/betlist'
+						})
 						break
 				}
 			}
