@@ -1,0 +1,1 @@
+.add-wishlist{padding:20px}.add-wishlist .uploadBtn{width:180rpx;line-height:90rpx;height:180rpx;font-size:24rpx;background-color:#eee;display:inline-block}.add-wishlist .uploadBtn:after{display:none}

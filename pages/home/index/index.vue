@@ -1,7 +1,7 @@
 <template>
 	<view class="home">
 		<!-- <button class="addBtn" @click="addMessage()">+</button> -->
-		<!-- <uni-notice-bar showIcon="true" scrollable="true" single="true" text="🎉🎉🎉热烈庆祝小亚11.3生日快乐🎉🎉🎉"></uni-notice-bar> -->
+		<!-- <uni-notice-bar showIcon="true" scrollable="true" single="true" text="🎉🎉🎉关于表彰最持久女友陈亚君同志的通知🎉🎉🎉"></uni-notice-bar> -->
 		<view class="block">
 			<view class="block-first">在一起已经</view>
 			<view class="block-second">{{gap}}～</view>
@@ -32,16 +32,16 @@
 				</uni-grid-item>
 			</uni-grid>
 		</view>
-		<uni-card v-for="item in 6" :key="item.id" mode="style" :is-shadow="true" thumbnail="https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/cbd.jpg"
+		<!-- <uni-card v-for="item in 6" :key="item.id" mode="style" :is-shadow="true" thumbnail="https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/cbd.jpg"
 		 extra="yangyjxm 2020-06-04 23:49:43">
 			那是一个春意盎然、金风送爽的日子，我和小亚一起来到了位于特房波特曼旁的康健园。一踏进公园，一股浓郁的桂香扑鼻而来，泌人心脾,让我心旷神怡，只见一朵朵开得正烈的金色桂花，迎风而立，仿佛在向我招手。我们追着这桂香，走进了清幽的公园。
-		</uni-card>
-		<!-- 	<uni-card v-for="item in messageData" :key="item.id" :mode="item.imgUrl ?'style': 'basic'" :is-shadow="true" :thumbnail="item.imgUrl"
+		</uni-card> -->
+			<uni-card v-for="item in messageData" :key="item.id" :mode="item.imgUrl ?'style': 'basic'" :is-shadow="true" :thumbnail="item.imgUrl"
 		 :note="item.createBy + ' ' + item.createTime">
 			{{item.intro}}
-		</uni-card> -->
+		</uni-card>
 		<uni-load-more :status="loadStatus"></uni-load-more>
-		<!-- <u-tabbar v-model="current" @change="addMessage()" :list="list" :mid-button="true" border-top :height="50"></u-tabbar> -->
+		<u-tabbar v-model="current" @change="addMessage()" :list="list" :mid-button="true" border-top :height="50"></u-tabbar>
 	</view>
 </template>
 

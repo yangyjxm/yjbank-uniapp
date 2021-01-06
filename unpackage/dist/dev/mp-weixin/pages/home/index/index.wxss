@@ -33,7 +33,8 @@
 .home .block {
   background: #219511;
   padding-top: 10px;
-  border-radius: 0 0 30% 30%;
+  -webkit-border-radius: 0 0 30% 30%;
+          border-radius: 0 0 30% 30%;
   margin-bottom: 25px;
 }
 .home .block-first {
@@ -53,10 +54,12 @@
   background-color: #fff;
   width: 90%;
   margin: 10px auto;
-  border-radius: 20px;
+  -webkit-border-radius: 20px;
+          border-radius: 20px;
   padding: 10px 0;
   color: #219511;
-  box-shadow: 3px 3px 8px #888888;
+  -webkit-box-shadow: 3px 3px 8px #888888;
+          box-shadow: 3px 3px 8px #888888;
 }
 .home .center {
   text-align: center;
@@ -72,10 +75,12 @@
   width: 100rpx;
   height: 100rpx;
   line-height: 100rpx;
-  border-radius: 50%;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
   color: #999;
   font-weight: bold;
-  box-shadow: 3px 3px 8px #888888;
+  -webkit-box-shadow: 3px 3px 8px #888888;
+          box-shadow: 3px 3px 8px #888888;
 }
 .home .addBtn:after {
   display: none;

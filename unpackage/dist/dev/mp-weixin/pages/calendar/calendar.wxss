@@ -36,13 +36,16 @@
 	padding-left: 40rpx;
 	padding-right: 40rpx;
 	margin: 20rpx;
-	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	        border-radius: 10px;
 	background-color: #fff;
 }
 .myDateTable {
 	margin: 2.5vw;
 	padding: 2vw;
-	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	        border-radius: 10px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#74AADA), to(#94db98));
 	background: -webkit-linear-gradient(#74AADA, #94db98);
 	background: linear-gradient(#74AADA, #94db98);
 }
@@ -57,7 +60,8 @@
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
-	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
 	height: 11vw;
 	-webkit-box-pack: center;
 	-webkit-justify-content: center;
@@ -110,7 +114,8 @@
 	width: 80px;
 	height: 80px;
 	line-height: 80px;
-	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
 	border: none;
 }
 button::after {

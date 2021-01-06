@@ -93,7 +93,8 @@ page {
   width: 80px;
   height: 80px;
   line-height: 80px;
-  border-radius: 50%;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
   border: none;
 }
 button::after {

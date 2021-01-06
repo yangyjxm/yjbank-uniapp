@@ -65,7 +65,8 @@
   width: 630rpx;
   height: 42px;
   background-color: #fff;
-  border-radius: 40rpx;
+  -webkit-border-radius: 40rpx;
+          border-radius: 40rpx;
   margin-left: 35rpx;
   padding: 0 25rpx;
   font-size: 18px;

@@ -22,5 +22,6 @@
     "backgroundColorTop": "#219511",
     "backgroundColor": "#219511"
   },
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap50.json"
 }

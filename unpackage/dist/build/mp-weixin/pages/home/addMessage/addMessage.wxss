@@ -1,0 +1,1 @@
+.addMessage{padding:20px}.addMessage .uploadBtn{width:180rpx;line-height:90rpx;height:180rpx;font-size:24rpx;background-color:#eee;display:inline-block}.addMessage .uploadBtn:after{display:none}

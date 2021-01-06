@@ -49,12 +49,23 @@
 		data() {
 			return {
 				newLoanTitle: '',
-				items: ['未完成', '进行中', '已完成'],
 				current: 0,
 				unfinishData: [],
 				finishData: [],
 				doingData: [],
+				unfinish: 0,
+				doing: 0,
+				finish: 0,
 				obj: {}
+			}
+		},
+		computed: {
+			items() {
+				let array = []
+				array[0] = '未完成' + '（' + this.unfinish + '）'
+				array[1] = '进行中' + '（' + this.doing + '）'
+				array[2] = '已完成' + '（' + this.finish + '）'
+				return array
 			}
 		},
 		onLoad() {
@@ -88,9 +99,9 @@
 				uniCloud.callFunction({
 					name: 'countLoan'
 				}).then(res => {
-					this.items[0] += '（' + res.result.unfinish + '）'
-					this.items[1] += '（' + res.result.doing + '）'
-					this.items[2] += '（' + res.result.finish + '）'
+					this.unfinish = res.result.unfinish
+					this.doing = res.result.doing
+					this.finish = res.result.finish
 				})
 			},
 			// 切换tab
@@ -130,10 +141,11 @@
 						title: this.newLoanTitle,
 						status: "0",
 						createBy: getApp().globalData.userInfo.nickName,
-						createTime: new Date().toLocaleString().slice(0, 10) + " " + new Date().toString().slice(16, 24)
+						createTime: new Date().toLocaleString('zh', { year: 'numeric', month: '2-digit', day: '2-digit'}) + " " + new Date().toTimeString().slice(0,8)
 					}
 				}).then(res => {
 					this.queryLoanList()
+					this.countLoan()
 					this.newLoanTitle = ''
 				})
 			},

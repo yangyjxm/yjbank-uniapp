@@ -1,92 +1,62 @@
 {
-	"description": "项目配置文件。",
-	"packOptions": {
-		"ignore": []
-	},
-	"setting": {
-		"urlCheck": false,
-		"minified": true,
-		"es6": true
-	},
-	"compileType": "miniprogram",
-	"libVersion": "",
-	"appid": "wxa88115e813d1c9d8",
-	"projectname": "yjb",
-	"condition": {
-		"search": {
-			"current": -1,
-			"list": []
-		},
-		"conversation": {
-			"current": -1,
-			"list": []
-		},
-		"plugin": {
-			"current": -1,
-			"list": []
-		},
-		"game": {
-			"current": -1,
-			"list": []
-		},
-		"gamePlugin": {
-			"current": -1,
-			"list": []
-		},
-		"miniprogram": {
-			"current": 0,
-			"list": [
-				{
-					"id": 0,
-					"name": "小匀称打卡机",
-					"pathName": "pages/calendar/calendar",
-					"query": ""
-				},
-				{
-					"id": 1,
-					"name": "新增动态",
-					"pathName": "pages/home/addMessage/addMessage",
-					"query": ""
-				},
-				{
-					"id": 2,
-					"name": "贷款",
-					"pathName": "pages/loan/loan",
-					"query": ""
-				},
-				{
-					"id": 3,
-					"name": "树洞",
-					"pathName": "pages/treehole/treehole",
-					"query": ""
-				},
-				{
-					"id": 4,
-					"name": "足迹",
-					"pathName": "pages/footprint/index/index",
-					"query": ""
-				},
-				{
-					"id": 5,
-					"name": "定位",
-					"pathName": "pages/footprint/location/location",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "pages/wishlist/wishlist",
-					"pathName": "pages/wishlist/wishlist",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 7,
-					"name": "pages/bet/betlist",
-					"pathName": "pages/bet/betlist",
-					"query": "",
-					"scene": null
-				}
-			]
-		}
-	}
+  "description": "项目配置文件。",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "minified": true,
+    "es6": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "",
+  "appid": "wxa88115e813d1c9d8",
+  "projectname": "yjb",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "小匀称打卡机",
+          "id": 0,
+          "pathName": "pages/calendar/calendar"
+        },
+        {
+          "name": "新增动态",
+          "id": 1,
+          "pathName": "pages/home/addMessage/addMessage"
+        },
+        {
+          "name": "贷款",
+          "id": 2,
+          "pathName": "pages/loan/loan"
+        },
+        {
+          "name": "树洞",
+          "id": 3,
+          "pathName": "pages/treehole/treehole"
+        },
+        {
+          "name": "足迹",
+          "id": 4,
+          "pathName": "pages/footprint/index/index"
+        },
+        {
+          "name": "定位",
+          "id": 5,
+          "pathName": "pages/footprint/location/location"
+        }
+      ]
+    }
+  }
 }
