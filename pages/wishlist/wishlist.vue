@@ -42,7 +42,7 @@
 					customIcon: false,
 				}],
 				current: 1,
-				userInfo:getApp().globalData.userInfo
+				userInfo: getApp().globalData.userInfo
 			};
 		},
 		onShow() {

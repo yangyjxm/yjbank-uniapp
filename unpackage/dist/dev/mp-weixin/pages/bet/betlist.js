@@ -94,13 +94,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components = {
   uniCollapse: function() {
-    return __webpack_require__.e(/*! import() | components/uni-collapse/uni-collapse */ "components/uni-collapse/uni-collapse").then(__webpack_require__.bind(null, /*! @/components/uni-collapse/uni-collapse.vue */ 419))
+    return __webpack_require__.e(/*! import() | components/uni-collapse/uni-collapse */ "components/uni-collapse/uni-collapse").then(__webpack_require__.bind(null, /*! @/components/uni-collapse/uni-collapse.vue */ 412))
   },
   uniCollapseItem: function() {
-    return __webpack_require__.e(/*! import() | components/uni-collapse-item/uni-collapse-item */ "components/uni-collapse-item/uni-collapse-item").then(__webpack_require__.bind(null, /*! @/components/uni-collapse-item/uni-collapse-item.vue */ 426))
+    return __webpack_require__.e(/*! import() | components/uni-collapse-item/uni-collapse-item */ "components/uni-collapse-item/uni-collapse-item").then(__webpack_require__.bind(null, /*! @/components/uni-collapse-item/uni-collapse-item.vue */ 419))
+  },
+  uButton: function() {
+    return __webpack_require__.e(/*! import() | node-modules/uview-ui/components/u-button/u-button */ "node-modules/uview-ui/components/u-button/u-button").then(__webpack_require__.bind(null, /*! uview-ui/components/u-button/u-button.vue */ 361))
   },
   uTabbar: function() {
-    return Promise.all(/*! import() | node-modules/uview-ui/components/u-tabbar/u-tabbar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-tabbar/u-tabbar")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-tabbar/u-tabbar.vue */ 326))
+    return Promise.all(/*! import() | node-modules/uview-ui/components/u-tabbar/u-tabbar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-tabbar/u-tabbar")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-tabbar/u-tabbar.vue */ 319))
   }
 }
 var render = function() {
@@ -169,6 +172,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 var _default =
 {
   data: function data() {
@@ -183,13 +187,15 @@ var _default =
       current: 1,
       userInfo: getApp().globalData.userInfo,
       total: 0,
-      msgList: [] };
+      msgList: [],
+      access_token: '',
+      openid: uni.getStorageSync("openid") };
 
   },
   onShow: function onShow() {
-    console.log('this.userInfo');
-    console.log(getApp().globalData.userInfo);
     this.queryBetList();
+    console.log('用户openid：' + uni.getStorageSync("openid"));
+    this.getAccessToken();
   },
   methods: {
     // 新增愿望
@@ -198,8 +204,18 @@ var _default =
         url: '/pages/wishlist/add' });
 
     },
+    // 獲取access_token
+    getAccessToken: function getAccessToken() {var _this = this;
+      this.$http.get(
+      'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wxa88115e813d1c9d8&secret=a934255da1c34a19e6161f898dcf06f8').
+      then(function (res) {
+        console.log('getAccessToken');
+        console.log(res.data.access_token);
+        _this.access_token = res.data.access_token;
+      });
+    },
     // 获取打赌数据列表
-    queryBetList: function queryBetList() {var _this = this;
+    queryBetList: function queryBetList() {var _this2 = this;
       uniCloud.callFunction({
         name: 'getBet',
         data: {
@@ -209,8 +225,38 @@ var _default =
       then(function (res) {
         // console.log(res.result.data)
         // this.total = res.result.count.total
-        _this.msgList = [].concat(_toConsumableArray(_this.msgList), _toConsumableArray(res.result.data));
+        _this2.msgList = [].concat(_toConsumableArray(_this2.msgList), _toConsumableArray(res.result.data));
         // console.log(this.msgList)
+      });
+    },
+    // 下发模板消息
+    sendTemplateMessage: function sendTemplateMessage() {
+      // uniCloud.callFunction({
+      // 	name: 'sendTemplateMessage',
+      // 	data: {
+      // 		pageSize: this.pageSize,
+      // 		pageNum: this.pageNum
+      // 	}
+      // }).then(res => {
+      // 	this.msgList = [...this.msgList, ...res.result.data]
+      // })
+      this.$http.post(
+      'https://api.weixin.qq.com/cgi-bin/message/subscribe/send?access_token=' + this.access_token, {
+        "touser": this.openid,
+        "template_id": "tTskOIT7RycCenrNcXrQQDT9HDqIhVvipgNQKBcAC5E",
+        "page": "/pages/home/index/index",
+        // "form_id": "FORMID",
+        "data": {
+          "thing2": {
+            "value": "测试测试" },
+
+          "time3": {
+            "value": "2019年10月1日 15:01" } } }).
+
+
+      then(function (res) {
+        console.log('發送訂閱消息');
+        // console.log(res)
       });
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 54)["default"]))

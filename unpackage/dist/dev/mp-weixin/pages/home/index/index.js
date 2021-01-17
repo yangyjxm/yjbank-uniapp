@@ -123,19 +123,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components = {
   uniGrid: function() {
-    return __webpack_require__.e(/*! import() | components/uni-grid/uni-grid */ "components/uni-grid/uni-grid").then(__webpack_require__.bind(null, /*! @/components/uni-grid/uni-grid.vue */ 298))
+    return __webpack_require__.e(/*! import() | components/uni-grid/uni-grid */ "components/uni-grid/uni-grid").then(__webpack_require__.bind(null, /*! @/components/uni-grid/uni-grid.vue */ 291))
   },
   uniGridItem: function() {
-    return __webpack_require__.e(/*! import() | components/uni-grid-item/uni-grid-item */ "components/uni-grid-item/uni-grid-item").then(__webpack_require__.bind(null, /*! @/components/uni-grid-item/uni-grid-item.vue */ 305))
+    return __webpack_require__.e(/*! import() | components/uni-grid-item/uni-grid-item */ "components/uni-grid-item/uni-grid-item").then(__webpack_require__.bind(null, /*! @/components/uni-grid-item/uni-grid-item.vue */ 298))
   },
   uniCard: function() {
-    return __webpack_require__.e(/*! import() | components/uni-card/uni-card */ "components/uni-card/uni-card").then(__webpack_require__.bind(null, /*! @/components/uni-card/uni-card.vue */ 312))
+    return __webpack_require__.e(/*! import() | components/uni-card/uni-card */ "components/uni-card/uni-card").then(__webpack_require__.bind(null, /*! @/components/uni-card/uni-card.vue */ 305))
   },
   uniLoadMore: function() {
-    return __webpack_require__.e(/*! import() | components/uni-load-more/uni-load-more */ "components/uni-load-more/uni-load-more").then(__webpack_require__.bind(null, /*! @/components/uni-load-more/uni-load-more.vue */ 319))
+    return __webpack_require__.e(/*! import() | components/uni-load-more/uni-load-more */ "components/uni-load-more/uni-load-more").then(__webpack_require__.bind(null, /*! @/components/uni-load-more/uni-load-more.vue */ 312))
   },
   uTabbar: function() {
-    return Promise.all(/*! import() | node-modules/uview-ui/components/u-tabbar/u-tabbar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-tabbar/u-tabbar")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-tabbar/u-tabbar.vue */ 326))
+    return Promise.all(/*! import() | node-modules/uview-ui/components/u-tabbar/u-tabbar */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/uview-ui/components/u-tabbar/u-tabbar")]).then(__webpack_require__.bind(null, /*! uview-ui/components/u-tabbar/u-tabbar.vue */ 319))
   }
 }
 var render = function() {
@@ -271,14 +271,15 @@ var _moment = _interopRequireDefault(__webpack_require__(/*! moment */ 56));func
 //
 //
 var _default = { data: function data() {return { gap: '0天0时0分0秒', messageData: [], list: [{ iconPath: "https://cdn.uviewui.com/uview/common/min_button.png", selectedIconPath: "https://cdn.uviewui.com/uview/common/min_button.png", // selectedIconPath: "https://cdn.uviewui.com/uview/common/min_button_select.png",
-        midButton: true, customIcon: false }], current: 1, loadStatus: "noMore" };}, onLoad: function onLoad() {var _this = this;this.computedTime();var timeCount = setInterval(function () {return _this.computedTime();}, 1000);this.getMessage();}, onReachBottom: function onReachBottom() {}, methods: { // 计算当前时间于在一起时间的时间差
+        midButton: true, customIcon: false }], current: 1, loadStatus: "loading" };}, onLoad: function onLoad() {var _this = this;this.computedTime();var timeCount = setInterval(function () {return _this.computedTime();}, 1000);this.getMessage();}, onReachBottom: function onReachBottom() {}, methods: { // 计算当前时间于在一起时间的时间差
     computedTime: function computedTime() {var m2 = (0, _moment.default)(); // 当下时间
       var m1 = (0, _moment.default)('2020-06-04 23:49:00'); // 起始时间
       var du = _moment.default.duration(m2 - m1, 'ms'); // 做差
       this.gap = m2.diff(m1, 'day') + '天' + du.get('hours') + '时' + du.get('minutes') + '分' + du.get('seconds') + '秒';}, // 获取动态信息列表
     getMessage: function getMessage() {var _this2 = this;uniCloud.callFunction({ name: 'getMessage' }).then(function (res) {_this2.messageData = res.result.data;var _loop = function _loop(i) {// 腾讯云需要获取临时链接
-          if (res.result.data[i].fileList) {uniCloud.getTempFileURL({ fileList: [res.result.data[i].fileList], success: function success(res) {_this2.messageData[i].imgUrl = res.fileList[0].tempFileURL;} });}};for (var i = 0; i < res.result.data.length; i++) {_loop(i);}});}, // 新增动态
-    addMessage: function addMessage() {uni.navigateTo({ url: '/pages/home/addMessage/addMessage' });
+          if (res.result.data[i].fileList) {uniCloud.getTempFileURL({ fileList: [res.result.data[i].fileList], success: function success(res) {_this2.messageData[i].imgUrl = res.fileList[0].tempFileURL;} });}};for (var i = 0; i < res.result.data.length; i++) {_loop(i);}_this2.loadStatus = "noMore";});}, // 新增动态
+    addMessage: function addMessage() {uni.navigateTo({
+        url: '/pages/home/addMessage/addMessage' });
 
     },
     // 切换tab
@@ -308,6 +309,44 @@ var _default = { data: function data() {return { gap: '0天0时0分0秒', messag
           // uni.navigateTo({
           // 	url: '/pages/wishlist/wishlist'
           // })
+          uni.requestSubscribeMessage({
+            tmplIds: ['tTskOIT7RycCenrNcXrQQDT9HDqIhVvipgNQKBcAC5E'],
+            success: function success(response) {
+              console.log(response);
+            },
+            fail: function fail(err) {
+              console.log(err);
+            } });
+
+          uni.login({
+            provider: 'weixin',
+            success: function success(loginRes) {
+              var js_code = loginRes.code;
+              uni.request({
+                url: 'https://api.weixin.qq.com/sns/jscode2session?appid=wxa88115e813d1c9d8&secret=a934255da1c34a19e6161f898dcf06f8&js_code=' +
+                js_code,
+                header: {
+                  "Content-Type": "application/x-www-form-urlencoded" },
+
+                method: "post",
+                success: function success(res) {
+                  console.log("本用户的openid为" + res.data.openid);
+                  uni.setStorageSync("openid", res.data.openid);
+                  // uni.request({
+                  // 	url: 'http://121.4.13.87:3000/test/birthday?openid=' +
+                  // 		res.data.openid,
+                  // 	method: "get",
+                  // 	success: (response) => {
+                  // 		console.log(response)
+                  // 	},
+                  // 	fail: (err) => {
+                  // 		console.log(err)
+                  // 	}
+                  // })
+                } });
+
+            } });
+
           break;
         case 6:
           uni.navigateTo({

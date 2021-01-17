@@ -99,9 +99,14 @@
 					name: 'addTreehole',
 					data: {
 						userid: getApp().globalData.userInfo.signature,
+						openid: uni.getStorageSync("openid"),
 						contentType: 'text',
 						content: this.value,
-						time: new Date().toLocaleString('zh', { year: 'numeric', month: '2-digit', day: '2-digit'}) + " " + new Date().toTimeString().slice(0,8)
+						time: new Date().toLocaleString('zh', {
+							year: 'numeric',
+							month: '2-digit',
+							day: '2-digit'
+						}) + " " + new Date().toTimeString().slice(0, 8)
 					}
 				}).then(res => {
 					uni.showToast({
@@ -119,7 +124,11 @@
 			},
 			// 数据补录
 			signup() {
-				let time = new Date().toLocaleString().slice(0, 10) + " " + new Date().toString().slice(16, 24)
+				let time = new Date().toLocaleString('zh', {
+					year: 'numeric',
+					month: '2-digit',
+					day: '2-digit'
+				}) + " " + new Date().toTimeString().slice(0, 8)
 			}
 		}
 	}

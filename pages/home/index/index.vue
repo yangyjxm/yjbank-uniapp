@@ -24,7 +24,7 @@
 				</uni-grid-item>
 				<uni-grid-item class="center" index="5">
 					<image src="../../../static/tuzi-01.png" mode="" style="width: 30px; height: 30px"></image>
-					<view>愿望</view>
+					<view>提醒</view>
 				</uni-grid-item>
 				<uni-grid-item class="center" index="6">
 					<image src="../../../static/qingwa-01.png" mode="" style="width: 30px; height: 30px"></image>
@@ -36,8 +36,8 @@
 		 extra="yangyjxm 2020-06-04 23:49:43">
 			那是一个春意盎然、金风送爽的日子，我和小亚一起来到了位于特房波特曼旁的康健园。一踏进公园，一股浓郁的桂香扑鼻而来，泌人心脾,让我心旷神怡，只见一朵朵开得正烈的金色桂花，迎风而立，仿佛在向我招手。我们追着这桂香，走进了清幽的公园。
 		</uni-card> -->
-			<uni-card v-for="item in messageData" :key="item.id" :mode="item.imgUrl ?'style': 'basic'" :is-shadow="true" :thumbnail="item.imgUrl"
-		 :note="item.createBy + ' ' + item.createTime">
+		<uni-card v-for="item in messageData" :key="item.id" :mode="item.imgUrl ?'style': 'basic'" :is-shadow="true"
+		 :thumbnail="item.imgUrl" :note="item.createBy + ' ' + item.createTime">
 			{{item.intro}}
 		</uni-card>
 		<uni-load-more :status="loadStatus"></uni-load-more>
@@ -60,7 +60,7 @@
 					customIcon: false,
 				}],
 				current: 1,
-				loadStatus: "noMore"
+				loadStatus: "loading"
 			}
 		},
 		onLoad() {
@@ -96,6 +96,7 @@
 							})
 						}
 					}
+					this.loadStatus = "noMore"
 				})
 			},
 			// 新增动态
@@ -131,6 +132,44 @@
 						// uni.navigateTo({
 						// 	url: '/pages/wishlist/wishlist'
 						// })
+						uni.requestSubscribeMessage({
+							tmplIds: ['tTskOIT7RycCenrNcXrQQDT9HDqIhVvipgNQKBcAC5E'],
+							success(response) {
+								console.log(response)
+							},
+							fail(err) {
+								console.log(err)
+							}
+						})
+						uni.login({
+							provider: 'weixin',
+							success: function(loginRes) {
+								let js_code = loginRes.code
+								uni.request({
+									url: 'https://api.weixin.qq.com/sns/jscode2session?appid=wxa88115e813d1c9d8&secret=a934255da1c34a19e6161f898dcf06f8&js_code=' +
+										js_code,
+									header: {
+										"Content-Type": "application/x-www-form-urlencoded"
+									},
+									method: "post",
+									success: (res) => {
+										console.log("本用户的openid为" + res.data.openid)
+										uni.setStorageSync("openid", res.data.openid)
+										// uni.request({
+										// 	url: 'http://121.4.13.87:3000/test/birthday?openid=' +
+										// 		res.data.openid,
+										// 	method: "get",
+										// 	success: (response) => {
+										// 		console.log(response)
+										// 	},
+										// 	fail: (err) => {
+										// 		console.log(err)
+										// 	}
+										// })
+									}
+								})
+							}
+						});
 						break
 					case 6:
 						uni.navigateTo({
@@ -145,7 +184,7 @@
 
 <style lang="scss">
 	.home {
-		padding-bottom: 20rpx; 
+		padding-bottom: 20rpx;
 
 		.uni-noticebar {
 			margin: 0 !important;
@@ -185,6 +224,10 @@
 
 		.center {
 			text-align: center;
+		}
+		
+		.uni-card__thumbnailimage {
+			height: 240px !important;
 		}
 
 		image {

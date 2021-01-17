@@ -23,6 +23,7 @@
 				</view>
 			</uni-collapse-item>
 		</uni-collapse>
+		<u-button @click="sendTemplateMessage">提交</u-button>
 		<u-tabbar v-model="current" @change="add" :list="list" :mid-button="true" border-top :height="50"></u-tabbar>
 	</view>
 </template>
@@ -41,19 +42,31 @@
 				current: 1,
 				userInfo: getApp().globalData.userInfo,
 				total: 0,
-				msgList: []
+				msgList: [],
+				access_token: '',
+				openid: uni.getStorageSync("openid")
 			};
 		},
 		onShow() {
-			console.log('this.userInfo')
-			console.log(getApp().globalData.userInfo)
 			this.queryBetList()
+			console.log('用户openid：' + uni.getStorageSync("openid"))
+			this.getAccessToken()
 		},
 		methods: {
 			// 新增愿望
 			add() {
 				uni.navigateTo({
 					url: '/pages/wishlist/add'
+				})
+			},
+			// 獲取access_token
+			getAccessToken() {
+				this.$http.get(
+					'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wxa88115e813d1c9d8&secret=a934255da1c34a19e6161f898dcf06f8'
+				).then(res => {
+					console.log('getAccessToken')
+					console.log(res.data.access_token)
+					this.access_token = res.data.access_token
 				})
 			},
 			// 获取打赌数据列表
@@ -69,6 +82,36 @@
 					// this.total = res.result.count.total
 					this.msgList = [...this.msgList, ...res.result.data]
 					// console.log(this.msgList)
+				})
+			},
+			// 下发模板消息
+			sendTemplateMessage() {
+				// uniCloud.callFunction({
+				// 	name: 'sendTemplateMessage',
+				// 	data: {
+				// 		pageSize: this.pageSize,
+				// 		pageNum: this.pageNum
+				// 	}
+				// }).then(res => {
+				// 	this.msgList = [...this.msgList, ...res.result.data]
+				// })
+				this.$http.post(
+					'https://api.weixin.qq.com/cgi-bin/message/subscribe/send?access_token=' + this.access_token, {
+						"touser": this.openid,
+						"template_id": "tTskOIT7RycCenrNcXrQQDT9HDqIhVvipgNQKBcAC5E",
+						"page": "/pages/home/index/index",
+						// "form_id": "FORMID",
+						"data": {
+							"thing2": {
+								"value": "测试测试"
+							},
+							"time3": {
+								"value": "2019年10月1日 15:01"
+							}
+						}
+					}).then(res => {
+					console.log('發送訂閱消息')
+					// console.log(res)
 				})
 			}
 		}

@@ -64,6 +64,9 @@
 .home .center {
   text-align: center;
 }
+.home .uni-card__thumbnailimage {
+  height: 240px !important;
+}
 .home image {
   margin: 0 auto;
 }

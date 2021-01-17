@@ -94,7 +94,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components = {
   uniLoadMore: function() {
-    return __webpack_require__.e(/*! import() | components/uni-load-more/uni-load-more */ "components/uni-load-more/uni-load-more").then(__webpack_require__.bind(null, /*! @/components/uni-load-more/uni-load-more.vue */ 319))
+    return __webpack_require__.e(/*! import() | components/uni-load-more/uni-load-more */ "components/uni-load-more/uni-load-more").then(__webpack_require__.bind(null, /*! @/components/uni-load-more/uni-load-more.vue */ 312))
   }
 }
 var render = function() {
@@ -235,9 +235,14 @@ var _default =
         name: 'addTreehole',
         data: {
           userid: getApp().globalData.userInfo.signature,
+          openid: uni.getStorageSync("openid"),
           contentType: 'text',
           content: this.value,
-          time: new Date().toLocaleString('zh', { year: 'numeric', month: '2-digit', day: '2-digit' }) + " " + new Date().toTimeString().slice(0, 8) } }).
+          time: new Date().toLocaleString('zh', {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit' }) +
+          " " + new Date().toTimeString().slice(0, 8) } }).
 
       then(function (res) {
         uni.showToast({
@@ -255,7 +260,11 @@ var _default =
     },
     // 数据补录
     signup: function signup() {
-      var time = new Date().toLocaleString().slice(0, 10) + " " + new Date().toString().slice(16, 24);
+      var time = new Date().toLocaleString('zh', {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit' }) +
+      " " + new Date().toTimeString().slice(0, 8);
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 54)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 

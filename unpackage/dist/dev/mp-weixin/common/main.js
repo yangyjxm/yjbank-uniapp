@@ -106,6 +106,8 @@ __webpack_require__.r(__webpack_exports__);
     uni.getUserInfo({
       provider: 'weixin',
       success: function success(infoRes) {
+        // console.log("全局获取用户信息：")
+        // console.log(infoRes)
         _this.globalData.userInfo = infoRes.userInfo;
       } });
 

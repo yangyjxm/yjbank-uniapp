@@ -49,7 +49,7 @@
 					name: 'addBet',
 					data: { ...this.form,
 						createBy: getApp().globalData.userInfo.nickName,
-						createTime: new Date().toLocaleString().slice(0, 10) + " " + new Date().toString().slice(16, 24)
+						createTime: new Date().toLocaleString('zh', { year: 'numeric', month: '2-digit', day: '2-digit'}) + " " + new Date().toTimeString().slice(0,8)
 					}
 				}).then(res => {
 					uni.navigateTo({
