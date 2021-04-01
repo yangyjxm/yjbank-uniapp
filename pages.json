@@ -7,8 +7,6 @@
 	}, {
 		"path": "pages/login/login"
 	}, {
-		"path": "pages/home/addMessage/addMessage"
-	}, {
 		"path": "pages/loan/loan"
 	}, {
 		"path": "pages/treehole/treehole"
@@ -23,9 +21,20 @@
 	}, {
 		"path": "pages/bet/betlist"
 	}, {
-		"path": "pages/bet/add"
-	}, {
 		"path": "pages/signin/signin"
+	}, {
+		"path": "pages/expect/list"
+	}, {
+		"path": "pages/add/list",
+		"style": {
+			"navigationBarTitleText": "新增"
+		}
+	}, {
+		"path": "pages/add/addMessage"
+	}, {
+		"path": "pages/add/addExcept"
+	}, {
+		"path": "pages/add/addBet"
 	}, {
 		"path": "pages/calendar/calendar",
 		"style": {
@@ -42,11 +51,11 @@
 	"condition": {
 		"current": 0,
 		"list": [{
+				"name": "首页",
+				"path": "pages/home/index/index"
+			},{
 				"name": "小匀称打卡机",
 				"path": "pages/calendar/calendar"
-			},{
-				"name": "新增动态",
-				"path": "pages/home/addMessage/addMessage"
 			},
 			{
 				"name": "贷款",

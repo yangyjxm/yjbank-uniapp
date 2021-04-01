@@ -23,8 +23,7 @@
 				</view>
 			</uni-collapse-item>
 		</uni-collapse>
-		<u-button @click="sendTemplateMessage">提交</u-button>
-		<u-tabbar v-model="current" @change="add" :list="list" :mid-button="true" border-top :height="50"></u-tabbar>
+		<!-- <u-button @click="sendTemplateMessage">提交</u-button> -->
 	</view>
 </template>
 
@@ -39,7 +38,6 @@
 					midButton: true,
 					customIcon: false,
 				}],
-				current: 1,
 				userInfo: getApp().globalData.userInfo,
 				total: 0,
 				msgList: [],
@@ -54,11 +52,11 @@
 		},
 		methods: {
 			// 新增愿望
-			add() {
-				uni.navigateTo({
-					url: '/pages/wishlist/add'
-				})
-			},
+			// add() {
+			// 	uni.navigateTo({
+			// 		url: '/pages/wishlist/add'
+			// 	})
+			// },
 			// 獲取access_token
 			getAccessToken() {
 				this.$http.get(

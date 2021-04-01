@@ -2,7 +2,6 @@
   "pages": [
     "pages/home/index/index",
     "pages/login/login",
-    "pages/home/addMessage/addMessage",
     "pages/loan/loan",
     "pages/treehole/treehole",
     "pages/footprint/index/index",
@@ -10,8 +9,12 @@
     "pages/wishlist/wishlist",
     "pages/wishlist/add",
     "pages/bet/betlist",
-    "pages/bet/add",
     "pages/signin/signin",
+    "pages/expect/list",
+    "pages/add/list",
+    "pages/add/addMessage",
+    "pages/add/addExcept",
+    "pages/add/addBet",
     "pages/calendar/calendar"
   ],
   "subPackages": [],
@@ -22,5 +25,6 @@
     "backgroundColorTop": "#219511",
     "backgroundColor": "#219511"
   },
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
 }

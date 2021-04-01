@@ -27,14 +27,14 @@
     "miniprogram": {
       "list": [
         {
-          "name": "小匀称打卡机",
+          "name": "首页",
           "id": 0,
-          "pathName": "pages/calendar/calendar"
+          "pathName": "pages/home/index/index"
         },
         {
-          "name": "新增动态",
+          "name": "小匀称打卡机",
           "id": 1,
-          "pathName": "pages/home/addMessage/addMessage"
+          "pathName": "pages/calendar/calendar"
         },
         {
           "name": "贷款",

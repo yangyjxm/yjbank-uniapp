@@ -5,7 +5,7 @@
 		<view class="block">
 			<view class="block-first">在一起已经</view>
 			<view class="block-second">{{gap}}～</view>
-			<uni-grid :column="3" :show-border="false" :square="false" @change='change'>
+			<uni-grid :column="4" :show-border="false" :square="false" @change='change'>
 				<uni-grid-item class="center" index="1">
 					<image src="../../../static/xiong-01.png" mode="" style="width: 30px; height: 30px"></image>
 					<view>贷款</view>
@@ -30,6 +30,14 @@
 					<image src="../../../static/qingwa-01.png" mode="" style="width: 30px; height: 30px"></image>
 					<view>打赌</view>
 				</uni-grid-item>
+				<uni-grid-item class="center" index="7">
+					<image src="../../../static/daxiongmao-01.png" mode="" style="width: 30px; height: 30px"></image>
+					<view>期待</view>
+				</uni-grid-item>
+				<uni-grid-item class="center" index="8">
+					<image src="../../../static/maotouying-01.png" mode="" style="width: 30px; height: 30px"></image>
+					<view>新增</view>
+				</uni-grid-item>
 			</uni-grid>
 		</view>
 		<!-- <uni-card v-for="item in 6" :key="item.id" mode="style" :is-shadow="true" thumbnail="https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/cbd.jpg"
@@ -41,7 +49,7 @@
 			{{item.intro}}
 		</uni-card>
 		<uni-load-more :status="loadStatus"></uni-load-more>
-		<u-tabbar v-model="current" @change="addMessage()" :list="list" :mid-button="true" border-top :height="50"></u-tabbar>
+		<!-- <u-tabbar v-model="current" @change="addMessage()" :list="list" :mid-button="true" border-top :height="50"></u-tabbar> -->
 	</view>
 </template>
 
@@ -51,7 +59,6 @@
 		data() {
 			return {
 				gap: '0天0时0分0秒',
-				messageData: [],
 				list: [{
 					iconPath: "https://cdn.uviewui.com/uview/common/min_button.png",
 					selectedIconPath: "https://cdn.uviewui.com/uview/common/min_button.png",
@@ -60,7 +67,11 @@
 					customIcon: false,
 				}],
 				current: 1,
-				loadStatus: "loading"
+				messageData: [],
+				loadStatus: "loading",
+				total: 0,
+				pageSize: 5,
+				pageNum: 0
 			}
 		},
 		onLoad() {
@@ -69,7 +80,13 @@
 			this.getMessage()
 		},
 		onReachBottom() {
-
+			if (this.messageData.length === this.total) {
+				this.loadStatus = "noMore"
+				return
+			} else {
+				this.pageNum++
+				this.getMessage()
+			}
 		},
 		methods: {
 			// 计算当前时间于在一起时间的时间差
@@ -82,27 +99,32 @@
 			// 获取动态信息列表
 			getMessage() {
 				uniCloud.callFunction({
-					name: 'getMessage'
+					name: 'getMessage',
+					data: {
+						pageSize: this.pageSize,
+						pageNum: this.pageNum
+					}
 				}).then(res => {
-					this.messageData = res.result.data
+					this.total = res.result.count.total
+					this.messageData = [...this.messageData, ...res.result.data]
 					for (let i = 0; i < res.result.data.length; i++) {
 						// 腾讯云需要获取临时链接
 						if (res.result.data[i].fileList) {
 							uniCloud.getTempFileURL({
 								fileList: [res.result.data[i].fileList],
 								success: (res) => {
-									this.messageData[i].imgUrl = res.fileList[0].tempFileURL
+									this.messageData[this.pageNum*this.pageSize + i].imgUrl = res.fileList[0].tempFileURL
 								}
 							})
 						}
 					}
-					this.loadStatus = "noMore"
+					// this.loadStatus = "noMore"
 				})
 			},
 			// 新增动态
 			addMessage() {
 				uni.navigateTo({
-					url: '/pages/home/addMessage/addMessage'
+					url: '/pages/add/addMessage'
 				})
 			},
 			// 切换tab
@@ -174,6 +196,16 @@
 					case 6:
 						uni.navigateTo({
 							url: '/pages/bet/betlist'
+						})
+						break
+					case 7:
+						uni.navigateTo({
+							url: '/pages/expect/list'
+						})
+						break
+					case 8:
+						uni.navigateTo({
+							url: '/pages/add/list'
 						})
 						break
 				}
