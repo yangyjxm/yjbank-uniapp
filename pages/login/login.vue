@@ -34,7 +34,7 @@
 								console.log(res.data.openid)
 								uni.setStorageSync("openid", res.data.openid)
 								uni.navigateTo({
-									url: '/pages/home/index/index'
+									url: '/pages/home/index'
 								})
 							}
 						})

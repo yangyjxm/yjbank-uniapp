@@ -4,11 +4,12 @@
   "description": "",
   "main": "main.js",
   "dependencies": {
+    "echarts": "^5.0.2",
     "luch-request": "^3.0.4",
     "moment": "^2.29.1",
+    "mpvue-echarts": "^0.3.2",
     "uview-ui": "^1.7.6"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

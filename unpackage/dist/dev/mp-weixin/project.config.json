@@ -29,7 +29,7 @@
         {
           "name": "首页",
           "id": 0,
-          "pathName": "pages/home/index/index"
+          "pathName": "pages/home/index"
         },
         {
           "name": "小匀称打卡机",
@@ -49,7 +49,7 @@
         {
           "name": "足迹",
           "id": 4,
-          "pathName": "pages/footprint/index/index"
+          "pathName": "pages/footprint/map"
         },
         {
           "name": "定位",

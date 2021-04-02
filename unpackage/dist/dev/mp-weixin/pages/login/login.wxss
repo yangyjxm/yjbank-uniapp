@@ -28,7 +28,7 @@
   height: 100vh;
 }
 .login .top {
-  background-color: #219511;
+  background-color: #FB6400;
   height: 50%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -57,7 +57,7 @@
 }
 .login .bottom button {
   width: 50%;
-  background-color: #219511;
+  background-color: #FB6400;
   color: #fff;
   -webkit-box-shadow: 3px 3px 8px #888888;
           box-shadow: 3px 3px 8px #888888;

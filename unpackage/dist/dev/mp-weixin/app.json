@@ -1,30 +1,27 @@
 {
   "pages": [
-    "pages/home/index/index",
+    "pages/home/index",
     "pages/login/login",
     "pages/loan/loan",
     "pages/treehole/treehole",
-    "pages/footprint/index/index",
-    "pages/footprint/location/location",
-    "pages/wishlist/wishlist",
-    "pages/wishlist/add",
-    "pages/bet/betlist",
-    "pages/signin/signin",
+    "pages/footprint/index",
+    "pages/bet/list",
     "pages/expect/list",
     "pages/add/list",
     "pages/add/addMessage",
     "pages/add/addExcept",
     "pages/add/addBet",
+    "pages/add/addLocation",
     "pages/calendar/calendar"
   ],
   "subPackages": [],
   "window": {
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "小亚银行",
-    "navigationBarBackgroundColor": "#219511",
-    "backgroundColorTop": "#219511",
-    "backgroundColor": "#219511"
+    "navigationBarBackgroundColor": "#FB6400",
+    "backgroundColorTop": "#FB6400",
+    "backgroundColor": "#FB6400"
   },
   "usingComponents": {},
-  "sitemapLocation": "sitemap85.json"
+  "sitemapLocation": "sitemap26.json"
 }

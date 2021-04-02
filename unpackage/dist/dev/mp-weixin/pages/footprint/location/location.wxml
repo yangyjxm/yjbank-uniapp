@@ -1,1 +1,0 @@
-<view class="location"><view class="page-section page-section-gap"><map style="width:100%;height:calc( 100vh - 100px );" latitude="{{latitude}}" longitude="{{longitude}}" markers="{{markers}}"></map></view><button data-event-opts="{{[['tap',[['addLocation',['$event']]]]]}}" class="location-btn" bindtap="__e">确认</button><text>{{address}}</text></view>

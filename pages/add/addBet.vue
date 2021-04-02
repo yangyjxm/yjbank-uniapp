@@ -45,7 +45,7 @@
 					}
 				}).then(res => {
 					uni.reLaunch({
-						url: '/pages/bet/betlist'
+						url: '/pages/home/index'
 					})
 				})
 			}

@@ -1,7 +1,7 @@
 <template>
 	<view class="loan">
 		<uni-segmented-control class="switch" :current="current" :values="items" @clickItem="onClickItem" style-type="text"
-		 active-color="#219511"></uni-segmented-control>
+		 active-color="#FB6400"></uni-segmented-control>
 		<view class="content">
 			<view v-if="current === 0">
 				<uni-list>

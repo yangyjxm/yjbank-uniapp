@@ -1,21 +1,22 @@
 <template>
 	<view class="loan">
-		<uni-segmented-control class="switch" :current="current" :values="items" @clickItem="onClickItem" style-type="text"
-		 active-color="#219511"></uni-segmented-control>
+		<uni-segmented-control class="switch" :current="current" :values="items" @clickItem="onClickItem"
+			style-type="text" active-color="#FB6400"></uni-segmented-control>
 		<view class="content">
 			<view v-if="current === 0">
-				<uni-card v-for="(object,index) in chenData" :key="index" :title="object.level" mode="title" :is-shadow="true"
-				 thumbnail="../../static/vomiting.png" :extra="object.createTime">
+				<uni-card v-for="(object,index) in chenData" :key="index" :title="object.level" mode="title"
+					:is-shadow="true" thumbnail="../../static/vomiting.png" :extra="object.createTime">
 					{{object.title}}
 				</uni-card>
 			</view>
 			<view v-if="current === 1">
-				<uni-card v-for="(object,index) in yangData" :key="index" :title="object.level" mode="title" :is-shadow="true"
-				 thumbnail="../../static/vomiting.png" :extra="object.createTime">
+				<uni-card v-for="(object,index) in yangData" :key="index" :title="object.level" mode="title"
+					:is-shadow="true" thumbnail="../../static/vomiting.png" :extra="object.createTime">
 					{{object.title}}
 				</uni-card>
 			</view>
 		</view>
+		<uni-load-more :status="loadStatus" :contentText="contentText"></uni-load-more>
 	</view>
 </template>
 
@@ -28,7 +29,13 @@
 				chenData: [],
 				yangData: [],
 				obj: {},
-				items: ['亚', '羊']
+				items: ['亚', '羊'],
+				loadStatus: "loading",
+				contentText: {
+					contentdown: "上拉显示更多",
+					contentrefresh: "正在加载...",
+					contentnomore: "做到这些就完美啦~"
+				}
 			}
 		},
 		onLoad() {
@@ -53,12 +60,14 @@
 								level = '期待程度：高'
 								break
 						}
-						return { ...obj,
+						return {
+							...obj,
 							level
 						}
 					})
 					this.chenData = data.filter(obj => obj.createBy === "杨老师")
 					this.yangData = data.filter(obj => obj.createBy !== "杨老师")
+					this.loadStatus = "noMore"
 				})
 			},
 			// 切换tab

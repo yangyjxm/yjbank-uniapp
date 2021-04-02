@@ -230,11 +230,11 @@
 	}
 
 	.uni-popup__warn {
-		color: #f0ad4e;
+		color: #FB6400;
 	}
 
 	.uni-popup__error {
-		color: #dd524d;
+		color: #FB6400;
 	}
 
 	.uni-popup__info {
