@@ -1,6 +1,6 @@
 <template>
 	<view class="home">
-		<!-- <uni-notice-bar showIcon="true" scrollable="true" single="true" text="🎉🎉🎉关于表彰最持久女友陈亚君同志的通知🎉🎉🎉"></uni-notice-bar> -->
+		<uni-notice-bar showIcon="true" scrollable="true" single="true" text="🎉🎉🎉山东省烟台市欢迎陈亚君同志莅临指导🎉🎉🎉"></uni-notice-bar>
 		<view class="block">
 			<view class="block-first">在一起已经</view>
 			<view class="block-second">{{gap}}～</view>
@@ -27,7 +27,7 @@
 				</uni-grid-item>
 				<uni-grid-item class="center" index="6">
 					<image src="@/static/home-icon/icon (4).png" mode="" style="width: 30px; height: 30px"></image>
-					<view>打赌</view>
+					<view>赌约</view>
 				</uni-grid-item>
 				<uni-grid-item class="center" index="7">
 					<image src="@/static/home-icon/icon (5).png" mode="" style="width: 30px; height: 30px"></image>
@@ -82,12 +82,12 @@
 				}, {
 					'iconPath': '../../static/add-icon/icon (3).png',
 					'selectedIconPath': '../../static/add-icon/icon (3).png',
-					'text': '期待',
+					'text': '督办',
 					'url': '/pages/add/addExcept'
 				}, {
 					'iconPath': '../../static/add-icon/icon (4).png',
 					'selectedIconPath': '../../static/add-icon/icon (4).png',
-					'text': '赌约',
+					'text': '打赌',
 					'url': '/pages/add/addBet'
 				}, {
 					'iconPath': '../../static/add-icon/icon (1).png',

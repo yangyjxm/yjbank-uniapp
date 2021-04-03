@@ -23,7 +23,7 @@
 			</uni-collapse-item>
 		</uni-collapse>
 		<!-- <u-button @click="sendTemplateMessage">提交</u-button> -->
-		<uni-load-more :status="loadStatus"></uni-load-more>
+		<uni-load-more :status="loadStatus" :contentText="contentText"></uni-load-more>
 	</view>
 </template>
 
@@ -43,7 +43,12 @@
 				msgList: [],
 				access_token: '',
 				openid: uni.getStorageSync("openid"),
-				loadStatus: "loading"
+				loadStatus: "loading",
+				contentText: {
+					contentdown: "十个赌徒九个输，倾家荡产不如猪~",
+					contentrefresh: "不怕输的苦，就怕戒了赌...",
+					contentnomore: "谁家孩子天天哭，哪个赌徒天天输！"
+				}
 			};
 		},
 		onShow() {
