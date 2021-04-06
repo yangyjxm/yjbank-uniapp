@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/home/index",
     "pages/login/login",
+    "pages/home/index",
     "pages/loan/loan",
     "pages/treehole/treehole",
     "pages/footprint/index",
@@ -23,5 +23,5 @@
     "backgroundColor": "#FB6400"
   },
   "usingComponents": {},
-  "sitemapLocation": "sitemap26.json"
+  "sitemapLocation": "sitemap56.json"
 }

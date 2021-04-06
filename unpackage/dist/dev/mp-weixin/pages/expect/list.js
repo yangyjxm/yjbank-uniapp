@@ -96,10 +96,13 @@ var components
 try {
   components = {
     uniSegmentedControl: function() {
-      return __webpack_require__.e(/*! import() | components/uni-segmented-control/uni-segmented-control */ "components/uni-segmented-control/uni-segmented-control").then(__webpack_require__.bind(null, /*! @/components/uni-segmented-control/uni-segmented-control.vue */ 333))
+      return __webpack_require__.e(/*! import() | components/uni-segmented-control/uni-segmented-control */ "components/uni-segmented-control/uni-segmented-control").then(__webpack_require__.bind(null, /*! @/components/uni-segmented-control/uni-segmented-control.vue */ 340))
     },
     uniCard: function() {
-      return __webpack_require__.e(/*! import() | components/uni-card/uni-card */ "components/uni-card/uni-card").then(__webpack_require__.bind(null, /*! @/components/uni-card/uni-card.vue */ 312))
+      return __webpack_require__.e(/*! import() | components/uni-card/uni-card */ "components/uni-card/uni-card").then(__webpack_require__.bind(null, /*! @/components/uni-card/uni-card.vue */ 319))
+    },
+    uniLoadMore: function() {
+      return __webpack_require__.e(/*! import() | components/uni-load-more/uni-load-more */ "components/uni-load-more/uni-load-more").then(__webpack_require__.bind(null, /*! @/components/uni-load-more/uni-load-more.vue */ 333))
     }
   }
 } catch (e) {
@@ -177,6 +180,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 var _default =
 {
   data: function data() {
@@ -186,7 +190,13 @@ var _default =
       chenData: [],
       yangData: [],
       obj: {},
-      items: ['亚', '羊'] };
+      items: ['亚', '羊'],
+      loadStatus: "loading",
+      contentText: {
+        contentdown: "上拉显示更多",
+        contentrefresh: "正在加载...",
+        contentnomore: "做到这些就完美啦~" } };
+
 
   },
   onLoad: function onLoad() {
@@ -211,12 +221,14 @@ var _default =
               level = '期待程度：高';
               break;}
 
-          return _objectSpread(_objectSpread({}, obj), {}, {
+          return _objectSpread(_objectSpread({},
+          obj), {}, {
             level: level });
 
         });
         _this.chenData = data.filter(function (obj) {return obj.createBy === "杨老师";});
         _this.yangData = data.filter(function (obj) {return obj.createBy !== "杨老师";});
+        _this.loadStatus = "noMore";
       });
     },
     // 切换tab
@@ -225,7 +237,7 @@ var _default =
         this.current = e.currentIndex;
       }
     } } };exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 54)["default"]))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 62)["default"]))
 
 /***/ }),
 

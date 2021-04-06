@@ -103,7 +103,8 @@
 				uniCloud.callFunction({
 					name: 'addTreehole',
 					data: {
-						userid: getApp().globalData.userInfo.signature,
+						userid: getApp().globalData.userInfo.signature || 'unknown',
+						createBy: getApp().globalData.userInfo.nickName || 'unknown',
 						openid: uni.getStorageSync("openid"),
 						contentType: 'text',
 						content: this.value,

@@ -22,8 +22,7 @@
 			return {
 				form: {
 					intro: '',
-					fileList: [],
-					value: 4
+					fileList: []
 				},
 				imgUrl: ""
 			};

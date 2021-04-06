@@ -96,7 +96,7 @@ var components
 try {
   components = {
     uniLoadMore: function() {
-      return __webpack_require__.e(/*! import() | components/uni-load-more/uni-load-more */ "components/uni-load-more/uni-load-more").then(__webpack_require__.bind(null, /*! @/components/uni-load-more/uni-load-more.vue */ 326))
+      return __webpack_require__.e(/*! import() | components/uni-load-more/uni-load-more */ "components/uni-load-more/uni-load-more").then(__webpack_require__.bind(null, /*! @/components/uni-load-more/uni-load-more.vue */ 333))
     }
   }
 } catch (e) {
@@ -200,10 +200,15 @@ var _default =
       '钮', '龚', '程', '嵇', '邢', '滑', '裴', '陆', '荣', '翁'],
 
       lastName: ['哥', '姐'],
-      loadStatus: "loading",
       total: 0,
       pageSize: 30,
-      pageNum: 0 };
+      pageNum: 0,
+      loadStatus: "loading",
+      contentText: {
+        contentdown: "上拉显示更多",
+        contentrefresh: "悄悄话加载中...",
+        contentnomore: "到我们爱发芽的地方啦~" } };
+
 
   },
   onLoad: function onLoad() {
@@ -253,7 +258,8 @@ var _default =
       uniCloud.callFunction({
         name: 'addTreehole',
         data: {
-          userid: getApp().globalData.userInfo.signature,
+          userid: getApp().globalData.userInfo.signature || 'unknown',
+          createBy: getApp().globalData.userInfo.nickName || 'unknown',
           openid: uni.getStorageSync("openid"),
           contentType: 'text',
           content: this.value,
@@ -285,7 +291,7 @@ var _default =
         day: '2-digit' }) +
       " " + new Date().toTimeString().slice(0, 8);
     } } };exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 54)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 62)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 

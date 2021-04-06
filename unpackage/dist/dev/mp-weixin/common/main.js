@@ -95,25 +95,31 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default =
 {
   globalData: {
     userInfo: {} },
 
   onLaunch: function onLaunch() {},
   onShow: function onShow() {
-    var _this = this;
-    uni.getUserInfo({
-      provider: 'weixin',
-      success: function success(infoRes) {
-        // console.log("全局获取用户信息：")
-        // console.log(infoRes)
-        _this.globalData.userInfo = infoRes.userInfo;
-      } });
-
+    // let _this = this
+    // console.log('onShow')
+    // console.log(getApp().globalData.userInfo)
+    // uni.getUserProfile({
+    // 	desc : '用于完善用户资料',
+    // 	lang : 'zh_CN',  
+    // 	success: function(infoRes) {
+    // 		console.log("全局获取用户信息：")
+    // 		console.log(infoRes)
+    // 		_this.globalData.userInfo = infoRes.userInfo
+    // 		_this.globalData.userInfo.signature = infoRes.signature
+    // 	},
+    // 	fail() {
+    // 		console.log("未获得用户授权，无法取得用户信息！")
+    // 	}
+    // });
   },
   onHide: function onHide() {} };exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ })
 ],[[0,"common/runtime","common/vendor"]]]);

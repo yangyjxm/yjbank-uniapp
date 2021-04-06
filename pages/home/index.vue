@@ -1,6 +1,6 @@
 <template>
 	<view class="home">
-		<uni-notice-bar showIcon="true" scrollable="true" single="true" text="🎉🎉🎉山东省烟台市欢迎陈亚君同志莅临指导🎉🎉🎉"></uni-notice-bar>
+		<!-- <uni-notice-bar showIcon="true" scrollable="true" single="true" text="🎉🎉🎉山东省烟台市欢迎小亚同志莅临指导🎉🎉🎉"></uni-notice-bar> -->
 		<view class="block">
 			<view class="block-first">在一起已经</view>
 			<view class="block-second">{{gap}}～</view>
@@ -101,6 +101,8 @@
 			this.computedTime()
 			let timeCount = setInterval(() => this.computedTime(), 1000);
 			this.getMessage()
+			console.log('globalData')
+			console.log(getApp().globalData)
 		},
 		onReachBottom() {
 			if (this.messageData.length === this.total) {

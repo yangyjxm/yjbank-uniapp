@@ -12,29 +12,31 @@
   "libVersion": "",
   "appid": "wxa88115e813d1c9d8",
   "projectname": "yjb",
-  "simulatorType": "wechat",
-  "simulatorPluginLibVersion": {},
   "condition": {
     "search": {
+      "current": -1,
       "list": []
     },
     "conversation": {
+      "current": -1,
       "list": []
     },
     "game": {
+      "current": -1,
       "list": []
     },
     "miniprogram": {
+      "current": 0,
       "list": [
         {
-          "name": "首页",
+          "name": "登录",
           "id": 0,
-          "pathName": "pages/home/index"
+          "pathName": "pages/login/login"
         },
         {
-          "name": "小匀称打卡机",
+          "name": "首页",
           "id": 1,
-          "pathName": "pages/calendar/calendar"
+          "pathName": "pages/home/index"
         },
         {
           "name": "贷款",
