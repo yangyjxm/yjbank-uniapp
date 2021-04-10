@@ -5,7 +5,7 @@
 		</view>
 		<view class="bottom">
 			<!-- <button open-type="getUserInfo" @getuserinfo="getUserInfo">登陆</button> -->
-			<button @tap="getUserProfile">登陆</button>
+			<button @tap="getUserProfile">登录</button>
 		</view>
 	</view>
 </template>
@@ -32,22 +32,18 @@
 			},
 			// 新版登录
 			getUserProfile() {
-				var that = this;
 				wx.getUserProfile({
-					desc: '用于完善用户资料',
+					desc: '获取使用者头像、昵称',
 					lang: 'zh_CN',
 					success: function(res) {
-						console.log('wx.getUserProfile=>用户允许了授权');
-						console.log(res.userInfo);
-						console.log(res.signature);
+						// console.log(res.userInfo);
 						getApp().globalData.userInfo = res.userInfo
 						getApp().globalData.userInfo.signature = res.signature
-						uni.reLaunch({
-							url: '/pages/home/index'
-						})
+						uni.navigateBack({
+						    delta: 1
+						});
 					},
 					fail: function(res) {
-						console.log('wx.getUserProfile=>用户拒绝了授权');
 						console.log(res);
 					}
 				})

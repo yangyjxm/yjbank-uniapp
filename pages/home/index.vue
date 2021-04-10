@@ -101,8 +101,19 @@
 			this.computedTime()
 			let timeCount = setInterval(() => this.computedTime(), 1000);
 			this.getMessage()
-			console.log('globalData')
-			console.log(getApp().globalData)
+		},
+		onShow() {
+			// 检测是否已获取用户信息
+			// console.log('检测')
+			// console.log(getApp().globalData.userInfo)
+			if (getApp().globalData.userInfo.nickName) {
+				console.log('用户昵称:' + getApp().globalData.userInfo.nickName)
+			} else {
+				console.log("尚未获得用户授权，无法取得用户信息。")
+				uni.navigateTo({
+					url: '/pages/login/login'
+				})
+			}
 		},
 		onReachBottom() {
 			if (this.messageData.length === this.total) {

@@ -57,12 +57,6 @@
 			this.getAccessToken()
 		},
 		methods: {
-			// 新增愿望
-			// add() {
-			// 	uni.navigateTo({
-			// 		url: '/pages/wishlist/add'
-			// 	})
-			// },
 			// 獲取access_token
 			getAccessToken() {
 				this.$http.get(

@@ -5,13 +5,13 @@
 		<view class="content">
 			<view v-if="current === 0">
 				<uni-card v-for="(object,index) in chenData" :key="index" :title="object.level" mode="title"
-					:is-shadow="true" thumbnail="../../static/vomiting.png" :extra="object.createTime">
+					:is-shadow="true" thumbnail="../../static/vomiting.png" :extra="object.date">
 					{{object.title}}
 				</uni-card>
 			</view>
 			<view v-if="current === 1">
 				<uni-card v-for="(object,index) in yangData" :key="index" :title="object.level" mode="title"
-					:is-shadow="true" thumbnail="../../static/vomiting.png" :extra="object.createTime">
+					:is-shadow="true" thumbnail="../../static/vomiting.png" :extra="object.date">
 					{{object.title}}
 				</uni-card>
 			</view>
@@ -62,6 +62,7 @@
 						}
 						return {
 							...obj,
+							date: obj.createTime.substr(0,10),
 							level
 						}
 					})

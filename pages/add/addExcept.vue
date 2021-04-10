@@ -63,5 +63,12 @@
 		.u-form-item--left__content__label{
 			
 		}
+		.u-button {
+			position: fixed;
+			bottom: 20px;
+			background-color: $theme-color;
+			border: none;
+			color: white;
+		}
 	}
 </style>

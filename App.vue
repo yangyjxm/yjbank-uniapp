@@ -5,20 +5,31 @@
 		},
 		onLaunch: function() {},
 		onShow: function() {
-			// let _this = this
-			// console.log('onShow')
+			// 检测是否已获取用户信息
+			// console.log('检测')
 			// console.log(getApp().globalData.userInfo)
+			// if (getApp().globalData.userInfo) {
+			// 	console.log('用户昵称:' + getApp().globalData.userInfo.nickName)
+			// } else {
+			// 	console.log("尚未获得用户授权，无法取得用户信息。")
+			// 	uni.redirectTo({
+			// 		url: '/pages/login/login'
+			// 	})
+			// }
 			// uni.getUserProfile({
-			// 	desc : '用于完善用户资料',
-			// 	lang : 'zh_CN',  
-			// 	success: function(infoRes) {
-			// 		console.log("全局获取用户信息：")
-			// 		console.log(infoRes)
-			// 		_this.globalData.userInfo = infoRes.userInfo
-			// 		_this.globalData.userInfo.signature = infoRes.signature
+			// 	desc: '检查是否已获取用户信息',
+			// 	lang: 'zh_CN',
+			// 	success(infoRes) {
+			// 		// console.log("全局获取用户信息：")
+			// 		console.log('用户昵称:' + this.globalData.userInfo.nickName)
+			// 		// this.globalData.userInfo = infoRes.userInfo
+			// 		// this.globalData.userInfo.signature = infoRes.signature
 			// 	},
 			// 	fail() {
-			// 		console.log("未获得用户授权，无法取得用户信息！")
+			// 		console.log("尚未获得用户授权，无法取得用户信息。")
+			// 		uni.reLaunch({
+			// 			url: '/pages/login/login'
+			// 		})
 			// 	}
 			// });
 		},

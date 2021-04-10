@@ -41,4 +41,11 @@
 .addExcept .u-form-item--left {
   min-width: 80px;
 }
+.addExcept .u-button {
+  position: fixed;
+  bottom: 20px;
+  background-color: #FB6400;
+  border: none;
+  color: white;
+}
 
