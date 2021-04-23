@@ -41,12 +41,12 @@
 		</view>
 		<!-- 动态列表 -->
 		<uni-card v-for="item in messageData" :key="item.id" :mode="item.imgUrl ?'style': 'basic'" :is-shadow="true"
-		 :thumbnail="item.imgUrl" :note="item.createBy + ' ' + item.createTime">
+			:thumbnail="item.imgUrl" :note="item.createBy + ' ' + item.createTime">
 			{{item.intro}}
 		</uni-card>
 		<!-- 悬浮栏 -->
-		<uni-fab ref="fab" :pattern="pattern" :content="content" horizontal="right" vertical="bottom" direction="vertical"
-		 @trigger="trigger"></uni-fab>
+		<uni-fab ref="fab" :pattern="pattern" :content="content" horizontal="right" vertical="bottom"
+			direction="vertical" @trigger="trigger"></uni-fab>
 		<!-- 加载状态 -->
 		<uni-load-more :status="loadStatus"></uni-load-more>
 	</view>
@@ -106,14 +106,19 @@
 			// 检测是否已获取用户信息
 			// console.log('检测')
 			// console.log(getApp().globalData.userInfo)
-			if (getApp().globalData.userInfo.nickName) {
-				console.log('用户昵称:' + getApp().globalData.userInfo.nickName)
-			} else {
-				console.log("尚未获得用户授权，无法取得用户信息。")
-				uni.navigateTo({
-					url: '/pages/login/login'
-				})
-			}
+			uni.getStorage({
+				key: "userInfo",
+				success(res) {
+					getApp().globalData.userInfo = res.data
+					console.log('用户昵称:' + getApp().globalData.userInfo.nickName)
+				},
+				fail() {
+					console.log("尚未获得用户授权，无法取得用户信息。")
+					uni.navigateTo({
+						url: '/pages/login/login'
+					})
+				}
+			})
 		},
 		onReachBottom() {
 			if (this.messageData.length === this.total) {
@@ -138,7 +143,8 @@
 				let m2 = Moment(); // 当下时间
 				let m1 = Moment('2020-06-04 23:49:00'); // 起始时间
 				let du = Moment.duration(m2 - m1, 'ms'); // 做差
-				this.gap = m2.diff(m1, 'day') + '天' + du.get('hours') + '时' + du.get('minutes') + '分' + du.get('seconds') + '秒'
+				this.gap = m2.diff(m1, 'day') + '天' + du.get('hours') + '时' + du.get('minutes') + '分' + du.get('seconds') +
+					'秒'
 			},
 			// 获取动态信息列表
 			getMessage() {
@@ -157,7 +163,8 @@
 							uniCloud.getTempFileURL({
 								fileList: [res.result.data[i].fileList],
 								success: (res) => {
-									this.messageData[this.pageNum * this.pageSize + i].imgUrl = res.fileList[0].tempFileURL
+									this.messageData[this.pageNum * this.pageSize + i].imgUrl = res
+										.fileList[0].tempFileURL
 								}
 							})
 						}

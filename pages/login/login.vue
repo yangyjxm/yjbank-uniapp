@@ -37,11 +37,20 @@
 					lang: 'zh_CN',
 					success: function(res) {
 						// console.log(res.userInfo);
-						getApp().globalData.userInfo = res.userInfo
-						getApp().globalData.userInfo.signature = res.signature
-						uni.navigateBack({
-						    delta: 1
-						});
+						// getApp().globalData.userInfo = res.userInfo
+						// getApp().globalData.userInfo.signature = res.signature
+						uni.setStorage({
+							key : "userInfo",
+							data: {
+								...res.userInfo,
+								signature: res.signature
+							},
+							success() {
+								uni.navigateBack({
+								    delta: 1
+								});
+							}
+						})
 					},
 					fail: function(res) {
 						console.log(res);

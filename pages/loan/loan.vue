@@ -82,11 +82,30 @@
 				// })
 
 				uniCloud.callFunction({
-					name: 'getLoan'
+					name: 'getLoan',
+					data: {
+						status: "0"
+					}
 				}).then(res => {
-					this.unfinishData = res.result.data.filter(obj => obj.status === "0")
-					this.finishData = res.result.data.filter(obj => obj.status === "1")
-					this.doingData = res.result.data.filter(obj => obj.status === "3")
+					this.unfinishData = res.result.data
+				})
+
+				uniCloud.callFunction({
+					name: 'getLoan',
+					data: {
+						status: "1"
+					}
+				}).then(res => {
+					this.finishData = res.result.data
+				})
+
+				uniCloud.callFunction({
+					name: 'getLoan',
+					data: {
+						status: "3"
+					}
+				}).then(res => {
+					this.doingData = res.result.data
 				})
 			},
 			// 获取当前贷款统计数量信息
