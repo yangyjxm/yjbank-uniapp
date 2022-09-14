@@ -180,9 +180,11 @@ var _default =
               signature: res.signature }),
 
             success: function success() {
+              console.log(res);
               uni.navigateBack({
                 delta: 1 });
 
+              console.log(res);
             } });
 
         },

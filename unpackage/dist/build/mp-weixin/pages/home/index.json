@@ -1,5 +1,6 @@
 {
   "usingComponents": {
+    "uni-notice-bar": "/components/uni-notice-bar/uni-notice-bar",
     "uni-grid": "/components/uni-grid/uni-grid",
     "uni-grid-item": "/components/uni-grid-item/uni-grid-item",
     "uni-card": "/components/uni-card/uni-card",

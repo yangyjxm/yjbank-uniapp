@@ -46,9 +46,11 @@
 								signature: res.signature
 							},
 							success() {
+								console.log(res);
 								uni.navigateBack({
 								    delta: 1
 								});
+								console.log(res);
 							}
 						})
 					},

@@ -2,7 +2,7 @@
 	<view class="treehole">
 		<view :key='itme.id' v-for='(item,index) in msgList' class="block">
 			<!-- <view class="floor">{{ index }}楼</view> -->
-			<view class="floor">{{ firstName[(index % 200)] }}子{{ lastName[(index % 2)] }}:</view>
+			<!-- <view class="floor">{{ firstName[(index % 200)] }}子{{ lastName[(index % 2)] }}:</view> -->
 			<!-- 					<view class="floor">{{ item.id }}楼</view>
 			<view class="floor">{{ firstName[(item.id % 200)] }}子{{ lastName[(item.id % 2)] }}</view> -->
 			<view class="content">{{ item.content }}</view>

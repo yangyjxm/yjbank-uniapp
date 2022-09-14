@@ -126,6 +126,9 @@ __webpack_require__.r(__webpack_exports__);
 var components
 try {
   components = {
+    uniNoticeBar: function() {
+      return __webpack_require__.e(/*! import() | components/uni-notice-bar/uni-notice-bar */ "components/uni-notice-bar/uni-notice-bar").then(__webpack_require__.bind(null, /*! @/components/uni-notice-bar/uni-notice-bar.vue */ 493))
+    },
     uniGrid: function() {
       return __webpack_require__.e(/*! import() | components/uni-grid/uni-grid */ "components/uni-grid/uni-grid").then(__webpack_require__.bind(null, /*! @/components/uni-grid/uni-grid.vue */ 297))
     },
@@ -251,7 +254,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _moment = _interopRequireDefault(__webpack_require__(/*! moment */ 61));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}var _default =
+
+var _moment = _interopRequireDefault(__webpack_require__(/*! moment */ 61));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}var _default =
 {
   data: function data() {
     return {
@@ -354,19 +358,28 @@ var _moment = _interopRequireDefault(__webpack_require__(/*! moment */ 61));func
 
       then(function (res) {
         _this2.total = res.result.count.total;
-        _this2.messageData = [].concat(_toConsumableArray(_this2.messageData), _toConsumableArray(res.result.data));var _loop = function _loop(
-        i) {
-          // 腾讯云需要获取临时链接
-          if (res.result.data[i].fileList) {
-            uniCloud.getTempFileURL({
-              fileList: [res.result.data[i].fileList],
-              success: function success(res) {
-                _this2.messageData[_this2.pageNum * _this2.pageSize + i].imgUrl = res.
-                fileList[0].tempFileURL;
-              } });
+        _this2.messageData = [].concat(_toConsumableArray(_this2.messageData), _toConsumableArray(res.result.data));
+        console.log('this.messageData', _this2.messageData);
+        _this2.messageData = _this2.messageData.map(function (obj) {
+          return _objectSpread(_objectSpread({},
+          obj), {}, {
+            imgUrl: obj.fileList });
 
-          }};for (var i = 0; i < res.result.data.length; i++) {_loop(i);
+        });
+        for (var i = 0; i < res.result.data.length; i++) {
+          // 腾讯云需要获取临时链接
+          // if (res.result.data[i].fileList) {
+          // 	uniCloud.getTempFileURL({
+          // 		fileList: [res.result.data[i].fileList],
+          // 		success: (res) => {
+          // 			console.log('res', res);
+          // 			this.messageData[this.pageNum * this.pageSize + i].imgUrl = res
+          // 				.fileList[0].tempFileURL
+          // 		}
+          // 	})
+          // }
         }
+        console.log('this.messageData', _this2.messageData);
         // this.loadStatus = "noMore"
       });
     },

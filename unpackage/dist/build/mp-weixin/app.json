@@ -18,9 +18,9 @@
   "window": {
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "小亚银行",
-    "navigationBarBackgroundColor": "#FF557F",
-    "backgroundColorTop": "#FF557F",
-    "backgroundColor": "#FF557F"
+    "navigationBarBackgroundColor": "#ff0000",
+    "backgroundColorTop": "#ff0000",
+    "backgroundColor": "#ff0000"
   },
   "usingComponents": {},
   "sitemapLocation": "sitemap.json"

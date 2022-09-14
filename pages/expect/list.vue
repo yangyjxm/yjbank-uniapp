@@ -1,7 +1,7 @@
 <template>
 	<view class="loan">
 		<uni-segmented-control class="switch" :current="current" :values="items" @clickItem="onClickItem"
-			style-type="text" active-color="#FF557F"></uni-segmented-control>
+			style-type="text" active-color="#ff0000"></uni-segmented-control>
 		<view class="content">
 			<view v-if="current === 0">
 				<uni-card v-for="(object,index) in chenData" :key="index" :title="object.level" mode="title"

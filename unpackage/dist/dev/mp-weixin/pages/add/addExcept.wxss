@@ -44,7 +44,7 @@
 .addExcept .u-button {
   position: fixed;
   bottom: 20px;
-  background-color: #ff557f;
+  background-color: #ff0000;
   border: none;
   color: white;
 }

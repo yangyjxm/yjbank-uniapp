@@ -1,10 +1,11 @@
 <template>
 	<view class="home">
 		<!-- <uni-notice-bar showIcon="true" scrollable="true" single="true" text="🎉🎉🎉山东省烟台市欢迎小亚同志莅临指导🎉🎉🎉"></uni-notice-bar> -->
+		<uni-notice-bar showIcon="true" scrollable="true" single="true" text="云服务商切换中,部分功能暂不可用~~"></uni-notice-bar>
 		<view class="block">
 			<view class="block-first">在一起已经</view>
 			<view class="block-second">{{gap}}～</view>
-			<uni-grid :column="3" :show-border="false" :square="false" @change='change'>
+			<uni-grid :column="4" :show-border="false" :square="false" @change='change'>
 				<uni-grid-item class="center" index="1">
 					<image src="@/static/home-icon/icon (1).png" mode="" style="width: 30px; height: 30px"></image>
 					<view>贷款</view>
@@ -21,18 +22,18 @@
 					<image src="@/static/home-icon/icon (6).png" mode="" style="width: 30px; height: 30px"></image>
 					<view>足迹</view>
 				</uni-grid-item> -->
-				<uni-grid-item class="center" index="5">
+				<!-- <uni-grid-item class="center" index="5">
 					<image src="@/static/home-icon/icon (6).png" mode="" style="width: 30px; height: 30px"></image>
 					<view>提醒</view>
-				</uni-grid-item>
+				</uni-grid-item> -->
 				<uni-grid-item class="center" index="6">
 					<image src="@/static/home-icon/icon (4).png" mode="" style="width: 30px; height: 30px"></image>
 					<view>赌约</view>
 				</uni-grid-item>
-				<uni-grid-item class="center" index="7">
+				<!-- 	<uni-grid-item class="center" index="7">
 					<image src="@/static/home-icon/icon (5).png" mode="" style="width: 30px; height: 30px"></image>
 					<view>期待</view>
-				</uni-grid-item>
+				</uni-grid-item> -->
 				<!-- <uni-grid-item class="center" index="8">
 					<image src="@/static/home-icon/icon (6).png" mode="" style="width: 30px; height: 30px"></image>
 					<view>新增</view>
@@ -157,18 +158,27 @@
 				}).then(res => {
 					this.total = res.result.count.total
 					this.messageData = [...this.messageData, ...res.result.data]
+					console.log('this.messageData', this.messageData);
+					this.messageData = this.messageData.map(obj => {
+						return {
+							...obj,
+							imgUrl: obj.fileList
+						}
+					})
 					for (let i = 0; i < res.result.data.length; i++) {
 						// 腾讯云需要获取临时链接
-						if (res.result.data[i].fileList) {
-							uniCloud.getTempFileURL({
-								fileList: [res.result.data[i].fileList],
-								success: (res) => {
-									this.messageData[this.pageNum * this.pageSize + i].imgUrl = res
-										.fileList[0].tempFileURL
-								}
-							})
-						}
+						// if (res.result.data[i].fileList) {
+						// 	uniCloud.getTempFileURL({
+						// 		fileList: [res.result.data[i].fileList],
+						// 		success: (res) => {
+						// 			console.log('res', res);
+						// 			this.messageData[this.pageNum * this.pageSize + i].imgUrl = res
+						// 				.fileList[0].tempFileURL
+						// 		}
+						// 	})
+						// }
 					}
+					console.log('this.messageData', this.messageData);
 					// this.loadStatus = "noMore"
 				})
 			},
