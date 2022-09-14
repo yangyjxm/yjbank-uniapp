@@ -30,32 +30,17 @@
 .u-btn.data-v-3bf2dba7 {
   position: relative;
   border: 0;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
   display: inline-flex;
   overflow: visible;
   line-height: 1;
-
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-          flex-direction: row;
-
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-          justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   padding: 0 40rpx;
   z-index: 1;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-transition: all 0.15s;
+  box-sizing: border-box;
   transition: all 0.15s;
 }
 .u-btn--bold-border.data-v-3bf2dba7 {
@@ -135,8 +120,7 @@
   content: ' ';
   position: absolute;
   pointer-events: none;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-transform-origin: 0 0;
   transform-origin: 0 0;
   left: 0;
@@ -151,8 +135,7 @@
 .u-wave-ripple.data-v-3bf2dba7 {
   z-index: 0;
   position: absolute;
-  -webkit-border-radius: 100%;
-          border-radius: 100%;
+  border-radius: 100%;
   background-clip: padding-box;
   pointer-events: none;
   -webkit-user-select: none;
@@ -167,18 +150,15 @@
   opacity: 0;
   -webkit-transform: scale(2);
           transform: scale(2);
-  -webkit-transition: opacity 1s linear, -webkit-transform 0.4s linear;
   transition: opacity 1s linear, -webkit-transform 0.4s linear;
   transition: opacity 1s linear, transform 0.4s linear;
   transition: opacity 1s linear, transform 0.4s linear, -webkit-transform 0.4s linear;
 }
 .u-round-circle.data-v-3bf2dba7 {
-  -webkit-border-radius: 100rpx;
-          border-radius: 100rpx;
+  border-radius: 100rpx;
 }
 .u-round-circle.data-v-3bf2dba7::after {
-  -webkit-border-radius: 100rpx;
-          border-radius: 100rpx;
+  border-radius: 100rpx;
 }
 .u-loading.data-v-3bf2dba7::after {
   background-color: rgba(255, 255, 255, 0.35);
@@ -189,8 +169,6 @@
   line-height: 80rpx;
 }
 .u-size-medium.data-v-3bf2dba7 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
   display: inline-flex;
   width: auto;
   font-size: 26rpx;
@@ -199,8 +177,6 @@
   padding: 0 80rpx;
 }
 .u-size-mini.data-v-3bf2dba7 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
   display: inline-flex;
   width: auto;
   font-size: 22rpx;

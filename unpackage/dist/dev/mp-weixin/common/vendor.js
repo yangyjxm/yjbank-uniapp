@@ -8,7 +8,86 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.createApp = createApp;exports.createComponent = createComponent;exports.createPage = createPage;exports.default = void 0;var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _slicedToArray(arr, i) {return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();}function _nonIterableRest() {throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _iterableToArrayLimit(arr, i) {if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i["return"] != null) _i["return"]();} finally {if (_d) throw _e;}}return _arr;}function _arrayWithHoles(arr) {if (Array.isArray(arr)) return arr;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}
+/* WEBPACK VAR INJECTION */(function(global) {Object.defineProperty(exports, "__esModule", { value: true });exports.createApp = createApp;exports.createComponent = createComponent;exports.createPage = createPage;exports.createPlugin = createPlugin;exports.createSubpackageApp = createSubpackageApp;exports.default = void 0;var _uniI18n = __webpack_require__(/*! @dcloudio/uni-i18n */ 3);
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 4));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _slicedToArray(arr, i) {return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();}function _nonIterableRest() {throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _iterableToArrayLimit(arr, i) {if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i["return"] != null) _i["return"]();} finally {if (_d) throw _e;}}return _arr;}function _arrayWithHoles(arr) {if (Array.isArray(arr)) return arr;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}
+
+var realAtob;
+
+var b64 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
+var b64re = /^(?:[A-Za-z\d+/]{4})*?(?:[A-Za-z\d+/]{2}(?:==)?|[A-Za-z\d+/]{3}=?)?$/;
+
+if (typeof atob !== 'function') {
+  realAtob = function realAtob(str) {
+    str = String(str).replace(/[\t\n\f\r ]+/g, '');
+    if (!b64re.test(str)) {throw new Error("Failed to execute 'atob' on 'Window': The string to be decoded is not correctly encoded.");}
+
+    // Adding the padding if missing, for semplicity
+    str += '=='.slice(2 - (str.length & 3));
+    var bitmap;var result = '';var r1;var r2;var i = 0;
+    for (; i < str.length;) {
+      bitmap = b64.indexOf(str.charAt(i++)) << 18 | b64.indexOf(str.charAt(i++)) << 12 |
+      (r1 = b64.indexOf(str.charAt(i++))) << 6 | (r2 = b64.indexOf(str.charAt(i++)));
+
+      result += r1 === 64 ? String.fromCharCode(bitmap >> 16 & 255) :
+      r2 === 64 ? String.fromCharCode(bitmap >> 16 & 255, bitmap >> 8 & 255) :
+      String.fromCharCode(bitmap >> 16 & 255, bitmap >> 8 & 255, bitmap & 255);
+    }
+    return result;
+  };
+} else {
+  // 注意atob只能在全局对象上调用，例如：`const Base64 = {atob};Base64.atob('xxxx')`是错误的用法
+  realAtob = atob;
+}
+
+function b64DecodeUnicode(str) {
+  return decodeURIComponent(realAtob(str).split('').map(function (c) {
+    return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+  }).join(''));
+}
+
+function getCurrentUserInfo() {
+  var token = wx.getStorageSync('uni_id_token') || '';
+  var tokenArr = token.split('.');
+  if (!token || tokenArr.length !== 3) {
+    return {
+      uid: null,
+      role: [],
+      permission: [],
+      tokenExpired: 0 };
+
+  }
+  var userInfo;
+  try {
+    userInfo = JSON.parse(b64DecodeUnicode(tokenArr[1]));
+  } catch (error) {
+    throw new Error('获取当前用户信息出错，详细错误信息为：' + error.message);
+  }
+  userInfo.tokenExpired = userInfo.exp * 1000;
+  delete userInfo.exp;
+  delete userInfo.iat;
+  return userInfo;
+}
+
+function uniIdMixin(Vue) {
+  Vue.prototype.uniIDHasRole = function (roleId) {var _getCurrentUserInfo =
+
+
+    getCurrentUserInfo(),role = _getCurrentUserInfo.role;
+    return role.indexOf(roleId) > -1;
+  };
+  Vue.prototype.uniIDHasPermission = function (permissionId) {var _getCurrentUserInfo2 =
+
+
+    getCurrentUserInfo(),permission = _getCurrentUserInfo2.permission;
+    return this.uniIDHasRole('admin') || permission.indexOf(permissionId) > -1;
+  };
+  Vue.prototype.uniIDTokenValid = function () {var _getCurrentUserInfo3 =
+
+
+    getCurrentUserInfo(),tokenExpired = _getCurrentUserInfo3.tokenExpired;
+    return tokenExpired > Date.now();
+  };
+}
 
 var _toString = Object.prototype.toString;
 var hasOwnProperty = Object.prototype.hasOwnProperty;
@@ -49,6 +128,16 @@ var camelizeRE = /-(\w)/g;
 var camelize = cached(function (str) {
   return str.replace(camelizeRE, function (_, c) {return c ? c.toUpperCase() : '';});
 });
+
+function sortObject(obj) {
+  var sortObj = {};
+  if (isPlainObject(obj)) {
+    Object.keys(obj).sort().forEach(function (key) {
+      sortObj[key] = obj[key];
+    });
+  }
+  return !Object.keys(sortObj) ? obj : sortObj;
+}
 
 var HOOKS = [
 'invoke',
@@ -232,16 +321,20 @@ var promiseInterceptor = {
     if (!isPromise(res)) {
       return res;
     }
-    return res.then(function (res) {
-      return res[1];
-    }).catch(function (res) {
-      return res[0];
+    return new Promise(function (resolve, reject) {
+      res.then(function (res) {
+        if (res[0]) {
+          reject(res[0]);
+        } else {
+          resolve(res[1]);
+        }
+      });
     });
   } };
 
 
 var SYNC_API_RE =
-/^\$|sendNativeEvent|restoreGlobal|getCurrentSubNVue|getMenuButtonBoundingClientRect|^report|interceptors|Interceptor$|getSubNVueById|requireNativePlugin|upx2px|hideKeyboard|canIUse|^create|Sync$|Manager$|base64ToArrayBuffer|arrayBufferToBase64/;
+/^\$|Window$|WindowStyle$|sendHostEvent|sendNativeEvent|restoreGlobal|requireGlobal|getCurrentSubNVue|getMenuButtonBoundingClientRect|^report|interceptors|Interceptor$|getSubNVueById|requireNativePlugin|upx2px|hideKeyboard|canIUse|^create|Sync$|Manager$|base64ToArrayBuffer|arrayBufferToBase64|getLocale|setLocale|invokePushCallback|getWindowInfo|getDeviceInfo|getAppBaseInfo|getSystemSetting|getAppAuthorizeSetting/;
 
 var CONTEXT_API_RE = /^create|Manager$/;
 
@@ -249,7 +342,7 @@ var CONTEXT_API_RE = /^create|Manager$/;
 var CONTEXT_API_RE_EXC = ['createBLEConnection'];
 
 // 同步例外情况
-var ASYNC_API = ['createBLEConnection'];
+var ASYNC_API = ['createBLEConnection', 'createPushMessage'];
 
 var CALLBACK_API_RE = /^on|^off/;
 
@@ -354,6 +447,171 @@ function upx2px(number, newDeviceWidth) {
   return number < 0 ? -result : result;
 }
 
+var LOCALE_ZH_HANS = 'zh-Hans';
+var LOCALE_ZH_HANT = 'zh-Hant';
+var LOCALE_EN = 'en';
+var LOCALE_FR = 'fr';
+var LOCALE_ES = 'es';
+
+var messages = {};
+
+var locale;
+
+{
+  locale = normalizeLocale(wx.getSystemInfoSync().language) || LOCALE_EN;
+}
+
+function initI18nMessages() {
+  if (!isEnableLocale()) {
+    return;
+  }
+  var localeKeys = Object.keys(__uniConfig.locales);
+  if (localeKeys.length) {
+    localeKeys.forEach(function (locale) {
+      var curMessages = messages[locale];
+      var userMessages = __uniConfig.locales[locale];
+      if (curMessages) {
+        Object.assign(curMessages, userMessages);
+      } else {
+        messages[locale] = userMessages;
+      }
+    });
+  }
+}
+
+initI18nMessages();
+
+var i18n = (0, _uniI18n.initVueI18n)(
+locale,
+{});
+
+var t = i18n.t;
+var i18nMixin = i18n.mixin = {
+  beforeCreate: function beforeCreate() {var _this = this;
+    var unwatch = i18n.i18n.watchLocale(function () {
+      _this.$forceUpdate();
+    });
+    this.$once('hook:beforeDestroy', function () {
+      unwatch();
+    });
+  },
+  methods: {
+    $$t: function $$t(key, values) {
+      return t(key, values);
+    } } };
+
+
+var setLocale = i18n.setLocale;
+var getLocale = i18n.getLocale;
+
+function initAppLocale(Vue, appVm, locale) {
+  var state = Vue.observable({
+    locale: locale || i18n.getLocale() });
+
+  var localeWatchers = [];
+  appVm.$watchLocale = function (fn) {
+    localeWatchers.push(fn);
+  };
+  Object.defineProperty(appVm, '$locale', {
+    get: function get() {
+      return state.locale;
+    },
+    set: function set(v) {
+      state.locale = v;
+      localeWatchers.forEach(function (watch) {return watch(v);});
+    } });
+
+}
+
+function isEnableLocale() {
+  return typeof __uniConfig !== 'undefined' && __uniConfig.locales && !!Object.keys(__uniConfig.locales).length;
+}
+
+function include(str, parts) {
+  return !!parts.find(function (part) {return str.indexOf(part) !== -1;});
+}
+
+function startsWith(str, parts) {
+  return parts.find(function (part) {return str.indexOf(part) === 0;});
+}
+
+function normalizeLocale(locale, messages) {
+  if (!locale) {
+    return;
+  }
+  locale = locale.trim().replace(/_/g, '-');
+  if (messages && messages[locale]) {
+    return locale;
+  }
+  locale = locale.toLowerCase();
+  if (locale === 'chinese') {
+    // 支付宝
+    return LOCALE_ZH_HANS;
+  }
+  if (locale.indexOf('zh') === 0) {
+    if (locale.indexOf('-hans') > -1) {
+      return LOCALE_ZH_HANS;
+    }
+    if (locale.indexOf('-hant') > -1) {
+      return LOCALE_ZH_HANT;
+    }
+    if (include(locale, ['-tw', '-hk', '-mo', '-cht'])) {
+      return LOCALE_ZH_HANT;
+    }
+    return LOCALE_ZH_HANS;
+  }
+  var lang = startsWith(locale, [LOCALE_EN, LOCALE_FR, LOCALE_ES]);
+  if (lang) {
+    return lang;
+  }
+}
+// export function initI18n() {
+//   const localeKeys = Object.keys(__uniConfig.locales || {})
+//   if (localeKeys.length) {
+//     localeKeys.forEach((locale) =>
+//       i18n.add(locale, __uniConfig.locales[locale])
+//     )
+//   }
+// }
+
+function getLocale$1() {
+  // 优先使用 $locale
+  var app = getApp({
+    allowDefault: true });
+
+  if (app && app.$vm) {
+    return app.$vm.$locale;
+  }
+  return normalizeLocale(wx.getSystemInfoSync().language) || LOCALE_EN;
+}
+
+function setLocale$1(locale) {
+  var app = getApp();
+  if (!app) {
+    return false;
+  }
+  var oldLocale = app.$vm.$locale;
+  if (oldLocale !== locale) {
+    app.$vm.$locale = locale;
+    onLocaleChangeCallbacks.forEach(function (fn) {return fn({
+        locale: locale });});
+
+    return true;
+  }
+  return false;
+}
+
+var onLocaleChangeCallbacks = [];
+function onLocaleChange(fn) {
+  if (onLocaleChangeCallbacks.indexOf(fn) === -1) {
+    onLocaleChangeCallbacks.push(fn);
+  }
+}
+
+if (typeof global !== 'undefined') {
+  global.getLocale = getLocale$1;
+}
+
 var interceptors = {
   promiseInterceptor: promiseInterceptor };
 
@@ -361,114 +619,12 @@ var interceptors = {
 var baseApi = /*#__PURE__*/Object.freeze({
   __proto__: null,
   upx2px: upx2px,
+  getLocale: getLocale$1,
+  setLocale: setLocale$1,
+  onLocaleChange: onLocaleChange,
   addInterceptor: addInterceptor,
   removeInterceptor: removeInterceptor,
-  interceptors: interceptors });var
-
-
-EventChannel = /*#__PURE__*/function () {
-  function EventChannel(id, events) {var _this = this;_classCallCheck(this, EventChannel);
-    this.id = id;
-    this.listener = {};
-    this.emitCache = {};
-    if (events) {
-      Object.keys(events).forEach(function (name) {
-        _this.on(name, events[name]);
-      });
-    }
-  }_createClass(EventChannel, [{ key: "emit", value: function emit(
-
-    eventName) {for (var _len3 = arguments.length, args = new Array(_len3 > 1 ? _len3 - 1 : 0), _key3 = 1; _key3 < _len3; _key3++) {args[_key3 - 1] = arguments[_key3];}
-      var fns = this.listener[eventName];
-      if (!fns) {
-        return (this.emitCache[eventName] || (this.emitCache[eventName] = [])).push(args);
-      }
-      fns.forEach(function (opt) {
-        opt.fn.apply(opt.fn, args);
-      });
-      this.listener[eventName] = fns.filter(function (opt) {return opt.type !== 'once';});
-    } }, { key: "on", value: function on(
-
-    eventName, fn) {
-      this._addListener(eventName, 'on', fn);
-      this._clearCache(eventName);
-    } }, { key: "once", value: function once(
-
-    eventName, fn) {
-      this._addListener(eventName, 'once', fn);
-      this._clearCache(eventName);
-    } }, { key: "off", value: function off(
-
-    eventName, fn) {
-      var fns = this.listener[eventName];
-      if (!fns) {
-        return;
-      }
-      if (fn) {
-        for (var i = 0; i < fns.length;) {
-          if (fns[i].fn === fn) {
-            fns.splice(i, 1);
-            i--;
-          }
-          i++;
-        }
-      } else {
-        delete this.listener[eventName];
-      }
-    } }, { key: "_clearCache", value: function _clearCache(
-
-    eventName) {
-      var cacheArgs = this.emitCache[eventName];
-      if (cacheArgs) {
-        for (; cacheArgs.length > 0;) {
-          this.emit.apply(this, [eventName].concat(cacheArgs.shift()));
-        }
-      }
-    } }, { key: "_addListener", value: function _addListener(
-
-    eventName, type, fn) {
-      (this.listener[eventName] || (this.listener[eventName] = [])).push({
-        fn: fn,
-        type: type });
-
-    } }]);return EventChannel;}();
-
-
-var eventChannels = {};
-
-var eventChannelStack = [];
-
-var id = 0;
-
-function initEventChannel(events) {var cache = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-  id++;
-  var eventChannel = new EventChannel(id, events);
-  if (cache) {
-    eventChannels[id] = eventChannel;
-    eventChannelStack.push(eventChannel);
-  }
-  return eventChannel;
-}
-
-function getEventChannel(id) {
-  if (id) {
-    var eventChannel = eventChannels[id];
-    delete eventChannels[id];
-    return eventChannel;
-  }
-  return eventChannelStack.shift();
-}
-
-var navigateTo = {
-  args: function args(fromArgs, toArgs) {
-    var id = initEventChannel(fromArgs.events).id;
-    if (fromArgs.url) {
-      fromArgs.url = fromArgs.url + (fromArgs.url.indexOf('?') === -1 ? '?' : '&') + '__id__=' + id;
-    }
-  },
-  returnValue: function returnValue(fromRes, toRes) {
-    fromRes.eventChannel = getEventChannel();
-  } };
+  interceptors: interceptors });
 
 
 function findExistsPageIndex(url) {
@@ -537,6 +693,20 @@ var previewImage = {
   } };
 
 
+var UUID_KEY = '__DC_STAT_UUID';
+var deviceId;
+function useDeviceId(result) {
+  deviceId = deviceId || wx.getStorageSync(UUID_KEY);
+  if (!deviceId) {
+    deviceId = Date.now() + '' + Math.floor(Math.random() * 1e7);
+    wx.setStorage({
+      key: UUID_KEY,
+      data: deviceId });
+
+  }
+  result.deviceId = deviceId;
+}
+
 function addSafeAreaInsets(result) {
   if (result.safeArea) {
     var safeArea = result.safeArea;
@@ -544,20 +714,228 @@ function addSafeAreaInsets(result) {
       top: safeArea.top,
       left: safeArea.left,
       right: result.windowWidth - safeArea.right,
-      bottom: result.windowHeight - safeArea.bottom };
+      bottom: result.screenHeight - safeArea.bottom };
 
   }
 }
+
+function populateParameters(result) {var _result$brand =
+
+
+
+
+
+  result.brand,brand = _result$brand === void 0 ? '' : _result$brand,_result$model = result.model,model = _result$model === void 0 ? '' : _result$model,_result$system = result.system,system = _result$system === void 0 ? '' : _result$system,_result$language = result.language,language = _result$language === void 0 ? '' : _result$language,theme = result.theme,version = result.version,platform = result.platform,fontSizeSetting = result.fontSizeSetting,SDKVersion = result.SDKVersion,pixelRatio = result.pixelRatio,deviceOrientation = result.deviceOrientation;
+  // const isQuickApp = "mp-weixin".indexOf('quickapp-webview') !== -1
+
+  // osName osVersion
+  var osName = '';
+  var osVersion = '';
+  {
+    osName = system.split(' ')[0] || '';
+    osVersion = system.split(' ')[1] || '';
+  }
+  var hostVersion = version;
+
+  // deviceType
+  var deviceType = getGetDeviceType(result, model);
+
+  // deviceModel
+  var deviceBrand = getDeviceBrand(brand);
+
+  // hostName
+  var _hostName = getHostName(result);
+
+  // deviceOrientation
+  var _deviceOrientation = deviceOrientation; // 仅 微信 百度 支持
+
+  // devicePixelRatio
+  var _devicePixelRatio = pixelRatio;
+
+  // SDKVersion
+  var _SDKVersion = SDKVersion;
+
+  // hostLanguage
+  var hostLanguage = language.replace(/_/g, '-');
+
+  // wx.getAccountInfoSync
+
+  var parameters = {
+    appId: "__UNI__35400E8",
+    appName: "yjb",
+    appVersion: "1.0.0",
+    appVersionCode: "100",
+    appLanguage: getAppLanguage(hostLanguage),
+    uniCompileVersion: "3.6.2",
+    uniRuntimeVersion: "3.6.2",
+    uniPlatform: undefined || "mp-weixin",
+    deviceBrand: deviceBrand,
+    deviceModel: model,
+    deviceType: deviceType,
+    devicePixelRatio: _devicePixelRatio,
+    deviceOrientation: _deviceOrientation,
+    osName: osName.toLocaleLowerCase(),
+    osVersion: osVersion,
+    hostTheme: theme,
+    hostVersion: hostVersion,
+    hostLanguage: hostLanguage,
+    hostName: _hostName,
+    hostSDKVersion: _SDKVersion,
+    hostFontSizeSetting: fontSizeSetting,
+    windowTop: 0,
+    windowBottom: 0,
+    // TODO
+    osLanguage: undefined,
+    osTheme: undefined,
+    ua: undefined,
+    hostPackageName: undefined,
+    browserName: undefined,
+    browserVersion: undefined };
+
+
+  Object.assign(result, parameters);
+}
+
+function getGetDeviceType(result, model) {
+  var deviceType = result.deviceType || 'phone';
+  {
+    var deviceTypeMaps = {
+      ipad: 'pad',
+      windows: 'pc',
+      mac: 'pc' };
+
+    var deviceTypeMapsKeys = Object.keys(deviceTypeMaps);
+    var _model = model.toLocaleLowerCase();
+    for (var index = 0; index < deviceTypeMapsKeys.length; index++) {
+      var _m = deviceTypeMapsKeys[index];
+      if (_model.indexOf(_m) !== -1) {
+        deviceType = deviceTypeMaps[_m];
+        break;
+      }
+    }
+  }
+  return deviceType;
+}
+
+function getDeviceBrand(brand) {
+  var deviceBrand = brand;
+  if (deviceBrand) {
+    deviceBrand = brand.toLocaleLowerCase();
+  }
+  return deviceBrand;
+}
+
+function getAppLanguage(defaultLanguage) {
+  return getLocale$1 ?
+  getLocale$1() :
+  defaultLanguage;
+}
+
+function getHostName(result) {
+  var _platform = 'WeChat';
+  var _hostName = result.hostName || _platform; // mp-jd
+  {
+    if (result.environment) {
+      _hostName = result.environment;
+    } else if (result.host && result.host.env) {
+      _hostName = result.host.env;
+    }
+  }
+
+  return _hostName;
+}
+
+var getSystemInfo = {
+  returnValue: function returnValue(result) {
+    useDeviceId(result);
+    addSafeAreaInsets(result);
+    populateParameters(result);
+  } };
+
+
+var showActionSheet = {
+  args: function args(fromArgs) {
+    if (typeof fromArgs === 'object') {
+      fromArgs.alertText = fromArgs.title;
+    }
+  } };
+
+
+var getAppBaseInfo = {
+  returnValue: function returnValue(result) {var _result =
+    result,version = _result.version,language = _result.language,SDKVersion = _result.SDKVersion,theme = _result.theme;
+
+    var _hostName = getHostName(result);
+
+    var hostLanguage = language.replace('_', '-');
+
+    result = sortObject(Object.assign(result, {
+      appId: "__UNI__35400E8",
+      appName: "yjb",
+      appVersion: "1.0.0",
+      appVersionCode: "100",
+      appLanguage: getAppLanguage(hostLanguage),
+      hostVersion: version,
+      hostLanguage: hostLanguage,
+      hostName: _hostName,
+      hostSDKVersion: SDKVersion,
+      hostTheme: theme }));
+
+  } };
+
+
+var getDeviceInfo = {
+  returnValue: function returnValue(result) {var _result2 =
+    result,brand = _result2.brand,model = _result2.model;
+    var deviceType = getGetDeviceType(result, model);
+    var deviceBrand = getDeviceBrand(brand);
+    useDeviceId(result);
+
+    result = sortObject(Object.assign(result, {
+      deviceType: deviceType,
+      deviceBrand: deviceBrand,
+      deviceModel: model }));
+
+  } };
+
+
+var getWindowInfo = {
+  returnValue: function returnValue(result) {
+    addSafeAreaInsets(result);
+
+    result = sortObject(Object.assign(result, {
+      windowTop: 0,
+      windowBottom: 0 }));
+
+  } };
+
+
+var getAppAuthorizeSetting = {
+  returnValue: function returnValue(result) {var
+    locationReducedAccuracy = result.locationReducedAccuracy;
+
+    result.locationAccuracy = 'unsupported';
+    if (locationReducedAccuracy === true) {
+      result.locationAccuracy = 'reduced';
+    } else if (locationReducedAccuracy === false) {
+      result.locationAccuracy = 'full';
+    }
+  } };
+
+
+// import navigateTo from 'uni-helpers/navigate-to'
+
 var protocols = {
   redirectTo: redirectTo,
-  navigateTo: navigateTo,
+  // navigateTo,  // 由于在微信开发者工具的页面参数，会显示__id__参数，因此暂时关闭mp-weixin对于navigateTo的AOP
   previewImage: previewImage,
-  getSystemInfo: {
-    returnValue: addSafeAreaInsets },
-
-  getSystemInfoSync: {
-    returnValue: addSafeAreaInsets } };
-
+  getSystemInfo: getSystemInfo,
+  getSystemInfoSync: getSystemInfo,
+  showActionSheet: showActionSheet,
+  getAppBaseInfo: getAppBaseInfo,
+  getDeviceInfo: getDeviceInfo,
+  getWindowInfo: getWindowInfo,
+  getAppAuthorizeSetting: getAppAuthorizeSetting };
 
 var todos = [
 'vibrate',
@@ -588,7 +966,7 @@ function processArgs(methodName, fromArgs) {var argsOption = arguments.length > 
           keyOption = keyOption(fromArgs[key], fromArgs, toArgs);
         }
         if (!keyOption) {// 不支持的参数
-          console.warn("\u5FAE\u4FE1\u5C0F\u7A0B\u5E8F ".concat(methodName, "\u6682\u4E0D\u652F\u6301").concat(key));
+          console.warn("The '".concat(methodName, "' method of platform '\u5FAE\u4FE1\u5C0F\u7A0B\u5E8F' does not support option '").concat(key, "'"));
         } else if (isStr(keyOption)) {// 重写参数 key
           toArgs[keyOption] = fromArgs[key];
         } else if (isPlainObject(keyOption)) {// {name:newName,value:value}可重新指定参数 key:value
@@ -623,7 +1001,7 @@ function wrapper(methodName, method) {
     var protocol = protocols[methodName];
     if (!protocol) {// 暂不支持的 api
       return function () {
-        console.error("\u5FAE\u4FE1\u5C0F\u7A0B\u5E8F \u6682\u4E0D\u652F\u6301".concat(methodName));
+        console.error("Platform '\u5FAE\u4FE1\u5C0F\u7A0B\u5E8F' does not support '".concat(methodName, "'."));
       };
     }
     return function (arg1, arg2) {// 目前 api 最多两个参数
@@ -670,7 +1048,7 @@ function createTodoApi(name) {
 
   {var fail = _ref.fail,complete = _ref.complete;
     var res = {
-      errMsg: "".concat(name, ":fail:\u6682\u4E0D\u652F\u6301 ").concat(name, " \u65B9\u6CD5") };
+      errMsg: "".concat(name, ":fail method '").concat(name, "' not supported") };
 
     isFn(fail) && fail(res);
     isFn(complete) && complete(res);
@@ -704,7 +1082,7 @@ function getProvider(_ref2)
     isFn(success) && success(res);
   } else {
     res = {
-      errMsg: 'getProvider:fail:服务[' + service + ']不存在' };
+      errMsg: 'getProvider:fail service not found' };
 
     isFn(fail) && fail(res);
   }
@@ -751,8 +1129,153 @@ var eventApi = /*#__PURE__*/Object.freeze({
   $emit: $emit });
 
 
+/**
+                    * 框架内 try-catch
+                    */
+/**
+                        * 开发者 try-catch
+                        */
+function tryCatch(fn) {
+  return function () {
+    try {
+      return fn.apply(fn, arguments);
+    } catch (e) {
+      // TODO
+      console.error(e);
+    }
+  };
+}
+
+function getApiCallbacks(params) {
+  var apiCallbacks = {};
+  for (var name in params) {
+    var param = params[name];
+    if (isFn(param)) {
+      apiCallbacks[name] = tryCatch(param);
+      delete params[name];
+    }
+  }
+  return apiCallbacks;
+}
+
+var cid;
+var cidErrMsg;
+var enabled;
+
+function normalizePushMessage(message) {
+  try {
+    return JSON.parse(message);
+  } catch (e) {}
+  return message;
+}
+
+function invokePushCallback(
+args)
+{
+  if (args.type === 'enabled') {
+    enabled = true;
+  } else if (args.type === 'clientId') {
+    cid = args.cid;
+    cidErrMsg = args.errMsg;
+    invokeGetPushCidCallbacks(cid, args.errMsg);
+  } else if (args.type === 'pushMsg') {
+    var message = {
+      type: 'receive',
+      data: normalizePushMessage(args.message) };
+
+    for (var i = 0; i < onPushMessageCallbacks.length; i++) {
+      var callback = onPushMessageCallbacks[i];
+      callback(message);
+      // 该消息已被阻止
+      if (message.stopped) {
+        break;
+      }
+    }
+  } else if (args.type === 'click') {
+    onPushMessageCallbacks.forEach(function (callback) {
+      callback({
+        type: 'click',
+        data: normalizePushMessage(args.message) });
+
+    });
+  }
+}
+
+var getPushCidCallbacks = [];
+
+function invokeGetPushCidCallbacks(cid, errMsg) {
+  getPushCidCallbacks.forEach(function (callback) {
+    callback(cid, errMsg);
+  });
+  getPushCidCallbacks.length = 0;
+}
+
+function getPushClientId(args) {
+  if (!isPlainObject(args)) {
+    args = {};
+  }var _getApiCallbacks =
+
+
+
+
+  getApiCallbacks(args),success = _getApiCallbacks.success,fail = _getApiCallbacks.fail,complete = _getApiCallbacks.complete;
+  var hasSuccess = isFn(success);
+  var hasFail = isFn(fail);
+  var hasComplete = isFn(complete);
+
+  Promise.resolve().then(function () {
+    if (typeof enabled === 'undefined') {
+      enabled = false;
+      cid = '';
+      cidErrMsg = 'uniPush is not enabled';
+    }
+    getPushCidCallbacks.push(function (cid, errMsg) {
+      var res;
+      if (cid) {
+        res = {
+          errMsg: 'getPushClientId:ok',
+          cid: cid };
+
+        hasSuccess && success(res);
+      } else {
+        res = {
+          errMsg: 'getPushClientId:fail' + (errMsg ? ' ' + errMsg : '') };
+
+        hasFail && fail(res);
+      }
+      hasComplete && complete(res);
+    });
+    if (typeof cid !== 'undefined') {
+      invokeGetPushCidCallbacks(cid, cidErrMsg);
+    }
+  });
+}
+
+var onPushMessageCallbacks = [];
+// 不使用 defineOnApi 实现，是因为 defineOnApi 依赖 UniServiceJSBridge ，该对象目前在小程序上未提供，故简单实现
+var onPushMessage = function onPushMessage(fn) {
+  if (onPushMessageCallbacks.indexOf(fn) === -1) {
+    onPushMessageCallbacks.push(fn);
+  }
+};
+
+var offPushMessage = function offPushMessage(fn) {
+  if (!fn) {
+    onPushMessageCallbacks.length = 0;
+  } else {
+    var index = onPushMessageCallbacks.indexOf(fn);
+    if (index > -1) {
+      onPushMessageCallbacks.splice(index, 1);
+    }
+  }
+};
+
 var api = /*#__PURE__*/Object.freeze({
-  __proto__: null });
+  __proto__: null,
+  getPushClientId: getPushClientId,
+  onPushMessage: onPushMessage,
+  offPushMessage: offPushMessage,
+  invokePushCallback: invokePushCallback });
 
 
 var MPPage = Page;
@@ -765,18 +1288,29 @@ var customize = cached(function (str) {
 });
 
 function initTriggerEvent(mpInstance) {
-  {
-    if (!wx.canIUse('nextTick')) {
-      return;
-    }
-  }
   var oldTriggerEvent = mpInstance.triggerEvent;
-  mpInstance.triggerEvent = function (event) {for (var _len4 = arguments.length, args = new Array(_len4 > 1 ? _len4 - 1 : 0), _key4 = 1; _key4 < _len4; _key4++) {args[_key4 - 1] = arguments[_key4];}
-    return oldTriggerEvent.apply(mpInstance, [customize(event)].concat(args));
+  var newTriggerEvent = function newTriggerEvent(event) {for (var _len3 = arguments.length, args = new Array(_len3 > 1 ? _len3 - 1 : 0), _key3 = 1; _key3 < _len3; _key3++) {args[_key3 - 1] = arguments[_key3];}
+    // 事件名统一转驼峰格式，仅处理：当前组件为 vue 组件、当前组件为 vue 组件子组件
+    if (this.$vm || this.dataset && this.dataset.comType) {
+      event = customize(event);
+    } else {
+      // 针对微信/QQ小程序单独补充驼峰格式事件，以兼容历史项目
+      var newEvent = customize(event);
+      if (newEvent !== event) {
+        oldTriggerEvent.apply(this, [newEvent].concat(args));
+      }
+    }
+    return oldTriggerEvent.apply(this, [event].concat(args));
   };
+  try {
+    // 京东小程序 triggerEvent 为只读
+    mpInstance.triggerEvent = newTriggerEvent;
+  } catch (error) {
+    mpInstance._triggerEvent = newTriggerEvent;
+  }
 }
 
-function initHook(name, options) {
+function initHook(name, options, isComponent) {
   var oldHook = options[name];
   if (!oldHook) {
     options[name] = function () {
@@ -784,21 +1318,24 @@ function initHook(name, options) {
     };
   } else {
     options[name] = function () {
-      initTriggerEvent(this);for (var _len5 = arguments.length, args = new Array(_len5), _key5 = 0; _key5 < _len5; _key5++) {args[_key5] = arguments[_key5];}
+      initTriggerEvent(this);for (var _len4 = arguments.length, args = new Array(_len4), _key4 = 0; _key4 < _len4; _key4++) {args[_key4] = arguments[_key4];}
       return oldHook.apply(this, args);
     };
   }
 }
+if (!MPPage.__$wrappered) {
+  MPPage.__$wrappered = true;
+  Page = function Page() {var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+    initHook('onLoad', options);
+    return MPPage(options);
+  };
+  Page.after = MPPage.after;
 
-Page = function Page() {var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  initHook('onLoad', options);
-  return MPPage(options);
-};
-
-Component = function Component() {var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  initHook('created', options);
-  return MPComponent(options);
-};
+  Component = function Component() {var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+    initHook('created', options);
+    return MPComponent(options);
+  };
+}
 
 var PAGE_EVENT_HOOKS = [
 'onPullDownRefresh',
@@ -860,6 +1397,29 @@ function initHooks(mpOptions, hooks, vueOptions) {
       };
     }
   });
+}
+
+function initUnknownHooks(mpOptions, vueOptions) {var excludes = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : [];
+  findHooks(vueOptions).forEach(function (hook) {return initHook$1(mpOptions, hook, excludes);});
+}
+
+function findHooks(vueOptions) {var hooks = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+  if (vueOptions) {
+    Object.keys(vueOptions).forEach(function (name) {
+      if (name.indexOf('on') === 0 && isFn(vueOptions[name])) {
+        hooks.push(name);
+      }
+    });
+  }
+  return hooks;
+}
+
+function initHook$1(mpOptions, hook, excludes) {
+  if (excludes.indexOf(hook) === -1 && !hasOwn(mpOptions, hook)) {
+    mpOptions[hook] = function (args) {
+      return this.$vm && this.$vm.__call_hook(hook, args);
+    };
+  }
 }
 
 function initVueComponent(Vue, vueOptions) {
@@ -999,17 +1559,29 @@ function parsePropType(key, type, defaultValue, file) {
   return type;
 }
 
-function initProperties(props) {var isBehavior = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;var file = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '';
+function initProperties(props) {var isBehavior = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;var file = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '';var options = arguments.length > 3 ? arguments[3] : undefined;
   var properties = {};
   if (!isBehavior) {
     properties.vueId = {
       type: String,
       value: '' };
 
-    // 用于字节跳动小程序模拟抽象节点
-    properties.generic = {
-      type: Object,
-      value: null };
+    {
+      if (options.virtualHost) {
+        properties.virtualHostStyle = {
+          type: null,
+          value: '' };
+
+        properties.virtualHostClass = {
+          type: null,
+          value: '' };
+
+      }
+    }
+    // scopedSlotsCompiler auto
+    properties.scopedSlotsCompiler = {
+      type: String,
+      value: '' };
 
     properties.vueSlots = { // 小程序不能直接定义 $slots 的 props，所以通过 vueSlots 转换到 $slots
       type: null,
@@ -1135,7 +1707,7 @@ function getExtraValue(vm, dataPathsArray) {
   return context;
 }
 
-function processEventExtra(vm, extra, event) {
+function processEventExtra(vm, extra, event, __args__) {
   var extraObj = {};
 
   if (Array.isArray(extra) && extra.length) {
@@ -1158,11 +1730,7 @@ function processEventExtra(vm, extra, event) {
           if (dataPath === '$event') {// $event
             extraObj['$' + index] = event;
           } else if (dataPath === 'arguments') {
-            if (event.detail && event.detail.__args__) {
-              extraObj['$' + index] = event.detail.__args__;
-            } else {
-              extraObj['$' + index] = [event];
-            }
+            extraObj['$' + index] = event.detail ? event.detail.__args__ || __args__ : __args__;
           } else if (dataPath.indexOf('$event.') === 0) {// $event.target.value
             extraObj['$' + index] = vm.__get_value(dataPath.replace('$event.', ''), event);
           } else {
@@ -1189,6 +1757,12 @@ function getObjByArray(arr) {
 
 function processEventArgs(vm, event) {var args = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : [];var extra = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : [];var isCustom = arguments.length > 4 ? arguments[4] : undefined;var methodName = arguments.length > 5 ? arguments[5] : undefined;
   var isCustomMPEvent = false; // wxcomponent 组件，传递原始 event 对象
+
+  // fixed 用户直接触发 mpInstance.triggerEvent
+  var __args__ = isPlainObject(event.detail) ?
+  event.detail.__args__ || [event.detail] :
+  [event.detail];
+
   if (isCustom) {// 自定义事件
     isCustomMPEvent = event.currentTarget &&
     event.currentTarget.dataset &&
@@ -1197,11 +1771,11 @@ function processEventArgs(vm, event) {var args = arguments.length > 2 && argumen
       if (isCustomMPEvent) {
         return [event];
       }
-      return event.detail.__args__ || event.detail;
+      return __args__;
     }
   }
 
-  var extraObj = processEventExtra(vm, extra, event);
+  var extraObj = processEventExtra(vm, extra, event, __args__);
 
   var ret = [];
   args.forEach(function (arg) {
@@ -1210,7 +1784,7 @@ function processEventArgs(vm, event) {var args = arguments.length > 2 && argumen
         ret.push(event.target.value);
       } else {
         if (isCustom && !isCustomMPEvent) {
-          ret.push(event.detail.__args__[0]);
+          ret.push(__args__[0]);
         } else {// wxcomponent 组件或内置组件
           ret.push(event);
         }
@@ -1301,7 +1875,9 @@ function handleEvent(event) {var _this2 = this;
           }
           var handler = handlerCtx[methodName];
           if (!isFn(handler)) {
-            throw new Error(" _vm.".concat(methodName, " is not a function"));
+            var _type = _this2.$vm.mpType === 'page' ? 'Page' : 'Component';
+            var path = _this2.route || _this2.is;
+            throw new Error("".concat(_type, " \"").concat(path, "\" does not have a method \"").concat(methodName, "\""));
           }
           if (isOnce) {
             if (handler.once) {
@@ -1317,9 +1893,13 @@ function handleEvent(event) {var _this2 = this;
           isCustom,
           methodName);
 
+          params = Array.isArray(params) ? params : [];
           // 参数尾部增加原始事件对象用于复杂表达式内获取额外数据
-          // eslint-disable-next-line no-sparse-arrays
-          ret.push(handler.apply(handlerCtx, (Array.isArray(params) ? params : []).concat([,,,,,,,,,, event])));
+          if (/=\s*\S+\.eventParams\s*\|\|\s*\S+\[['"]event-params['"]\]/.test(handler.toString())) {
+            // eslint-disable-next-line no-sparse-arrays
+            params = params.concat([,,,,,,,,,, event]);
+          }
+          ret.push(handler.apply(handlerCtx, params));
         }
       });
     }
@@ -1334,6 +1914,19 @@ function handleEvent(event) {var _this2 = this;
   }
 }
 
+var eventChannels = {};
+
+var eventChannelStack = [];
+
+function getEventChannel(id) {
+  if (id) {
+    var eventChannel = eventChannels[id];
+    delete eventChannels[id];
+    return eventChannel;
+  }
+  return eventChannelStack.shift();
+}
+
 var hooks = [
 'onShow',
 'onHide',
@@ -1343,13 +1936,87 @@ var hooks = [
 'onUnhandledRejection'];
 
 
+function initEventChannel() {
+  _vue.default.prototype.getOpenerEventChannel = function () {
+    // 微信小程序使用自身getOpenerEventChannel
+    {
+      return this.$scope.getOpenerEventChannel();
+    }
+  };
+  var callHook = _vue.default.prototype.__call_hook;
+  _vue.default.prototype.__call_hook = function (hook, args) {
+    if (hook === 'onLoad' && args && args.__id__) {
+      this.__eventChannel__ = getEventChannel(args.__id__);
+      delete args.__id__;
+    }
+    return callHook.call(this, hook, args);
+  };
+}
+
+function initScopedSlotsParams() {
+  var center = {};
+  var parents = {};
+
+  _vue.default.prototype.$hasScopedSlotsParams = function (vueId) {
+    var has = center[vueId];
+    if (!has) {
+      parents[vueId] = this;
+      this.$on('hook:destroyed', function () {
+        delete parents[vueId];
+      });
+    }
+    return has;
+  };
+
+  _vue.default.prototype.$getScopedSlotsParams = function (vueId, name, key) {
+    var data = center[vueId];
+    if (data) {
+      var object = data[name] || {};
+      return key ? object[key] : object;
+    } else {
+      parents[vueId] = this;
+      this.$on('hook:destroyed', function () {
+        delete parents[vueId];
+      });
+    }
+  };
+
+  _vue.default.prototype.$setScopedSlotsParams = function (name, value) {
+    var vueIds = this.$options.propsData.vueId;
+    if (vueIds) {
+      var vueId = vueIds.split(',')[0];
+      var object = center[vueId] = center[vueId] || {};
+      object[name] = value;
+      if (parents[vueId]) {
+        parents[vueId].$forceUpdate();
+      }
+    }
+  };
+
+  _vue.default.mixin({
+    destroyed: function destroyed() {
+      var propsData = this.$options.propsData;
+      var vueId = propsData && propsData.vueId;
+      if (vueId) {
+        delete center[vueId];
+        delete parents[vueId];
+      }
+    } });
+
+}
+
 function parseBaseApp(vm, _ref3)
 
 
 {var mocks = _ref3.mocks,initRefs = _ref3.initRefs;
+  initEventChannel();
+  {
+    initScopedSlotsParams();
+  }
   if (vm.$options.store) {
     _vue.default.prototype.$store = vm.$options.store;
   }
+  uniIdMixin(_vue.default);
 
   _vue.default.prototype.mpHost = "mp-weixin";
 
@@ -1370,7 +2037,12 @@ function parseBaseApp(vm, _ref3)
 
       delete this.$options.mpType;
       delete this.$options.mpInstance;
-
+      if (this.mpType === 'page' && typeof getApp === 'function') {// hack vue-i18n
+        var app = getApp();
+        if (app.$vm && app.$vm.$i18n) {
+          this._i18n = app.$vm.$i18n;
+        }
+      }
       if (this.mpType !== 'app') {
         initRefs(this);
         initMocks(this, mocks);
@@ -1384,7 +2056,7 @@ function parseBaseApp(vm, _ref3)
         return;
       }
       {
-        if (!wx.canIUse('nextTick')) {// 事实 上2.2.3 即可，简单使用 2.3.0 的 nextTick 判断
+        if (wx.canIUse && !wx.canIUse('nextTick')) {// 事实 上2.2.3 即可，简单使用 2.3.0 的 nextTick 判断
           console.error('当前微信基础库版本过低，请将 微信开发者工具-详情-项目设置-调试基础库版本 更换为`2.3.0`以上');
         }
       }
@@ -1416,7 +2088,10 @@ function parseBaseApp(vm, _ref3)
     });
   }
 
+  initAppLocale(_vue.default, vm, normalizeLocale(wx.getSystemInfoSync().language) || LOCALE_EN);
+
   initHooks(appOptions, hooks);
+  initUnknownHooks(appOptions, vm.$options);
 
   return appOptions;
 }
@@ -1454,16 +2129,28 @@ function initRelation(detail) {
   this.triggerEvent('__l', detail);
 }
 
+function selectAllComponents(mpInstance, selector, $refs) {
+  var components = mpInstance.selectAllComponents(selector);
+  components.forEach(function (component) {
+    var ref = component.dataset.ref;
+    $refs[ref] = component.$vm || component;
+    {
+      if (component.dataset.vueGeneric === 'scoped') {
+        component.selectAllComponents('.scoped-ref').forEach(function (scopedComponent) {
+          selectAllComponents(scopedComponent, selector, $refs);
+        });
+      }
+    }
+  });
+}
+
 function initRefs(vm) {
   var mpInstance = vm.$scope;
   Object.defineProperty(vm, '$refs', {
     get: function get() {
       var $refs = {};
-      var components = mpInstance.selectAllComponents('.vue-ref');
-      components.forEach(function (component) {
-        var ref = component.dataset.ref;
-        $refs[ref] = component.$vm || component;
-      });
+      selectAllComponents(mpInstance, '.vue-ref', $refs);
+      // TODO 暂不考虑 for 中的 scoped
       var forComponents = mpInstance.selectAllComponents('.vue-ref-in-for');
       forComponents.forEach(function (component) {
         var ref = component.dataset.ref;
@@ -1504,20 +2191,6 @@ function parseApp(vm) {
 }
 
 function createApp(vm) {
-  _vue.default.prototype.getOpenerEventChannel = function () {
-    if (!this.__eventChannel__) {
-      this.__eventChannel__ = new EventChannel();
-    }
-    return this.__eventChannel__;
-  };
-  var callHook = _vue.default.prototype.__call_hook;
-  _vue.default.prototype.__call_hook = function (hook, args) {
-    if (hook === 'onLoad' && args && args.__id__) {
-      this.__eventChannel__ = getEventChannel(args.__id__);
-      delete args.__id__;
-    }
-    return callHook.call(this, hook, args);
-  };
   App(parseApp(vm));
   return vm;
 }
@@ -1588,7 +2261,7 @@ function parseBaseComponent(vueComponentOptions)
     options: options,
     data: initData(vueOptions, _vue.default.prototype),
     behaviors: initBehaviors(vueOptions, initBehavior),
-    properties: initProperties(vueOptions.props, false, vueOptions.__file),
+    properties: initProperties(vueOptions.props, false, vueOptions.__file, options),
     lifetimes: {
       attached: function attached() {
         var properties = this.properties;
@@ -1686,6 +2359,7 @@ function parseBasePage(vuePageOptions, _ref6)
   var pageOptions = parseComponent(vuePageOptions);
 
   initHooks(pageOptions.methods, hooks$1, vuePageOptions);
+  initUnknownHooks(pageOptions.methods, vuePageOptions);
 
   pageOptions.methods.onLoad = function (query) {
     this.options = query;
@@ -1718,6 +2392,61 @@ function createComponent(vueOptions) {
   {
     return Component(parseComponent(vueOptions));
   }
+}
+
+function createSubpackageApp(vm) {
+  var appOptions = parseApp(vm);
+  var app = getApp({
+    allowDefault: true });
+
+  vm.$scope = app;
+  var globalData = app.globalData;
+  if (globalData) {
+    Object.keys(appOptions.globalData).forEach(function (name) {
+      if (!hasOwn(globalData, name)) {
+        globalData[name] = appOptions.globalData[name];
+      }
+    });
+  }
+  Object.keys(appOptions).forEach(function (name) {
+    if (!hasOwn(app, name)) {
+      app[name] = appOptions[name];
+    }
+  });
+  if (isFn(appOptions.onShow) && wx.onAppShow) {
+    wx.onAppShow(function () {for (var _len5 = arguments.length, args = new Array(_len5), _key5 = 0; _key5 < _len5; _key5++) {args[_key5] = arguments[_key5];}
+      vm.__call_hook('onShow', args);
+    });
+  }
+  if (isFn(appOptions.onHide) && wx.onAppHide) {
+    wx.onAppHide(function () {for (var _len6 = arguments.length, args = new Array(_len6), _key6 = 0; _key6 < _len6; _key6++) {args[_key6] = arguments[_key6];}
+      vm.__call_hook('onHide', args);
+    });
+  }
+  if (isFn(appOptions.onLaunch)) {
+    var args = wx.getLaunchOptionsSync && wx.getLaunchOptionsSync();
+    vm.__call_hook('onLaunch', args);
+  }
+  return vm;
+}
+
+function createPlugin(vm) {
+  var appOptions = parseApp(vm);
+  if (isFn(appOptions.onShow) && wx.onAppShow) {
+    wx.onAppShow(function () {for (var _len7 = arguments.length, args = new Array(_len7), _key7 = 0; _key7 < _len7; _key7++) {args[_key7] = arguments[_key7];}
+      vm.__call_hook('onShow', args);
+    });
+  }
+  if (isFn(appOptions.onHide) && wx.onAppHide) {
+    wx.onAppHide(function () {for (var _len8 = arguments.length, args = new Array(_len8), _key8 = 0; _key8 < _len8; _key8++) {args[_key8] = arguments[_key8];}
+      vm.__call_hook('onHide', args);
+    });
+  }
+  if (isFn(appOptions.onLaunch)) {
+    var args = wx.getLaunchOptionsSync && wx.getLaunchOptionsSync();
+    vm.__call_hook('onLaunch', args);
+  }
+  return vm;
 }
 
 todos.forEach(function (todoApi) {
@@ -1799,13 +2528,509 @@ if (typeof Proxy !== 'undefined' && "mp-weixin" !== 'app-plus') {
 wx.createApp = createApp;
 wx.createPage = createPage;
 wx.createComponent = createComponent;
+wx.createSubpackageApp = createSubpackageApp;
+wx.createPlugin = createPlugin;
 
 var uni$1 = uni;var _default =
 
 uni$1;exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../webpack/buildin/global.js */ 2)))
 
 /***/ }),
 /* 2 */
+/*!***********************************!*\
+  !*** (webpack)/buildin/global.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || new Function("return this")();
+} catch (e) {
+	// This works if the window reference is available
+	if (typeof window === "object") g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ }),
+/* 3 */
+/*!*************************************************************!*\
+  !*** ./node_modules/@dcloudio/uni-i18n/dist/uni-i18n.es.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni, global) {Object.defineProperty(exports, "__esModule", { value: true });exports.compileI18nJsonStr = compileI18nJsonStr;exports.hasI18nJson = hasI18nJson;exports.initVueI18n = initVueI18n;exports.isI18nStr = isI18nStr;exports.normalizeLocale = normalizeLocale;exports.parseI18nJson = parseI18nJson;exports.resolveLocale = resolveLocale;exports.isString = exports.LOCALE_ZH_HANT = exports.LOCALE_ZH_HANS = exports.LOCALE_FR = exports.LOCALE_ES = exports.LOCALE_EN = exports.I18n = exports.Formatter = void 0;function _slicedToArray(arr, i) {return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();}function _nonIterableRest() {throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}function _iterableToArrayLimit(arr, i) {if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i["return"] != null) _i["return"]();} finally {if (_d) throw _e;}}return _arr;}function _arrayWithHoles(arr) {if (Array.isArray(arr)) return arr;}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}var isArray = Array.isArray;
+var isObject = function isObject(val) {return val !== null && typeof val === 'object';};
+var defaultDelimiters = ['{', '}'];var
+BaseFormatter = /*#__PURE__*/function () {
+  function BaseFormatter() {_classCallCheck(this, BaseFormatter);
+    this._caches = Object.create(null);
+  }_createClass(BaseFormatter, [{ key: "interpolate", value: function interpolate(
+    message, values) {var delimiters = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : defaultDelimiters;
+      if (!values) {
+        return [message];
+      }
+      var tokens = this._caches[message];
+      if (!tokens) {
+        tokens = parse(message, delimiters);
+        this._caches[message] = tokens;
+      }
+      return compile(tokens, values);
+    } }]);return BaseFormatter;}();exports.Formatter = BaseFormatter;
+
+var RE_TOKEN_LIST_VALUE = /^(?:\d)+/;
+var RE_TOKEN_NAMED_VALUE = /^(?:\w)+/;
+function parse(format, _ref) {var _ref2 = _slicedToArray(_ref, 2),startDelimiter = _ref2[0],endDelimiter = _ref2[1];
+  var tokens = [];
+  var position = 0;
+  var text = '';
+  while (position < format.length) {
+    var char = format[position++];
+    if (char === startDelimiter) {
+      if (text) {
+        tokens.push({ type: 'text', value: text });
+      }
+      text = '';
+      var sub = '';
+      char = format[position++];
+      while (char !== undefined && char !== endDelimiter) {
+        sub += char;
+        char = format[position++];
+      }
+      var isClosed = char === endDelimiter;
+      var type = RE_TOKEN_LIST_VALUE.test(sub) ?
+      'list' :
+      isClosed && RE_TOKEN_NAMED_VALUE.test(sub) ?
+      'named' :
+      'unknown';
+      tokens.push({ value: sub, type: type });
+    }
+    //  else if (char === '%') {
+    //   // when found rails i18n syntax, skip text capture
+    //   if (format[position] !== '{') {
+    //     text += char
+    //   }
+    // }
+    else {
+        text += char;
+      }
+  }
+  text && tokens.push({ type: 'text', value: text });
+  return tokens;
+}
+function compile(tokens, values) {
+  var compiled = [];
+  var index = 0;
+  var mode = isArray(values) ?
+  'list' :
+  isObject(values) ?
+  'named' :
+  'unknown';
+  if (mode === 'unknown') {
+    return compiled;
+  }
+  while (index < tokens.length) {
+    var token = tokens[index];
+    switch (token.type) {
+      case 'text':
+        compiled.push(token.value);
+        break;
+      case 'list':
+        compiled.push(values[parseInt(token.value, 10)]);
+        break;
+      case 'named':
+        if (mode === 'named') {
+          compiled.push(values[token.value]);
+        } else
+        {
+          if (true) {
+            console.warn("Type of token '".concat(token.type, "' and format of value '").concat(mode, "' don't match!"));
+          }
+        }
+        break;
+      case 'unknown':
+        if (true) {
+          console.warn("Detect 'unknown' type of token!");
+        }
+        break;}
+
+    index++;
+  }
+  return compiled;
+}
+
+var LOCALE_ZH_HANS = 'zh-Hans';exports.LOCALE_ZH_HANS = LOCALE_ZH_HANS;
+var LOCALE_ZH_HANT = 'zh-Hant';exports.LOCALE_ZH_HANT = LOCALE_ZH_HANT;
+var LOCALE_EN = 'en';exports.LOCALE_EN = LOCALE_EN;
+var LOCALE_FR = 'fr';exports.LOCALE_FR = LOCALE_FR;
+var LOCALE_ES = 'es';exports.LOCALE_ES = LOCALE_ES;
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+var hasOwn = function hasOwn(val, key) {return hasOwnProperty.call(val, key);};
+var defaultFormatter = new BaseFormatter();
+function include(str, parts) {
+  return !!parts.find(function (part) {return str.indexOf(part) !== -1;});
+}
+function startsWith(str, parts) {
+  return parts.find(function (part) {return str.indexOf(part) === 0;});
+}
+function normalizeLocale(locale, messages) {
+  if (!locale) {
+    return;
+  }
+  locale = locale.trim().replace(/_/g, '-');
+  if (messages && messages[locale]) {
+    return locale;
+  }
+  locale = locale.toLowerCase();
+  if (locale.indexOf('zh') === 0) {
+    if (locale.indexOf('-hans') > -1) {
+      return LOCALE_ZH_HANS;
+    }
+    if (locale.indexOf('-hant') > -1) {
+      return LOCALE_ZH_HANT;
+    }
+    if (include(locale, ['-tw', '-hk', '-mo', '-cht'])) {
+      return LOCALE_ZH_HANT;
+    }
+    return LOCALE_ZH_HANS;
+  }
+  var lang = startsWith(locale, [LOCALE_EN, LOCALE_FR, LOCALE_ES]);
+  if (lang) {
+    return lang;
+  }
+}var
+I18n = /*#__PURE__*/function () {
+  function I18n(_ref3) {var locale = _ref3.locale,fallbackLocale = _ref3.fallbackLocale,messages = _ref3.messages,watcher = _ref3.watcher,formater = _ref3.formater;_classCallCheck(this, I18n);
+    this.locale = LOCALE_EN;
+    this.fallbackLocale = LOCALE_EN;
+    this.message = {};
+    this.messages = {};
+    this.watchers = [];
+    if (fallbackLocale) {
+      this.fallbackLocale = fallbackLocale;
+    }
+    this.formater = formater || defaultFormatter;
+    this.messages = messages || {};
+    this.setLocale(locale || LOCALE_EN);
+    if (watcher) {
+      this.watchLocale(watcher);
+    }
+  }_createClass(I18n, [{ key: "setLocale", value: function setLocale(
+    locale) {var _this = this;
+      var oldLocale = this.locale;
+      this.locale = normalizeLocale(locale, this.messages) || this.fallbackLocale;
+      if (!this.messages[this.locale]) {
+        // 可能初始化时不存在
+        this.messages[this.locale] = {};
+      }
+      this.message = this.messages[this.locale];
+      // 仅发生变化时，通知
+      if (oldLocale !== this.locale) {
+        this.watchers.forEach(function (watcher) {
+          watcher(_this.locale, oldLocale);
+        });
+      }
+    } }, { key: "getLocale", value: function getLocale()
+    {
+      return this.locale;
+    } }, { key: "watchLocale", value: function watchLocale(
+    fn) {var _this2 = this;
+      var index = this.watchers.push(fn) - 1;
+      return function () {
+        _this2.watchers.splice(index, 1);
+      };
+    } }, { key: "add", value: function add(
+    locale, message) {var override = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+      var curMessages = this.messages[locale];
+      if (curMessages) {
+        if (override) {
+          Object.assign(curMessages, message);
+        } else
+        {
+          Object.keys(message).forEach(function (key) {
+            if (!hasOwn(curMessages, key)) {
+              curMessages[key] = message[key];
+            }
+          });
+        }
+      } else
+      {
+        this.messages[locale] = message;
+      }
+    } }, { key: "f", value: function f(
+    message, values, delimiters) {
+      return this.formater.interpolate(message, values, delimiters).join('');
+    } }, { key: "t", value: function t(
+    key, locale, values) {
+      var message = this.message;
+      if (typeof locale === 'string') {
+        locale = normalizeLocale(locale, this.messages);
+        locale && (message = this.messages[locale]);
+      } else
+      {
+        values = locale;
+      }
+      if (!hasOwn(message, key)) {
+        console.warn("Cannot translate the value of keypath ".concat(key, ". Use the value of keypath as default."));
+        return key;
+      }
+      return this.formater.interpolate(message[key], values).join('');
+    } }]);return I18n;}();exports.I18n = I18n;
+
+
+function watchAppLocale(appVm, i18n) {
+  // 需要保证 watch 的触发在组件渲染之前
+  if (appVm.$watchLocale) {
+    // vue2
+    appVm.$watchLocale(function (newLocale) {
+      i18n.setLocale(newLocale);
+    });
+  } else
+  {
+    appVm.$watch(function () {return appVm.$locale;}, function (newLocale) {
+      i18n.setLocale(newLocale);
+    });
+  }
+}
+function getDefaultLocale() {
+  if (typeof uni !== 'undefined' && uni.getLocale) {
+    return uni.getLocale();
+  }
+  // 小程序平台，uni 和 uni-i18n 互相引用，导致访问不到 uni，故在 global 上挂了 getLocale
+  if (typeof global !== 'undefined' && global.getLocale) {
+    return global.getLocale();
+  }
+  return LOCALE_EN;
+}
+function initVueI18n(locale) {var messages = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};var fallbackLocale = arguments.length > 2 ? arguments[2] : undefined;var watcher = arguments.length > 3 ? arguments[3] : undefined;
+  // 兼容旧版本入参
+  if (typeof locale !== 'string') {var _ref4 =
+    [
+    messages,
+    locale];locale = _ref4[0];messages = _ref4[1];
+
+  }
+  if (typeof locale !== 'string') {
+    // 因为小程序平台，uni-i18n 和 uni 互相引用，导致此时访问 uni 时，为 undefined
+    locale = getDefaultLocale();
+  }
+  if (typeof fallbackLocale !== 'string') {
+    fallbackLocale =
+    typeof __uniConfig !== 'undefined' && __uniConfig.fallbackLocale ||
+    LOCALE_EN;
+  }
+  var i18n = new I18n({
+    locale: locale,
+    fallbackLocale: fallbackLocale,
+    messages: messages,
+    watcher: watcher });
+
+  var _t = function t(key, values) {
+    if (typeof getApp !== 'function') {
+      // app view
+      /* eslint-disable no-func-assign */
+      _t = function t(key, values) {
+        return i18n.t(key, values);
+      };
+    } else
+    {
+      var isWatchedAppLocale = false;
+      _t = function t(key, values) {
+        var appVm = getApp().$vm;
+        // 可能$vm还不存在，比如在支付宝小程序中，组件定义较早，在props的default里使用了t()函数（如uni-goods-nav），此时app还未初始化
+        // options: {
+        // 	type: Array,
+        // 	default () {
+        // 		return [{
+        // 			icon: 'shop',
+        // 			text: t("uni-goods-nav.options.shop"),
+        // 		}, {
+        // 			icon: 'cart',
+        // 			text: t("uni-goods-nav.options.cart")
+        // 		}]
+        // 	}
+        // },
+        if (appVm) {
+          // 触发响应式
+          appVm.$locale;
+          if (!isWatchedAppLocale) {
+            isWatchedAppLocale = true;
+            watchAppLocale(appVm, i18n);
+          }
+        }
+        return i18n.t(key, values);
+      };
+    }
+    return _t(key, values);
+  };
+  return {
+    i18n: i18n,
+    f: function f(message, values, delimiters) {
+      return i18n.f(message, values, delimiters);
+    },
+    t: function t(key, values) {
+      return _t(key, values);
+    },
+    add: function add(locale, message) {var override = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+      return i18n.add(locale, message, override);
+    },
+    watch: function watch(fn) {
+      return i18n.watchLocale(fn);
+    },
+    getLocale: function getLocale() {
+      return i18n.getLocale();
+    },
+    setLocale: function setLocale(newLocale) {
+      return i18n.setLocale(newLocale);
+    } };
+
+}
+
+var isString = function isString(val) {return typeof val === 'string';};exports.isString = isString;
+var formater;
+function hasI18nJson(jsonObj, delimiters) {
+  if (!formater) {
+    formater = new BaseFormatter();
+  }
+  return walkJsonObj(jsonObj, function (jsonObj, key) {
+    var value = jsonObj[key];
+    if (isString(value)) {
+      if (isI18nStr(value, delimiters)) {
+        return true;
+      }
+    } else
+    {
+      return hasI18nJson(value, delimiters);
+    }
+  });
+}
+function parseI18nJson(jsonObj, values, delimiters) {
+  if (!formater) {
+    formater = new BaseFormatter();
+  }
+  walkJsonObj(jsonObj, function (jsonObj, key) {
+    var value = jsonObj[key];
+    if (isString(value)) {
+      if (isI18nStr(value, delimiters)) {
+        jsonObj[key] = compileStr(value, values, delimiters);
+      }
+    } else
+    {
+      parseI18nJson(value, values, delimiters);
+    }
+  });
+  return jsonObj;
+}
+function compileI18nJsonStr(jsonStr, _ref5) {var locale = _ref5.locale,locales = _ref5.locales,delimiters = _ref5.delimiters;
+  if (!isI18nStr(jsonStr, delimiters)) {
+    return jsonStr;
+  }
+  if (!formater) {
+    formater = new BaseFormatter();
+  }
+  var localeValues = [];
+  Object.keys(locales).forEach(function (name) {
+    if (name !== locale) {
+      localeValues.push({
+        locale: name,
+        values: locales[name] });
+
+    }
+  });
+  localeValues.unshift({ locale: locale, values: locales[locale] });
+  try {
+    return JSON.stringify(compileJsonObj(JSON.parse(jsonStr), localeValues, delimiters), null, 2);
+  }
+  catch (e) {}
+  return jsonStr;
+}
+function isI18nStr(value, delimiters) {
+  return value.indexOf(delimiters[0]) > -1;
+}
+function compileStr(value, values, delimiters) {
+  return formater.interpolate(value, values, delimiters).join('');
+}
+function compileValue(jsonObj, key, localeValues, delimiters) {
+  var value = jsonObj[key];
+  if (isString(value)) {
+    // 存在国际化
+    if (isI18nStr(value, delimiters)) {
+      jsonObj[key] = compileStr(value, localeValues[0].values, delimiters);
+      if (localeValues.length > 1) {
+        // 格式化国际化语言
+        var valueLocales = jsonObj[key + 'Locales'] = {};
+        localeValues.forEach(function (localValue) {
+          valueLocales[localValue.locale] = compileStr(value, localValue.values, delimiters);
+        });
+      }
+    }
+  } else
+  {
+    compileJsonObj(value, localeValues, delimiters);
+  }
+}
+function compileJsonObj(jsonObj, localeValues, delimiters) {
+  walkJsonObj(jsonObj, function (jsonObj, key) {
+    compileValue(jsonObj, key, localeValues, delimiters);
+  });
+  return jsonObj;
+}
+function walkJsonObj(jsonObj, walk) {
+  if (isArray(jsonObj)) {
+    for (var i = 0; i < jsonObj.length; i++) {
+      if (walk(jsonObj, i)) {
+        return true;
+      }
+    }
+  } else
+  if (isObject(jsonObj)) {
+    for (var key in jsonObj) {
+      if (walk(jsonObj, key)) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
+
+function resolveLocale(locales) {
+  return function (locale) {
+    if (!locale) {
+      return locale;
+    }
+    locale = normalizeLocale(locale) || locale;
+    return resolveLocaleChain(locale).find(function (locale) {return locales.indexOf(locale) > -1;});
+  };
+}
+function resolveLocaleChain(locale) {
+  var chain = [];
+  var tokens = locale.split('-');
+  while (tokens.length) {
+    chain.push(tokens.join('-'));
+    tokens.pop();
+  }
+  return chain;
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"], __webpack_require__(/*! ./../../../webpack/buildin/global.js */ 2)))
+
+/***/ }),
+/* 4 */
 /*!******************************************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js ***!
   \******************************************************************************************/
@@ -1816,7 +3041,7 @@ uni$1;exports.default = _default;
 __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function(global) {/*!
  * Vue.js v2.6.11
- * (c) 2014-2020 Evan You
+ * (c) 2014-2022 Evan You
  * Released under the MIT License.
  */
 /*  */
@@ -4460,7 +5685,7 @@ function renderList (
       var iterator = val[Symbol.iterator]();
       var result = iterator.next();
       while (!result.done) {
-        ret.push(render(result.value, ret.length, i++, i)); // fixed by xxxxxx
+        ret.push(render(result.value, ret.length, i, i++)); // fixed by xxxxxx
         result = iterator.next();
       }
     } else {
@@ -6425,7 +7650,7 @@ function initProps (vm, propsOptions) {
       defineReactive$$1(props, key, value, function () {
         if (!isRoot && !isUpdatingChildComponent) {
           {
-            if(vm.mpHost === 'mp-baidu'){//百度 observer 在 setData callback 之后触发，直接忽略该 warn
+            if(vm.mpHost === 'mp-baidu' || vm.mpHost === 'mp-kuaishou' || vm.mpHost === 'mp-xhs'){//百度、快手、小红书 observer 在 setData callback 之后触发，直接忽略该 warn
                 return
             }
             //fixed by xxxxxx __next_tick_pending,uni://form-field 时不告警
@@ -7272,7 +8497,7 @@ function _diff(current, pre, path, result) {
                 var currentType = type(currentValue);
                 var preType = type(preValue);
                 if (currentType != ARRAYTYPE && currentType != OBJECTTYPE) {
-                    if (currentValue != pre[key]) {
+                    if (currentValue !== pre[key]) {
                         setResult(result, (path == '' ? '' : path + ".") + key, currentValue);
                     }
                 } else if (currentType == ARRAYTYPE) {
@@ -7621,7 +8846,7 @@ function internalMixin(Vue) {
     Vue.util.warn(("Error in " + info + ": \"" + (err.toString()) + "\""), vm);
     console.error(err);
     /* eslint-disable no-undef */
-    var app = getApp();
+    var app = typeof getApp === 'function' && getApp();
     if (app && app.onError) {
       app.onError(err);
     }
@@ -7631,9 +8856,12 @@ function internalMixin(Vue) {
 
   Vue.prototype.$emit = function(event) {
     if (this.$scope && event) {
-      this.$scope['triggerEvent'](event, {
-        __args__: toArray(arguments, 1)
-      });
+      var triggerEvent = this.$scope['_triggerEvent'] || this.$scope['triggerEvent'];
+      if (triggerEvent) {
+        triggerEvent.call(this.$scope, event, {
+          __args__: toArray(arguments, 1)
+        });
+      }
     }
     return oldEmit.apply(this, arguments)
   };
@@ -7697,14 +8925,16 @@ function internalMixin(Vue) {
     if (!target) {
       target = this;
     }
-    target[key] = value;
+    // 解决动态属性添加
+    Vue.set(target, key, value);
   };
 
   Vue.prototype.__set_sync = function(target, key, value) {
     if (!target) {
       target = this;
     }
-    target[key] = value;
+    // 解决动态属性添加
+    Vue.set(target, key, value);
   };
 
   Vue.prototype.__get_orig = function(item) {
@@ -7775,6 +9005,7 @@ var LIFECYCLE_HOOKS$1 = [
     'onError',
     'onUnhandledRejection',
     //Page
+    'onInit',
     'onLoad',
     // 'onShow',
     'onReady',
@@ -7797,7 +9028,8 @@ var LIFECYCLE_HOOKS$1 = [
     // 'onReady', // 兼容旧版本，应该移除该事件
     'onPageShow',
     'onPageHide',
-    'onPageResize'
+    'onPageResize',
+    'onUploadDouyinVideo'
 ];
 function lifecycleMixin$1(Vue) {
 
@@ -7848,40 +9080,10 @@ internalMixin(Vue);
 
 /* harmony default export */ __webpack_exports__["default"] = (Vue);
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../webpack/buildin/global.js */ 3)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../webpack/buildin/global.js */ 2)))
 
 /***/ }),
-/* 3 */
-/*!***********************************!*\
-  !*** (webpack)/buildin/global.js ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-var g;
-
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || new Function("return this")();
-} catch (e) {
-	// This works if the window reference is available
-	if (typeof window === "object") g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
-
-
-/***/ }),
-/* 4 */
+/* 5 */
 /*!***********************************!*\
   !*** G:/yjbank-uniapp/pages.json ***!
   \***********************************/
@@ -7891,10 +9093,845 @@ module.exports = g;
 
 
 /***/ }),
-/* 5 */,
-/* 6 */,
-/* 7 */,
+/* 6 */
+/*!************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js ***!
+  \************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(global, uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 7));var _uniI18n = __webpack_require__(/*! @dcloudio/uni-i18n */ 3);var _pages = _interopRequireDefault(__webpack_require__(/*! @/pages.json */ 10));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _createForOfIteratorHelper(o, allowArrayLike) {var it;if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) {if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") {if (it) o = it;var i = 0;var F = function F() {};return { s: F, n: function n() {if (i >= o.length) return { done: true };return { done: false, value: o[i++] };}, e: function e(_e32) {throw _e32;}, f: F };}throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}var normalCompletion = true,didErr = false,err;return { s: function s() {it = o[Symbol.iterator]();}, n: function n() {var step = it.next();normalCompletion = step.done;return step;}, e: function e(_e33) {didErr = true;err = _e33;}, f: function f() {try {if (!normalCompletion && it.return != null) it.return();} finally {if (didErr) throw err;}} };}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function");}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } });if (superClass) _setPrototypeOf(subClass, superClass);}function _createSuper(Derived) {var hasNativeReflectConstruct = _isNativeReflectConstruct();return function _createSuperInternal() {var Super = _getPrototypeOf(Derived),result;if (hasNativeReflectConstruct) {var NewTarget = _getPrototypeOf(this).constructor;result = Reflect.construct(Super, arguments, NewTarget);} else {result = Super.apply(this, arguments);}return _possibleConstructorReturn(this, result);};}function _possibleConstructorReturn(self, call) {if (call && (typeof call === "object" || typeof call === "function")) {return call;}return _assertThisInitialized(self);}function _assertThisInitialized(self) {if (self === void 0) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return self;}function _wrapNativeSuper(Class) {var _cache = typeof Map === "function" ? new Map() : undefined;_wrapNativeSuper = function _wrapNativeSuper(Class) {if (Class === null || !_isNativeFunction(Class)) return Class;if (typeof Class !== "function") {throw new TypeError("Super expression must either be null or a function");}if (typeof _cache !== "undefined") {if (_cache.has(Class)) return _cache.get(Class);_cache.set(Class, Wrapper);}function Wrapper() {return _construct(Class, arguments, _getPrototypeOf(this).constructor);}Wrapper.prototype = Object.create(Class.prototype, { constructor: { value: Wrapper, enumerable: false, writable: true, configurable: true } });return _setPrototypeOf(Wrapper, Class);};return _wrapNativeSuper(Class);}function _construct(Parent, args, Class) {if (_isNativeReflectConstruct()) {_construct = Reflect.construct;} else {_construct = function _construct(Parent, args, Class) {var a = [null];a.push.apply(a, args);var Constructor = Function.bind.apply(Parent, a);var instance = new Constructor();if (Class) _setPrototypeOf(instance, Class.prototype);return instance;};}return _construct.apply(null, arguments);}function _isNativeReflectConstruct() {if (typeof Reflect === "undefined" || !Reflect.construct) return false;if (Reflect.construct.sham) return false;if (typeof Proxy === "function") return true;try {Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));return true;} catch (e) {return false;}}function _isNativeFunction(fn) {return Function.toString.call(fn).indexOf("[native code]") !== -1;}function _setPrototypeOf(o, p) {_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {o.__proto__ = p;return o;};return _setPrototypeOf(o, p);}function _getPrototypeOf(o) {_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {return o.__proto__ || Object.getPrototypeOf(o);};return _getPrototypeOf(o);}"undefined" != typeof globalThis ? globalThis : "undefined" != typeof window ? window : "undefined" != typeof global ? global : "undefined" != typeof self && self;function n(e) {return e && e.__esModule && Object.prototype.hasOwnProperty.call(e, "default") ? e.default : e;}function s(e, t, n) {return e(n = { path: t, exports: {}, require: function require(e, t) {return function () {throw new Error("Dynamic requires are not currently supported by @rollup/plugin-commonjs");}(null == t && n.path);} }, n.exports), n.exports;}var o = s(function (e, t) {var n;e.exports = (n = n || function (e, t) {var n = Object.create || function () {function e() {}return function (t) {var n;return e.prototype = t, n = new e(), e.prototype = null, n;};}(),s = {},o = s.lib = {},r = o.Base = { extend: function extend(e) {var t = n(this);return e && t.mixIn(e), t.hasOwnProperty("init") && this.init !== t.init || (t.init = function () {t.$super.init.apply(this, arguments);}), t.init.prototype = t, t.$super = this, t;}, create: function create() {var e = this.extend();return e.init.apply(e, arguments), e;}, init: function init() {}, mixIn: function mixIn(e) {for (var t in e) {e.hasOwnProperty(t) && (this[t] = e[t]);}e.hasOwnProperty("toString") && (this.toString = e.toString);}, clone: function clone() {return this.init.prototype.extend(this);} },i = o.WordArray = r.extend({ init: function init(e, n) {e = this.words = e || [], this.sigBytes = n != t ? n : 4 * e.length;}, toString: function toString(e) {return (e || c).stringify(this);}, concat: function concat(e) {var t = this.words,n = e.words,s = this.sigBytes,o = e.sigBytes;if (this.clamp(), s % 4) for (var r = 0; r < o; r++) {var i = n[r >>> 2] >>> 24 - r % 4 * 8 & 255;t[s + r >>> 2] |= i << 24 - (s + r) % 4 * 8;} else for (r = 0; r < o; r += 4) {t[s + r >>> 2] = n[r >>> 2];}return this.sigBytes += o, this;}, clamp: function clamp() {var t = this.words,n = this.sigBytes;t[n >>> 2] &= 4294967295 << 32 - n % 4 * 8, t.length = e.ceil(n / 4);}, clone: function clone() {var e = r.clone.call(this);return e.words = this.words.slice(0), e;}, random: function random(t) {for (var n, s = [], o = function o(t) {t = t;var n = 987654321,s = 4294967295;return function () {var o = ((n = 36969 * (65535 & n) + (n >> 16) & s) << 16) + (t = 18e3 * (65535 & t) + (t >> 16) & s) & s;return o /= 4294967296, (o += .5) * (e.random() > .5 ? 1 : -1);};}, r = 0; r < t; r += 4) {var a = o(4294967296 * (n || e.random()));n = 987654071 * a(), s.push(4294967296 * a() | 0);}return new i.init(s, t);} }),a = s.enc = {},c = a.Hex = { stringify: function stringify(e) {for (var t = e.words, n = e.sigBytes, s = [], o = 0; o < n; o++) {var r = t[o >>> 2] >>> 24 - o % 4 * 8 & 255;s.push((r >>> 4).toString(16)), s.push((15 & r).toString(16));}return s.join("");}, parse: function parse(e) {for (var t = e.length, n = [], s = 0; s < t; s += 2) {n[s >>> 3] |= parseInt(e.substr(s, 2), 16) << 24 - s % 8 * 4;}return new i.init(n, t / 2);} },u = a.Latin1 = { stringify: function stringify(e) {for (var t = e.words, n = e.sigBytes, s = [], o = 0; o < n; o++) {var r = t[o >>> 2] >>> 24 - o % 4 * 8 & 255;s.push(String.fromCharCode(r));}return s.join("");}, parse: function parse(e) {for (var t = e.length, n = [], s = 0; s < t; s++) {n[s >>> 2] |= (255 & e.charCodeAt(s)) << 24 - s % 4 * 8;}return new i.init(n, t);} },l = a.Utf8 = { stringify: function stringify(e) {try {return decodeURIComponent(escape(u.stringify(e)));} catch (e) {throw new Error("Malformed UTF-8 data");}}, parse: function parse(e) {return u.parse(unescape(encodeURIComponent(e)));} },h = o.BufferedBlockAlgorithm = r.extend({ reset: function reset() {this._data = new i.init(), this._nDataBytes = 0;}, _append: function _append(e) {"string" == typeof e && (e = l.parse(e)), this._data.concat(e), this._nDataBytes += e.sigBytes;}, _process: function _process(t) {var n = this._data,s = n.words,o = n.sigBytes,r = this.blockSize,a = o / (4 * r),c = (a = t ? e.ceil(a) : e.max((0 | a) - this._minBufferSize, 0)) * r,u = e.min(4 * c, o);if (c) {for (var l = 0; l < c; l += r) {this._doProcessBlock(s, l);}var h = s.splice(0, c);n.sigBytes -= u;}return new i.init(h, u);}, clone: function clone() {var e = r.clone.call(this);return e._data = this._data.clone(), e;}, _minBufferSize: 0 });o.Hasher = h.extend({ cfg: r.extend(), init: function init(e) {this.cfg = this.cfg.extend(e), this.reset();}, reset: function reset() {h.reset.call(this), this._doReset();}, update: function update(e) {return this._append(e), this._process(), this;}, finalize: function finalize(e) {return e && this._append(e), this._doFinalize();}, blockSize: 16, _createHelper: function _createHelper(e) {return function (t, n) {return new e.init(n).finalize(t);};}, _createHmacHelper: function _createHmacHelper(e) {return function (t, n) {return new d.HMAC.init(e, n).finalize(t);};} });var d = s.algo = {};return s;}(Math), n);}),r = (s(function (e, t) {var n;e.exports = (n = o, function (e) {var t = n,s = t.lib,o = s.WordArray,r = s.Hasher,i = t.algo,a = [];!function () {for (var t = 0; t < 64; t++) {a[t] = 4294967296 * e.abs(e.sin(t + 1)) | 0;}}();var c = i.MD5 = r.extend({ _doReset: function _doReset() {this._hash = new o.init([1732584193, 4023233417, 2562383102, 271733878]);}, _doProcessBlock: function _doProcessBlock(e, t) {for (var n = 0; n < 16; n++) {var s = t + n,o = e[s];e[s] = 16711935 & (o << 8 | o >>> 24) | 4278255360 & (o << 24 | o >>> 8);}var r = this._hash.words,i = e[t + 0],c = e[t + 1],f = e[t + 2],g = e[t + 3],p = e[t + 4],m = e[t + 5],y = e[t + 6],_ = e[t + 7],w = e[t + 8],k = e[t + 9],v = e[t + 10],T = e[t + 11],S = e[t + 12],P = e[t + 13],A = e[t + 14],I = e[t + 15],b = r[0],O = r[1],C = r[2],E = r[3];b = u(b, O, C, E, i, 7, a[0]), E = u(E, b, O, C, c, 12, a[1]), C = u(C, E, b, O, f, 17, a[2]), O = u(O, C, E, b, g, 22, a[3]), b = u(b, O, C, E, p, 7, a[4]), E = u(E, b, O, C, m, 12, a[5]), C = u(C, E, b, O, y, 17, a[6]), O = u(O, C, E, b, _, 22, a[7]), b = u(b, O, C, E, w, 7, a[8]), E = u(E, b, O, C, k, 12, a[9]), C = u(C, E, b, O, v, 17, a[10]), O = u(O, C, E, b, T, 22, a[11]), b = u(b, O, C, E, S, 7, a[12]), E = u(E, b, O, C, P, 12, a[13]), C = u(C, E, b, O, A, 17, a[14]), b = l(b, O = u(O, C, E, b, I, 22, a[15]), C, E, c, 5, a[16]), E = l(E, b, O, C, y, 9, a[17]), C = l(C, E, b, O, T, 14, a[18]), O = l(O, C, E, b, i, 20, a[19]), b = l(b, O, C, E, m, 5, a[20]), E = l(E, b, O, C, v, 9, a[21]), C = l(C, E, b, O, I, 14, a[22]), O = l(O, C, E, b, p, 20, a[23]), b = l(b, O, C, E, k, 5, a[24]), E = l(E, b, O, C, A, 9, a[25]), C = l(C, E, b, O, g, 14, a[26]), O = l(O, C, E, b, w, 20, a[27]), b = l(b, O, C, E, P, 5, a[28]), E = l(E, b, O, C, f, 9, a[29]), C = l(C, E, b, O, _, 14, a[30]), b = h(b, O = l(O, C, E, b, S, 20, a[31]), C, E, m, 4, a[32]), E = h(E, b, O, C, w, 11, a[33]), C = h(C, E, b, O, T, 16, a[34]), O = h(O, C, E, b, A, 23, a[35]), b = h(b, O, C, E, c, 4, a[36]), E = h(E, b, O, C, p, 11, a[37]), C = h(C, E, b, O, _, 16, a[38]), O = h(O, C, E, b, v, 23, a[39]), b = h(b, O, C, E, P, 4, a[40]), E = h(E, b, O, C, i, 11, a[41]), C = h(C, E, b, O, g, 16, a[42]), O = h(O, C, E, b, y, 23, a[43]), b = h(b, O, C, E, k, 4, a[44]), E = h(E, b, O, C, S, 11, a[45]), C = h(C, E, b, O, I, 16, a[46]), b = d(b, O = h(O, C, E, b, f, 23, a[47]), C, E, i, 6, a[48]), E = d(E, b, O, C, _, 10, a[49]), C = d(C, E, b, O, A, 15, a[50]), O = d(O, C, E, b, m, 21, a[51]), b = d(b, O, C, E, S, 6, a[52]), E = d(E, b, O, C, g, 10, a[53]), C = d(C, E, b, O, v, 15, a[54]), O = d(O, C, E, b, c, 21, a[55]), b = d(b, O, C, E, w, 6, a[56]), E = d(E, b, O, C, I, 10, a[57]), C = d(C, E, b, O, y, 15, a[58]), O = d(O, C, E, b, P, 21, a[59]), b = d(b, O, C, E, p, 6, a[60]), E = d(E, b, O, C, T, 10, a[61]), C = d(C, E, b, O, f, 15, a[62]), O = d(O, C, E, b, k, 21, a[63]), r[0] = r[0] + b | 0, r[1] = r[1] + O | 0, r[2] = r[2] + C | 0, r[3] = r[3] + E | 0;}, _doFinalize: function _doFinalize() {var t = this._data,n = t.words,s = 8 * this._nDataBytes,o = 8 * t.sigBytes;n[o >>> 5] |= 128 << 24 - o % 32;var r = e.floor(s / 4294967296),i = s;n[15 + (o + 64 >>> 9 << 4)] = 16711935 & (r << 8 | r >>> 24) | 4278255360 & (r << 24 | r >>> 8), n[14 + (o + 64 >>> 9 << 4)] = 16711935 & (i << 8 | i >>> 24) | 4278255360 & (i << 24 | i >>> 8), t.sigBytes = 4 * (n.length + 1), this._process();for (var a = this._hash, c = a.words, u = 0; u < 4; u++) {var l = c[u];c[u] = 16711935 & (l << 8 | l >>> 24) | 4278255360 & (l << 24 | l >>> 8);}return a;}, clone: function clone() {var e = r.clone.call(this);return e._hash = this._hash.clone(), e;} });function u(e, t, n, s, o, r, i) {var a = e + (t & n | ~t & s) + o + i;return (a << r | a >>> 32 - r) + t;}function l(e, t, n, s, o, r, i) {var a = e + (t & s | n & ~s) + o + i;return (a << r | a >>> 32 - r) + t;}function h(e, t, n, s, o, r, i) {var a = e + (t ^ n ^ s) + o + i;return (a << r | a >>> 32 - r) + t;}function d(e, t, n, s, o, r, i) {var a = e + (n ^ (t | ~s)) + o + i;return (a << r | a >>> 32 - r) + t;}t.MD5 = r._createHelper(c), t.HmacMD5 = r._createHmacHelper(c);}(Math), n.MD5);}), s(function (e, t) {var n, s, r;e.exports = (s = (n = o).lib.Base, r = n.enc.Utf8, void (n.algo.HMAC = s.extend({ init: function init(e, t) {e = this._hasher = new e.init(), "string" == typeof t && (t = r.parse(t));var n = e.blockSize,s = 4 * n;t.sigBytes > s && (t = e.finalize(t)), t.clamp();for (var o = this._oKey = t.clone(), i = this._iKey = t.clone(), a = o.words, c = i.words, u = 0; u < n; u++) {a[u] ^= 1549556828, c[u] ^= 909522486;}o.sigBytes = i.sigBytes = s, this.reset();}, reset: function reset() {var e = this._hasher;e.reset(), e.update(this._iKey);}, update: function update(e) {return this._hasher.update(e), this;}, finalize: function finalize(e) {var t = this._hasher,n = t.finalize(e);return t.reset(), t.finalize(this._oKey.clone().concat(n));} })));}), s(function (e, t) {e.exports = o.HmacMD5;}));var i = "FUNCTION",a = "OBJECT",c = "CLIENT_DB";function u(e) {return Object.prototype.toString.call(e).slice(8, -1).toLowerCase();}function l(e) {return "object" === u(e);}function h(e) {return e && "string" == typeof e ? JSON.parse(e) : e;}var d = "development" === "development",f = "mp-weixin";var g;switch (f) {case "h5":g = "web";break;case "app-plus":g = "app";break;default:g = f;}var p = h({
+    "address": [
+        "127.0.0.1",
+        "192.168.31.158"
+    ],
+    "debugPort": 9000,
+    "initialLaunchType": "remote",
+    "servePort": 7001,
+    "skipFiles": [
+        "<node_internals>/**/*.js",
+        "C:/Users/Administrator/Desktop/HBuilderX.2.9.7.20201105.full/HBuilderX/plugins/unicloud/**/*.js"
+    ]
+}
+),m = h([{"provider":"aliyun","spaceName":"yangyjxm-serverless","spaceId":"0c94e1d0-ced8-4bdf-9912-4d17971f66df","clientSecret":"k+7iH+wF6LqX7qScN2wpvA==","endpoint":"https://api.bspapp.com"}]) || [],y = true;var _ = "";try {{var _e2 = __webpack_require__(/*! uni-stat-config */ 11).default || __webpack_require__(/*! uni-stat-config */ 11);_ = _e2.appid;}} catch (e) {}var w = {};function k(e) {var t = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};var n, s;return n = w, s = e, Object.prototype.hasOwnProperty.call(n, s) || (w[e] = t), w[e];}"app" === g && (w = uni._globalUniCloudObj ? uni._globalUniCloudObj : uni._globalUniCloudObj = {});var v = ["invoke", "success", "fail", "complete"],T = k("_globalUniCloudInterceptor");function S(e, t) {T[e] || (T[e] = {}), l(t) && Object.keys(t).forEach(function (n) {v.indexOf(n) > -1 && function (e, t, n) {var s = T[e][t];s || (s = T[e][t] = []), -1 === s.indexOf(n) && "function" == typeof n && s.push(n);}(e, n, t[n]);});}function P(e, t) {T[e] || (T[e] = {}), l(t) ? Object.keys(t).forEach(function (n) {v.indexOf(n) > -1 && function (e, t, n) {var s = T[e][t];if (!s) return;var o = s.indexOf(n);o > -1 && s.splice(o, 1);}(e, n, t[n]);}) : delete T[e];}function A(e, t) {return e && 0 !== e.length ? e.reduce(function (e, n) {return e.then(function () {return n(t);});}, Promise.resolve()) : Promise.resolve();}function I(e, t) {return T[e] && T[e][t] || [];}function b(e) {S("callObject", e);}var O = k("_globalUniCloudListener"),C = "response",E = "needLogin",R = "refreshToken",U = "clientdb",x = "cloudfunction",L = "cloudobject";function D(e) {return O[e] || (O[e] = []), O[e];}function N(e, t) {var n = D(e);n.includes(t) || n.push(t);}function q(e, t) {var n = D(e),s = n.indexOf(t);-1 !== s && n.splice(s, 1);}function F(e, t) {var n = D(e);for (var _e3 = 0; _e3 < n.length; _e3++) {(0, n[_e3])(t);}}var M = !1;var j = new Promise(function (e) {M && e(), function t() {if ("function" == typeof getCurrentPages) {var _t2 = getCurrentPages();_t2 && _t2[0] && (M = !0, e());}M || setTimeout(function () {t();}, 30);}();});function $() {return j;}function K(e, t) {return t ? function (n) {var _this = this;var s = !1;if ("callFunction" === t) {var _e4 = n && n.type || i;s = _e4 !== i;}var o = "callFunction" === t && !s;var r;r = this.isReady ? Promise.resolve() : this.initUniCloud, n = n || {};var a = r.then(function () {return s ? Promise.resolve() : A(I(t, "invoke"), n);}).then(function () {return e.call(_this, n);}).then(function (e) {return s ? Promise.resolve(e) : A(I(t, "success"), e).then(function () {return A(I(t, "complete"), e);}).then(function () {return o && F(C, { type: x, content: e }), Promise.resolve(e);});}, function (e) {return s ? Promise.reject(e) : A(I(t, "fail"), e).then(function () {return A(I(t, "complete"), e);}).then(function () {return F(C, { type: x, content: e }), Promise.reject(e);});});if (!(n.success || n.fail || n.complete)) return a;a.then(function (e) {n.success && n.success(e), n.complete && n.complete(e), o && F(C, { type: x, content: e });}, function (e) {n.fail && n.fail(e), n.complete && n.complete(e), o && F(C, { type: x, content: e });});} : function (t) {if (!((t = t || {}).success || t.fail || t.complete)) return e.call(this, t);e.call(this, t).then(function (e) {t.success && t.success(e), t.complete && t.complete(e);}, function (e) {t.fail && t.fail(e), t.complete && t.complete(e);});};}var B = /*#__PURE__*/function (_Error) {_inherits(B, _Error);var _super = _createSuper(B);function B(e) {var _this2;_classCallCheck(this, B);_this2 = _super.call(this, e.message), _this2.errMsg = e.message || "", _this2.errCode = _this2.code = e.code || "SYSTEM_ERROR", _this2.requestId = e.requestId;return _this2;}return B;}( /*#__PURE__*/_wrapNativeSuper(Error));function H() {var e, t;try {if (uni.getLaunchOptionsSync) {if (uni.getLaunchOptionsSync.toString().indexOf("not yet implemented") > -1) return;var _uni$getLaunchOptions = uni.getLaunchOptionsSync(),_n = _uni$getLaunchOptions.scene,_s = _uni$getLaunchOptions.channel;e = _s, t = _n;}} catch (e) {}return { channel: e, scene: t };}var W;function z() {var e = uni.getLocale && uni.getLocale() || "en";if (W) return _objectSpread(_objectSpread({}, W), {}, { locale: e, LOCALE: e });var t = uni.getSystemInfoSync(),n = t.deviceId,s = t.osName,o = t.uniPlatform,r = t.appId,i = ["pixelRatio", "brand", "model", "system", "language", "version", "platform", "host", "SDKVersion", "swanNativeVersion", "app", "AppPlatform", "fontSizeSetting"];for (var _e5 = 0; _e5 < i.length; _e5++) {delete t[i[_e5]];}return W = _objectSpread(_objectSpread({ PLATFORM: o, OS: s, APPID: r, DEVICEID: n }, H()), t), _objectSpread(_objectSpread({}, W), {}, { locale: e, LOCALE: e });}var J = { sign: function sign(e, t) {var n = "";return Object.keys(e).sort().forEach(function (t) {e[t] && (n = n + "&" + t + "=" + e[t]);}), n = n.slice(1), r(n, t).toString();}, wrappedRequest: function wrappedRequest(e, t) {return new Promise(function (n, s) {t(Object.assign(e, { complete: function complete(e) {e || (e = {}), d && "web" === g && e.errMsg && 0 === e.errMsg.indexOf("request:fail") && console.warn("发布H5，需要在uniCloud后台操作，绑定安全域名，否则会因为跨域问题而无法访问。教程参考：https://uniapp.dcloud.io/uniCloud/quickstart?id=useinh5");var t = e.data && e.data.header && e.data.header["x-serverless-request-id"] || e.header && e.header["request-id"];if (!e.statusCode || e.statusCode >= 400) return s(new B({ code: "SYS_ERR", message: e.errMsg || "request:fail", requestId: t }));var o = e.data;if (o.error) return s(new B({ code: o.error.code, message: o.error.message, requestId: t }));o.result = o.data, o.requestId = t, delete o.data, n(o);} }));});} };var V = { request: function request(e) {return uni.request(e);}, uploadFile: function uploadFile(e) {return uni.uploadFile(e);}, setStorageSync: function setStorageSync(e, t) {return uni.setStorageSync(e, t);}, getStorageSync: function getStorageSync(e) {return uni.getStorageSync(e);}, removeStorageSync: function removeStorageSync(e) {return uni.removeStorageSync(e);}, clearStorageSync: function clearStorageSync() {return uni.clearStorageSync();} },Y = { "uniCloud.init.paramRequired": "{param} required", "uniCloud.uploadFile.fileError": "filePath should be instance of File" };var _e6 = (0, _uniI18n.initVueI18n)({ "zh-Hans": { "uniCloud.init.paramRequired": "缺少参数：{param}", "uniCloud.uploadFile.fileError": "filePath应为File对象" }, "zh-Hant": { "uniCloud.init.paramRequired": "缺少参数：{param}", "uniCloud.uploadFile.fileError": "filePath应为File对象" }, en: Y, fr: { "uniCloud.init.paramRequired": "{param} required", "uniCloud.uploadFile.fileError": "filePath should be instance of File" }, es: { "uniCloud.init.paramRequired": "{param} required", "uniCloud.uploadFile.fileError": "filePath should be instance of File" }, ja: Y }, "zh-Hans"),X = _e6.t;var G = /*#__PURE__*/function () {function G(e) {_classCallCheck(this, G);["spaceId", "clientSecret"].forEach(function (t) {if (!Object.prototype.hasOwnProperty.call(e, t)) throw new Error(X("uniCloud.init.paramRequired", { param: t }));}), this.config = Object.assign({}, { endpoint: "https://api.bspapp.com" }, e), this.config.provider = "aliyun", this.config.requestUrl = this.config.endpoint + "/client", this.config.envType = this.config.envType || "public", this.config.accessTokenKey = "access_token_" + this.config.spaceId, this.adapter = V, this._getAccessTokenPromise = null, this._getAccessTokenPromiseStatus = null;}_createClass(G, [{ key: "setAccessToken", value: function setAccessToken(e) {this.accessToken = e;} }, { key: "requestWrapped", value: function requestWrapped(e) {return J.wrappedRequest(e, this.adapter.request);} }, { key: "requestAuth", value: function requestAuth(e) {return this.requestWrapped(e);} }, { key: "request", value: function request(e, t) {var _this3 = this;return Promise.resolve().then(function () {return _this3.hasAccessToken ? t ? _this3.requestWrapped(e) : _this3.requestWrapped(e).catch(function (t) {return new Promise(function (e, n) {!t || "GATEWAY_INVALID_TOKEN" !== t.code && "InvalidParameter.InvalidToken" !== t.code ? n(t) : e();}).then(function () {return _this3.getAccessToken();}).then(function () {var t = _this3.rebuildRequest(e);return _this3.request(t, !0);});}) : _this3.getAccessToken().then(function () {var t = _this3.rebuildRequest(e);return _this3.request(t, !0);});});} }, { key: "rebuildRequest", value: function rebuildRequest(e) {var t = Object.assign({}, e);return t.data.token = this.accessToken, t.header["x-basement-token"] = this.accessToken, t.header["x-serverless-sign"] = J.sign(t.data, this.config.clientSecret), t;} }, { key: "setupRequest", value: function setupRequest(e, t) {var n = Object.assign({}, e, { spaceId: this.config.spaceId, timestamp: Date.now() }),s = { "Content-Type": "application/json" };return "auth" !== t && (n.token = this.accessToken, s["x-basement-token"] = this.accessToken), s["x-serverless-sign"] = J.sign(n, this.config.clientSecret), { url: this.config.requestUrl, method: "POST", data: n, dataType: "json", header: s };} }, { key: "getAccessToken", value: function getAccessToken() {var _this4 = this;if ("pending" === this._getAccessTokenPromiseStatus) return this._getAccessTokenPromise;this._getAccessTokenPromiseStatus = "pending";return this._getAccessTokenPromise = this.requestAuth(this.setupRequest({ method: "serverless.auth.user.anonymousAuthorize", params: "{}" }, "auth")).then(function (e) {return new Promise(function (t, n) {e.result && e.result.accessToken ? (_this4.setAccessToken(e.result.accessToken), _this4._getAccessTokenPromiseStatus = "fulfilled", t(_this4.accessToken)) : (_this4._getAccessTokenPromiseStatus = "rejected", n(new B({ code: "AUTH_FAILED", message: "获取accessToken失败" })));});}, function (e) {return _this4._getAccessTokenPromiseStatus = "rejected", Promise.reject(e);}), this._getAccessTokenPromise;} }, { key: "authorize", value: function authorize() {this.getAccessToken();} }, { key: "callFunction", value: function callFunction(e) {var t = { method: "serverless.function.runtime.invoke", params: JSON.stringify({ functionTarget: e.name, functionArgs: e.data || {} }) };return this.request(this.setupRequest(t));} }, { key: "getOSSUploadOptionsFromPath", value: function getOSSUploadOptionsFromPath(e) {var t = { method: "serverless.file.resource.generateProximalSign", params: JSON.stringify(e) };return this.request(this.setupRequest(t));} }, { key: "uploadFileToOSS", value: function uploadFileToOSS(_ref) {var _this5 = this;var e = _ref.url,t = _ref.formData,n = _ref.name,s = _ref.filePath,o = _ref.fileType,r = _ref.onUploadProgress;return new Promise(function (i, a) {var c = _this5.adapter.uploadFile({ url: e, formData: t, name: n, filePath: s, fileType: o, header: { "X-OSS-server-side-encrpytion": "AES256" }, success: function success(e) {e && e.statusCode < 400 ? i(e) : a(new B({ code: "UPLOAD_FAILED", message: "文件上传失败" }));}, fail: function fail(e) {a(new B({ code: e.code || "UPLOAD_FAILED", message: e.message || e.errMsg || "文件上传失败" }));} });"function" == typeof r && c && "function" == typeof c.onProgressUpdate && c.onProgressUpdate(function (e) {r({ loaded: e.totalBytesSent, total: e.totalBytesExpectedToSend });});});} }, { key: "reportOSSUpload", value: function reportOSSUpload(e) {var t = { method: "serverless.file.resource.report", params: JSON.stringify(e) };return this.request(this.setupRequest(t));} }, { key: "uploadFile", value: function uploadFile(_ref2) {var _this6 = this;var e = _ref2.filePath,t = _ref2.cloudPath,_ref2$fileType = _ref2.fileType,n = _ref2$fileType === void 0 ? "image" : _ref2$fileType,s = _ref2.onUploadProgress,o = _ref2.config;if ("string" !== u(t)) throw new B({ code: "INVALID_PARAM", message: "cloudPath必须为字符串类型" });if (!(t = t.trim())) throw new B({ code: "CLOUDPATH_REQUIRED", message: "cloudPath不可为空" });if (/:\/\//.test(t)) throw new B({ code: "INVALID_PARAM", message: "cloudPath不合法" });var r = o && o.envType || this.config.envType;var i, a;return this.getOSSUploadOptionsFromPath({ env: r, filename: t }).then(function (t) {var o = t.result;i = o.id, a = "https://" + o.cdnDomain + "/" + o.ossPath;var r = { url: "https://" + o.host, formData: { "Cache-Control": "max-age=2592000", "Content-Disposition": "attachment", OSSAccessKeyId: o.accessKeyId, Signature: o.signature, host: o.host, id: i, key: o.ossPath, policy: o.policy, success_action_status: 200 }, fileName: "file", name: "file", filePath: e, fileType: n };return _this6.uploadFileToOSS(Object.assign({}, r, { onUploadProgress: s }));}).then(function () {return _this6.reportOSSUpload({ id: i });}).then(function (t) {return new Promise(function (n, s) {t.success ? n({ success: !0, filePath: e, fileID: a }) : s(new B({ code: "UPLOAD_FAILED", message: "文件上传失败" }));});});} }, { key: "deleteFile", value: function deleteFile(_ref3) {var e = _ref3.fileList;var t = { method: "serverless.file.resource.delete", params: JSON.stringify({ id: e[0] }) };return this.request(this.setupRequest(t));} }, { key: "getTempFileURL", value: function getTempFileURL() {var _ref4 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},e = _ref4.fileList;return new Promise(function (t, n) {Array.isArray(e) && 0 !== e.length || n(new B({ code: "INVALID_PARAM", message: "fileList的元素必须是非空的字符串" })), t({ fileList: e.map(function (e) {return { fileID: e, tempFileURL: e };}) });});} }, { key: "hasAccessToken", get: function get() {return !!this.accessToken;} }]);return G;}();var Q = { init: function init(e) {var t = new G(e),n = { signInAnonymously: function signInAnonymously() {return t.authorize();}, getLoginState: function getLoginState() {return Promise.resolve(!1);} };return t.auth = function () {return n;}, t.customAuth = t.auth, t;} };var Z = "undefined" != typeof location && "http:" === location.protocol ? "http:" : "https:";var ee;!function (e) {e.local = "local", e.none = "none", e.session = "session";}(ee || (ee = {}));var te = function te() {};var ne = function ne() {var e;if (!Promise) {e = function e() {}, e.promise = {};var _t3 = function _t3() {throw new B({ message: 'Your Node runtime does support ES6 Promises. Set "global.Promise" to your preferred implementation of promises.' });};return Object.defineProperty(e.promise, "then", { get: _t3 }), Object.defineProperty(e.promise, "catch", { get: _t3 }), e;}var t = new Promise(function (t, n) {e = function e(_e7, s) {return _e7 ? n(_e7) : t(s);};});return e.promise = t, e;};function se(e) {return void 0 === e;}function oe(e) {return "[object Null]" === Object.prototype.toString.call(e);}var re;function ie(e) {var t = (n = e, "[object Array]" === Object.prototype.toString.call(n) ? e : [e]);var n;var _iterator = _createForOfIteratorHelper(t),_step;try {for (_iterator.s(); !(_step = _iterator.n()).done;) {var _e8 = _step.value;var _t4 = _e8.isMatch,_n2 = _e8.genAdapter,_s2 = _e8.runtime;if (_t4()) return { adapter: _n2(), runtime: _s2 };}} catch (err) {_iterator.e(err);} finally {_iterator.f();}}!function (e) {e.WEB = "web", e.WX_MP = "wx_mp";}(re || (re = {}));var ae = { adapter: null, runtime: void 0 },ce = ["anonymousUuidKey"];var ue = /*#__PURE__*/function (_te) {_inherits(ue, _te);var _super2 = _createSuper(ue);function ue() {var _this7;_classCallCheck(this, ue);_this7 = _super2.call(this), ae.adapter.root.tcbObject || (ae.adapter.root.tcbObject = {});return _this7;}_createClass(ue, [{ key: "setItem", value: function setItem(e, t) {ae.adapter.root.tcbObject[e] = t;} }, { key: "getItem", value: function getItem(e) {return ae.adapter.root.tcbObject[e];} }, { key: "removeItem", value: function removeItem(e) {delete ae.adapter.root.tcbObject[e];} }, { key: "clear", value: function clear() {delete ae.adapter.root.tcbObject;} }]);return ue;}(te);function le(e, t) {switch (e) {case "local":return t.localStorage || new ue();case "none":return new ue();default:return t.sessionStorage || new ue();}}var he = /*#__PURE__*/function () {function he(e) {_classCallCheck(this, he);if (!this._storage) {this._persistence = ae.adapter.primaryStorage || e.persistence, this._storage = le(this._persistence, ae.adapter);var _t5 = "access_token_".concat(e.env),_n3 = "access_token_expire_".concat(e.env),_s3 = "refresh_token_".concat(e.env),_o = "anonymous_uuid_".concat(e.env),_r = "login_type_".concat(e.env),_i = "user_info_".concat(e.env);this.keys = { accessTokenKey: _t5, accessTokenExpireKey: _n3, refreshTokenKey: _s3, anonymousUuidKey: _o, loginTypeKey: _r, userInfoKey: _i };}}_createClass(he, [{ key: "updatePersistence", value: function updatePersistence(e) {if (e === this._persistence) return;var t = "local" === this._persistence;this._persistence = e;var n = le(e, ae.adapter);for (var _e9 in this.keys) {var _s4 = this.keys[_e9];if (t && ce.includes(_e9)) continue;var _o2 = this._storage.getItem(_s4);se(_o2) || oe(_o2) || (n.setItem(_s4, _o2), this._storage.removeItem(_s4));}this._storage = n;} }, { key: "setStore", value: function setStore(e, t, n) {if (!this._storage) return;var s = { version: n || "localCachev1", content: t },o = JSON.stringify(s);try {this._storage.setItem(e, o);} catch (e) {throw e;}} }, { key: "getStore", value: function getStore(e, t) {try {if (!this._storage) return;} catch (e) {return "";}t = t || "localCachev1";var n = this._storage.getItem(e);if (!n) return "";if (n.indexOf(t) >= 0) {return JSON.parse(n).content;}return "";} }, { key: "removeStore", value: function removeStore(e) {this._storage.removeItem(e);} }]);return he;}();var de = {},fe = {};function ge(e) {return de[e];}var pe = function pe(e, t) {_classCallCheck(this, pe);this.data = t || null, this.name = e;};var me = /*#__PURE__*/function (_pe) {_inherits(me, _pe);var _super3 = _createSuper(me);function me(e, t) {var _this8;_classCallCheck(this, me);_this8 = _super3.call(this, "error", { error: e, data: t }), _this8.error = e;return _this8;}return me;}(pe);var ye = new ( /*#__PURE__*/function () {function _class() {_classCallCheck(this, _class);this._listeners = {};}_createClass(_class, [{ key: "on", value: function on(e, t) {return function (e, t, n) {n[e] = n[e] || [], n[e].push(t);}(e, t, this._listeners), this;} }, { key: "off", value: function off(e, t) {return function (e, t, n) {if (n && n[e]) {var _s5 = n[e].indexOf(t);-1 !== _s5 && n[e].splice(_s5, 1);}}(e, t, this._listeners), this;} }, { key: "fire", value: function fire(e, t) {if (e instanceof me) return console.error(e.error), this;var n = "string" == typeof e ? new pe(e, t || {}) : e;var s = n.name;if (this._listens(s)) {n.target = this;var _e10 = this._listeners[s] ? _toConsumableArray(this._listeners[s]) : [];var _iterator2 = _createForOfIteratorHelper(_e10),_step2;try {for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {var _t6 = _step2.value;_t6.call(this, n);}} catch (err) {_iterator2.e(err);} finally {_iterator2.f();}}return this;} }, { key: "_listens", value: function _listens(e) {return this._listeners[e] && this._listeners[e].length > 0;} }]);return _class;}())();function _e(e, t) {ye.on(e, t);}function we(e) {var t = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};ye.fire(e, t);}function ke(e, t) {ye.off(e, t);}var ve = "loginStateChanged",Te = "loginStateExpire",Se = "loginTypeChanged",Pe = "anonymousConverted",Ae = "refreshAccessToken";var Ie;!function (e) {e.ANONYMOUS = "ANONYMOUS", e.WECHAT = "WECHAT", e.WECHAT_PUBLIC = "WECHAT-PUBLIC", e.WECHAT_OPEN = "WECHAT-OPEN", e.CUSTOM = "CUSTOM", e.EMAIL = "EMAIL", e.USERNAME = "USERNAME", e.NULL = "NULL";}(Ie || (Ie = {}));var be = ["auth.getJwt", "auth.logout", "auth.signInWithTicket", "auth.signInAnonymously", "auth.signIn", "auth.fetchAccessTokenWithRefreshToken", "auth.signUpWithEmailAndPassword", "auth.activateEndUserMail", "auth.sendPasswordResetEmail", "auth.resetPasswordWithToken", "auth.isUsernameRegistered"],Oe = { "X-SDK-Version": "1.3.5" };function Ce(e, t, n) {var s = e[t];e[t] = function (t) {var o = {},r = {};n.forEach(function (n) {var _n$call = n.call(e, t),s = _n$call.data,i = _n$call.headers;Object.assign(o, s), Object.assign(r, i);});var i = t.data;return i && function () {var e;if (e = i, "[object FormData]" !== Object.prototype.toString.call(e)) t.data = _objectSpread(_objectSpread({}, i), o);else for (var _e11 in o) {i.append(_e11, o[_e11]);}}(), t.headers = _objectSpread(_objectSpread({}, t.headers || {}), r), s.call(e, t);};}function Ee() {var e = Math.random().toString(16).slice(2);return { data: { seqId: e }, headers: _objectSpread(_objectSpread({}, Oe), {}, { "x-seqid": e }) };}var Re = /*#__PURE__*/function () {function Re() {var e = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};_classCallCheck(this, Re);var t;this.config = e, this._reqClass = new ae.adapter.reqClass({ timeout: this.config.timeout, timeoutMsg: "\u8BF7\u6C42\u5728".concat(this.config.timeout / 1e3, "s\u5185\u672A\u5B8C\u6210\uFF0C\u5DF2\u4E2D\u65AD"), restrictedMethods: ["post"] }), this._cache = ge(this.config.env), this._localCache = (t = this.config.env, fe[t]), Ce(this._reqClass, "post", [Ee]), Ce(this._reqClass, "upload", [Ee]), Ce(this._reqClass, "download", [Ee]);}_createClass(Re, [{ key: "post", value: function () {var _post = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee(e) {return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return this._reqClass.post(e);case 2:return _context.abrupt("return", _context.sent);case 3:case "end":return _context.stop();}}}, _callee, this);}));function post(_x) {return _post.apply(this, arguments);}return post;}() }, { key: "upload", value: function () {var _upload = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2(e) {return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:_context2.next = 2;return this._reqClass.upload(e);case 2:return _context2.abrupt("return", _context2.sent);case 3:case "end":return _context2.stop();}}}, _callee2, this);}));function upload(_x2) {return _upload.apply(this, arguments);}return upload;}() }, { key: "download", value: function () {var _download = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee3(e) {return _regenerator.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:_context3.next = 2;return this._reqClass.download(e);case 2:return _context3.abrupt("return", _context3.sent);case 3:case "end":return _context3.stop();}}}, _callee3, this);}));function download(_x3) {return _download.apply(this, arguments);}return download;}() }, { key: "refreshAccessToken", value: function () {var _refreshAccessToken2 = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee4() {var e, t;return _regenerator.default.wrap(function _callee4$(_context4) {while (1) {switch (_context4.prev = _context4.next) {case 0:this._refreshAccessTokenPromise || (this._refreshAccessTokenPromise = this._refreshAccessToken());_context4.prev = 1;_context4.next = 4;return this._refreshAccessTokenPromise;case 4:e = _context4.sent;_context4.next = 10;break;case 7:_context4.prev = 7;_context4.t0 = _context4["catch"](1);t = _context4.t0;case 10:if (!(this._refreshAccessTokenPromise = null, this._shouldRefreshAccessTokenHook = null, t)) {_context4.next = 12;break;}throw t;case 12:return _context4.abrupt("return", e);case 13:case "end":return _context4.stop();}}}, _callee4, this, [[1, 7]]);}));function refreshAccessToken() {return _refreshAccessToken2.apply(this, arguments);}return refreshAccessToken;}() }, { key: "_refreshAccessToken", value: function () {var _refreshAccessToken3 = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee5() {var _this$_cache$keys, e, t, n, s, o, r, i, a, _e12, _e13, _t7, _s6;return _regenerator.default.wrap(function _callee5$(_context5) {while (1) {switch (_context5.prev = _context5.next) {case 0:_this$_cache$keys = this._cache.keys, e = _this$_cache$keys.accessTokenKey, t = _this$_cache$keys.accessTokenExpireKey, n = _this$_cache$keys.refreshTokenKey, s = _this$_cache$keys.loginTypeKey, o = _this$_cache$keys.anonymousUuidKey;this._cache.removeStore(e), this._cache.removeStore(t);r = this._cache.getStore(n);if (r) {_context5.next = 5;break;}throw new B({ message: "未登录CloudBase" });case 5:i = { refresh_token: r };_context5.next = 8;return this.request("auth.fetchAccessTokenWithRefreshToken", i);case 8:a = _context5.sent;if (!a.data.code) {_context5.next = 21;break;}_e12 = a.data.code;if (!("SIGN_PARAM_INVALID" === _e12 || "REFRESH_TOKEN_EXPIRED" === _e12 || "INVALID_REFRESH_TOKEN" === _e12)) {_context5.next = 20;break;}if (!(this._cache.getStore(s) === Ie.ANONYMOUS && "INVALID_REFRESH_TOKEN" === _e12)) {_context5.next = 19;break;}_e13 = this._cache.getStore(o);_t7 = this._cache.getStore(n);_context5.next = 17;return this.send("auth.signInAnonymously", { anonymous_uuid: _e13, refresh_token: _t7 });case 17:_s6 = _context5.sent;return _context5.abrupt("return", (this.setRefreshToken(_s6.refresh_token), this._refreshAccessToken()));case 19:we(Te), this._cache.removeStore(n);case 20:throw new B({ code: a.data.code, message: "\u5237\u65B0access token\u5931\u8D25\uFF1A".concat(a.data.code) });case 21:if (!a.data.access_token) {_context5.next = 23;break;}return _context5.abrupt("return", (we(Ae), this._cache.setStore(e, a.data.access_token), this._cache.setStore(t, a.data.access_token_expire + Date.now()), { accessToken: a.data.access_token, accessTokenExpire: a.data.access_token_expire }));case 23:a.data.refresh_token && (this._cache.removeStore(n), this._cache.setStore(n, a.data.refresh_token), this._refreshAccessToken());case 24:case "end":return _context5.stop();}}}, _callee5, this);}));function _refreshAccessToken() {return _refreshAccessToken3.apply(this, arguments);}return _refreshAccessToken;}() }, { key: "getAccessToken", value: function () {var _getAccessToken = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee6() {var _this$_cache$keys2, e, t, n, s, o, r;return _regenerator.default.wrap(function _callee6$(_context6) {while (1) {switch (_context6.prev = _context6.next) {case 0:_this$_cache$keys2 = this._cache.keys, e = _this$_cache$keys2.accessTokenKey, t = _this$_cache$keys2.accessTokenExpireKey, n = _this$_cache$keys2.refreshTokenKey;if (this._cache.getStore(n)) {_context6.next = 3;break;}throw new B({ message: "refresh token不存在，登录状态异常" });case 3:s = this._cache.getStore(e), o = this._cache.getStore(t), r = !0;_context6.t0 = this._shouldRefreshAccessTokenHook;if (!_context6.t0) {_context6.next = 9;break;}_context6.next = 8;return this._shouldRefreshAccessTokenHook(s, o);case 8:_context6.t0 = !_context6.sent;case 9:_context6.t1 = _context6.t0;if (!_context6.t1) {_context6.next = 12;break;}r = !1;case 12:return _context6.abrupt("return", (!s || !o || o < Date.now()) && r ? this.refreshAccessToken() : { accessToken: s, accessTokenExpire: o });case 13:case "end":return _context6.stop();}}}, _callee6, this);}));function getAccessToken() {return _getAccessToken.apply(this, arguments);}return getAccessToken;}() }, { key: "request", value: function () {var _request = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee7(e, t, n) {var s, o, r, _e14, i, _e15, _e16, a, c, u, l, h, d, f, g, p;return _regenerator.default.wrap(function _callee7$(_context7) {while (1) {switch (_context7.prev = _context7.next) {case 0:s = "x-tcb-trace_".concat(this.config.env);o = "application/x-www-form-urlencoded";r = _objectSpread({ action: e, env: this.config.env, dataVersion: "2019-08-16" }, t);if (!(-1 === be.indexOf(e))) {_context7.next = 10;break;}_e14 = this._cache.keys.refreshTokenKey;_context7.t0 = this._cache.getStore(_e14);if (!_context7.t0) {_context7.next = 10;break;}_context7.next = 9;return this.getAccessToken();case 9:r.access_token = _context7.sent.accessToken;case 10:if ("storage.uploadFile" === e) {i = new FormData();for (_e15 in i) {i.hasOwnProperty(_e15) && void 0 !== i[_e15] && i.append(_e15, r[_e15]);}o = "multipart/form-data";} else {o = "application/json", i = {};for (_e16 in r) {void 0 !== r[_e16] && (i[_e16] = r[_e16]);}}a = { headers: { "content-type": o } };n && n.onUploadProgress && (a.onUploadProgress = n.onUploadProgress);c = this._localCache.getStore(s);c && (a.headers["X-TCB-Trace"] = c);u = t.parse, l = t.inQuery, h = t.search;d = { env: this.config.env };u && (d.parse = !0), l && (d = _objectSpread(_objectSpread({}, l), d));f = function (e, t) {var n = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};var s = /\?/.test(t);var o = "";for (var _e17 in n) {"" === o ? !s && (t += "?") : o += "&", o += "".concat(_e17, "=").concat(encodeURIComponent(n[_e17]));}return /^http(s)?\:\/\//.test(t += o) ? t : "".concat(e).concat(t);}(Z, "//tcb-api.tencentcloudapi.com/web", d);h && (f += h);_context7.next = 22;return this.post(_objectSpread({ url: f, data: i }, a));case 22:g = _context7.sent;p = g.header && g.header["x-tcb-trace"];if (!(p && this._localCache.setStore(s, p), 200 !== Number(g.status) && 200 !== Number(g.statusCode) || !g.data)) {_context7.next = 26;break;}throw new B({ code: "NETWORK_ERROR", message: "network request error" });case 26:return _context7.abrupt("return", g);case 27:case "end":return _context7.stop();}}}, _callee7, this);}));function request(_x4, _x5, _x6) {return _request.apply(this, arguments);}return request;}() }, { key: "send", value: function () {var _send = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee8(e) {var t,n,_n4,_args8 = arguments;return _regenerator.default.wrap(function _callee8$(_context8) {while (1) {switch (_context8.prev = _context8.next) {case 0:t = _args8.length > 1 && _args8[1] !== undefined ? _args8[1] : {};_context8.next = 3;return this.request(e, t, { onUploadProgress: t.onUploadProgress });case 3:n = _context8.sent;if (!("ACCESS_TOKEN_EXPIRED" === n.data.code && -1 === be.indexOf(e))) {_context8.next = 13;break;}_context8.next = 7;return this.refreshAccessToken();case 7:_context8.next = 9;return this.request(e, t, { onUploadProgress: t.onUploadProgress });case 9:_n4 = _context8.sent;if (!_n4.data.code) {_context8.next = 12;break;}throw new B({ code: _n4.data.code, message: _n4.data.message });case 12:return _context8.abrupt("return", _n4.data);case 13:if (!n.data.code) {_context8.next = 15;break;}throw new B({ code: n.data.code, message: n.data.message });case 15:return _context8.abrupt("return", n.data);case 16:case "end":return _context8.stop();}}}, _callee8, this);}));function send(_x7) {return _send.apply(this, arguments);}return send;}() }, { key: "setRefreshToken", value: function setRefreshToken(e) {var _this$_cache$keys3 = this._cache.keys,t = _this$_cache$keys3.accessTokenKey,n = _this$_cache$keys3.accessTokenExpireKey,s = _this$_cache$keys3.refreshTokenKey;this._cache.removeStore(t), this._cache.removeStore(n), this._cache.setStore(s, e);} }]);return Re;}();var Ue = {};function xe(e) {return Ue[e];}var Le = /*#__PURE__*/function () {function Le(e) {_classCallCheck(this, Le);this.config = e, this._cache = ge(e.env), this._request = xe(e.env);}_createClass(Le, [{ key: "setRefreshToken", value: function setRefreshToken(e) {var _this$_cache$keys4 = this._cache.keys,t = _this$_cache$keys4.accessTokenKey,n = _this$_cache$keys4.accessTokenExpireKey,s = _this$_cache$keys4.refreshTokenKey;this._cache.removeStore(t), this._cache.removeStore(n), this._cache.setStore(s, e);} }, { key: "setAccessToken", value: function setAccessToken(e, t) {var _this$_cache$keys5 = this._cache.keys,n = _this$_cache$keys5.accessTokenKey,s = _this$_cache$keys5.accessTokenExpireKey;this._cache.setStore(n, e), this._cache.setStore(s, t);} }, { key: "refreshUserInfo", value: function () {var _refreshUserInfo = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee9() {var _yield$this$_request$, e;return _regenerator.default.wrap(function _callee9$(_context9) {while (1) {switch (_context9.prev = _context9.next) {case 0:_context9.next = 2;return this._request.send("auth.getUserInfo", {});case 2:_yield$this$_request$ = _context9.sent;e = _yield$this$_request$.data;return _context9.abrupt("return", (this.setLocalUserInfo(e), e));case 5:case "end":return _context9.stop();}}}, _callee9, this);}));function refreshUserInfo() {return _refreshUserInfo.apply(this, arguments);}return refreshUserInfo;}() }, { key: "setLocalUserInfo", value: function setLocalUserInfo(e) {var t = this._cache.keys.userInfoKey;this._cache.setStore(t, e);} }]);return Le;}();var De = /*#__PURE__*/function () {function De(e) {_classCallCheck(this, De);if (!e) throw new B({ code: "PARAM_ERROR", message: "envId is not defined" });this._envId = e, this._cache = ge(this._envId), this._request = xe(this._envId), this.setUserInfo();}_createClass(De, [{ key: "linkWithTicket", value: function linkWithTicket(e) {if ("string" != typeof e) throw new B({ code: "PARAM_ERROR", message: "ticket must be string" });return this._request.send("auth.linkWithTicket", { ticket: e });} }, { key: "linkWithRedirect", value: function linkWithRedirect(e) {e.signInWithRedirect();} }, { key: "updatePassword", value: function updatePassword(e, t) {return this._request.send("auth.updatePassword", { oldPassword: t, newPassword: e });} }, { key: "updateEmail", value: function updateEmail(e) {return this._request.send("auth.updateEmail", { newEmail: e });} }, { key: "updateUsername", value: function updateUsername(e) {if ("string" != typeof e) throw new B({ code: "PARAM_ERROR", message: "username must be a string" });return this._request.send("auth.updateUsername", { username: e });} }, { key: "getLinkedUidList", value: function () {var _getLinkedUidList = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee10() {var _yield$this$_request$2, e, t, n;return _regenerator.default.wrap(function _callee10$(_context10) {while (1) {switch (_context10.prev = _context10.next) {case 0:_context10.next = 2;return this._request.send("auth.getLinkedUidList", {});case 2:_yield$this$_request$2 = _context10.sent;e = _yield$this$_request$2.data;t = !1;n = e.users;return _context10.abrupt("return", (n.forEach(function (e) {e.wxOpenId && e.wxPublicId && (t = !0);}), { users: n, hasPrimaryUid: t }));case 7:case "end":return _context10.stop();}}}, _callee10, this);}));function getLinkedUidList() {return _getLinkedUidList.apply(this, arguments);}return getLinkedUidList;}() }, { key: "setPrimaryUid", value: function setPrimaryUid(e) {return this._request.send("auth.setPrimaryUid", { uid: e });} }, { key: "unlink", value: function unlink(e) {return this._request.send("auth.unlink", { platform: e });} }, { key: "update", value: function () {var _update = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee11(e) {var t, n, s, o, r, i, _yield$this$_request$3, a;return _regenerator.default.wrap(function _callee11$(_context11) {while (1) {switch (_context11.prev = _context11.next) {case 0:t = e.nickName;n = e.gender;s = e.avatarUrl;o = e.province;r = e.country;i = e.city;_context11.next = 8;return this._request.send("auth.updateUserInfo", { nickName: t, gender: n, avatarUrl: s, province: o, country: r, city: i });case 8:_yield$this$_request$3 = _context11.sent;a = _yield$this$_request$3.data;this.setLocalUserInfo(a);case 11:case "end":return _context11.stop();}}}, _callee11, this);}));function update(_x8) {return _update.apply(this, arguments);}return update;}() }, { key: "refresh", value: function () {var _refresh = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee12() {var _yield$this$_request$4, e;return _regenerator.default.wrap(function _callee12$(_context12) {while (1) {switch (_context12.prev = _context12.next) {case 0:_context12.next = 2;return this._request.send("auth.getUserInfo", {});case 2:_yield$this$_request$4 = _context12.sent;e = _yield$this$_request$4.data;return _context12.abrupt("return", (this.setLocalUserInfo(e), e));case 5:case "end":return _context12.stop();}}}, _callee12, this);}));function refresh() {return _refresh.apply(this, arguments);}return refresh;}() }, { key: "setUserInfo", value: function setUserInfo() {var _this9 = this;var e = this._cache.keys.userInfoKey,t = this._cache.getStore(e);["uid", "loginType", "openid", "wxOpenId", "wxPublicId", "unionId", "qqMiniOpenId", "email", "hasPassword", "customUserId", "nickName", "gender", "avatarUrl"].forEach(function (e) {_this9[e] = t[e];}), this.location = { country: t.country, province: t.province, city: t.city };} }, { key: "setLocalUserInfo", value: function setLocalUserInfo(e) {var t = this._cache.keys.userInfoKey;this._cache.setStore(t, e), this.setUserInfo();} }]);return De;}();var Ne = /*#__PURE__*/function () {function Ne(e) {_classCallCheck(this, Ne);if (!e) throw new B({ code: "PARAM_ERROR", message: "envId is not defined" });this._cache = ge(e);var _this$_cache$keys6 = this._cache.keys,t = _this$_cache$keys6.refreshTokenKey,n = _this$_cache$keys6.accessTokenKey,s = _this$_cache$keys6.accessTokenExpireKey,o = this._cache.getStore(t),r = this._cache.getStore(n),i = this._cache.getStore(s);this.credential = { refreshToken: o, accessToken: r, accessTokenExpire: i }, this.user = new De(e);}_createClass(Ne, [{ key: "isAnonymousAuth", get: function get() {return this.loginType === Ie.ANONYMOUS;} }, { key: "isCustomAuth", get: function get() {return this.loginType === Ie.CUSTOM;} }, { key: "isWeixinAuth", get: function get() {return this.loginType === Ie.WECHAT || this.loginType === Ie.WECHAT_OPEN || this.loginType === Ie.WECHAT_PUBLIC;} }, { key: "loginType", get: function get() {return this._cache.getStore(this._cache.keys.loginTypeKey);} }]);return Ne;}();var qe = /*#__PURE__*/function (_Le) {_inherits(qe, _Le);var _super4 = _createSuper(qe);function qe() {_classCallCheck(this, qe);return _super4.apply(this, arguments);}_createClass(qe, [{ key: "signIn", value: function () {var _signIn = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee13() {var _this$_cache$keys7, e, t, n, s, o, _e18;return _regenerator.default.wrap(function _callee13$(_context13) {while (1) {switch (_context13.prev = _context13.next) {case 0:this._cache.updatePersistence("local");_this$_cache$keys7 = this._cache.keys;e = _this$_cache$keys7.anonymousUuidKey;t = _this$_cache$keys7.refreshTokenKey;n = this._cache.getStore(e) || void 0;s = this._cache.getStore(t) || void 0;_context13.next = 8;return this._request.send("auth.signInAnonymously", { anonymous_uuid: n, refresh_token: s });case 8:o = _context13.sent;if (!(o.uuid && o.refresh_token)) {_context13.next = 20;break;}this._setAnonymousUUID(o.uuid);this.setRefreshToken(o.refresh_token);_context13.next = 14;return this._request.refreshAccessToken();case 14:we(ve);we(Se, { env: this.config.env, loginType: Ie.ANONYMOUS, persistence: "local" });_e18 = new Ne(this.config.env);_context13.next = 19;return _e18.user.refresh();case 19:return _context13.abrupt("return", _e18);case 20:throw new B({ message: "匿名登录失败" });case 21:case "end":return _context13.stop();}}}, _callee13, this);}));function signIn() {return _signIn.apply(this, arguments);}return signIn;}() }, { key: "linkAndRetrieveDataWithTicket", value: function () {var _linkAndRetrieveDataWithTicket = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee14(e) {var _this$_cache$keys8, t, n, s, o, r;return _regenerator.default.wrap(function _callee14$(_context14) {while (1) {switch (_context14.prev = _context14.next) {case 0:_this$_cache$keys8 = this._cache.keys;t = _this$_cache$keys8.anonymousUuidKey;n = _this$_cache$keys8.refreshTokenKey;s = this._cache.getStore(t);o = this._cache.getStore(n);_context14.next = 7;return this._request.send("auth.linkAndRetrieveDataWithTicket", { anonymous_uuid: s, refresh_token: o, ticket: e });case 7:r = _context14.sent;if (!r.refresh_token) {_context14.next = 16;break;}this._clearAnonymousUUID();this.setRefreshToken(r.refresh_token);_context14.next = 13;return this._request.refreshAccessToken();case 13:we(Pe, { env: this.config.env });we(Se, { loginType: Ie.CUSTOM, persistence: "local" });return _context14.abrupt("return", { credential: { refreshToken: r.refresh_token } });case 16:throw new B({ message: "匿名转化失败" });case 17:case "end":return _context14.stop();}}}, _callee14, this);}));function linkAndRetrieveDataWithTicket(_x9) {return _linkAndRetrieveDataWithTicket.apply(this, arguments);}return linkAndRetrieveDataWithTicket;}() }, { key: "_setAnonymousUUID", value: function _setAnonymousUUID(e) {var _this$_cache$keys9 = this._cache.keys,t = _this$_cache$keys9.anonymousUuidKey,n = _this$_cache$keys9.loginTypeKey;this._cache.removeStore(t), this._cache.setStore(t, e), this._cache.setStore(n, Ie.ANONYMOUS);} }, { key: "_clearAnonymousUUID", value: function _clearAnonymousUUID() {this._cache.removeStore(this._cache.keys.anonymousUuidKey);} }]);return qe;}(Le);var Fe = /*#__PURE__*/function (_Le2) {_inherits(Fe, _Le2);var _super5 = _createSuper(Fe);function Fe() {_classCallCheck(this, Fe);return _super5.apply(this, arguments);}_createClass(Fe, [{ key: "signIn", value: function () {var _signIn2 = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee15(e) {var t, n;return _regenerator.default.wrap(function _callee15$(_context15) {while (1) {switch (_context15.prev = _context15.next) {case 0:if (!("string" != typeof e)) {_context15.next = 2;break;}throw new B({ param: "PARAM_ERROR", message: "ticket must be a string" });case 2:t = this._cache.keys.refreshTokenKey;_context15.next = 5;return this._request.send("auth.signInWithTicket", { ticket: e, refresh_token: this._cache.getStore(t) || "" });case 5:n = _context15.sent;if (!n.refresh_token) {_context15.next = 15;break;}this.setRefreshToken(n.refresh_token);_context15.next = 10;return this._request.refreshAccessToken();case 10:we(ve);we(Se, { env: this.config.env, loginType: Ie.CUSTOM, persistence: this.config.persistence });_context15.next = 14;return this.refreshUserInfo();case 14:return _context15.abrupt("return", new Ne(this.config.env));case 15:throw new B({ message: "自定义登录失败" });case 16:case "end":return _context15.stop();}}}, _callee15, this);}));function signIn(_x10) {return _signIn2.apply(this, arguments);}return signIn;}() }]);return Fe;}(Le);var Me = /*#__PURE__*/function (_Le3) {_inherits(Me, _Le3);var _super6 = _createSuper(Me);function Me() {_classCallCheck(this, Me);return _super6.apply(this, arguments);}_createClass(Me, [{ key: "signIn", value: function () {var _signIn3 = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee16(e, t) {var n, s, o, r, i;return _regenerator.default.wrap(function _callee16$(_context16) {while (1) {switch (_context16.prev = _context16.next) {case 0:if (!("string" != typeof e)) {_context16.next = 2;break;}throw new B({ code: "PARAM_ERROR", message: "email must be a string" });case 2:n = this._cache.keys.refreshTokenKey;_context16.next = 5;return this._request.send("auth.signIn", { loginType: "EMAIL", email: e, password: t, refresh_token: this._cache.getStore(n) || "" });case 5:s = _context16.sent;o = s.refresh_token;r = s.access_token;i = s.access_token_expire;if (!o) {_context16.next = 22;break;}this.setRefreshToken(o);if (!(r && i)) {_context16.next = 15;break;}this.setAccessToken(r, i);_context16.next = 17;break;case 15:_context16.next = 17;return this._request.refreshAccessToken();case 17:_context16.next = 19;return this.refreshUserInfo();case 19:we(ve);we(Se, { env: this.config.env, loginType: Ie.EMAIL, persistence: this.config.persistence });return _context16.abrupt("return", new Ne(this.config.env));case 22:throw s.code ? new B({ code: s.code, message: "\u90AE\u7BB1\u767B\u5F55\u5931\u8D25: ".concat(s.message) }) : new B({ message: "邮箱登录失败" });case 23:case "end":return _context16.stop();}}}, _callee16, this);}));function signIn(_x11, _x12) {return _signIn3.apply(this, arguments);}return signIn;}() }, { key: "activate", value: function () {var _activate = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee17(e) {return _regenerator.default.wrap(function _callee17$(_context17) {while (1) {switch (_context17.prev = _context17.next) {case 0:return _context17.abrupt("return", this._request.send("auth.activateEndUserMail", { token: e }));case 1:case "end":return _context17.stop();}}}, _callee17, this);}));function activate(_x13) {return _activate.apply(this, arguments);}return activate;}() }, { key: "resetPasswordWithToken", value: function () {var _resetPasswordWithToken = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee18(e, t) {return _regenerator.default.wrap(function _callee18$(_context18) {while (1) {switch (_context18.prev = _context18.next) {case 0:return _context18.abrupt("return", this._request.send("auth.resetPasswordWithToken", { token: e, newPassword: t }));case 1:case "end":return _context18.stop();}}}, _callee18, this);}));function resetPasswordWithToken(_x14, _x15) {return _resetPasswordWithToken.apply(this, arguments);}return resetPasswordWithToken;}() }]);return Me;}(Le);var je = /*#__PURE__*/function (_Le4) {_inherits(je, _Le4);var _super7 = _createSuper(je);function je() {_classCallCheck(this, je);return _super7.apply(this, arguments);}_createClass(je, [{ key: "signIn", value: function () {var _signIn4 = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee19(e, t) {var n, s, o, r, i;return _regenerator.default.wrap(function _callee19$(_context19) {while (1) {switch (_context19.prev = _context19.next) {case 0:if (!("string" != typeof e)) {_context19.next = 2;break;}throw new B({ code: "PARAM_ERROR", message: "username must be a string" });case 2:"string" != typeof t && (t = "", console.warn("password is empty"));n = this._cache.keys.refreshTokenKey;_context19.next = 6;return this._request.send("auth.signIn", { loginType: Ie.USERNAME, username: e, password: t, refresh_token: this._cache.getStore(n) || "" });case 6:s = _context19.sent;o = s.refresh_token;r = s.access_token_expire;i = s.access_token;if (!o) {_context19.next = 23;break;}this.setRefreshToken(o);if (!(i && r)) {_context19.next = 16;break;}this.setAccessToken(i, r);_context19.next = 18;break;case 16:_context19.next = 18;return this._request.refreshAccessToken();case 18:_context19.next = 20;return this.refreshUserInfo();case 20:we(ve);we(Se, { env: this.config.env, loginType: Ie.USERNAME, persistence: this.config.persistence });return _context19.abrupt("return", new Ne(this.config.env));case 23:throw s.code ? new B({ code: s.code, message: "\u7528\u6237\u540D\u5BC6\u7801\u767B\u5F55\u5931\u8D25: ".concat(s.message) }) : new B({ message: "用户名密码登录失败" });case 24:case "end":return _context19.stop();}}}, _callee19, this);}));function signIn(_x16, _x17) {return _signIn4.apply(this, arguments);}return signIn;}() }]);return je;}(Le);var $e = /*#__PURE__*/function () {function $e(e) {_classCallCheck(this, $e);this.config = e, this._cache = ge(e.env), this._request = xe(e.env), this._onAnonymousConverted = this._onAnonymousConverted.bind(this), this._onLoginTypeChanged = this._onLoginTypeChanged.bind(this), _e(Se, this._onLoginTypeChanged);}_createClass($e, [{ key: "anonymousAuthProvider", value: function anonymousAuthProvider() {return new qe(this.config);} }, { key: "customAuthProvider", value: function customAuthProvider() {return new Fe(this.config);} }, { key: "emailAuthProvider", value: function emailAuthProvider() {return new Me(this.config);} }, { key: "usernameAuthProvider", value: function usernameAuthProvider() {return new je(this.config);} }, { key: "signInAnonymously", value: function () {var _signInAnonymously = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee20() {return _regenerator.default.wrap(function _callee20$(_context20) {while (1) {switch (_context20.prev = _context20.next) {case 0:return _context20.abrupt("return", new qe(this.config).signIn());case 1:case "end":return _context20.stop();}}}, _callee20, this);}));function signInAnonymously() {return _signInAnonymously.apply(this, arguments);}return signInAnonymously;}() }, { key: "signInWithEmailAndPassword", value: function () {var _signInWithEmailAndPassword = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee21(e, t) {return _regenerator.default.wrap(function _callee21$(_context21) {while (1) {switch (_context21.prev = _context21.next) {case 0:return _context21.abrupt("return", new Me(this.config).signIn(e, t));case 1:case "end":return _context21.stop();}}}, _callee21, this);}));function signInWithEmailAndPassword(_x18, _x19) {return _signInWithEmailAndPassword.apply(this, arguments);}return signInWithEmailAndPassword;}() }, { key: "signInWithUsernameAndPassword", value: function signInWithUsernameAndPassword(e, t) {return new je(this.config).signIn(e, t);} }, { key: "linkAndRetrieveDataWithTicket", value: function () {var _linkAndRetrieveDataWithTicket2 = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee22(e) {return _regenerator.default.wrap(function _callee22$(_context22) {while (1) {switch (_context22.prev = _context22.next) {case 0:this._anonymousAuthProvider || (this._anonymousAuthProvider = new qe(this.config)), _e(Pe, this._onAnonymousConverted);_context22.next = 3;return this._anonymousAuthProvider.linkAndRetrieveDataWithTicket(e);case 3:return _context22.abrupt("return", _context22.sent);case 4:case "end":return _context22.stop();}}}, _callee22, this);}));function linkAndRetrieveDataWithTicket(_x20) {return _linkAndRetrieveDataWithTicket2.apply(this, arguments);}return linkAndRetrieveDataWithTicket;}() }, { key: "signOut", value: function () {var _signOut = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee23() {var _this$_cache$keys10, e, t, n, s, o;return _regenerator.default.wrap(function _callee23$(_context23) {while (1) {switch (_context23.prev = _context23.next) {case 0:if (!(this.loginType === Ie.ANONYMOUS)) {_context23.next = 2;break;}throw new B({ message: "匿名用户不支持登出操作" });case 2:_this$_cache$keys10 = this._cache.keys, e = _this$_cache$keys10.refreshTokenKey, t = _this$_cache$keys10.accessTokenKey, n = _this$_cache$keys10.accessTokenExpireKey, s = this._cache.getStore(e);if (s) {_context23.next = 5;break;}return _context23.abrupt("return");case 5:_context23.next = 7;return this._request.send("auth.logout", { refresh_token: s });case 7:o = _context23.sent;return _context23.abrupt("return", (this._cache.removeStore(e), this._cache.removeStore(t), this._cache.removeStore(n), we(ve), we(Se, { env: this.config.env, loginType: Ie.NULL, persistence: this.config.persistence }), o));case 9:case "end":return _context23.stop();}}}, _callee23, this);}));function signOut() {return _signOut.apply(this, arguments);}return signOut;}() }, { key: "signUpWithEmailAndPassword", value: function () {var _signUpWithEmailAndPassword = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee24(e, t) {return _regenerator.default.wrap(function _callee24$(_context24) {while (1) {switch (_context24.prev = _context24.next) {case 0:return _context24.abrupt("return", this._request.send("auth.signUpWithEmailAndPassword", { email: e, password: t }));case 1:case "end":return _context24.stop();}}}, _callee24, this);}));function signUpWithEmailAndPassword(_x21, _x22) {return _signUpWithEmailAndPassword.apply(this, arguments);}return signUpWithEmailAndPassword;}() }, { key: "sendPasswordResetEmail", value: function () {var _sendPasswordResetEmail = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee25(e) {return _regenerator.default.wrap(function _callee25$(_context25) {while (1) {switch (_context25.prev = _context25.next) {case 0:return _context25.abrupt("return", this._request.send("auth.sendPasswordResetEmail", { email: e }));case 1:case "end":return _context25.stop();}}}, _callee25, this);}));function sendPasswordResetEmail(_x23) {return _sendPasswordResetEmail.apply(this, arguments);}return sendPasswordResetEmail;}() }, { key: "onLoginStateChanged", value: function onLoginStateChanged(e) {var _this10 = this;_e(ve, function () {var t = _this10.hasLoginState();e.call(_this10, t);});var t = this.hasLoginState();e.call(this, t);} }, { key: "onLoginStateExpired", value: function onLoginStateExpired(e) {_e(Te, e.bind(this));} }, { key: "onAccessTokenRefreshed", value: function onAccessTokenRefreshed(e) {_e(Ae, e.bind(this));} }, { key: "onAnonymousConverted", value: function onAnonymousConverted(e) {_e(Pe, e.bind(this));} }, { key: "onLoginTypeChanged", value: function onLoginTypeChanged(e) {var _this11 = this;_e(Se, function () {var t = _this11.hasLoginState();e.call(_this11, t);});} }, { key: "getAccessToken", value: function () {var _getAccessToken2 = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee26() {return _regenerator.default.wrap(function _callee26$(_context26) {while (1) {switch (_context26.prev = _context26.next) {case 0:_context26.next = 2;return this._request.getAccessToken();case 2:_context26.t0 = _context26.sent.accessToken;_context26.t1 = this.config.env;return _context26.abrupt("return", { accessToken: _context26.t0, env: _context26.t1 });case 5:case "end":return _context26.stop();}}}, _callee26, this);}));function getAccessToken() {return _getAccessToken2.apply(this, arguments);}return getAccessToken;}() }, { key: "hasLoginState", value: function hasLoginState() {var e = this._cache.keys.refreshTokenKey;return this._cache.getStore(e) ? new Ne(this.config.env) : null;} }, { key: "isUsernameRegistered", value: function () {var _isUsernameRegistered = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee27(e) {var _yield$this$_request$5, t;return _regenerator.default.wrap(function _callee27$(_context27) {while (1) {switch (_context27.prev = _context27.next) {case 0:if (!("string" != typeof e)) {_context27.next = 2;break;}throw new B({ code: "PARAM_ERROR", message: "username must be a string" });case 2:_context27.next = 4;return this._request.send("auth.isUsernameRegistered", { username: e });case 4:_yield$this$_request$5 = _context27.sent;t = _yield$this$_request$5.data;return _context27.abrupt("return", t && t.isRegistered);case 7:case "end":return _context27.stop();}}}, _callee27, this);}));function isUsernameRegistered(_x24) {return _isUsernameRegistered.apply(this, arguments);}return isUsernameRegistered;}() }, { key: "getLoginState", value: function getLoginState() {return Promise.resolve(this.hasLoginState());} }, { key: "signInWithTicket", value: function () {var _signInWithTicket = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee28(e) {return _regenerator.default.wrap(function _callee28$(_context28) {while (1) {switch (_context28.prev = _context28.next) {case 0:return _context28.abrupt("return", new Fe(this.config).signIn(e));case 1:case "end":return _context28.stop();}}}, _callee28, this);}));function signInWithTicket(_x25) {return _signInWithTicket.apply(this, arguments);}return signInWithTicket;}() }, { key: "shouldRefreshAccessToken", value: function shouldRefreshAccessToken(e) {this._request._shouldRefreshAccessTokenHook = e.bind(this);} }, { key: "getUserInfo", value: function getUserInfo() {return this._request.send("auth.getUserInfo", {}).then(function (e) {return e.code ? e : _objectSpread(_objectSpread({}, e.data), {}, { requestId: e.seqId });});} }, { key: "getAuthHeader", value: function getAuthHeader() {var _this$_cache$keys11 = this._cache.keys,e = _this$_cache$keys11.refreshTokenKey,t = _this$_cache$keys11.accessTokenKey,n = this._cache.getStore(e);return { "x-cloudbase-credentials": this._cache.getStore(t) + "/@@/" + n };} }, { key: "_onAnonymousConverted", value: function _onAnonymousConverted(e) {var t = e.data.env;t === this.config.env && this._cache.updatePersistence(this.config.persistence);} }, { key: "_onLoginTypeChanged", value: function _onLoginTypeChanged(e) {var _e$data = e.data,t = _e$data.loginType,n = _e$data.persistence,s = _e$data.env;s === this.config.env && (this._cache.updatePersistence(n), this._cache.setStore(this._cache.keys.loginTypeKey, t));} }, { key: "currentUser", get: function get() {var e = this.hasLoginState();return e && e.user || null;} }, { key: "loginType", get: function get() {return this._cache.getStore(this._cache.keys.loginTypeKey);} }]);return $e;}();var Ke = function Ke(e, t) {t = t || ne();var n = xe(this.config.env),s = e.cloudPath,o = e.filePath,r = e.onUploadProgress,_e$fileType = e.fileType,i = _e$fileType === void 0 ? "image" : _e$fileType;return n.send("storage.getUploadMetadata", { path: s }).then(function (e) {var _e$data2 = e.data,a = _e$data2.url,c = _e$data2.authorization,u = _e$data2.token,l = _e$data2.fileId,h = _e$data2.cosFileId,d = e.requestId,f = { key: s, signature: c, "x-cos-meta-fileid": h, success_action_status: "201", "x-cos-security-token": u };n.upload({ url: a, data: f, file: o, name: s, fileType: i, onUploadProgress: r }).then(function (e) {201 === e.statusCode ? t(null, { fileID: l, requestId: d }) : t(new B({ code: "STORAGE_REQUEST_FAIL", message: "STORAGE_REQUEST_FAIL: ".concat(e.data) }));}).catch(function (e) {t(e);});}).catch(function (e) {t(e);}), t.promise;},Be = function Be(e, t) {t = t || ne();var n = xe(this.config.env),s = e.cloudPath;return n.send("storage.getUploadMetadata", { path: s }).then(function (e) {t(null, e);}).catch(function (e) {t(e);}), t.promise;},He = function He(_ref5, t) {var e = _ref5.fileList;if (t = t || ne(), !e || !Array.isArray(e)) return { code: "INVALID_PARAM", message: "fileList必须是非空的数组" };var _iterator3 = _createForOfIteratorHelper(e),_step3;try {for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {var _t8 = _step3.value;if (!_t8 || "string" != typeof _t8) return { code: "INVALID_PARAM", message: "fileList的元素必须是非空的字符串" };}} catch (err) {_iterator3.e(err);} finally {_iterator3.f();}var n = { fileid_list: e };return xe(this.config.env).send("storage.batchDeleteFile", n).then(function (e) {e.code ? t(null, e) : t(null, { fileList: e.data.delete_list, requestId: e.requestId });}).catch(function (e) {t(e);}), t.promise;},We = function We(_ref6, t) {var e = _ref6.fileList;t = t || ne(), e && Array.isArray(e) || t(null, { code: "INVALID_PARAM", message: "fileList必须是非空的数组" });var n = [];var _iterator4 = _createForOfIteratorHelper(e),_step4;try {for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {var _s7 = _step4.value;"object" == typeof _s7 ? (_s7.hasOwnProperty("fileID") && _s7.hasOwnProperty("maxAge") || t(null, { code: "INVALID_PARAM", message: "fileList的元素必须是包含fileID和maxAge的对象" }), n.push({ fileid: _s7.fileID, max_age: _s7.maxAge })) : "string" == typeof _s7 ? n.push({ fileid: _s7 }) : t(null, { code: "INVALID_PARAM", message: "fileList的元素必须是字符串" });}} catch (err) {_iterator4.e(err);} finally {_iterator4.f();}var s = { file_list: n };return xe(this.config.env).send("storage.batchGetDownloadUrl", s).then(function (e) {e.code ? t(null, e) : t(null, { fileList: e.data.download_list, requestId: e.requestId });}).catch(function (e) {t(e);}), t.promise;},ze = /*#__PURE__*/function () {var _ref8 = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee29(_ref7, t) {var e, n, s, o;return _regenerator.default.wrap(function _callee29$(_context29) {while (1) {switch (_context29.prev = _context29.next) {case 0:e = _ref7.fileID;_context29.next = 3;return We.call(this, { fileList: [{ fileID: e, maxAge: 600 }] });case 3:n = _context29.sent.fileList[0];if (!("SUCCESS" !== n.code)) {_context29.next = 6;break;}return _context29.abrupt("return", t ? t(n) : new Promise(function (e) {e(n);}));case 6:s = xe(this.config.env);o = n.download_url;if (!(o = encodeURI(o), !t)) {_context29.next = 10;break;}return _context29.abrupt("return", s.download({ url: o }));case 10:_context29.t0 = t;_context29.next = 13;return s.download({ url: o });case 13:_context29.t1 = _context29.sent;(0, _context29.t0)(_context29.t1);case 15:case "end":return _context29.stop();}}}, _callee29, this);}));return function ze(_x26, _x27) {return _ref8.apply(this, arguments);};}(),Je = function Je(_ref9, r) {var e = _ref9.name,t = _ref9.data,n = _ref9.query,s = _ref9.parse,o = _ref9.search;var i = r || ne();var a;try {a = t ? JSON.stringify(t) : "";} catch (e) {return Promise.reject(e);}if (!e) return Promise.reject(new B({ code: "PARAM_ERROR", message: "函数名不能为空" }));var c = { inQuery: n, parse: s, search: o, function_name: e, request_data: a };return xe(this.config.env).send("functions.invokeFunction", c).then(function (e) {if (e.code) i(null, e);else {var _t9 = e.data.response_data;if (s) i(null, { result: _t9, requestId: e.requestId });else try {_t9 = JSON.parse(e.data.response_data), i(null, { result: _t9, requestId: e.requestId });} catch (e) {i(new B({ message: "response data must be json" }));}}return i.promise;}).catch(function (e) {i(e);}), i.promise;},Ve = { timeout: 15e3, persistence: "session" },Ye = {};var Xe = /*#__PURE__*/function () {function Xe(e) {_classCallCheck(this, Xe);this.config = e || this.config, this.authObj = void 0;}_createClass(Xe, [{ key: "init", value: function init(e) {switch (ae.adapter || (this.requestClient = new ae.adapter.reqClass({ timeout: e.timeout || 5e3, timeoutMsg: "\u8BF7\u6C42\u5728".concat((e.timeout || 5e3) / 1e3, "s\u5185\u672A\u5B8C\u6210\uFF0C\u5DF2\u4E2D\u65AD") })), this.config = _objectSpread(_objectSpread({}, Ve), e), !0) {case this.config.timeout > 6e5:console.warn("timeout大于可配置上限[10分钟]，已重置为上限数值"), this.config.timeout = 6e5;break;case this.config.timeout < 100:console.warn("timeout小于可配置下限[100ms]，已重置为下限数值"), this.config.timeout = 100;}return new Xe(this.config);} }, { key: "auth", value: function auth() {var _ref10 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},e = _ref10.persistence;if (this.authObj) return this.authObj;var t = e || ae.adapter.primaryStorage || Ve.persistence;var n;return t !== this.config.persistence && (this.config.persistence = t), function (e) {var t = e.env;de[t] = new he(e), fe[t] = new he(_objectSpread(_objectSpread({}, e), {}, { persistence: "local" }));}(this.config), n = this.config, Ue[n.env] = new Re(n), this.authObj = new $e(this.config), this.authObj;} }, { key: "on", value: function on(e, t) {return _e.apply(this, [e, t]);} }, { key: "off", value: function off(e, t) {return ke.apply(this, [e, t]);} }, { key: "callFunction", value: function callFunction(e, t) {return Je.apply(this, [e, t]);} }, { key: "deleteFile", value: function deleteFile(e, t) {return He.apply(this, [e, t]);} }, { key: "getTempFileURL", value: function getTempFileURL(e, t) {return We.apply(this, [e, t]);} }, { key: "downloadFile", value: function downloadFile(e, t) {return ze.apply(this, [e, t]);} }, { key: "uploadFile", value: function uploadFile(e, t) {return Ke.apply(this, [e, t]);} }, { key: "getUploadMetadata", value: function getUploadMetadata(e, t) {return Be.apply(this, [e, t]);} }, { key: "registerExtension", value: function registerExtension(e) {Ye[e.name] = e;} }, { key: "invokeExtension", value: function () {var _invokeExtension = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee30(e, t) {var n;return _regenerator.default.wrap(function _callee30$(_context30) {while (1) {switch (_context30.prev = _context30.next) {case 0:n = Ye[e];if (n) {_context30.next = 3;break;}throw new B({ message: "\u6269\u5C55".concat(e, " \u5FC5\u987B\u5148\u6CE8\u518C") });case 3:_context30.next = 5;return n.invoke(t, this);case 5:return _context30.abrupt("return", _context30.sent);case 6:case "end":return _context30.stop();}}}, _callee30, this);}));function invokeExtension(_x28, _x29) {return _invokeExtension.apply(this, arguments);}return invokeExtension;}() }, { key: "useAdapters", value: function useAdapters(e) {var _ref11 = ie(e) || {},t = _ref11.adapter,n = _ref11.runtime;t && (ae.adapter = t), n && (ae.runtime = n);} }]);return Xe;}();var Ge = new Xe();function Qe(e, t, n) {void 0 === n && (n = {});var s = /\?/.test(t),o = "";for (var r in n) {"" === o ? !s && (t += "?") : o += "&", o += r + "=" + encodeURIComponent(n[r]);}return /^http(s)?:\/\//.test(t += o) ? t : "" + e + t;}var Ze = /*#__PURE__*/function () {function Ze() {_classCallCheck(this, Ze);}_createClass(Ze, [{ key: "post", value: function post(e) {var t = e.url,n = e.data,s = e.headers;return new Promise(function (e, o) {V.request({ url: Qe("https:", t), data: n, method: "POST", header: s, success: function success(t) {e(t);}, fail: function fail(e) {o(e);} });});} }, { key: "upload", value: function upload(e) {return new Promise(function (t, n) {var s = e.url,o = e.file,r = e.data,i = e.headers,a = e.fileType,c = V.uploadFile({ url: Qe("https:", s), name: "file", formData: Object.assign({}, r), filePath: o, fileType: a, header: i, success: function success(e) {var n = { statusCode: e.statusCode, data: e.data || {} };200 === e.statusCode && r.success_action_status && (n.statusCode = parseInt(r.success_action_status, 10)), t(n);}, fail: function fail(e) {n(new Error(e.errMsg || "uploadFile:fail"));} });"function" == typeof e.onUploadProgress && c && "function" == typeof c.onProgressUpdate && c.onProgressUpdate(function (t) {e.onUploadProgress({ loaded: t.totalBytesSent, total: t.totalBytesExpectedToSend });});});} }]);return Ze;}();var et = { setItem: function setItem(e, t) {V.setStorageSync(e, t);}, getItem: function getItem(e) {return V.getStorageSync(e);}, removeItem: function removeItem(e) {V.removeStorageSync(e);}, clear: function clear() {V.clearStorageSync();} };var tt = { genAdapter: function genAdapter() {return { root: {}, reqClass: Ze, localStorage: et, primaryStorage: "local" };}, isMatch: function isMatch() {return !0;}, runtime: "uni_app" };Ge.useAdapters(tt);var nt = Ge,st = nt.init;nt.init = function (e) {e.env = e.spaceId;var t = st.call(this, e);t.config.provider = "tencent", t.config.spaceId = e.spaceId;var n = t.auth;return t.auth = function (e) {var t = n.call(this, e);return ["linkAndRetrieveDataWithTicket", "signInAnonymously", "signOut", "getAccessToken", "getLoginState", "signInWithTicket", "getUserInfo"].forEach(function (e) {t[e] = K(t[e]).bind(t);}), t;}, t.customAuth = t.auth, t;};var ot = nt;function rt() {return { token: V.getStorageSync("uni_id_token") || V.getStorageSync("uniIdToken"), tokenExpired: V.getStorageSync("uni_id_token_expired") };}function it() {var _ref12 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},e = _ref12.token,t = _ref12.tokenExpired;e && V.setStorageSync("uni_id_token", e), t && V.setStorageSync("uni_id_token_expired", t);}function at() {if (!d || "web" !== g) return;uni.getStorageSync("__LAST_DCLOUD_APPID") !== _ && (uni.setStorageSync("__LAST_DCLOUD_APPID", _), console.warn("检测到当前项目与上次运行到此端口的项目不一致，自动清理uni-id保存的token信息（仅开发调试时生效）"), V.removeStorageSync("uni_id_token"), V.removeStorageSync("uniIdToken"), V.removeStorageSync("uni_id_token_expired"));}var ct = /*#__PURE__*/function (_G) {_inherits(ct, _G);var _super8 = _createSuper(ct);function ct() {_classCallCheck(this, ct);return _super8.apply(this, arguments);}_createClass(ct, [{ key: "getAccessToken", value: function getAccessToken() {var _this12 = this;return new Promise(function (e, t) {var n = "Anonymous_Access_token";_this12.setAccessToken(n), e(n);});} }, { key: "setupRequest", value: function setupRequest(e, t) {var n = Object.assign({}, e, { spaceId: this.config.spaceId, timestamp: Date.now() }),s = { "Content-Type": "application/json" };"auth" !== t && (n.token = this.accessToken, s["x-basement-token"] = this.accessToken), s["x-serverless-sign"] = J.sign(n, this.config.clientSecret);var o = z();s["x-client-info"] = encodeURIComponent(JSON.stringify(o));var _rt = rt(),r = _rt.token;return s["x-client-token"] = r, { url: this.config.requestUrl, method: "POST", data: n, dataType: "json", header: JSON.parse(JSON.stringify(s)) };} }, { key: "uploadFileToOSS", value: function uploadFileToOSS(_ref13) {var _this13 = this;var e = _ref13.url,t = _ref13.formData,n = _ref13.name,s = _ref13.filePath,o = _ref13.fileType,r = _ref13.onUploadProgress;return new Promise(function (i, a) {var c = _this13.adapter.uploadFile({ url: e, formData: t, name: n, filePath: s, fileType: o, success: function success(e) {e && e.statusCode < 400 ? i(e) : a(new B({ code: "UPLOAD_FAILED", message: "文件上传失败" }));}, fail: function fail(e) {a(new B({ code: e.code || "UPLOAD_FAILED", message: e.message || e.errMsg || "文件上传失败" }));} });"function" == typeof r && c && "function" == typeof c.onProgressUpdate && c.onProgressUpdate(function (e) {r({ loaded: e.totalBytesSent, total: e.totalBytesExpectedToSend });});});} }, { key: "uploadFile", value: function uploadFile(_ref14) {var _this14 = this;var e = _ref14.filePath,t = _ref14.cloudPath,_ref14$fileType = _ref14.fileType,n = _ref14$fileType === void 0 ? "image" : _ref14$fileType,s = _ref14.onUploadProgress;if (!t) throw new B({ code: "CLOUDPATH_REQUIRED", message: "cloudPath不可为空" });var o;return this.getOSSUploadOptionsFromPath({ cloudPath: t }).then(function (t) {var _t$result = t.result,r = _t$result.url,i = _t$result.formData,a = _t$result.name;o = t.result.fileUrl;var c = { url: r, formData: i, name: a, filePath: e, fileType: n };return _this14.uploadFileToOSS(Object.assign({}, c, { onUploadProgress: s }));}).then(function () {return _this14.reportOSSUpload({ cloudPath: t });}).then(function (t) {return new Promise(function (n, s) {t.success ? n({ success: !0, filePath: e, fileID: o }) : s(new B({ code: "UPLOAD_FAILED", message: "文件上传失败" }));});});} }, { key: "deleteFile", value: function deleteFile(_ref15) {var e = _ref15.fileList;var t = { method: "serverless.file.resource.delete", params: JSON.stringify({ fileList: e }) };return this.request(this.setupRequest(t));} }, { key: "getTempFileURL", value: function getTempFileURL() {var _ref16 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},e = _ref16.fileList;var t = { method: "serverless.file.resource.getTempFileURL", params: JSON.stringify({ fileList: e }) };return this.request(this.setupRequest(t));} }]);return ct;}(G);var ut = { init: function init(e) {var t = new ct(e),n = { signInAnonymously: function signInAnonymously() {return t.authorize();}, getLoginState: function getLoginState() {return Promise.resolve(!1);} };return t.auth = function () {return n;}, t.customAuth = t.auth, t;} };function lt(_ref17) {var e = _ref17.data;var t;t = z();var n = JSON.parse(JSON.stringify(e || {}));if (Object.assign(n, { clientInfo: t }), !n.uniIdToken) {var _rt2 = rt(),_e19 = _rt2.token;_e19 && (n.uniIdToken = _e19);}return n;}function ht() {var _this15 = this;var _ref18 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},e = _ref18.name,t = _ref18.data;var _this$__dev__ = this.__dev__,n = _this$__dev__.localAddress,s = _this$__dev__.localPort,o = { aliyun: "aliyun", tencent: "tcb" }[this.config.provider],r = this.config.spaceId,i = "http://".concat(n, ":").concat(s, "/system/check-function"),a = "http://".concat(n, ":").concat(s, "/cloudfunctions/").concat(e);return new Promise(function (t, n) {V.request({ method: "POST", url: i, data: { name: e, platform: g, provider: o, spaceId: r }, timeout: 3e3, success: function success(e) {t(e);}, fail: function fail() {t({ data: { code: "NETWORK_ERROR", message: "连接本地调试服务失败，请检查客户端是否和主机在同一局域网下，自动切换为已部署的云函数。" } });} });}).then(function () {var _ref19 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},e = _ref19.data;var _ref20 = e || {},t = _ref20.code,n = _ref20.message;return { code: 0 === t ? 0 : t || "SYS_ERR", message: n || "SYS_ERR" };}).then(function (_ref21) {var n = _ref21.code,s = _ref21.message;if (0 !== n) {switch (n) {case "MODULE_ENCRYPTED":console.error("\u6B64\u4E91\u51FD\u6570\uFF08".concat(e, "\uFF09\u4F9D\u8D56\u52A0\u5BC6\u516C\u5171\u6A21\u5757\u4E0D\u53EF\u672C\u5730\u8C03\u8BD5\uFF0C\u81EA\u52A8\u5207\u6362\u4E3A\u4E91\u7AEF\u5DF2\u90E8\u7F72\u7684\u4E91\u51FD\u6570"));break;case "FUNCTION_ENCRYPTED":console.error("\u6B64\u4E91\u51FD\u6570\uFF08".concat(e, "\uFF09\u5DF2\u52A0\u5BC6\u4E0D\u53EF\u672C\u5730\u8C03\u8BD5\uFF0C\u81EA\u52A8\u5207\u6362\u4E3A\u4E91\u7AEF\u5DF2\u90E8\u7F72\u7684\u4E91\u51FD\u6570"));break;case "ACTION_ENCRYPTED":console.error(s || "需要访问加密的uni-clientDB-action，自动切换为云端环境");break;case "NETWORK_ERROR":{var _e20 = "连接本地调试服务失败，请检查客户端是否和主机在同一局域网下";throw console.error(_e20), new Error(_e20);}case "SWITCH_TO_CLOUD":break;default:{var _e21 = "\u68C0\u6D4B\u672C\u5730\u8C03\u8BD5\u670D\u52A1\u51FA\u73B0\u9519\u8BEF\uFF1A".concat(s, "\uFF0C\u8BF7\u68C0\u67E5\u7F51\u7EDC\u73AF\u5883\u6216\u91CD\u542F\u5BA2\u6237\u7AEF\u518D\u8BD5");throw console.error(_e21), new Error(_e21);}}return _this15._callCloudFunction({ name: e, data: t });}return new Promise(function (e, n) {var s = lt.call(_this15, { data: t });V.request({ method: "POST", url: a, data: { provider: o, platform: g, param: s }, success: function success() {var _ref22 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},t = _ref22.statusCode,s = _ref22.data;return !t || t >= 400 ? n(new B({ code: s.code || "SYS_ERR", message: s.message || "request:fail" })) : e({ result: s });}, fail: function fail(e) {n(new B({ code: e.code || e.errCode || "SYS_ERR", message: e.message || e.errMsg || "request:fail" }));} });});});}var dt = [{ rule: /fc_function_not_found|FUNCTION_NOT_FOUND/, content: "，云函数[{functionName}]在云端不存在，请检查此云函数名称是否正确以及该云函数是否已上传到服务空间", mode: "append" }];var ft = /[\\^$.*+?()[\]{}|]/g,gt = RegExp(ft.source);function pt(e, t, n) {return e.replace(new RegExp((s = t) && gt.test(s) ? s.replace(ft, "\\$&") : s, "g"), n);var s;}function mt(_ref23) {var e = _ref23.functionName,t = _ref23.result,n = _ref23.logPvd;if (this.__dev__.debugLog && t && t.requestId) {var _s8 = JSON.stringify({ spaceId: this.config.spaceId, functionName: e, requestId: t.requestId });console.log("[".concat(n, "-request]").concat(_s8, "[/").concat(n, "-request]"));}}function yt(e) {var t = e.callFunction,n = function n(_n5) {var _this16 = this;var s = _n5.name;_n5.data = lt.call(e, { data: _n5.data });var o = { aliyun: "aliyun", tencent: "tcb", tcb: "tcb" }[this.config.provider];return t.call(this, _n5).then(function (e) {return e.errCode = 0, mt.call(_this16, { functionName: s, result: e, logPvd: o }), Promise.resolve(e);}, function (e) {return mt.call(_this16, { functionName: s, result: e, logPvd: o }), e && e.message && (e.message = function () {var _ref24 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},_ref24$message = _ref24.message,e = _ref24$message === void 0 ? "" : _ref24$message,_ref24$extraInfo = _ref24.extraInfo,t = _ref24$extraInfo === void 0 ? {} : _ref24$extraInfo,_ref24$formatter = _ref24.formatter,n = _ref24$formatter === void 0 ? [] : _ref24$formatter;for (var _s9 = 0; _s9 < n.length; _s9++) {var _n$_s = n[_s9],_o3 = _n$_s.rule,_r2 = _n$_s.content,i = _n$_s.mode,_a = e.match(_o3);if (!_a) continue;var _c = _r2;for (var _e22 = 1; _e22 < _a.length; _e22++) {_c = pt(_c, "{$".concat(_e22, "}"), _a[_e22]);}for (var _e23 in t) {_c = pt(_c, "{".concat(_e23, "}"), t[_e23]);}return "replace" === i ? _c : e + _c;}return e;}({ message: "[".concat(_n5.name, "]: ").concat(e.message), formatter: dt, extraInfo: { functionName: s } })), Promise.reject(e);});};e.callFunction = function (t) {var s;d && e.__dev__.debugInfo && !e.__dev__.debugInfo.forceRemote && m ? (e._callCloudFunction || (e._callCloudFunction = n, e._callLocalFunction = ht), s = ht) : s = n;var o = s.call(this, t);return Object.defineProperty(o, "result", { get: function get() {return console.warn("当前返回结果为Promise类型，不可直接访问其result属性，详情请参考：https://uniapp.dcloud.net.cn/uniCloud/faq?id=promise"), {};} }), o;};}var _t = Symbol("CLIENT_DB_INTERNAL");function wt(e, t) {return e.then = "DoNotReturnProxyWithAFunctionNamedThen", e._internalType = _t, e.__ob__ = void 0, new Proxy(e, { get: function get(e, n, s) {if ("_uniClient" === n) return null;if (n in e || "string" != typeof n) {var _t10 = e[n];return "function" == typeof _t10 ? _t10.bind(e) : _t10;}return t.get(e, n, s);} });}function kt(e) {return { on: function on(t, n) {e[t] = e[t] || [], e[t].indexOf(n) > -1 || e[t].push(n);}, off: function off(t, n) {e[t] = e[t] || [];var s = e[t].indexOf(n);-1 !== s && e[t].splice(s, 1);} };}var vt = ["db.Geo", "db.command", "command.aggregate"];function Tt(e, t) {return vt.indexOf("".concat(e, ".").concat(t)) > -1;}function St(e) {switch (u(e)) {case "array":return e.map(function (e) {return St(e);});case "object":return e._internalType === _t || Object.keys(e).forEach(function (t) {e[t] = St(e[t]);}), e;case "regexp":return { $regexp: { source: e.source, flags: e.flags } };case "date":return { $date: e.toISOString() };default:return e;}}function Pt(e) {return e && e.content && e.content.$method;}var At = /*#__PURE__*/function () {function At(e, t, n) {_classCallCheck(this, At);this.content = e, this.prevStage = t || null, this.udb = null, this._database = n;}_createClass(At, [{ key: "toJSON", value: function toJSON() {var e = this;var t = [e.content];for (; e.prevStage;) {e = e.prevStage, t.push(e.content);}return { $db: t.reverse().map(function (e) {return { $method: e.$method, $param: St(e.$param) };}) };} }, { key: "getAction", value: function getAction() {var e = this.toJSON().$db.find(function (e) {return "action" === e.$method;});return e && e.$param && e.$param[0];} }, { key: "getCommand", value: function getCommand() {return { $db: this.toJSON().$db.filter(function (e) {return "action" !== e.$method;}) };} }, { key: "get", value: function get() {return this._send("get", Array.from(arguments));} }, { key: "add", value: function add() {return this._send("add", Array.from(arguments));} }, { key: "update", value: function update() {return this._send("update", Array.from(arguments));} }, { key: "end", value: function end() {return this._send("end", Array.from(arguments));} }, { key: "_send", value: function _send(e, t) {var n = this.getAction(),s = this.getCommand();if (s.$db.push({ $method: e, $param: St(t) }), d) {var _e24 = s.$db.find(function (e) {return "collection" === e.$method;}),_t11 = _e24 && _e24.$param;_t11 && 1 === _t11.length && "string" == typeof _e24.$param[0] && _e24.$param[0].indexOf(",") > -1 && console.warn("检测到使用JQL语法联表查询时，未使用getTemp先过滤主表数据，在主表数据量大的情况下可能会查询缓慢。\n- 如何优化请参考此文档：https://uniapp.dcloud.net.cn/uniCloud/jql?id=lookup-with-temp \n- 如果主表数据量很小请忽略此信息，项目发行时不会出现此提示。");}return this._database._callCloudFunction({ action: n, command: s });} }, { key: "isAggregate", get: function get() {var e = this;for (; e;) {var t = Pt(e),_n6 = Pt(e.prevStage);if ("aggregate" === t && "collection" === _n6 || "pipeline" === t) return !0;e = e.prevStage;}return !1;} }, { key: "isCommand", get: function get() {var e = this;for (; e;) {if ("command" === Pt(e)) return !0;e = e.prevStage;}return !1;} }, { key: "isAggregateCommand", get: function get() {var e = this;for (; e;) {var t = Pt(e),_n7 = Pt(e.prevStage);if ("aggregate" === t && "command" === _n7) return !0;e = e.prevStage;}return !1;} }, { key: "count", get: function get() {if (!this.isAggregate) return function () {return this._send("count", Array.from(arguments));};var e = this;return function () {return It({ $method: "count", $param: St(Array.from(arguments)) }, e, this._database);};} }, { key: "remove", get: function get() {if (!this.isCommand) return function () {return this._send("remove", Array.from(arguments));};var e = this;return function () {return It({ $method: "remove", $param: St(Array.from(arguments)) }, e, this._database);};} }, { key: "set", get: function get() {if (!this.isCommand) return function () {throw new Error("JQL禁止使用set方法");};var e = this;return function () {return It({ $method: "set", $param: St(Array.from(arguments)) }, e, this._database);};} }]);return At;}();function It(e, t, n) {return wt(new At(e, t, n), { get: function get(e, t) {var s = "db";return e && e.content && (s = e.content.$method), Tt(s, t) ? It({ $method: t }, e, n) : function () {return It({ $method: t, $param: St(Array.from(arguments)) }, e, n);};} });}function bt(_ref25) {var e = _ref25.path,t = _ref25.method;return /*#__PURE__*/function () {function _class2() {_classCallCheck(this, _class2);this.param = Array.from(arguments);}_createClass(_class2, [{ key: "toJSON", value: function toJSON() {return { $newDb: [].concat(_toConsumableArray(e.map(function (e) {return { $method: e };})), [{ $method: t, $param: this.param }]) };} }]);return _class2;}();}var Ot = /*#__PURE__*/function (_ref26) {_inherits(Ot, _ref26);var _super9 = _createSuper(Ot);function Ot() {_classCallCheck(this, Ot);return _super9.apply(this, arguments);}_createClass(Ot, [{ key: "_callCloudFunction", value: function _callCloudFunction(_ref27) {var _this17 = this;var e = _ref27.action,t = _ref27.command,n = _ref27.multiCommand,s = _ref27.queryList;function o(e, t) {if (n && s) for (var _n8 = 0; _n8 < s.length; _n8++) {var _o4 = s[_n8];_o4.udb && "function" == typeof _o4.udb.setResult && (t ? _o4.udb.setResult(t) : _o4.udb.setResult(e.result.dataList[_n8]));}}var r = this;function i(e) {return r._callback("error", [e]), A(I("database", "fail"), e).then(function () {return A(I("database", "complete"), e);}).then(function () {return o(null, e), F(C, { type: U, content: e }), Promise.reject(e);});}var a = A(I("database", "invoke")),u = this._uniClient;return a.then(function () {return u.callFunction({ name: "DCloud-clientDB", type: c, data: { action: e, command: t, multiCommand: n } });}).then(function (e) {var _e$result = e.result,t = _e$result.code,n = _e$result.message,s = _e$result.token,r = _e$result.tokenExpired,_e$result$systemInfo = _e$result.systemInfo,a = _e$result$systemInfo === void 0 ? [] : _e$result$systemInfo;if (a) for (var _e25 = 0; _e25 < a.length; _e25++) {var _a$_e = a[_e25],_t12 = _a$_e.level,_n9 = _a$_e.message,_s10 = _a$_e.detail,_o5 = console["app" === g && "warn" === _t12 ? "error" : _t12] || console.log;var _r3 = "[System Info]" + _n9;_s10 && (_r3 = "".concat(_r3, "\n\u8BE6\u7EC6\u4FE1\u606F\uFF1A").concat(_s10)), _o5(_r3);}if (t) {return i(new B({ code: t, message: n, requestId: e.requestId }));}e.result.errCode = e.result.code, e.result.errMsg = e.result.message, s && r && (it({ token: s, tokenExpired: r }), _this17._callbackAuth("refreshToken", [{ token: s, tokenExpired: r }]), _this17._callback("refreshToken", [{ token: s, tokenExpired: r }]), F(R, { token: s, tokenExpired: r }));var c = [{ prop: "affectedDocs", tips: "affectedDocs不再推荐使用，请使用inserted/deleted/updated/data.length替代" }, { prop: "code", tips: "code不再推荐使用，请使用errCode替代" }, { prop: "message", tips: "message不再推荐使用，请使用errMsg替代" }];var _loop = function _loop(_t13) {var _c$_t = c[_t13],n = _c$_t.prop,s = _c$_t.tips;if (n in e.result) {var _t14 = e.result[n];Object.defineProperty(e.result, n, { get: function get() {return console.warn(s), _t14;} });}};for (var _t13 = 0; _t13 < c.length; _t13++) {_loop(_t13);}return function (e) {return A(I("database", "success"), e).then(function () {return A(I("database", "complete"), e);}).then(function () {return o(e, null), F(C, { type: U, content: e }), Promise.resolve(e);});}(e);}, function (e) {/fc_function_not_found|FUNCTION_NOT_FOUND/g.test(e.message) && console.warn("clientDB未初始化，请在web控制台保存一次schema以开启clientDB");return i(new B({ code: e.code || "SYSTEM_ERROR", message: e.message, requestId: e.requestId }));});} }]);return Ot;}( /*#__PURE__*/function () {function _class3() {var _ref28 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},_ref28$uniClient = _ref28.uniClient,e = _ref28$uniClient === void 0 ? {} : _ref28$uniClient;_classCallCheck(this, _class3);this._uniClient = e, this._authCallBacks = {}, this._dbCallBacks = {}, e.isDefault && (this._dbCallBacks = k("_globalUniCloudDatabaseCallback")), this.auth = kt(this._authCallBacks), Object.assign(this, kt(this._dbCallBacks)), this.env = wt({}, { get: function get(e, t) {return { $env: t };} }), this.Geo = wt({}, { get: function get(e, t) {return bt({ path: ["Geo"], method: t });} }), this.serverDate = bt({ path: [], method: "serverDate" }), this.RegExp = bt({ path: [], method: "RegExp" });}_createClass(_class3, [{ key: "getCloudEnv", value: function getCloudEnv(e) {if ("string" != typeof e || !e.trim()) throw new Error("getCloudEnv参数错误");return { $env: e.replace("$cloudEnv_", "") };} }, { key: "_callback", value: function _callback(e, t) {var n = this._dbCallBacks;n[e] && n[e].forEach(function (e) {e.apply(void 0, _toConsumableArray(t));});} }, { key: "_callbackAuth", value: function _callbackAuth(e, t) {var n = this._authCallBacks;n[e] && n[e].forEach(function (e) {e.apply(void 0, _toConsumableArray(t));});} }, { key: "multiSend", value: function multiSend() {var e = Array.from(arguments),t = e.map(function (e) {var t = e.getAction(),n = e.getCommand();if ("getTemp" !== n.$db[n.$db.length - 1].$method) throw new Error("multiSend只支持子命令内使用getTemp");return { action: t, command: n };});return this._callCloudFunction({ multiCommand: t, queryList: e });} }]);return _class3;}());function Ct(e) {e.database = function (t) {if (t && Object.keys(t).length > 0) return e.init(t).database();if (this._database) return this._database;var n = function (e) {var t = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};return wt(new e(t), { get: function get(e, t) {return Tt("db", t) ? It({ $method: t }, null, e) : function () {return It({ $method: t, $param: St(Array.from(arguments)) }, null, e);};} });}(Ot, { uniClient: e });return this._database = n, n;};}var Et = "token无效，跳转登录页面",Rt = "token过期，跳转登录页面",Ut = { TOKEN_INVALID_TOKEN_EXPIRED: Rt, TOKEN_INVALID_INVALID_CLIENTID: Et, TOKEN_INVALID: Et, TOKEN_INVALID_WRONG_TOKEN: Et, TOKEN_INVALID_ANONYMOUS_USER: Et },xt = { "uni-id-token-expired": Rt, "uni-id-check-token-failed": Et, "uni-id-token-not-exist": Et, "uni-id-check-device-feature-failed": Et };function Lt(e, t) {var n = "";return n = e ? "".concat(e, "/").concat(t) : t, n.replace(/^\//, "");}function Dt() {var e = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];var t = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "";var n = [],s = [];return e.forEach(function (e) {!0 === e.needLogin ? n.push(Lt(t, e.path)) : !1 === e.needLogin && s.push(Lt(t, e.path));}), { needLoginPage: n, notNeedLoginPage: s };}function Nt(e) {return e.split("?")[0].replace(/^\//, "");}function qt() {return function (e) {var t = e && e.$page && e.$page.fullPath || "";return t ? ("/" !== t.charAt(0) && (t = "/" + t), t) : t;}(function () {var e = getCurrentPages();return e[e.length - 1];}());}function Ft() {return Nt(qt());}function Mt() {var e = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "";var t = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};if (!e) return !1;if (!(t && t.list && t.list.length)) return !1;var n = t.list,s = Nt(e);return n.some(function (e) {return e.pagePath === s;});}var jt = !!_pages.default.uniIdRouter;var _ref29 = function () {var _ref30 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : _pages.default,_ref30$pages = _ref30.pages,e = _ref30$pages === void 0 ? [] : _ref30$pages,_ref30$subPackages = _ref30.subPackages,n = _ref30$subPackages === void 0 ? [] : _ref30$subPackages,_ref30$uniIdRouter = _ref30.uniIdRouter,s = _ref30$uniIdRouter === void 0 ? {} : _ref30$uniIdRouter,_ref30$tabBar = _ref30.tabBar,o = _ref30$tabBar === void 0 ? {} : _ref30$tabBar;var r = s.loginPage,_s$needLogin = s.needLogin,i = _s$needLogin === void 0 ? [] : _s$needLogin,_s$resToLogin = s.resToLogin,a = _s$resToLogin === void 0 ? !0 : _s$resToLogin,_Dt = Dt(e),c = _Dt.needLoginPage,u = _Dt.notNeedLoginPage,_ref31 = function () {var e = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];var t = [],n = [];return e.forEach(function (e) {var s = e.root,_e$pages = e.pages,o = _e$pages === void 0 ? [] : _e$pages,_Dt2 = Dt(o, s),r = _Dt2.needLoginPage,i = _Dt2.notNeedLoginPage;t.push.apply(t, _toConsumableArray(r)), n.push.apply(n, _toConsumableArray(i));}), { needLoginPage: t, notNeedLoginPage: n };}(n),l = _ref31.needLoginPage,h = _ref31.notNeedLoginPage;return { loginPage: r, routerNeedLogin: i, resToLogin: a, needLoginPage: [].concat(_toConsumableArray(c), _toConsumableArray(l)), notNeedLoginPage: [].concat(_toConsumableArray(u), _toConsumableArray(h)), loginPageInTabBar: Mt(r, o) };}(),$t = _ref29.loginPage,Kt = _ref29.routerNeedLogin,Bt = _ref29.resToLogin,Ht = _ref29.needLoginPage,Wt = _ref29.notNeedLoginPage,zt = _ref29.loginPageInTabBar;if (Ht.indexOf($t) > -1) throw new Error("Login page [".concat($t, "] should not be \"needLogin\", please check your pages.json"));function Jt(e) {var t = Nt(function (e) {var t = Ft(),n = e.charAt(0),s = e.split("?")[0];if ("/" === n) return s;var o = s.replace(/^\//, "").split("/"),r = t.split("/");r.pop();for (var _e26 = 0; _e26 < o.length; _e26++) {var _t15 = o[_e26];".." === _t15 ? r.pop() : "." !== _t15 && r.push(_t15);}return "" === r[0] && r.shift(), r.join("/");}(e));return !(Wt.indexOf(t) > -1) && (Ht.indexOf(t) > -1 || Kt.some(function (t) {return function (e, t) {return new RegExp(t).test(e);}(e, t);}));}function Vt(_ref32) {var e = _ref32.redirect;var t = Nt(e),n = Nt($t);return Ft() !== n && t !== n;}function Yt() {var _ref33 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},e = _ref33.api,t = _ref33.redirect;if (!t || !Vt({ redirect: t })) return;var n = function (e, t) {return "/" !== e.charAt(0) && (e = "/" + e), t ? e.indexOf("?") > -1 ? e + "&uniIdRedirectUrl=".concat(encodeURIComponent(t)) : e + "?uniIdRedirectUrl=".concat(encodeURIComponent(t)) : e;}($t, t);zt ? "navigateTo" !== e && "redirectTo" !== e || (e = "switchTab") : "switchTab" === e && (e = "navigateTo"), setTimeout(function () {uni[e]({ url: n });});}function Xt() {var _ref34 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},e = _ref34.url;var t = { abortLoginPageJump: !1, autoToLoginPage: !1 },n = function () {var _rt3 = rt(),e = _rt3.token,t = _rt3.tokenExpired;var n;if (e) {if (t < Date.now()) {var _e27 = "uni-id-token-expired";n = { errCode: _e27, errMsg: xt[_e27] };}} else {var _e28 = "uni-id-check-token-failed";n = { errCode: _e28, errMsg: xt[_e28] };}return n;}();if (Jt(e) && n) {n.uniIdRedirectUrl = e;if (D(E).length > 0) return setTimeout(function () {F(E, n);}, 0), t.abortLoginPageJump = !0, t;t.autoToLoginPage = !0;}return t;}function Gt() {!function () {var e = qt(),_Xt = Xt({ url: e }),t = _Xt.abortLoginPageJump,n = _Xt.autoToLoginPage;t || n && Yt({ api: "redirectTo", redirect: e });}();var e = ["navigateTo", "redirectTo", "reLaunch", "switchTab"];var _loop2 = function _loop2(_t16) {var n = e[_t16];uni.addInterceptor(n, { invoke: function invoke(e) {var _Xt2 = Xt({ url: e.url }),t = _Xt2.abortLoginPageJump,s = _Xt2.autoToLoginPage;return t ? e : s ? (Yt({ api: n, redirect: e.url }), !1) : e;} });};for (var _t16 = 0; _t16 < e.length; _t16++) {_loop2(_t16);}}function Qt() {this.onResponse(function (e) {var t = e.type,n = e.content;var s = !1;switch (t) {case "cloudobject":s = function (e) {var t = e.errCode;return t in xt;}(n);break;case "clientdb":s = function (e) {var t = e.errCode;return t in Ut;}(n);}s && function () {var e = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};var t = D(E);$().then(function () {var n = qt();if (n && Vt({ redirect: n })) return t.length > 0 ? F(E, Object.assign({ uniIdRedirectUrl: n }, e)) : void ($t && Yt({ api: "navigateTo", redirect: n }));});}(n);});}function Zt(e) {!function (e) {e.onResponse = function (e) {N(C, e);}, e.offResponse = function (e) {q(C, e);};}(e), function (e) {e.onNeedLogin = function (e) {N(E, e);}, e.offNeedLogin = function (e) {q(E, e);}, jt && (k("uni-cloud-status").needLoginInit || (k("uni-cloud-status").needLoginInit = !0, $().then(function () {Gt.call(e);}), Bt && Qt.call(e)));}(e), function (e) {e.onRefreshToken = function (e) {N(R, e);}, e.offRefreshToken = function (e) {q(R, e);};}(e);}var en;var tn = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",nn = /^(?:[A-Za-z\d+/]{4})*?(?:[A-Za-z\d+/]{2}(?:==)?|[A-Za-z\d+/]{3}=?)?$/;function sn() {var e = rt().token || "",t = e.split(".");if (!e || 3 !== t.length) return { uid: null, role: [], permission: [], tokenExpired: 0 };var n;try {n = JSON.parse((s = t[1], decodeURIComponent(en(s).split("").map(function (e) {return "%" + ("00" + e.charCodeAt(0).toString(16)).slice(-2);}).join(""))));} catch (e) {throw new Error("获取当前用户信息出错，详细错误信息为：" + e.message);}var s;return n.tokenExpired = 1e3 * n.exp, delete n.exp, delete n.iat, n;}en = "function" != typeof atob ? function (e) {if (e = String(e).replace(/[\t\n\f\r ]+/g, ""), !nn.test(e)) throw new Error("Failed to execute 'atob' on 'Window': The string to be decoded is not correctly encoded.");var t;e += "==".slice(2 - (3 & e.length));for (var n, s, o = "", r = 0; r < e.length;) {t = tn.indexOf(e.charAt(r++)) << 18 | tn.indexOf(e.charAt(r++)) << 12 | (n = tn.indexOf(e.charAt(r++))) << 6 | (s = tn.indexOf(e.charAt(r++))), o += 64 === n ? String.fromCharCode(t >> 16 & 255) : 64 === s ? String.fromCharCode(t >> 16 & 255, t >> 8 & 255) : String.fromCharCode(t >> 16 & 255, t >> 8 & 255, 255 & t);}return o;} : atob;var on = s(function (e, t) {Object.defineProperty(t, "__esModule", { value: !0 });var n = "chooseAndUploadFile:ok",s = "chooseAndUploadFile:fail";function o(e, t) {return e.tempFiles.forEach(function (e, n) {e.name || (e.name = e.path.substring(e.path.lastIndexOf("/") + 1)), t && (e.fileType = t), e.cloudPath = Date.now() + "_" + n + e.name.substring(e.name.lastIndexOf("."));}), e.tempFilePaths || (e.tempFilePaths = e.tempFiles.map(function (e) {return e.path;})), e;}function r(e, t, _ref35) {var s = _ref35.onChooseFile,o = _ref35.onUploadProgress;return t.then(function (e) {if (s) {var _t17 = s(e);if (void 0 !== _t17) return Promise.resolve(_t17).then(function (t) {return void 0 === t ? e : t;});}return e;}).then(function (t) {return !1 === t ? { errMsg: n, tempFilePaths: [], tempFiles: [] } : function (e, t) {var s = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 5;var o = arguments.length > 3 ? arguments[3] : undefined;(t = Object.assign({}, t)).errMsg = n;var r = t.tempFiles,i = r.length;var a = 0;return new Promise(function (n) {for (; a < s;) {c();}function c() {var s = a++;if (s >= i) return void (!r.find(function (e) {return !e.url && !e.errMsg;}) && n(t));var u = r[s];e.uploadFile({ filePath: u.path, cloudPath: u.cloudPath, fileType: u.fileType, onUploadProgress: function onUploadProgress(e) {e.index = s, e.tempFile = u, e.tempFilePath = u.path, o && o(e);} }).then(function (e) {u.url = e.fileID, s < i && c();}).catch(function (e) {u.errMsg = e.errMsg || e.message, s < i && c();});}});}(e, t, 5, o);});}t.initChooseAndUploadFile = function (e) {return function () {var t = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : { type: "all" };return "image" === t.type ? r(e, function (e) {var t = e.count,n = e.sizeType,_e$sourceType = e.sourceType,r = _e$sourceType === void 0 ? ["album", "camera"] : _e$sourceType,i = e.extension;return new Promise(function (e, a) {uni.chooseImage({ count: t, sizeType: n, sourceType: r, extension: i, success: function success(t) {e(o(t, "image"));}, fail: function fail(e) {a({ errMsg: e.errMsg.replace("chooseImage:fail", s) });} });});}(t), t) : "video" === t.type ? r(e, function (e) {var t = e.camera,n = e.compressed,r = e.maxDuration,_e$sourceType2 = e.sourceType,i = _e$sourceType2 === void 0 ? ["album", "camera"] : _e$sourceType2,a = e.extension;return new Promise(function (e, c) {uni.chooseVideo({ camera: t, compressed: n, maxDuration: r, sourceType: i, extension: a, success: function success(t) {var n = t.tempFilePath,s = t.duration,r = t.size,i = t.height,a = t.width;e(o({ errMsg: "chooseVideo:ok", tempFilePaths: [n], tempFiles: [{ name: t.tempFile && t.tempFile.name || "", path: n, size: r, type: t.tempFile && t.tempFile.type || "", width: a, height: i, duration: s, fileType: "video", cloudPath: "" }] }, "video"));}, fail: function fail(e) {c({ errMsg: e.errMsg.replace("chooseVideo:fail", s) });} });});}(t), t) : r(e, function (e) {var t = e.count,n = e.extension;return new Promise(function (e, r) {var i = uni.chooseFile;if ("undefined" != typeof wx && "function" == typeof wx.chooseMessageFile && (i = wx.chooseMessageFile), "function" != typeof i) return r({ errMsg: s + " 请指定 type 类型，该平台仅支持选择 image 或 video。" });i({ type: "all", count: t, extension: n, success: function success(t) {e(o(t));}, fail: function fail(e) {r({ errMsg: e.errMsg.replace("chooseFile:fail", s) });} });});}(t), t);};};}),rn = n(on);var an = "manual";function cn(e) {return { props: { localdata: { type: Array, default: function _default() {return [];} }, options: { type: [Object, Array], default: function _default() {return {};} }, spaceInfo: { type: Object, default: function _default() {return {};} }, collection: { type: [String, Array], default: "" }, action: { type: String, default: "" }, field: { type: String, default: "" }, orderby: { type: String, default: "" }, where: { type: [String, Object], default: "" }, pageData: { type: String, default: "add" }, pageCurrent: { type: Number, default: 1 }, pageSize: { type: Number, default: 20 }, getcount: { type: [Boolean, String], default: !1 }, gettree: { type: [Boolean, String], default: !1 }, gettreepath: { type: [Boolean, String], default: !1 }, startwith: { type: String, default: "" }, limitlevel: { type: Number, default: 10 }, groupby: { type: String, default: "" }, groupField: { type: String, default: "" }, distinct: { type: [Boolean, String], default: !1 }, foreignKey: { type: String, default: "" }, loadtime: { type: String, default: "auto" }, manual: { type: Boolean, default: !1 } }, data: function data() {return { mixinDatacomLoading: !1, mixinDatacomHasMore: !1, mixinDatacomResData: [], mixinDatacomErrorMessage: "", mixinDatacomPage: {} };}, created: function created() {var _this18 = this;this.mixinDatacomPage = { current: this.pageCurrent, size: this.pageSize, count: 0 }, this.$watch(function () {var e = [];return ["pageCurrent", "pageSize", "localdata", "collection", "action", "field", "orderby", "where", "getont", "getcount", "gettree", "groupby", "groupField", "distinct"].forEach(function (t) {e.push(_this18[t]);}), e;}, function (e, t) {if (_this18.loadtime === an) return;var n = !1;var s = [];for (var _o6 = 2; _o6 < e.length; _o6++) {e[_o6] !== t[_o6] && (s.push(e[_o6]), n = !0);}e[0] !== t[0] && (_this18.mixinDatacomPage.current = _this18.pageCurrent), _this18.mixinDatacomPage.size = _this18.pageSize, _this18.onMixinDatacomPropsChange(n, s);});}, methods: { onMixinDatacomPropsChange: function onMixinDatacomPropsChange(e, t) {}, mixinDatacomEasyGet: function mixinDatacomEasyGet() {var _this19 = this;var _ref36 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},_ref36$getone = _ref36.getone,e = _ref36$getone === void 0 ? !1 : _ref36$getone,t = _ref36.success,n = _ref36.fail;this.mixinDatacomLoading || (this.mixinDatacomLoading = !0, this.mixinDatacomErrorMessage = "", this.mixinDatacomGet().then(function (n) {_this19.mixinDatacomLoading = !1;var _n$result = n.result,s = _n$result.data,o = _n$result.count;_this19.getcount && (_this19.mixinDatacomPage.count = o), _this19.mixinDatacomHasMore = s.length < _this19.pageSize;var r = e ? s.length ? s[0] : void 0 : s;_this19.mixinDatacomResData = r, t && t(r);}).catch(function (e) {_this19.mixinDatacomLoading = !1, _this19.mixinDatacomErrorMessage = e, n && n(e);}));}, mixinDatacomGet: function mixinDatacomGet() {var _n10;var t = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};var n = e.database(this.spaceInfo);var s = t.action || this.action;s && (n = n.action(s));var o = t.collection || this.collection;n = Array.isArray(o) ? (_n10 = n).collection.apply(_n10, _toConsumableArray(o)) : n.collection(o);var r = t.where || this.where;r && Object.keys(r).length && (n = n.where(r));var i = t.field || this.field;i && (n = n.field(i));var a = t.foreignKey || this.foreignKey;a && (n = n.foreignKey(a));var c = t.groupby || this.groupby;c && (n = n.groupBy(c));var u = t.groupField || this.groupField;u && (n = n.groupField(u));!0 === (void 0 !== t.distinct ? t.distinct : this.distinct) && (n = n.distinct());var l = t.orderby || this.orderby;l && (n = n.orderBy(l));var h = void 0 !== t.pageCurrent ? t.pageCurrent : this.mixinDatacomPage.current,d = void 0 !== t.pageSize ? t.pageSize : this.mixinDatacomPage.size,f = void 0 !== t.getcount ? t.getcount : this.getcount,g = void 0 !== t.gettree ? t.gettree : this.gettree,p = void 0 !== t.gettreepath ? t.gettreepath : this.gettreepath,m = { getCount: f },y = { limitLevel: void 0 !== t.limitlevel ? t.limitlevel : this.limitlevel, startWith: void 0 !== t.startwith ? t.startwith : this.startwith };return g && (m.getTree = y), p && (m.getTreePath = y), n = n.skip(d * (h - 1)).limit(d).get(m), n;} } };}function un(e) {return function (t) {var n = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};n = function (e) {var t = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};return e.customUI = t.customUI || e.customUI, Object.assign(e.loadingOptions, t.loadingOptions), Object.assign(e.errorOptions, t.errorOptions), "object" == typeof t.secretMethods && (e.secretMethods = t.secretMethods), e;}({ customUI: !1, loadingOptions: { title: "加载中...", mask: !0 }, errorOptions: { type: "modal", retry: !1 } }, n);var _n11 = n,s = _n11.customUI,o = _n11.loadingOptions,r = _n11.errorOptions,i = !s;return new Proxy({}, { get: function get(s, c) {return function () {var _ref37 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},e = _ref37.fn,t = _ref37.interceptorName,n = _ref37.getCallbackArgs;return /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee31() {var _len,s,_key,o,r,i,_args31 = arguments;return _regenerator.default.wrap(function _callee31$(_context31) {while (1) {switch (_context31.prev = _context31.next) {case 0:for (_len = _args31.length, s = new Array(_len), _key = 0; _key < _len; _key++) {s[_key] = _args31[_key];}o = n ? n({ params: s }) : {};_context31.prev = 2;_context31.next = 5;return A(I(t, "invoke"), _objectSpread({}, o));case 5:_context31.next = 7;return e.apply(void 0, s);case 7:r = _context31.sent;_context31.next = 10;return A(I(t, "success"), _objectSpread(_objectSpread({}, o), {}, { result: r }));case 10:return _context31.abrupt("return", r);case 13:_context31.prev = 13;_context31.t0 = _context31["catch"](2);i = _context31.t0;_context31.next = 18;return A(I(t, "fail"), _objectSpread(_objectSpread({}, o), {}, { error: i }));case 18:throw i;case 19:_context31.prev = 19;_context31.next = 22;return A(I(t, "complete"), i ? _objectSpread(_objectSpread({}, o), {}, { error: i }) : _objectSpread(_objectSpread({}, o), {}, { result: r }));case 22:return _context31.finish(19);case 23:case "end":return _context31.stop();}}}, _callee31, null, [[2, 13, 19, 23]]);}));}({ fn: function () {var _s11 = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee33() {var l,_len2,u,_key2,h,_ref39,d,f,g,_yield,_e30,_e29,_args33 = arguments;return _regenerator.default.wrap(function _callee33$(_context33) {while (1) {switch (_context33.prev = _context33.next) {case 0:i && uni.showLoading({ title: o.title, mask: o.mask });for (_len2 = _args33.length, u = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {u[_key2] = _args33[_key2];}h = { name: t, type: a, data: { method: c, params: u } };"object" == typeof n.secretMethods && function (e, t) {var n = t.data.method,s = e.secretMethods[n];s && (t.secret = s);}(n, h);_context33.prev = 4;_context33.next = 7;return e.callFunction(h);case 7:l = _context33.sent;_context33.next = 13;break;case 10:_context33.prev = 10;_context33.t0 = _context33["catch"](4);l = { result: _context33.t0 };case 13:_ref39 = l.result || {}, d = _ref39.errCode, f = _ref39.errMsg, g = _ref39.newToken;if (!(i && uni.hideLoading(), g && g.token && g.tokenExpired && (it(g), F(R, _objectSpread({}, g))), d)) {_context33.next = 30;break;}if (!i) {_context33.next = 28;break;}if (!("toast" === r.type)) {_context33.next = 20;break;}uni.showToast({ title: f, icon: "none" });_context33.next = 28;break;case 20:if (!("modal" !== r.type)) {_context33.next = 22;break;}throw new Error("Invalid errorOptions.type: ".concat(r.type));case 22:_context33.next = 24;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee32() {var _ref41,e,t,n,s,o,_args32 = arguments;return _regenerator.default.wrap(function _callee32$(_context32) {while (1) {switch (_context32.prev = _context32.next) {case 0:_ref41 = _args32.length > 0 && _args32[0] !== undefined ? _args32[0] : {}, e = _ref41.title, t = _ref41.content, n = _ref41.showCancel, s = _ref41.cancelText, o = _ref41.confirmText;return _context32.abrupt("return", new Promise(function (r, i) {uni.showModal({ title: e, content: t, showCancel: n, cancelText: s, confirmText: o, success: function success(e) {r(e);}, fail: function fail() {r({ confirm: !1, cancel: !0 });} });}));case 2:case "end":return _context32.stop();}}}, _callee32);}))({ title: "提示", content: f, showCancel: r.retry, cancelText: "取消", confirmText: r.retry ? "重试" : "确定" });case 24:_yield = _context33.sent;_e30 = _yield.confirm;if (!(r.retry && _e30)) {_context33.next = 28;break;}return _context33.abrupt("return", s.apply(void 0, u));case 28:_e29 = new B({ code: d, message: f, requestId: l.requestId });throw _e29.detail = l.result, F(C, { type: L, content: _e29 }), _e29;case 30:return _context33.abrupt("return", (F(C, { type: L, content: l.result }), l.result));case 31:case "end":return _context33.stop();}}}, _callee33, null, [[4, 10]]);}));function s() {return _s11.apply(this, arguments);}return s;}(), interceptorName: "callObject", getCallbackArgs: function getCallbackArgs() {var _ref42 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},e = _ref42.params;return { objectName: t, methodName: c, params: e };} });} });};}function ln(_x30, _x31) {return _ln.apply(this, arguments);}function _ln() {_ln = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee35(e, t) {var n, _e34, s;return _regenerator.default.wrap(function _callee35$(_context35) {while (1) {switch (_context35.prev = _context35.next) {case 0:n = "http://".concat(e, ":").concat(t, "/system/ping");_context35.prev = 1;_context35.next = 4;return s = { url: n, timeout: 500 }, new Promise(function (e, t) {V.request(_objectSpread(_objectSpread({}, s), {}, { success: function success(t) {e(t);}, fail: function fail(e) {t(e);} }));});case 4:_e34 = _context35.sent;return _context35.abrupt("return", !(!_e34.data || 0 !== _e34.data.code));case 8:_context35.prev = 8;_context35.t0 = _context35["catch"](1);return _context35.abrupt("return", !1);case 11:case "end":return _context35.stop();}}}, _callee35, null, [[1, 8]]);}));return _ln.apply(this, arguments);}function hn(e) {if (e.initUniCloudStatus && "rejected" !== e.initUniCloudStatus) return;var t = Promise.resolve();var n;n = 1, t = new Promise(function (e, t) {setTimeout(function () {e();}, n);}), e.isReady = !1, e.isDefault = !1;var s = e.auth();e.initUniCloudStatus = "pending", e.initUniCloud = t.then(function () {return s.getLoginState();}).then(function (e) {return e ? Promise.resolve() : s.signInAnonymously();}).then(function () {if (!d) return Promise.resolve();if ("app" === g) {var _uni$getSystemInfoSyn = uni.getSystemInfoSync(),_e31 = _uni$getSystemInfoSyn.osName,_t18 = _uni$getSystemInfoSyn.osVersion;"ios" === _e31 && function (e) {if (!e || "string" != typeof e) return 0;var t = e.match(/^(\d+)./);return t && t[1] ? parseInt(t[1]) : 0;}(_t18) >= 14 && console.warn("iOS 14及以上版本连接uniCloud本地调试服务需要允许客户端查找并连接到本地网络上的设备（仅开发模式生效，发行模式会连接uniCloud云端服务）");}if (d && e.__dev__.debugInfo) {var _e$__dev__$debugInfo = e.__dev__.debugInfo,_t19 = _e$__dev__$debugInfo.address,_n12 = _e$__dev__$debugInfo.servePort;return function () {var _ref43 = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee34(e, t) {var n, _s12, _o7;return _regenerator.default.wrap(function _callee34$(_context34) {while (1) {switch (_context34.prev = _context34.next) {case 0:_s12 = 0;case 1:if (!(_s12 < e.length)) {_context34.next = 11;break;}_o7 = e[_s12];_context34.next = 5;return ln(_o7, t);case 5:if (!_context34.sent) {_context34.next = 8;break;}n = _o7;return _context34.abrupt("break", 11);case 8:_s12++;_context34.next = 1;break;case 11:return _context34.abrupt("return", { address: n, port: t });case 12:case "end":return _context34.stop();}}}, _callee34);}));return function (_x32, _x33) {return _ref43.apply(this, arguments);};}()(_t19, _n12);}}).then(function () {var _ref44 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},t = _ref44.address,n = _ref44.port;if (!d) return Promise.resolve();var s = console["app" === g ? "error" : "warn"];if (t) e.__dev__.localAddress = t, e.__dev__.localPort = n;else if (e.__dev__.debugInfo) {var _t20 = "";"remote" === e.__dev__.debugInfo.initialLaunchType ? (e.__dev__.debugInfo.forceRemote = !0, _t20 = "当前客户端和HBuilderX不在同一局域网下（或其他网络原因无法连接HBuilderX），uniCloud本地调试服务不对当前客户端生效。\n- 如果不使用uniCloud本地调试服务，请直接忽略此信息。\n- 如需使用uniCloud本地调试服务，请将客户端与主机连接到同一局域网下并重新运行到客户端。\n- 如果在HBuilderX开启的状态下切换过网络环境，请重启HBuilderX后再试\n- 检查系统防火墙是否拦截了HBuilderX自带的nodejs") : _t20 = "无法连接uniCloud本地调试服务，请检查当前客户端是否与主机在同一局域网下。\n- 如需使用uniCloud本地调试服务，请将客户端与主机连接到同一局域网下并重新运行到客户端。\n- 如果在HBuilderX开启的状态下切换过网络环境，请重启HBuilderX后再试\n- 检查系统防火墙是否拦截了HBuilderX自带的nodejs", "web" === g && (_t20 += "\n- 部分浏览器开启节流模式之后访问本地地址受限，请检查是否启用了节流模式"), 0 === g.indexOf("mp-") && (_t20 += "\n- 小程序中如何使用uniCloud，请参考：https://uniapp.dcloud.net.cn/uniCloud/publish.html#useinmp"), s(_t20);}}).then(function () {at(), e.isReady = !0, e.initUniCloudStatus = "fulfilled";}).catch(function (t) {console.error(t), e.initUniCloudStatus = "rejected";});}var dn = { tcb: ot, tencent: ot, aliyun: Q, private: ut };var fn = new ( /*#__PURE__*/function () {function _class4() {_classCallCheck(this, _class4);}_createClass(_class4, [{ key: "init", value: function init(e) {var t = {};var n = dn[e.provider];if (!n) throw new Error("未提供正确的provider参数");t = n.init(e), t.__dev__ = {}, t.__dev__.debugLog = d && ("web" === g && navigator.userAgent.indexOf("HBuilderX") > 0 || "app" === g);var s = p;d && s && !s.code && (t.__dev__.debugInfo = s), hn(t), t.reInit = function () {hn(this);}, yt(t), function (e) {var t = e.uploadFile;e.uploadFile = function (e) {return t.call(this, e);};}(t), Ct(t), function (e) {e.getCurrentUserInfo = sn, e.chooseAndUploadFile = rn.initChooseAndUploadFile(e), Object.assign(e, { get mixinDatacom() {return cn(e);} }), e.importObject = un(e);}(t);return ["callFunction", "uploadFile", "deleteFile", "getTempFileURL", "downloadFile", "chooseAndUploadFile"].forEach(function (e) {if (!t[e]) return;var n = t[e];t[e] = function () {return t.reInit(), n.apply(t, Array.from(arguments));}, t[e] = K(t[e], e).bind(t);}), t.init = this.init, t;} }]);return _class4;}())();(function () {var e = m;var t = {};if (e && 1 === e.length) t = e[0], fn = fn.init(t), fn.isDefault = !0;else {var _t21 = ["auth", "callFunction", "uploadFile", "deleteFile", "getTempFileURL", "downloadFile", "database", "getCurrentUSerInfo", "importObject"];var _n13;_n13 = e && e.length > 0 ? "应用有多个服务空间，请通过uniCloud.init方法指定要使用的服务空间" : y ? "应用未关联服务空间，请在uniCloud目录右键关联服务空间" : "uni-app cli项目内使用uniCloud需要使用HBuilderX的运行菜单运行项目，且需要在uniCloud目录关联服务空间", _t21.forEach(function (e) {fn[e] = function () {return console.error(_n13), Promise.reject(new B({ code: "SYS_ERR", message: _n13 }));};});}Object.assign(fn, { get mixinDatacom() {return cn(fn);} }), Zt(fn), fn.addInterceptor = S, fn.removeInterceptor = P, fn.interceptObject = b, d && "web" === g && (window.uniCloud = fn);})();var gn = fn;exports.default = gn;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../webpack/buildin/global.js */ 2), __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+/* 7 */
+/*!**********************************************************!*\
+  !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! regenerator-runtime */ 8);
+
+/***/ }),
 /* 8 */
+/*!************************************************************!*\
+  !*** ./node_modules/regenerator-runtime/runtime-module.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+// This method of obtaining a reference to the global object needs to be
+// kept identical to the way it is obtained in runtime.js
+var g = (function() {
+  return this || (typeof self === "object" && self);
+})() || Function("return this")();
+
+// Use `getOwnPropertyNames` because not all browsers support calling
+// `hasOwnProperty` on the global `self` object in a worker. See #183.
+var hadRuntime = g.regeneratorRuntime &&
+  Object.getOwnPropertyNames(g).indexOf("regeneratorRuntime") >= 0;
+
+// Save the old regeneratorRuntime in case it needs to be restored later.
+var oldRuntime = hadRuntime && g.regeneratorRuntime;
+
+// Force reevalutation of runtime.js.
+g.regeneratorRuntime = undefined;
+
+module.exports = __webpack_require__(/*! ./runtime */ 9);
+
+if (hadRuntime) {
+  // Restore the original runtime.
+  g.regeneratorRuntime = oldRuntime;
+} else {
+  // Remove the global property added by runtime.js.
+  try {
+    delete g.regeneratorRuntime;
+  } catch(e) {
+    g.regeneratorRuntime = undefined;
+  }
+}
+
+
+/***/ }),
+/* 9 */
+/*!*****************************************************!*\
+  !*** ./node_modules/regenerator-runtime/runtime.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+!(function(global) {
+  "use strict";
+
+  var Op = Object.prototype;
+  var hasOwn = Op.hasOwnProperty;
+  var undefined; // More compressible than void 0.
+  var $Symbol = typeof Symbol === "function" ? Symbol : {};
+  var iteratorSymbol = $Symbol.iterator || "@@iterator";
+  var asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator";
+  var toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
+
+  var inModule = typeof module === "object";
+  var runtime = global.regeneratorRuntime;
+  if (runtime) {
+    if (inModule) {
+      // If regeneratorRuntime is defined globally and we're in a module,
+      // make the exports object identical to regeneratorRuntime.
+      module.exports = runtime;
+    }
+    // Don't bother evaluating the rest of this file if the runtime was
+    // already defined globally.
+    return;
+  }
+
+  // Define the runtime globally (as expected by generated code) as either
+  // module.exports (if we're in a module) or a new, empty object.
+  runtime = global.regeneratorRuntime = inModule ? module.exports : {};
+
+  function wrap(innerFn, outerFn, self, tryLocsList) {
+    // If outerFn provided and outerFn.prototype is a Generator, then outerFn.prototype instanceof Generator.
+    var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator;
+    var generator = Object.create(protoGenerator.prototype);
+    var context = new Context(tryLocsList || []);
+
+    // The ._invoke method unifies the implementations of the .next,
+    // .throw, and .return methods.
+    generator._invoke = makeInvokeMethod(innerFn, self, context);
+
+    return generator;
+  }
+  runtime.wrap = wrap;
+
+  // Try/catch helper to minimize deoptimizations. Returns a completion
+  // record like context.tryEntries[i].completion. This interface could
+  // have been (and was previously) designed to take a closure to be
+  // invoked without arguments, but in all the cases we care about we
+  // already have an existing method we want to call, so there's no need
+  // to create a new function object. We can even get away with assuming
+  // the method takes exactly one argument, since that happens to be true
+  // in every case, so we don't have to touch the arguments object. The
+  // only additional allocation required is the completion record, which
+  // has a stable shape and so hopefully should be cheap to allocate.
+  function tryCatch(fn, obj, arg) {
+    try {
+      return { type: "normal", arg: fn.call(obj, arg) };
+    } catch (err) {
+      return { type: "throw", arg: err };
+    }
+  }
+
+  var GenStateSuspendedStart = "suspendedStart";
+  var GenStateSuspendedYield = "suspendedYield";
+  var GenStateExecuting = "executing";
+  var GenStateCompleted = "completed";
+
+  // Returning this object from the innerFn has the same effect as
+  // breaking out of the dispatch switch statement.
+  var ContinueSentinel = {};
+
+  // Dummy constructor functions that we use as the .constructor and
+  // .constructor.prototype properties for functions that return Generator
+  // objects. For full spec compliance, you may wish to configure your
+  // minifier not to mangle the names of these two functions.
+  function Generator() {}
+  function GeneratorFunction() {}
+  function GeneratorFunctionPrototype() {}
+
+  // This is a polyfill for %IteratorPrototype% for environments that
+  // don't natively support it.
+  var IteratorPrototype = {};
+  IteratorPrototype[iteratorSymbol] = function () {
+    return this;
+  };
+
+  var getProto = Object.getPrototypeOf;
+  var NativeIteratorPrototype = getProto && getProto(getProto(values([])));
+  if (NativeIteratorPrototype &&
+      NativeIteratorPrototype !== Op &&
+      hasOwn.call(NativeIteratorPrototype, iteratorSymbol)) {
+    // This environment has a native %IteratorPrototype%; use it instead
+    // of the polyfill.
+    IteratorPrototype = NativeIteratorPrototype;
+  }
+
+  var Gp = GeneratorFunctionPrototype.prototype =
+    Generator.prototype = Object.create(IteratorPrototype);
+  GeneratorFunction.prototype = Gp.constructor = GeneratorFunctionPrototype;
+  GeneratorFunctionPrototype.constructor = GeneratorFunction;
+  GeneratorFunctionPrototype[toStringTagSymbol] =
+    GeneratorFunction.displayName = "GeneratorFunction";
+
+  // Helper for defining the .next, .throw, and .return methods of the
+  // Iterator interface in terms of a single ._invoke method.
+  function defineIteratorMethods(prototype) {
+    ["next", "throw", "return"].forEach(function(method) {
+      prototype[method] = function(arg) {
+        return this._invoke(method, arg);
+      };
+    });
+  }
+
+  runtime.isGeneratorFunction = function(genFun) {
+    var ctor = typeof genFun === "function" && genFun.constructor;
+    return ctor
+      ? ctor === GeneratorFunction ||
+        // For the native GeneratorFunction constructor, the best we can
+        // do is to check its .name property.
+        (ctor.displayName || ctor.name) === "GeneratorFunction"
+      : false;
+  };
+
+  runtime.mark = function(genFun) {
+    if (Object.setPrototypeOf) {
+      Object.setPrototypeOf(genFun, GeneratorFunctionPrototype);
+    } else {
+      genFun.__proto__ = GeneratorFunctionPrototype;
+      if (!(toStringTagSymbol in genFun)) {
+        genFun[toStringTagSymbol] = "GeneratorFunction";
+      }
+    }
+    genFun.prototype = Object.create(Gp);
+    return genFun;
+  };
+
+  // Within the body of any async function, `await x` is transformed to
+  // `yield regeneratorRuntime.awrap(x)`, so that the runtime can test
+  // `hasOwn.call(value, "__await")` to determine if the yielded value is
+  // meant to be awaited.
+  runtime.awrap = function(arg) {
+    return { __await: arg };
+  };
+
+  function AsyncIterator(generator) {
+    function invoke(method, arg, resolve, reject) {
+      var record = tryCatch(generator[method], generator, arg);
+      if (record.type === "throw") {
+        reject(record.arg);
+      } else {
+        var result = record.arg;
+        var value = result.value;
+        if (value &&
+            typeof value === "object" &&
+            hasOwn.call(value, "__await")) {
+          return Promise.resolve(value.__await).then(function(value) {
+            invoke("next", value, resolve, reject);
+          }, function(err) {
+            invoke("throw", err, resolve, reject);
+          });
+        }
+
+        return Promise.resolve(value).then(function(unwrapped) {
+          // When a yielded Promise is resolved, its final value becomes
+          // the .value of the Promise<{value,done}> result for the
+          // current iteration.
+          result.value = unwrapped;
+          resolve(result);
+        }, function(error) {
+          // If a rejected Promise was yielded, throw the rejection back
+          // into the async generator function so it can be handled there.
+          return invoke("throw", error, resolve, reject);
+        });
+      }
+    }
+
+    var previousPromise;
+
+    function enqueue(method, arg) {
+      function callInvokeWithMethodAndArg() {
+        return new Promise(function(resolve, reject) {
+          invoke(method, arg, resolve, reject);
+        });
+      }
+
+      return previousPromise =
+        // If enqueue has been called before, then we want to wait until
+        // all previous Promises have been resolved before calling invoke,
+        // so that results are always delivered in the correct order. If
+        // enqueue has not been called before, then it is important to
+        // call invoke immediately, without waiting on a callback to fire,
+        // so that the async generator function has the opportunity to do
+        // any necessary setup in a predictable way. This predictability
+        // is why the Promise constructor synchronously invokes its
+        // executor callback, and why async functions synchronously
+        // execute code before the first await. Since we implement simple
+        // async functions in terms of async generators, it is especially
+        // important to get this right, even though it requires care.
+        previousPromise ? previousPromise.then(
+          callInvokeWithMethodAndArg,
+          // Avoid propagating failures to Promises returned by later
+          // invocations of the iterator.
+          callInvokeWithMethodAndArg
+        ) : callInvokeWithMethodAndArg();
+    }
+
+    // Define the unified helper method that is used to implement .next,
+    // .throw, and .return (see defineIteratorMethods).
+    this._invoke = enqueue;
+  }
+
+  defineIteratorMethods(AsyncIterator.prototype);
+  AsyncIterator.prototype[asyncIteratorSymbol] = function () {
+    return this;
+  };
+  runtime.AsyncIterator = AsyncIterator;
+
+  // Note that simple async functions are implemented on top of
+  // AsyncIterator objects; they just return a Promise for the value of
+  // the final result produced by the iterator.
+  runtime.async = function(innerFn, outerFn, self, tryLocsList) {
+    var iter = new AsyncIterator(
+      wrap(innerFn, outerFn, self, tryLocsList)
+    );
+
+    return runtime.isGeneratorFunction(outerFn)
+      ? iter // If outerFn is a generator, return the full iterator.
+      : iter.next().then(function(result) {
+          return result.done ? result.value : iter.next();
+        });
+  };
+
+  function makeInvokeMethod(innerFn, self, context) {
+    var state = GenStateSuspendedStart;
+
+    return function invoke(method, arg) {
+      if (state === GenStateExecuting) {
+        throw new Error("Generator is already running");
+      }
+
+      if (state === GenStateCompleted) {
+        if (method === "throw") {
+          throw arg;
+        }
+
+        // Be forgiving, per 25.3.3.3.3 of the spec:
+        // https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generatorresume
+        return doneResult();
+      }
+
+      context.method = method;
+      context.arg = arg;
+
+      while (true) {
+        var delegate = context.delegate;
+        if (delegate) {
+          var delegateResult = maybeInvokeDelegate(delegate, context);
+          if (delegateResult) {
+            if (delegateResult === ContinueSentinel) continue;
+            return delegateResult;
+          }
+        }
+
+        if (context.method === "next") {
+          // Setting context._sent for legacy support of Babel's
+          // function.sent implementation.
+          context.sent = context._sent = context.arg;
+
+        } else if (context.method === "throw") {
+          if (state === GenStateSuspendedStart) {
+            state = GenStateCompleted;
+            throw context.arg;
+          }
+
+          context.dispatchException(context.arg);
+
+        } else if (context.method === "return") {
+          context.abrupt("return", context.arg);
+        }
+
+        state = GenStateExecuting;
+
+        var record = tryCatch(innerFn, self, context);
+        if (record.type === "normal") {
+          // If an exception is thrown from innerFn, we leave state ===
+          // GenStateExecuting and loop back for another invocation.
+          state = context.done
+            ? GenStateCompleted
+            : GenStateSuspendedYield;
+
+          if (record.arg === ContinueSentinel) {
+            continue;
+          }
+
+          return {
+            value: record.arg,
+            done: context.done
+          };
+
+        } else if (record.type === "throw") {
+          state = GenStateCompleted;
+          // Dispatch the exception by looping back around to the
+          // context.dispatchException(context.arg) call above.
+          context.method = "throw";
+          context.arg = record.arg;
+        }
+      }
+    };
+  }
+
+  // Call delegate.iterator[context.method](context.arg) and handle the
+  // result, either by returning a { value, done } result from the
+  // delegate iterator, or by modifying context.method and context.arg,
+  // setting context.delegate to null, and returning the ContinueSentinel.
+  function maybeInvokeDelegate(delegate, context) {
+    var method = delegate.iterator[context.method];
+    if (method === undefined) {
+      // A .throw or .return when the delegate iterator has no .throw
+      // method always terminates the yield* loop.
+      context.delegate = null;
+
+      if (context.method === "throw") {
+        if (delegate.iterator.return) {
+          // If the delegate iterator has a return method, give it a
+          // chance to clean up.
+          context.method = "return";
+          context.arg = undefined;
+          maybeInvokeDelegate(delegate, context);
+
+          if (context.method === "throw") {
+            // If maybeInvokeDelegate(context) changed context.method from
+            // "return" to "throw", let that override the TypeError below.
+            return ContinueSentinel;
+          }
+        }
+
+        context.method = "throw";
+        context.arg = new TypeError(
+          "The iterator does not provide a 'throw' method");
+      }
+
+      return ContinueSentinel;
+    }
+
+    var record = tryCatch(method, delegate.iterator, context.arg);
+
+    if (record.type === "throw") {
+      context.method = "throw";
+      context.arg = record.arg;
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    var info = record.arg;
+
+    if (! info) {
+      context.method = "throw";
+      context.arg = new TypeError("iterator result is not an object");
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    if (info.done) {
+      // Assign the result of the finished delegate to the temporary
+      // variable specified by delegate.resultName (see delegateYield).
+      context[delegate.resultName] = info.value;
+
+      // Resume execution at the desired location (see delegateYield).
+      context.next = delegate.nextLoc;
+
+      // If context.method was "throw" but the delegate handled the
+      // exception, let the outer generator proceed normally. If
+      // context.method was "next", forget context.arg since it has been
+      // "consumed" by the delegate iterator. If context.method was
+      // "return", allow the original .return call to continue in the
+      // outer generator.
+      if (context.method !== "return") {
+        context.method = "next";
+        context.arg = undefined;
+      }
+
+    } else {
+      // Re-yield the result returned by the delegate method.
+      return info;
+    }
+
+    // The delegate iterator is finished, so forget it and continue with
+    // the outer generator.
+    context.delegate = null;
+    return ContinueSentinel;
+  }
+
+  // Define Generator.prototype.{next,throw,return} in terms of the
+  // unified ._invoke helper method.
+  defineIteratorMethods(Gp);
+
+  Gp[toStringTagSymbol] = "Generator";
+
+  // A Generator should always return itself as the iterator object when the
+  // @@iterator function is called on it. Some browsers' implementations of the
+  // iterator prototype chain incorrectly implement this, causing the Generator
+  // object to not be returned from this call. This ensures that doesn't happen.
+  // See https://github.com/facebook/regenerator/issues/274 for more details.
+  Gp[iteratorSymbol] = function() {
+    return this;
+  };
+
+  Gp.toString = function() {
+    return "[object Generator]";
+  };
+
+  function pushTryEntry(locs) {
+    var entry = { tryLoc: locs[0] };
+
+    if (1 in locs) {
+      entry.catchLoc = locs[1];
+    }
+
+    if (2 in locs) {
+      entry.finallyLoc = locs[2];
+      entry.afterLoc = locs[3];
+    }
+
+    this.tryEntries.push(entry);
+  }
+
+  function resetTryEntry(entry) {
+    var record = entry.completion || {};
+    record.type = "normal";
+    delete record.arg;
+    entry.completion = record;
+  }
+
+  function Context(tryLocsList) {
+    // The root entry object (effectively a try statement without a catch
+    // or a finally block) gives us a place to store values thrown from
+    // locations where there is no enclosing try statement.
+    this.tryEntries = [{ tryLoc: "root" }];
+    tryLocsList.forEach(pushTryEntry, this);
+    this.reset(true);
+  }
+
+  runtime.keys = function(object) {
+    var keys = [];
+    for (var key in object) {
+      keys.push(key);
+    }
+    keys.reverse();
+
+    // Rather than returning an object with a next method, we keep
+    // things simple and return the next function itself.
+    return function next() {
+      while (keys.length) {
+        var key = keys.pop();
+        if (key in object) {
+          next.value = key;
+          next.done = false;
+          return next;
+        }
+      }
+
+      // To avoid creating an additional object, we just hang the .value
+      // and .done properties off the next function object itself. This
+      // also ensures that the minifier will not anonymize the function.
+      next.done = true;
+      return next;
+    };
+  };
+
+  function values(iterable) {
+    if (iterable) {
+      var iteratorMethod = iterable[iteratorSymbol];
+      if (iteratorMethod) {
+        return iteratorMethod.call(iterable);
+      }
+
+      if (typeof iterable.next === "function") {
+        return iterable;
+      }
+
+      if (!isNaN(iterable.length)) {
+        var i = -1, next = function next() {
+          while (++i < iterable.length) {
+            if (hasOwn.call(iterable, i)) {
+              next.value = iterable[i];
+              next.done = false;
+              return next;
+            }
+          }
+
+          next.value = undefined;
+          next.done = true;
+
+          return next;
+        };
+
+        return next.next = next;
+      }
+    }
+
+    // Return an iterator with no values.
+    return { next: doneResult };
+  }
+  runtime.values = values;
+
+  function doneResult() {
+    return { value: undefined, done: true };
+  }
+
+  Context.prototype = {
+    constructor: Context,
+
+    reset: function(skipTempReset) {
+      this.prev = 0;
+      this.next = 0;
+      // Resetting context._sent for legacy support of Babel's
+      // function.sent implementation.
+      this.sent = this._sent = undefined;
+      this.done = false;
+      this.delegate = null;
+
+      this.method = "next";
+      this.arg = undefined;
+
+      this.tryEntries.forEach(resetTryEntry);
+
+      if (!skipTempReset) {
+        for (var name in this) {
+          // Not sure about the optimal order of these conditions:
+          if (name.charAt(0) === "t" &&
+              hasOwn.call(this, name) &&
+              !isNaN(+name.slice(1))) {
+            this[name] = undefined;
+          }
+        }
+      }
+    },
+
+    stop: function() {
+      this.done = true;
+
+      var rootEntry = this.tryEntries[0];
+      var rootRecord = rootEntry.completion;
+      if (rootRecord.type === "throw") {
+        throw rootRecord.arg;
+      }
+
+      return this.rval;
+    },
+
+    dispatchException: function(exception) {
+      if (this.done) {
+        throw exception;
+      }
+
+      var context = this;
+      function handle(loc, caught) {
+        record.type = "throw";
+        record.arg = exception;
+        context.next = loc;
+
+        if (caught) {
+          // If the dispatched exception was caught by a catch block,
+          // then let that catch block handle the exception normally.
+          context.method = "next";
+          context.arg = undefined;
+        }
+
+        return !! caught;
+      }
+
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        var record = entry.completion;
+
+        if (entry.tryLoc === "root") {
+          // Exception thrown outside of any try block that could handle
+          // it, so set the completion value of the entire function to
+          // throw the exception.
+          return handle("end");
+        }
+
+        if (entry.tryLoc <= this.prev) {
+          var hasCatch = hasOwn.call(entry, "catchLoc");
+          var hasFinally = hasOwn.call(entry, "finallyLoc");
+
+          if (hasCatch && hasFinally) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            } else if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+
+          } else if (hasCatch) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            }
+
+          } else if (hasFinally) {
+            if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+
+          } else {
+            throw new Error("try statement without catch or finally");
+          }
+        }
+      }
+    },
+
+    abrupt: function(type, arg) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc <= this.prev &&
+            hasOwn.call(entry, "finallyLoc") &&
+            this.prev < entry.finallyLoc) {
+          var finallyEntry = entry;
+          break;
+        }
+      }
+
+      if (finallyEntry &&
+          (type === "break" ||
+           type === "continue") &&
+          finallyEntry.tryLoc <= arg &&
+          arg <= finallyEntry.finallyLoc) {
+        // Ignore the finally entry if control is not jumping to a
+        // location outside the try/catch block.
+        finallyEntry = null;
+      }
+
+      var record = finallyEntry ? finallyEntry.completion : {};
+      record.type = type;
+      record.arg = arg;
+
+      if (finallyEntry) {
+        this.method = "next";
+        this.next = finallyEntry.finallyLoc;
+        return ContinueSentinel;
+      }
+
+      return this.complete(record);
+    },
+
+    complete: function(record, afterLoc) {
+      if (record.type === "throw") {
+        throw record.arg;
+      }
+
+      if (record.type === "break" ||
+          record.type === "continue") {
+        this.next = record.arg;
+      } else if (record.type === "return") {
+        this.rval = this.arg = record.arg;
+        this.method = "return";
+        this.next = "end";
+      } else if (record.type === "normal" && afterLoc) {
+        this.next = afterLoc;
+      }
+
+      return ContinueSentinel;
+    },
+
+    finish: function(finallyLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.finallyLoc === finallyLoc) {
+          this.complete(entry.completion, entry.afterLoc);
+          resetTryEntry(entry);
+          return ContinueSentinel;
+        }
+      }
+    },
+
+    "catch": function(tryLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc === tryLoc) {
+          var record = entry.completion;
+          if (record.type === "throw") {
+            var thrown = record.arg;
+            resetTryEntry(entry);
+          }
+          return thrown;
+        }
+      }
+
+      // The context.catch method must only be called with a location
+      // argument that corresponds to a known catch block.
+      throw new Error("illegal catch attempt");
+    },
+
+    delegateYield: function(iterable, resultName, nextLoc) {
+      this.delegate = {
+        iterator: values(iterable),
+        resultName: resultName,
+        nextLoc: nextLoc
+      };
+
+      if (this.method === "next") {
+        // Deliberately forget the last sent value so that we don't
+        // accidentally pass it on to the delegate.
+        this.arg = undefined;
+      }
+
+      return ContinueSentinel;
+    }
+  };
+})(
+  // In sloppy mode, unbound `this` refers to the global object, fallback to
+  // Function constructor if we're in global strict mode. That is sadly a form
+  // of indirect eval which violates Content Security Policy.
+  (function() {
+    return this || (typeof self === "object" && self);
+  })() || Function("return this")()
+);
+
+
+/***/ }),
+/* 10 */
+/*!****************************************************************!*\
+  !*** G:/yjbank-uniapp/pages.json?{"type":"origin-pages-json"} ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "easycom": { "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue" }, "pages": [{ "path": "pages/home/index" }, { "path": "pages/login/login" }, { "path": "pages/loan/loan" }, { "path": "pages/treehole/treehole" }, { "path": "pages/footprint/index" }, { "path": "pages/bet/list" }, { "path": "pages/expect/list" }, { "path": "pages/add/list", "style": { "navigationBarTitleText": "新增" } }, { "path": "pages/add/addMessage", "style": { "navigationBarTitleText": "新增动态" } }, { "path": "pages/add/addExcept", "style": { "navigationBarTitleText": "新增期待" } }, { "path": "pages/add/addBet", "style": { "navigationBarTitleText": "新增打赌" } }, { "path": "pages/add/addLocation", "style": { "navigationBarTitleText": "新增足迹" } }, { "path": "pages/calendar/calendar", "style": { "navigationBarTitleText": "小匀称打卡机" } }], "globalStyle": { "navigationBarTextStyle": "white", "navigationBarTitleText": "小亚银行", "navigationBarBackgroundColor": "#FF557F", "backgroundColorTop": "#FF557F", "backgroundColor": "#FF557F" }, "condition": { "current": 0, "list": [{ "name": "首页", "path": "pages/home/index" }, { "name": "登录", "path": "pages/login/login" }, { "name": "贷款", "path": "pages/loan/loan" }, { "name": "树洞", "path": "pages/treehole/treehole" }, { "name": "足迹", "path": "pages/footprint/map" }, { "name": "定位", "path": "pages/footprint/location/location" }] } };exports.default = _default;
+
+/***/ }),
+/* 11 */
+/*!***************************************************!*\
+  !*** G:/yjbank-uniapp/pages.json?{"type":"stat"} ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "appid": "__UNI__35400E8" };exports.default = _default;
+
+/***/ }),
+/* 12 */,
+/* 13 */,
+/* 14 */,
+/* 15 */
 /*!**********************************************************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js ***!
   \**********************************************************************************************************/
@@ -8022,7 +10059,7 @@ function normalizeComponent (
 
 
 /***/ }),
-/* 9 */
+/* 16 */
 /*!**************************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/luch-request/src/lib/luch-request.js ***!
   \**************************************************************************/
@@ -8030,11 +10067,11 @@ function normalizeComponent (
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _Request = _interopRequireDefault(__webpack_require__(/*! ./core/Request */ 10));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _Request = _interopRequireDefault(__webpack_require__(/*! ./core/Request */ 17));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
 _Request.default;exports.default = _default;
 
 /***/ }),
-/* 10 */
+/* 17 */
 /*!**************************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/luch-request/src/lib/core/Request.js ***!
   \**************************************************************************/
@@ -8056,11 +10093,11 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
-var _dispatchRequest = _interopRequireDefault(__webpack_require__(/*! ./dispatchRequest */ 11));
-var _InterceptorManager = _interopRequireDefault(__webpack_require__(/*! ./InterceptorManager */ 19));
-var _mergeConfig = _interopRequireDefault(__webpack_require__(/*! ./mergeConfig */ 20));
-var _defaults = _interopRequireDefault(__webpack_require__(/*! ./defaults */ 21));
-var _utils = __webpack_require__(/*! ../utils */ 14);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}var
+var _dispatchRequest = _interopRequireDefault(__webpack_require__(/*! ./dispatchRequest */ 18));
+var _InterceptorManager = _interopRequireDefault(__webpack_require__(/*! ./InterceptorManager */ 26));
+var _mergeConfig = _interopRequireDefault(__webpack_require__(/*! ./mergeConfig */ 27));
+var _defaults = _interopRequireDefault(__webpack_require__(/*! ./defaults */ 28));
+var _utils = __webpack_require__(/*! ../utils */ 21);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}var
 
 Request = /*#__PURE__*/function () {
   /**
@@ -8243,7 +10280,7 @@ Request = /*#__PURE__*/function () {
                                */exports.default = Request;
 
 /***/ }),
-/* 11 */
+/* 18 */
 /*!**********************************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/luch-request/src/lib/core/dispatchRequest.js ***!
   \**********************************************************************************/
@@ -8251,7 +10288,7 @@ Request = /*#__PURE__*/function () {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _index = _interopRequireDefault(__webpack_require__(/*! ../adapters/index */ 12));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _index = _interopRequireDefault(__webpack_require__(/*! ../adapters/index */ 19));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
 
 
 function _default(config) {
@@ -8259,7 +10296,7 @@ function _default(config) {
 };exports.default = _default;
 
 /***/ }),
-/* 12 */
+/* 19 */
 /*!****************************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/luch-request/src/lib/adapters/index.js ***!
   \****************************************************************************/
@@ -8267,9 +10304,9 @@ function _default(config) {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _buildURL = _interopRequireDefault(__webpack_require__(/*! ../helpers/buildURL */ 13));
-var _buildFullPath = _interopRequireDefault(__webpack_require__(/*! ../core/buildFullPath */ 15));
-var _settle = _interopRequireDefault(__webpack_require__(/*! ../core/settle */ 18));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _buildURL = _interopRequireDefault(__webpack_require__(/*! ../helpers/buildURL */ 20));
+var _buildFullPath = _interopRequireDefault(__webpack_require__(/*! ../core/buildFullPath */ 22));
+var _settle = _interopRequireDefault(__webpack_require__(/*! ../core/settle */ 25));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
 
 /**
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           * 返回可选值存在的配置
@@ -8358,7 +10395,7 @@ function _default(config) {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
-/* 13 */
+/* 20 */
 /*!******************************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/luch-request/src/lib/helpers/buildURL.js ***!
   \******************************************************************************/
@@ -8368,7 +10405,7 @@ function _default(config) {
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });exports.default = buildURL;
 
-var utils = _interopRequireWildcard(__webpack_require__(/*! ./../utils */ 14));function _getRequireWildcardCache() {if (typeof WeakMap !== "function") return null;var cache = new WeakMap();_getRequireWildcardCache = function _getRequireWildcardCache() {return cache;};return cache;}function _interopRequireWildcard(obj) {if (obj && obj.__esModule) {return obj;}if (obj === null || typeof obj !== "object" && typeof obj !== "function") {return { default: obj };}var cache = _getRequireWildcardCache();if (cache && cache.has(obj)) {return cache.get(obj);}var newObj = {};var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;for (var key in obj) {if (Object.prototype.hasOwnProperty.call(obj, key)) {var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;if (desc && (desc.get || desc.set)) {Object.defineProperty(newObj, key, desc);} else {newObj[key] = obj[key];}}}newObj.default = obj;if (cache) {cache.set(obj, newObj);}return newObj;}
+var utils = _interopRequireWildcard(__webpack_require__(/*! ./../utils */ 21));function _getRequireWildcardCache() {if (typeof WeakMap !== "function") return null;var cache = new WeakMap();_getRequireWildcardCache = function _getRequireWildcardCache() {return cache;};return cache;}function _interopRequireWildcard(obj) {if (obj && obj.__esModule) {return obj;}if (obj === null || typeof obj !== "object" && typeof obj !== "function") {return { default: obj };}var cache = _getRequireWildcardCache();if (cache && cache.has(obj)) {return cache.get(obj);}var newObj = {};var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;for (var key in obj) {if (Object.prototype.hasOwnProperty.call(obj, key)) {var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;if (desc && (desc.get || desc.set)) {Object.defineProperty(newObj, key, desc);} else {newObj[key] = obj[key];}}}newObj.default = obj;if (cache) {cache.set(obj, newObj);}return newObj;}
 
 function encode(val) {
   return encodeURIComponent(val).
@@ -8437,7 +10474,7 @@ function buildURL(url, params) {
 }
 
 /***/ }),
-/* 14 */
+/* 21 */
 /*!*******************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/luch-request/src/lib/utils.js ***!
   \*******************************************************************/
@@ -8578,7 +10615,7 @@ function deepMerge() /* obj1, obj2, obj3, ... */{
 }
 
 /***/ }),
-/* 15 */
+/* 22 */
 /*!********************************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/luch-request/src/lib/core/buildFullPath.js ***!
   \********************************************************************************/
@@ -8588,8 +10625,8 @@ function deepMerge() /* obj1, obj2, obj3, ... */{
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });exports.default = buildFullPath;
 
-var _isAbsoluteURL = _interopRequireDefault(__webpack_require__(/*! ../helpers/isAbsoluteURL */ 16));
-var _combineURLs = _interopRequireDefault(__webpack_require__(/*! ../helpers/combineURLs */ 17));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _isAbsoluteURL = _interopRequireDefault(__webpack_require__(/*! ../helpers/isAbsoluteURL */ 23));
+var _combineURLs = _interopRequireDefault(__webpack_require__(/*! ../helpers/combineURLs */ 24));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 
 /**
                                                                                                                                                                             * Creates a new URL by combining the baseURL with the requestedURL,
@@ -8608,7 +10645,7 @@ function buildFullPath(baseURL, requestedURL) {
 }
 
 /***/ }),
-/* 16 */
+/* 23 */
 /*!***********************************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/luch-request/src/lib/helpers/isAbsoluteURL.js ***!
   \***********************************************************************************/
@@ -8632,7 +10669,7 @@ function isAbsoluteURL(url) {
 }
 
 /***/ }),
-/* 17 */
+/* 24 */
 /*!*********************************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/luch-request/src/lib/helpers/combineURLs.js ***!
   \*********************************************************************************/
@@ -8656,7 +10693,7 @@ function combineURLs(baseURL, relativeURL) {
 }
 
 /***/ }),
-/* 18 */
+/* 25 */
 /*!*************************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/luch-request/src/lib/core/settle.js ***!
   \*************************************************************************/
@@ -8682,7 +10719,7 @@ function settle(resolve, reject, response) {
 }
 
 /***/ }),
-/* 19 */
+/* 26 */
 /*!*************************************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/luch-request/src/lib/core/InterceptorManager.js ***!
   \*************************************************************************************/
@@ -8743,7 +10780,7 @@ InterceptorManager.prototype.forEach = function forEach(fn) {
 InterceptorManager;exports.default = _default;
 
 /***/ }),
-/* 20 */
+/* 27 */
 /*!******************************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/luch-request/src/lib/core/mergeConfig.js ***!
   \******************************************************************************/
@@ -8751,7 +10788,7 @@ InterceptorManager;exports.default = _default;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _utils = __webpack_require__(/*! ../utils */ 14);function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _utils = __webpack_require__(/*! ../utils */ 21);function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
 
 /**
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   * 合并局部配置优先的配置，如果局部有该配置项则用局部，如果全局有该配置项则用全局
@@ -8842,7 +10879,7 @@ function _default(globalsConfig) {var config2 = arguments.length > 1 && argument
 };exports.default = _default;
 
 /***/ }),
-/* 21 */
+/* 28 */
 /*!***************************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/luch-request/src/lib/core/defaults.js ***!
   \***************************************************************************/
@@ -8881,7 +10918,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
   } };exports.default = _default;
 
 /***/ }),
-/* 22 */
+/* 29 */
 /*!*******************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/uview-ui/index.js ***!
   \*******************************************************/
@@ -8890,15 +10927,11 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
-var _mixin = _interopRequireDefault(__webpack_require__(/*! ./libs/mixin/mixin.js */ 23));
+var _mixin = _interopRequireDefault(__webpack_require__(/*! ./libs/mixin/mixin.js */ 30));
 
 
 
-var _request = _interopRequireDefault(__webpack_require__(/*! ./libs/request */ 24));
-
-
-
-
+var _request = _interopRequireDefault(__webpack_require__(/*! ./libs/request */ 31));
 
 
 
@@ -8915,56 +10948,60 @@ var _request = _interopRequireDefault(__webpack_require__(/*! ./libs/request */ 
 
 
 
-var _queryParams = _interopRequireDefault(__webpack_require__(/*! ./libs/function/queryParams.js */ 28));
-
-var _route = _interopRequireDefault(__webpack_require__(/*! ./libs/function/route.js */ 29));
-
-var _timeFormat = _interopRequireDefault(__webpack_require__(/*! ./libs/function/timeFormat.js */ 30));
-
-var _timeFrom = _interopRequireDefault(__webpack_require__(/*! ./libs/function/timeFrom.js */ 31));
-
-var _colorGradient = _interopRequireDefault(__webpack_require__(/*! ./libs/function/colorGradient.js */ 32));
-
-var _guid = _interopRequireDefault(__webpack_require__(/*! ./libs/function/guid.js */ 33));
-
-var _color = _interopRequireDefault(__webpack_require__(/*! ./libs/function/color.js */ 34));
-
-var _type2icon = _interopRequireDefault(__webpack_require__(/*! ./libs/function/type2icon.js */ 35));
-
-var _randomArray = _interopRequireDefault(__webpack_require__(/*! ./libs/function/randomArray.js */ 36));
-
-var _deepClone = _interopRequireDefault(__webpack_require__(/*! ./libs/function/deepClone.js */ 26));
-
-var _deepMerge = _interopRequireDefault(__webpack_require__(/*! ./libs/function/deepMerge.js */ 25));
-
-var _addUnit = _interopRequireDefault(__webpack_require__(/*! ./libs/function/addUnit.js */ 37));
-
-
-var _test = _interopRequireDefault(__webpack_require__(/*! ./libs/function/test.js */ 27));
-
-var _random = _interopRequireDefault(__webpack_require__(/*! ./libs/function/random.js */ 38));
-
-var _trim = _interopRequireDefault(__webpack_require__(/*! ./libs/function/trim.js */ 39));
-
-var _toast = _interopRequireDefault(__webpack_require__(/*! ./libs/function/toast.js */ 40));
-
-var _getParent = _interopRequireDefault(__webpack_require__(/*! ./libs/function/getParent.js */ 41));
-
-var _$parent = _interopRequireDefault(__webpack_require__(/*! ./libs/function/$parent.js */ 42));
 
 
 
-var _sys = __webpack_require__(/*! ./libs/function/sys.js */ 43);
 
-var _debounce = _interopRequireDefault(__webpack_require__(/*! ./libs/function/debounce.js */ 44));
+var _queryParams = _interopRequireDefault(__webpack_require__(/*! ./libs/function/queryParams.js */ 35));
 
-var _throttle = _interopRequireDefault(__webpack_require__(/*! ./libs/function/throttle.js */ 45));
+var _route = _interopRequireDefault(__webpack_require__(/*! ./libs/function/route.js */ 36));
+
+var _timeFormat = _interopRequireDefault(__webpack_require__(/*! ./libs/function/timeFormat.js */ 37));
+
+var _timeFrom = _interopRequireDefault(__webpack_require__(/*! ./libs/function/timeFrom.js */ 38));
+
+var _colorGradient = _interopRequireDefault(__webpack_require__(/*! ./libs/function/colorGradient.js */ 39));
+
+var _guid = _interopRequireDefault(__webpack_require__(/*! ./libs/function/guid.js */ 40));
+
+var _color = _interopRequireDefault(__webpack_require__(/*! ./libs/function/color.js */ 41));
+
+var _type2icon = _interopRequireDefault(__webpack_require__(/*! ./libs/function/type2icon.js */ 42));
+
+var _randomArray = _interopRequireDefault(__webpack_require__(/*! ./libs/function/randomArray.js */ 43));
+
+var _deepClone = _interopRequireDefault(__webpack_require__(/*! ./libs/function/deepClone.js */ 33));
+
+var _deepMerge = _interopRequireDefault(__webpack_require__(/*! ./libs/function/deepMerge.js */ 32));
+
+var _addUnit = _interopRequireDefault(__webpack_require__(/*! ./libs/function/addUnit.js */ 44));
+
+
+var _test = _interopRequireDefault(__webpack_require__(/*! ./libs/function/test.js */ 34));
+
+var _random = _interopRequireDefault(__webpack_require__(/*! ./libs/function/random.js */ 45));
+
+var _trim = _interopRequireDefault(__webpack_require__(/*! ./libs/function/trim.js */ 46));
+
+var _toast = _interopRequireDefault(__webpack_require__(/*! ./libs/function/toast.js */ 47));
+
+var _getParent = _interopRequireDefault(__webpack_require__(/*! ./libs/function/getParent.js */ 48));
+
+var _$parent = _interopRequireDefault(__webpack_require__(/*! ./libs/function/$parent.js */ 49));
 
 
 
-var _config = _interopRequireDefault(__webpack_require__(/*! ./libs/config/config.js */ 46));
+var _sys = __webpack_require__(/*! ./libs/function/sys.js */ 50);
 
-var _zIndex = _interopRequireDefault(__webpack_require__(/*! ./libs/config/zIndex.js */ 47));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} // 引入全局mixin
+var _debounce = _interopRequireDefault(__webpack_require__(/*! ./libs/function/debounce.js */ 51));
+
+var _throttle = _interopRequireDefault(__webpack_require__(/*! ./libs/function/throttle.js */ 52));
+
+
+
+var _config = _interopRequireDefault(__webpack_require__(/*! ./libs/config/config.js */ 53));
+
+var _zIndex = _interopRequireDefault(__webpack_require__(/*! ./libs/config/zIndex.js */ 54));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} // 引入全局mixin
 // 引入关于是否mixin集成小程序分享的配置
 // import wxshare from './libs/mixin/mpShare.js'
 // 全局挂载引入http相关请求拦截插件
@@ -9027,7 +11064,7 @@ var install = function install(Vue) {
   install: install };exports.default = _default;
 
 /***/ }),
-/* 23 */
+/* 30 */
 /*!******************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/uview-ui/libs/mixin/mixin.js ***!
   \******************************************************************/
@@ -9082,7 +11119,7 @@ var install = function install(Vue) {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
-/* 24 */
+/* 31 */
 /*!********************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/uview-ui/libs/request/index.js ***!
   \********************************************************************/
@@ -9090,8 +11127,8 @@ var install = function install(Vue) {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _deepMerge = _interopRequireDefault(__webpack_require__(/*! ../function/deepMerge */ 25));
-var _test = _interopRequireDefault(__webpack_require__(/*! ../function/test */ 27));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}var
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _deepMerge = _interopRequireDefault(__webpack_require__(/*! ../function/deepMerge */ 32));
+var _test = _interopRequireDefault(__webpack_require__(/*! ../function/test */ 34));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}var
 Request = /*#__PURE__*/function () {_createClass(Request, [{ key: "setConfig",
     // 设置全局默认配置
     value: function setConfig(customConfig) {
@@ -9262,7 +11299,7 @@ new Request();exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
-/* 25 */
+/* 32 */
 /*!*************************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/uview-ui/libs/function/deepMerge.js ***!
   \*************************************************************************/
@@ -9270,7 +11307,7 @@ new Request();exports.default = _default;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _deepClone = _interopRequireDefault(__webpack_require__(/*! ./deepClone */ 26));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _deepClone = _interopRequireDefault(__webpack_require__(/*! ./deepClone */ 33));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 
 // JS对象深度合并
 function deepMerge() {var target = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};var source = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
@@ -9302,7 +11339,7 @@ function deepMerge() {var target = arguments.length > 0 && arguments[0] !== unde
 deepMerge;exports.default = _default;
 
 /***/ }),
-/* 26 */
+/* 33 */
 /*!*************************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/uview-ui/libs/function/deepClone.js ***!
   \*************************************************************************/
@@ -9335,7 +11372,7 @@ function deepClone(obj) {
 deepClone;exports.default = _default;
 
 /***/ }),
-/* 27 */
+/* 34 */
 /*!********************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/uview-ui/libs/function/test.js ***!
   \********************************************************************/
@@ -9577,7 +11614,7 @@ function code(value) {var len = arguments.length > 1 && arguments[1] !== undefin
   code: code };exports.default = _default;
 
 /***/ }),
-/* 28 */
+/* 35 */
 /*!***************************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/uview-ui/libs/function/queryParams.js ***!
   \***************************************************************************/
@@ -9645,7 +11682,7 @@ function queryParams() {var data = arguments.length > 0 && arguments[0] !== unde
 queryParams;exports.default = _default;
 
 /***/ }),
-/* 29 */
+/* 36 */
 /*!*********************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/uview-ui/libs/function/route.js ***!
   \*********************************************************************/
@@ -9653,7 +11690,7 @@ queryParams;exports.default = _default;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _queryParams = _interopRequireDefault(__webpack_require__(/*! ../../libs/function/queryParams.js */ 28));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _queryParams = _interopRequireDefault(__webpack_require__(/*! ../../libs/function/queryParams.js */ 35));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 /**
                                                                                                                                                                                                                                                                                             * 路由跳转
                                                                                                                                                                                                                                                                                             * 注意:本方法没有对跳转的回调函数进行封装
@@ -9741,7 +11778,7 @@ route;exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
-/* 30 */
+/* 37 */
 /*!**************************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/uview-ui/libs/function/timeFormat.js ***!
   \**************************************************************************/
@@ -9803,7 +11840,7 @@ function timeFormat() {var timestamp = arguments.length > 0 && arguments[0] !== 
 timeFormat;exports.default = _default;
 
 /***/ }),
-/* 31 */
+/* 38 */
 /*!************************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/uview-ui/libs/function/timeFrom.js ***!
   \************************************************************************/
@@ -9811,7 +11848,7 @@ timeFormat;exports.default = _default;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _timeFormat = _interopRequireDefault(__webpack_require__(/*! ../../libs/function/timeFormat.js */ 30));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _timeFormat = _interopRequireDefault(__webpack_require__(/*! ../../libs/function/timeFormat.js */ 37));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 
 /**
                                                                                                                                                                                                                                                                                           * 时间戳转为多久之前
@@ -9859,7 +11896,7 @@ function timeFrom() {var timestamp = arguments.length > 0 && arguments[0] !== un
 timeFrom;exports.default = _default;
 
 /***/ }),
-/* 32 */
+/* 39 */
 /*!*****************************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/uview-ui/libs/function/colorGradient.js ***!
   \*****************************************************************************/
@@ -9968,7 +12005,7 @@ function rgbToHex(rgb) {
   rgbToHex: rgbToHex };exports.default = _default;
 
 /***/ }),
-/* 33 */
+/* 40 */
 /*!********************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/uview-ui/libs/function/guid.js ***!
   \********************************************************************/
@@ -10019,7 +12056,7 @@ function guid() {var len = arguments.length > 0 && arguments[0] !== undefined ? 
 guid;exports.default = _default;
 
 /***/ }),
-/* 34 */
+/* 41 */
 /*!*********************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/uview-ui/libs/function/color.js ***!
   \*********************************************************************/
@@ -10066,7 +12103,7 @@ var color = {
 color;exports.default = _default;
 
 /***/ }),
-/* 35 */
+/* 42 */
 /*!*************************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/uview-ui/libs/function/type2icon.js ***!
   \*************************************************************************/
@@ -10111,7 +12148,7 @@ function type2icon() {var type = arguments.length > 0 && arguments[0] !== undefi
 type2icon;exports.default = _default;
 
 /***/ }),
-/* 36 */
+/* 43 */
 /*!***************************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/uview-ui/libs/function/randomArray.js ***!
   \***************************************************************************/
@@ -10128,7 +12165,7 @@ function randomArray() {var array = arguments.length > 0 && arguments[0] !== und
 randomArray;exports.default = _default;
 
 /***/ }),
-/* 37 */
+/* 44 */
 /*!***********************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/uview-ui/libs/function/addUnit.js ***!
   \***********************************************************************/
@@ -10136,7 +12173,7 @@ randomArray;exports.default = _default;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = addUnit;var _test = _interopRequireDefault(__webpack_require__(/*! ./test.js */ 27));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = addUnit;var _test = _interopRequireDefault(__webpack_require__(/*! ./test.js */ 34));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 
 // 添加单位，如果有rpx，%，px等单位结尾或者值为auto，直接返回，否则加上rpx单位结尾
 function addUnit() {var value = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'auto';var unit = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'rpx';
@@ -10146,7 +12183,7 @@ function addUnit() {var value = arguments.length > 0 && arguments[0] !== undefin
 }
 
 /***/ }),
-/* 38 */
+/* 45 */
 /*!**********************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/uview-ui/libs/function/random.js ***!
   \**********************************************************************/
@@ -10166,7 +12203,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 random;exports.default = _default;
 
 /***/ }),
-/* 39 */
+/* 46 */
 /*!********************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/uview-ui/libs/function/trim.js ***!
   \********************************************************************/
@@ -10191,7 +12228,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 trim;exports.default = _default;
 
 /***/ }),
-/* 40 */
+/* 47 */
 /*!*********************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/uview-ui/libs/function/toast.js ***!
   \*********************************************************************/
@@ -10211,7 +12248,7 @@ toast;exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
-/* 41 */
+/* 48 */
 /*!*************************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/uview-ui/libs/function/getParent.js ***!
   \*************************************************************************/
@@ -10268,7 +12305,7 @@ function getParent(name, keys) {
 }
 
 /***/ }),
-/* 42 */
+/* 49 */
 /*!***********************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/uview-ui/libs/function/$parent.js ***!
   \***********************************************************************/
@@ -10296,7 +12333,7 @@ function $parent() {var name = arguments.length > 0 && arguments[0] !== undefine
 }
 
 /***/ }),
-/* 43 */
+/* 50 */
 /*!*******************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/uview-ui/libs/function/sys.js ***!
   \*******************************************************************/
@@ -10314,7 +12351,7 @@ function sys() {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
-/* 44 */
+/* 51 */
 /*!************************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/uview-ui/libs/function/debounce.js ***!
   \************************************************************************/
@@ -10353,7 +12390,7 @@ function debounce(func) {var wait = arguments.length > 1 && arguments[1] !== und
 debounce;exports.default = _default;
 
 /***/ }),
-/* 45 */
+/* 52 */
 /*!************************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/uview-ui/libs/function/throttle.js ***!
   \************************************************************************/
@@ -10395,7 +12432,7 @@ function throttle(func) {var wait = arguments.length > 1 && arguments[1] !== und
 throttle;exports.default = _default;
 
 /***/ }),
-/* 46 */
+/* 53 */
 /*!********************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/uview-ui/libs/config/config.js ***!
   \********************************************************************/
@@ -10418,7 +12455,7 @@ var version = '1.7.4';var _default =
   'warning'] };exports.default = _default;
 
 /***/ }),
-/* 47 */
+/* 54 */
 /*!********************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/uview-ui/libs/config/zIndex.js ***!
   \********************************************************************/
@@ -10447,36 +12484,13 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
   indexListSticky: 965 };exports.default = _default;
 
 /***/ }),
-/* 48 */,
-/* 49 */,
-/* 50 */,
-/* 51 */,
-/* 52 */,
-/* 53 */,
-/* 54 */
-/*!************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js ***!
-  \************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(global, uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function");}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } });if (superClass) _setPrototypeOf(subClass, superClass);}function _createSuper(Derived) {var hasNativeReflectConstruct = _isNativeReflectConstruct();return function _createSuperInternal() {var Super = _getPrototypeOf(Derived),result;if (hasNativeReflectConstruct) {var NewTarget = _getPrototypeOf(this).constructor;result = Reflect.construct(Super, arguments, NewTarget);} else {result = Super.apply(this, arguments);}return _possibleConstructorReturn(this, result);};}function _possibleConstructorReturn(self, call) {if (call && (typeof call === "object" || typeof call === "function")) {return call;}return _assertThisInitialized(self);}function _assertThisInitialized(self) {if (self === void 0) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return self;}function _wrapNativeSuper(Class) {var _cache = typeof Map === "function" ? new Map() : undefined;_wrapNativeSuper = function _wrapNativeSuper(Class) {if (Class === null || !_isNativeFunction(Class)) return Class;if (typeof Class !== "function") {throw new TypeError("Super expression must either be null or a function");}if (typeof _cache !== "undefined") {if (_cache.has(Class)) return _cache.get(Class);_cache.set(Class, Wrapper);}function Wrapper() {return _construct(Class, arguments, _getPrototypeOf(this).constructor);}Wrapper.prototype = Object.create(Class.prototype, { constructor: { value: Wrapper, enumerable: false, writable: true, configurable: true } });return _setPrototypeOf(Wrapper, Class);};return _wrapNativeSuper(Class);}function _construct(Parent, args, Class) {if (_isNativeReflectConstruct()) {_construct = Reflect.construct;} else {_construct = function _construct(Parent, args, Class) {var a = [null];a.push.apply(a, args);var Constructor = Function.bind.apply(Parent, a);var instance = new Constructor();if (Class) _setPrototypeOf(instance, Class.prototype);return instance;};}return _construct.apply(null, arguments);}function _isNativeReflectConstruct() {if (typeof Reflect === "undefined" || !Reflect.construct) return false;if (Reflect.construct.sham) return false;if (typeof Proxy === "function") return true;try {Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));return true;} catch (e) {return false;}}function _isNativeFunction(fn) {return Function.toString.call(fn).indexOf("[native code]") !== -1;}function _setPrototypeOf(o, p) {_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {o.__proto__ = p;return o;};return _setPrototypeOf(o, p);}function _getPrototypeOf(o) {_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {return o.__proto__ || Object.getPrototypeOf(o);};return _getPrototypeOf(o);}var e = "undefined" != typeof globalThis ? globalThis : "undefined" != typeof window ? window : "undefined" != typeof global ? global : "undefined" != typeof self ? self : {};function t(e) {return e && e.__esModule && Object.prototype.hasOwnProperty.call(e, "default") ? e.default : e;}function n(e, t, n) {return e(n = { path: t, exports: {}, require: function require(e, t) {return function () {throw new Error("Dynamic requires are not currently supported by @rollup/plugin-commonjs");}(null == t && n.path);} }, n.exports), n.exports;}var r = n(function (e, t) {var n;e.exports = (n = n || function (e, t) {var n = Object.create || function () {function e() {}return function (t) {var n;return e.prototype = t, n = new e(), e.prototype = null, n;};}(),r = {},o = r.lib = {},s = o.Base = { extend: function extend(e) {var t = n(this);return e && t.mixIn(e), t.hasOwnProperty("init") && this.init !== t.init || (t.init = function () {t.$super.init.apply(this, arguments);}), t.init.prototype = t, t.$super = this, t;}, create: function create() {var e = this.extend();return e.init.apply(e, arguments), e;}, init: function init() {}, mixIn: function mixIn(e) {for (var t in e) {e.hasOwnProperty(t) && (this[t] = e[t]);}e.hasOwnProperty("toString") && (this.toString = e.toString);}, clone: function clone() {return this.init.prototype.extend(this);} },i = o.WordArray = s.extend({ init: function init(e, t) {e = this.words = e || [], this.sigBytes = null != t ? t : 4 * e.length;}, toString: function toString(e) {return (e || c).stringify(this);}, concat: function concat(e) {var t = this.words,n = e.words,r = this.sigBytes,o = e.sigBytes;if (this.clamp(), r % 4) for (var s = 0; s < o; s++) {var i = n[s >>> 2] >>> 24 - s % 4 * 8 & 255;t[r + s >>> 2] |= i << 24 - (r + s) % 4 * 8;} else for (s = 0; s < o; s += 4) {t[r + s >>> 2] = n[s >>> 2];}return this.sigBytes += o, this;}, clamp: function clamp() {var t = this.words,n = this.sigBytes;t[n >>> 2] &= 4294967295 << 32 - n % 4 * 8, t.length = e.ceil(n / 4);}, clone: function clone() {var e = s.clone.call(this);return e.words = this.words.slice(0), e;}, random: function random(t) {for (var n, r = [], o = function o(t) {t = t;var n = 987654321,r = 4294967295;return function () {var o = ((n = 36969 * (65535 & n) + (n >> 16) & r) << 16) + (t = 18e3 * (65535 & t) + (t >> 16) & r) & r;return o /= 4294967296, (o += .5) * (e.random() > .5 ? 1 : -1);};}, s = 0; s < t; s += 4) {var a = o(4294967296 * (n || e.random()));n = 987654071 * a(), r.push(4294967296 * a() | 0);}return new i.init(r, t);} }),a = r.enc = {},c = a.Hex = { stringify: function stringify(e) {for (var t = e.words, n = e.sigBytes, r = [], o = 0; o < n; o++) {var s = t[o >>> 2] >>> 24 - o % 4 * 8 & 255;r.push((s >>> 4).toString(16)), r.push((15 & s).toString(16));}return r.join("");}, parse: function parse(e) {for (var t = e.length, n = [], r = 0; r < t; r += 2) {n[r >>> 3] |= parseInt(e.substr(r, 2), 16) << 24 - r % 8 * 4;}return new i.init(n, t / 2);} },u = a.Latin1 = { stringify: function stringify(e) {for (var t = e.words, n = e.sigBytes, r = [], o = 0; o < n; o++) {var s = t[o >>> 2] >>> 24 - o % 4 * 8 & 255;r.push(String.fromCharCode(s));}return r.join("");}, parse: function parse(e) {for (var t = e.length, n = [], r = 0; r < t; r++) {n[r >>> 2] |= (255 & e.charCodeAt(r)) << 24 - r % 4 * 8;}return new i.init(n, t);} },l = a.Utf8 = { stringify: function stringify(e) {try {return decodeURIComponent(escape(u.stringify(e)));} catch (e) {throw new Error("Malformed UTF-8 data");}}, parse: function parse(e) {return u.parse(unescape(encodeURIComponent(e)));} },h = o.BufferedBlockAlgorithm = s.extend({ reset: function reset() {this._data = new i.init(), this._nDataBytes = 0;}, _append: function _append(e) {"string" == typeof e && (e = l.parse(e)), this._data.concat(e), this._nDataBytes += e.sigBytes;}, _process: function _process(t) {var n = this._data,r = n.words,o = n.sigBytes,s = this.blockSize,a = o / (4 * s),c = (a = t ? e.ceil(a) : e.max((0 | a) - this._minBufferSize, 0)) * s,u = e.min(4 * c, o);if (c) {for (var l = 0; l < c; l += s) {this._doProcessBlock(r, l);}var h = r.splice(0, c);n.sigBytes -= u;}return new i.init(h, u);}, clone: function clone() {var e = s.clone.call(this);return e._data = this._data.clone(), e;}, _minBufferSize: 0 }),f = (o.Hasher = h.extend({ cfg: s.extend(), init: function init(e) {this.cfg = this.cfg.extend(e), this.reset();}, reset: function reset() {h.reset.call(this), this._doReset();}, update: function update(e) {return this._append(e), this._process(), this;}, finalize: function finalize(e) {return e && this._append(e), this._doFinalize();}, blockSize: 16, _createHelper: function _createHelper(e) {return function (t, n) {return new e.init(n).finalize(t);};}, _createHmacHelper: function _createHmacHelper(e) {return function (t, n) {return new f.HMAC.init(e, n).finalize(t);};} }), r.algo = {});return r;}(Math), n);}),o = (n(function (e, t) {var n;e.exports = (n = r, function (e) {var t = n,r = t.lib,o = r.WordArray,s = r.Hasher,i = t.algo,a = [];!function () {for (var t = 0; t < 64; t++) {a[t] = 4294967296 * e.abs(e.sin(t + 1)) | 0;}}();var c = i.MD5 = s.extend({ _doReset: function _doReset() {this._hash = new o.init([1732584193, 4023233417, 2562383102, 271733878]);}, _doProcessBlock: function _doProcessBlock(e, t) {for (var n = 0; n < 16; n++) {var r = t + n,o = e[r];e[r] = 16711935 & (o << 8 | o >>> 24) | 4278255360 & (o << 24 | o >>> 8);}var s = this._hash.words,i = e[t + 0],c = e[t + 1],p = e[t + 2],d = e[t + 3],y = e[t + 4],g = e[t + 5],v = e[t + 6],_ = e[t + 7],m = e[t + 8],b = e[t + 9],w = e[t + 10],T = e[t + 11],S = e[t + 12],E = e[t + 13],k = e[t + 14],O = e[t + 15],A = s[0],P = s[1],I = s[2],N = s[3];A = u(A, P, I, N, i, 7, a[0]), N = u(N, A, P, I, c, 12, a[1]), I = u(I, N, A, P, p, 17, a[2]), P = u(P, I, N, A, d, 22, a[3]), A = u(A, P, I, N, y, 7, a[4]), N = u(N, A, P, I, g, 12, a[5]), I = u(I, N, A, P, v, 17, a[6]), P = u(P, I, N, A, _, 22, a[7]), A = u(A, P, I, N, m, 7, a[8]), N = u(N, A, P, I, b, 12, a[9]), I = u(I, N, A, P, w, 17, a[10]), P = u(P, I, N, A, T, 22, a[11]), A = u(A, P, I, N, S, 7, a[12]), N = u(N, A, P, I, E, 12, a[13]), I = u(I, N, A, P, k, 17, a[14]), A = l(A, P = u(P, I, N, A, O, 22, a[15]), I, N, c, 5, a[16]), N = l(N, A, P, I, v, 9, a[17]), I = l(I, N, A, P, T, 14, a[18]), P = l(P, I, N, A, i, 20, a[19]), A = l(A, P, I, N, g, 5, a[20]), N = l(N, A, P, I, w, 9, a[21]), I = l(I, N, A, P, O, 14, a[22]), P = l(P, I, N, A, y, 20, a[23]), A = l(A, P, I, N, b, 5, a[24]), N = l(N, A, P, I, k, 9, a[25]), I = l(I, N, A, P, d, 14, a[26]), P = l(P, I, N, A, m, 20, a[27]), A = l(A, P, I, N, E, 5, a[28]), N = l(N, A, P, I, p, 9, a[29]), I = l(I, N, A, P, _, 14, a[30]), A = h(A, P = l(P, I, N, A, S, 20, a[31]), I, N, g, 4, a[32]), N = h(N, A, P, I, m, 11, a[33]), I = h(I, N, A, P, T, 16, a[34]), P = h(P, I, N, A, k, 23, a[35]), A = h(A, P, I, N, c, 4, a[36]), N = h(N, A, P, I, y, 11, a[37]), I = h(I, N, A, P, _, 16, a[38]), P = h(P, I, N, A, w, 23, a[39]), A = h(A, P, I, N, E, 4, a[40]), N = h(N, A, P, I, i, 11, a[41]), I = h(I, N, A, P, d, 16, a[42]), P = h(P, I, N, A, v, 23, a[43]), A = h(A, P, I, N, b, 4, a[44]), N = h(N, A, P, I, S, 11, a[45]), I = h(I, N, A, P, O, 16, a[46]), A = f(A, P = h(P, I, N, A, p, 23, a[47]), I, N, i, 6, a[48]), N = f(N, A, P, I, _, 10, a[49]), I = f(I, N, A, P, k, 15, a[50]), P = f(P, I, N, A, g, 21, a[51]), A = f(A, P, I, N, S, 6, a[52]), N = f(N, A, P, I, d, 10, a[53]), I = f(I, N, A, P, w, 15, a[54]), P = f(P, I, N, A, c, 21, a[55]), A = f(A, P, I, N, m, 6, a[56]), N = f(N, A, P, I, O, 10, a[57]), I = f(I, N, A, P, v, 15, a[58]), P = f(P, I, N, A, E, 21, a[59]), A = f(A, P, I, N, y, 6, a[60]), N = f(N, A, P, I, T, 10, a[61]), I = f(I, N, A, P, p, 15, a[62]), P = f(P, I, N, A, b, 21, a[63]), s[0] = s[0] + A | 0, s[1] = s[1] + P | 0, s[2] = s[2] + I | 0, s[3] = s[3] + N | 0;}, _doFinalize: function _doFinalize() {var t = this._data,n = t.words,r = 8 * this._nDataBytes,o = 8 * t.sigBytes;n[o >>> 5] |= 128 << 24 - o % 32;var s = e.floor(r / 4294967296),i = r;n[15 + (o + 64 >>> 9 << 4)] = 16711935 & (s << 8 | s >>> 24) | 4278255360 & (s << 24 | s >>> 8), n[14 + (o + 64 >>> 9 << 4)] = 16711935 & (i << 8 | i >>> 24) | 4278255360 & (i << 24 | i >>> 8), t.sigBytes = 4 * (n.length + 1), this._process();for (var a = this._hash, c = a.words, u = 0; u < 4; u++) {var l = c[u];c[u] = 16711935 & (l << 8 | l >>> 24) | 4278255360 & (l << 24 | l >>> 8);}return a;}, clone: function clone() {var e = s.clone.call(this);return e._hash = this._hash.clone(), e;} });function u(e, t, n, r, o, s, i) {var a = e + (t & n | ~t & r) + o + i;return (a << s | a >>> 32 - s) + t;}function l(e, t, n, r, o, s, i) {var a = e + (t & r | n & ~r) + o + i;return (a << s | a >>> 32 - s) + t;}function h(e, t, n, r, o, s, i) {var a = e + (t ^ n ^ r) + o + i;return (a << s | a >>> 32 - s) + t;}function f(e, t, n, r, o, s, i) {var a = e + (n ^ (t | ~r)) + o + i;return (a << s | a >>> 32 - s) + t;}t.MD5 = s._createHelper(c), t.HmacMD5 = s._createHmacHelper(c);}(Math), n.MD5);}), n(function (e, t) {var n, o, s;e.exports = (o = (n = r).lib.Base, s = n.enc.Utf8, void (n.algo.HMAC = o.extend({ init: function init(e, t) {e = this._hasher = new e.init(), "string" == typeof t && (t = s.parse(t));var n = e.blockSize,r = 4 * n;t.sigBytes > r && (t = e.finalize(t)), t.clamp();for (var o = this._oKey = t.clone(), i = this._iKey = t.clone(), a = o.words, c = i.words, u = 0; u < n; u++) {a[u] ^= 1549556828, c[u] ^= 909522486;}o.sigBytes = i.sigBytes = r, this.reset();}, reset: function reset() {var e = this._hasher;e.reset(), e.update(this._iKey);}, update: function update(e) {return this._hasher.update(e), this;}, finalize: function finalize(e) {var t = this._hasher,n = t.finalize(e);return t.reset(), t.finalize(this._oKey.clone().concat(n));} })));}), n(function (e, t) {e.exports = r.HmacMD5;}));function s(e) {return function (t) {if (!((t = t || {}).success || t.fail || t.complete)) return e.call(this, t);e.call(this, t).then(function (e) {t.success && t.success(e), t.complete && t.complete(e);}).catch(function (e) {t.fail && t.fail(e), t.complete && t.complete(e);});};}var i = /*#__PURE__*/function (_Error) {_inherits(i, _Error);var _super = _createSuper(i);function i(e) {var _this;_classCallCheck(this, i);_this = _super.call(this, e.message), _this.errMsg = e.message || "", Object.defineProperties(_assertThisInitialized(_this), { code: { get: function get() {return e.code;} }, requestId: { get: function get() {return e.requestId;} }, message: { get: function get() {return this.errMsg;}, set: function set(e) {this.errMsg = e;} } });return _this;}return i;}( /*#__PURE__*/_wrapNativeSuper(Error));var a;try {a = __webpack_require__(/*! uni-stat-config */ 55).default || __webpack_require__(/*! uni-stat-config */ 55);} catch (e) {a = { appid: "" };}var c, u;function l() {var e = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 8;var t = "";for (; t.length < e;) {t += Math.random().toString(32).substring(2);}return t.substring(0, e);}function h() {if ("n" === f()) {try {c = plus.runtime.getDCloudId();} catch (e) {c = "";}return c;}return c || (c = l(32), uni.setStorage({ key: "__DC_CLOUD_UUID", data: c })), c;}function f() {var _appPlus$h5$mpWeixi;return (_appPlus$h5$mpWeixi = { "app-plus": "n", h5: "h5", "mp-weixin": "wx" }, _defineProperty(_appPlus$h5$mpWeixi, ["y", "a", "p", "mp-ali"].reverse().join(""), "ali"), _defineProperty(_appPlus$h5$mpWeixi, "mp-baidu", "bd"), _defineProperty(_appPlus$h5$mpWeixi, "mp-toutiao", "tt"), _defineProperty(_appPlus$h5$mpWeixi, "mp-qq", "qq"), _defineProperty(_appPlus$h5$mpWeixi, "quickapp-native", "qn"), _appPlus$h5$mpWeixi)["mp-weixin"];}var p = { sign: function sign(e, t) {var n = "";return Object.keys(e).sort().forEach(function (t) {e[t] && (n = n + "&" + t + "=" + e[t]);}), n = n.slice(1), o(n, t).toString();}, wrappedRequest: function wrappedRequest(e, t) {return new Promise(function (n, r) {t(Object.assign(e, { complete: function complete(e) {e || (e = {}),  false && false;var t = e.data && e.data.header && e.data.header["x-serverless-request-id"] || e.header && e.header["request-id"];if (!e.statusCode || e.statusCode >= 400) return r(new i({ code: "SYS_ERR", message: e.errMsg || "request:fail", requestId: t }));var o = e.data;if (o.error) return r(new i({ code: o.error.code, message: o.error.message, requestId: t }));o.result = o.data, o.requestId = t, delete o.data, n(o);} }));});} };var d = { request: function request(e) {return uni.request(e);}, uploadFile: function uploadFile(e) {return uni.uploadFile(e);}, setStorageSync: function setStorageSync(e, t) {return uni.setStorageSync(e, t);}, getStorageSync: function getStorageSync(e) {return uni.getStorageSync(e);}, removeStorageSync: function removeStorageSync(e) {return uni.removeStorageSync(e);}, clearStorageSync: function clearStorageSync() {return uni.clearStorageSync();} };var y = /*#__PURE__*/function () {function y(e) {_classCallCheck(this, y);["spaceId", "clientSecret"].forEach(function (t) {if (!Object.prototype.hasOwnProperty.call(e, t)) throw new Error("缺少参数" + t);}), this.config = Object.assign({}, { endpoint: "https://api.bspapp.com" }, e), this.config.provider = "aliyun", this.config.requestUrl = this.config.endpoint + "/client", this.config.envType = this.config.envType || "public", this.config.accessTokenKey = "access_token_" + this.config.spaceId, this.adapter = d;}_createClass(y, [{ key: "setAccessToken", value: function setAccessToken(e) {this.accessToken = e;} }, { key: "requestWrapped", value: function requestWrapped(e) {return p.wrappedRequest(e, this.adapter.request);} }, { key: "requestAuth", value: function requestAuth(e) {return this.requestWrapped(e);} }, { key: "request", value: function request(e, t) {var _this2 = this;return this.hasAccessToken ? t ? this.requestWrapped(e) : this.requestWrapped(e).catch(function (t) {return new Promise(function (e, n) {!t || "GATEWAY_INVALID_TOKEN" !== t.code && "InvalidParameter.InvalidToken" !== t.code ? n(t) : e();}).then(function () {return _this2.getAccessToken();}).then(function () {var t = _this2.rebuildRequest(e);return _this2.request(t, !0);});}) : this.getAccessToken().then(function () {var t = _this2.rebuildRequest(e);return _this2.request(t, !0);});} }, { key: "rebuildRequest", value: function rebuildRequest(e) {var t = Object.assign({}, e);return t.data.token = this.accessToken, t.header["x-basement-token"] = this.accessToken, t.header["x-serverless-sign"] = p.sign(t.data, this.config.clientSecret), t;} }, { key: "setupRequest", value: function setupRequest(e, t) {var n = Object.assign({}, e, { spaceId: this.config.spaceId, timestamp: Date.now() }),r = { "Content-Type": "application/json" };return "auth" !== t && (n.token = this.accessToken, r["x-basement-token"] = this.accessToken), r["x-serverless-sign"] = p.sign(n, this.config.clientSecret), { url: this.config.requestUrl, method: "POST", data: n, dataType: "json", header: r };} }, { key: "getAccessToken", value: function getAccessToken() {var _this3 = this;return this.requestAuth(this.setupRequest({ method: "serverless.auth.user.anonymousAuthorize", params: "{}" }, "auth")).then(function (e) {return new Promise(function (t, n) {e.result && e.result.accessToken ? (_this3.setAccessToken(e.result.accessToken), t(_this3.accessToken)) : n(new i({ code: "AUTH_FAILED", message: "获取accessToken失败" }));});});} }, { key: "authorize", value: function authorize() {this.getAccessToken();} }, { key: "callFunction", value: function callFunction(e) {var t = { method: "serverless.function.runtime.invoke", params: JSON.stringify({ functionTarget: e.name, functionArgs: e.data || {} }) };return this.request(this.setupRequest(t));} }, { key: "getOSSUploadOptionsFromPath", value: function getOSSUploadOptionsFromPath(e) {var t = { method: "serverless.file.resource.generateProximalSign", params: JSON.stringify(e) };return this.request(this.setupRequest(t));} }, { key: "uploadFileToOSS", value: function uploadFileToOSS(_ref) {var _this4 = this;var e = _ref.url,t = _ref.formData,n = _ref.name,r = _ref.filePath,o = _ref.fileType,s = _ref.onUploadProgress;return new Promise(function (a, c) {var u = _this4.adapter.uploadFile({ url: e, formData: t, name: n, filePath: r, fileType: o, header: { "X-OSS-server-side-encrpytion": "AES256" }, success: function success(e) {e && e.statusCode < 400 ? a(e) : c(new i({ code: "UPLOAD_FAILED", message: "文件上传失败" }));}, fail: function fail(e) {c(e);} });"function" == typeof s && u && "function" == typeof u.onProgressUpdate && u.onProgressUpdate(function (e) {s({ loaded: e.totalBytesSent, total: e.totalBytesExpectedToSend });});});} }, { key: "reportOSSUpload", value: function reportOSSUpload(e) {var t = { method: "serverless.file.resource.report", params: JSON.stringify(e) };return this.request(this.setupRequest(t));} }, { key: "uploadFile", value: function uploadFile(_ref2) {var _this5 = this;var e = _ref2.filePath,t = _ref2.cloudPath,_ref2$fileType = _ref2.fileType,n = _ref2$fileType === void 0 ? "image" : _ref2$fileType,r = _ref2.onUploadProgress,o = _ref2.config;if (!t) throw new i({ code: "CLOUDPATH_REQUIRED", message: "cloudPath不可为空" });var s = o && o.envType || this.config.envType;var a, c;return this.getOSSUploadOptionsFromPath({ env: s, filename: t }).then(function (t) {var o = t.result;a = o.id, c = "https://" + o.cdnDomain + "/" + o.ossPath;var s = { url: "https://" + o.host, formData: { "Cache-Control": "max-age=2592000", "Content-Disposition": "attachment", OSSAccessKeyId: o.accessKeyId, Signature: o.signature, host: o.host, id: a, key: o.ossPath, policy: o.policy, success_action_status: 200 }, fileName: "file", name: "file", filePath: e, fileType: n };return _this5.uploadFileToOSS(Object.assign({}, s, { onUploadProgress: r }));}).then(function () {return _this5.reportOSSUpload({ id: a });}).then(function (t) {return new Promise(function (n, r) {t.success ? n({ success: !0, filePath: e, fileID: c }) : r(new i({ code: "UPLOAD_FAILED", message: "文件上传失败" }));});});} }, { key: "deleteFile", value: function deleteFile(_ref3) {var e = _ref3.fileList;var t = { method: "serverless.file.resource.delete", params: JSON.stringify({ id: e[0] }) };return this.request(this.setupRequest(t));} }, { key: "hasAccessToken", get: function get() {return !!this.accessToken;} }]);return y;}();var g = { init: function init(e) {var t = new y(e);["deleteFile"].forEach(function (e) {t[e] = s(t[e]).bind(t);});var n = { signInAnonymously: function signInAnonymously() {return t.authorize();}, getLoginState: function getLoginState() {return Promise.resolve(!1);} };return t.auth = function () {return n;}, t;} };var v,_,m = n(function (e, t) {Object.defineProperty(t, "__esModule", { value: !0 }), t.getQuery = function (e, t) {if ("undefined" == typeof window) return !1;var n = t || window.location.search,r = new RegExp("(^|&)" + e + "=([^&]*)(&|$)"),o = n.substr(n.indexOf("?") + 1).match(r);return null != o ? o[2] : "";}, t.getHash = function (e) {var t = window.location.hash.match(new RegExp("[#?&/]" + e + "=([^&#]*)"));return t ? t[1] : "";}, t.removeParam = function (e, t) {var n = t.split("?")[0],r = [],o = -1 !== t.indexOf("?") ? t.split("?")[1] : "";if ("" !== o) {for (var s = (r = o.split("&")).length - 1; s >= 0; s -= 1) {r[s].split("=")[0] === e && r.splice(s, 1);}n = n + "?" + r.join("&");}return n;}, t.createPromiseCallback = function () {var e;if (!Promise) {(e = function e() {}).promise = {};var t = function t() {throw new Error('Your Node runtime does support ES6 Promises. Set "global.Promise" to your preferred implementation of promises.');};return Object.defineProperty(e.promise, "then", { get: t }), Object.defineProperty(e.promise, "catch", { get: t }), e;}var n = new Promise(function (t, n) {e = function e(_e, r) {return _e ? n(_e) : t(r);};});return e.promise = n, e;}, t.getWeixinCode = function () {return t.getQuery("code") || t.getHash("code");}, t.getMiniAppCode = function () {return new Promise(function (e, t) {wx.login({ success: function success(t) {e(t.code);}, fail: function fail(e) {t(e);} });});}, t.isArray = function (e) {return "[object Array]" === Object.prototype.toString.call(e);}, t.isString = function (e) {return "string" == typeof e;}, t.isUndefined = function (e) {return void 0 === e;}, t.isInstanceOf = function (e, t) {return e instanceof t;}, t.isFormData = function (e) {return "[object FormData]" === Object.prototype.toString.call(e);}, t.genSeqId = function () {return Math.random().toString(16).slice(2);}, t.getArgNames = function (e) {var t = e.toString();return t.slice(t.indexOf("(") + 1, t.indexOf(")")).match(/([^\s,]+)/g);}, t.formatUrl = function (e, t, n) {void 0 === n && (n = {});var r = /\?/.test(t),o = "";for (var s in n) {"" === o ? !r && (t += "?") : o += "&", o += s + "=" + encodeURIComponent(n[s]);}return /^http(s)?\:\/\//.test(t += o) ? t : "" + e + t;};}),b = "dist/index.js",w = "./dist/index.d.ts",T = { build: "npm run tsc && webpack", tsc: "tsc -p tsconfig.json", "tsc:w": "tsc -p tsconfig.json -w", test: "jest --verbose false -i", e2e: 'NODE_ENV=e2e webpack && jest --config="./jest.e2e.config.js"  --verbose false -i "e2e"', start: "webpack-dev-server --hot --open", eslint: 'eslint "./**/*.js" "./**/*.ts"', "eslint-fix": 'eslint --fix "./**/*.js" "./**/*.ts"', test_web: "npm run tsc && webpack-dev-server --devtool eval-source-map --progress --colors --hot --inline --content-base ./dist --host jimmytest-088bef.tcb.qcloud.la --port 80 --disableHostCheck true --mode development --config webpack.test.js" },S = { type: "git", url: "https://github.com/TencentCloudBase/tcb-js-sdk" },E = ["tcb", "js-sdk"],k = { "@cloudbase/adapter-interface": "^0.2.0", "@cloudbase/adapter-wx_mp": "^0.2.1", "@cloudbase/database": "^0.9.8" },O = { "@babel/core": "^7.6.2", "@babel/plugin-proposal-class-properties": "^7.5.5", "@babel/plugin-proposal-object-rest-spread": "^7.6.2", "@babel/plugin-transform-runtime": "^7.6.2", "@babel/preset-env": "^7.6.2", "@babel/preset-typescript": "^7.6.0", "@babel/runtime": "^7.6.2", "@types/jest": "^23.1.4", "@types/node": "^10.14.4", "@types/superagent": "^4.1.4", axios: "^0.19.0", "babel-eslint": "^10.0.1", "babel-loader": "^8.0.6", "babel-polyfill": "^6.26.0", eslint: "^5.16.0", "eslint-config-alloy": "^1.4.2", "eslint-config-prettier": "^4.1.0", "eslint-plugin-prettier": "^3.0.1", "eslint-plugin-typescript": "^1.0.0-rc.3", express: "^4.17.1", husky: "^3.1.0", jest: "^24.7.1", "jest-puppeteer": "^4.3.0", "lint-staged": "^9.5.0", "power-assert": "^1.6.1", puppeteer: "^1.20.0", "serve-static": "^1.14.1", "ts-jest": "^23.10.4", "ts-loader": "^6.2.1", typescript: "^3.4.3", "typescript-eslint-parser": "^22.0.0", webpack: "^4.41.3", "webpack-bundle-analyzer": "^3.4.1", "webpack-cli": "^3.3.0", "webpack-dev-server": "^3.3.1", "webpack-merge": "^4.2.2", "webpack-visualizer-plugin": "^0.1.11" },A = { hooks: { "pre-commit": "lint-staged" } },P = { name: "tcb-js-sdk", version: "1.3.5", description: "js sdk for tcb", main: b, types: w, scripts: T, repository: S, keywords: E, author: "jimmyjzhang", license: "ISC", dependencies: k, devDependencies: O, husky: A, "lint-staged": { "*.{js,ts}": ["eslint --fix", "git add"] } },I = (v = Object.freeze({ __proto__: null, name: "tcb-js-sdk", version: "1.3.5", description: "js sdk for tcb", main: b, types: w, scripts: T, repository: S, keywords: E, author: "jimmyjzhang", license: "ISC", dependencies: k, devDependencies: O, husky: A, default: P })) && v.default || v,N = n(function (t, n) {var r = e && e.__importStar || function (e) {if (e && e.__esModule) return e;var t = {};if (null != e) for (var n in e) {Object.hasOwnProperty.call(e, n) && (t[n] = e[n]);}return t.default = e, t;};Object.defineProperty(n, "__esModule", { value: !0 });var o = r(I);n.SDK_VERISON = o.version, n.ACCESS_TOKEN = "access_token", n.ACCESS_TOKEN_Expire = "access_token_expire", n.REFRESH_TOKEN = "refresh_token", n.ANONYMOUS_UUID = "anonymous_uuid", n.LOGIN_TYPE_KEY = "login_type", n.protocol = "undefined" != typeof location && "http:" === location.protocol ? "http:" : "https:", n.BASE_URL =  false ? undefined : "//tcb-api.tencentcloudapi.com/web";});!function (e) {e.local = "local", e.none = "none", e.session = "session";}(_ || (_ = {}));var x = function x() {},R = function R() {};var C = Object.freeze({ __proto__: null, get StorageType() {return _;}, AbstractSDKRequest: x, AbstractStorage: R, formatUrl: function formatUrl(e, t, n) {void 0 === n && (n = {});var r = /\?/.test(t),o = "";for (var s in n) {"" === o ? !r && (t += "?") : o += "&", o += s + "=" + encodeURIComponent(n[s]);}return /^http(s)?\:\/\//.test(t += o) ? t : "" + e + t;} }),q = n(function (t, n) {var _r,o = e && e.__extends || (_r = function r(e, t) {return (_r = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (e, t) {e.__proto__ = t;} || function (e, t) {for (var n in t) {t.hasOwnProperty(n) && (e[n] = t[n]);}})(e, t);}, function (e, t) {function n() {this.constructor = e;}_r(e, t), e.prototype = null === t ? Object.create(t) : (n.prototype = t.prototype, new n());}),s = e && e.__assign || function () {return (s = Object.assign || function (e) {for (var t, n = 1, r = arguments.length; n < r; n++) {for (var o in t = arguments[n]) {Object.prototype.hasOwnProperty.call(t, o) && (e[o] = t[o]);}}return e;}).apply(this, arguments);},i = e && e.__awaiter || function (e, t, n, r) {return new (n || (n = Promise))(function (o, s) {function i(e) {try {c(r.next(e));} catch (e) {s(e);}}function a(e) {try {c(r.throw(e));} catch (e) {s(e);}}function c(e) {var t;e.done ? o(e.value) : (t = e.value, t instanceof n ? t : new n(function (e) {e(t);})).then(i, a);}c((r = r.apply(e, t || [])).next());});},a = e && e.__generator || function (e, t) {var n,r,o,s,i = { label: 0, sent: function sent() {if (1 & o[0]) throw o[1];return o[1];}, trys: [], ops: [] };return s = { next: a(0), throw: a(1), return: a(2) }, "function" == typeof Symbol && (s[Symbol.iterator] = function () {return this;}), s;function a(s) {return function (a) {return function (s) {if (n) throw new TypeError("Generator is already executing.");for (; i;) {try {if (n = 1, r && (o = 2 & s[0] ? r.return : s[0] ? r.throw || ((o = r.return) && o.call(r), 0) : r.next) && !(o = o.call(r, s[1])).done) return o;switch (r = 0, o && (s = [2 & s[0], o.value]), s[0]) {case 0:case 1:o = s;break;case 4:return i.label++, { value: s[1], done: !1 };case 5:i.label++, r = s[1], s = [0];continue;case 7:s = i.ops.pop(), i.trys.pop();continue;default:if (!(o = i.trys, (o = o.length > 0 && o[o.length - 1]) || 6 !== s[0] && 2 !== s[0])) {i = 0;continue;}if (3 === s[0] && (!o || s[1] > o[0] && s[1] < o[3])) {i.label = s[1];break;}if (6 === s[0] && i.label < o[1]) {i.label = o[1], o = s;break;}if (o && i.label < o[2]) {i.label = o[2], i.ops.push(s);break;}o[2] && i.ops.pop(), i.trys.pop();continue;}s = t.call(e, i);} catch (e) {s = [6, e], r = 0;} finally {n = o = 0;}}if (5 & s[0]) throw s[1];return { value: s[0] ? s[1] : void 0, done: !0 };}([s, a]);};}};Object.defineProperty(n, "__esModule", { value: !0 });var c = function (e) {function t() {return null !== e && e.apply(this, arguments) || this;}return o(t, e), t.prototype.get = function (e) {return this._request(s(s({}, e), { method: "get" }));}, t.prototype.post = function (e) {return this._request(s(s({}, e), { method: "post" }));}, t.prototype.upload = function (e) {var t = e.data,n = e.file,r = e.name,o = new FormData();for (var i in t) {o.append(i, t[i]);}return o.append("key", r), o.append("file", n), this._request(s(s({}, e), { data: o, method: "post" }));}, t.prototype.download = function (e) {return i(this, void 0, void 0, function () {var t, n;return a(this, function (r) {return t = decodeURIComponent(new URL(e.url).pathname.split("/").pop() || ""), (n = document.createElement("a")).href = e.url, n.setAttribute("download", t), n.setAttribute("target", "_blank"), document.body.appendChild(n), n.click(), [2, new Promise(function (t) {t({ statusCode: 200, tempFilePath: e.url });})];});});}, t.prototype._request = function (e) {var t = String(e.method).toLowerCase() || "get";return new Promise(function (n) {var r = e.url,o = e.headers,s = void 0 === o ? {} : o,i = e.data,a = e.responseType,c = m.formatUrl(N.protocol, r, "get" === t ? i : {}),u = new XMLHttpRequest();for (var l in u.open(t, c), a && (u.responseType = a), s) {u.setRequestHeader(l, s[l]);}u.onreadystatechange = function () {if (4 === u.readyState) {var e = { statusCode: u.status };try {e.data = JSON.parse(u.responseText);} catch (e) {}n(e);}}, u.send("post" === t && m.isFormData(i) ? i : JSON.stringify(i || {}));});}, t;}(C.AbstractSDKRequest);n.WebRequest = c, n.genAdapter = function () {return { root: window, reqClass: c, wsClass: WebSocket, localStorage: localStorage, sessionStorage: sessionStorage };};}),U = n(function (t, n) {var r = e && e.__importStar || function (e) {if (e && e.__esModule) return e;var t = {};if (null != e) for (var n in e) {Object.hasOwnProperty.call(e, n) && (t[n] = e[n]);}return t.default = e, t;};Object.defineProperty(n, "__esModule", { value: !0 });var o,s = r(q);!function (e) {e.WEB = "web", e.WX_MP = "wx_mp";}(o = n.RUNTIME || (n.RUNTIME = {})), n.useAdapters = function (e) {for (var t = 0, n = m.isArray(e) ? e : [e]; t < n.length; t++) {var r = n[t],o = r.isMatch,s = r.genAdapter,i = r.runtime;if (o()) return { adapter: s(), runtime: i };}}, n.useDefaultAdapter = function () {return { adapter: s.genAdapter(), runtime: o.WEB };}, n.Adapter = { adapter: null, runtime: void 0 };}),j = n(function (t, n) {var _r2,o = e && e.__extends || (_r2 = function r(e, t) {return (_r2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (e, t) {e.__proto__ = t;} || function (e, t) {for (var n in t) {t.hasOwnProperty(n) && (e[n] = t[n]);}})(e, t);}, function (e, t) {function n() {this.constructor = e;}_r2(e, t), e.prototype = null === t ? Object.create(t) : (n.prototype = t.prototype, new n());});Object.defineProperty(n, "__esModule", { value: !0 });var s = function () {function e(e) {switch (U.Adapter.adapter.primaryStorage || e) {case "local":this.storageClass = U.Adapter.adapter.localStorage || new i();break;case "none":this.storageClass = new i();break;default:this.storageClass = U.Adapter.adapter.sessionStorage || new i();}}return e.prototype.setStore = function (e, t, n) {try {if (!this.storageClass) return;} catch (e) {return;}var r,o = {};o.version = n || "localCachev1", o.content = t, r = JSON.stringify(o);try {this.storageClass.setItem(e, r);} catch (e) {return;}}, e.prototype.getStore = function (e, t) {try {if (!this.storageClass) return;} catch (e) {return "";}t = t || "localCachev1";var n = this.storageClass.getItem(e);return n && n.indexOf(t) >= 0 ? JSON.parse(n).content : "";}, e.prototype.removeStore = function (e) {this.storageClass.removeItem(e);}, e;}();n.Cache = s;var i = function (e) {function t() {var t = e.call(this) || this;return U.Adapter.adapter.root.tcbObject || (U.Adapter.adapter.root.tcbObject = {}), t;}return o(t, e), t.prototype.setItem = function (e, t) {U.Adapter.adapter.root.tcbObject[e] = t;}, t.prototype.getItem = function (e) {return U.Adapter.adapter.root.tcbObject[e];}, t.prototype.removeItem = function (e) {delete U.Adapter.adapter.root.tcbObject[e];}, t.prototype.clear = function () {delete U.Adapter.adapter.root.tcbObject;}, t;}(C.AbstractStorage);}),D = n(function (t, n) {var _r3,o = e && e.__extends || (_r3 = function r(e, t) {return (_r3 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (e, t) {e.__proto__ = t;} || function (e, t) {for (var n in t) {t.hasOwnProperty(n) && (e[n] = t[n]);}})(e, t);}, function (e, t) {function n() {this.constructor = e;}_r3(e, t), e.prototype = null === t ? Object.create(t) : (n.prototype = t.prototype, new n());}),s = e && e.__spreadArrays || function () {for (var e = 0, t = 0, n = arguments.length; t < n; t++) {e += arguments[t].length;}var r = Array(e),o = 0;for (t = 0; t < n; t++) {for (var s = arguments[t], i = 0, a = s.length; i < a; i++, o++) {r[o] = s[i];}}return r;};Object.defineProperty(n, "__esModule", { value: !0 });var i = function i(e, t) {this.data = t || null, this.name = e;};n.IEvent = i;var a = function (e) {function t(t, n) {var r = e.call(this, "error", { error: t, data: n }) || this;return r.error = t, r;}return o(t, e), t;}(i);n.IErrorEvent = a;var c = function () {function e() {this._listeners = {};}return e.prototype.on = function (e, t) {return function (e, t, n) {n[e] = n[e] || [], n[e].push(t);}(e, t, this._listeners), this;}, e.prototype.off = function (e, t) {return function (e, t, n) {if (n && n[e]) {var r = n[e].indexOf(t);-1 !== r && n[e].splice(r, 1);}}(e, t, this._listeners), this;}, e.prototype.fire = function (e, t) {if (m.isInstanceOf(e, a)) return console.error(e.error), this;var n = m.isString(e) ? new i(e, t || {}) : e,r = n.name;if (this._listens(r)) {n.target = this;for (var o = 0, c = this._listeners[r] ? s(this._listeners[r]) : []; o < c.length; o++) {c[o].call(this, n);}}return this;}, e.prototype._listens = function (e) {return this._listeners[e] && this._listeners[e].length > 0;}, e;}();n.IEventEmitter = c;var u = new c();n.addEventListener = function (e, t) {u.on(e, t);}, n.activateEvent = function (e, t) {void 0 === t && (t = {}), u.fire(e, t);}, n.removeEventListener = function (e, t) {u.off(e, t);}, n.EVENTS = { LOGIN_STATE_CHANGED: "loginStateChanged", LOGIN_STATE_EXPIRE: "loginStateExpire", LOGIN_TYPE_CHANGE: "loginTypeChanged", ANONYMOUS_CONVERTED: "anonymousConverted", REFRESH_ACCESS_TOKEN: "refreshAccessToken" };}),L = n(function (t, n) {var r = e && e.__assign || function () {return (r = Object.assign || function (e) {for (var t, n = 1, r = arguments.length; n < r; n++) {for (var o in t = arguments[n]) {Object.prototype.hasOwnProperty.call(t, o) && (e[o] = t[o]);}}return e;}).apply(this, arguments);},o = e && e.__awaiter || function (e, t, n, r) {return new (n || (n = Promise))(function (o, s) {function i(e) {try {c(r.next(e));} catch (e) {s(e);}}function a(e) {try {c(r.throw(e));} catch (e) {s(e);}}function c(e) {var t;e.done ? o(e.value) : (t = e.value, t instanceof n ? t : new n(function (e) {e(t);})).then(i, a);}c((r = r.apply(e, t || [])).next());});},s = e && e.__generator || function (e, t) {var n,r,o,s,i = { label: 0, sent: function sent() {if (1 & o[0]) throw o[1];return o[1];}, trys: [], ops: [] };return s = { next: a(0), throw: a(1), return: a(2) }, "function" == typeof Symbol && (s[Symbol.iterator] = function () {return this;}), s;function a(s) {return function (a) {return function (s) {if (n) throw new TypeError("Generator is already executing.");for (; i;) {try {if (n = 1, r && (o = 2 & s[0] ? r.return : s[0] ? r.throw || ((o = r.return) && o.call(r), 0) : r.next) && !(o = o.call(r, s[1])).done) return o;switch (r = 0, o && (s = [2 & s[0], o.value]), s[0]) {case 0:case 1:o = s;break;case 4:return i.label++, { value: s[1], done: !1 };case 5:i.label++, r = s[1], s = [0];continue;case 7:s = i.ops.pop(), i.trys.pop();continue;default:if (!(o = i.trys, (o = o.length > 0 && o[o.length - 1]) || 6 !== s[0] && 2 !== s[0])) {i = 0;continue;}if (3 === s[0] && (!o || s[1] > o[0] && s[1] < o[3])) {i.label = s[1];break;}if (6 === s[0] && i.label < o[1]) {i.label = o[1], o = s;break;}if (o && i.label < o[2]) {i.label = o[2], i.ops.push(s);break;}o[2] && i.ops.pop(), i.trys.pop();continue;}s = t.call(e, i);} catch (e) {s = [6, e], r = 0;} finally {n = o = 0;}}if (5 & s[0]) throw s[1];return { value: s[0] ? s[1] : void 0, done: !0 };}([s, a]);};}};Object.defineProperty(n, "__esModule", { value: !0 });var i = ["auth.getJwt", "auth.logout", "auth.signInWithTicket", "auth.signInAnonymously"],a = { "X-SDK-Version": N.SDK_VERISON };function c(e, t, n) {var o = e[t];e[t] = function (t) {var s = {},i = {};n.forEach(function (n) {var r = n.call(e, t),o = r.data,a = r.headers;Object.assign(s, o), Object.assign(i, a);});var a = t.data;return a && function () {if (m.isFormData(a)) for (var e in s) {a.append(e, s[e]);} else t.data = r(r({}, a), s);}(), t.headers = r(r({}, t.headers || {}), i), o.call(e, t);};}function u() {var e = m.genSeqId();return { data: { seqId: e }, headers: r(r({}, a), { "x-seqid": e }) };}var l = function () {function e(e) {void 0 === e && (e = {}), this.config = e, this.cache = new j.Cache(e.persistence), this.accessTokenKey = N.ACCESS_TOKEN + "_" + e.env, this.accessTokenExpireKey = N.ACCESS_TOKEN_Expire + "_" + e.env, this.refreshTokenKey = N.REFRESH_TOKEN + "_" + e.env, this.anonymousUuidKey = N.ANONYMOUS_UUID + "_" + e.env, this.loginTypeKey = N.LOGIN_TYPE_KEY + "_" + e.env, this._reqClass = new U.Adapter.adapter.reqClass(), c(this._reqClass, "post", [u]), c(this._reqClass, "upload", [u]), c(this._reqClass, "download", [u]);}return e.prototype.post = function (e) {return o(this, void 0, void 0, function () {return s(this, function (t) {switch (t.label) {case 0:return [4, this._reqClass.post(e)];case 1:return [2, t.sent()];}});});}, e.prototype.upload = function (e) {return o(this, void 0, void 0, function () {return s(this, function (t) {switch (t.label) {case 0:return [4, this._reqClass.upload(e)];case 1:return [2, t.sent()];}});});}, e.prototype.download = function (e) {return o(this, void 0, void 0, function () {return s(this, function (t) {switch (t.label) {case 0:return [4, this._reqClass.download(e)];case 1:return [2, t.sent()];}});});}, e.prototype.refreshAccessToken = function () {return o(this, void 0, void 0, function () {var e, t, n;return s(this, function (r) {switch (r.label) {case 0:this._refreshAccessTokenPromise || (this._refreshAccessTokenPromise = this._refreshAccessToken()), r.label = 1;case 1:return r.trys.push([1, 3,, 4]), [4, this._refreshAccessTokenPromise];case 2:return e = r.sent(), [3, 4];case 3:return n = r.sent(), t = n, [3, 4];case 4:if (this._refreshAccessTokenPromise = null, this._shouldRefreshAccessTokenHook = null, t) throw t;return [2, e];}});});}, e.prototype._refreshAccessToken = function () {return o(this, void 0, void 0, function () {var e, t, n, r;return s(this, function (o) {switch (o.label) {case 0:if (this.cache.removeStore(this.accessTokenKey), this.cache.removeStore(this.accessTokenExpireKey), !(e = this.cache.getStore(this.refreshTokenKey))) throw new Error("[tcb-js-sdk] 未登录CloudBase");return t = { refresh_token: e }, this.cache.getStore(this.loginTypeKey) === M.LOGINTYPE.ANONYMOUS && (t.anonymous_uuid = this.cache.getStore(this.anonymousUuidKey)), [4, this.request("auth.getJwt", t)];case 1:if ((n = o.sent()).data.code) throw "SIGN_PARAM_INVALID" !== (r = n.data.code) && "REFRESH_TOKEN_EXPIRED" !== r && "INVALID_REFRESH_TOKEN" !== r || (D.activateEvent(D.EVENTS.LOGIN_STATE_EXPIRE), this.cache.removeStore(this.refreshTokenKey)), new Error("[tcb-js-sdk] 刷新access token失败：" + n.data.code);return n.data.access_token ? (D.activateEvent(D.EVENTS.REFRESH_ACCESS_TOKEN), this.cache.setStore(this.accessTokenKey, n.data.access_token), this.cache.setStore(this.accessTokenExpireKey, n.data.access_token_expire + Date.now()), D.activateEvent(D.EVENTS.LOGIN_TYPE_CHANGE, n.data.login_type), [2, { accessToken: n.data.access_token, accessTokenExpire: n.data.access_token_expire }]) : (n.data.refresh_token && (this.cache.removeStore(this.refreshTokenKey), this.cache.setStore(this.refreshTokenKey, n.data.refresh_token), this._refreshAccessToken()), [2]);}});});}, e.prototype.getAccessToken = function () {return o(this, void 0, void 0, function () {var e, t, n, r;return s(this, function (o) {switch (o.label) {case 0:return e = this.cache.getStore(this.accessTokenKey), t = this.cache.getStore(this.accessTokenExpireKey), n = !0, (r = this._shouldRefreshAccessTokenHook) ? [4, this._shouldRefreshAccessTokenHook(e, t)] : [3, 2];case 1:r = !o.sent(), o.label = 2;case 2:return r && (n = !1), (!e || !t || t < Date.now()) && n ? [2, this.refreshAccessToken()] : [2, { accessToken: e, accessTokenExpire: t }];}});});}, e.prototype.request = function (e, t, n) {return o(this, void 0, void 0, function () {var o, a, c, u, l, h, f, p, d, y, g, v;return s(this, function (s) {switch (s.label) {case 0:return o = "application/x-www-form-urlencoded", a = r({ action: e, env: this.config.env, dataVersion: "2019-08-16" }, t), -1 !== i.indexOf(e) ? [3, 2] : (c = a, [4, this.getAccessToken()]);case 1:c.access_token = s.sent().accessToken, s.label = 2;case 2:if ("storage.uploadFile" === e) {for (l in u = new FormData()) {u.hasOwnProperty(l) && void 0 !== u[l] && u.append(l, a[l]);}o = "multipart/form-data";} else o = "application/json;charset=UTF-8", u = a;return h = { headers: { "content-type": o } }, n && n.onUploadProgress && (h.onUploadProgress = n.onUploadProgress), f = t.parse, p = t.query, d = t.search, y = { env: this.config.env }, f && (y.parse = !0), p && (y = r(r({}, p), y)), g = m.formatUrl(N.protocol, N.BASE_URL, y), d && (g += d), [4, this.post(r({ url: g, data: u }, h))];case 3:if (v = s.sent(), 200 !== Number(v.status) && 200 !== Number(v.statusCode) || !v.data) throw new Error("network request error");return [2, v];}});});}, e.prototype.send = function (e, t) {return void 0 === t && (t = {}), o(this, void 0, void 0, function () {var n, r;return s(this, function (o) {switch (o.label) {case 0:return [4, this.request(e, t, { onUploadProgress: t.onUploadProgress })];case 1:return n = o.sent(), clearTimeout(void 0), "ACCESS_TOKEN_EXPIRED" !== n.data.code || -1 !== i.indexOf(e) ? [3, 4] : [4, this.refreshAccessToken()];case 2:return o.sent(), [4, this.request(e, t, { onUploadProgress: t.onUploadProgress })];case 3:if ((r = o.sent()).data.code) throw new Error("[" + r.data.code + "] " + r.data.message);return [2, r.data];case 4:if (n.data.code) throw new Error("[" + n.data.code + "] " + n.data.message);return [2, n.data];}});});}, e;}();n.Request = l;}),M = n(function (t, n) {var r,o = e && e.__awaiter || function (e, t, n, r) {return new (n || (n = Promise))(function (o, s) {function i(e) {try {c(r.next(e));} catch (e) {s(e);}}function a(e) {try {c(r.throw(e));} catch (e) {s(e);}}function c(e) {var t;e.done ? o(e.value) : (t = e.value, t instanceof n ? t : new n(function (e) {e(t);})).then(i, a);}c((r = r.apply(e, t || [])).next());});},s = e && e.__generator || function (e, t) {var n,r,o,s,i = { label: 0, sent: function sent() {if (1 & o[0]) throw o[1];return o[1];}, trys: [], ops: [] };return s = { next: a(0), throw: a(1), return: a(2) }, "function" == typeof Symbol && (s[Symbol.iterator] = function () {return this;}), s;function a(s) {return function (a) {return function (s) {if (n) throw new TypeError("Generator is already executing.");for (; i;) {try {if (n = 1, r && (o = 2 & s[0] ? r.return : s[0] ? r.throw || ((o = r.return) && o.call(r), 0) : r.next) && !(o = o.call(r, s[1])).done) return o;switch (r = 0, o && (s = [2 & s[0], o.value]), s[0]) {case 0:case 1:o = s;break;case 4:return i.label++, { value: s[1], done: !1 };case 5:i.label++, r = s[1], s = [0];continue;case 7:s = i.ops.pop(), i.trys.pop();continue;default:if (!(o = i.trys, (o = o.length > 0 && o[o.length - 1]) || 6 !== s[0] && 2 !== s[0])) {i = 0;continue;}if (3 === s[0] && (!o || s[1] > o[0] && s[1] < o[3])) {i.label = s[1];break;}if (6 === s[0] && i.label < o[1]) {i.label = o[1], o = s;break;}if (o && i.label < o[2]) {i.label = o[2], i.ops.push(s);break;}o[2] && i.ops.pop(), i.trys.pop();continue;}s = t.call(e, i);} catch (e) {s = [6, e], r = 0;} finally {n = o = 0;}}if (5 & s[0]) throw s[1];return { value: s[0] ? s[1] : void 0, done: !0 };}([s, a]);};}};Object.defineProperty(n, "__esModule", { value: !0 }), function (e) {e.ANONYMOUS = "ANONYMOUS", e.WECHAT = "WECHAT", e.CUSTOM = "CUSTOM", e.NULL = "NULL";}(r = n.LOGINTYPE || (n.LOGINTYPE = {}));var i = function () {function e(e) {this._loginType = r.NULL, this.config = e, this.onLoginTypeChanged = this.onLoginTypeChanged.bind(this), D.addEventListener(D.EVENTS.LOGIN_TYPE_CHANGE, this.onLoginTypeChanged);}return e.prototype.init = function () {this.httpRequest = new L.Request(this.config), this.cache = new j.Cache(this.config.persistence), this.accessTokenKey = N.ACCESS_TOKEN + "_" + this.config.env, this.accessTokenExpireKey = N.ACCESS_TOKEN_Expire + "_" + this.config.env, this.refreshTokenKey = N.REFRESH_TOKEN + "_" + this.config.env, this.loginTypeKey = N.LOGIN_TYPE_KEY + "_" + this.config.env;}, e.prototype.onLoginTypeChanged = function (e) {this._loginType = e.data, this.cache.setStore(this.loginTypeKey, this._loginType);}, Object.defineProperty(e.prototype, "loginType", { get: function get() {return this._loginType;}, enumerable: !0, configurable: !0 }), e.prototype.setRefreshToken = function (e) {this.cache.removeStore(this.accessTokenKey), this.cache.removeStore(this.accessTokenExpireKey), this.cache.setStore(this.refreshTokenKey, e);}, e.prototype.getRefreshTokenByWXCode = function (e, t, n) {return o(this, void 0, void 0, function () {var r;return s(this, function (o) {return "auth.getJwt", r = U.Adapter.runtime === U.RUNTIME.WX_MP ? "1" : "0", [2, this.httpRequest.send("auth.getJwt", { appid: e, loginType: t, code: n, hybridMiniapp: r }).then(function (e) {if (e.code) throw new Error("[tcb-js-sdk] 微信登录失败: " + e.code);if (e.refresh_token) return { refreshToken: e.refresh_token, accessToken: e.access_token, accessTokenExpire: e.access_token_expire };throw new Error("[tcb-js-sdk] getJwt未返回refreshToken");})];});});}, e;}();n.default = i;}),K = n(function (t, n) {var _r4,o = e && e.__extends || (_r4 = function r(e, t) {return (_r4 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (e, t) {e.__proto__ = t;} || function (e, t) {for (var n in t) {t.hasOwnProperty(n) && (e[n] = t[n]);}})(e, t);}, function (e, t) {function n() {this.constructor = e;}_r4(e, t), e.prototype = null === t ? Object.create(t) : (n.prototype = t.prototype, new n());}),s = e && e.__awaiter || function (e, t, n, r) {return new (n || (n = Promise))(function (o, s) {function i(e) {try {c(r.next(e));} catch (e) {s(e);}}function a(e) {try {c(r.throw(e));} catch (e) {s(e);}}function c(e) {var t;e.done ? o(e.value) : (t = e.value, t instanceof n ? t : new n(function (e) {e(t);})).then(i, a);}c((r = r.apply(e, t || [])).next());});},i = e && e.__generator || function (e, t) {var n,r,o,s,i = { label: 0, sent: function sent() {if (1 & o[0]) throw o[1];return o[1];}, trys: [], ops: [] };return s = { next: a(0), throw: a(1), return: a(2) }, "function" == typeof Symbol && (s[Symbol.iterator] = function () {return this;}), s;function a(s) {return function (a) {return function (s) {if (n) throw new TypeError("Generator is already executing.");for (; i;) {try {if (n = 1, r && (o = 2 & s[0] ? r.return : s[0] ? r.throw || ((o = r.return) && o.call(r), 0) : r.next) && !(o = o.call(r, s[1])).done) return o;switch (r = 0, o && (s = [2 & s[0], o.value]), s[0]) {case 0:case 1:o = s;break;case 4:return i.label++, { value: s[1], done: !1 };case 5:i.label++, r = s[1], s = [0];continue;case 7:s = i.ops.pop(), i.trys.pop();continue;default:if (!(o = i.trys, (o = o.length > 0 && o[o.length - 1]) || 6 !== s[0] && 2 !== s[0])) {i = 0;continue;}if (3 === s[0] && (!o || s[1] > o[0] && s[1] < o[3])) {i.label = s[1];break;}if (6 === s[0] && i.label < o[1]) {i.label = o[1], o = s;break;}if (o && i.label < o[2]) {i.label = o[2], i.ops.push(s);break;}o[2] && i.ops.pop(), i.trys.pop();continue;}s = t.call(e, i);} catch (e) {s = [6, e], r = 0;} finally {n = o = 0;}}if (5 & s[0]) throw s[1];return { value: s[0] ? s[1] : void 0, done: !0 };}([s, a]);};}},a = e && e.__importStar || function (e) {if (e && e.__esModule) return e;var t = {};if (null != e) for (var n in e) {Object.hasOwnProperty.call(e, n) && (t[n] = e[n]);}return t.default = e, t;};Object.defineProperty(n, "__esModule", { value: !0 });var c,u,l = a(m),h = a(M);!function (e) {e.snsapi_base = "snsapi_base", e.snsapi_userinfo = "snsapi_userinfo", e.snsapi_login = "snsapi_login";}(c || (c = {})), function (e) {e.redirect = "redirect", e.prompt = "prompt";}(u || (u = {}));var f = {},p = function (e) {function t(t, n, r, o, s) {var i = e.call(this, t) || this;return i.config = t, i.appid = n, i.scope = U.Adapter.runtime === U.RUNTIME.WX_MP ? "snsapi_base" : r, i.state = s || "weixin", i.loginMode = o || "redirect", i;}return o(t, e), t.prototype.signIn = function () {return s(this, void 0, void 0, function () {var e, t, n;return i(this, function (r) {switch (r.label) {case 0:f[this.config.env] || (f[this.config.env] = this._signIn()), r.label = 1;case 1:return r.trys.push([1, 3,, 4]), [4, f[this.config.env]];case 2:return e = r.sent(), [3, 4];case 3:return n = r.sent(), t = n, [3, 4];case 4:if (f[this.config.env] = null, t) throw t;return [2, e];}});});}, t.prototype._signIn = function () {return s(this, void 0, void 0, function () {var e, t, n, r, o, s;return i(this, function (i) {switch (i.label) {case 0:if (e = this.cache.getStore(this.accessTokenKey), t = this.cache.getStore(this.accessTokenExpireKey), e) {if (t && t > Date.now()) return [2, { credential: { accessToken: e, refreshToken: this.cache.getStore(this.refreshTokenKey) } }];this.cache.removeStore(this.accessTokenKey), this.cache.removeStore(this.accessTokenExpireKey);}if (!1 === Object.values(c).includes(c[this.scope])) throw new Error("错误的scope类型");return U.Adapter.runtime !== U.RUNTIME.WX_MP ? [3, 2] : [4, l.getMiniAppCode()];case 1:return n = i.sent(), [3, 4];case 2:return [4, l.getWeixinCode()];case 3:if (!(n = i.sent())) return [2, this.redirect()];i.label = 4;case 4:return r = function (e) {switch (e) {case c.snsapi_login:return "WECHAT-OPEN";default:return "WECHAT-PUBLIC";}}(this.scope), [4, this.getRefreshTokenByWXCode(this.appid, r, n)];case 5:return o = i.sent(), s = o.refreshToken, this.cache.setStore(this.refreshTokenKey, s), o.accessToken && this.cache.setStore(this.accessTokenKey, o.accessToken), o.accessTokenExpire && this.cache.setStore(this.accessTokenExpireKey, o.accessTokenExpire + Date.now()), D.activateEvent(D.EVENTS.LOGIN_STATE_CHANGED), D.activateEvent(D.EVENTS.LOGIN_TYPE_CHANGE, h.LOGINTYPE.WECHAT), [2, { credential: { refreshToken: s } }];}});});}, t.prototype.redirect = function () {var e = l.removeParam("code", location.href);e = l.removeParam("state", e), e = encodeURIComponent(e);var t = "//open.weixin.qq.com/connect/oauth2/authorize";"snsapi_login" === this.scope && (t = "//open.weixin.qq.com/connect/qrconnect"), "redirect" === u[this.loginMode] && (location.href = t + "?appid=" + this.appid + "&redirect_uri=" + e + "&response_type=code&scope=" + this.scope + "&state=" + this.state + "#wechat_redirect");}, t;}(h.default);n.default = p;}),F = n(function (t, n) {var _r5,o = e && e.__extends || (_r5 = function r(e, t) {return (_r5 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (e, t) {e.__proto__ = t;} || function (e, t) {for (var n in t) {t.hasOwnProperty(n) && (e[n] = t[n]);}})(e, t);}, function (e, t) {function n() {this.constructor = e;}_r5(e, t), e.prototype = null === t ? Object.create(t) : (n.prototype = t.prototype, new n());}),s = e && e.__assign || function () {return (s = Object.assign || function (e) {for (var t, n = 1, r = arguments.length; n < r; n++) {for (var o in t = arguments[n]) {Object.prototype.hasOwnProperty.call(t, o) && (e[o] = t[o]);}}return e;}).apply(this, arguments);},i = e && e.__awaiter || function (e, t, n, r) {return new (n || (n = Promise))(function (o, s) {function i(e) {try {c(r.next(e));} catch (e) {s(e);}}function a(e) {try {c(r.throw(e));} catch (e) {s(e);}}function c(e) {var t;e.done ? o(e.value) : (t = e.value, t instanceof n ? t : new n(function (e) {e(t);})).then(i, a);}c((r = r.apply(e, t || [])).next());});},a = e && e.__generator || function (e, t) {var n,r,o,s,i = { label: 0, sent: function sent() {if (1 & o[0]) throw o[1];return o[1];}, trys: [], ops: [] };return s = { next: a(0), throw: a(1), return: a(2) }, "function" == typeof Symbol && (s[Symbol.iterator] = function () {return this;}), s;function a(s) {return function (a) {return function (s) {if (n) throw new TypeError("Generator is already executing.");for (; i;) {try {if (n = 1, r && (o = 2 & s[0] ? r.return : s[0] ? r.throw || ((o = r.return) && o.call(r), 0) : r.next) && !(o = o.call(r, s[1])).done) return o;switch (r = 0, o && (s = [2 & s[0], o.value]), s[0]) {case 0:case 1:o = s;break;case 4:return i.label++, { value: s[1], done: !1 };case 5:i.label++, r = s[1], s = [0];continue;case 7:s = i.ops.pop(), i.trys.pop();continue;default:if (!(o = i.trys, (o = o.length > 0 && o[o.length - 1]) || 6 !== s[0] && 2 !== s[0])) {i = 0;continue;}if (3 === s[0] && (!o || s[1] > o[0] && s[1] < o[3])) {i.label = s[1];break;}if (6 === s[0] && i.label < o[1]) {i.label = o[1], o = s;break;}if (o && i.label < o[2]) {i.label = o[2], i.ops.push(s);break;}o[2] && i.ops.pop(), i.trys.pop();continue;}s = t.call(e, i);} catch (e) {s = [6, e], r = 0;} finally {n = o = 0;}}if (5 & s[0]) throw s[1];return { value: s[0] ? s[1] : void 0, done: !0 };}([s, a]);};}},c = e && e.__importStar || function (e) {if (e && e.__esModule) return e;var t = {};if (null != e) for (var n in e) {Object.hasOwnProperty.call(e, n) && (t[n] = e[n]);}return t.default = e, t;};Object.defineProperty(n, "__esModule", { value: !0 });var u = c(M),l = function (e) {function t(t) {var n = e.call(this, s(s({}, t), { persistence: "local" })) || this;return n._anonymousUuidKey = N.ANONYMOUS_UUID + "_" + n.config.env, n._loginTypeKey = N.LOGIN_TYPE_KEY + "_" + n.config.env, n;}return o(t, e), t.prototype.init = function () {e.prototype.init.call(this);}, t.prototype.signIn = function () {return i(this, void 0, void 0, function () {var e, t, n;return a(this, function (r) {switch (r.label) {case 0:return e = this.cache.getStore(this._anonymousUuidKey) || void 0, t = this.cache.getStore(this.refreshTokenKey) || void 0, [4, this.httpRequest.send("auth.signInAnonymously", { anonymous_uuid: e, refresh_token: t })];case 1:return (n = r.sent()).uuid && n.refresh_token ? (this._setAnonymousUUID(n.uuid), this.setRefreshToken(n.refresh_token), [4, this.httpRequest.refreshAccessToken()]) : [3, 3];case 2:return r.sent(), D.activateEvent(D.EVENTS.LOGIN_STATE_CHANGED), D.activateEvent(D.EVENTS.LOGIN_TYPE_CHANGE, u.LOGINTYPE.ANONYMOUS), [2, { credential: { refreshToken: n.refresh_token } }];case 3:throw new Error("[tcb-js-sdk] 匿名登录失败");}});});}, t.prototype.linkAndRetrieveDataWithTicket = function (e) {return i(this, void 0, void 0, function () {var t, n, r;return a(this, function (o) {switch (o.label) {case 0:return t = this.cache.getStore(this._anonymousUuidKey), n = this.cache.getStore(this.refreshTokenKey), [4, this.httpRequest.send("auth.linkAndRetrieveDataWithTicket", { anonymous_uuid: t, refresh_token: n, ticket: e })];case 1:return (r = o.sent()).refresh_token ? (this._clearAnonymousUUID(), this.setRefreshToken(r.refresh_token), [4, this.httpRequest.refreshAccessToken()]) : [3, 3];case 2:return o.sent(), D.activateEvent(D.EVENTS.ANONYMOUS_CONVERTED, { refresh_token: r.refresh_token }), D.activateEvent(D.EVENTS.LOGIN_TYPE_CHANGE, u.LOGINTYPE.CUSTOM), [2, { credential: { refreshToken: r.refresh_token } }];case 3:throw new Error("[tcb-js-sdk] 匿名转化失败");}});});}, t.prototype.getAllStore = function () {var e = {};return e[this.refreshTokenKey] = this.cache.getStore(this.refreshTokenKey) || "", e[this._loginTypeKey] = this.cache.getStore(this._loginTypeKey) || "", e[this.accessTokenKey] = this.cache.getStore(this.accessTokenKey) || "", e[this.accessTokenExpireKey] = this.cache.getStore(this.accessTokenExpireKey) || "", e;}, t.prototype._setAnonymousUUID = function (e) {this.cache.removeStore(this._anonymousUuidKey), this.cache.setStore(this._anonymousUuidKey, e), this.cache.setStore(this._loginTypeKey, u.LOGINTYPE.ANONYMOUS);}, t.prototype._clearAnonymousUUID = function () {this.cache.removeStore(this._anonymousUuidKey);}, t;}(u.default);n.AnonymousAuthProvider = l;}),G = n(function (t, n) {var _r6,o = e && e.__extends || (_r6 = function r(e, t) {return (_r6 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function (e, t) {e.__proto__ = t;} || function (e, t) {for (var n in t) {t.hasOwnProperty(n) && (e[n] = t[n]);}})(e, t);}, function (e, t) {function n() {this.constructor = e;}_r6(e, t), e.prototype = null === t ? Object.create(t) : (n.prototype = t.prototype, new n());}),s = e && e.__assign || function () {return (s = Object.assign || function (e) {for (var t, n = 1, r = arguments.length; n < r; n++) {for (var o in t = arguments[n]) {Object.prototype.hasOwnProperty.call(t, o) && (e[o] = t[o]);}}return e;}).apply(this, arguments);},i = e && e.__awaiter || function (e, t, n, r) {return new (n || (n = Promise))(function (o, s) {function i(e) {try {c(r.next(e));} catch (e) {s(e);}}function a(e) {try {c(r.throw(e));} catch (e) {s(e);}}function c(e) {var t;e.done ? o(e.value) : (t = e.value, t instanceof n ? t : new n(function (e) {e(t);})).then(i, a);}c((r = r.apply(e, t || [])).next());});},a = e && e.__generator || function (e, t) {var n,r,o,s,i = { label: 0, sent: function sent() {if (1 & o[0]) throw o[1];return o[1];}, trys: [], ops: [] };return s = { next: a(0), throw: a(1), return: a(2) }, "function" == typeof Symbol && (s[Symbol.iterator] = function () {return this;}), s;function a(s) {return function (a) {return function (s) {if (n) throw new TypeError("Generator is already executing.");for (; i;) {try {if (n = 1, r && (o = 2 & s[0] ? r.return : s[0] ? r.throw || ((o = r.return) && o.call(r), 0) : r.next) && !(o = o.call(r, s[1])).done) return o;switch (r = 0, o && (s = [2 & s[0], o.value]), s[0]) {case 0:case 1:o = s;break;case 4:return i.label++, { value: s[1], done: !1 };case 5:i.label++, r = s[1], s = [0];continue;case 7:s = i.ops.pop(), i.trys.pop();continue;default:if (!(o = i.trys, (o = o.length > 0 && o[o.length - 1]) || 6 !== s[0] && 2 !== s[0])) {i = 0;continue;}if (3 === s[0] && (!o || s[1] > o[0] && s[1] < o[3])) {i.label = s[1];break;}if (6 === s[0] && i.label < o[1]) {i.label = o[1], o = s;break;}if (o && i.label < o[2]) {i.label = o[2], i.ops.push(s);break;}o[2] && i.ops.pop(), i.trys.pop();continue;}s = t.call(e, i);} catch (e) {s = [6, e], r = 0;} finally {n = o = 0;}}if (5 & s[0]) throw s[1];return { value: s[0] ? s[1] : void 0, done: !0 };}([s, a]);};}},c = e && e.__importDefault || function (e) {return e && e.__esModule ? e : { default: e };},u = e && e.__importStar || function (e) {if (e && e.__esModule) return e;var t = {};if (null != e) for (var n in e) {Object.hasOwnProperty.call(e, n) && (t[n] = e[n]);}return t.default = e, t;};Object.defineProperty(n, "__esModule", { value: !0 });var l = c(K),h = u(M),f = function (e) {function t(t) {var n = e.call(this, t) || this;return n.config = t, n;}return o(t, e), t.prototype.init = function () {e.prototype.init.call(this), this.customAuthProvider = new h.default(this.config), this.customAuthProvider.init();}, t.prototype.weixinAuthProvider = function (e) {var t = e.appid,n = e.scope,r = e.loginMode,o = e.state,s = new l.default(this.config, t, n, r, o);return s.init(), s;}, t.prototype.signInAnonymously = function () {return i(this, void 0, void 0, function () {var e = this;return a(this, function (t) {switch (t.label) {case 0:return this._anonymousAuthProvider || (this._anonymousAuthProvider = new F.AnonymousAuthProvider(this.config), this._anonymousAuthProvider.init()), D.addEventListener(D.EVENTS.LOGIN_TYPE_CHANGE, function (t) {if (t && t.data === h.LOGINTYPE.ANONYMOUS) {var n = e._anonymousAuthProvider.getAllStore();for (var r in n) {n[r] && e.httpRequest.cache.setStore(r, n[r]);}}}), [4, this._anonymousAuthProvider.signIn()];case 1:return [2, t.sent()];}});});}, t.prototype.linkAndRetrieveDataWithTicket = function (e) {return i(this, void 0, void 0, function () {var t = this;return a(this, function (n) {switch (n.label) {case 0:return this._anonymousAuthProvider || (this._anonymousAuthProvider = new F.AnonymousAuthProvider(this.config), this._anonymousAuthProvider.init()), D.addEventListener(D.EVENTS.ANONYMOUS_CONVERTED, function (e) {var n = e.data.refresh_token;n && t.httpRequest.cache.setStore(t.refreshTokenKey, n);}), [4, this._anonymousAuthProvider.linkAndRetrieveDataWithTicket(e)];case 1:return [2, n.sent()];}});});}, t.prototype.signOut = function () {return i(this, void 0, void 0, function () {var e, t, n, r, o, s, i;return a(this, function (a) {switch (a.label) {case 0:if (this.loginType === h.LOGINTYPE.ANONYMOUS) throw new Error("[tcb-js-sdk] 匿名用户不支持登出操作");return e = this.httpRequest, t = e.cache, n = e.refreshTokenKey, r = e.accessTokenKey, o = e.accessTokenExpireKey, "auth.logout", (s = t.getStore(n)) ? [4, this.httpRequest.send("auth.logout", { refresh_token: s })] : [2];case 1:return i = a.sent(), t.removeStore(n), t.removeStore(r), t.removeStore(o), D.activateEvent(D.EVENTS.LOGIN_STATE_CHANGED), D.activateEvent(D.EVENTS.LOGIN_TYPE_CHANGE, h.LOGINTYPE.NULL), [2, i];}});});}, t.prototype.getAccessToken = function () {return i(this, void 0, void 0, function () {var e;return a(this, function (t) {switch (t.label) {case 0:return e = {}, [4, this.httpRequest.getAccessToken()];case 1:return [2, (e.accessToken = t.sent().accessToken, e.env = this.config.env, e)];}});});}, t.prototype.onLoginStateExpire = function (e) {D.addEventListener("loginStateExpire", e);}, t.prototype.getLoginState = function () {return i(this, void 0, void 0, function () {var e, t, n, r, o;return a(this, function (s) {switch (s.label) {case 0:if (e = this.httpRequest, t = e.cache, n = e.refreshTokenKey, r = e.accessTokenKey, !(o = t.getStore(n))) return [3, 5];s.label = 1;case 1:return s.trys.push([1, 3,, 4]), [4, this.httpRequest.refreshAccessToken()];case 2:return s.sent(), [3, 4];case 3:return s.sent(), [2, null];case 4:return [2, { isAnonymous: this.loginType === h.LOGINTYPE.ANONYMOUS, credential: { refreshToken: o, accessToken: t.getStore(r) } }];case 5:return [2, null];}});});}, t.prototype.signInWithTicket = function (e) {return i(this, void 0, void 0, function () {var t, n, r, o;return a(this, function (s) {switch (s.label) {case 0:if ("string" != typeof e) throw new Error("ticket must be a string");return t = this.httpRequest, n = t.cache, r = t.refreshTokenKey, [4, this.httpRequest.send("auth.signInWithTicket", { ticket: e, refresh_token: n.getStore(r) || "" })];case 1:return (o = s.sent()).refresh_token ? (this.customAuthProvider.setRefreshToken(o.refresh_token), [4, this.httpRequest.refreshAccessToken()]) : [3, 3];case 2:return s.sent(), D.activateEvent(D.EVENTS.LOGIN_STATE_CHANGED), D.activateEvent(D.EVENTS.LOGIN_TYPE_CHANGE, h.LOGINTYPE.CUSTOM), [2, { credential: { refreshToken: o.refresh_token } }];case 3:throw new Error("[tcb-js-sdk] 自定义登录失败");}});});}, t.prototype.shouldRefreshAccessToken = function (e) {this.httpRequest._shouldRefreshAccessTokenHook = e.bind(this);}, t.prototype.getUserInfo = function () {return this.httpRequest.send("auth.getUserInfo", {}).then(function (e) {return e.code ? e : s(s({}, e.data), { requestId: e.seqId });});}, t;}(h.default);n.default = f;}),H = n(function (t, n) {var r = e && e.__awaiter || function (e, t, n, r) {return new (n || (n = Promise))(function (o, s) {function i(e) {try {c(r.next(e));} catch (e) {s(e);}}function a(e) {try {c(r.throw(e));} catch (e) {s(e);}}function c(e) {var t;e.done ? o(e.value) : (t = e.value, t instanceof n ? t : new n(function (e) {e(t);})).then(i, a);}c((r = r.apply(e, t || [])).next());});},o = e && e.__generator || function (e, t) {var n,r,o,s,i = { label: 0, sent: function sent() {if (1 & o[0]) throw o[1];return o[1];}, trys: [], ops: [] };return s = { next: a(0), throw: a(1), return: a(2) }, "function" == typeof Symbol && (s[Symbol.iterator] = function () {return this;}), s;function a(s) {return function (a) {return function (s) {if (n) throw new TypeError("Generator is already executing.");for (; i;) {try {if (n = 1, r && (o = 2 & s[0] ? r.return : s[0] ? r.throw || ((o = r.return) && o.call(r), 0) : r.next) && !(o = o.call(r, s[1])).done) return o;switch (r = 0, o && (s = [2 & s[0], o.value]), s[0]) {case 0:case 1:o = s;break;case 4:return i.label++, { value: s[1], done: !1 };case 5:i.label++, r = s[1], s = [0];continue;case 7:s = i.ops.pop(), i.trys.pop();continue;default:if (!(o = i.trys, (o = o.length > 0 && o[o.length - 1]) || 6 !== s[0] && 2 !== s[0])) {i = 0;continue;}if (3 === s[0] && (!o || s[1] > o[0] && s[1] < o[3])) {i.label = s[1];break;}if (6 === s[0] && i.label < o[1]) {i.label = o[1], o = s;break;}if (o && i.label < o[2]) {i.label = o[2], i.ops.push(s);break;}o[2] && i.ops.pop(), i.trys.pop();continue;}s = t.call(e, i);} catch (e) {s = [6, e], r = 0;} finally {n = o = 0;}}if (5 & s[0]) throw s[1];return { value: s[0] ? s[1] : void 0, done: !0 };}([s, a]);};}};Object.defineProperty(n, "__esModule", { value: !0 }), n.uploadFile = function (e, t) {t = t || m.createPromiseCallback();var n = new L.Request(this.config),r = e.cloudPath,o = e.filePath,s = e.onUploadProgress,i = e.fileType || "image";return n.send("storage.getUploadMetadata", { path: r }).then(function (e) {var a = e.data,c = a.url,u = a.authorization,l = a.token,h = a.fileId,f = a.cosFileId,p = e.requestId,d = { key: r, signature: u, "x-cos-meta-fileid": f, success_action_status: "201", "x-cos-security-token": l };n.upload({ url: c, data: d, file: o, name: r, fileType: i, onUploadProgress: s }).then(function (e) {201 === e.statusCode ? t(null, { fileID: h, requestId: p }) : t(new Error("STORAGE_REQUEST_FAIL: " + e.data));}).catch(function (e) {t(e);});}).catch(function (e) {t(e);}), t.promise;}, n.deleteFile = function (e, t) {var n = e.fileList;if (t = t || m.createPromiseCallback(), !n || !Array.isArray(n)) return { code: "INVALID_PARAM", message: "fileList必须是非空的数组" };for (var r = 0, o = n; r < o.length; r++) {var s = o[r];if (!s || "string" != typeof s) return { code: "INVALID_PARAM", message: "fileList的元素必须是非空的字符串" };}var i = { fileid_list: n };return new L.Request(this.config).send("storage.batchDeleteFile", i).then(function (e) {e.code ? t(null, e) : t(null, { fileList: e.data.delete_list, requestId: e.requestId });}).catch(function (e) {t(e);}), t.promise;}, n.getTempFileURL = function (e, t) {var n = e.fileList;t = t || m.createPromiseCallback(), n && Array.isArray(n) || t(null, { code: "INVALID_PARAM", message: "fileList必须是非空的数组" });for (var r = [], o = 0, s = n; o < s.length; o++) {var i = s[o];"object" == typeof i ? (i.hasOwnProperty("fileID") && i.hasOwnProperty("maxAge") || t(null, { code: "INVALID_PARAM", message: "fileList的元素必须是包含fileID和maxAge的对象" }), r.push({ fileid: i.fileID, max_age: i.maxAge })) : "string" == typeof i ? r.push({ fileid: i }) : t(null, { code: "INVALID_PARAM", message: "fileList的元素必须是字符串" });}var a = { file_list: r };return new L.Request(this.config).send("storage.batchGetDownloadUrl", a).then(function (e) {e.code ? t(null, e) : t(null, { fileList: e.data.download_list, requestId: e.requestId });}).catch(function (e) {t(e);}), t.promise;}, n.downloadFile = function (e, t) {var s = e.fileID;return r(this, void 0, void 0, function () {var e, r, i, a, c;return o(this, function (o) {switch (o.label) {case 0:return [4, n.getTempFileURL.call(this, { fileList: [{ fileID: s, maxAge: 600 }] })];case 1:return e = o.sent(), "SUCCESS" !== (r = e.fileList[0]).code ? [2, t ? t(r) : new Promise(function (e) {e(r);})] : (i = r.download_url, i = encodeURI(i), a = new L.Request(this.config), t ? [4, a.download({ url: i })] : [3, 3]);case 2:return c = o.sent(), t(c), [3, 4];case 3:return [2, a.download({ url: i })];case 4:return [2];}});});};}),Y = n(function (e, t) {Object.defineProperty(t, "__esModule", { value: !0 }), t.callFunction = function (e, t) {var n,r = e.name,o = e.data,s = e.query,i = e.parse,a = e.search,c = t || m.createPromiseCallback();try {n = o ? JSON.stringify(o) : "";} catch (e) {return Promise.reject(e);}if (!r) return Promise.reject(new Error("函数名不能为空"));var u = { query: s, parse: i, search: a, function_name: r, request_data: n };return new L.Request(this.config).send("functions.invokeFunction", u).then(function (e) {if (e.code) c(null, e);else {var t = e.data.response_data;if (i) c(null, { result: t, requestId: e.requestId });else try {t = JSON.parse(e.data.response_data), c(null, { result: t, requestId: e.requestId });} catch (e) {c(new Error("response data must be json"));}}return c.promise;}).catch(function (e) {c(e);}), c.promise;};}),V = t(n(function (t) {var n = e && e.__assign || function () {return (n = Object.assign || function (e) {for (var t, n = 1, r = arguments.length; n < r; n++) {for (var o in t = arguments[n]) {Object.prototype.hasOwnProperty.call(t, o) && (e[o] = t[o]);}}return e;}).apply(this, arguments);},r = e && e.__importDefault || function (e) {return e && e.__esModule ? e : { default: e };},o = e && e.__importStar || function (e) {if (e && e.__esModule) return e;var t = {};if (null != e) for (var n in e) {Object.hasOwnProperty.call(e, n) && (t[n] = e[n]);}return t.default = e, t;},s = r(G),i = o(H),a = o(Y),c = { timeout: 15e3 },u = new (function () {function e(e) {var t = this;this.config = e || this.config, this.authObj = void 0, D.addEventListener(D.EVENTS.LOGIN_TYPE_CHANGE, function (e) {e.data === M.LOGINTYPE.ANONYMOUS && (t.config.persistence = "local");});}return e.prototype.init = function (t) {return this.config = n(n({}, c), t), U.Adapter.adapter || this._useDefaultAdapter(), new e(this.config);}, e.prototype.auth = function (e) {var t = (void 0 === e ? {} : e).persistence;return this.authObj || (this.config = n(n({}, this.config), { persistence: t || U.Adapter.adapter.primaryStorage || "session" }), this.authObj = new s.default(this.config), this.authObj.init()), this.authObj;}, e.prototype.on = function (e, t) {return D.addEventListener.apply(this, [e, t]);}, e.prototype.off = function (e, t) {return D.removeEventListener.apply(this, [e, t]);}, e.prototype.callFunction = function (e, t) {return a.callFunction.apply(this, [e, t]);}, e.prototype.deleteFile = function (e, t) {return i.deleteFile.apply(this, [e, t]);}, e.prototype.getTempFileURL = function (e, t) {return i.getTempFileURL.apply(this, [e, t]);}, e.prototype.downloadFile = function (e, t) {return i.downloadFile.apply(this, [e, t]);}, e.prototype.uploadFile = function (e, t) {return i.uploadFile.apply(this, [e, t]);}, e.prototype.useAdapters = function (e) {var t = U.useAdapters(e) || {},n = t.adapter,r = t.runtime;n && (U.Adapter.adapter = n), r && (U.Adapter.runtime = r);}, e.prototype._useDefaultAdapter = function () {var e = U.useDefaultAdapter(),t = e.adapter,n = e.runtime;U.Adapter.adapter = t, U.Adapter.runtime = n;}, e;}())();try {window.tcb = u;} catch (e) {}t.exports = u;}));function B(e, t, n) {void 0 === n && (n = {});var r = /\?/.test(t),o = "";for (var s in n) {"" === o ? !r && (t += "?") : o += "&", o += s + "=" + encodeURIComponent(n[s]);}return /^http(s)?:\/\//.test(t += o) ? t : "" + e + t;}var $ = /*#__PURE__*/function () {function $() {_classCallCheck(this, $);}_createClass($, [{ key: "post", value: function post(e) {var t = e.url,n = e.data,r = e.headers;return new Promise(function (e, o) {d.request({ url: B("https:", t), data: n, method: "POST", header: r, success: function success(t) {e(t);}, fail: function fail(e) {o(e);} });});} }, { key: "upload", value: function upload(e) {return new Promise(function (t, n) {var r = e.url,o = e.file,s = e.data,i = e.headers,a = e.fileType,c = d.uploadFile({ url: B("https:", r), name: "file", formData: Object.assign({}, s), filePath: o, fileType: a, header: i, success: function success(e) {var n = { statusCode: e.statusCode, data: e.data || {} };200 === e.statusCode && s.success_action_status && (n.statusCode = parseInt(s.success_action_status, 10)), t(n);}, fail: function fail(e) { false && false, n(new Error(e.errMsg || "uploadFile:fail"));} });"function" == typeof e.onUploadProgress && c && "function" == typeof c.onProgressUpdate && c.onProgressUpdate(function (t) {e.onUploadProgress({ loaded: t.totalBytesSent, total: t.totalBytesExpectedToSend });});});} }]);return $;}();var W = { setItem: function setItem(e, t) {d.setStorageSync(e, t);}, getItem: function getItem(e) {return d.getStorageSync(e);}, removeItem: function removeItem(e) {d.removeStorageSync(e);}, clear: function clear() {d.clearStorageSync();} };var z = { genAdapter: function genAdapter() {return { root: {}, reqClass: $, localStorage: W, primaryStorage: "local" };}, isMatch: function isMatch() {return !0;}, runtime: "uni_app" };V.useAdapters(z);var J = V,X = J.init;J.init = function (e) {e.env = e.spaceId;var t = X.call(this, e);t.config.provider = "tencent", t.config.spaceId = e.spaceId;var n = t.auth;t.auth = function (e) {var t = n.call(this, e);return ["linkAndRetrieveDataWithTicket", "signInAnonymously", "signOut", "getAccessToken", "getLoginState", "signInWithTicket", "getUserInfo"].forEach(function (e) {t[e] = s(t[e]).bind(t);}), t;}, t.customAuth = t.auth;return ["deleteFile", "getTempFileURL", "downloadFile"].forEach(function (e) {t[e] = s(t[e]).bind(t);}), t;};var Q, Z;function ee(e) {Q || (Q = { PLATFORM: "mp-weixin", OS: u, APPID: a.appid, CLIENT_SDK_VERSION: "1.0.0" }, Z = { ak: a.appid, p: "android" === u ? "a" : "i", ut: f(), uuid: h() });var t = JSON.parse(JSON.stringify(e.data || {})),n = e.name,r = this.config.spaceId,o = { tencent: "t", aliyun: "a" }[this.config.provider],s = Object.assign({}, Z, { fn: n, sid: r, pvd: o });if (Object.assign(t, { clientInfo: Q, uniCloudClientInfo: encodeURIComponent(JSON.stringify(s)) }), !t.uniIdToken) {var _e2 = d.getStorageSync("uni_id_token") || d.getStorageSync("uniIdToken");_e2 && (t.uniIdToken = _e2);}return e.data = t, e;}var te = Symbol("CLIENT_DB_INTERNAL");function ne(e, t) {return e.then = "DoNotReturnProxyWithAFunctionNamedThen", e._internalType = te, new Proxy(e, { get: function get(e, n, r) {return function (e, t) {return Object.prototype.hasOwnProperty.call(e, t);}(e, n) || e[n] || "string" != typeof n ? e[n] : t.get(e, n, r);} });}var re = /*#__PURE__*/function (_Error2) {_inherits(re, _Error2);var _super2 = _createSuper(re);function re(e, t) {var _this6;_classCallCheck(this, re);_this6 = _super2.call(this, e), _this6.code = t;return _this6;}return re;}( /*#__PURE__*/_wrapNativeSuper(Error));function oe(e) {switch (t = e, Object.prototype.toString.call(t).slice(8, -1).toLowerCase()) {case "array":return e.map(function (e) {return oe(e);});case "object":return e._internalType === te || Object.keys(e).forEach(function (t) {e[t] = oe(e[t]);}), e;case "regexp":return { $regexp: { source: e.source, flags: e.flags } };case "date":return { $date: e.toISOString() };default:return e;}var t;}var se;var ie = new ( /*#__PURE__*/function () {function _class() {_classCallCheck(this, _class);}_createClass(_class, [{ key: "init", value: function init(e) {var t = {};var n = !1 !== e.debugFunction && "development" === "development" && ( false || "app-plus" === "mp-weixin");switch (e.provider) {case "tencent":t = J.init(Object.assign(e, { useDebugFunction: n }));break;case "aliyun":t = g.init(Object.assign(e, { useDebugFunction: n }));break;default:throw new Error("未提供正确的provider参数");}t.isReady = !1;var r = t.auth();return t.initSignIn = r.getLoginState().then(function (e) {return e ? Promise.resolve() : r.signInAnonymously();}).then(function () {return new Promise(function (e) { false ? (undefined) : setTimeout(function () {u = uni.getSystemInfoSync().platform, c = uni.getStorageSync("__DC_CLOUD_UUID") || l(32), e();}, 0);});}).then(function () {t.isReady = !0;}), function (e) {var t = e.callFunction;e.callFunction = function (e) {var _this7 = this;var n;return n = this.isReady ? Promise.resolve() : this.initSignIn, n.then(function () {var n = ee.call(_this7, e),r = { aliyun: "aliyun", tencent: "tcb" }[_this7.config.provider];return new Promise(function (o, s) {t.call(_this7, n).then(function (t) {if (_this7.config.useDebugFunction && t && t.requestId) {var _n = JSON.stringify({ spaceId: _this7.config.spaceId, functionName: e.name, requestId: t.requestId });console.log("[".concat(r, "-request]").concat(_n, "[/").concat(r, "-request]"));}o(t);}).catch(function (t) {if (_this7.config.useDebugFunction && t && t.requestId) {var _n2 = JSON.stringify({ spaceId: _this7.config.spaceId, functionName: e.name, requestId: t.requestId });console.log("[".concat(r, "-request]").concat(_n2, "[/").concat(r, "-request]"));}t && t.message && (t.message = "[".concat(e.name, "]: ").concat(t.message)), s(t);});});});};var n = e.callFunction;e.callFunction = function (e) {return s(n).call(this, e);};}(t), function (e) {var t = e.uploadFile;e.uploadFile = function (e) {var _this8 = this;var n;return n = this.isReady ? Promise.resolve() : this.initSignIn, n.then(function () {return t.call(_this8, e);});};var n = e.uploadFile;e.uploadFile = function (e) {return s(n).call(this, e);};}(t), function (e) {e.database = function () {if (se) return se;var t = {};var n = /*#__PURE__*/function () {function n(e, t, _n3) {_classCallCheck(this, n);this.content = e, this.prevStage = t, this.actionName = _n3;}_createClass(n, [{ key: "toJSON", value: function toJSON() {var e = this;var t = [e.content];for (; e.prevStage;) {e = e.prevStage, t.push(e.content);}return { $db: t.reverse().map(function (e) {return { $method: e.$method, $param: e.$param };}) };} }, { key: "get", value: function get() {return this._send("get", Array.from(arguments));} }, { key: "add", value: function add() {return this._send("add", Array.from(arguments));} }, { key: "remove", value: function remove() {return this._send("remove", Array.from(arguments));} }, { key: "update", value: function update() {return this._send("update", Array.from(arguments));} }, { key: "end", value: function end() {return this._send("end", Array.from(arguments));} }, { key: "set", value: function set() {throw new Error("客户端禁止使用set方法");} }, { key: "_send", value: function _send(n, r) {var o = this.toJSON();return o.$db.push({ $method: n, $param: r }), e.callFunction({ name: "DCloud-clientDB", data: { action: this.actionName, command: o } }).then(function (e) {var _e$result = e.result,n = _e$result.code,r = _e$result.message,o = _e$result.token,s = _e$result.tokenExpired;return n ? Promise.reject(new re(r, n)) : (o && s && t.refreshToken.forEach(function (e) {e({ token: o, tokenExpired: s });}), Promise.resolve(e));}).catch(function (e) {return Promise.reject(new re(e.message, e.code || "SYSTEM_ERROR"));});} }, { key: "useAggregate", get: function get() {var e = this,t = !1;for (; e.prevStage;) {e = e.prevStage;var _n4 = e.content.$method;if ("aggregate" === _n4 || "pipeline" === _n4) {t = !0;break;}}return t;} }, { key: "count", get: function get() {if (!this.useAggregate) return function () {return this._send("count", Array.from(arguments));};var e = this;return function () {return s({ $method: "count", $param: oe(Array.from(arguments)) }, e, e.actionName);};} }]);return n;}();var r = ["db.Geo", "db.command", "command.aggregate"];function o(e, t) {return r.indexOf("".concat(e, ".").concat(t)) > -1;}function s(e, t, r) {return ne(new n(e, t, r), { get: function get(e, t) {var n = "db";return e && e.content && (n = e.content.$method), o(n, t) ? s({ $method: t }, e, r) : function () {return s({ $method: t, $param: oe(Array.from(arguments)) }, e, r);};} });}function i(_ref4) {var e = _ref4.path,t = _ref4.method;return /*#__PURE__*/function () {function _class2() {_classCallCheck(this, _class2);this.param = Array.from(arguments);}_createClass(_class2, [{ key: "toJSON", value: function toJSON() {return { $newDb: [].concat(_toConsumableArray(e.map(function (e) {return { $method: e };})), [{ $method: t, $param: this.param }]) };} }]);return _class2;}();}var a = { auth: { on: function on(e, n) {t[e] = t[e] || [], t[e].indexOf(n) > -1 || t[e].push(n);}, off: function off(e, n) {t[e] = t[e] || [];var r = t[e].indexOf(n);-1 !== r && t[e].splice(r, 1);} }, env: ne({}, { get: function get(e, t) {return { $env: t };} }), action: function action(e) {return ne({}, { get: function get(t, n) {return o("db", n) ? s({ $method: n }, null, e) : function () {return s({ $method: n, $param: oe(Array.from(arguments)) }, null, e);};} });}, Geo: ne({}, { get: function get(e, t) {return i({ path: ["Geo"], method: t });} }), get serverDate() {return i({ path: [], method: "serverDate" });}, get RegExp() {return i({ path: [], method: "RegExp" });} };return se = ne(a, { get: function get(e, t) {return o("db", t) ? s({ $method: t }) : function () {return s({ $method: t, $param: oe(Array.from(arguments)) });};} }), se;};}(t), t.init = this.init, t;} }]);return _class;}())();try {var _e3 = {};1 === [{"provider":"tencent","spaceName":"yangyjxm-serverless","spaceId":"tcb-hjvrlkwoghdn1s3b45f22-387090"}].length && (_e3 = [{"provider":"tencent","spaceName":"yangyjxm-serverless","spaceId":"tcb-hjvrlkwoghdn1s3b45f22-387090"}][0]), ie = ie.init(_e3);} catch (e) {["auth", "callFunction", "uploadFile", "deleteFile", "getTempFileURL", "downloadFile", "database"].forEach(function (e) {ie[e] = function () {var e = [{"provider":"tencent","spaceName":"yangyjxm-serverless","spaceId":"tcb-hjvrlkwoghdn1s3b45f22-387090"}].length > 0 ? "应用有多个服务空间，请通过uniCloud.init方法指定要使用的服务空间" : "应用未关联服务空间，请在cloudfunctions目录右键关联服务空间";return console.error(e), Promise.reject(new i({ code: "SYS_ERR", message: e }));};});}var ae = ie;var _default = ae;exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../webpack/buildin/global.js */ 3), __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
-
-/***/ }),
-/* 55 */
-/*!***************************************************!*\
-  !*** G:/yjbank-uniapp/pages.json?{"type":"stat"} ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "appid": "__UNI__35400E8" };exports.default = _default;
-
-/***/ }),
-/* 56 */
+/* 55 */,
+/* 56 */,
+/* 57 */,
+/* 58 */,
+/* 59 */,
+/* 60 */,
+/* 61 */
 /*!******************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/moment.js ***!
   \******************************************************/
@@ -12573,7 +14587,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
       try {
         oldLocale = globalLocale._abbr;
         aliasedRequire = require;
-        __webpack_require__(58)("./" + name);
+        __webpack_require__(63)("./" + name);
         getSetGlobalLocale(oldLocale);
       } catch (e) {
         // mark as not found to avoid repeating expensive file require call causing high CPU
@@ -16152,10 +18166,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
   return hooks;
 
 });
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! (webpack)/buildin/module.js */ 57)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! (webpack)/buildin/module.js */ 62)(module)))
 
 /***/ }),
-/* 57 */
+/* 62 */
 /*!***********************************!*\
   !*** (webpack)/buildin/module.js ***!
   \***********************************/
@@ -16187,7 +18201,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 58 */
+/* 63 */
 /*!*****************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale sync ^\.\/.*$ ***!
   \*****************************************************************/
@@ -16195,276 +18209,276 @@ module.exports = function(module) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./af": 59,
-	"./af.js": 59,
-	"./ar": 60,
-	"./ar-dz": 61,
-	"./ar-dz.js": 61,
-	"./ar-kw": 62,
-	"./ar-kw.js": 62,
-	"./ar-ly": 63,
-	"./ar-ly.js": 63,
-	"./ar-ma": 64,
-	"./ar-ma.js": 64,
-	"./ar-sa": 65,
-	"./ar-sa.js": 65,
-	"./ar-tn": 66,
-	"./ar-tn.js": 66,
-	"./ar.js": 60,
-	"./az": 67,
-	"./az.js": 67,
-	"./be": 68,
-	"./be.js": 68,
-	"./bg": 69,
-	"./bg.js": 69,
-	"./bm": 70,
-	"./bm.js": 70,
-	"./bn": 71,
-	"./bn-bd": 72,
-	"./bn-bd.js": 72,
-	"./bn.js": 71,
-	"./bo": 73,
-	"./bo.js": 73,
-	"./br": 74,
-	"./br.js": 74,
-	"./bs": 75,
-	"./bs.js": 75,
-	"./ca": 76,
-	"./ca.js": 76,
-	"./cs": 77,
-	"./cs.js": 77,
-	"./cv": 78,
-	"./cv.js": 78,
-	"./cy": 79,
-	"./cy.js": 79,
-	"./da": 80,
-	"./da.js": 80,
-	"./de": 81,
-	"./de-at": 82,
-	"./de-at.js": 82,
-	"./de-ch": 83,
-	"./de-ch.js": 83,
-	"./de.js": 81,
-	"./dv": 84,
-	"./dv.js": 84,
-	"./el": 85,
-	"./el.js": 85,
-	"./en-au": 86,
-	"./en-au.js": 86,
-	"./en-ca": 87,
-	"./en-ca.js": 87,
-	"./en-gb": 88,
-	"./en-gb.js": 88,
-	"./en-ie": 89,
-	"./en-ie.js": 89,
-	"./en-il": 90,
-	"./en-il.js": 90,
-	"./en-in": 91,
-	"./en-in.js": 91,
-	"./en-nz": 92,
-	"./en-nz.js": 92,
-	"./en-sg": 93,
-	"./en-sg.js": 93,
-	"./eo": 94,
-	"./eo.js": 94,
-	"./es": 95,
-	"./es-do": 96,
-	"./es-do.js": 96,
-	"./es-mx": 97,
-	"./es-mx.js": 97,
-	"./es-us": 98,
-	"./es-us.js": 98,
-	"./es.js": 95,
-	"./et": 99,
-	"./et.js": 99,
-	"./eu": 100,
-	"./eu.js": 100,
-	"./fa": 101,
-	"./fa.js": 101,
-	"./fi": 102,
-	"./fi.js": 102,
-	"./fil": 103,
-	"./fil.js": 103,
-	"./fo": 104,
-	"./fo.js": 104,
-	"./fr": 105,
-	"./fr-ca": 106,
-	"./fr-ca.js": 106,
-	"./fr-ch": 107,
-	"./fr-ch.js": 107,
-	"./fr.js": 105,
-	"./fy": 108,
-	"./fy.js": 108,
-	"./ga": 109,
-	"./ga.js": 109,
-	"./gd": 110,
-	"./gd.js": 110,
-	"./gl": 111,
-	"./gl.js": 111,
-	"./gom-deva": 112,
-	"./gom-deva.js": 112,
-	"./gom-latn": 113,
-	"./gom-latn.js": 113,
-	"./gu": 114,
-	"./gu.js": 114,
-	"./he": 115,
-	"./he.js": 115,
-	"./hi": 116,
-	"./hi.js": 116,
-	"./hr": 117,
-	"./hr.js": 117,
-	"./hu": 118,
-	"./hu.js": 118,
-	"./hy-am": 119,
-	"./hy-am.js": 119,
-	"./id": 120,
-	"./id.js": 120,
-	"./is": 121,
-	"./is.js": 121,
-	"./it": 122,
-	"./it-ch": 123,
-	"./it-ch.js": 123,
-	"./it.js": 122,
-	"./ja": 124,
-	"./ja.js": 124,
-	"./jv": 125,
-	"./jv.js": 125,
-	"./ka": 126,
-	"./ka.js": 126,
-	"./kk": 127,
-	"./kk.js": 127,
-	"./km": 128,
-	"./km.js": 128,
-	"./kn": 129,
-	"./kn.js": 129,
-	"./ko": 130,
-	"./ko.js": 130,
-	"./ku": 131,
-	"./ku.js": 131,
-	"./ky": 132,
-	"./ky.js": 132,
-	"./lb": 133,
-	"./lb.js": 133,
-	"./lo": 134,
-	"./lo.js": 134,
-	"./lt": 135,
-	"./lt.js": 135,
-	"./lv": 136,
-	"./lv.js": 136,
-	"./me": 137,
-	"./me.js": 137,
-	"./mi": 138,
-	"./mi.js": 138,
-	"./mk": 139,
-	"./mk.js": 139,
-	"./ml": 140,
-	"./ml.js": 140,
-	"./mn": 141,
-	"./mn.js": 141,
-	"./mr": 142,
-	"./mr.js": 142,
-	"./ms": 143,
-	"./ms-my": 144,
-	"./ms-my.js": 144,
-	"./ms.js": 143,
-	"./mt": 145,
-	"./mt.js": 145,
-	"./my": 146,
-	"./my.js": 146,
-	"./nb": 147,
-	"./nb.js": 147,
-	"./ne": 148,
-	"./ne.js": 148,
-	"./nl": 149,
-	"./nl-be": 150,
-	"./nl-be.js": 150,
-	"./nl.js": 149,
-	"./nn": 151,
-	"./nn.js": 151,
-	"./oc-lnc": 152,
-	"./oc-lnc.js": 152,
-	"./pa-in": 153,
-	"./pa-in.js": 153,
-	"./pl": 154,
-	"./pl.js": 154,
-	"./pt": 155,
-	"./pt-br": 156,
-	"./pt-br.js": 156,
-	"./pt.js": 155,
-	"./ro": 157,
-	"./ro.js": 157,
-	"./ru": 158,
-	"./ru.js": 158,
-	"./sd": 159,
-	"./sd.js": 159,
-	"./se": 160,
-	"./se.js": 160,
-	"./si": 161,
-	"./si.js": 161,
-	"./sk": 162,
-	"./sk.js": 162,
-	"./sl": 163,
-	"./sl.js": 163,
-	"./sq": 164,
-	"./sq.js": 164,
-	"./sr": 165,
-	"./sr-cyrl": 166,
-	"./sr-cyrl.js": 166,
-	"./sr.js": 165,
-	"./ss": 167,
-	"./ss.js": 167,
-	"./sv": 168,
-	"./sv.js": 168,
-	"./sw": 169,
-	"./sw.js": 169,
-	"./ta": 170,
-	"./ta.js": 170,
-	"./te": 171,
-	"./te.js": 171,
-	"./tet": 172,
-	"./tet.js": 172,
-	"./tg": 173,
-	"./tg.js": 173,
-	"./th": 174,
-	"./th.js": 174,
-	"./tk": 175,
-	"./tk.js": 175,
-	"./tl-ph": 176,
-	"./tl-ph.js": 176,
-	"./tlh": 177,
-	"./tlh.js": 177,
-	"./tr": 178,
-	"./tr.js": 178,
-	"./tzl": 179,
-	"./tzl.js": 179,
-	"./tzm": 180,
-	"./tzm-latn": 181,
-	"./tzm-latn.js": 181,
-	"./tzm.js": 180,
-	"./ug-cn": 182,
-	"./ug-cn.js": 182,
-	"./uk": 183,
-	"./uk.js": 183,
-	"./ur": 184,
-	"./ur.js": 184,
-	"./uz": 185,
-	"./uz-latn": 186,
-	"./uz-latn.js": 186,
-	"./uz.js": 185,
-	"./vi": 187,
-	"./vi.js": 187,
-	"./x-pseudo": 188,
-	"./x-pseudo.js": 188,
-	"./yo": 189,
-	"./yo.js": 189,
-	"./zh-cn": 190,
-	"./zh-cn.js": 190,
-	"./zh-hk": 191,
-	"./zh-hk.js": 191,
-	"./zh-mo": 192,
-	"./zh-mo.js": 192,
-	"./zh-tw": 193,
-	"./zh-tw.js": 193
+	"./af": 64,
+	"./af.js": 64,
+	"./ar": 65,
+	"./ar-dz": 66,
+	"./ar-dz.js": 66,
+	"./ar-kw": 67,
+	"./ar-kw.js": 67,
+	"./ar-ly": 68,
+	"./ar-ly.js": 68,
+	"./ar-ma": 69,
+	"./ar-ma.js": 69,
+	"./ar-sa": 70,
+	"./ar-sa.js": 70,
+	"./ar-tn": 71,
+	"./ar-tn.js": 71,
+	"./ar.js": 65,
+	"./az": 72,
+	"./az.js": 72,
+	"./be": 73,
+	"./be.js": 73,
+	"./bg": 74,
+	"./bg.js": 74,
+	"./bm": 75,
+	"./bm.js": 75,
+	"./bn": 76,
+	"./bn-bd": 77,
+	"./bn-bd.js": 77,
+	"./bn.js": 76,
+	"./bo": 78,
+	"./bo.js": 78,
+	"./br": 79,
+	"./br.js": 79,
+	"./bs": 80,
+	"./bs.js": 80,
+	"./ca": 81,
+	"./ca.js": 81,
+	"./cs": 82,
+	"./cs.js": 82,
+	"./cv": 83,
+	"./cv.js": 83,
+	"./cy": 84,
+	"./cy.js": 84,
+	"./da": 85,
+	"./da.js": 85,
+	"./de": 86,
+	"./de-at": 87,
+	"./de-at.js": 87,
+	"./de-ch": 88,
+	"./de-ch.js": 88,
+	"./de.js": 86,
+	"./dv": 89,
+	"./dv.js": 89,
+	"./el": 90,
+	"./el.js": 90,
+	"./en-au": 91,
+	"./en-au.js": 91,
+	"./en-ca": 92,
+	"./en-ca.js": 92,
+	"./en-gb": 93,
+	"./en-gb.js": 93,
+	"./en-ie": 94,
+	"./en-ie.js": 94,
+	"./en-il": 95,
+	"./en-il.js": 95,
+	"./en-in": 96,
+	"./en-in.js": 96,
+	"./en-nz": 97,
+	"./en-nz.js": 97,
+	"./en-sg": 98,
+	"./en-sg.js": 98,
+	"./eo": 99,
+	"./eo.js": 99,
+	"./es": 100,
+	"./es-do": 101,
+	"./es-do.js": 101,
+	"./es-mx": 102,
+	"./es-mx.js": 102,
+	"./es-us": 103,
+	"./es-us.js": 103,
+	"./es.js": 100,
+	"./et": 104,
+	"./et.js": 104,
+	"./eu": 105,
+	"./eu.js": 105,
+	"./fa": 106,
+	"./fa.js": 106,
+	"./fi": 107,
+	"./fi.js": 107,
+	"./fil": 108,
+	"./fil.js": 108,
+	"./fo": 109,
+	"./fo.js": 109,
+	"./fr": 110,
+	"./fr-ca": 111,
+	"./fr-ca.js": 111,
+	"./fr-ch": 112,
+	"./fr-ch.js": 112,
+	"./fr.js": 110,
+	"./fy": 113,
+	"./fy.js": 113,
+	"./ga": 114,
+	"./ga.js": 114,
+	"./gd": 115,
+	"./gd.js": 115,
+	"./gl": 116,
+	"./gl.js": 116,
+	"./gom-deva": 117,
+	"./gom-deva.js": 117,
+	"./gom-latn": 118,
+	"./gom-latn.js": 118,
+	"./gu": 119,
+	"./gu.js": 119,
+	"./he": 120,
+	"./he.js": 120,
+	"./hi": 121,
+	"./hi.js": 121,
+	"./hr": 122,
+	"./hr.js": 122,
+	"./hu": 123,
+	"./hu.js": 123,
+	"./hy-am": 124,
+	"./hy-am.js": 124,
+	"./id": 125,
+	"./id.js": 125,
+	"./is": 126,
+	"./is.js": 126,
+	"./it": 127,
+	"./it-ch": 128,
+	"./it-ch.js": 128,
+	"./it.js": 127,
+	"./ja": 129,
+	"./ja.js": 129,
+	"./jv": 130,
+	"./jv.js": 130,
+	"./ka": 131,
+	"./ka.js": 131,
+	"./kk": 132,
+	"./kk.js": 132,
+	"./km": 133,
+	"./km.js": 133,
+	"./kn": 134,
+	"./kn.js": 134,
+	"./ko": 135,
+	"./ko.js": 135,
+	"./ku": 136,
+	"./ku.js": 136,
+	"./ky": 137,
+	"./ky.js": 137,
+	"./lb": 138,
+	"./lb.js": 138,
+	"./lo": 139,
+	"./lo.js": 139,
+	"./lt": 140,
+	"./lt.js": 140,
+	"./lv": 141,
+	"./lv.js": 141,
+	"./me": 142,
+	"./me.js": 142,
+	"./mi": 143,
+	"./mi.js": 143,
+	"./mk": 144,
+	"./mk.js": 144,
+	"./ml": 145,
+	"./ml.js": 145,
+	"./mn": 146,
+	"./mn.js": 146,
+	"./mr": 147,
+	"./mr.js": 147,
+	"./ms": 148,
+	"./ms-my": 149,
+	"./ms-my.js": 149,
+	"./ms.js": 148,
+	"./mt": 150,
+	"./mt.js": 150,
+	"./my": 151,
+	"./my.js": 151,
+	"./nb": 152,
+	"./nb.js": 152,
+	"./ne": 153,
+	"./ne.js": 153,
+	"./nl": 154,
+	"./nl-be": 155,
+	"./nl-be.js": 155,
+	"./nl.js": 154,
+	"./nn": 156,
+	"./nn.js": 156,
+	"./oc-lnc": 157,
+	"./oc-lnc.js": 157,
+	"./pa-in": 158,
+	"./pa-in.js": 158,
+	"./pl": 159,
+	"./pl.js": 159,
+	"./pt": 160,
+	"./pt-br": 161,
+	"./pt-br.js": 161,
+	"./pt.js": 160,
+	"./ro": 162,
+	"./ro.js": 162,
+	"./ru": 163,
+	"./ru.js": 163,
+	"./sd": 164,
+	"./sd.js": 164,
+	"./se": 165,
+	"./se.js": 165,
+	"./si": 166,
+	"./si.js": 166,
+	"./sk": 167,
+	"./sk.js": 167,
+	"./sl": 168,
+	"./sl.js": 168,
+	"./sq": 169,
+	"./sq.js": 169,
+	"./sr": 170,
+	"./sr-cyrl": 171,
+	"./sr-cyrl.js": 171,
+	"./sr.js": 170,
+	"./ss": 172,
+	"./ss.js": 172,
+	"./sv": 173,
+	"./sv.js": 173,
+	"./sw": 174,
+	"./sw.js": 174,
+	"./ta": 175,
+	"./ta.js": 175,
+	"./te": 176,
+	"./te.js": 176,
+	"./tet": 177,
+	"./tet.js": 177,
+	"./tg": 178,
+	"./tg.js": 178,
+	"./th": 179,
+	"./th.js": 179,
+	"./tk": 180,
+	"./tk.js": 180,
+	"./tl-ph": 181,
+	"./tl-ph.js": 181,
+	"./tlh": 182,
+	"./tlh.js": 182,
+	"./tr": 183,
+	"./tr.js": 183,
+	"./tzl": 184,
+	"./tzl.js": 184,
+	"./tzm": 185,
+	"./tzm-latn": 186,
+	"./tzm-latn.js": 186,
+	"./tzm.js": 185,
+	"./ug-cn": 187,
+	"./ug-cn.js": 187,
+	"./uk": 188,
+	"./uk.js": 188,
+	"./ur": 189,
+	"./ur.js": 189,
+	"./uz": 190,
+	"./uz-latn": 191,
+	"./uz-latn.js": 191,
+	"./uz.js": 190,
+	"./vi": 192,
+	"./vi.js": 192,
+	"./x-pseudo": 193,
+	"./x-pseudo.js": 193,
+	"./yo": 194,
+	"./yo.js": 194,
+	"./zh-cn": 195,
+	"./zh-cn.js": 195,
+	"./zh-hk": 196,
+	"./zh-hk.js": 196,
+	"./zh-mo": 197,
+	"./zh-mo.js": 197,
+	"./zh-tw": 198,
+	"./zh-tw.js": 198
 };
 
 
@@ -16485,10 +18499,10 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 58;
+webpackContext.id = 63;
 
 /***/ }),
-/* 59 */
+/* 64 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/af.js ***!
   \*********************************************************/
@@ -16500,7 +18514,7 @@ webpackContext.id = 58;
 //! author : Werner Mollentze : https://github.com/wernerm
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -16577,7 +18591,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 60 */
+/* 65 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/ar.js ***!
   \*********************************************************/
@@ -16591,7 +18605,7 @@ webpackContext.id = 58;
 //! author : forabi https://github.com/forabi
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -16784,7 +18798,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 61 */
+/* 66 */
 /*!************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/ar-dz.js ***!
   \************************************************************/
@@ -16800,7 +18814,7 @@ webpackContext.id = 58;
 //! author : Noureddine LOUAHEDJ : https://github.com/noureddinem
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -16958,7 +18972,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 62 */
+/* 67 */
 /*!************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/ar-kw.js ***!
   \************************************************************/
@@ -16970,7 +18984,7 @@ webpackContext.id = 58;
 //! author : Nusret Parlak: https://github.com/nusretparlak
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -17030,7 +19044,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 63 */
+/* 68 */
 /*!************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/ar-ly.js ***!
   \************************************************************/
@@ -17042,7 +19056,7 @@ webpackContext.id = 58;
 //! author : Ali Hmer: https://github.com/kikoanis
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -17219,7 +19233,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 64 */
+/* 69 */
 /*!************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/ar-ma.js ***!
   \************************************************************/
@@ -17232,7 +19246,7 @@ webpackContext.id = 58;
 //! author : Abdel Said : https://github.com/abdelsaid
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -17292,7 +19306,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 65 */
+/* 70 */
 /*!************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/ar-sa.js ***!
   \************************************************************/
@@ -17304,7 +19318,7 @@ webpackContext.id = 58;
 //! author : Suhail Alkowaileet : https://github.com/xsoh
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -17414,7 +19428,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 66 */
+/* 71 */
 /*!************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/ar-tn.js ***!
   \************************************************************/
@@ -17426,7 +19440,7 @@ webpackContext.id = 58;
 //! author : Nader Toukabri : https://github.com/naderio
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -17486,7 +19500,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 67 */
+/* 72 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/az.js ***!
   \*********************************************************/
@@ -17498,7 +19512,7 @@ webpackContext.id = 58;
 //! author : topchiyev : https://github.com/topchiyev
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -17605,7 +19619,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 68 */
+/* 73 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/be.js ***!
   \*********************************************************/
@@ -17619,7 +19633,7 @@ webpackContext.id = 58;
 //! Author : Menelion Elensúle : https://github.com/Oire
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -17764,7 +19778,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 69 */
+/* 74 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/bg.js ***!
   \*********************************************************/
@@ -17776,7 +19790,7 @@ webpackContext.id = 58;
 //! author : Krasen Borisov : https://github.com/kraz
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -17869,7 +19883,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 70 */
+/* 75 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/bm.js ***!
   \*********************************************************/
@@ -17881,7 +19895,7 @@ webpackContext.id = 58;
 //! author : Estelle Comment : https://github.com/estellecomment
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -17938,7 +19952,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 71 */
+/* 76 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/bn.js ***!
   \*********************************************************/
@@ -17950,7 +19964,7 @@ webpackContext.id = 58;
 //! author : Kaushik Gandhi : https://github.com/kaushikgandhi
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -18074,7 +20088,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 72 */
+/* 77 */
 /*!************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/bn-bd.js ***!
   \************************************************************/
@@ -18086,7 +20100,7 @@ webpackContext.id = 58;
 //! author : Asraf Hossain Patoary : https://github.com/ashwoolford
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -18220,7 +20234,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 73 */
+/* 78 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/bo.js ***!
   \*********************************************************/
@@ -18232,7 +20246,7 @@ webpackContext.id = 58;
 //! author : Thupten N. Chakrishar : https://github.com/vajradog
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -18360,7 +20374,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 74 */
+/* 79 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/br.js ***!
   \*********************************************************/
@@ -18372,7 +20386,7 @@ webpackContext.id = 58;
 //! author : Jean-Baptiste Le Duigou : https://github.com/jbleduigou
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -18543,7 +20557,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 75 */
+/* 80 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/bs.js ***!
   \*********************************************************/
@@ -18556,7 +20570,7 @@ webpackContext.id = 58;
 //! based on (hr) translation by Bojan Marković
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -18710,7 +20724,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 76 */
+/* 81 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/ca.js ***!
   \*********************************************************/
@@ -18722,7 +20736,7 @@ webpackContext.id = 58;
 //! author : Juan G. Hurtado : https://github.com/juanghurtado
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -18825,7 +20839,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 77 */
+/* 82 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/cs.js ***!
   \*********************************************************/
@@ -18837,7 +20851,7 @@ webpackContext.id = 58;
 //! author : petrbela : https://github.com/petrbela
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -19014,7 +21028,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 78 */
+/* 83 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/cv.js ***!
   \*********************************************************/
@@ -19026,7 +21040,7 @@ webpackContext.id = 58;
 //! author : Anatoly Mironov : https://github.com/mirontoli
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -19094,7 +21108,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 79 */
+/* 84 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/cy.js ***!
   \*********************************************************/
@@ -19107,7 +21121,7 @@ webpackContext.id = 58;
 //! author : https://github.com/ryangreaves
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -19209,7 +21223,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 80 */
+/* 85 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/da.js ***!
   \*********************************************************/
@@ -19221,7 +21235,7 @@ webpackContext.id = 58;
 //! author : Ulrik Nielsen : https://github.com/mrbase
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -19280,7 +21294,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 81 */
+/* 86 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/de.js ***!
   \*********************************************************/
@@ -19294,7 +21308,7 @@ webpackContext.id = 58;
 //! author : Mikolaj Dadela : https://github.com/mik01aj
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -19376,7 +21390,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 82 */
+/* 87 */
 /*!************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/de-at.js ***!
   \************************************************************/
@@ -19391,7 +21405,7 @@ webpackContext.id = 58;
 //! author : Mikolaj Dadela : https://github.com/mik01aj
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -19473,7 +21487,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 83 */
+/* 88 */
 /*!************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/de-ch.js ***!
   \************************************************************/
@@ -19485,7 +21499,7 @@ webpackContext.id = 58;
 //! author : sschueller : https://github.com/sschueller
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -19567,7 +21581,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 84 */
+/* 89 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/dv.js ***!
   \*********************************************************/
@@ -19579,7 +21593,7 @@ webpackContext.id = 58;
 //! author : Jawish Hameed : https://github.com/jawish
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -19675,7 +21689,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 85 */
+/* 90 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/el.js ***!
   \*********************************************************/
@@ -19687,7 +21701,7 @@ webpackContext.id = 58;
 //! author : Aggelos Karalias : https://github.com/mehiel
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -19797,7 +21811,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 86 */
+/* 91 */
 /*!************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/en-au.js ***!
   \************************************************************/
@@ -19809,7 +21823,7 @@ webpackContext.id = 58;
 //! author : Jared Morse : https://github.com/jarcoal
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -19883,7 +21897,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 87 */
+/* 92 */
 /*!************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/en-ca.js ***!
   \************************************************************/
@@ -19895,7 +21909,7 @@ webpackContext.id = 58;
 //! author : Jonathan Abourbih : https://github.com/jonbca
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -19965,7 +21979,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 88 */
+/* 93 */
 /*!************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/en-gb.js ***!
   \************************************************************/
@@ -19977,7 +21991,7 @@ webpackContext.id = 58;
 //! author : Chris Gedrim : https://github.com/chrisgedrim
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -20051,7 +22065,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 89 */
+/* 94 */
 /*!************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/en-ie.js ***!
   \************************************************************/
@@ -20063,7 +22077,7 @@ webpackContext.id = 58;
 //! author : Chris Cartlidge : https://github.com/chriscartlidge
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -20137,7 +22151,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 90 */
+/* 95 */
 /*!************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/en-il.js ***!
   \************************************************************/
@@ -20149,7 +22163,7 @@ webpackContext.id = 58;
 //! author : Chris Gedrim : https://github.com/chrisgedrim
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -20219,7 +22233,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 91 */
+/* 96 */
 /*!************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/en-in.js ***!
   \************************************************************/
@@ -20231,7 +22245,7 @@ webpackContext.id = 58;
 //! author : Jatin Agrawal : https://github.com/jatinag22
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -20305,7 +22319,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 92 */
+/* 97 */
 /*!************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/en-nz.js ***!
   \************************************************************/
@@ -20317,7 +22331,7 @@ webpackContext.id = 58;
 //! author : Luke McGregor : https://github.com/lukemcgregor
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -20391,7 +22405,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 93 */
+/* 98 */
 /*!************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/en-sg.js ***!
   \************************************************************/
@@ -20403,7 +22417,7 @@ webpackContext.id = 58;
 //! author : Matthew Castrillon-Madrigal : https://github.com/techdimension
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -20477,7 +22491,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 94 */
+/* 99 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/eo.js ***!
   \*********************************************************/
@@ -20492,7 +22506,7 @@ webpackContext.id = 58;
 //! comment : Vivakvo corrected the translation by colindean and miestasmia
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -20563,7 +22577,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 95 */
+/* 100 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/es.js ***!
   \*********************************************************/
@@ -20575,7 +22589,7 @@ webpackContext.id = 58;
 //! author : Julio Napurí : https://github.com/julionc
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -20687,7 +22701,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 96 */
+/* 101 */
 /*!************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/es-do.js ***!
   \************************************************************/
@@ -20698,7 +22712,7 @@ webpackContext.id = 58;
 //! locale : Spanish (Dominican Republic) [es-do]
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -20809,7 +22823,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 97 */
+/* 102 */
 /*!************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/es-mx.js ***!
   \************************************************************/
@@ -20821,7 +22835,7 @@ webpackContext.id = 58;
 //! author : JC Franco : https://github.com/jcfranco
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -20933,7 +22947,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 98 */
+/* 103 */
 /*!************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/es-us.js ***!
   \************************************************************/
@@ -20946,7 +22960,7 @@ webpackContext.id = 58;
 //! author : chrisrodz : https://github.com/chrisrodz
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -21057,7 +23071,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 99 */
+/* 104 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/et.js ***!
   \*********************************************************/
@@ -21070,7 +23084,7 @@ webpackContext.id = 58;
 //! improvements : Illimar Tambek : https://github.com/ragulka
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -21153,7 +23167,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 100 */
+/* 105 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/eu.js ***!
   \*********************************************************/
@@ -21165,7 +23179,7 @@ webpackContext.id = 58;
 //! author : Eneko Illarramendi : https://github.com/eillarra
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -21234,7 +23248,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 101 */
+/* 106 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/fa.js ***!
   \*********************************************************/
@@ -21246,7 +23260,7 @@ webpackContext.id = 58;
 //! author : Ebrahim Byagowi : https://github.com/ebraminio
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -21362,7 +23376,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 102 */
+/* 107 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/fi.js ***!
   \*********************************************************/
@@ -21374,7 +23388,7 @@ webpackContext.id = 58;
 //! author : Tarmo Aidantausta : https://github.com/bleadof
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -21501,7 +23515,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 103 */
+/* 108 */
 /*!**********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/fil.js ***!
   \**********************************************************/
@@ -21514,7 +23528,7 @@ webpackContext.id = 58;
 //! author : Matthew Co : https://github.com/matthewdeeco
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -21577,7 +23591,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 104 */
+/* 109 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/fo.js ***!
   \*********************************************************/
@@ -21590,7 +23604,7 @@ webpackContext.id = 58;
 //! author : Kristian Sakarisson : https://github.com/sakarisson
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -21651,7 +23665,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 105 */
+/* 110 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/fr.js ***!
   \*********************************************************/
@@ -21663,7 +23677,7 @@ webpackContext.id = 58;
 //! author : John Fischer : https://github.com/jfroffice
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -21773,7 +23787,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 106 */
+/* 111 */
 /*!************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/fr-ca.js ***!
   \************************************************************/
@@ -21785,7 +23799,7 @@ webpackContext.id = 58;
 //! author : Jonathan Abourbih : https://github.com/jonbca
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -21860,7 +23874,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 107 */
+/* 112 */
 /*!************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/fr-ch.js ***!
   \************************************************************/
@@ -21872,7 +23886,7 @@ webpackContext.id = 58;
 //! author : Gaspard Bucher : https://github.com/gaspard
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -21951,7 +23965,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 108 */
+/* 113 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/fy.js ***!
   \*********************************************************/
@@ -21963,7 +23977,7 @@ webpackContext.id = 58;
 //! author : Robin van der Vliet : https://github.com/robin0van0der0v
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -22046,7 +24060,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 109 */
+/* 114 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/ga.js ***!
   \*********************************************************/
@@ -22058,7 +24072,7 @@ webpackContext.id = 58;
 //! author : André Silva : https://github.com/askpt
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -22159,7 +24173,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 110 */
+/* 115 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/gd.js ***!
   \*********************************************************/
@@ -22171,7 +24185,7 @@ webpackContext.id = 58;
 //! author : Jon Ashdown : https://github.com/jonashdown
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -22272,7 +24286,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 111 */
+/* 116 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/gl.js ***!
   \*********************************************************/
@@ -22284,7 +24298,7 @@ webpackContext.id = 58;
 //! author : Juan G. Hurtado : https://github.com/juanghurtado
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -22364,7 +24378,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 112 */
+/* 117 */
 /*!***************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/gom-deva.js ***!
   \***************************************************************/
@@ -22376,7 +24390,7 @@ webpackContext.id = 58;
 //! author : The Discoverer : https://github.com/WikiDiscoverer
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -22506,7 +24520,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 113 */
+/* 118 */
 /*!***************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/gom-latn.js ***!
   \***************************************************************/
@@ -22518,7 +24532,7 @@ webpackContext.id = 58;
 //! author : The Discoverer : https://github.com/WikiDiscoverer
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -22648,7 +24662,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 114 */
+/* 119 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/gu.js ***!
   \*********************************************************/
@@ -22660,7 +24674,7 @@ webpackContext.id = 58;
 //! author : Kaushik Thanki : https://github.com/Kaushik1987
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -22787,7 +24801,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 115 */
+/* 120 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/he.js ***!
   \*********************************************************/
@@ -22801,7 +24815,7 @@ webpackContext.id = 58;
 //! author : Tal Ater : https://github.com/TalAter
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -22899,7 +24913,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 116 */
+/* 121 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/hi.js ***!
   \*********************************************************/
@@ -22911,7 +24925,7 @@ webpackContext.id = 58;
 //! author : Mayank Singhal : https://github.com/mayanksinghal
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -23081,7 +25095,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 117 */
+/* 122 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/hr.js ***!
   \*********************************************************/
@@ -23093,7 +25107,7 @@ webpackContext.id = 58;
 //! author : Bojan Marković : https://github.com/bmarkovic
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -23253,7 +25267,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 118 */
+/* 123 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/hu.js ***!
   \*********************************************************/
@@ -23266,7 +25280,7 @@ webpackContext.id = 58;
 //! author : Peter Viszt  : https://github.com/passatgt
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -23389,7 +25403,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 119 */
+/* 124 */
 /*!************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/hy-am.js ***!
   \************************************************************/
@@ -23401,7 +25415,7 @@ webpackContext.id = 58;
 //! author : Armendarabyan : https://github.com/armendarabyan
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -23499,7 +25513,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 120 */
+/* 125 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/id.js ***!
   \*********************************************************/
@@ -23512,7 +25526,7 @@ webpackContext.id = 58;
 //! reference: http://id.wikisource.org/wiki/Pedoman_Umum_Ejaan_Bahasa_Indonesia_yang_Disempurnakan
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -23593,7 +25607,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 121 */
+/* 126 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/is.js ***!
   \*********************************************************/
@@ -23605,7 +25619,7 @@ webpackContext.id = 58;
 //! author : Hinrik Örn Sigurðsson : https://github.com/hinrik
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -23750,7 +25764,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 122 */
+/* 127 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/it.js ***!
   \*********************************************************/
@@ -23764,7 +25778,7 @@ webpackContext.id = 58;
 //! author: Marco : https://github.com/Manfre98
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -23874,7 +25888,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 123 */
+/* 128 */
 /*!************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/it-ch.js ***!
   \************************************************************/
@@ -23886,7 +25900,7 @@ webpackContext.id = 58;
 //! author : xfh : https://github.com/xfh
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -23956,7 +25970,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 124 */
+/* 129 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/ja.js ***!
   \*********************************************************/
@@ -23968,7 +25982,7 @@ webpackContext.id = 58;
 //! author : LI Long : https://github.com/baryon
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -24122,7 +26136,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 125 */
+/* 130 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/jv.js ***!
   \*********************************************************/
@@ -24135,7 +26149,7 @@ webpackContext.id = 58;
 //! reference: http://jv.wikipedia.org/wiki/Basa_Jawa
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -24216,7 +26230,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 126 */
+/* 131 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/ka.js ***!
   \*********************************************************/
@@ -24228,7 +26242,7 @@ webpackContext.id = 58;
 //! author : Irakli Janiashvili : https://github.com/IrakliJani
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -24326,7 +26340,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 127 */
+/* 132 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/kk.js ***!
   \*********************************************************/
@@ -24338,7 +26352,7 @@ webpackContext.id = 58;
 //! authors : Nurlan Rakhimzhanov : https://github.com/nurlan
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -24426,7 +26440,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 128 */
+/* 133 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/km.js ***!
   \*********************************************************/
@@ -24438,7 +26452,7 @@ webpackContext.id = 58;
 //! author : Kruy Vanna : https://github.com/kruyvanna
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -24546,7 +26560,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 129 */
+/* 134 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/kn.js ***!
   \*********************************************************/
@@ -24558,7 +26572,7 @@ webpackContext.id = 58;
 //! author : Rajeev Naik : https://github.com/rajeevnaikte
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -24687,7 +26701,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 130 */
+/* 135 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/ko.js ***!
   \*********************************************************/
@@ -24700,7 +26714,7 @@ webpackContext.id = 58;
 //! author : Jeeeyul Lee <jeeeyul@gmail.com>
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -24780,7 +26794,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 131 */
+/* 136 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/ku.js ***!
   \*********************************************************/
@@ -24792,7 +26806,7 @@ webpackContext.id = 58;
 //! author : Shahram Mebashar : https://github.com/ShahramMebashar
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -24916,7 +26930,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 132 */
+/* 137 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/ky.js ***!
   \*********************************************************/
@@ -24928,7 +26942,7 @@ webpackContext.id = 58;
 //! author : Chyngyz Arystan uulu : https://github.com/chyngyz
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -25018,7 +27032,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 133 */
+/* 138 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/lb.js ***!
   \*********************************************************/
@@ -25031,7 +27045,7 @@ webpackContext.id = 58;
 //! author : David Raison : https://github.com/kwisatz
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -25171,7 +27185,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 134 */
+/* 139 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/lo.js ***!
   \*********************************************************/
@@ -25183,7 +27197,7 @@ webpackContext.id = 58;
 //! author : Ryan Hart : https://github.com/ryanhart2
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -25254,7 +27268,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 135 */
+/* 140 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/lt.js ***!
   \*********************************************************/
@@ -25266,7 +27280,7 @@ webpackContext.id = 58;
 //! author : Mindaugas Mozūras : https://github.com/mmozuras
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -25395,7 +27409,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 136 */
+/* 141 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/lv.js ***!
   \*********************************************************/
@@ -25408,7 +27422,7 @@ webpackContext.id = 58;
 //! author : Jānis Elmeris : https://github.com/JanisE
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -25506,7 +27520,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 137 */
+/* 142 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/me.js ***!
   \*********************************************************/
@@ -25518,7 +27532,7 @@ webpackContext.id = 58;
 //! author : Miodrag Nikač <miodrag@restartit.me> : https://github.com/miodragnikac
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -25642,7 +27656,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 138 */
+/* 143 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/mi.js ***!
   \*********************************************************/
@@ -25654,7 +27668,7 @@ webpackContext.id = 58;
 //! author : John Corrigan <robbiecloset@gmail.com> : https://github.com/johnideal
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -25719,7 +27733,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 139 */
+/* 144 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/mk.js ***!
   \*********************************************************/
@@ -25732,7 +27746,7 @@ webpackContext.id = 58;
 //! author : Sashko Todorov : https://github.com/bkyceh
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -25823,7 +27837,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 140 */
+/* 145 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/ml.js ***!
   \*********************************************************/
@@ -25835,7 +27849,7 @@ webpackContext.id = 58;
 //! author : Floyd Pink : https://github.com/floydpink
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -25921,7 +27935,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 141 */
+/* 146 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/mn.js ***!
   \*********************************************************/
@@ -25933,7 +27947,7 @@ webpackContext.id = 58;
 //! author : Javkhlantugs Nyamdorj : https://github.com/javkhaanj7
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -26038,7 +28052,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 142 */
+/* 147 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/mr.js ***!
   \*********************************************************/
@@ -26051,7 +28065,7 @@ webpackContext.id = 58;
 //! author : Vivek Athalye : https://github.com/vnathalye
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -26258,7 +28272,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 143 */
+/* 148 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/ms.js ***!
   \*********************************************************/
@@ -26270,7 +28284,7 @@ webpackContext.id = 58;
 //! author : Weldan Jamili : https://github.com/weldan
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -26351,7 +28365,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 144 */
+/* 149 */
 /*!************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/ms-my.js ***!
   \************************************************************/
@@ -26364,7 +28378,7 @@ webpackContext.id = 58;
 //! author : Weldan Jamili : https://github.com/weldan
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -26445,7 +28459,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 145 */
+/* 150 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/mt.js ***!
   \*********************************************************/
@@ -26457,7 +28471,7 @@ webpackContext.id = 58;
 //! author : Alessandro Maruccia : https://github.com/alesma
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -26518,7 +28532,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 146 */
+/* 151 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/my.js ***!
   \*********************************************************/
@@ -26532,7 +28546,7 @@ webpackContext.id = 58;
 //! author : Tin Aung Lin : https://github.com/thanyawzinmin
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -26627,7 +28641,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 147 */
+/* 152 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/nb.js ***!
   \*********************************************************/
@@ -26641,7 +28655,7 @@ webpackContext.id = 58;
 //!           Stephen Ramthun : https://github.com/stephenramthun
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -26706,7 +28720,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 148 */
+/* 153 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/ne.js ***!
   \*********************************************************/
@@ -26718,7 +28732,7 @@ webpackContext.id = 58;
 //! author : suvash : https://github.com/suvash
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -26844,7 +28858,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 149 */
+/* 154 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/nl.js ***!
   \*********************************************************/
@@ -26857,7 +28871,7 @@ webpackContext.id = 58;
 //! author : Jacob Middag : https://github.com/middagj
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -26966,7 +28980,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 150 */
+/* 155 */
 /*!************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/nl-be.js ***!
   \************************************************************/
@@ -26979,7 +28993,7 @@ webpackContext.id = 58;
 //! author : Jacob Middag : https://github.com/middagj
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -27086,7 +29100,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 151 */
+/* 156 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/nn.js ***!
   \*********************************************************/
@@ -27099,7 +29113,7 @@ webpackContext.id = 58;
 //!           Stephen Ramthun : https://github.com/stephenramthun
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -27164,7 +29178,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 152 */
+/* 157 */
 /*!*************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/oc-lnc.js ***!
   \*************************************************************/
@@ -27176,7 +29190,7 @@ webpackContext.id = 58;
 //! author : Quentin PAGÈS : https://github.com/Quenty31
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -27265,7 +29279,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 153 */
+/* 158 */
 /*!************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/pa-in.js ***!
   \************************************************************/
@@ -27277,7 +29291,7 @@ webpackContext.id = 58;
 //! author : Harpreet Singh : https://github.com/harpreetkhalsagtbit
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -27404,7 +29418,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 154 */
+/* 159 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/pl.js ***!
   \*********************************************************/
@@ -27416,7 +29430,7 @@ webpackContext.id = 58;
 //! author : Rafal Hirsz : https://github.com/evoL
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -27561,7 +29575,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 155 */
+/* 160 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/pt.js ***!
   \*********************************************************/
@@ -27573,7 +29587,7 @@ webpackContext.id = 58;
 //! author : Jefferson : https://github.com/jalex79
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -27641,7 +29655,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 156 */
+/* 161 */
 /*!************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/pt-br.js ***!
   \************************************************************/
@@ -27653,7 +29667,7 @@ webpackContext.id = 58;
 //! author : Caio Ribeiro Pereira : https://github.com/caio-ribeiro-pereira
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -27716,7 +29730,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 157 */
+/* 162 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/ro.js ***!
   \*********************************************************/
@@ -27730,7 +29744,7 @@ webpackContext.id = 58;
 //! author : Emanuel Cepoi : https://github.com/cepem
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -27809,7 +29823,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 158 */
+/* 163 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/ru.js ***!
   \*********************************************************/
@@ -27823,7 +29837,7 @@ webpackContext.id = 58;
 //! author : Коренберг Марк : https://github.com/socketpair
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -28033,7 +30047,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 159 */
+/* 164 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/sd.js ***!
   \*********************************************************/
@@ -28045,7 +30059,7 @@ webpackContext.id = 58;
 //! author : Narain Sagar : https://github.com/narainsagar
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -28132,7 +30146,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 160 */
+/* 165 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/se.js ***!
   \*********************************************************/
@@ -28144,7 +30158,7 @@ webpackContext.id = 58;
 //! authors : Bård Rolstad Henriksen : https://github.com/karamell
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -28207,7 +30221,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 161 */
+/* 166 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/si.js ***!
   \*********************************************************/
@@ -28219,7 +30233,7 @@ webpackContext.id = 58;
 //! author : Sampath Sitinamaluwa : https://github.com/sampathsris
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -28293,7 +30307,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 162 */
+/* 167 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/sk.js ***!
   \*********************************************************/
@@ -28306,7 +30320,7 @@ webpackContext.id = 58;
 //! based on work of petrbela : https://github.com/petrbela
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -28455,7 +30469,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 163 */
+/* 168 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/sl.js ***!
   \*********************************************************/
@@ -28467,7 +30481,7 @@ webpackContext.id = 58;
 //! author : Robert Sedovšek : https://github.com/sedovsek
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -28643,7 +30657,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 164 */
+/* 169 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/sq.js ***!
   \*********************************************************/
@@ -28657,7 +30671,7 @@ webpackContext.id = 58;
 //! author : Oerd Cukalla : https://github.com/oerd
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -28726,7 +30740,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 165 */
+/* 170 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/sr.js ***!
   \*********************************************************/
@@ -28739,7 +30753,7 @@ webpackContext.id = 58;
 //! author : Stefan Crnjaković <stefan@hotmail.rs> : https://github.com/crnjakovic
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -28862,7 +30876,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 166 */
+/* 171 */
 /*!**************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/sr-cyrl.js ***!
   \**************************************************************/
@@ -28875,7 +30889,7 @@ webpackContext.id = 58;
 //! author : Stefan Crnjaković <stefan@hotmail.rs> : https://github.com/crnjakovic
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -28996,7 +31010,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 167 */
+/* 172 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/ss.js ***!
   \*********************************************************/
@@ -29008,7 +31022,7 @@ webpackContext.id = 58;
 //! author : Nicolai Davies<mail@nicolai.io> : https://github.com/nicolaidavies
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -29097,7 +31111,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 168 */
+/* 173 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/sv.js ***!
   \*********************************************************/
@@ -29109,7 +31123,7 @@ webpackContext.id = 58;
 //! author : Jens Alm : https://github.com/ulmus
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -29183,7 +31197,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 169 */
+/* 174 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/sw.js ***!
   \*********************************************************/
@@ -29195,7 +31209,7 @@ webpackContext.id = 58;
 //! author : Fahad Kassim : https://github.com/fadsel
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -29255,7 +31269,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 170 */
+/* 175 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/ta.js ***!
   \*********************************************************/
@@ -29267,7 +31281,7 @@ webpackContext.id = 58;
 //! author : Arjunkumar Krishnamoorthy : https://github.com/tk120404
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -29402,7 +31416,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 171 */
+/* 176 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/te.js ***!
   \*********************************************************/
@@ -29414,7 +31428,7 @@ webpackContext.id = 58;
 //! author : Krishna Chaitanya Thota : https://github.com/kcthota
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -29506,7 +31520,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 172 */
+/* 177 */
 /*!**********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/tet.js ***!
   \**********************************************************/
@@ -29520,7 +31534,7 @@ webpackContext.id = 58;
 //! author : Sonia Simoes : https://github.com/soniasimoes
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -29592,7 +31606,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 173 */
+/* 178 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/tg.js ***!
   \*********************************************************/
@@ -29604,7 +31618,7 @@ webpackContext.id = 58;
 //! author : Orif N. Jr. : https://github.com/orif-jr
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -29726,7 +31740,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 174 */
+/* 179 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/th.js ***!
   \*********************************************************/
@@ -29738,7 +31752,7 @@ webpackContext.id = 58;
 //! author : Kridsada Thanabulpong : https://github.com/sirn
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -29808,7 +31822,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 175 */
+/* 180 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/tk.js ***!
   \*********************************************************/
@@ -29820,7 +31834,7 @@ webpackContext.id = 58;
 //! author : Atamyrat Abdyrahmanov : https://github.com/atamyratabdy
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -29917,7 +31931,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 176 */
+/* 181 */
 /*!************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/tl-ph.js ***!
   \************************************************************/
@@ -29929,7 +31943,7 @@ webpackContext.id = 58;
 //! author : Dan Hagman : https://github.com/hagmandan
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -29992,7 +32006,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 177 */
+/* 182 */
 /*!**********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/tlh.js ***!
   \**********************************************************/
@@ -30004,7 +32018,7 @@ webpackContext.id = 58;
 //! author : Dominika Kruk : https://github.com/amaranthrose
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -30135,7 +32149,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 178 */
+/* 183 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/tr.js ***!
   \*********************************************************/
@@ -30148,7 +32162,7 @@ webpackContext.id = 58;
 //!           Burak Yiğit Kaya: https://github.com/BYK
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -30259,7 +32273,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 179 */
+/* 184 */
 /*!**********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/tzl.js ***!
   \**********************************************************/
@@ -30272,7 +32286,7 @@ webpackContext.id = 58;
 //! author : Iustì Canun
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -30366,7 +32380,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 180 */
+/* 185 */
 /*!**********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/tzm.js ***!
   \**********************************************************/
@@ -30378,7 +32392,7 @@ webpackContext.id = 58;
 //! author : Abdel Said : https://github.com/abdelsaid
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -30437,7 +32451,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 181 */
+/* 186 */
 /*!***************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/tzm-latn.js ***!
   \***************************************************************/
@@ -30449,7 +32463,7 @@ webpackContext.id = 58;
 //! author : Abdel Said : https://github.com/abdelsaid
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -30508,7 +32522,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 182 */
+/* 187 */
 /*!************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/ug-cn.js ***!
   \************************************************************/
@@ -30520,7 +32534,7 @@ webpackContext.id = 58;
 //! author: boyaq : https://github.com/boyaq
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -30636,7 +32650,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 183 */
+/* 188 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/uk.js ***!
   \*********************************************************/
@@ -30649,7 +32663,7 @@ webpackContext.id = 58;
 //! Author : Menelion Elensúle : https://github.com/Oire
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -30817,7 +32831,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 184 */
+/* 189 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/ur.js ***!
   \*********************************************************/
@@ -30830,7 +32844,7 @@ webpackContext.id = 58;
 //! author : Zack : https://github.com/ZackVision
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -30917,7 +32931,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 185 */
+/* 190 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/uz.js ***!
   \*********************************************************/
@@ -30929,7 +32943,7 @@ webpackContext.id = 58;
 //! author : Sardor Muminov : https://github.com/muminoff
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -30986,7 +33000,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 186 */
+/* 191 */
 /*!**************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/uz-latn.js ***!
   \**************************************************************/
@@ -30998,7 +33012,7 @@ webpackContext.id = 58;
 //! author : Rasulbek Mirzayev : github.com/Rasulbeeek
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -31057,7 +33071,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 187 */
+/* 192 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/vi.js ***!
   \*********************************************************/
@@ -31070,7 +33084,7 @@ webpackContext.id = 58;
 //! author : Chien Kira : https://github.com/chienkira
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -31154,7 +33168,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 188 */
+/* 193 */
 /*!***************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/x-pseudo.js ***!
   \***************************************************************/
@@ -31166,7 +33180,7 @@ webpackContext.id = 58;
 //! author : Andrew Hood : https://github.com/andrewhood125
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -31243,7 +33257,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 189 */
+/* 194 */
 /*!*********************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/yo.js ***!
   \*********************************************************/
@@ -31255,7 +33269,7 @@ webpackContext.id = 58;
 //! author : Atolagbe Abisoye : https://github.com/andela-batolagbe
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -31314,7 +33328,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 190 */
+/* 195 */
 /*!************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/zh-cn.js ***!
   \************************************************************/
@@ -31328,7 +33342,7 @@ webpackContext.id = 58;
 //! author : uu109 : https://github.com/uu109
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -31452,7 +33466,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 191 */
+/* 196 */
 /*!************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/zh-hk.js ***!
   \************************************************************/
@@ -31467,7 +33481,7 @@ webpackContext.id = 58;
 //! author : Anthony : https://github.com/anthonylau
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -31571,7 +33585,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 192 */
+/* 197 */
 /*!************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/zh-mo.js ***!
   \************************************************************/
@@ -31585,7 +33599,7 @@ webpackContext.id = 58;
 //! author : Tan Yuanhong : https://github.com/le0tan
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -31689,7 +33703,7 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 193 */
+/* 198 */
 /*!************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/moment/locale/zh-tw.js ***!
   \************************************************************/
@@ -31702,7 +33716,7 @@ webpackContext.id = 58;
 //! author : Chris Lam : https://github.com/hehachris
 
 ;(function (global, factory) {
-   true ? factory(__webpack_require__(/*! ../moment */ 56)) :
+   true ? factory(__webpack_require__(/*! ../moment */ 61)) :
   undefined;
 })(this, function (moment) {'use strict';
 
@@ -31806,11 +33820,6 @@ webpackContext.id = 58;
 });
 
 /***/ }),
-/* 194 */,
-/* 195 */,
-/* 196 */,
-/* 197 */,
-/* 198 */,
 /* 199 */,
 /* 200 */,
 /* 201 */,
@@ -31846,5679 +33855,7 @@ webpackContext.id = 58;
 /* 231 */,
 /* 232 */,
 /* 233 */,
-/* 234 */
-/*!********************************************************!*\
-  !*** G:/yjbank-uniapp/components/u-charts/u-charts.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {/*
- * uCharts v1.9.4.20200331
- * uni-app平台高性能跨全端图表，支持H5、APP、小程序（微信/支付宝/百度/头条/QQ/360）
- * Copyright (c) 2019 QIUN秋云 https://www.ucharts.cn All rights reserved.
- * Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
- * 
- * uCharts官方网站
- * https://www.uCharts.cn
- * 
- * 开源地址:
- * https://gitee.com/uCharts/uCharts
- * 
- * uni-app插件市场地址：
- * http://ext.dcloud.net.cn/plugin?id=271
- * 
- */
-
-
-
-var config = {
-  yAxisWidth: 15,
-  yAxisSplit: 5,
-  xAxisHeight: 15,
-  xAxisLineHeight: 15,
-  legendHeight: 15,
-  yAxisTitleWidth: 15,
-  padding: [10, 10, 10, 10],
-  pixelRatio: 1,
-  rotate: false,
-  columePadding: 3,
-  fontSize: 13,
-  //dataPointShape: ['diamond', 'circle', 'triangle', 'rect'],
-  dataPointShape: ['circle', 'circle', 'circle', 'circle'],
-  colors: ['#1890ff', '#2fc25b', '#facc14', '#f04864', '#8543e0', '#90ed7d'],
-  pieChartLinePadding: 15,
-  pieChartTextPadding: 5,
-  xAxisTextPadding: 3,
-  titleColor: '#333333',
-  titleFontSize: 20,
-  subtitleColor: '#999999',
-  subtitleFontSize: 15,
-  toolTipPadding: 3,
-  toolTipBackground: '#000000',
-  toolTipOpacity: 0.7,
-  toolTipLineHeight: 20,
-  radarLabelTextMargin: 15,
-  gaugeLabelTextMargin: 15 };
-
-
-var assign = function assign(target) {for (var _len2 = arguments.length, varArgs = new Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {varArgs[_key2 - 1] = arguments[_key2];}
-  if (target == null) {
-    throw new TypeError('Cannot convert undefined or null to object');
-  }
-  if (!varArgs || varArgs.length <= 0) {
-    return target;
-  }
-  // 深度合并对象
-  function deepAssign(obj1, obj2) {
-    for (var key in obj2) {
-      obj1[key] = obj1[key] && obj1[key].toString() === "[object Object]" ?
-      deepAssign(obj1[key], obj2[key]) : obj1[key] = obj2[key];
-    }
-    return obj1;
-  }
-
-  varArgs.forEach(function (val) {
-    target = deepAssign(target, val);
-  });
-  return target;
-};
-
-var util = {
-  toFixed: function toFixed(num, limit) {
-    limit = limit || 2;
-    if (this.isFloat(num)) {
-      num = num.toFixed(limit);
-    }
-    return num;
-  },
-  isFloat: function isFloat(num) {
-    return num % 1 !== 0;
-  },
-  approximatelyEqual: function approximatelyEqual(num1, num2) {
-    return Math.abs(num1 - num2) < 1e-10;
-  },
-  isSameSign: function isSameSign(num1, num2) {
-    return Math.abs(num1) === num1 && Math.abs(num2) === num2 || Math.abs(num1) !== num1 && Math.abs(num2) !== num2;
-  },
-  isSameXCoordinateArea: function isSameXCoordinateArea(p1, p2) {
-    return this.isSameSign(p1.x, p2.x);
-  },
-  isCollision: function isCollision(obj1, obj2) {
-    obj1.end = {};
-    obj1.end.x = obj1.start.x + obj1.width;
-    obj1.end.y = obj1.start.y - obj1.height;
-    obj2.end = {};
-    obj2.end.x = obj2.start.x + obj2.width;
-    obj2.end.y = obj2.start.y - obj2.height;
-    var flag = obj2.start.x > obj1.end.x || obj2.end.x < obj1.start.x || obj2.end.y > obj1.start.y || obj2.start.y < obj1.end.y;
-    return !flag;
-  } };
-
-
-//兼容H5点击事件
-function getH5Offset(e) {
-  e.mp = {
-    changedTouches: [] };
-
-  e.mp.changedTouches.push({
-    x: e.offsetX,
-    y: e.offsetY });
-
-  return e;
-}
-
-// hex 转 rgba
-function hexToRgb(hexValue, opc) {
-  var rgx = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
-  var hex = hexValue.replace(rgx, function (m, r, g, b) {
-    return r + r + g + g + b + b;
-  });
-  var rgb = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-  var r = parseInt(rgb[1], 16);
-  var g = parseInt(rgb[2], 16);
-  var b = parseInt(rgb[3], 16);
-  return 'rgba(' + r + ',' + g + ',' + b + ',' + opc + ')';
-}
-
-function findRange(num, type, limit) {
-  if (isNaN(num)) {
-    throw new Error('[uCharts] unvalid series data!');
-  }
-  limit = limit || 10;
-  type = type ? type : 'upper';
-  var multiple = 1;
-  while (limit < 1) {
-    limit *= 10;
-    multiple *= 10;
-  }
-  if (type === 'upper') {
-    num = Math.ceil(num * multiple);
-  } else {
-    num = Math.floor(num * multiple);
-  }
-  while (num % limit !== 0) {
-    if (type === 'upper') {
-      num++;
-    } else {
-      num--;
-    }
-  }
-  return num / multiple;
-}
-
-function calCandleMA(dayArr, nameArr, colorArr, kdata) {
-  var seriesTemp = [];
-  for (var k = 0; k < dayArr.length; k++) {
-    var seriesItem = {
-      data: [],
-      name: nameArr[k],
-      color: colorArr[k] };
-
-    for (var i = 0, len = kdata.length; i < len; i++) {
-      if (i < dayArr[k]) {
-        seriesItem.data.push(null);
-        continue;
-      }
-      var sum = 0;
-      for (var j = 0; j < dayArr[k]; j++) {
-        sum += kdata[i - j][1];
-      }
-      seriesItem.data.push(+(sum / dayArr[k]).toFixed(3));
-    }
-    seriesTemp.push(seriesItem);
-  }
-  return seriesTemp;
-}
-
-function calValidDistance(self, distance, chartData, config, opts) {
-  var dataChartAreaWidth = opts.width - opts.area[1] - opts.area[3];
-  var dataChartWidth = chartData.eachSpacing * (opts.chartData.xAxisData.xAxisPoints.length - 1);
-  var validDistance = distance;
-  if (distance >= 0) {
-    validDistance = 0;
-    self.event.trigger('scrollLeft');
-  } else if (Math.abs(distance) >= dataChartWidth - dataChartAreaWidth) {
-    validDistance = dataChartAreaWidth - dataChartWidth;
-    self.event.trigger('scrollRight');
-  }
-  return validDistance;
-}
-
-function isInAngleRange(angle, startAngle, endAngle) {
-  function adjust(angle) {
-    while (angle < 0) {
-      angle += 2 * Math.PI;
-    }
-    while (angle > 2 * Math.PI) {
-      angle -= 2 * Math.PI;
-    }
-    return angle;
-  }
-  angle = adjust(angle);
-  startAngle = adjust(startAngle);
-  endAngle = adjust(endAngle);
-  if (startAngle > endAngle) {
-    endAngle += 2 * Math.PI;
-    if (angle < startAngle) {
-      angle += 2 * Math.PI;
-    }
-  }
-  return angle >= startAngle && angle <= endAngle;
-}
-
-function calRotateTranslate(x, y, h) {
-  var xv = x;
-  var yv = h - y;
-  var transX = xv + (h - yv - xv) / Math.sqrt(2);
-  transX *= -1;
-  var transY = (h - yv) * (Math.sqrt(2) - 1) - (h - yv - xv) / Math.sqrt(2);
-  return {
-    transX: transX,
-    transY: transY };
-
-}
-
-function createCurveControlPoints(points, i) {
-
-  function isNotMiddlePoint(points, i) {
-    if (points[i - 1] && points[i + 1]) {
-      return points[i].y >= Math.max(points[i - 1].y, points[i + 1].y) || points[i].y <= Math.min(points[i - 1].y, points[i + 1].y);
-    } else {
-      return false;
-    }
-  }
-  function isNotMiddlePointX(points, i) {
-    if (points[i - 1] && points[i + 1]) {
-      return points[i].x >= Math.max(points[i - 1].x, points[i + 1].x) || points[i].x <= Math.min(points[i - 1].x, points[i + 1].x);
-    } else {
-      return false;
-    }
-  }
-  var a = 0.2;
-  var b = 0.2;
-  var pAx = null;
-  var pAy = null;
-  var pBx = null;
-  var pBy = null;
-  if (i < 1) {
-    pAx = points[0].x + (points[1].x - points[0].x) * a;
-    pAy = points[0].y + (points[1].y - points[0].y) * a;
-  } else {
-    pAx = points[i].x + (points[i + 1].x - points[i - 1].x) * a;
-    pAy = points[i].y + (points[i + 1].y - points[i - 1].y) * a;
-  }
-
-  if (i > points.length - 3) {
-    var last = points.length - 1;
-    pBx = points[last].x - (points[last].x - points[last - 1].x) * b;
-    pBy = points[last].y - (points[last].y - points[last - 1].y) * b;
-  } else {
-    pBx = points[i + 1].x - (points[i + 2].x - points[i].x) * b;
-    pBy = points[i + 1].y - (points[i + 2].y - points[i].y) * b;
-  }
-  if (isNotMiddlePoint(points, i + 1)) {
-    pBy = points[i + 1].y;
-  }
-  if (isNotMiddlePoint(points, i)) {
-    pAy = points[i].y;
-  }
-  if (isNotMiddlePointX(points, i + 1)) {
-    pBx = points[i + 1].x;
-  }
-  if (isNotMiddlePointX(points, i)) {
-    pAx = points[i].x;
-  }
-  if (pAy >= Math.max(points[i].y, points[i + 1].y) || pAy <= Math.min(points[i].y, points[i + 1].y)) {
-    pAy = points[i].y;
-  }
-  if (pBy >= Math.max(points[i].y, points[i + 1].y) || pBy <= Math.min(points[i].y, points[i + 1].y)) {
-    pBy = points[i + 1].y;
-  }
-  if (pAx >= Math.max(points[i].x, points[i + 1].x) || pAx <= Math.min(points[i].x, points[i + 1].x)) {
-    pAx = points[i].x;
-  }
-  if (pBx >= Math.max(points[i].x, points[i + 1].x) || pBx <= Math.min(points[i].x, points[i + 1].x)) {
-    pBx = points[i + 1].x;
-  }
-  return {
-    ctrA: {
-      x: pAx,
-      y: pAy },
-
-    ctrB: {
-      x: pBx,
-      y: pBy } };
-
-
-}
-
-function convertCoordinateOrigin(x, y, center) {
-  return {
-    x: center.x + x,
-    y: center.y - y };
-
-}
-
-function avoidCollision(obj, target) {
-  if (target) {
-    // is collision test
-    while (util.isCollision(obj, target)) {
-      if (obj.start.x > 0) {
-        obj.start.y--;
-      } else if (obj.start.x < 0) {
-        obj.start.y++;
-      } else {
-        if (obj.start.y > 0) {
-          obj.start.y++;
-        } else {
-          obj.start.y--;
-        }
-      }
-    }
-  }
-  return obj;
-}
-
-function fillSeries(series, opts, config) {
-  var index = 0;
-  return series.map(function (item) {
-    if (!item.color) {
-      item.color = config.colors[index];
-      index = (index + 1) % config.colors.length;
-    }
-    if (!item.index) {
-      item.index = 0;
-    }
-    if (!item.type) {
-      item.type = opts.type;
-    }
-    if (typeof item.show == "undefined") {
-      item.show = true;
-    }
-    if (!item.type) {
-      item.type = opts.type;
-    }
-    if (!item.pointShape) {
-      item.pointShape = "circle";
-    }
-    if (!item.legendShape) {
-      switch (item.type) {
-        case 'line':
-          item.legendShape = "line";
-          break;
-        case 'column':
-          item.legendShape = "rect";
-          break;
-        case 'area':
-          item.legendShape = "triangle";
-          break;
-        default:
-          item.legendShape = "circle";}
-
-    }
-    return item;
-  });
-}
-
-function getDataRange(minData, maxData) {
-  var limit = 0;
-  var range = maxData - minData;
-  if (range >= 10000) {
-    limit = 1000;
-  } else if (range >= 1000) {
-    limit = 100;
-  } else if (range >= 100) {
-    limit = 10;
-  } else if (range >= 10) {
-    limit = 5;
-  } else if (range >= 1) {
-    limit = 1;
-  } else if (range >= 0.1) {
-    limit = 0.1;
-  } else if (range >= 0.01) {
-    limit = 0.01;
-  } else if (range >= 0.001) {
-    limit = 0.001;
-  } else if (range >= 0.0001) {
-    limit = 0.0001;
-  } else if (range >= 0.00001) {
-    limit = 0.00001;
-  } else {
-    limit = 0.000001;
-  }
-  return {
-    minRange: findRange(minData, 'lower', limit),
-    maxRange: findRange(maxData, 'upper', limit) };
-
-}
-
-function measureText(text) {
-  var fontSize = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : config.fontSize;
-  text = String(text);
-  var text = text.split('');
-  var width = 0;
-  for (var i = 0; i < text.length; i++) {
-    var item = text[i];
-    if (/[a-zA-Z]/.test(item)) {
-      width += 7;
-    } else if (/[0-9]/.test(item)) {
-      width += 5.5;
-    } else if (/\./.test(item)) {
-      width += 2.7;
-    } else if (/-/.test(item)) {
-      width += 3.25;
-    } else if (/[\u4e00-\u9fa5]/.test(item)) {
-      width += 10;
-    } else if (/\(|\)/.test(item)) {
-      width += 3.73;
-    } else if (/\s/.test(item)) {
-      width += 2.5;
-    } else if (/%/.test(item)) {
-      width += 8;
-    } else {
-      width += 10;
-    }
-  }
-  return width * fontSize / 10;
-}
-
-function dataCombine(series) {
-  return series.reduce(function (a, b) {
-    return (a.data ? a.data : a).concat(b.data);
-  }, []);
-}
-
-function dataCombineStack(series, len) {
-  var sum = new Array(len);
-  for (var j = 0; j < sum.length; j++) {
-    sum[j] = 0;
-  }
-  for (var i = 0; i < series.length; i++) {
-    for (var j = 0; j < sum.length; j++) {
-      sum[j] += series[i].data[j];
-    }
-  }
-  return series.reduce(function (a, b) {
-    return (a.data ? a.data : a).concat(b.data).concat(sum);
-  }, []);
-}
-
-function getTouches(touches, opts, e) {
-  var x, y;
-  if (touches.clientX) {
-    if (opts.rotate) {
-      y = opts.height - touches.clientX * opts.pixelRatio;
-      x = (touches.pageY - e.currentTarget.offsetTop - opts.height / opts.pixelRatio / 2 * (opts.pixelRatio - 1)) *
-      opts.pixelRatio;
-    } else {
-      x = touches.clientX * opts.pixelRatio;
-      y = (touches.pageY - e.currentTarget.offsetTop - opts.height / opts.pixelRatio / 2 * (opts.pixelRatio - 1)) *
-      opts.pixelRatio;
-    }
-  } else {
-    if (opts.rotate) {
-      y = opts.height - touches.x * opts.pixelRatio;
-      x = touches.y * opts.pixelRatio;
-    } else {
-      x = touches.x * opts.pixelRatio;
-      y = touches.y * opts.pixelRatio;
-    }
-  }
-  return {
-    x: x,
-    y: y };
-
-}
-
-function getSeriesDataItem(series, index) {
-  var data = [];
-  for (var i = 0; i < series.length; i++) {
-    var item = series[i];
-    if (item.data[index] !== null && typeof item.data[index] !== 'undefined' && item.show) {
-      var seriesItem = {};
-      seriesItem.color = item.color;
-      seriesItem.type = item.type;
-      seriesItem.style = item.style;
-      seriesItem.pointShape = item.pointShape;
-      seriesItem.disableLegend = item.disableLegend;
-      seriesItem.name = item.name;
-      seriesItem.show = item.show;
-      seriesItem.data = item.format ? item.format(item.data[index]) : item.data[index];
-      data.push(seriesItem);
-    }
-  }
-  return data;
-}
-
-function getMaxTextListLength(list) {
-  var lengthList = list.map(function (item) {
-    return measureText(item);
-  });
-  return Math.max.apply(null, lengthList);
-}
-
-function getRadarCoordinateSeries(length) {
-  var eachAngle = 2 * Math.PI / length;
-  var CoordinateSeries = [];
-  for (var i = 0; i < length; i++) {
-    CoordinateSeries.push(eachAngle * i);
-  }
-
-  return CoordinateSeries.map(function (item) {
-    return -1 * item + Math.PI / 2;
-  });
-}
-
-function getToolTipData(seriesData, calPoints, index, categories) {
-  var option = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : {};
-
-  var textList = seriesData.map(function (item) {
-    var titleText = [];
-    if (categories) {
-      titleText = categories;
-    } else {
-      titleText = item.data;
-    }
-    return {
-      text: option.format ? option.format(item, titleText[index]) : item.name + ': ' + item.data,
-      color: item.color };
-
-  });
-  var validCalPoints = [];
-  var offset = {
-    x: 0,
-    y: 0 };
-
-  for (var i = 0; i < calPoints.length; i++) {
-    var points = calPoints[i];
-    if (typeof points[index] !== 'undefined' && points[index] !== null) {
-      validCalPoints.push(points[index]);
-    }
-  }
-  for (var _i = 0; _i < validCalPoints.length; _i++) {
-    var item = validCalPoints[_i];
-    offset.x = Math.round(item.x);
-    offset.y += item.y;
-  }
-  offset.y /= validCalPoints.length;
-  return {
-    textList: textList,
-    offset: offset };
-
-}
-
-function getMixToolTipData(seriesData, calPoints, index, categories) {
-  var option = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : {};
-  var textList = seriesData.map(function (item) {
-    return {
-      text: option.format ? option.format(item, categories[index]) : item.name + ': ' + item.data,
-      color: item.color,
-      disableLegend: item.disableLegend ? true : false };
-
-  });
-  textList = textList.filter(function (item) {
-    if (item.disableLegend !== true) {
-      return item;
-    }
-  });
-  var validCalPoints = [];
-  var offset = {
-    x: 0,
-    y: 0 };
-
-  for (var i = 0; i < calPoints.length; i++) {
-    var points = calPoints[i];
-    if (typeof points[index] !== 'undefined' && points[index] !== null) {
-      validCalPoints.push(points[index]);
-    }
-  }
-  for (var _i2 = 0; _i2 < validCalPoints.length; _i2++) {
-    var item = validCalPoints[_i2];
-    offset.x = Math.round(item.x);
-    offset.y += item.y;
-  }
-  offset.y /= validCalPoints.length;
-  return {
-    textList: textList,
-    offset: offset };
-
-}
-
-function getCandleToolTipData(series, seriesData, calPoints, index, categories, extra) {
-  var option = arguments.length > 6 && arguments[6] !== undefined ? arguments[6] : {};
-  var upColor = extra.color.upFill;
-  var downColor = extra.color.downFill;
-  //颜色顺序为开盘，收盘，最低，最高
-  var color = [upColor, upColor, downColor, upColor];
-  var textList = [];
-  var text0 = {
-    text: categories[index],
-    color: null };
-
-  textList.push(text0);
-  seriesData.map(function (item) {
-    if (index == 0) {
-      if (item.data[1] - item.data[0] < 0) {
-        color[1] = downColor;
-      } else {
-        color[1] = upColor;
-      }
-    } else {
-      if (item.data[0] < series[index - 1][1]) {
-        color[0] = downColor;
-      }
-      if (item.data[1] < item.data[0]) {
-        color[1] = downColor;
-      }
-      if (item.data[2] > series[index - 1][1]) {
-        color[2] = upColor;
-      }
-      if (item.data[3] < series[index - 1][1]) {
-        color[3] = downColor;
-      }
-    }
-    var text1 = {
-      text: '开盘：' + item.data[0],
-      color: color[0] };
-
-    var text2 = {
-      text: '收盘：' + item.data[1],
-      color: color[1] };
-
-    var text3 = {
-      text: '最低：' + item.data[2],
-      color: color[2] };
-
-    var text4 = {
-      text: '最高：' + item.data[3],
-      color: color[3] };
-
-    textList.push(text1, text2, text3, text4);
-  });
-  var validCalPoints = [];
-  var offset = {
-    x: 0,
-    y: 0 };
-
-  for (var i = 0; i < calPoints.length; i++) {
-    var points = calPoints[i];
-    if (typeof points[index] !== 'undefined' && points[index] !== null) {
-      validCalPoints.push(points[index]);
-    }
-  }
-  offset.x = Math.round(validCalPoints[0][0].x);
-  return {
-    textList: textList,
-    offset: offset };
-
-}
-
-function filterSeries(series) {
-  var tempSeries = [];
-  for (var i = 0; i < series.length; i++) {
-    if (series[i].show == true) {
-      tempSeries.push(series[i]);
-    }
-  }
-  return tempSeries;
-}
-
-function findCurrentIndex(currentPoints, calPoints, opts, config) {
-  var offset = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 0;
-  var currentIndex = -1;
-  var spacing = opts.chartData.eachSpacing / 2;
-  var xAxisPoints = [];
-  if (calPoints.length > 0) {
-    if (opts.type == 'candle') {
-      for (var i = 0; i < calPoints[0].length; i++) {
-        xAxisPoints.push(calPoints[0][i][0].x);
-      }
-    } else {
-      for (var _i3 = 0; _i3 < calPoints[0].length; _i3++) {
-        xAxisPoints.push(calPoints[0][_i3].x);
-      }
-    }
-    if ((opts.type == 'line' || opts.type == 'area') && opts.xAxis.boundaryGap == 'justify') {
-      spacing = opts.chartData.eachSpacing / 2;
-    }
-    if (!opts.categories) {
-      spacing = 0;
-    }
-    if (isInExactChartArea(currentPoints, opts, config)) {
-      xAxisPoints.forEach(function (item, index) {
-        if (currentPoints.x + offset + spacing > item) {
-          currentIndex = index;
-        }
-      });
-    }
-  }
-  return currentIndex;
-}
-
-function findLegendIndex(currentPoints, legendData, opts) {
-  var currentIndex = -1;
-  if (isInExactLegendArea(currentPoints, legendData.area)) {
-    var points = legendData.points;
-    var index = -1;
-    for (var i = 0, len = points.length; i < len; i++) {
-      var item = points[i];
-      for (var j = 0; j < item.length; j++) {
-        index += 1;
-        var area = item[j]['area'];
-        if (currentPoints.x > area[0] && currentPoints.x < area[2] && currentPoints.y > area[1] && currentPoints.y < area[3]) {
-          currentIndex = index;
-          break;
-        }
-      }
-    }
-    return currentIndex;
-  }
-  return currentIndex;
-}
-
-function isInExactLegendArea(currentPoints, area) {
-  return currentPoints.x > area.start.x && currentPoints.x < area.end.x && currentPoints.y > area.start.y &&
-  currentPoints.y < area.end.y;
-}
-
-function isInExactChartArea(currentPoints, opts, config) {
-  return currentPoints.x <= opts.width - opts.area[1] + 10 && currentPoints.x >= opts.area[3] - 10 && currentPoints.y >= opts.area[0] && currentPoints.y <= opts.height - opts.area[2];
-}
-
-function findRadarChartCurrentIndex(currentPoints, radarData, count) {
-  var eachAngleArea = 2 * Math.PI / count;
-  var currentIndex = -1;
-  if (isInExactPieChartArea(currentPoints, radarData.center, radarData.radius)) {
-    var fixAngle = function fixAngle(angle) {
-      if (angle < 0) {
-        angle += 2 * Math.PI;
-      }
-      if (angle > 2 * Math.PI) {
-        angle -= 2 * Math.PI;
-      }
-      return angle;
-    };
-
-    var angle = Math.atan2(radarData.center.y - currentPoints.y, currentPoints.x - radarData.center.x);
-    angle = -1 * angle;
-    if (angle < 0) {
-      angle += 2 * Math.PI;
-    }
-
-    var angleList = radarData.angleList.map(function (item) {
-      item = fixAngle(-1 * item);
-
-      return item;
-    });
-
-    angleList.forEach(function (item, index) {
-      var rangeStart = fixAngle(item - eachAngleArea / 2);
-      var rangeEnd = fixAngle(item + eachAngleArea / 2);
-      if (rangeEnd < rangeStart) {
-        rangeEnd += 2 * Math.PI;
-      }
-      if (angle >= rangeStart && angle <= rangeEnd || angle + 2 * Math.PI >= rangeStart && angle + 2 * Math.PI <=
-      rangeEnd) {
-        currentIndex = index;
-      }
-    });
-  }
-
-  return currentIndex;
-}
-
-function findFunnelChartCurrentIndex(currentPoints, funnelData) {
-  var currentIndex = -1;
-  for (var i = 0, len = funnelData.series.length; i < len; i++) {
-    var item = funnelData.series[i];
-    if (currentPoints.x > item.funnelArea[0] && currentPoints.x < item.funnelArea[2] && currentPoints.y > item.funnelArea[1] && currentPoints.y < item.funnelArea[3]) {
-      currentIndex = i;
-      break;
-    }
-  }
-  return currentIndex;
-}
-
-function findWordChartCurrentIndex(currentPoints, wordData) {
-  var currentIndex = -1;
-  for (var i = 0, len = wordData.length; i < len; i++) {
-    var item = wordData[i];
-    if (currentPoints.x > item.area[0] && currentPoints.x < item.area[2] && currentPoints.y > item.area[1] && currentPoints.y < item.area[3]) {
-      currentIndex = i;
-      break;
-    }
-  }
-  return currentIndex;
-}
-
-function findMapChartCurrentIndex(currentPoints, opts) {
-  var currentIndex = -1;
-  var cData = opts.chartData.mapData;
-  var data = opts.series;
-  var tmp = pointToCoordinate(currentPoints.y, currentPoints.x, cData.bounds, cData.scale, cData.xoffset, cData.yoffset);
-  var poi = [tmp.x, tmp.y];
-  for (var i = 0, len = data.length; i < len; i++) {
-    var item = data[i].geometry.coordinates;
-    if (isPoiWithinPoly(poi, item)) {
-      currentIndex = i;
-      break;
-    }
-  }
-  return currentIndex;
-}
-
-function findPieChartCurrentIndex(currentPoints, pieData) {
-  var currentIndex = -1;
-  if (isInExactPieChartArea(currentPoints, pieData.center, pieData.radius)) {
-    var angle = Math.atan2(pieData.center.y - currentPoints.y, currentPoints.x - pieData.center.x);
-    angle = -angle;
-    for (var i = 0, len = pieData.series.length; i < len; i++) {
-      var item = pieData.series[i];
-      if (isInAngleRange(angle, item._start_, item._start_ + item._proportion_ * 2 * Math.PI)) {
-        currentIndex = i;
-        break;
-      }
-    }
-  }
-
-  return currentIndex;
-}
-
-function isInExactPieChartArea(currentPoints, center, radius) {
-  return Math.pow(currentPoints.x - center.x, 2) + Math.pow(currentPoints.y - center.y, 2) <= Math.pow(radius, 2);
-}
-
-function splitPoints(points) {
-  var newPoints = [];
-  var items = [];
-  points.forEach(function (item, index) {
-    if (item !== null) {
-      items.push(item);
-    } else {
-      if (items.length) {
-        newPoints.push(items);
-      }
-      items = [];
-    }
-  });
-  if (items.length) {
-    newPoints.push(items);
-  }
-
-  return newPoints;
-}
-
-function calLegendData(series, opts, config, chartData) {
-  var legendData = {
-    area: {
-      start: {
-        x: 0,
-        y: 0 },
-
-      end: {
-        x: 0,
-        y: 0 },
-
-      width: 0,
-      height: 0,
-      wholeWidth: 0,
-      wholeHeight: 0 },
-
-    points: [],
-    widthArr: [],
-    heightArr: [] };
-
-  if (opts.legend.show === false) {
-    chartData.legendData = legendData;
-    return legendData;
-  }
-
-  var padding = opts.legend.padding;
-  var margin = opts.legend.margin;
-  var fontSize = opts.legend.fontSize;
-  var shapeWidth = 15 * opts.pixelRatio;
-  var shapeRight = 5 * opts.pixelRatio;
-  var lineHeight = Math.max(opts.legend.lineHeight * opts.pixelRatio, fontSize);
-  if (opts.legend.position == 'top' || opts.legend.position == 'bottom') {
-    var legendList = [];
-    var widthCount = 0;
-    var widthCountArr = [];
-    var currentRow = [];
-    for (var i = 0; i < series.length; i++) {
-      var item = series[i];
-      var itemWidth = shapeWidth + shapeRight + measureText(item.name || 'undefined', fontSize) + opts.legend.itemGap;
-      if (widthCount + itemWidth > opts.width - opts.padding[1] - opts.padding[3]) {
-        legendList.push(currentRow);
-        widthCountArr.push(widthCount - opts.legend.itemGap);
-        widthCount = itemWidth;
-        currentRow = [item];
-      } else {
-        widthCount += itemWidth;
-        currentRow.push(item);
-      }
-    }
-    if (currentRow.length) {
-      legendList.push(currentRow);
-      widthCountArr.push(widthCount - opts.legend.itemGap);
-      legendData.widthArr = widthCountArr;
-      var legendWidth = Math.max.apply(null, widthCountArr);
-      switch (opts.legend.float) {
-        case 'left':
-          legendData.area.start.x = opts.padding[3];
-          legendData.area.end.x = opts.padding[3] + 2 * padding;
-          break;
-        case 'right':
-          legendData.area.start.x = opts.width - opts.padding[1] - legendWidth - 2 * padding;
-          legendData.area.end.x = opts.width - opts.padding[1];
-          break;
-        default:
-          legendData.area.start.x = (opts.width - legendWidth) / 2 - padding;
-          legendData.area.end.x = (opts.width + legendWidth) / 2 + padding;}
-
-      legendData.area.width = legendWidth + 2 * padding;
-      legendData.area.wholeWidth = legendWidth + 2 * padding;
-      legendData.area.height = legendList.length * lineHeight + 2 * padding;
-      legendData.area.wholeHeight = legendList.length * lineHeight + 2 * padding + 2 * margin;
-      legendData.points = legendList;
-    }
-  } else {
-    var len = series.length;
-    var maxHeight = opts.height - opts.padding[0] - opts.padding[2] - 2 * margin - 2 * padding;
-    var maxLength = Math.min(Math.floor(maxHeight / lineHeight), len);
-    legendData.area.height = maxLength * lineHeight + padding * 2;
-    legendData.area.wholeHeight = maxLength * lineHeight + padding * 2;
-    switch (opts.legend.float) {
-      case 'top':
-        legendData.area.start.y = opts.padding[0] + margin;
-        legendData.area.end.y = opts.padding[0] + margin + legendData.area.height;
-        break;
-      case 'bottom':
-        legendData.area.start.y = opts.height - opts.padding[2] - margin - legendData.area.height;
-        legendData.area.end.y = opts.height - opts.padding[2] - margin;
-        break;
-      default:
-        legendData.area.start.y = (opts.height - legendData.area.height) / 2;
-        legendData.area.end.y = (opts.height + legendData.area.height) / 2;}
-
-    var lineNum = len % maxLength === 0 ? len / maxLength : Math.floor(len / maxLength + 1);
-    var _currentRow = [];
-    for (var _i4 = 0; _i4 < lineNum; _i4++) {
-      var temp = series.slice(_i4 * maxLength, _i4 * maxLength + maxLength);
-      _currentRow.push(temp);
-    }
-
-    legendData.points = _currentRow;
-
-    if (_currentRow.length) {
-      for (var _i5 = 0; _i5 < _currentRow.length; _i5++) {
-        var _item = _currentRow[_i5];
-        var maxWidth = 0;
-        for (var j = 0; j < _item.length; j++) {
-          var _itemWidth = shapeWidth + shapeRight + measureText(_item[j].name || 'undefined', fontSize) + opts.legend.itemGap;
-          if (_itemWidth > maxWidth) {
-            maxWidth = _itemWidth;
-          }
-        }
-        legendData.widthArr.push(maxWidth);
-        legendData.heightArr.push(_item.length * lineHeight + padding * 2);
-      }
-      var _legendWidth = 0;
-      for (var _i6 = 0; _i6 < legendData.widthArr.length; _i6++) {
-        _legendWidth += legendData.widthArr[_i6];
-      }
-      legendData.area.width = _legendWidth - opts.legend.itemGap + 2 * padding;
-      legendData.area.wholeWidth = legendData.area.width + padding;
-    }
-  }
-
-  switch (opts.legend.position) {
-    case 'top':
-      legendData.area.start.y = opts.padding[0] + margin;
-      legendData.area.end.y = opts.padding[0] + margin + legendData.area.height;
-      break;
-    case 'bottom':
-      legendData.area.start.y = opts.height - opts.padding[2] - legendData.area.height - margin;
-      legendData.area.end.y = opts.height - opts.padding[2] - margin;
-      break;
-    case 'left':
-      legendData.area.start.x = opts.padding[3];
-      legendData.area.end.x = opts.padding[3] + legendData.area.width;
-      break;
-    case 'right':
-      legendData.area.start.x = opts.width - opts.padding[1] - legendData.area.width;
-      legendData.area.end.x = opts.width - opts.padding[1];
-      break;}
-
-  chartData.legendData = legendData;
-  return legendData;
-}
-
-function calCategoriesData(categories, opts, config, eachSpacing) {
-  var result = {
-    angle: 0,
-    xAxisHeight: config.xAxisHeight };
-
-  var categoriesTextLenth = categories.map(function (item) {
-    return measureText(item, opts.xAxis.fontSize || config.fontSize);
-  });
-  var maxTextLength = Math.max.apply(this, categoriesTextLenth);
-
-  if (opts.xAxis.rotateLabel == true && maxTextLength + 2 * config.xAxisTextPadding > eachSpacing) {
-    result.angle = 45 * Math.PI / 180;
-    result.xAxisHeight = 2 * config.xAxisTextPadding + maxTextLength * Math.sin(result.angle);
-  }
-  return result;
-}
-
-function getXAxisTextList(series, opts, config) {
-  var index = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : -1;
-  var data = dataCombine(series);
-  var sorted = [];
-  // remove null from data
-  data = data.filter(function (item) {
-    //return item !== null;
-    if (typeof item === 'object' && item !== null) {
-      if (item.constructor == Array) {
-        return item !== null;
-      } else {
-        return item.value !== null;
-      }
-    } else {
-      return item !== null;
-    }
-  });
-  data.map(function (item) {
-    if (typeof item === 'object') {
-      if (item.constructor == Array) {
-        if (opts.type == 'candle') {
-          item.map(function (subitem) {
-            sorted.push(subitem);
-          });
-        } else {
-          sorted.push(item[0]);
-        }
-      } else {
-        sorted.push(item.value);
-      }
-    } else {
-      sorted.push(item);
-    }
-  });
-
-  var minData = 0;
-  var maxData = 0;
-  if (sorted.length > 0) {
-    minData = Math.min.apply(this, sorted);
-    maxData = Math.max.apply(this, sorted);
-  }
-  //为了兼容v1.9.0之前的项目
-  if (index > -1) {
-    if (typeof opts.xAxis.data[index].min === 'number') {
-      minData = Math.min(opts.xAxis.data[index].min, minData);
-    }
-    if (typeof opts.xAxis.data[index].max === 'number') {
-      maxData = Math.max(opts.xAxis.data[index].max, maxData);
-    }
-  } else {
-    if (typeof opts.xAxis.min === 'number') {
-      minData = Math.min(opts.xAxis.min, minData);
-    }
-    if (typeof opts.xAxis.max === 'number') {
-      maxData = Math.max(opts.xAxis.max, maxData);
-    }
-  }
-
-
-  if (minData === maxData) {
-    var rangeSpan = maxData || 10;
-    maxData += rangeSpan;
-  }
-
-  //var dataRange = getDataRange(minData, maxData);
-  var minRange = minData;
-  var maxRange = maxData;
-
-  var range = [];
-  var eachRange = (maxRange - minRange) / opts.xAxis.splitNumber;
-
-  for (var i = 0; i <= opts.xAxis.splitNumber; i++) {
-    range.push(minRange + eachRange * i);
-  }
-  return range;
-}
-
-function calXAxisData(series, opts, config) {
-  var result = {
-    angle: 0,
-    xAxisHeight: config.xAxisHeight };
-
-
-  result.ranges = getXAxisTextList(series, opts, config);
-  result.rangesFormat = result.ranges.map(function (item) {
-    item = opts.xAxis.format ? opts.xAxis.format(item) : util.toFixed(item, 2);
-    return item;
-  });
-
-  var xAxisScaleValues = result.ranges.map(function (item) {
-    // 如果刻度值是浮点数,则保留两位小数
-    item = util.toFixed(item, 2);
-    // 若有自定义格式则调用自定义的格式化函数
-    item = opts.xAxis.format ? opts.xAxis.format(Number(item)) : item;
-    return item;
-  });
-
-  result = Object.assign(result, getXAxisPoints(xAxisScaleValues, opts, config));
-  // 计算X轴刻度的属性譬如每个刻度的间隔,刻度的起始点\结束点以及总长
-  var eachSpacing = result.eachSpacing;
-
-  var textLength = xAxisScaleValues.map(function (item) {
-    return measureText(item);
-  });
-
-  // get max length of categories text
-  var maxTextLength = Math.max.apply(this, textLength);
-
-  // 如果刻度值文本内容过长,则将其逆时针旋转45°
-  if (maxTextLength + 2 * config.xAxisTextPadding > eachSpacing) {
-    result.angle = 45 * Math.PI / 180;
-    result.xAxisHeight = 2 * config.xAxisTextPadding + maxTextLength * Math.sin(result.angle);
-  }
-
-  if (opts.xAxis.disabled === true) {
-    result.xAxisHeight = 0;
-  }
-
-  return result;
-}
-
-function getRadarDataPoints(angleList, center, radius, series, opts) {
-  var process = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : 1;
-
-  var radarOption = opts.extra.radar || {};
-  radarOption.max = radarOption.max || 0;
-  var maxData = Math.max(radarOption.max, Math.max.apply(null, dataCombine(series)));
-
-  var data = [];var _loop2 = function _loop2(
-  i) {
-    var each = series[i];
-    var listItem = {};
-    listItem.color = each.color;
-    listItem.legendShape = each.legendShape;
-    listItem.pointShape = each.pointShape;
-    listItem.data = [];
-    each.data.forEach(function (item, index) {
-      var tmp = {};
-      tmp.angle = angleList[index];
-
-      tmp.proportion = item / maxData;
-      tmp.position = convertCoordinateOrigin(radius * tmp.proportion * process * Math.cos(tmp.angle), radius * tmp.proportion *
-      process * Math.sin(tmp.angle), center);
-      listItem.data.push(tmp);
-    });
-
-    data.push(listItem);};for (var i = 0; i < series.length; i++) {_loop2(i);
-  }
-
-  return data;
-}
-
-function getPieDataPoints(series, radius) {
-  var process = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
-
-  var count = 0;
-  var _start_ = 0;
-  for (var i = 0; i < series.length; i++) {
-    var item = series[i];
-    item.data = item.data === null ? 0 : item.data;
-    count += item.data;
-  }
-  for (var _i7 = 0; _i7 < series.length; _i7++) {
-    var _item2 = series[_i7];
-    _item2.data = _item2.data === null ? 0 : _item2.data;
-    if (count === 0) {
-      _item2._proportion_ = 1 / series.length * process;
-    } else {
-      _item2._proportion_ = _item2.data / count * process;
-    }
-    _item2._radius_ = radius;
-  }
-  for (var _i8 = 0; _i8 < series.length; _i8++) {
-    var _item3 = series[_i8];
-    _item3._start_ = _start_;
-    _start_ += 2 * _item3._proportion_ * Math.PI;
-  }
-
-  return series;
-}
-
-function getFunnelDataPoints(series, radius) {
-  var process = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
-  series = series.sort(function (a, b) {return parseInt(b.data) - parseInt(a.data);});
-  for (var i = 0; i < series.length; i++) {
-    series[i].radius = series[i].data / series[0].data * radius * process;
-    series[i]._proportion_ = series[i].data / series[0].data;
-  }
-  return series.reverse();
-}
-
-function getRoseDataPoints(series, type, minRadius, radius) {
-  var process = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 1;
-  var count = 0;
-  var _start_ = 0;
-
-  var dataArr = [];
-  for (var i = 0; i < series.length; i++) {
-    var item = series[i];
-    item.data = item.data === null ? 0 : item.data;
-    count += item.data;
-    dataArr.push(item.data);
-  }
-
-  var minData = Math.min.apply(null, dataArr);
-  var maxData = Math.max.apply(null, dataArr);
-  var radiusLength = radius - minRadius;
-
-  for (var _i9 = 0; _i9 < series.length; _i9++) {
-    var _item4 = series[_i9];
-    _item4.data = _item4.data === null ? 0 : _item4.data;
-    if (count === 0 || type == 'area') {
-      _item4._proportion_ = _item4.data / count * process;
-      _item4._rose_proportion_ = 1 / series.length * process;
-    } else {
-      _item4._proportion_ = _item4.data / count * process;
-      _item4._rose_proportion_ = _item4.data / count * process;
-    }
-    _item4._radius_ = minRadius + radiusLength * ((_item4.data - minData) / (maxData - minData));
-  }
-  for (var _i10 = 0; _i10 < series.length; _i10++) {
-    var _item5 = series[_i10];
-    _item5._start_ = _start_;
-    _start_ += 2 * _item5._rose_proportion_ * Math.PI;
-  }
-
-  return series;
-}
-
-function getArcbarDataPoints(series, arcbarOption) {
-  var process = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
-  if (process == 1) {
-    process = 0.999999;
-  }
-  for (var i = 0; i < series.length; i++) {
-    var item = series[i];
-    item.data = item.data === null ? 0 : item.data;
-    var totalAngle = void 0;
-    if (arcbarOption.type == 'circle') {
-      totalAngle = 2;
-    } else {
-      if (arcbarOption.endAngle < arcbarOption.startAngle) {
-        totalAngle = 2 + arcbarOption.endAngle - arcbarOption.startAngle;
-      } else {
-        totalAngle = arcbarOption.startAngle - arcbarOption.endAngle;
-      }
-    }
-    item._proportion_ = totalAngle * item.data * process + arcbarOption.startAngle;
-    if (item._proportion_ >= 2) {
-      item._proportion_ = item._proportion_ % 2;
-    }
-  }
-  return series;
-}
-
-function getGaugeAxisPoints(categories, startAngle, endAngle) {
-  var totalAngle = startAngle - endAngle + 1;
-  var tempStartAngle = startAngle;
-  for (var i = 0; i < categories.length; i++) {
-    categories[i].value = categories[i].value === null ? 0 : categories[i].value;
-    categories[i]._startAngle_ = tempStartAngle;
-    categories[i]._endAngle_ = totalAngle * categories[i].value + startAngle;
-    if (categories[i]._endAngle_ >= 2) {
-      categories[i]._endAngle_ = categories[i]._endAngle_ % 2;
-    }
-    tempStartAngle = categories[i]._endAngle_;
-  }
-  return categories;
-}
-
-function getGaugeDataPoints(series, categories, gaugeOption) {
-  var process = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 1;
-  for (var i = 0; i < series.length; i++) {
-    var item = series[i];
-    item.data = item.data === null ? 0 : item.data;
-    if (gaugeOption.pointer.color == 'auto') {
-      for (var _i11 = 0; _i11 < categories.length; _i11++) {
-        if (item.data <= categories[_i11].value) {
-          item.color = categories[_i11].color;
-          break;
-        }
-      }
-    } else {
-      item.color = gaugeOption.pointer.color;
-    }
-    var totalAngle = gaugeOption.startAngle - gaugeOption.endAngle + 1;
-    item._endAngle_ = totalAngle * item.data + gaugeOption.startAngle;
-    item._oldAngle_ = gaugeOption.oldAngle;
-    if (gaugeOption.oldAngle < gaugeOption.endAngle) {
-      item._oldAngle_ += 2;
-    }
-    if (item.data >= gaugeOption.oldData) {
-      item._proportion_ = (item._endAngle_ - item._oldAngle_) * process + gaugeOption.oldAngle;
-    } else {
-      item._proportion_ = item._oldAngle_ - (item._oldAngle_ - item._endAngle_) * process;
-    }
-    if (item._proportion_ >= 2) {
-      item._proportion_ = item._proportion_ % 2;
-    }
-  }
-  return series;
-}
-
-function getPieTextMaxLength(series) {
-  series = getPieDataPoints(series);
-  var maxLength = 0;
-  for (var i = 0; i < series.length; i++) {
-    var item = series[i];
-    var text = item.format ? item.format(+item._proportion_.toFixed(2)) : util.toFixed(item._proportion_ * 100) + '%';
-    maxLength = Math.max(maxLength, measureText(text));
-  }
-
-  return maxLength;
-}
-
-function fixColumeData(points, eachSpacing, columnLen, index, config, opts) {
-  return points.map(function (item) {
-    if (item === null) {
-      return null;
-    }
-    item.width = Math.ceil((eachSpacing - 2 * config.columePadding) / columnLen);
-
-    if (opts.extra.column && opts.extra.column.width && +opts.extra.column.width > 0) {
-      item.width = Math.min(item.width, +opts.extra.column.width);
-    }
-    if (item.width <= 0) {
-      item.width = 1;
-    }
-    item.x += (index + 0.5 - columnLen / 2) * item.width;
-    return item;
-  });
-}
-
-function fixColumeMeterData(points, eachSpacing, columnLen, index, config, opts, border) {
-  return points.map(function (item) {
-    if (item === null) {
-      return null;
-    }
-    item.width = Math.ceil((eachSpacing - 2 * config.columePadding) / 2);
-
-    if (opts.extra.column && opts.extra.column.width && +opts.extra.column.width > 0) {
-      item.width = Math.min(item.width, +opts.extra.column.width);
-    }
-
-    if (index > 0) {
-      item.width -= 2 * border;
-    }
-    return item;
-  });
-}
-
-function fixColumeStackData(points, eachSpacing, columnLen, index, config, opts, series) {
-
-  return points.map(function (item, indexn) {
-
-    if (item === null) {
-      return null;
-    }
-    item.width = Math.ceil((eachSpacing - 2 * config.columePadding) / 2);
-
-    if (opts.extra.column && opts.extra.column.width && +opts.extra.column.width > 0) {
-      item.width = Math.min(item.width, +opts.extra.column.width);
-    }
-    return item;
-  });
-}
-
-function getXAxisPoints(categories, opts, config) {
-  var spacingValid = opts.width - opts.area[1] - opts.area[3];
-  var dataCount = opts.enableScroll ? Math.min(opts.xAxis.itemCount, categories.length) : categories.length;
-  if ((opts.type == 'line' || opts.type == 'area') && dataCount > 1 && opts.xAxis.boundaryGap == 'justify') {
-    dataCount -= 1;
-  }
-  var eachSpacing = spacingValid / dataCount;
-
-  var xAxisPoints = [];
-  var startX = opts.area[3];
-  var endX = opts.width - opts.area[1];
-  categories.forEach(function (item, index) {
-    xAxisPoints.push(startX + index * eachSpacing);
-  });
-  if (opts.xAxis.boundaryGap !== 'justify') {
-    if (opts.enableScroll === true) {
-      xAxisPoints.push(startX + categories.length * eachSpacing);
-    } else {
-      xAxisPoints.push(endX);
-    }
-  }
-  return {
-    xAxisPoints: xAxisPoints,
-    startX: startX,
-    endX: endX,
-    eachSpacing: eachSpacing };
-
-}
-
-function getCandleDataPoints(data, minRange, maxRange, xAxisPoints, eachSpacing, opts, config) {
-  var process = arguments.length > 7 && arguments[7] !== undefined ? arguments[7] : 1;
-  var points = [];
-  var validHeight = opts.height - opts.area[0] - opts.area[2];
-  data.forEach(function (item, index) {
-    if (item === null) {
-      points.push(null);
-    } else {
-      var cPoints = [];
-      item.forEach(function (items, indexs) {
-        var point = {};
-        point.x = xAxisPoints[index] + Math.round(eachSpacing / 2);
-        var value = items.value || items;
-        var height = validHeight * (value - minRange) / (maxRange - minRange);
-        height *= process;
-        point.y = opts.height - Math.round(height) - opts.area[2];
-        cPoints.push(point);
-      });
-      points.push(cPoints);
-    }
-  });
-
-  return points;
-}
-
-function getDataPoints(data, minRange, maxRange, xAxisPoints, eachSpacing, opts, config) {
-  var process = arguments.length > 7 && arguments[7] !== undefined ? arguments[7] : 1;
-  var boundaryGap = 'center';
-  if (opts.type == 'line' || opts.type == 'area') {
-    boundaryGap = opts.xAxis.boundaryGap;
-  }
-  var points = [];
-  var validHeight = opts.height - opts.area[0] - opts.area[2];
-  var validWidth = opts.width - opts.area[1] - opts.area[3];
-  data.forEach(function (item, index) {
-    if (item === null) {
-      points.push(null);
-    } else {
-      var point = {};
-      point.color = item.color;
-      point.x = xAxisPoints[index];
-      var value = item;
-      if (typeof item === 'object' && item !== null) {
-        if (item.constructor == Array) {
-          var xranges, xminRange, xmaxRange;
-          xranges = [].concat(opts.chartData.xAxisData.ranges);
-          xminRange = xranges.shift();
-          xmaxRange = xranges.pop();
-          value = item[1];
-          point.x = opts.area[3] + validWidth * (item[0] - xminRange) / (xmaxRange - xminRange);
-        } else {
-          value = item.value;
-        }
-      }
-      if (boundaryGap == 'center') {
-        point.x += Math.round(eachSpacing / 2);
-      }
-      var height = validHeight * (value - minRange) / (maxRange - minRange);
-      height *= process;
-      point.y = opts.height - Math.round(height) - opts.area[2];
-      points.push(point);
-    }
-  });
-
-  return points;
-}
-
-function getStackDataPoints(data, minRange, maxRange, xAxisPoints, eachSpacing, opts, config, seriesIndex, stackSeries) {
-  var process = arguments.length > 9 && arguments[9] !== undefined ? arguments[9] : 1;
-  var points = [];
-  var validHeight = opts.height - opts.area[0] - opts.area[2];
-
-  data.forEach(function (item, index) {
-    if (item === null) {
-      points.push(null);
-    } else {
-      var point = {};
-      point.color = item.color;
-      point.x = xAxisPoints[index] + Math.round(eachSpacing / 2);
-
-      if (seriesIndex > 0) {
-        var value = 0;
-        for (var i = 0; i <= seriesIndex; i++) {
-          value += stackSeries[i].data[index];
-        }
-        var value0 = value - item;
-        var height = validHeight * (value - minRange) / (maxRange - minRange);
-        var height0 = validHeight * (value0 - minRange) / (maxRange - minRange);
-      } else {
-        var value = item;
-        var height = validHeight * (value - minRange) / (maxRange - minRange);
-        var height0 = 0;
-      }
-      var heightc = height0;
-      height *= process;
-      heightc *= process;
-      point.y = opts.height - Math.round(height) - opts.area[2];
-      point.y0 = opts.height - Math.round(heightc) - opts.area[2];
-      points.push(point);
-    }
-  });
-
-  return points;
-}
-
-function getYAxisTextList(series, opts, config, stack) {
-  var index = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : -1;
-  var data;
-  if (stack == 'stack') {
-    data = dataCombineStack(series, opts.categories.length);
-  } else {
-    data = dataCombine(series);
-  }
-  var sorted = [];
-  // remove null from data
-  data = data.filter(function (item) {
-    //return item !== null;
-    if (typeof item === 'object' && item !== null) {
-      if (item.constructor == Array) {
-        return item !== null;
-      } else {
-        return item.value !== null;
-      }
-    } else {
-      return item !== null;
-    }
-  });
-  data.map(function (item) {
-    if (typeof item === 'object') {
-      if (item.constructor == Array) {
-        if (opts.type == 'candle') {
-          item.map(function (subitem) {
-            sorted.push(subitem);
-          });
-        } else {
-          sorted.push(item[1]);
-        }
-      } else {
-        sorted.push(item.value);
-      }
-    } else {
-      sorted.push(item);
-    }
-  });
-
-  var minData = 0;
-  var maxData = 0;
-  if (sorted.length > 0) {
-    minData = Math.min.apply(this, sorted);
-    maxData = Math.max.apply(this, sorted);
-  }
-  //为了兼容v1.9.0之前的项目
-  if (index > -1) {
-    if (typeof opts.yAxis.data[index].min === 'number') {
-      minData = Math.min(opts.yAxis.data[index].min, minData);
-    }
-    if (typeof opts.yAxis.data[index].max === 'number') {
-      maxData = Math.max(opts.yAxis.data[index].max, maxData);
-    }
-  } else {
-    if (typeof opts.yAxis.min === 'number') {
-      minData = Math.min(opts.yAxis.min, minData);
-    }
-    if (typeof opts.yAxis.max === 'number') {
-      maxData = Math.max(opts.yAxis.max, maxData);
-    }
-  }
-
-
-  if (minData === maxData) {
-    var rangeSpan = maxData || 10;
-    maxData += rangeSpan;
-  }
-
-  var dataRange = getDataRange(minData, maxData);
-  var minRange = dataRange.minRange;
-  var maxRange = dataRange.maxRange;
-
-  var range = [];
-  var eachRange = (maxRange - minRange) / opts.yAxis.splitNumber;
-
-  for (var i = 0; i <= opts.yAxis.splitNumber; i++) {
-    range.push(minRange + eachRange * i);
-  }
-  return range.reverse();
-}
-
-function calYAxisData(series, opts, config) {
-  //堆叠图重算Y轴
-  var columnstyle = assign({}, {
-    type: "" },
-  opts.extra.column);
-  //如果是多Y轴，重新计算
-  var YLength = opts.yAxis.data.length;
-  var newSeries = new Array(YLength);
-  if (YLength > 0) {
-    for (var i = 0; i < YLength; i++) {
-      newSeries[i] = [];
-      for (var j = 0; j < series.length; j++) {
-        if (series[j].index == i) {
-          newSeries[i].push(series[j]);
-        }
-      }
-    }
-    var rangesArr = new Array(YLength);
-    var rangesFormatArr = new Array(YLength);
-    var yAxisWidthArr = new Array(YLength);var _loop3 = function _loop3(
-
-    _i12) {
-      var yData = opts.yAxis.data[_i12];
-      //如果总开关不显示，强制每个Y轴为不显示
-      if (opts.yAxis.disabled == true) {
-        yData.disabled = true;
-      }
-      rangesArr[_i12] = getYAxisTextList(newSeries[_i12], opts, config, columnstyle.type, _i12);
-      var yAxisFontSizes = yData.fontSize || config.fontSize;
-      yAxisWidthArr[_i12] = { position: yData.position ? yData.position : 'left', width: 0 };
-      rangesFormatArr[_i12] = rangesArr[_i12].map(function (items) {
-        items = util.toFixed(items, 6);
-        items = yData.format ? yData.format(Number(items)) : items;
-        yAxisWidthArr[_i12].width = Math.max(yAxisWidthArr[_i12].width, measureText(items, yAxisFontSizes) + 5);
-        return items;
-      });
-      var calibration = yData.calibration ? 4 * opts.pixelRatio : 0;
-      yAxisWidthArr[_i12].width += calibration + 3 * opts.pixelRatio;
-      if (yData.disabled === true) {
-        yAxisWidthArr[_i12].width = 0;
-      }};for (var _i12 = 0; _i12 < YLength; _i12++) {_loop3(_i12);
-    }
-
-  } else {
-    var rangesArr = new Array(1);
-    var rangesFormatArr = new Array(1);
-    var yAxisWidthArr = new Array(1);
-    rangesArr[0] = getYAxisTextList(series, opts, config, columnstyle.type);
-    yAxisWidthArr[0] = { position: 'left', width: 0 };
-    var yAxisFontSize = opts.yAxis.fontSize || config.fontSize;
-    rangesFormatArr[0] = rangesArr[0].map(function (item) {
-      item = util.toFixed(item, 6);
-      item = opts.yAxis.format ? opts.yAxis.format(Number(item)) : item;
-      yAxisWidthArr[0].width = Math.max(yAxisWidthArr[0].width, measureText(item, yAxisFontSize) + 5);
-      return item;
-    });
-    yAxisWidthArr[0].width += 3 * opts.pixelRatio;
-    if (opts.yAxis.disabled === true) {
-      yAxisWidthArr[0] = { position: 'left', width: 0 };
-      opts.yAxis.data[0] = { disabled: true };
-    } else {
-      opts.yAxis.data[0] = { disabled: false, position: 'left', max: opts.yAxis.max, min: opts.yAxis.min, format: opts.yAxis.format };
-    }
-
-  }
-
-  return {
-    rangesFormat: rangesFormatArr,
-    ranges: rangesArr,
-    yAxisWidth: yAxisWidthArr };
-
-
-}
-
-function calTooltipYAxisData(point, series, opts, config, eachSpacing) {
-  var ranges = [].concat(opts.chartData.yAxisData.ranges);
-  var spacingValid = opts.height - opts.area[0] - opts.area[2];
-  var minAxis = opts.area[0];
-  var items = [];
-  for (var i = 0; i < ranges.length; i++) {
-    var maxVal = ranges[i].shift();
-    var minVal = ranges[i].pop();
-    var item = maxVal - (maxVal - minVal) * (point - minAxis) / spacingValid;
-    item = opts.yAxis.data[i].format ? opts.yAxis.data[i].format(Number(item)) : item.toFixed(0);
-    items.push(String(item));
-  }
-  return items;
-}
-
-function calMarkLineData(points, opts) {
-  var minRange, maxRange;
-  var spacingValid = opts.height - opts.area[0] - opts.area[2];
-  for (var i = 0; i < points.length; i++) {
-    points[i].yAxisIndex = points[i].yAxisIndex ? points[i].yAxisIndex : 0;
-    var range = [].concat(opts.chartData.yAxisData.ranges[points[i].yAxisIndex]);
-    minRange = range.pop();
-    maxRange = range.shift();
-    var height = spacingValid * (points[i].value - minRange) / (maxRange - minRange);
-    points[i].y = opts.height - Math.round(height) - opts.area[2];
-  }
-  return points;
-}
-
-function contextRotate(context, opts) {
-  if (opts.rotateLock !== true) {
-    context.translate(opts.height, 0);
-    context.rotate(90 * Math.PI / 180);
-  } else if (opts._rotate_ !== true) {
-    context.translate(opts.height, 0);
-    context.rotate(90 * Math.PI / 180);
-    opts._rotate_ = true;
-  }
-}
-
-function drawPointShape(points, color, shape, context, opts) {
-  context.beginPath();
-  if (opts.dataPointShapeType == 'hollow') {
-    context.setStrokeStyle(color);
-    context.setFillStyle(opts.background);
-    context.setLineWidth(2 * opts.pixelRatio);
-  } else {
-    context.setStrokeStyle("#ffffff");
-    context.setFillStyle(color);
-    context.setLineWidth(1 * opts.pixelRatio);
-  }
-  if (shape === 'diamond') {
-    points.forEach(function (item, index) {
-      if (item !== null) {
-        context.moveTo(item.x, item.y - 4.5);
-        context.lineTo(item.x - 4.5, item.y);
-        context.lineTo(item.x, item.y + 4.5);
-        context.lineTo(item.x + 4.5, item.y);
-        context.lineTo(item.x, item.y - 4.5);
-      }
-    });
-  } else if (shape === 'circle') {
-    points.forEach(function (item, index) {
-      if (item !== null) {
-        context.moveTo(item.x + 2.5 * opts.pixelRatio, item.y);
-        context.arc(item.x, item.y, 3 * opts.pixelRatio, 0, 2 * Math.PI, false);
-      }
-    });
-  } else if (shape === 'rect') {
-    points.forEach(function (item, index) {
-      if (item !== null) {
-        context.moveTo(item.x - 3.5, item.y - 3.5);
-        context.rect(item.x - 3.5, item.y - 3.5, 7, 7);
-      }
-    });
-  } else if (shape === 'triangle') {
-    points.forEach(function (item, index) {
-      if (item !== null) {
-        context.moveTo(item.x, item.y - 4.5);
-        context.lineTo(item.x - 4.5, item.y + 4.5);
-        context.lineTo(item.x + 4.5, item.y + 4.5);
-        context.lineTo(item.x, item.y - 4.5);
-      }
-    });
-  }
-  context.closePath();
-  context.fill();
-  context.stroke();
-}
-
-function drawRingTitle(opts, config, context, center) {
-  var titlefontSize = opts.title.fontSize || config.titleFontSize;
-  var subtitlefontSize = opts.subtitle.fontSize || config.subtitleFontSize;
-  var title = opts.title.name || '';
-  var subtitle = opts.subtitle.name || '';
-  var titleFontColor = opts.title.color || config.titleColor;
-  var subtitleFontColor = opts.subtitle.color || config.subtitleColor;
-  var titleHeight = title ? titlefontSize : 0;
-  var subtitleHeight = subtitle ? subtitlefontSize : 0;
-  var margin = 5;
-
-  if (subtitle) {
-    var textWidth = measureText(subtitle, subtitlefontSize);
-    var startX = center.x - textWidth / 2 + (opts.subtitle.offsetX || 0);
-    var startY = center.y + subtitlefontSize / 2 + (opts.subtitle.offsetY || 0);
-    if (title) {
-      startY += (titleHeight + margin) / 2;
-    }
-    context.beginPath();
-    context.setFontSize(subtitlefontSize);
-    context.setFillStyle(subtitleFontColor);
-    context.fillText(subtitle, startX, startY);
-    context.closePath();
-    context.stroke();
-  }
-  if (title) {
-    var _textWidth = measureText(title, titlefontSize);
-    var _startX = center.x - _textWidth / 2 + (opts.title.offsetX || 0);
-    var _startY = center.y + titlefontSize / 2 + (opts.title.offsetY || 0);
-    if (subtitle) {
-      _startY -= (subtitleHeight + margin) / 2;
-    }
-    context.beginPath();
-    context.setFontSize(titlefontSize);
-    context.setFillStyle(titleFontColor);
-    context.fillText(title, _startX, _startY);
-    context.closePath();
-    context.stroke();
-  }
-}
-
-function drawPointText(points, series, config, context) {
-  // 绘制数据文案
-  var data = series.data;
-  points.forEach(function (item, index) {
-    if (item !== null) {
-      //var formatVal = series.format ? series.format(data[index]) : data[index];
-      context.beginPath();
-      context.setFontSize(series.textSize || config.fontSize);
-      context.setFillStyle(series.textColor || '#666666');
-      var value = data[index];
-      if (typeof data[index] === 'object' && data[index] !== null) {
-        if (data[index].constructor == Array) {
-          value = data[index][1];
-        } else {
-          value = data[index].value;
-        }
-      }
-      var formatVal = series.format ? series.format(value) : value;
-      context.fillText(String(formatVal), item.x - measureText(formatVal, series.textSize || config.fontSize) / 2, item.y - 4);
-      context.closePath();
-      context.stroke();
-    }
-  });
-
-}
-
-function drawGaugeLabel(gaugeOption, radius, centerPosition, opts, config, context) {
-  radius -= gaugeOption.width / 2 + config.gaugeLabelTextMargin;
-
-  var totalAngle = gaugeOption.startAngle - gaugeOption.endAngle + 1;
-  var splitAngle = totalAngle / gaugeOption.splitLine.splitNumber;
-  var totalNumber = gaugeOption.endNumber - gaugeOption.startNumber;
-  var splitNumber = totalNumber / gaugeOption.splitLine.splitNumber;
-  var nowAngle = gaugeOption.startAngle;
-  var nowNumber = gaugeOption.startNumber;
-  for (var i = 0; i < gaugeOption.splitLine.splitNumber + 1; i++) {
-    var pos = {
-      x: radius * Math.cos(nowAngle * Math.PI),
-      y: radius * Math.sin(nowAngle * Math.PI) };
-
-    var labelText = gaugeOption.labelFormat ? gaugeOption.labelFormat(nowNumber) : nowNumber;
-    pos.x += centerPosition.x - measureText(labelText) / 2;
-    pos.y += centerPosition.y;
-    var startX = pos.x;
-    var startY = pos.y;
-    context.beginPath();
-    context.setFontSize(config.fontSize);
-    context.setFillStyle(gaugeOption.labelColor || '#666666');
-    context.fillText(labelText, startX, startY + config.fontSize / 2);
-    context.closePath();
-    context.stroke();
-
-    nowAngle += splitAngle;
-    if (nowAngle >= 2) {
-      nowAngle = nowAngle % 2;
-    }
-    nowNumber += splitNumber;
-  }
-
-}
-
-function drawRadarLabel(angleList, radius, centerPosition, opts, config, context) {
-  var radarOption = opts.extra.radar || {};
-  radius += config.radarLabelTextMargin;
-
-  angleList.forEach(function (angle, index) {
-    var pos = {
-      x: radius * Math.cos(angle),
-      y: radius * Math.sin(angle) };
-
-    var posRelativeCanvas = convertCoordinateOrigin(pos.x, pos.y, centerPosition);
-    var startX = posRelativeCanvas.x;
-    var startY = posRelativeCanvas.y;
-    if (util.approximatelyEqual(pos.x, 0)) {
-      startX -= measureText(opts.categories[index] || '') / 2;
-    } else if (pos.x < 0) {
-      startX -= measureText(opts.categories[index] || '');
-    }
-    context.beginPath();
-    context.setFontSize(config.fontSize);
-    context.setFillStyle(radarOption.labelColor || '#666666');
-    context.fillText(opts.categories[index] || '', startX, startY + config.fontSize / 2);
-    context.closePath();
-    context.stroke();
-  });
-
-}
-
-function drawPieText(series, opts, config, context, radius, center) {
-  var lineRadius = config.pieChartLinePadding;
-  var textObjectCollection = [];
-  var lastTextObject = null;
-
-  var seriesConvert = series.map(function (item) {
-    var text = item.format ? item.format(+item._proportion_.toFixed(2)) : util.toFixed(item._proportion_.toFixed(4) * 100) + '%';
-    if (item._rose_proportion_) item._proportion_ = item._rose_proportion_;
-    var arc = 2 * Math.PI - (item._start_ + 2 * Math.PI * item._proportion_ / 2);
-    var color = item.color;
-    var radius = item._radius_;
-    return {
-      arc: arc,
-      text: text,
-      color: color,
-      radius: radius,
-      textColor: item.textColor,
-      textSize: item.textSize };
-
-  });
-  for (var i = 0; i < seriesConvert.length; i++) {
-    var item = seriesConvert[i];
-    // line end
-    var orginX1 = Math.cos(item.arc) * (item.radius + lineRadius);
-    var orginY1 = Math.sin(item.arc) * (item.radius + lineRadius);
-
-    // line start
-    var orginX2 = Math.cos(item.arc) * item.radius;
-    var orginY2 = Math.sin(item.arc) * item.radius;
-
-    // text start
-    var orginX3 = orginX1 >= 0 ? orginX1 + config.pieChartTextPadding : orginX1 - config.pieChartTextPadding;
-    var orginY3 = orginY1;
-    var textWidth = measureText(item.text, item.textSize || config.fontSize);
-    var startY = orginY3;
-
-    if (lastTextObject && util.isSameXCoordinateArea(lastTextObject.start, {
-      x: orginX3 }))
-    {
-      if (orginX3 > 0) {
-        startY = Math.min(orginY3, lastTextObject.start.y);
-      } else if (orginX1 < 0) {
-        startY = Math.max(orginY3, lastTextObject.start.y);
-      } else {
-        if (orginY3 > 0) {
-          startY = Math.max(orginY3, lastTextObject.start.y);
-        } else {
-          startY = Math.min(orginY3, lastTextObject.start.y);
-        }
-      }
-    }
-    if (orginX3 < 0) {
-      orginX3 -= textWidth;
-    }
-
-    var textObject = {
-      lineStart: {
-        x: orginX2,
-        y: orginY2 },
-
-      lineEnd: {
-        x: orginX1,
-        y: orginY1 },
-
-      start: {
-        x: orginX3,
-        y: startY },
-
-      width: textWidth,
-      height: config.fontSize,
-      text: item.text,
-      color: item.color,
-      textColor: item.textColor,
-      textSize: item.textSize };
-
-    lastTextObject = avoidCollision(textObject, lastTextObject);
-    textObjectCollection.push(lastTextObject);
-  }
-
-  for (var _i13 = 0; _i13 < textObjectCollection.length; _i13++) {
-    var _item6 = textObjectCollection[_i13];
-    var lineStartPoistion = convertCoordinateOrigin(_item6.lineStart.x, _item6.lineStart.y, center);
-    var lineEndPoistion = convertCoordinateOrigin(_item6.lineEnd.x, _item6.lineEnd.y, center);
-    var textPosition = convertCoordinateOrigin(_item6.start.x, _item6.start.y, center);
-    context.setLineWidth(1 * opts.pixelRatio);
-    context.setFontSize(config.fontSize);
-    context.beginPath();
-    context.setStrokeStyle(_item6.color);
-    context.setFillStyle(_item6.color);
-    context.moveTo(lineStartPoistion.x, lineStartPoistion.y);
-    var curveStartX = _item6.start.x < 0 ? textPosition.x + _item6.width : textPosition.x;
-    var textStartX = _item6.start.x < 0 ? textPosition.x - 5 : textPosition.x + 5;
-    context.quadraticCurveTo(lineEndPoistion.x, lineEndPoistion.y, curveStartX, textPosition.y);
-    context.moveTo(lineStartPoistion.x, lineStartPoistion.y);
-    context.stroke();
-    context.closePath();
-    context.beginPath();
-    context.moveTo(textPosition.x + _item6.width, textPosition.y);
-    context.arc(curveStartX, textPosition.y, 2, 0, 2 * Math.PI);
-    context.closePath();
-    context.fill();
-    context.beginPath();
-    context.setFontSize(_item6.textSize || config.fontSize);
-    context.setFillStyle(_item6.textColor || '#666666');
-    context.fillText(_item6.text, textStartX, textPosition.y + 3);
-    context.closePath();
-    context.stroke();
-    context.closePath();
-  }
-}
-
-function drawToolTipSplitLine(offsetX, opts, config, context) {
-  var toolTipOption = opts.extra.tooltip || {};
-  toolTipOption.gridType = toolTipOption.gridType == undefined ? 'solid' : toolTipOption.gridType;
-  toolTipOption.dashLength = toolTipOption.dashLength == undefined ? 4 : toolTipOption.dashLength;
-  var startY = opts.area[0];
-  var endY = opts.height - opts.area[2];
-
-  if (toolTipOption.gridType == 'dash') {
-    context.setLineDash([toolTipOption.dashLength, toolTipOption.dashLength]);
-  }
-  context.setStrokeStyle(toolTipOption.gridColor || '#cccccc');
-  context.setLineWidth(1 * opts.pixelRatio);
-  context.beginPath();
-  context.moveTo(offsetX, startY);
-  context.lineTo(offsetX, endY);
-  context.stroke();
-  context.setLineDash([]);
-
-  if (toolTipOption.xAxisLabel) {
-    var labelText = opts.categories[opts.tooltip.index];
-    context.setFontSize(config.fontSize);
-    var textWidth = measureText(labelText, config.fontSize);
-
-    var textX = offsetX - 0.5 * textWidth;
-    var textY = endY;
-    context.beginPath();
-    context.setFillStyle(hexToRgb(toolTipOption.labelBgColor || config.toolTipBackground, toolTipOption.labelBgOpacity || config.toolTipOpacity));
-    context.setStrokeStyle(toolTipOption.labelBgColor || config.toolTipBackground);
-    context.setLineWidth(1 * opts.pixelRatio);
-    context.rect(textX - config.toolTipPadding, textY, textWidth + 2 * config.toolTipPadding, config.fontSize + 2 * config.toolTipPadding);
-    context.closePath();
-    context.stroke();
-    context.fill();
-
-    context.beginPath();
-    context.setFontSize(config.fontSize);
-    context.setFillStyle(toolTipOption.labelFontColor || config.fontColor);
-    context.fillText(String(labelText), textX, textY + config.toolTipPadding + config.fontSize);
-    context.closePath();
-    context.stroke();
-  }
-}
-
-function drawMarkLine(opts, config, context) {
-  var markLineOption = assign({}, {
-    type: 'solid',
-    dashLength: 4,
-    data: [] },
-  opts.extra.markLine);
-  var startX = opts.area[3];
-  var endX = opts.width - opts.area[1];
-  var points = calMarkLineData(markLineOption.data, opts);
-
-  for (var i = 0; i < points.length; i++) {
-    var item = assign({}, {
-      lineColor: '#DE4A42',
-      showLabel: false,
-      labelFontColor: '#666666',
-      labelBgColor: '#DFE8FF',
-      labelBgOpacity: 0.8,
-      yAxisIndex: 0 },
-    points[i]);
-
-    if (markLineOption.type == 'dash') {
-      context.setLineDash([markLineOption.dashLength, markLineOption.dashLength]);
-    }
-    context.setStrokeStyle(item.lineColor);
-    context.setLineWidth(1 * opts.pixelRatio);
-    context.beginPath();
-    context.moveTo(startX, item.y);
-    context.lineTo(endX, item.y);
-    context.stroke();
-    context.setLineDash([]);
-    if (item.showLabel) {
-      var labelText = opts.yAxis.format ? opts.yAxis.format(Number(item.value)) : item.value;
-      context.setFontSize(config.fontSize);
-      var textWidth = measureText(labelText, config.fontSize);
-      var bgStartX = opts.padding[3] + config.yAxisTitleWidth - config.toolTipPadding;
-      var bgEndX = Math.max(opts.area[3], textWidth + config.toolTipPadding * 2);
-      var bgWidth = bgEndX - bgStartX;
-
-      var textX = bgStartX + (bgWidth - textWidth) / 2;
-      var textY = item.y;
-      context.setFillStyle(hexToRgb(item.labelBgColor, item.labelBgOpacity));
-      context.setStrokeStyle(item.labelBgColor);
-      context.setLineWidth(1 * opts.pixelRatio);
-      context.beginPath();
-      context.rect(bgStartX, textY - 0.5 * config.fontSize - config.toolTipPadding, bgWidth, config.fontSize + 2 * config.toolTipPadding);
-      context.closePath();
-      context.stroke();
-      context.fill();
-
-      context.beginPath();
-      context.setFontSize(config.fontSize);
-      context.setFillStyle(item.labelFontColor);
-      context.fillText(String(labelText), textX, textY + 0.5 * config.fontSize);
-      context.stroke();
-    }
-  }
-}
-
-function drawToolTipHorizentalLine(opts, config, context, eachSpacing, xAxisPoints) {
-  var toolTipOption = assign({}, {
-    gridType: 'solid',
-    dashLength: 4 },
-  opts.extra.tooltip);
-
-  var startX = opts.area[3];
-  var endX = opts.width - opts.area[1];
-
-  if (toolTipOption.gridType == 'dash') {
-    context.setLineDash([toolTipOption.dashLength, toolTipOption.dashLength]);
-  }
-  context.setStrokeStyle(toolTipOption.gridColor || '#cccccc');
-  context.setLineWidth(1 * opts.pixelRatio);
-  context.beginPath();
-  context.moveTo(startX, opts.tooltip.offset.y);
-  context.lineTo(endX, opts.tooltip.offset.y);
-  context.stroke();
-  context.setLineDash([]);
-
-  if (toolTipOption.yAxisLabel) {
-    var labelText = calTooltipYAxisData(opts.tooltip.offset.y, opts.series, opts, config, eachSpacing);
-    var widthArr = opts.chartData.yAxisData.yAxisWidth;
-    var tStartLeft = opts.area[3];
-    var tStartRight = opts.width - opts.area[1];
-    for (var i = 0; i < labelText.length; i++) {
-      context.setFontSize(config.fontSize);
-      var textWidth = measureText(labelText[i], config.fontSize);
-      var bgStartX = void 0,bgEndX = void 0,bgWidth = void 0;
-      if (widthArr[i].position == 'left') {
-        bgStartX = tStartLeft - widthArr[i].width;
-        bgEndX = Math.max(bgStartX, bgStartX + textWidth + config.toolTipPadding * 2);
-      } else {
-        bgStartX = tStartRight;
-        bgEndX = Math.max(bgStartX + widthArr[i].width, bgStartX + textWidth + config.toolTipPadding * 2);
-      }
-      bgWidth = bgEndX - bgStartX;
-
-      var textX = bgStartX + (bgWidth - textWidth) / 2;
-      var textY = opts.tooltip.offset.y;
-      context.beginPath();
-      context.setFillStyle(hexToRgb(toolTipOption.labelBgColor || config.toolTipBackground, toolTipOption.labelBgOpacity || config.toolTipOpacity));
-      context.setStrokeStyle(toolTipOption.labelBgColor || config.toolTipBackground);
-      context.setLineWidth(1 * opts.pixelRatio);
-      context.rect(bgStartX, textY - 0.5 * config.fontSize - config.toolTipPadding, bgWidth, config.fontSize + 2 * config.toolTipPadding);
-      context.closePath();
-      context.stroke();
-      context.fill();
-
-      context.beginPath();
-      context.setFontSize(config.fontSize);
-      context.setFillStyle(toolTipOption.labelFontColor || config.fontColor);
-      context.fillText(labelText[i], textX, textY + 0.5 * config.fontSize);
-      context.closePath();
-      context.stroke();
-      if (widthArr[i].position == 'left') {
-        tStartLeft -= widthArr[i].width + opts.yAxis.padding;
-      } else {
-        tStartRight += widthArr[i].width + opts.yAxis.padding;
-      }
-    }
-  }
-}
-
-function drawToolTipSplitArea(offsetX, opts, config, context, eachSpacing) {
-  var toolTipOption = assign({}, {
-    activeBgColor: '#000000',
-    activeBgOpacity: 0.08 },
-  opts.extra.tooltip);
-  var startY = opts.area[0];
-  var endY = opts.height - opts.area[2];
-  context.beginPath();
-  context.setFillStyle(hexToRgb(toolTipOption.activeBgColor, toolTipOption.activeBgOpacity));
-  context.rect(offsetX - eachSpacing / 2, startY, eachSpacing, endY - startY);
-  context.closePath();
-  context.fill();
-}
-
-function drawToolTip(textList, offset, opts, config, context, eachSpacing, xAxisPoints) {
-  var toolTipOption = assign({}, {
-    showBox: true,
-    bgColor: '#000000',
-    bgOpacity: 0.7,
-    fontColor: '#FFFFFF' },
-  opts.extra.tooltip);
-  var legendWidth = 4 * opts.pixelRatio;
-  var legendMarginRight = 5 * opts.pixelRatio;
-  var arrowWidth = 8 * opts.pixelRatio;
-  var isOverRightBorder = false;
-  if (opts.type == 'line' || opts.type == 'area' || opts.type == 'candle' || opts.type == 'mix') {
-    drawToolTipSplitLine(opts.tooltip.offset.x, opts, config, context);
-  }
-
-  offset = assign({
-    x: 0,
-    y: 0 },
-  offset);
-  offset.y -= 8 * opts.pixelRatio;
-  var textWidth = textList.map(function (item) {
-    return measureText(item.text, config.fontSize);
-  });
-  var toolTipWidth = legendWidth + legendMarginRight + 4 * config.toolTipPadding + Math.max.apply(null, textWidth);
-  var toolTipHeight = 2 * config.toolTipPadding + textList.length * config.toolTipLineHeight;
-
-  if (toolTipOption.showBox == false) {return;}
-  // if beyond the right border
-  if (offset.x - Math.abs(opts._scrollDistance_) + arrowWidth + toolTipWidth > opts.width) {
-    isOverRightBorder = true;
-  }
-  if (toolTipHeight + offset.y > opts.height) {
-    offset.y = opts.height - toolTipHeight;
-  }
-  // draw background rect
-  context.beginPath();
-  context.setFillStyle(hexToRgb(toolTipOption.bgColor || config.toolTipBackground, toolTipOption.bgOpacity || config.toolTipOpacity));
-  if (isOverRightBorder) {
-    context.moveTo(offset.x, offset.y + 10 * opts.pixelRatio);
-    context.lineTo(offset.x - arrowWidth, offset.y + 10 * opts.pixelRatio - 5 * opts.pixelRatio);
-    context.lineTo(offset.x - arrowWidth, offset.y);
-    context.lineTo(offset.x - arrowWidth - Math.round(toolTipWidth), offset.y);
-    context.lineTo(offset.x - arrowWidth - Math.round(toolTipWidth), offset.y + toolTipHeight);
-    context.lineTo(offset.x - arrowWidth, offset.y + toolTipHeight);
-    context.lineTo(offset.x - arrowWidth, offset.y + 10 * opts.pixelRatio + 5 * opts.pixelRatio);
-    context.lineTo(offset.x, offset.y + 10 * opts.pixelRatio);
-  } else {
-    context.moveTo(offset.x, offset.y + 10 * opts.pixelRatio);
-    context.lineTo(offset.x + arrowWidth, offset.y + 10 * opts.pixelRatio - 5 * opts.pixelRatio);
-    context.lineTo(offset.x + arrowWidth, offset.y);
-    context.lineTo(offset.x + arrowWidth + Math.round(toolTipWidth), offset.y);
-    context.lineTo(offset.x + arrowWidth + Math.round(toolTipWidth), offset.y + toolTipHeight);
-    context.lineTo(offset.x + arrowWidth, offset.y + toolTipHeight);
-    context.lineTo(offset.x + arrowWidth, offset.y + 10 * opts.pixelRatio + 5 * opts.pixelRatio);
-    context.lineTo(offset.x, offset.y + 10 * opts.pixelRatio);
-  }
-
-  context.closePath();
-  context.fill();
-
-  // draw legend
-  textList.forEach(function (item, index) {
-    if (item.color !== null) {
-      context.beginPath();
-      context.setFillStyle(item.color);
-      var startX = offset.x + arrowWidth + 2 * config.toolTipPadding;
-      var startY = offset.y + (config.toolTipLineHeight - config.fontSize) / 2 + config.toolTipLineHeight * index +
-      config.toolTipPadding + 1;
-      if (isOverRightBorder) {
-        startX = offset.x - toolTipWidth - arrowWidth + 2 * config.toolTipPadding;
-      }
-      context.fillRect(startX, startY, legendWidth, config.fontSize);
-      context.closePath();
-    }
-  });
-
-  // draw text list
-
-  textList.forEach(function (item, index) {
-    var startX = offset.x + arrowWidth + 2 * config.toolTipPadding + legendWidth + legendMarginRight;
-    if (isOverRightBorder) {
-      startX = offset.x - toolTipWidth - arrowWidth + 2 * config.toolTipPadding + +legendWidth + legendMarginRight;
-    }
-    var startY = offset.y + (config.toolTipLineHeight - config.fontSize) / 2 + config.toolTipLineHeight * index +
-    config.toolTipPadding;
-    context.beginPath();
-    context.setFontSize(config.fontSize);
-    context.setFillStyle(toolTipOption.fontColor);
-    context.fillText(item.text, startX, startY + config.fontSize);
-    context.closePath();
-    context.stroke();
-  });
-}
-
-function drawYAxisTitle(title, opts, config, context) {
-  var startX = config.xAxisHeight + (opts.height - config.xAxisHeight - measureText(title)) / 2;
-  context.save();
-  context.beginPath();
-  context.setFontSize(config.fontSize);
-  context.setFillStyle(opts.yAxis.titleFontColor || '#333333');
-  context.translate(0, opts.height);
-  context.rotate(-90 * Math.PI / 180);
-  context.fillText(title, startX, opts.padding[3] + 0.5 * config.fontSize);
-  context.closePath();
-  context.stroke();
-  context.restore();
-}
-
-function drawColumnDataPoints(series, opts, config, context) {
-  var process = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 1;
-  var xAxisData = opts.chartData.xAxisData,
-  xAxisPoints = xAxisData.xAxisPoints,
-  eachSpacing = xAxisData.eachSpacing;
-  var columnOption = assign({}, {
-    type: 'group',
-    width: eachSpacing / 2,
-    meter: {
-      border: 4,
-      fillColor: '#FFFFFF' } },
-
-  opts.extra.column);
-
-  var calPoints = [];
-  context.save();
-
-  var leftNum = -2;
-  var rightNum = xAxisPoints.length + 2;
-
-  if (opts._scrollDistance_ && opts._scrollDistance_ !== 0 && opts.enableScroll === true) {
-    context.translate(opts._scrollDistance_, 0);
-    leftNum = Math.floor(-opts._scrollDistance_ / eachSpacing) - 2;
-    rightNum = leftNum + opts.xAxis.itemCount + 4;
-  }
-  if (opts.tooltip && opts.tooltip.textList && opts.tooltip.textList.length && process === 1) {
-    drawToolTipSplitArea(opts.tooltip.offset.x, opts, config, context, eachSpacing);
-  }
-
-  series.forEach(function (eachSeries, seriesIndex) {
-    var ranges, minRange, maxRange;
-    ranges = [].concat(opts.chartData.yAxisData.ranges[eachSeries.index]);
-    minRange = ranges.pop();
-    maxRange = ranges.shift();
-
-    var data = eachSeries.data;
-    switch (columnOption.type) {
-      case 'group':
-        var points = getDataPoints(data, minRange, maxRange, xAxisPoints, eachSpacing, opts, config, process);
-        var tooltipPoints = getStackDataPoints(data, minRange, maxRange, xAxisPoints, eachSpacing, opts, config, seriesIndex, series, process);
-        calPoints.push(tooltipPoints);
-        points = fixColumeData(points, eachSpacing, series.length, seriesIndex, config, opts);
-        for (var i = 0; i < points.length; i++) {
-          var item = points[i];
-          if (item !== null && i > leftNum && i < rightNum) {
-            context.beginPath();
-            context.setStrokeStyle(item.color || eachSeries.color);
-            context.setLineWidth(1);
-            context.setFillStyle(item.color || eachSeries.color);
-            var startX = item.x - item.width / 2;
-            var height = opts.height - item.y - opts.area[2];
-            context.moveTo(startX, item.y);
-            context.lineTo(startX + item.width - 2, item.y);
-            context.lineTo(startX + item.width - 2, opts.height - opts.area[2]);
-            context.lineTo(startX, opts.height - opts.area[2]);
-            context.lineTo(startX, item.y);
-            context.closePath();
-            context.stroke();
-            context.fill();
-          }
-        };
-        break;
-      case 'stack':
-        // 绘制堆叠数据图
-        var points = getStackDataPoints(data, minRange, maxRange, xAxisPoints, eachSpacing, opts, config, seriesIndex, series, process);
-        calPoints.push(points);
-        points = fixColumeStackData(points, eachSpacing, series.length, seriesIndex, config, opts, series);
-
-        for (var _i14 = 0; _i14 < points.length; _i14++) {
-          var _item7 = points[_i14];
-          if (_item7 !== null && _i14 > leftNum && _i14 < rightNum) {
-            context.beginPath();
-            context.setFillStyle(_item7.color || eachSeries.color);
-            var startX = _item7.x - _item7.width / 2 + 1;
-            var height = opts.height - _item7.y - opts.area[2];
-            var height0 = opts.height - _item7.y0 - opts.area[2];
-            if (seriesIndex > 0) {
-              height -= height0;
-            }
-            context.moveTo(startX, _item7.y);
-            context.fillRect(startX, _item7.y, _item7.width - 2, height);
-            context.closePath();
-            context.fill();
-          }
-        };
-        break;
-      case 'meter':
-        // 绘制温度计数据图
-        var points = getDataPoints(data, minRange, maxRange, xAxisPoints, eachSpacing, opts, config, process);
-        calPoints.push(points);
-        points = fixColumeMeterData(points, eachSpacing, series.length, seriesIndex, config, opts, columnOption.meter.border);
-        if (seriesIndex == 0) {
-          for (var _i15 = 0; _i15 < points.length; _i15++) {
-            var _item8 = points[_i15];
-            if (_item8 !== null && _i15 > leftNum && _i15 < rightNum) {
-              //画背景颜色
-              context.beginPath();
-              context.setFillStyle(columnOption.meter.fillColor);
-              var startX = _item8.x - _item8.width / 2;
-              var height = opts.height - _item8.y - opts.area[2];
-              context.moveTo(startX, _item8.y);
-              context.fillRect(startX, _item8.y, _item8.width, height);
-              context.closePath();
-              context.fill();
-              //画边框线
-              if (columnOption.meter.border > 0) {
-                context.beginPath();
-                context.setStrokeStyle(eachSeries.color);
-                context.setLineWidth(columnOption.meter.border * opts.pixelRatio);
-                context.moveTo(startX + columnOption.meter.border * 0.5, _item8.y + height);
-                context.lineTo(startX + columnOption.meter.border * 0.5, _item8.y + columnOption.meter.border * 0.5);
-                context.lineTo(startX + _item8.width - columnOption.meter.border * 0.5, _item8.y + columnOption.meter.border * 0.5);
-                context.lineTo(startX + _item8.width - columnOption.meter.border * 0.5, _item8.y + height);
-                context.stroke();
-              }
-            }
-          };
-        } else {
-          for (var _i16 = 0; _i16 < points.length; _i16++) {
-            var _item9 = points[_i16];
-            if (_item9 !== null && _i16 > leftNum && _i16 < rightNum) {
-              context.beginPath();
-              context.setFillStyle(_item9.color || eachSeries.color);
-              var startX = _item9.x - _item9.width / 2;
-              var height = opts.height - _item9.y - opts.area[2];
-              context.moveTo(startX, _item9.y);
-              context.fillRect(startX, _item9.y, _item9.width, height);
-              context.closePath();
-              context.fill();
-            }
-          };
-        }
-        break;}
-
-  });
-
-  if (opts.dataLabel !== false && process === 1) {
-    series.forEach(function (eachSeries, seriesIndex) {
-      var ranges, minRange, maxRange;
-      ranges = [].concat(opts.chartData.yAxisData.ranges[eachSeries.index]);
-      minRange = ranges.pop();
-      maxRange = ranges.shift();
-      var data = eachSeries.data;
-      switch (columnOption.type) {
-        case 'group':
-          var points = getDataPoints(data, minRange, maxRange, xAxisPoints, eachSpacing, opts, config, process);
-          points = fixColumeData(points, eachSpacing, series.length, seriesIndex, config, opts);
-          drawPointText(points, eachSeries, config, context);
-          break;
-        case 'stack':
-          var points = getStackDataPoints(data, minRange, maxRange, xAxisPoints, eachSpacing, opts, config, seriesIndex, series, process);
-          drawPointText(points, eachSeries, config, context);
-          break;
-        case 'meter':
-          var points = getDataPoints(data, minRange, maxRange, xAxisPoints, eachSpacing, opts, config, process);
-          drawPointText(points, eachSeries, config, context);
-          break;}
-
-    });
-  }
-
-  context.restore();
-
-  return {
-    xAxisPoints: xAxisPoints,
-    calPoints: calPoints,
-    eachSpacing: eachSpacing };
-
-}
-
-function drawCandleDataPoints(series, seriesMA, opts, config, context) {
-  var process = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : 1;
-  var candleOption = assign({}, {
-    color: {},
-    average: {} },
-  opts.extra.candle);
-  candleOption.color = assign({}, {
-    upLine: '#f04864',
-    upFill: '#f04864',
-    downLine: '#2fc25b',
-    downFill: '#2fc25b' },
-  candleOption.color);
-  candleOption.average = assign({}, {
-    show: false,
-    name: [],
-    day: [],
-    color: config.colors },
-  candleOption.average);
-  opts.extra.candle = candleOption;
-
-  var xAxisData = opts.chartData.xAxisData,
-  xAxisPoints = xAxisData.xAxisPoints,
-  eachSpacing = xAxisData.eachSpacing;
-
-  var calPoints = [];
-
-  context.save();
-
-  var leftNum = -2;
-  var rightNum = xAxisPoints.length + 2;
-  var leftSpace = 0;
-  var rightSpace = opts.width + eachSpacing;
-
-  if (opts._scrollDistance_ && opts._scrollDistance_ !== 0 && opts.enableScroll === true) {
-    context.translate(opts._scrollDistance_, 0);
-    leftNum = Math.floor(-opts._scrollDistance_ / eachSpacing) - 2;
-    rightNum = leftNum + opts.xAxis.itemCount + 4;
-    leftSpace = -opts._scrollDistance_ - eachSpacing + opts.area[3];
-    rightSpace = leftSpace + (opts.xAxis.itemCount + 4) * eachSpacing;
-  }
-
-  //画均线
-  if (candleOption.average.show || seriesMA) {
-    seriesMA.forEach(function (eachSeries, seriesIndex) {
-      var ranges, minRange, maxRange;
-      ranges = [].concat(opts.chartData.yAxisData.ranges[eachSeries.index]);
-      minRange = ranges.pop();
-      maxRange = ranges.shift();
-
-      var data = eachSeries.data;
-      var points = getDataPoints(data, minRange, maxRange, xAxisPoints, eachSpacing, opts, config, process);
-      var splitPointList = splitPoints(points);
-
-      for (var i = 0; i < splitPointList.length; i++) {
-        var _points = splitPointList[i];
-        context.beginPath();
-        context.setStrokeStyle(eachSeries.color);
-        context.setLineWidth(1);
-        if (_points.length === 1) {
-          context.moveTo(_points[0].x, _points[0].y);
-          context.arc(_points[0].x, _points[0].y, 1, 0, 2 * Math.PI);
-        } else {
-          context.moveTo(_points[0].x, _points[0].y);
-          var startPoint = 0;
-          for (var j = 0; j < _points.length; j++) {
-            var item = _points[j];
-            if (startPoint == 0 && item.x > leftSpace) {
-              context.moveTo(item.x, item.y);
-              startPoint = 1;
-            }
-            if (j > 0 && item.x > leftSpace && item.x < rightSpace) {
-              var ctrlPoint = createCurveControlPoints(_points, j - 1);
-              context.bezierCurveTo(ctrlPoint.ctrA.x, ctrlPoint.ctrA.y, ctrlPoint.ctrB.x, ctrlPoint.ctrB.y, item.x, item.y);
-            }
-          }
-          context.moveTo(_points[0].x, _points[0].y);
-        }
-        context.closePath();
-        context.stroke();
-      }
-    });
-  }
-  //画K线
-  series.forEach(function (eachSeries, seriesIndex) {
-    var ranges, minRange, maxRange;
-    ranges = [].concat(opts.chartData.yAxisData.ranges[eachSeries.index]);
-    minRange = ranges.pop();
-    maxRange = ranges.shift();
-    var data = eachSeries.data;
-    var points = getCandleDataPoints(data, minRange, maxRange, xAxisPoints, eachSpacing, opts, config, process);
-    calPoints.push(points);
-    var splitPointList = splitPoints(points);
-
-    for (var i = 0; i < splitPointList[0].length; i++) {
-      if (i > leftNum && i < rightNum) {
-        var item = splitPointList[0][i];
-        context.beginPath();
-        //如果上涨
-        if (data[i][1] - data[i][0] > 0) {
-          context.setStrokeStyle(candleOption.color.upLine);
-          context.setFillStyle(candleOption.color.upFill);
-          context.setLineWidth(1 * opts.pixelRatio);
-          context.moveTo(item[3].x, item[3].y); //顶点
-          context.lineTo(item[1].x, item[1].y); //收盘中间点
-          context.lineTo(item[1].x - eachSpacing / 4, item[1].y); //收盘左侧点
-          context.lineTo(item[0].x - eachSpacing / 4, item[0].y); //开盘左侧点
-          context.lineTo(item[0].x, item[0].y); //开盘中间点
-          context.lineTo(item[2].x, item[2].y); //底点
-          context.lineTo(item[0].x, item[0].y); //开盘中间点
-          context.lineTo(item[0].x + eachSpacing / 4, item[0].y); //开盘右侧点
-          context.lineTo(item[1].x + eachSpacing / 4, item[1].y); //收盘右侧点
-          context.lineTo(item[1].x, item[1].y); //收盘中间点
-          context.moveTo(item[3].x, item[3].y); //顶点
-        } else {
-          context.setStrokeStyle(candleOption.color.downLine);
-          context.setFillStyle(candleOption.color.downFill);
-          context.setLineWidth(1 * opts.pixelRatio);
-          context.moveTo(item[3].x, item[3].y); //顶点
-          context.lineTo(item[0].x, item[0].y); //开盘中间点
-          context.lineTo(item[0].x - eachSpacing / 4, item[0].y); //开盘左侧点
-          context.lineTo(item[1].x - eachSpacing / 4, item[1].y); //收盘左侧点
-          context.lineTo(item[1].x, item[1].y); //收盘中间点
-          context.lineTo(item[2].x, item[2].y); //底点
-          context.lineTo(item[1].x, item[1].y); //收盘中间点
-          context.lineTo(item[1].x + eachSpacing / 4, item[1].y); //收盘右侧点
-          context.lineTo(item[0].x + eachSpacing / 4, item[0].y); //开盘右侧点
-          context.lineTo(item[0].x, item[0].y); //开盘中间点
-          context.moveTo(item[3].x, item[3].y); //顶点
-        }
-        context.closePath();
-        context.fill();
-        context.stroke();
-      }
-    }
-  });
-
-  context.restore();
-
-  return {
-    xAxisPoints: xAxisPoints,
-    calPoints: calPoints,
-    eachSpacing: eachSpacing };
-
-}
-
-function drawAreaDataPoints(series, opts, config, context) {
-  var process = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 1;
-  var areaOption = assign({}, {
-    type: 'straight',
-    opacity: 0.2,
-    addLine: false,
-    width: 2,
-    gradient: false },
-  opts.extra.area);
-
-  var xAxisData = opts.chartData.xAxisData,
-  xAxisPoints = xAxisData.xAxisPoints,
-  eachSpacing = xAxisData.eachSpacing;
-
-  var endY = opts.height - opts.area[2];
-  var calPoints = [];
-
-  context.save();
-  var leftSpace = 0;
-  var rightSpace = opts.width + eachSpacing;
-  if (opts._scrollDistance_ && opts._scrollDistance_ !== 0 && opts.enableScroll === true) {
-    context.translate(opts._scrollDistance_, 0);
-    leftSpace = -opts._scrollDistance_ - eachSpacing + opts.area[3];
-    rightSpace = leftSpace + (opts.xAxis.itemCount + 4) * eachSpacing;
-  }
-
-  series.forEach(function (eachSeries, seriesIndex) {
-    var ranges, minRange, maxRange;
-    ranges = [].concat(opts.chartData.yAxisData.ranges[eachSeries.index]);
-    minRange = ranges.pop();
-    maxRange = ranges.shift();
-    var data = eachSeries.data;
-    var points = getDataPoints(data, minRange, maxRange, xAxisPoints, eachSpacing, opts, config, process);
-    calPoints.push(points);
-
-    var splitPointList = splitPoints(points);
-    for (var i = 0; i < splitPointList.length; i++) {
-      var _points2 = splitPointList[i];
-      // 绘制区域数
-      context.beginPath();
-      context.setStrokeStyle(hexToRgb(eachSeries.color, areaOption.opacity));
-      if (areaOption.gradient) {
-        var gradient = context.createLinearGradient(0, opts.area[0], 0, opts.height - opts.area[2]);
-        gradient.addColorStop('0', hexToRgb(eachSeries.color, areaOption.opacity));
-        gradient.addColorStop('1.0', hexToRgb("#FFFFFF", 0.1));
-        context.setFillStyle(gradient);
-      } else {
-        context.setFillStyle(hexToRgb(eachSeries.color, areaOption.opacity));
-      }
-      context.setLineWidth(areaOption.width * opts.pixelRatio);
-      if (_points2.length > 1) {
-        var firstPoint = _points2[0];
-        var lastPoint = _points2[_points2.length - 1];
-        context.moveTo(firstPoint.x, firstPoint.y);
-        var startPoint = 0;
-        if (areaOption.type === 'curve') {
-          for (var j = 0; j < _points2.length; j++) {
-            var item = _points2[j];
-            if (startPoint == 0 && item.x > leftSpace) {
-              context.moveTo(item.x, item.y);
-              startPoint = 1;
-            }
-            if (j > 0 && item.x > leftSpace && item.x < rightSpace) {
-              var ctrlPoint = createCurveControlPoints(_points2, j - 1);
-              context.bezierCurveTo(ctrlPoint.ctrA.x, ctrlPoint.ctrA.y, ctrlPoint.ctrB.x, ctrlPoint.ctrB.y, item.x, item.y);
-            }
-          };
-        } else {
-          for (var _j = 0; _j < _points2.length; _j++) {
-            var _item10 = _points2[_j];
-            if (startPoint == 0 && _item10.x > leftSpace) {
-              context.moveTo(_item10.x, _item10.y);
-              startPoint = 1;
-            }
-            if (_j > 0 && _item10.x > leftSpace && _item10.x < rightSpace) {
-              context.lineTo(_item10.x, _item10.y);
-            }
-          };
-        }
-
-        context.lineTo(lastPoint.x, endY);
-        context.lineTo(firstPoint.x, endY);
-        context.lineTo(firstPoint.x, firstPoint.y);
-      } else {
-        var _item11 = _points2[0];
-        context.moveTo(_item11.x - eachSpacing / 2, _item11.y);
-        context.lineTo(_item11.x + eachSpacing / 2, _item11.y);
-        context.lineTo(_item11.x + eachSpacing / 2, endY);
-        context.lineTo(_item11.x - eachSpacing / 2, endY);
-        context.moveTo(_item11.x - eachSpacing / 2, _item11.y);
-      }
-      context.closePath();
-      context.fill();
-
-      //画连线
-      if (areaOption.addLine) {
-        if (eachSeries.lineType == 'dash') {
-          var dashLength = eachSeries.dashLength ? eachSeries.dashLength : 8;
-          dashLength *= opts.pixelRatio;
-          context.setLineDash([dashLength, dashLength]);
-        }
-        context.beginPath();
-        context.setStrokeStyle(eachSeries.color);
-        context.setLineWidth(areaOption.width * opts.pixelRatio);
-        if (_points2.length === 1) {
-          context.moveTo(_points2[0].x, _points2[0].y);
-          context.arc(_points2[0].x, _points2[0].y, 1, 0, 2 * Math.PI);
-        } else {
-          context.moveTo(_points2[0].x, _points2[0].y);
-          var _startPoint = 0;
-          if (areaOption.type === 'curve') {
-            for (var _j2 = 0; _j2 < _points2.length; _j2++) {
-              var _item12 = _points2[_j2];
-              if (_startPoint == 0 && _item12.x > leftSpace) {
-                context.moveTo(_item12.x, _item12.y);
-                _startPoint = 1;
-              }
-              if (_j2 > 0 && _item12.x > leftSpace && _item12.x < rightSpace) {
-                var _ctrlPoint = createCurveControlPoints(_points2, _j2 - 1);
-                context.bezierCurveTo(_ctrlPoint.ctrA.x, _ctrlPoint.ctrA.y, _ctrlPoint.ctrB.x, _ctrlPoint.ctrB.y, _item12.x, _item12.y);
-              }
-            };
-          } else {
-            for (var _j3 = 0; _j3 < _points2.length; _j3++) {
-              var _item13 = _points2[_j3];
-              if (_startPoint == 0 && _item13.x > leftSpace) {
-                context.moveTo(_item13.x, _item13.y);
-                _startPoint = 1;
-              }
-              if (_j3 > 0 && _item13.x > leftSpace && _item13.x < rightSpace) {
-                context.lineTo(_item13.x, _item13.y);
-              }
-            };
-          }
-          context.moveTo(_points2[0].x, _points2[0].y);
-        }
-        context.stroke();
-        context.setLineDash([]);
-      }
-    }
-
-    //画点
-    if (opts.dataPointShape !== false) {
-      drawPointShape(points, eachSeries.color, eachSeries.pointShape, context, opts);
-    }
-
-  });
-
-  if (opts.dataLabel !== false && process === 1) {
-    series.forEach(function (eachSeries, seriesIndex) {
-      var ranges, minRange, maxRange;
-      ranges = [].concat(opts.chartData.yAxisData.ranges[eachSeries.index]);
-      minRange = ranges.pop();
-      maxRange = ranges.shift();
-      var data = eachSeries.data;
-      var points = getDataPoints(data, minRange, maxRange, xAxisPoints, eachSpacing, opts, config, process);
-      drawPointText(points, eachSeries, config, context);
-    });
-  }
-
-  context.restore();
-
-  return {
-    xAxisPoints: xAxisPoints,
-    calPoints: calPoints,
-    eachSpacing: eachSpacing };
-
-}
-
-function drawLineDataPoints(series, opts, config, context) {
-  var process = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 1;
-  var lineOption = assign({}, {
-    type: 'straight',
-    width: 2 },
-  opts.extra.line);
-  lineOption.width *= opts.pixelRatio;
-
-  var xAxisData = opts.chartData.xAxisData,
-  xAxisPoints = xAxisData.xAxisPoints,
-  eachSpacing = xAxisData.eachSpacing;
-  var calPoints = [];
-
-  context.save();
-  var leftSpace = 0;
-  var rightSpace = opts.width + eachSpacing;
-  if (opts._scrollDistance_ && opts._scrollDistance_ !== 0 && opts.enableScroll === true) {
-    context.translate(opts._scrollDistance_, 0);
-    leftSpace = -opts._scrollDistance_ - eachSpacing + opts.area[3];
-    rightSpace = leftSpace + (opts.xAxis.itemCount + 4) * eachSpacing;
-  }
-
-  series.forEach(function (eachSeries, seriesIndex) {
-    var ranges, minRange, maxRange;
-    ranges = [].concat(opts.chartData.yAxisData.ranges[eachSeries.index]);
-    minRange = ranges.pop();
-    maxRange = ranges.shift();
-    var data = eachSeries.data;
-    var points = getDataPoints(data, minRange, maxRange, xAxisPoints, eachSpacing, opts, config, process);
-    calPoints.push(points);
-    var splitPointList = splitPoints(points);
-
-    if (eachSeries.lineType == 'dash') {
-      var dashLength = eachSeries.dashLength ? eachSeries.dashLength : 8;
-      dashLength *= opts.pixelRatio;
-      context.setLineDash([dashLength, dashLength]);
-    }
-    context.beginPath();
-    context.setStrokeStyle(eachSeries.color);
-    context.setLineWidth(lineOption.width);
-
-    splitPointList.forEach(function (points, index) {
-
-      if (points.length === 1) {
-        context.moveTo(points[0].x, points[0].y);
-        context.arc(points[0].x, points[0].y, 1, 0, 2 * Math.PI);
-      } else {
-        context.moveTo(points[0].x, points[0].y);
-        var startPoint = 0;
-        if (lineOption.type === 'curve') {
-          for (var j = 0; j < points.length; j++) {
-            var item = points[j];
-            if (startPoint == 0 && item.x > leftSpace) {
-              context.moveTo(item.x, item.y);
-              startPoint = 1;
-            }
-            if (j > 0 && item.x > leftSpace && item.x < rightSpace) {
-              var ctrlPoint = createCurveControlPoints(points, j - 1);
-              context.bezierCurveTo(ctrlPoint.ctrA.x, ctrlPoint.ctrA.y, ctrlPoint.ctrB.x, ctrlPoint.ctrB.y, item.x, item.y);
-            }
-          };
-        } else {
-          for (var _j4 = 0; _j4 < points.length; _j4++) {
-            var _item14 = points[_j4];
-            if (startPoint == 0 && _item14.x > leftSpace) {
-              context.moveTo(_item14.x, _item14.y);
-              startPoint = 1;
-            }
-            if (_j4 > 0 && _item14.x > leftSpace && _item14.x < rightSpace) {
-              context.lineTo(_item14.x, _item14.y);
-            }
-          };
-        }
-        context.moveTo(points[0].x, points[0].y);
-      }
-
-    });
-
-    context.stroke();
-    context.setLineDash([]);
-
-    if (opts.dataPointShape !== false) {
-      drawPointShape(points, eachSeries.color, eachSeries.pointShape, context, opts);
-    }
-  });
-
-  if (opts.dataLabel !== false && process === 1) {
-    series.forEach(function (eachSeries, seriesIndex) {
-      var ranges, minRange, maxRange;
-      ranges = [].concat(opts.chartData.yAxisData.ranges[eachSeries.index]);
-      minRange = ranges.pop();
-      maxRange = ranges.shift();
-      var data = eachSeries.data;
-      var points = getDataPoints(data, minRange, maxRange, xAxisPoints, eachSpacing, opts, config, process);
-      drawPointText(points, eachSeries, config, context);
-    });
-  }
-
-  context.restore();
-
-  return {
-    xAxisPoints: xAxisPoints,
-    calPoints: calPoints,
-    eachSpacing: eachSpacing };
-
-}
-
-function drawMixDataPoints(series, opts, config, context) {
-  var process = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 1;
-
-  var xAxisData = opts.chartData.xAxisData,
-  xAxisPoints = xAxisData.xAxisPoints,
-  eachSpacing = xAxisData.eachSpacing;
-
-  var endY = opts.height - opts.area[2];
-  var calPoints = [];
-
-  var columnIndex = 0;
-  var columnLength = 0;
-  series.forEach(function (eachSeries, seriesIndex) {
-    if (eachSeries.type == 'column') {
-      columnLength += 1;
-    }
-  });
-  context.save();
-  var leftNum = -2;
-  var rightNum = xAxisPoints.length + 2;
-  var leftSpace = 0;
-  var rightSpace = opts.width + eachSpacing;
-  if (opts._scrollDistance_ && opts._scrollDistance_ !== 0 && opts.enableScroll === true) {
-    context.translate(opts._scrollDistance_, 0);
-    leftNum = Math.floor(-opts._scrollDistance_ / eachSpacing) - 2;
-    rightNum = leftNum + opts.xAxis.itemCount + 4;
-    leftSpace = -opts._scrollDistance_ - eachSpacing + opts.area[3];
-    rightSpace = leftSpace + (opts.xAxis.itemCount + 4) * eachSpacing;
-  }
-
-  series.forEach(function (eachSeries, seriesIndex) {
-    var ranges, minRange, maxRange;
-
-    ranges = [].concat(opts.chartData.yAxisData.ranges[eachSeries.index]);
-    minRange = ranges.pop();
-    maxRange = ranges.shift();
-
-    var data = eachSeries.data;
-    var points = getDataPoints(data, minRange, maxRange, xAxisPoints, eachSpacing, opts, config, process);
-    calPoints.push(points);
-
-    // 绘制柱状数据图
-    if (eachSeries.type == 'column') {
-      points = fixColumeData(points, eachSpacing, columnLength, columnIndex, config, opts);
-      for (var i = 0; i < points.length; i++) {
-        var item = points[i];
-        if (item !== null && i > leftNum && i < rightNum) {
-          context.beginPath();
-          context.setStrokeStyle(item.color || eachSeries.color);
-          context.setLineWidth(1);
-          context.setFillStyle(item.color || eachSeries.color);
-          var startX = item.x - item.width / 2;
-          var height = opts.height - item.y - opts.area[2];
-          context.moveTo(startX, item.y);
-          context.moveTo(startX, item.y);
-          context.lineTo(startX + item.width - 2, item.y);
-          context.lineTo(startX + item.width - 2, opts.height - opts.area[2]);
-          context.lineTo(startX, opts.height - opts.area[2]);
-          context.lineTo(startX, item.y);
-          context.closePath();
-          context.stroke();
-          context.fill();
-          context.closePath();
-          context.fill();
-        }
-      }
-      columnIndex += 1;
-    }
-
-    //绘制区域图数据
-
-    if (eachSeries.type == 'area') {
-      var _splitPointList = splitPoints(points);
-      for (var _i17 = 0; _i17 < _splitPointList.length; _i17++) {
-        var _points3 = _splitPointList[_i17];
-        // 绘制区域数据
-        context.beginPath();
-        context.setStrokeStyle(eachSeries.color);
-        context.setFillStyle(hexToRgb(eachSeries.color, 0.2));
-        context.setLineWidth(2 * opts.pixelRatio);
-        if (_points3.length > 1) {
-          var firstPoint = _points3[0];
-          var lastPoint = _points3[_points3.length - 1];
-          context.moveTo(firstPoint.x, firstPoint.y);
-          var startPoint = 0;
-          if (eachSeries.style === 'curve') {
-            for (var j = 0; j < _points3.length; j++) {
-              var _item15 = _points3[j];
-              if (startPoint == 0 && _item15.x > leftSpace) {
-                context.moveTo(_item15.x, _item15.y);
-                startPoint = 1;
-              }
-              if (j > 0 && _item15.x > leftSpace && _item15.x < rightSpace) {
-                var ctrlPoint = createCurveControlPoints(_points3, j - 1);
-                context.bezierCurveTo(ctrlPoint.ctrA.x, ctrlPoint.ctrA.y, ctrlPoint.ctrB.x, ctrlPoint.ctrB.y, _item15.x, _item15.y);
-              }
-            };
-          } else {
-            for (var _j5 = 0; _j5 < _points3.length; _j5++) {
-              var _item16 = _points3[_j5];
-              if (startPoint == 0 && _item16.x > leftSpace) {
-                context.moveTo(_item16.x, _item16.y);
-                startPoint = 1;
-              }
-              if (_j5 > 0 && _item16.x > leftSpace && _item16.x < rightSpace) {
-                context.lineTo(_item16.x, _item16.y);
-              }
-            };
-          }
-          context.lineTo(lastPoint.x, endY);
-          context.lineTo(firstPoint.x, endY);
-          context.lineTo(firstPoint.x, firstPoint.y);
-        } else {
-          var _item17 = _points3[0];
-          context.moveTo(_item17.x - eachSpacing / 2, _item17.y);
-          context.lineTo(_item17.x + eachSpacing / 2, _item17.y);
-          context.lineTo(_item17.x + eachSpacing / 2, endY);
-          context.lineTo(_item17.x - eachSpacing / 2, endY);
-          context.moveTo(_item17.x - eachSpacing / 2, _item17.y);
-        }
-        context.closePath();
-        context.fill();
-      }
-    }
-
-    // 绘制折线数据图
-    if (eachSeries.type == 'line') {
-      var splitPointList = splitPoints(points);
-      splitPointList.forEach(function (points, index) {
-        if (eachSeries.lineType == 'dash') {
-          var dashLength = eachSeries.dashLength ? eachSeries.dashLength : 8;
-          dashLength *= opts.pixelRatio;
-          context.setLineDash([dashLength, dashLength]);
-        }
-        context.beginPath();
-        context.setStrokeStyle(eachSeries.color);
-        context.setLineWidth(2 * opts.pixelRatio);
-        if (points.length === 1) {
-          context.moveTo(points[0].x, points[0].y);
-          context.arc(points[0].x, points[0].y, 1, 0, 2 * Math.PI);
-        } else {
-          context.moveTo(points[0].x, points[0].y);
-          var _startPoint2 = 0;
-          if (eachSeries.style == 'curve') {
-            for (var _j6 = 0; _j6 < points.length; _j6++) {
-              var _item18 = points[_j6];
-              if (_startPoint2 == 0 && _item18.x > leftSpace) {
-                context.moveTo(_item18.x, _item18.y);
-                _startPoint2 = 1;
-              }
-              if (_j6 > 0 && _item18.x > leftSpace && _item18.x < rightSpace) {
-                var ctrlPoint = createCurveControlPoints(points, _j6 - 1);
-                context.bezierCurveTo(ctrlPoint.ctrA.x, ctrlPoint.ctrA.y, ctrlPoint.ctrB.x, ctrlPoint.ctrB.y, _item18.x, _item18.y);
-              }
-            }
-          } else {
-            for (var _j7 = 0; _j7 < points.length; _j7++) {
-              var _item19 = points[_j7];
-              if (_startPoint2 == 0 && _item19.x > leftSpace) {
-                context.moveTo(_item19.x, _item19.y);
-                _startPoint2 = 1;
-              }
-              if (_j7 > 0 && _item19.x > leftSpace && _item19.x < rightSpace) {
-                context.lineTo(_item19.x, _item19.y);
-              }
-            }
-          }
-          context.moveTo(points[0].x, points[0].y);
-        }
-        context.stroke();
-        context.setLineDash([]);
-      });
-    }
-
-    // 绘制点数据图
-    if (eachSeries.type == 'point') {
-      eachSeries.addPoint = true;
-    }
-
-    if (eachSeries.addPoint == true && eachSeries.type !== 'column') {
-      drawPointShape(points, eachSeries.color, eachSeries.pointShape, context, opts);
-    }
-  });
-  if (opts.dataLabel !== false && process === 1) {
-    var columnIndex = 0;
-    series.forEach(function (eachSeries, seriesIndex) {
-      var ranges, minRange, maxRange;
-
-      ranges = [].concat(opts.chartData.yAxisData.ranges[eachSeries.index]);
-      minRange = ranges.pop();
-      maxRange = ranges.shift();
-
-      var data = eachSeries.data;
-      var points = getDataPoints(data, minRange, maxRange, xAxisPoints, eachSpacing, opts, config, process);
-      if (eachSeries.type !== 'column') {
-        drawPointText(points, eachSeries, config, context);
-      } else {
-        points = fixColumeData(points, eachSpacing, columnLength, columnIndex, config, opts);
-        drawPointText(points, eachSeries, config, context);
-        columnIndex += 1;
-      }
-
-    });
-  }
-
-  context.restore();
-
-  return {
-    xAxisPoints: xAxisPoints,
-    calPoints: calPoints,
-    eachSpacing: eachSpacing };
-
-}
-
-function drawToolTipBridge(opts, config, context, process, eachSpacing, xAxisPoints) {
-  var toolTipOption = opts.extra.tooltip || {};
-  if (toolTipOption.horizentalLine && opts.tooltip && process === 1 && (opts.type == 'line' || opts.type == 'area' || opts.type == 'column' || opts.type == 'candle' || opts.type == 'mix')) {
-    drawToolTipHorizentalLine(opts, config, context, eachSpacing, xAxisPoints);
-  }
-  context.save();
-  if (opts._scrollDistance_ && opts._scrollDistance_ !== 0 && opts.enableScroll === true) {
-    context.translate(opts._scrollDistance_, 0);
-  }
-  if (opts.tooltip && opts.tooltip.textList && opts.tooltip.textList.length && process === 1) {
-    drawToolTip(opts.tooltip.textList, opts.tooltip.offset, opts, config, context, eachSpacing, xAxisPoints);
-  }
-  context.restore();
-
-}
-
-function drawXAxis(categories, opts, config, context) {
-
-  var xAxisData = opts.chartData.xAxisData,
-  xAxisPoints = xAxisData.xAxisPoints,
-  startX = xAxisData.startX,
-  endX = xAxisData.endX,
-  eachSpacing = xAxisData.eachSpacing;
-  var boundaryGap = 'center';
-  if (opts.type == 'line' || opts.type == 'area') {
-    boundaryGap = opts.xAxis.boundaryGap;
-  }
-  var startY = opts.height - opts.area[2];
-  var endY = opts.area[0];
-
-  //绘制滚动条
-  if (opts.enableScroll && opts.xAxis.scrollShow) {
-    var scrollY = opts.height - opts.area[2] + config.xAxisHeight;
-    var scrollScreenWidth = endX - startX;
-    var scrollTotalWidth = eachSpacing * (xAxisPoints.length - 1);
-    var scrollWidth = scrollScreenWidth * scrollScreenWidth / scrollTotalWidth;
-    var scrollLeft = 0;
-    if (opts._scrollDistance_) {
-      scrollLeft = -opts._scrollDistance_ * scrollScreenWidth / scrollTotalWidth;
-    }
-    context.beginPath();
-    context.setLineCap('round');
-    context.setLineWidth(6 * opts.pixelRatio);
-    context.setStrokeStyle(opts.xAxis.scrollBackgroundColor || "#EFEBEF");
-    context.moveTo(startX, scrollY);
-    context.lineTo(endX, scrollY);
-    context.stroke();
-    context.closePath();
-    context.beginPath();
-    context.setLineCap('round');
-    context.setLineWidth(6 * opts.pixelRatio);
-    context.setStrokeStyle(opts.xAxis.scrollColor || "#A6A6A6");
-    context.moveTo(startX + scrollLeft, scrollY);
-    context.lineTo(startX + scrollLeft + scrollWidth, scrollY);
-    context.stroke();
-    context.closePath();
-    context.setLineCap('butt');
-  }
-
-  context.save();
-
-  if (opts._scrollDistance_ && opts._scrollDistance_ !== 0) {
-    context.translate(opts._scrollDistance_, 0);
-  }
-
-  //绘制X轴刻度线
-  if (opts.xAxis.calibration === true) {
-    context.setStrokeStyle(opts.xAxis.gridColor || "#cccccc");
-    context.setLineCap('butt');
-    context.setLineWidth(1 * opts.pixelRatio);
-    xAxisPoints.forEach(function (item, index) {
-      if (index > 0) {
-        context.beginPath();
-        context.moveTo(item - eachSpacing / 2, startY);
-        context.lineTo(item - eachSpacing / 2, startY + 3 * opts.pixelRatio);
-        context.closePath();
-        context.stroke();
-      }
-    });
-  }
-  //绘制X轴网格
-  if (opts.xAxis.disableGrid !== true) {
-    context.setStrokeStyle(opts.xAxis.gridColor || "#cccccc");
-    context.setLineCap('butt');
-    context.setLineWidth(1 * opts.pixelRatio);
-    if (opts.xAxis.gridType == 'dash') {
-      context.setLineDash([opts.xAxis.dashLength, opts.xAxis.dashLength]);
-    }
-    opts.xAxis.gridEval = opts.xAxis.gridEval || 1;
-    xAxisPoints.forEach(function (item, index) {
-      if (index % opts.xAxis.gridEval == 0) {
-        context.beginPath();
-        context.moveTo(item, startY);
-        context.lineTo(item, endY);
-        context.stroke();
-      }
-    });
-    context.setLineDash([]);
-  }
-
-
-  //绘制X轴文案
-  if (opts.xAxis.disabled !== true) {
-    // 对X轴列表做抽稀处理
-    //默认全部显示X轴标签
-    var maxXAxisListLength = categories.length;
-    //如果设置了X轴单屏数量
-    if (opts.xAxis.labelCount) {
-      //如果设置X轴密度
-      if (opts.xAxis.itemCount) {
-        maxXAxisListLength = Math.ceil(categories.length / opts.xAxis.itemCount * opts.xAxis.labelCount);
-      } else {
-        maxXAxisListLength = opts.xAxis.labelCount;
-      }
-      maxXAxisListLength -= 1;
-    }
-
-    var ratio = Math.ceil(categories.length / maxXAxisListLength);
-
-    var newCategories = [];
-    var cgLength = categories.length;
-    for (var i = 0; i < cgLength; i++) {
-      if (i % ratio !== 0) {
-        newCategories.push("");
-      } else {
-        newCategories.push(categories[i]);
-      }
-    }
-    newCategories[cgLength - 1] = categories[cgLength - 1];
-
-    var xAxisFontSize = opts.xAxis.fontSize || config.fontSize;
-    if (config._xAxisTextAngle_ === 0) {
-      newCategories.forEach(function (item, index) {
-        var offset = -measureText(String(item), xAxisFontSize) / 2;
-        if (boundaryGap == 'center') {
-          offset += eachSpacing / 2;
-        }
-        var scrollHeight = 0;
-        if (opts.xAxis.scrollShow) {
-          scrollHeight = 6 * opts.pixelRatio;
-        }
-        context.beginPath();
-        context.setFontSize(xAxisFontSize);
-        context.setFillStyle(opts.xAxis.fontColor || '#666666');
-        context.fillText(String(item), xAxisPoints[index] + offset, startY + xAxisFontSize + (config.xAxisHeight - scrollHeight - xAxisFontSize) / 2);
-        context.closePath();
-        context.stroke();
-      });
-
-    } else {
-      newCategories.forEach(function (item, index) {
-        context.save();
-        context.beginPath();
-        context.setFontSize(xAxisFontSize);
-        context.setFillStyle(opts.xAxis.fontColor || '#666666');
-        var textWidth = measureText(String(item), xAxisFontSize);
-        var offset = -textWidth;
-        if (boundaryGap == 'center') {
-          offset += eachSpacing / 2;
-        }
-        var _calRotateTranslate = calRotateTranslate(xAxisPoints[index] + eachSpacing / 2, startY + xAxisFontSize / 2 + 5, opts.height),
-        transX = _calRotateTranslate.transX,
-        transY = _calRotateTranslate.transY;
-
-        context.rotate(-1 * config._xAxisTextAngle_);
-        context.translate(transX, transY);
-        context.fillText(String(item), xAxisPoints[index] + offset, startY + xAxisFontSize + 5);
-        context.closePath();
-        context.stroke();
-        context.restore();
-      });
-    }
-  }
-  context.restore();
-
-  //绘制X轴轴线
-  if (opts.xAxis.axisLine) {
-    context.beginPath();
-    context.setStrokeStyle(opts.xAxis.axisLineColor);
-    context.setLineWidth(1 * opts.pixelRatio);
-    context.moveTo(startX, opts.height - opts.area[2]);
-    context.lineTo(endX, opts.height - opts.area[2]);
-    context.stroke();
-  }
-}
-
-function drawYAxisGrid(categories, opts, config, context) {
-  if (opts.yAxis.disableGrid === true) {
-    return;
-  }
-  var spacingValid = opts.height - opts.area[0] - opts.area[2];
-  var eachSpacing = spacingValid / opts.yAxis.splitNumber;
-  var startX = opts.area[3];
-  var xAxisPoints = opts.chartData.xAxisData.xAxisPoints,
-  xAxiseachSpacing = opts.chartData.xAxisData.eachSpacing;
-  var TotalWidth = xAxiseachSpacing * (xAxisPoints.length - 1);
-  var endX = startX + TotalWidth;
-
-  var points = [];
-  for (var i = 0; i < opts.yAxis.splitNumber + 1; i++) {
-    points.push(opts.height - opts.area[2] - eachSpacing * i);
-  }
-
-  context.save();
-  if (opts._scrollDistance_ && opts._scrollDistance_ !== 0) {
-    context.translate(opts._scrollDistance_, 0);
-  }
-
-  if (opts.yAxis.gridType == 'dash') {
-    context.setLineDash([opts.yAxis.dashLength, opts.yAxis.dashLength]);
-  }
-  context.setStrokeStyle(opts.yAxis.gridColor);
-  context.setLineWidth(1 * opts.pixelRatio);
-  points.forEach(function (item, index) {
-    context.beginPath();
-    context.moveTo(startX, item);
-    context.lineTo(endX, item);
-    context.stroke();
-  });
-  context.setLineDash([]);
-
-  context.restore();
-}
-
-function drawYAxis(series, opts, config, context) {
-  if (opts.yAxis.disabled === true) {
-    return;
-  }
-  var spacingValid = opts.height - opts.area[0] - opts.area[2];
-  var eachSpacing = spacingValid / opts.yAxis.splitNumber;
-  var startX = opts.area[3];
-  var endX = opts.width - opts.area[1];
-  var endY = opts.height - opts.area[2];
-  var fillEndY = endY + config.xAxisHeight;
-  if (opts.xAxis.scrollShow) {
-    fillEndY -= 3 * opts.pixelRatio;
-  }
-  if (opts.xAxis.rotateLabel) {
-    fillEndY = opts.height - opts.area[2] + 3;
-  }
-  // set YAxis background
-  context.beginPath();
-  context.setFillStyle(opts.background || '#ffffff');
-  if (opts._scrollDistance_ < 0) {
-    context.fillRect(0, 0, startX, fillEndY);
-  }
-  if (opts.enableScroll == true) {
-    context.fillRect(endX, 0, opts.width, fillEndY);
-  }
-  context.closePath();
-  context.stroke();
-
-  var points = [];
-  for (var i = 0; i <= opts.yAxis.splitNumber; i++) {
-    points.push(opts.area[0] + eachSpacing * i);
-  }
-
-  var tStartLeft = opts.area[3];
-  var tStartRight = opts.width - opts.area[1];var _loop4 = function _loop4(
-
-  _i18) {
-    var yData = opts.yAxis.data[_i18];
-    if (yData.disabled !== true) {
-      var rangesFormat = opts.chartData.yAxisData.rangesFormat[_i18];
-      var yAxisFontSize = yData.fontSize || config.fontSize;
-      var yAxisWidth = opts.chartData.yAxisData.yAxisWidth[_i18];
-      //画Y轴刻度及文案
-      rangesFormat.forEach(function (item, index) {
-        var pos = points[index] ? points[index] : endY;
-        context.beginPath();
-        context.setFontSize(yAxisFontSize);
-        context.setLineWidth(1 * opts.pixelRatio);
-        context.setStrokeStyle(yData.axisLineColor || '#cccccc');
-        context.setFillStyle(yData.fontColor || '#666666');
-        if (yAxisWidth.position == 'left') {
-          context.fillText(String(item), tStartLeft - yAxisWidth.width, pos + yAxisFontSize / 2);
-          //画刻度线
-          if (yData.calibration == true) {
-            context.moveTo(tStartLeft, pos);
-            context.lineTo(tStartLeft - 3 * opts.pixelRatio, pos);
-          }
-        } else {
-          context.fillText(String(item), tStartRight + 4 * opts.pixelRatio, pos + yAxisFontSize / 2);
-          //画刻度线
-          if (yData.calibration == true) {
-            context.moveTo(tStartRight, pos);
-            context.lineTo(tStartRight + 3 * opts.pixelRatio, pos);
-          }
-        }
-        context.closePath();
-        context.stroke();
-      });
-      //画Y轴轴线
-      if (yData.axisLine !== false) {
-        context.beginPath();
-        context.setStrokeStyle(yData.axisLineColor || '#cccccc');
-        context.setLineWidth(1 * opts.pixelRatio);
-        if (yAxisWidth.position == 'left') {
-          context.moveTo(tStartLeft, opts.height - opts.area[2]);
-          context.lineTo(tStartLeft, opts.area[0]);
-        } else {
-          context.moveTo(tStartRight, opts.height - opts.area[2]);
-          context.lineTo(tStartRight, opts.area[0]);
-        }
-        context.stroke();
-      }
-
-      //画Y轴标题
-      if (opts.yAxis.showTitle) {
-
-        var titleFontSize = yData.titleFontSize || config.fontSize;
-        var title = yData.title;
-        context.beginPath();
-        context.setFontSize(titleFontSize);
-        context.setFillStyle(yData.titleFontColor || '#666666');
-        if (yAxisWidth.position == 'left') {
-          context.fillText(title, tStartLeft - measureText(title, titleFontSize) / 2, opts.area[0] - 10 * opts.pixelRatio);
-        } else {
-          context.fillText(title, tStartRight - measureText(title, titleFontSize) / 2, opts.area[0] - 10 * opts.pixelRatio);
-        }
-        context.closePath();
-        context.stroke();
-      }
-      if (yAxisWidth.position == 'left') {
-        tStartLeft -= yAxisWidth.width + opts.yAxis.padding;
-      } else {
-        tStartRight += yAxisWidth.width + opts.yAxis.padding;
-      }
-    }};for (var _i18 = 0; _i18 < opts.yAxis.data.length; _i18++) {_loop4(_i18);
-  }
-}
-
-function drawLegend(series, opts, config, context, chartData) {
-  if (opts.legend.show === false) {
-    return;
-  }
-  var legendData = chartData.legendData;
-  var legendList = legendData.points;
-  var legendArea = legendData.area;
-  var padding = opts.legend.padding;
-  var fontSize = opts.legend.fontSize;
-  var shapeWidth = 15 * opts.pixelRatio;
-  var shapeRight = 5 * opts.pixelRatio;
-  var itemGap = opts.legend.itemGap;
-  var lineHeight = Math.max(opts.legend.lineHeight * opts.pixelRatio, fontSize);
-
-  //画背景及边框
-  context.beginPath();
-  context.setLineWidth(opts.legend.borderWidth);
-  context.setStrokeStyle(opts.legend.borderColor);
-  context.setFillStyle(opts.legend.backgroundColor);
-  context.moveTo(legendArea.start.x, legendArea.start.y);
-  context.rect(legendArea.start.x, legendArea.start.y, legendArea.width, legendArea.height);
-  context.closePath();
-  context.fill();
-  context.stroke();
-
-  legendList.forEach(function (itemList, listIndex) {
-    var width = 0;
-    var height = 0;
-    width = legendData.widthArr[listIndex];
-    height = legendData.heightArr[listIndex];
-    var startX = 0;
-    var startY = 0;
-    if (opts.legend.position == 'top' || opts.legend.position == 'bottom') {
-      startX = legendArea.start.x + (legendArea.width - width) / 2;
-      startY = legendArea.start.y + padding + listIndex * lineHeight;
-    } else {
-      if (listIndex == 0) {
-        width = 0;
-      } else {
-        width = legendData.widthArr[listIndex - 1];
-      }
-      startX = legendArea.start.x + padding + width;
-      startY = legendArea.start.y + padding + (legendArea.height - height) / 2;
-    }
-
-    context.setFontSize(config.fontSize);
-    for (var i = 0; i < itemList.length; i++) {
-      var item = itemList[i];
-      item.area = [0, 0, 0, 0];
-      item.area[0] = startX;
-      item.area[1] = startY;
-      item.area[3] = startY + lineHeight;
-      context.beginPath();
-      context.setLineWidth(1 * opts.pixelRatio);
-      context.setStrokeStyle(item.show ? item.color : opts.legend.hiddenColor);
-      context.setFillStyle(item.show ? item.color : opts.legend.hiddenColor);
-      switch (item.legendShape) {
-        case 'line':
-          context.moveTo(startX, startY + 0.5 * lineHeight - 2 * opts.pixelRatio);
-          context.fillRect(startX, startY + 0.5 * lineHeight - 2 * opts.pixelRatio, 15 * opts.pixelRatio, 4 * opts.pixelRatio);
-          break;
-        case 'triangle':
-          context.moveTo(startX + 7.5 * opts.pixelRatio, startY + 0.5 * lineHeight - 5 * opts.pixelRatio);
-          context.lineTo(startX + 2.5 * opts.pixelRatio, startY + 0.5 * lineHeight + 5 * opts.pixelRatio);
-          context.lineTo(startX + 12.5 * opts.pixelRatio, startY + 0.5 * lineHeight + 5 * opts.pixelRatio);
-          context.lineTo(startX + 7.5 * opts.pixelRatio, startY + 0.5 * lineHeight - 5 * opts.pixelRatio);
-          break;
-        case 'diamond':
-          context.moveTo(startX + 7.5 * opts.pixelRatio, startY + 0.5 * lineHeight - 5 * opts.pixelRatio);
-          context.lineTo(startX + 2.5 * opts.pixelRatio, startY + 0.5 * lineHeight);
-          context.lineTo(startX + 7.5 * opts.pixelRatio, startY + 0.5 * lineHeight + 5 * opts.pixelRatio);
-          context.lineTo(startX + 12.5 * opts.pixelRatio, startY + 0.5 * lineHeight);
-          context.lineTo(startX + 7.5 * opts.pixelRatio, startY + 0.5 * lineHeight - 5 * opts.pixelRatio);
-          break;
-        case 'circle':
-          context.moveTo(startX + 7.5 * opts.pixelRatio, startY + 0.5 * lineHeight);
-          context.arc(startX + 7.5 * opts.pixelRatio, startY + 0.5 * lineHeight, 5 * opts.pixelRatio, 0, 2 * Math.PI);
-          break;
-        case 'rect':
-          context.moveTo(startX, startY + 0.5 * lineHeight - 5 * opts.pixelRatio);
-          context.fillRect(startX, startY + 0.5 * lineHeight - 5 * opts.pixelRatio, 15 * opts.pixelRatio, 10 * opts.pixelRatio);
-          break;
-        default:
-          context.moveTo(startX, startY + 0.5 * lineHeight - 5 * opts.pixelRatio);
-          context.fillRect(startX, startY + 0.5 * lineHeight - 5 * opts.pixelRatio, 15 * opts.pixelRatio, 10 * opts.pixelRatio);}
-
-      context.closePath();
-      context.fill();
-      context.stroke();
-
-      startX += shapeWidth + shapeRight;
-      var fontTrans = 0.5 * lineHeight + 0.5 * fontSize - 2;
-      context.beginPath();
-      context.setFontSize(fontSize);
-      context.setFillStyle(item.show ? opts.legend.fontColor : opts.legend.hiddenColor);
-      context.fillText(item.name, startX, startY + fontTrans);
-      context.closePath();
-      context.stroke();
-      if (opts.legend.position == 'top' || opts.legend.position == 'bottom') {
-        startX += measureText(item.name, fontSize) + itemGap;
-        item.area[2] = startX;
-      } else {
-        item.area[2] = startX + measureText(item.name, fontSize) + itemGap;;
-        startX -= shapeWidth + shapeRight;
-        startY += lineHeight;
-      }
-    }
-  });
-}
-
-function drawPieDataPoints(series, opts, config, context) {
-  var process = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 1;
-  var pieOption = assign({}, {
-    activeOpacity: 0.5,
-    activeRadius: 10 * opts.pixelRatio,
-    offsetAngle: 0,
-    labelWidth: 15 * opts.pixelRatio,
-    ringWidth: 0,
-    border: false,
-    borderWidth: 2,
-    borderColor: '#FFFFFF' },
-  opts.extra.pie);
-  var centerPosition = {
-    x: opts.area[3] + (opts.width - opts.area[1] - opts.area[3]) / 2,
-    y: opts.area[0] + (opts.height - opts.area[0] - opts.area[2]) / 2 };
-
-  if (config.pieChartLinePadding == 0) {
-    config.pieChartLinePadding = pieOption.activeRadius;
-  }
-
-  var radius = Math.min((opts.width - opts.area[1] - opts.area[3]) / 2 - config.pieChartLinePadding - config.pieChartTextPadding - config._pieTextMaxLength_, (opts.height - opts.area[0] - opts.area[2]) / 2 - config.pieChartLinePadding - config.pieChartTextPadding);
-
-  series = getPieDataPoints(series, radius, process);
-
-  var activeRadius = pieOption.activeRadius;
-
-  series = series.map(function (eachSeries) {
-    eachSeries._start_ += pieOption.offsetAngle * Math.PI / 180;
-    return eachSeries;
-  });
-  series.forEach(function (eachSeries, seriesIndex) {
-    if (opts.tooltip) {
-      if (opts.tooltip.index == seriesIndex) {
-        context.beginPath();
-        context.setFillStyle(hexToRgb(eachSeries.color, opts.extra.pie.activeOpacity || 0.5));
-        context.moveTo(centerPosition.x, centerPosition.y);
-        context.arc(centerPosition.x, centerPosition.y, eachSeries._radius_ + activeRadius, eachSeries._start_,
-        eachSeries._start_ + 2 *
-        eachSeries._proportion_ * Math.PI);
-        context.closePath();
-        context.fill();
-      }
-    }
-    context.beginPath();
-    context.setLineWidth(pieOption.borderWidth * opts.pixelRatio);
-    context.lineJoin = "round";
-    context.setStrokeStyle(pieOption.borderColor);
-    context.setFillStyle(eachSeries.color);
-    context.moveTo(centerPosition.x, centerPosition.y);
-    context.arc(centerPosition.x, centerPosition.y, eachSeries._radius_, eachSeries._start_, eachSeries._start_ + 2 * eachSeries._proportion_ * Math.PI);
-    context.closePath();
-    context.fill();
-    if (pieOption.border == true) {
-      context.stroke();
-    }
-  });
-
-  if (opts.type === 'ring') {
-    var innerPieWidth = radius * 0.6;
-    if (typeof opts.extra.pie.ringWidth === 'number' && opts.extra.pie.ringWidth > 0) {
-      innerPieWidth = Math.max(0, radius - opts.extra.pie.ringWidth);
-    }
-    context.beginPath();
-    context.setFillStyle(opts.background || '#ffffff');
-    context.moveTo(centerPosition.x, centerPosition.y);
-    context.arc(centerPosition.x, centerPosition.y, innerPieWidth, 0, 2 * Math.PI);
-    context.closePath();
-    context.fill();
-  }
-
-  if (opts.dataLabel !== false && process === 1) {
-    var valid = false;
-    for (var i = 0, len = series.length; i < len; i++) {
-      if (series[i].data > 0) {
-        valid = true;
-        break;
-      }
-    }
-
-    if (valid) {
-      drawPieText(series, opts, config, context, radius, centerPosition);
-    }
-  }
-
-  if (process === 1 && opts.type === 'ring') {
-    drawRingTitle(opts, config, context, centerPosition);
-  }
-
-  return {
-    center: centerPosition,
-    radius: radius,
-    series: series };
-
-}
-
-function drawRoseDataPoints(series, opts, config, context) {
-  var process = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 1;
-  var roseOption = assign({}, {
-    type: 'area',
-    activeOpacity: 0.5,
-    activeRadius: 10 * opts.pixelRatio,
-    offsetAngle: 0,
-    labelWidth: 15 * opts.pixelRatio,
-    border: false,
-    borderWidth: 2,
-    borderColor: '#FFFFFF' },
-  opts.extra.rose);
-  if (config.pieChartLinePadding == 0) {
-    config.pieChartLinePadding = roseOption.activeRadius;
-  }
-  var centerPosition = {
-    x: opts.area[3] + (opts.width - opts.area[1] - opts.area[3]) / 2,
-    y: opts.area[0] + (opts.height - opts.area[0] - opts.area[2]) / 2 };
-
-  var radius = Math.min((opts.width - opts.area[1] - opts.area[3]) / 2 - config.pieChartLinePadding - config.pieChartTextPadding - config._pieTextMaxLength_, (opts.height - opts.area[0] - opts.area[2]) / 2 - config.pieChartLinePadding - config.pieChartTextPadding);
-  var minRadius = roseOption.minRadius || radius * 0.5;
-
-  series = getRoseDataPoints(series, roseOption.type, minRadius, radius, process);
-
-  var activeRadius = roseOption.activeRadius;
-
-  series = series.map(function (eachSeries) {
-    eachSeries._start_ += (roseOption.offsetAngle || 0) * Math.PI / 180;
-    return eachSeries;
-  });
-
-  series.forEach(function (eachSeries, seriesIndex) {
-    if (opts.tooltip) {
-      if (opts.tooltip.index == seriesIndex) {
-        context.beginPath();
-        context.setFillStyle(hexToRgb(eachSeries.color, roseOption.activeOpacity || 0.5));
-        context.moveTo(centerPosition.x, centerPosition.y);
-        context.arc(centerPosition.x, centerPosition.y, activeRadius + eachSeries._radius_, eachSeries._start_,
-        eachSeries._start_ + 2 * eachSeries._rose_proportion_ * Math.PI);
-        context.closePath();
-        context.fill();
-      }
-    }
-    context.beginPath();
-    context.setLineWidth(roseOption.borderWidth * opts.pixelRatio);
-    context.lineJoin = "round";
-    context.setStrokeStyle(roseOption.borderColor);
-    context.setFillStyle(eachSeries.color);
-    context.moveTo(centerPosition.x, centerPosition.y);
-    context.arc(centerPosition.x, centerPosition.y, eachSeries._radius_, eachSeries._start_, eachSeries._start_ + 2 *
-    eachSeries._rose_proportion_ * Math.PI);
-    context.closePath();
-    context.fill();
-    if (roseOption.border == true) {
-      context.stroke();
-    }
-  });
-
-  if (opts.dataLabel !== false && process === 1) {
-    var valid = false;
-    for (var i = 0, len = series.length; i < len; i++) {
-      if (series[i].data > 0) {
-        valid = true;
-        break;
-      }
-    }
-
-    if (valid) {
-      drawPieText(series, opts, config, context, radius, centerPosition);
-    }
-  }
-
-  return {
-    center: centerPosition,
-    radius: radius,
-    series: series };
-
-}
-
-function drawArcbarDataPoints(series, opts, config, context) {
-  var process = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 1;
-  var arcbarOption = assign({}, {
-    startAngle: 0.75,
-    endAngle: 0.25,
-    type: 'default',
-    width: 12 * opts.pixelRatio,
-    gap: 2 * opts.pixelRatio },
-  opts.extra.arcbar);
-
-  series = getArcbarDataPoints(series, arcbarOption, process);
-
-  var centerPosition;
-  if (arcbarOption.center) {
-    centerPosition = arcbarOption.center;
-  } else {
-    centerPosition = {
-      x: opts.width / 2,
-      y: opts.height / 2 };
-
-  }
-
-  var radius;
-  if (arcbarOption.radius) {
-    radius = arcbarOption.radius;
-  } else {
-    radius = Math.min(centerPosition.x, centerPosition.y);
-    radius -= 5 * opts.pixelRatio;
-    radius -= arcbarOption.width / 2;
-  }
-
-  for (var i = 0; i < series.length; i++) {
-    var eachSeries = series[i];
-    //背景颜色
-    context.setLineWidth(arcbarOption.width);
-    context.setStrokeStyle(arcbarOption.backgroundColor || '#E9E9E9');
-    context.setLineCap('round');
-    context.beginPath();
-    if (arcbarOption.type == 'default') {
-      context.arc(centerPosition.x, centerPosition.y, radius - (arcbarOption.width + arcbarOption.gap) * i, arcbarOption.startAngle * Math.PI, arcbarOption.endAngle * Math.PI, false);
-    } else {
-      context.arc(centerPosition.x, centerPosition.y, radius - (arcbarOption.width + arcbarOption.gap) * i, 0, 2 * Math.PI, false);
-    }
-    context.stroke();
-    //进度条
-    context.setLineWidth(arcbarOption.width);
-    context.setStrokeStyle(eachSeries.color);
-    context.setLineCap('round');
-    context.beginPath();
-    context.arc(centerPosition.x, centerPosition.y, radius - (arcbarOption.width + arcbarOption.gap) * i, arcbarOption.startAngle * Math.PI, eachSeries._proportion_ * Math.PI, false);
-    context.stroke();
-  }
-
-  drawRingTitle(opts, config, context, centerPosition);
-
-  return {
-    center: centerPosition,
-    radius: radius,
-    series: series };
-
-}
-
-function drawGaugeDataPoints(categories, series, opts, config, context) {
-  var process = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : 1;
-  var gaugeOption = assign({}, {
-    type: 'default',
-    startAngle: 0.75,
-    endAngle: 0.25,
-    width: 15,
-    splitLine: {
-      fixRadius: 0,
-      splitNumber: 10,
-      width: 15,
-      color: '#FFFFFF',
-      childNumber: 5,
-      childWidth: 5 },
-
-    pointer: {
-      width: 15,
-      color: 'auto' } },
-
-  opts.extra.gauge);
-
-  if (gaugeOption.oldAngle == undefined) {
-    gaugeOption.oldAngle = gaugeOption.startAngle;
-  }
-  if (gaugeOption.oldData == undefined) {
-    gaugeOption.oldData = 0;
-  }
-  categories = getGaugeAxisPoints(categories, gaugeOption.startAngle, gaugeOption.endAngle);
-
-  var centerPosition = {
-    x: opts.width / 2,
-    y: opts.height / 2 };
-
-  var radius = Math.min(centerPosition.x, centerPosition.y);
-  radius -= 5 * opts.pixelRatio;
-  radius -= gaugeOption.width / 2;
-  var innerRadius = radius - gaugeOption.width;
-  var totalAngle = 0;
-
-  //判断仪表盘的样式：default百度样式，progress新样式
-  if (gaugeOption.type == 'progress') {
-
-    //## 第一步画中心圆形背景和进度条背景
-    //中心圆形背景
-    var pieRadius = radius - gaugeOption.width * 3;
-    context.beginPath();
-    var gradient = context.createLinearGradient(centerPosition.x, centerPosition.y - pieRadius, centerPosition.x, centerPosition.y + pieRadius);
-    //配置渐变填充（起点：中心点向上减半径；结束点中心点向下加半径）
-    gradient.addColorStop('0', hexToRgb(series[0].color, 0.3));
-    gradient.addColorStop('1.0', hexToRgb("#FFFFFF", 0.1));
-    context.setFillStyle(gradient);
-    context.arc(centerPosition.x, centerPosition.y, pieRadius, 0, 2 * Math.PI, false);
-    context.fill();
-    //画进度条背景
-    context.setLineWidth(gaugeOption.width);
-    context.setStrokeStyle(hexToRgb(series[0].color, 0.3));
-    context.setLineCap('round');
-    context.beginPath();
-    context.arc(centerPosition.x, centerPosition.y, innerRadius, gaugeOption.startAngle * Math.PI, gaugeOption.endAngle * Math.PI, false);
-    context.stroke();
-
-    //## 第二步画刻度线
-    totalAngle = gaugeOption.startAngle - gaugeOption.endAngle + 1;
-    var splitAngle = totalAngle / gaugeOption.splitLine.splitNumber;
-    var childAngle = totalAngle / gaugeOption.splitLine.splitNumber / gaugeOption.splitLine.childNumber;
-    var startX = -radius - gaugeOption.width * 0.5 - gaugeOption.splitLine.fixRadius;
-    var endX = -radius - gaugeOption.width - gaugeOption.splitLine.fixRadius + gaugeOption.splitLine.width;
-    context.save();
-    context.translate(centerPosition.x, centerPosition.y);
-    context.rotate((gaugeOption.startAngle - 1) * Math.PI);
-    var len = gaugeOption.splitLine.splitNumber * gaugeOption.splitLine.childNumber + 1;
-    var proc = series[0].data * process;
-    for (var i = 0; i < len; i++) {
-      context.beginPath();
-      //刻度线随进度变色
-      if (proc > i / len) {
-        context.setStrokeStyle(hexToRgb(series[0].color, 1));
-      } else {
-        context.setStrokeStyle(hexToRgb(series[0].color, 0.3));
-      }
-      context.setLineWidth(3 * opts.pixelRatio);
-      context.moveTo(startX, 0);
-      context.lineTo(endX, 0);
-      context.stroke();
-      context.rotate(childAngle * Math.PI);
-    }
-    context.restore();
-
-    //## 第三步画进度条
-    series = getArcbarDataPoints(series, gaugeOption, process);
-    context.setLineWidth(gaugeOption.width);
-    context.setStrokeStyle(series[0].color);
-    context.setLineCap('round');
-    context.beginPath();
-    context.arc(centerPosition.x, centerPosition.y, innerRadius, gaugeOption.startAngle * Math.PI, series[0]._proportion_ * Math.PI, false);
-    context.stroke();
-
-    //## 第四步画指针
-    var pointerRadius = radius - gaugeOption.width * 2.5;
-    context.save();
-    context.translate(centerPosition.x, centerPosition.y);
-    context.rotate((series[0]._proportion_ - 1) * Math.PI);
-    context.beginPath();
-    context.setLineWidth(gaugeOption.width / 3);
-    var gradient3 = context.createLinearGradient(0, -pointerRadius * 0.6, 0, pointerRadius * 0.6);
-    gradient3.addColorStop('0', hexToRgb('#FFFFFF', 0));
-    gradient3.addColorStop('0.5', hexToRgb(series[0].color, 1));
-    gradient3.addColorStop('1.0', hexToRgb('#FFFFFF', 0));
-    context.setStrokeStyle(gradient3);
-    context.arc(0, 0, pointerRadius, 0.85 * Math.PI, 1.15 * Math.PI, false);
-    context.stroke();
-    context.beginPath();
-    context.setLineWidth(1);
-    context.setStrokeStyle(series[0].color);
-    context.setFillStyle(series[0].color);
-    context.moveTo(-pointerRadius - gaugeOption.width / 3 / 2, -4);
-    context.lineTo(-pointerRadius - gaugeOption.width / 3 / 2 - 4, 0);
-    context.lineTo(-pointerRadius - gaugeOption.width / 3 / 2, 4);
-    context.lineTo(-pointerRadius - gaugeOption.width / 3 / 2, -4);
-    context.stroke();
-    context.fill();
-    context.restore();
-
-    //default百度样式
-  } else {
-    //画背景
-    context.setLineWidth(gaugeOption.width);
-    context.setLineCap('butt');
-    for (var _i19 = 0; _i19 < categories.length; _i19++) {
-      var eachCategories = categories[_i19];
-      context.beginPath();
-      context.setStrokeStyle(eachCategories.color);
-      context.arc(centerPosition.x, centerPosition.y, radius, eachCategories._startAngle_ * Math.PI, eachCategories._endAngle_ * Math.PI, false);
-      context.stroke();
-    }
-    context.save();
-
-    //画刻度线
-    totalAngle = gaugeOption.startAngle - gaugeOption.endAngle + 1;
-    var _splitAngle = totalAngle / gaugeOption.splitLine.splitNumber;
-    var _childAngle = totalAngle / gaugeOption.splitLine.splitNumber / gaugeOption.splitLine.childNumber;
-    var _startX2 = -radius - gaugeOption.width * 0.5 - gaugeOption.splitLine.fixRadius;
-    var _endX = -radius - gaugeOption.width * 0.5 - gaugeOption.splitLine.fixRadius + gaugeOption.splitLine.width;
-    var childendX = -radius - gaugeOption.width * 0.5 - gaugeOption.splitLine.fixRadius + gaugeOption.splitLine.childWidth;
-
-    context.translate(centerPosition.x, centerPosition.y);
-    context.rotate((gaugeOption.startAngle - 1) * Math.PI);
-
-    for (var _i20 = 0; _i20 < gaugeOption.splitLine.splitNumber + 1; _i20++) {
-      context.beginPath();
-      context.setStrokeStyle(gaugeOption.splitLine.color);
-      context.setLineWidth(2 * opts.pixelRatio);
-      context.moveTo(_startX2, 0);
-      context.lineTo(_endX, 0);
-      context.stroke();
-      context.rotate(_splitAngle * Math.PI);
-    }
-    context.restore();
-
-    context.save();
-    context.translate(centerPosition.x, centerPosition.y);
-    context.rotate((gaugeOption.startAngle - 1) * Math.PI);
-
-    for (var _i21 = 0; _i21 < gaugeOption.splitLine.splitNumber * gaugeOption.splitLine.childNumber + 1; _i21++) {
-      context.beginPath();
-      context.setStrokeStyle(gaugeOption.splitLine.color);
-      context.setLineWidth(1 * opts.pixelRatio);
-      context.moveTo(_startX2, 0);
-      context.lineTo(childendX, 0);
-      context.stroke();
-      context.rotate(_childAngle * Math.PI);
-    }
-    context.restore();
-
-    //画指针
-    series = getGaugeDataPoints(series, categories, gaugeOption, process);
-
-    for (var _i22 = 0; _i22 < series.length; _i22++) {
-      var eachSeries = series[_i22];
-      context.save();
-      context.translate(centerPosition.x, centerPosition.y);
-      context.rotate((eachSeries._proportion_ - 1) * Math.PI);
-      context.beginPath();
-      context.setFillStyle(eachSeries.color);
-      context.moveTo(gaugeOption.pointer.width, 0);
-      context.lineTo(0, -gaugeOption.pointer.width / 2);
-      context.lineTo(-innerRadius, 0);
-      context.lineTo(0, gaugeOption.pointer.width / 2);
-      context.lineTo(gaugeOption.pointer.width, 0);
-      context.closePath();
-      context.fill();
-      context.beginPath();
-      context.setFillStyle('#FFFFFF');
-      context.arc(0, 0, gaugeOption.pointer.width / 6, 0, 2 * Math.PI, false);
-      context.fill();
-      context.restore();
-    }
-
-    if (opts.dataLabel !== false) {
-      drawGaugeLabel(gaugeOption, radius, centerPosition, opts, config, context);
-    }
-  }
-
-  //画仪表盘标题，副标题
-  drawRingTitle(opts, config, context, centerPosition);
-
-  if (process === 1 && opts.type === 'gauge') {
-    opts.extra.gauge.oldAngle = series[0]._proportion_;
-    opts.extra.gauge.oldData = series[0].data;
-  }
-  return {
-    center: centerPosition,
-    radius: radius,
-    innerRadius: innerRadius,
-    categories: categories,
-    totalAngle: totalAngle };
-
-}
-
-function drawRadarDataPoints(series, opts, config, context) {
-  var process = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 1;
-  var radarOption = assign({}, {
-    gridColor: '#cccccc',
-    labelColor: '#666666',
-    opacity: 0.2,
-    gridCount: 3 },
-  opts.extra.radar);
-
-  var coordinateAngle = getRadarCoordinateSeries(opts.categories.length);
-
-  var centerPosition = {
-    x: opts.area[3] + (opts.width - opts.area[1] - opts.area[3]) / 2,
-    y: opts.area[0] + (opts.height - opts.area[0] - opts.area[2]) / 2 };
-
-
-  var radius = Math.min(centerPosition.x - (getMaxTextListLength(opts.categories) + config.radarLabelTextMargin),
-  centerPosition.y - config.radarLabelTextMargin);
-  //TODO逻辑不对
-  radius -= opts.padding[1];
-
-  // draw grid
-  context.beginPath();
-  context.setLineWidth(1 * opts.pixelRatio);
-  context.setStrokeStyle(radarOption.gridColor);
-  coordinateAngle.forEach(function (angle) {
-    var pos = convertCoordinateOrigin(radius * Math.cos(angle), radius * Math.sin(angle), centerPosition);
-    context.moveTo(centerPosition.x, centerPosition.y);
-    context.lineTo(pos.x, pos.y);
-  });
-  context.stroke();
-  context.closePath();
-  // draw split line grid
-
-  var _loop = function _loop(i) {
-    var startPos = {};
-    context.beginPath();
-    context.setLineWidth(1 * opts.pixelRatio);
-    context.setStrokeStyle(radarOption.gridColor);
-    coordinateAngle.forEach(function (angle, index) {
-      var pos = convertCoordinateOrigin(radius / radarOption.gridCount * i * Math.cos(angle), radius / radarOption.gridCount * i * Math.sin(angle), centerPosition);
-      if (index === 0) {
-        startPos = pos;
-        context.moveTo(pos.x, pos.y);
-      } else {
-        context.lineTo(pos.x, pos.y);
-      }
-    });
-    context.lineTo(startPos.x, startPos.y);
-    context.stroke();
-    context.closePath();
-  };
-
-  for (var i = 1; i <= radarOption.gridCount; i++) {
-    _loop(i);
-  }
-
-  var radarDataPoints = getRadarDataPoints(coordinateAngle, centerPosition, radius, series, opts, process);
-
-  radarDataPoints.forEach(function (eachSeries, seriesIndex) {
-    // 绘制区域数据
-    context.beginPath();
-    context.setFillStyle(hexToRgb(eachSeries.color, radarOption.opacity));
-    eachSeries.data.forEach(function (item, index) {
-      if (index === 0) {
-        context.moveTo(item.position.x, item.position.y);
-      } else {
-        context.lineTo(item.position.x, item.position.y);
-      }
-    });
-    context.closePath();
-    context.fill();
-
-    if (opts.dataPointShape !== false) {
-      var points = eachSeries.data.map(function (item) {
-        return item.position;
-      });
-      drawPointShape(points, eachSeries.color, eachSeries.pointShape, context, opts);
-    }
-  });
-  // draw label text
-  drawRadarLabel(coordinateAngle, radius, centerPosition, opts, config, context);
-
-  return {
-    center: centerPosition,
-    radius: radius,
-    angleList: coordinateAngle };
-
-}
-
-function normalInt(min, max, iter) {
-  iter = iter == 0 ? 1 : iter;
-  var arr = [];
-  for (var i = 0; i < iter; i++) {
-    arr[i] = Math.random();
-  };
-  return Math.floor(arr.reduce(function (i, j) {return i + j;}) / iter * (max - min)) + min;
-};
-
-function collisionNew(area, points, width, height) {
-  var isIn = false;
-  for (var i = 0; i < points.length; i++) {
-    if (points[i].area) {
-      if (area[3] < points[i].area[1] || area[0] > points[i].area[2] || area[1] > points[i].area[3] || area[2] < points[i].area[0]) {
-        if (area[0] < 0 || area[1] < 0 || area[2] > width || area[3] > height) {
-          isIn = true;
-          break;
-        } else {
-          isIn = false;
-        }
-      } else {
-        isIn = true;
-        break;
-      }
-    }
-  }
-  return isIn;
-};
-
-function getBoundingBox(data) {
-  var bounds = {},coords;
-  bounds.xMin = 180;
-  bounds.xMax = 0;
-  bounds.yMin = 90;
-  bounds.yMax = 0;
-  for (var i = 0; i < data.length; i++) {
-    var coorda = data[i].geometry.coordinates;
-    for (var k = 0; k < coorda.length; k++) {
-      coords = coorda[k];
-      if (coords.length == 1) {
-        coords = coords[0];
-      }
-      for (var j = 0; j < coords.length; j++) {
-        var longitude = coords[j][0];
-        var latitude = coords[j][1];
-        var point = {
-          x: longitude,
-          y: latitude };
-
-        bounds.xMin = bounds.xMin < point.x ? bounds.xMin : point.x;
-        bounds.xMax = bounds.xMax > point.x ? bounds.xMax : point.x;
-        bounds.yMin = bounds.yMin < point.y ? bounds.yMin : point.y;
-        bounds.yMax = bounds.yMax > point.y ? bounds.yMax : point.y;
-      }
-    }
-  }
-  return bounds;
-}
-
-function coordinateToPoint(latitude, longitude, bounds, scale, xoffset, yoffset) {
-  return {
-    x: (longitude - bounds.xMin) * scale + xoffset,
-    y: (bounds.yMax - latitude) * scale + yoffset };
-
-}
-
-function pointToCoordinate(pointY, pointX, bounds, scale, xoffset, yoffset) {
-  return {
-    x: (pointX - xoffset) / scale + bounds.xMin,
-    y: bounds.yMax - (pointY - yoffset) / scale };
-
-}
-
-function isRayIntersectsSegment(poi, s_poi, e_poi) {
-  if (s_poi[1] == e_poi[1]) {return false;}
-  if (s_poi[1] > poi[1] && e_poi[1] > poi[1]) {return false;}
-  if (s_poi[1] < poi[1] && e_poi[1] < poi[1]) {return false;}
-  if (s_poi[1] == poi[1] && e_poi[1] > poi[1]) {return false;}
-  if (e_poi[1] == poi[1] && s_poi[1] > poi[1]) {return false;}
-  if (s_poi[0] < poi[0] && e_poi[1] < poi[1]) {return false;}
-  var xseg = e_poi[0] - (e_poi[0] - s_poi[0]) * (e_poi[1] - poi[1]) / (e_poi[1] - s_poi[1]);
-  if (xseg < poi[0]) {
-    return false;
-  } else {
-    return true;
-  }
-}
-
-function isPoiWithinPoly(poi, poly) {
-  var sinsc = 0;
-  for (var i = 0; i < poly.length; i++) {
-    var epoly = poly[i][0];
-    if (poly.length == 1) {
-      epoly = poly[i][0];
-    }
-    for (var j = 0; j < epoly.length - 1; j++) {
-      var s_poi = epoly[j];
-      var e_poi = epoly[j + 1];
-      if (isRayIntersectsSegment(poi, s_poi, e_poi)) {
-        sinsc += 1;
-      }
-    }
-  }
-
-  if (sinsc % 2 == 1) {
-    return true;
-  } else {
-    return false;
-  }
-}
-
-
-function drawMapDataPoints(series, opts, config, context) {
-  var mapOption = assign({}, {
-    border: true,
-    borderWidth: 1,
-    borderColor: '#666666',
-    fillOpacity: 0.6,
-    activeBorderColor: '#f04864',
-    activeFillColor: '#facc14',
-    activeFillOpacity: 1 },
-  opts.extra.map);
-  var coords, point;
-  var data = series;
-  var bounds = getBoundingBox(data);
-  var xScale = opts.width / Math.abs(bounds.xMax - bounds.xMin);
-  var yScale = opts.height / Math.abs(bounds.yMax - bounds.yMin);
-  var scale = xScale < yScale ? xScale : yScale;
-  var xoffset = opts.width / 2 - Math.abs(bounds.xMax - bounds.xMin) / 2 * scale;
-  var yoffset = opts.height / 2 - Math.abs(bounds.yMax - bounds.yMin) / 2 * scale;
-  context.beginPath();
-  context.clearRect(0, 0, opts.width, opts.height);
-  context.setFillStyle(opts.background || '#FFFFFF');
-  context.rect(0, 0, opts.width, opts.height);
-  context.fill();
-  for (var i = 0; i < data.length; i++) {
-    context.beginPath();
-    context.setLineWidth(mapOption.borderWidth * opts.pixelRatio);
-    context.setStrokeStyle(mapOption.borderColor);
-    context.setFillStyle(hexToRgb(series[i].color, mapOption.fillOpacity));
-    if (opts.tooltip) {
-      if (opts.tooltip.index == i) {
-        context.setStrokeStyle(mapOption.activeBorderColor);
-        context.setFillStyle(hexToRgb(mapOption.activeFillColor, mapOption.activeFillOpacity));
-      }
-    }
-    var coorda = data[i].geometry.coordinates;
-    for (var k = 0; k < coorda.length; k++) {
-      coords = coorda[k];
-      if (coords.length == 1) {
-        coords = coords[0];
-      }
-      for (var j = 0; j < coords.length; j++) {
-        point = coordinateToPoint(coords[j][1], coords[j][0], bounds, scale, xoffset, yoffset);
-        if (j === 0) {
-          context.beginPath();
-          context.moveTo(point.x, point.y);
-        } else {
-          context.lineTo(point.x, point.y);
-        }
-      }
-      context.fill();
-      if (mapOption.border == true) {
-        context.stroke();
-      }
-    }
-    if (opts.dataLabel == true) {
-      var centerPoint = data[i].properties.centroid;
-      if (centerPoint) {
-        point = coordinateToPoint(centerPoint[1], centerPoint[0], bounds, scale, xoffset, yoffset);
-        var fontSize = data[i].textSize || config.fontSize;
-        var text = data[i].properties.name;
-        context.beginPath();
-        context.setFontSize(fontSize);
-        context.setFillStyle(data[i].textColor || '#666666');
-        context.fillText(text, point.x - measureText(text, fontSize) / 2, point.y + fontSize / 2);
-        context.closePath();
-        context.stroke();
-      }
-    }
-  }
-  opts.chartData.mapData = {
-    bounds: bounds,
-    scale: scale,
-    xoffset: xoffset,
-    yoffset: yoffset };
-
-  drawToolTipBridge(opts, config, context, 1);
-  context.draw();
-}
-
-function getWordCloudPoint(opts, type) {
-  var points = opts.series.sort(function (a, b) {return parseInt(b.textSize) - parseInt(a.textSize);});
-  switch (type) {
-    case 'normal':
-      for (var i = 0; i < points.length; i++) {
-        var text = points[i].name;
-        var tHeight = points[i].textSize;
-        var tWidth = measureText(text, tHeight);
-        var x = void 0,y = void 0;
-        var area = void 0;
-        var breaknum = 0;
-        while (true) {
-          breaknum++;
-          x = normalInt(-opts.width / 2, opts.width / 2, 5) - tWidth / 2;
-          y = normalInt(-opts.height / 2, opts.height / 2, 5) + tHeight / 2;
-          area = [x - 5 + opts.width / 2, y - 5 - tHeight + opts.height / 2, x + tWidth + 5 + opts.width / 2, y + 5 + opts.height / 2];
-          var isCollision = collisionNew(area, points, opts.width, opts.height);
-          if (!isCollision) break;
-          if (breaknum == 1000) {
-            area = [-100, -100, -100, -100];
-            break;
-          }
-        };
-        points[i].area = area;
-      }
-      break;
-    case 'vertical':var
-      Spin = function Spin() {
-        //获取均匀随机值，是否旋转，旋转的概率为（1-0.5）
-        if (Math.random() > 0.7) {
-          return true;
-        } else {return false;};
-      };;
-      for (var _i23 = 0; _i23 < points.length; _i23++) {
-        var _text = points[_i23].name;
-        var _tHeight = points[_i23].textSize;
-        var _tWidth = measureText(_text, _tHeight);
-        var isSpin = Spin();
-        var _x = void 0,_y = void 0,_area = void 0,areav = void 0;
-        var _breaknum = 0;
-        while (true) {
-          _breaknum++;
-          var _isCollision = void 0;
-          if (isSpin) {
-            _x = normalInt(-opts.width / 2, opts.width / 2, 5) - _tWidth / 2;
-            _y = normalInt(-opts.height / 2, opts.height / 2, 5) + _tHeight / 2;
-            _area = [_y - 5 - _tWidth + opts.width / 2, -_x - 5 + opts.height / 2, _y + 5 + opts.width / 2, -_x + _tHeight + 5 + opts.height / 2];
-            areav = [opts.width - (opts.width / 2 - opts.height / 2) - (-_x + _tHeight + 5 + opts.height / 2) - 5, opts.height / 2 - opts.width / 2 + (_y - 5 - _tWidth + opts.width / 2) - 5, opts.width - (opts.width / 2 - opts.height / 2) - (-_x + _tHeight + 5 + opts.height / 2) + _tHeight, opts.height / 2 - opts.width / 2 + (_y - 5 - _tWidth + opts.width / 2) + _tWidth + 5];
-            _isCollision = collisionNew(areav, points, opts.height, opts.width);
-          } else {
-            _x = normalInt(-opts.width / 2, opts.width / 2, 5) - _tWidth / 2;
-            _y = normalInt(-opts.height / 2, opts.height / 2, 5) + _tHeight / 2;
-            _area = [_x - 5 + opts.width / 2, _y - 5 - _tHeight + opts.height / 2, _x + _tWidth + 5 + opts.width / 2, _y + 5 + opts.height / 2];
-            _isCollision = collisionNew(_area, points, opts.width, opts.height);
-          }
-          if (!_isCollision) break;
-          if (_breaknum == 1000) {
-            _area = [-1000, -1000, -1000, -1000];
-            break;
-          }
-        };
-        if (isSpin) {
-          points[_i23].area = areav;
-          points[_i23].areav = _area;
-        } else {
-          points[_i23].area = _area;
-        }
-        points[_i23].rotate = isSpin;
-      };
-      break;}
-
-  return points;
-}
-
-
-function drawWordCloudDataPoints(series, opts, config, context) {
-  var process = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 1;
-  var wordOption = assign({}, {
-    type: 'normal',
-    autoColors: true },
-  opts.extra.word);
-
-  context.beginPath();
-  context.setFillStyle(opts.background || '#FFFFFF');
-  context.rect(0, 0, opts.width, opts.height);
-  context.fill();
-  context.save();
-  var points = opts.chartData.wordCloudData;
-  context.translate(opts.width / 2, opts.height / 2);
-
-  for (var i = 0; i < points.length; i++) {
-    context.save();
-    if (points[i].rotate) {
-      context.rotate(90 * Math.PI / 180);
-    }
-    var text = points[i].name;
-    var tHeight = points[i].textSize;
-    var tWidth = measureText(text, tHeight);
-    context.beginPath();
-    context.setStrokeStyle(points[i].color);
-    context.setFillStyle(points[i].color);
-    context.setFontSize(tHeight);
-    if (points[i].rotate) {
-      if (points[i].areav[0] > 0) {
-        if (opts.tooltip) {
-          if (opts.tooltip.index == i) {
-            context.strokeText(text, (points[i].areav[0] + 5 - opts.width / 2) * process - tWidth * (1 - process) / 2, (points[i].areav[1] + 5 + tHeight - opts.height / 2) * process);
-          } else {
-            context.fillText(text, (points[i].areav[0] + 5 - opts.width / 2) * process - tWidth * (1 - process) / 2, (points[i].areav[1] + 5 + tHeight - opts.height / 2) * process);
-          }
-        } else {
-          context.fillText(text, (points[i].areav[0] + 5 - opts.width / 2) * process - tWidth * (1 - process) / 2, (points[i].areav[1] + 5 + tHeight - opts.height / 2) * process);
-        }
-      }
-    } else {
-      if (points[i].area[0] > 0) {
-        if (opts.tooltip) {
-          if (opts.tooltip.index == i) {
-            context.strokeText(text, (points[i].area[0] + 5 - opts.width / 2) * process - tWidth * (1 - process) / 2, (points[i].area[1] + 5 + tHeight - opts.height / 2) * process);
-          } else {
-            context.fillText(text, (points[i].area[0] + 5 - opts.width / 2) * process - tWidth * (1 - process) / 2, (points[i].area[1] + 5 + tHeight - opts.height / 2) * process);
-          }
-        } else {
-          context.fillText(text, (points[i].area[0] + 5 - opts.width / 2) * process - tWidth * (1 - process) / 2, (points[i].area[1] + 5 + tHeight - opts.height / 2) * process);
-        }
-
-      }
-    }
-
-    context.stroke();
-    context.restore();
-  }
-  context.restore();
-}
-
-function drawFunnelDataPoints(series, opts, config, context) {
-  var process = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 1;
-  var funnelOption = assign({}, {
-    activeWidth: 10,
-    activeOpacity: 0.3,
-    border: false,
-    borderWidth: 2,
-    borderColor: '#FFFFFF',
-    fillOpacity: 1,
-    labelAlign: 'right' },
-  opts.extra.funnel);
-  var eachSpacing = (opts.height - opts.area[0] - opts.area[2]) / series.length;
-  var centerPosition = {
-    x: opts.area[3] + (opts.width - opts.area[1] - opts.area[3]) / 2,
-    y: opts.height - opts.area[2] };
-
-  var activeWidth = funnelOption.activeWidth;
-  var radius = Math.min((opts.width - opts.area[1] - opts.area[3]) / 2 - activeWidth, (opts.height - opts.area[0] - opts.area[2]) / 2 - activeWidth);
-  series = getFunnelDataPoints(series, radius, process);
-  context.save();
-  context.translate(centerPosition.x, centerPosition.y);
-  for (var i = 0; i < series.length; i++) {
-    if (i == 0) {
-      if (opts.tooltip) {
-        if (opts.tooltip.index == i) {
-          context.beginPath();
-          context.setFillStyle(hexToRgb(series[i].color, funnelOption.activeOpacity));
-          context.moveTo(-activeWidth, 0);
-          context.lineTo(-series[i].radius - activeWidth, -eachSpacing);
-          context.lineTo(series[i].radius + activeWidth, -eachSpacing);
-          context.lineTo(activeWidth, 0);
-          context.lineTo(-activeWidth, 0);
-          context.closePath();
-          context.fill();
-        }
-      }
-      series[i].funnelArea = [centerPosition.x - series[i].radius, centerPosition.y - eachSpacing, centerPosition.x + series[i].radius, centerPosition.y];
-      context.beginPath();
-      context.setLineWidth(funnelOption.borderWidth * opts.pixelRatio);
-      context.setStrokeStyle(funnelOption.borderColor);
-      context.setFillStyle(hexToRgb(series[i].color, funnelOption.fillOpacity));
-      context.moveTo(0, 0);
-      context.lineTo(-series[i].radius, -eachSpacing);
-      context.lineTo(series[i].radius, -eachSpacing);
-      context.lineTo(0, 0);
-      context.closePath();
-      context.fill();
-      if (funnelOption.border == true) {
-        context.stroke();
-      }
-    } else {
-      if (opts.tooltip) {
-        if (opts.tooltip.index == i) {
-          context.beginPath();
-          context.setFillStyle(hexToRgb(series[i].color, funnelOption.activeOpacity));
-          context.moveTo(0, 0);
-          context.lineTo(-series[i - 1].radius - activeWidth, 0);
-          context.lineTo(-series[i].radius - activeWidth, -eachSpacing);
-          context.lineTo(series[i].radius + activeWidth, -eachSpacing);
-          context.lineTo(series[i - 1].radius + activeWidth, 0);
-          context.lineTo(0, 0);
-          context.closePath();
-          context.fill();
-        }
-      }
-      series[i].funnelArea = [centerPosition.x - series[i].radius, centerPosition.y - eachSpacing * (i + 1), centerPosition.x + series[i].radius, centerPosition.y - eachSpacing * i];
-      context.beginPath();
-      context.setLineWidth(funnelOption.borderWidth * opts.pixelRatio);
-      context.setStrokeStyle(funnelOption.borderColor);
-      context.setFillStyle(hexToRgb(series[i].color, funnelOption.fillOpacity));
-      context.moveTo(0, 0);
-      context.lineTo(-series[i - 1].radius, 0);
-      context.lineTo(-series[i].radius, -eachSpacing);
-      context.lineTo(series[i].radius, -eachSpacing);
-      context.lineTo(series[i - 1].radius, 0);
-      context.lineTo(0, 0);
-      context.closePath();
-      context.fill();
-      if (funnelOption.border == true) {
-        context.stroke();
-      }
-    }
-    context.translate(0, -eachSpacing);
-  }
-  context.restore();
-
-  if (opts.dataLabel !== false && process === 1) {
-    drawFunnelText(series, opts, context, eachSpacing, funnelOption.labelAlign, activeWidth, centerPosition);
-  }
-
-  return {
-    center: centerPosition,
-    radius: radius,
-    series: series };
-
-}
-
-function drawFunnelText(series, opts, context, eachSpacing, labelAlign, activeWidth, centerPosition) {
-  for (var i = 0; i < series.length; i++) {
-    var item = series[i];
-    var startX = void 0,endX = void 0,startY = void 0,fontSize = void 0;
-    var text = item.format ? item.format(+item._proportion_.toFixed(2)) : util.toFixed(item._proportion_ * 100) + '%';
-    if (labelAlign == 'right') {
-      if (i == 0) {
-        startX = (item.funnelArea[2] + centerPosition.x) / 2;
-      } else {
-        startX = (item.funnelArea[2] + series[i - 1].funnelArea[2]) / 2;
-      }
-      endX = startX + activeWidth * 2;
-      startY = item.funnelArea[1] + eachSpacing / 2;
-      fontSize = item.textSize || opts.fontSize;
-      context.setLineWidth(1 * opts.pixelRatio);
-      context.setStrokeStyle(item.color);
-      context.setFillStyle(item.color);
-      context.beginPath();
-      context.moveTo(startX, startY);
-      context.lineTo(endX, startY);
-      context.stroke();
-      context.closePath();
-      context.beginPath();
-      context.moveTo(endX, startY);
-      context.arc(endX, startY, 2, 0, 2 * Math.PI);
-      context.closePath();
-      context.fill();
-      context.beginPath();
-      context.setFontSize(fontSize);
-      context.setFillStyle(item.textColor || '#666666');
-      context.fillText(text, endX + 5, startY + fontSize / 2 - 2);
-      context.closePath();
-      context.stroke();
-      context.closePath();
-    } else {
-      if (i == 0) {
-        startX = (item.funnelArea[0] + centerPosition.x) / 2;
-      } else {
-        startX = (item.funnelArea[0] + series[i - 1].funnelArea[0]) / 2;
-      }
-      endX = startX - activeWidth * 2;
-      startY = item.funnelArea[1] + eachSpacing / 2;
-      fontSize = item.textSize || opts.fontSize;
-      context.setLineWidth(1 * opts.pixelRatio);
-      context.setStrokeStyle(item.color);
-      context.setFillStyle(item.color);
-      context.beginPath();
-      context.moveTo(startX, startY);
-      context.lineTo(endX, startY);
-      context.stroke();
-      context.closePath();
-      context.beginPath();
-      context.moveTo(endX, startY);
-      context.arc(endX, startY, 2, 0, 2 * Math.PI);
-      context.closePath();
-      context.fill();
-      context.beginPath();
-      context.setFontSize(fontSize);
-      context.setFillStyle(item.textColor || '#666666');
-      context.fillText(text, endX - 5 - measureText(text), startY + fontSize / 2 - 2);
-      context.closePath();
-      context.stroke();
-      context.closePath();
-    }
-
-  }
-}
-
-
-function drawCanvas(opts, context) {
-  context.draw();
-}
-
-var Timing = {
-  easeIn: function easeIn(pos) {
-    return Math.pow(pos, 3);
-  },
-  easeOut: function easeOut(pos) {
-    return Math.pow(pos - 1, 3) + 1;
-  },
-  easeInOut: function easeInOut(pos) {
-    if ((pos /= 0.5) < 1) {
-      return 0.5 * Math.pow(pos, 3);
-    } else {
-      return 0.5 * (Math.pow(pos - 2, 3) + 2);
-    }
-  },
-  linear: function linear(pos) {
-    return pos;
-  } };
-
-
-function Animation(opts) {
-  this.isStop = false;
-  opts.duration = typeof opts.duration === 'undefined' ? 1000 : opts.duration;
-  opts.timing = opts.timing || 'linear';
-  var delay = 17;
-
-  function createAnimationFrame() {
-    if (typeof setTimeout !== 'undefined') {
-      return function (step, delay) {
-        setTimeout(function () {
-          var timeStamp = +new Date();
-          step(timeStamp);
-        }, delay);
-      };
-    } else if (typeof requestAnimationFrame !== 'undefined') {
-      return requestAnimationFrame;
-    } else {
-      return function (step) {
-        step(null);
-      };
-    }
-  };
-  var animationFrame = createAnimationFrame();
-  var startTimeStamp = null;
-  var _step = function step(timestamp) {
-    if (timestamp === null || this.isStop === true) {
-      opts.onProcess && opts.onProcess(1);
-      opts.onAnimationFinish && opts.onAnimationFinish();
-      return;
-    }
-    if (startTimeStamp === null) {
-      startTimeStamp = timestamp;
-    }
-    if (timestamp - startTimeStamp < opts.duration) {
-      var process = (timestamp - startTimeStamp) / opts.duration;
-      var timingFunction = Timing[opts.timing];
-      process = timingFunction(process);
-
-      opts.onProcess && opts.onProcess(process);
-      animationFrame(_step, delay);
-    } else {
-      opts.onProcess && opts.onProcess(1);
-      opts.onAnimationFinish && opts.onAnimationFinish();
-    }
-  };
-  _step = _step.bind(this);
-  animationFrame(_step, delay);
-}
-
-// stop animation immediately
-// and tigger onAnimationFinish
-Animation.prototype.stop = function () {
-  this.isStop = true;
-};
-
-function drawCharts(type, opts, config, context) {
-  var _this = this;
-  var series = opts.series;
-  var categories = opts.categories;
-  series = fillSeries(series, opts, config);
-  var duration = opts.animation ? opts.duration : 0;
-  _this.animationInstance && _this.animationInstance.stop();
-  var seriesMA = null;
-  if (type == 'candle') {
-    var average = assign({}, opts.extra.candle.average);
-    if (average.show) {
-      seriesMA = calCandleMA(average.day, average.name, average.color, series[0].data);
-      seriesMA = fillSeries(seriesMA, opts, config);
-      opts.seriesMA = seriesMA;
-    } else if (opts.seriesMA) {
-      seriesMA = opts.seriesMA = fillSeries(opts.seriesMA, opts, config);
-    } else {
-      seriesMA = series;
-    }
-  } else {
-    seriesMA = series;
-  }
-
-  /* 过滤掉show=false的series */
-  opts._series_ = series = filterSeries(series);
-
-  //重新计算图表区域
-
-  opts.area = new Array(4);
-  //复位绘图区域
-  for (var j = 0; j < 4; j++) {
-    opts.area[j] = opts.padding[j];
-  }
-
-  //通过计算三大区域：图例、X轴、Y轴的大小，确定绘图区域
-  var _calLegendData = calLegendData(seriesMA, opts, config, opts.chartData),
-  legendHeight = _calLegendData.area.wholeHeight,
-  legendWidth = _calLegendData.area.wholeWidth;
-
-  switch (opts.legend.position) {
-    case 'top':
-      opts.area[0] += legendHeight;
-      break;
-    case 'bottom':
-      opts.area[2] += legendHeight;
-      break;
-    case 'left':
-      opts.area[3] += legendWidth;
-      break;
-    case 'right':
-      opts.area[1] += legendWidth;
-      break;}
-
-
-  var _calYAxisData = {},yAxisWidth = 0;
-  if (opts.type === 'line' || opts.type === 'column' || opts.type === 'area' || opts.type === 'mix' || opts.type === 'candle') {
-    _calYAxisData = calYAxisData(series, opts, config);
-    yAxisWidth = _calYAxisData.yAxisWidth;
-    //如果显示Y轴标题
-    if (opts.yAxis.showTitle) {
-      var maxTitleHeight = 0;
-      for (var i = 0; i < opts.yAxis.data.length; i++) {
-        maxTitleHeight = Math.max(maxTitleHeight, opts.yAxis.data[i].titleFontSize ? opts.yAxis.data[i].titleFontSize : config.fontSize);
-      }
-      opts.area[0] += (maxTitleHeight + 6) * opts.pixelRatio;
-    }
-    var rightIndex = 0,leftIndex = 0;
-    //计算主绘图区域左右位置
-    for (var _i24 = 0; _i24 < yAxisWidth.length; _i24++) {
-      if (yAxisWidth[_i24].position == 'left') {
-        if (leftIndex > 0) {
-          opts.area[3] += yAxisWidth[_i24].width + opts.yAxis.padding;
-        } else {
-          opts.area[3] += yAxisWidth[_i24].width;
-        }
-        leftIndex += 1;
-      } else {
-        if (rightIndex > 0) {
-          opts.area[1] += yAxisWidth[_i24].width + opts.yAxis.padding;
-        } else {
-          opts.area[1] += yAxisWidth[_i24].width;
-        }
-        rightIndex += 1;
-      }
-    }
-  } else {
-    config.yAxisWidth = yAxisWidth;
-  }
-  opts.chartData.yAxisData = _calYAxisData;
-
-  if (opts.categories && opts.categories.length) {
-    opts.chartData.xAxisData = getXAxisPoints(opts.categories, opts, config);
-    var _calCategoriesData = calCategoriesData(opts.categories, opts, config, opts.chartData.xAxisData.eachSpacing),
-    xAxisHeight = _calCategoriesData.xAxisHeight,
-    angle = _calCategoriesData.angle;
-    config.xAxisHeight = xAxisHeight;
-    config._xAxisTextAngle_ = angle;
-    opts.area[2] += xAxisHeight;
-    opts.chartData.categoriesData = _calCategoriesData;
-  } else {
-    if (opts.type === 'line' || opts.type === 'area' || opts.type === 'points') {
-      opts.chartData.xAxisData = calXAxisData(series, opts, config);
-      categories = opts.chartData.xAxisData.rangesFormat;
-      var _calCategoriesData2 = calCategoriesData(categories, opts, config, opts.chartData.xAxisData.eachSpacing),
-      _xAxisHeight = _calCategoriesData2.xAxisHeight,
-      _angle = _calCategoriesData2.angle;
-      config.xAxisHeight = _xAxisHeight;
-      config._xAxisTextAngle_ = _angle;
-      opts.area[2] += _xAxisHeight;
-      opts.chartData.categoriesData = _calCategoriesData2;
-    } else {
-      opts.chartData.xAxisData = {
-        xAxisPoints: [] };
-
-    }
-  }
-  //计算右对齐偏移距离
-  if (opts.enableScroll && opts.xAxis.scrollAlign == 'right' && opts._scrollDistance_ === undefined) {
-    var offsetLeft = 0,
-    xAxisPoints = opts.chartData.xAxisData.xAxisPoints,
-    startX = opts.chartData.xAxisData.startX,
-    endX = opts.chartData.xAxisData.endX,
-    eachSpacing = opts.chartData.xAxisData.eachSpacing;
-    var totalWidth = eachSpacing * (xAxisPoints.length - 1);
-    var screenWidth = endX - startX;
-    offsetLeft = screenWidth - totalWidth;
-    _this.scrollOption = {
-      currentOffset: offsetLeft,
-      startTouchX: offsetLeft,
-      distance: 0,
-      lastMoveTime: 0 };
-
-    opts._scrollDistance_ = offsetLeft;
-  }
-
-  if (type === 'pie' || type === 'ring' || type === 'rose') {
-    config._pieTextMaxLength_ = opts.dataLabel === false ? 0 : getPieTextMaxLength(seriesMA);
-  }
-
-  switch (type) {
-    case 'word':
-      var wordOption = assign({}, {
-        type: 'normal',
-        autoColors: true },
-      opts.extra.word);
-      if (opts.updateData == true || opts.updateData == undefined) {
-        opts.chartData.wordCloudData = getWordCloudPoint(opts, wordOption.type);
-      }
-      this.animationInstance = new Animation({
-        timing: 'easeInOut',
-        duration: duration,
-        onProcess: function onProcess(process) {
-          context.clearRect(0, 0, opts.width, opts.height);
-          if (opts.rotate) {
-            contextRotate(context, opts);
-          }
-          drawWordCloudDataPoints(series, opts, config, context, process);
-          drawCanvas(opts, context);
-        },
-        onAnimationFinish: function onAnimationFinish() {
-          _this.event.trigger('renderComplete');
-        } });
-
-      break;
-    case 'map':
-      context.clearRect(0, 0, opts.width, opts.height);
-      drawMapDataPoints(series, opts, config, context);
-      break;
-    case 'funnel':
-      this.animationInstance = new Animation({
-        timing: 'easeInOut',
-        duration: duration,
-        onProcess: function onProcess(process) {
-          context.clearRect(0, 0, opts.width, opts.height);
-          if (opts.rotate) {
-            contextRotate(context, opts);
-          }
-          opts.chartData.funnelData = drawFunnelDataPoints(series, opts, config, context, process);
-          drawLegend(opts.series, opts, config, context, opts.chartData);
-          drawToolTipBridge(opts, config, context, process);
-          drawCanvas(opts, context);
-        },
-        onAnimationFinish: function onAnimationFinish() {
-          _this.event.trigger('renderComplete');
-        } });
-
-      break;
-    case 'line':
-      this.animationInstance = new Animation({
-        timing: 'easeIn',
-        duration: duration,
-        onProcess: function onProcess(process) {
-          context.clearRect(0, 0, opts.width, opts.height);
-          if (opts.rotate) {
-            contextRotate(context, opts);
-          }
-          drawYAxisGrid(categories, opts, config, context);
-          drawXAxis(categories, opts, config, context);
-          var _drawLineDataPoints = drawLineDataPoints(series, opts, config, context, process),
-          xAxisPoints = _drawLineDataPoints.xAxisPoints,
-          calPoints = _drawLineDataPoints.calPoints,
-          eachSpacing = _drawLineDataPoints.eachSpacing;
-          opts.chartData.xAxisPoints = xAxisPoints;
-          opts.chartData.calPoints = calPoints;
-          opts.chartData.eachSpacing = eachSpacing;
-          drawYAxis(series, opts, config, context);
-          if (opts.enableMarkLine !== false && process === 1) {
-            drawMarkLine(opts, config, context);
-          }
-          drawLegend(opts.series, opts, config, context, opts.chartData);
-          drawToolTipBridge(opts, config, context, process, eachSpacing, xAxisPoints);
-          drawCanvas(opts, context);
-
-        },
-        onAnimationFinish: function onAnimationFinish() {
-          _this.event.trigger('renderComplete');
-        } });
-
-      break;
-    case 'mix':
-      this.animationInstance = new Animation({
-        timing: 'easeIn',
-        duration: duration,
-        onProcess: function onProcess(process) {
-          context.clearRect(0, 0, opts.width, opts.height);
-          if (opts.rotate) {
-            contextRotate(context, opts);
-          }
-          drawYAxisGrid(categories, opts, config, context);
-          drawXAxis(categories, opts, config, context);
-          var _drawMixDataPoints = drawMixDataPoints(series, opts, config, context, process),
-          xAxisPoints = _drawMixDataPoints.xAxisPoints,
-          calPoints = _drawMixDataPoints.calPoints,
-          eachSpacing = _drawMixDataPoints.eachSpacing;
-          opts.chartData.xAxisPoints = xAxisPoints;
-          opts.chartData.calPoints = calPoints;
-          opts.chartData.eachSpacing = eachSpacing;
-          drawYAxis(series, opts, config, context);
-          if (opts.enableMarkLine !== false && process === 1) {
-            drawMarkLine(opts, config, context);
-          }
-          drawLegend(opts.series, opts, config, context, opts.chartData);
-          drawToolTipBridge(opts, config, context, process, eachSpacing, xAxisPoints);
-          drawCanvas(opts, context);
-        },
-        onAnimationFinish: function onAnimationFinish() {
-          _this.event.trigger('renderComplete');
-        } });
-
-      break;
-    case 'column':
-      this.animationInstance = new Animation({
-        timing: 'easeIn',
-        duration: duration,
-        onProcess: function onProcess(process) {
-          context.clearRect(0, 0, opts.width, opts.height);
-          if (opts.rotate) {
-            contextRotate(context, opts);
-          }
-          drawYAxisGrid(categories, opts, config, context);
-          drawXAxis(categories, opts, config, context);
-          var _drawColumnDataPoints = drawColumnDataPoints(series, opts, config, context, process),
-          xAxisPoints = _drawColumnDataPoints.xAxisPoints,
-          calPoints = _drawColumnDataPoints.calPoints,
-          eachSpacing = _drawColumnDataPoints.eachSpacing;
-          opts.chartData.xAxisPoints = xAxisPoints;
-          opts.chartData.calPoints = calPoints;
-          opts.chartData.eachSpacing = eachSpacing;
-          drawYAxis(series, opts, config, context);
-          if (opts.enableMarkLine !== false && process === 1) {
-            drawMarkLine(opts, config, context);
-          }
-          drawLegend(opts.series, opts, config, context, opts.chartData);
-          drawToolTipBridge(opts, config, context, process, eachSpacing, xAxisPoints);
-          drawCanvas(opts, context);
-        },
-        onAnimationFinish: function onAnimationFinish() {
-          _this.event.trigger('renderComplete');
-        } });
-
-      break;
-    case 'area':
-      this.animationInstance = new Animation({
-        timing: 'easeIn',
-        duration: duration,
-        onProcess: function onProcess(process) {
-          context.clearRect(0, 0, opts.width, opts.height);
-          if (opts.rotate) {
-            contextRotate(context, opts);
-          }
-          drawYAxisGrid(categories, opts, config, context);
-          drawXAxis(categories, opts, config, context);
-          var _drawAreaDataPoints = drawAreaDataPoints(series, opts, config, context, process),
-          xAxisPoints = _drawAreaDataPoints.xAxisPoints,
-          calPoints = _drawAreaDataPoints.calPoints,
-          eachSpacing = _drawAreaDataPoints.eachSpacing;
-          opts.chartData.xAxisPoints = xAxisPoints;
-          opts.chartData.calPoints = calPoints;
-          opts.chartData.eachSpacing = eachSpacing;
-          drawYAxis(series, opts, config, context);
-          if (opts.enableMarkLine !== false && process === 1) {
-            drawMarkLine(opts, config, context);
-          }
-          drawLegend(opts.series, opts, config, context, opts.chartData);
-          drawToolTipBridge(opts, config, context, process, eachSpacing, xAxisPoints);
-          drawCanvas(opts, context);
-        },
-        onAnimationFinish: function onAnimationFinish() {
-          _this.event.trigger('renderComplete');
-        } });
-
-      break;
-    case 'ring':
-    case 'pie':
-      this.animationInstance = new Animation({
-        timing: 'easeInOut',
-        duration: duration,
-        onProcess: function onProcess(process) {
-          context.clearRect(0, 0, opts.width, opts.height);
-          if (opts.rotate) {
-            contextRotate(context, opts);
-          }
-          opts.chartData.pieData = drawPieDataPoints(series, opts, config, context, process);
-          drawLegend(opts.series, opts, config, context, opts.chartData);
-          drawToolTipBridge(opts, config, context, process);
-          drawCanvas(opts, context);
-        },
-        onAnimationFinish: function onAnimationFinish() {
-          _this.event.trigger('renderComplete');
-        } });
-
-      break;
-    case 'rose':
-      this.animationInstance = new Animation({
-        timing: 'easeInOut',
-        duration: duration,
-        onProcess: function onProcess(process) {
-          context.clearRect(0, 0, opts.width, opts.height);
-          if (opts.rotate) {
-            contextRotate(context, opts);
-          }
-          opts.chartData.pieData = drawRoseDataPoints(series, opts, config, context, process);
-          drawLegend(opts.series, opts, config, context, opts.chartData);
-          drawToolTipBridge(opts, config, context, process);
-          drawCanvas(opts, context);
-        },
-        onAnimationFinish: function onAnimationFinish() {
-          _this.event.trigger('renderComplete');
-        } });
-
-      break;
-    case 'radar':
-      this.animationInstance = new Animation({
-        timing: 'easeInOut',
-        duration: duration,
-        onProcess: function onProcess(process) {
-          context.clearRect(0, 0, opts.width, opts.height);
-          if (opts.rotate) {
-            contextRotate(context, opts);
-          }
-          opts.chartData.radarData = drawRadarDataPoints(series, opts, config, context, process);
-          drawLegend(opts.series, opts, config, context, opts.chartData);
-          drawToolTipBridge(opts, config, context, process);
-          drawCanvas(opts, context);
-        },
-        onAnimationFinish: function onAnimationFinish() {
-          _this.event.trigger('renderComplete');
-        } });
-
-      break;
-    case 'arcbar':
-      this.animationInstance = new Animation({
-        timing: 'easeInOut',
-        duration: duration,
-        onProcess: function onProcess(process) {
-          context.clearRect(0, 0, opts.width, opts.height);
-          if (opts.rotate) {
-            contextRotate(context, opts);
-          }
-          opts.chartData.arcbarData = drawArcbarDataPoints(series, opts, config, context, process);
-          drawCanvas(opts, context);
-        },
-        onAnimationFinish: function onAnimationFinish() {
-          _this.event.trigger('renderComplete');
-        } });
-
-      break;
-    case 'gauge':
-      this.animationInstance = new Animation({
-        timing: 'easeInOut',
-        duration: duration,
-        onProcess: function onProcess(process) {
-          context.clearRect(0, 0, opts.width, opts.height);
-          if (opts.rotate) {
-            contextRotate(context, opts);
-          }
-          opts.chartData.gaugeData = drawGaugeDataPoints(categories, series, opts, config, context, process);
-          drawCanvas(opts, context);
-        },
-        onAnimationFinish: function onAnimationFinish() {
-          _this.event.trigger('renderComplete');
-        } });
-
-      break;
-    case 'candle':
-      this.animationInstance = new Animation({
-        timing: 'easeIn',
-        duration: duration,
-        onProcess: function onProcess(process) {
-          context.clearRect(0, 0, opts.width, opts.height);
-          if (opts.rotate) {
-            contextRotate(context, opts);
-          }
-          drawYAxisGrid(categories, opts, config, context);
-          drawXAxis(categories, opts, config, context);
-          var _drawCandleDataPoints = drawCandleDataPoints(series, seriesMA, opts, config, context, process),
-          xAxisPoints = _drawCandleDataPoints.xAxisPoints,
-          calPoints = _drawCandleDataPoints.calPoints,
-          eachSpacing = _drawCandleDataPoints.eachSpacing;
-          opts.chartData.xAxisPoints = xAxisPoints;
-          opts.chartData.calPoints = calPoints;
-          opts.chartData.eachSpacing = eachSpacing;
-          drawYAxis(series, opts, config, context);
-          if (opts.enableMarkLine !== false && process === 1) {
-            drawMarkLine(opts, config, context);
-          }
-          if (seriesMA) {
-            drawLegend(seriesMA, opts, config, context, opts.chartData);
-          } else {
-            drawLegend(opts.series, opts, config, context, opts.chartData);
-          }
-          drawToolTipBridge(opts, config, context, process, eachSpacing, xAxisPoints);
-          drawCanvas(opts, context);
-        },
-        onAnimationFinish: function onAnimationFinish() {
-          _this.event.trigger('renderComplete');
-        } });
-
-      break;}
-
-}
-
-// simple event implement
-
-function Event() {
-  this.events = {};
-}
-
-Event.prototype.addEventListener = function (type, listener) {
-  this.events[type] = this.events[type] || [];
-  this.events[type].push(listener);
-};
-
-Event.prototype.trigger = function () {
-  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-    args[_key] = arguments[_key];
-  }
-
-  var type = args[0];
-  var params = args.slice(1);
-  if (!!this.events[type]) {
-    this.events[type].forEach(function (listener) {
-      try {
-        listener.apply(null, params);
-      } catch (e) {
-        console.error(e);
-      }
-    });
-  }
-};
-
-var Charts = function Charts(opts) {
-  opts.pixelRatio = opts.pixelRatio ? opts.pixelRatio : 1;
-  opts.fontSize = opts.fontSize ? opts.fontSize * opts.pixelRatio : 13 * opts.pixelRatio;
-  opts.title = assign({}, opts.title);
-  opts.subtitle = assign({}, opts.subtitle);
-  opts.duration = opts.duration ? opts.duration : 1000;
-  opts.yAxis = assign({}, {
-    data: [],
-    showTitle: false,
-    disabled: false,
-    disableGrid: false,
-    splitNumber: 5,
-    gridType: 'solid',
-    dashLength: 4 * opts.pixelRatio,
-    gridColor: '#cccccc',
-    padding: 10,
-    fontColor: '#666666' },
-  opts.yAxis);
-  opts.yAxis.dashLength *= opts.pixelRatio;
-  opts.yAxis.padding *= opts.pixelRatio;
-  opts.xAxis = assign({}, {
-    rotateLabel: false,
-    type: 'calibration',
-    gridType: 'solid',
-    dashLength: 4,
-    scrollAlign: 'left',
-    boundaryGap: 'center',
-    axisLine: true,
-    axisLineColor: '#cccccc' },
-  opts.xAxis);
-  opts.xAxis.dashLength *= opts.pixelRatio;
-  opts.legend = assign({}, {
-    show: true,
-    position: 'bottom',
-    float: 'center',
-    backgroundColor: 'rgba(0,0,0,0)',
-    borderColor: 'rgba(0,0,0,0)',
-    borderWidth: 0,
-    padding: 5,
-    margin: 5,
-    itemGap: 10,
-    fontSize: opts.fontSize,
-    lineHeight: opts.fontSize,
-    fontColor: '#333333',
-    format: {},
-    hiddenColor: '#CECECE' },
-  opts.legend);
-  opts.legend.borderWidth = opts.legend.borderWidth * opts.pixelRatio;
-  opts.legend.itemGap = opts.legend.itemGap * opts.pixelRatio;
-  opts.legend.padding = opts.legend.padding * opts.pixelRatio;
-  opts.legend.margin = opts.legend.margin * opts.pixelRatio;
-  opts.extra = assign({}, opts.extra);
-  opts.rotate = opts.rotate ? true : false;
-  opts.animation = opts.animation ? true : false;
-  opts.rotate = opts.rotate ? true : false;
-
-  var config$$1 = JSON.parse(JSON.stringify(config));
-  config$$1.colors = opts.colors ? opts.colors : config$$1.colors;
-  config$$1.yAxisTitleWidth = opts.yAxis.disabled !== true && opts.yAxis.title ? config$$1.yAxisTitleWidth : 0;
-  if (opts.type == 'pie' || opts.type == 'ring') {
-    config$$1.pieChartLinePadding = opts.dataLabel === false ? 0 : opts.extra.pie.labelWidth * opts.pixelRatio || config$$1.pieChartLinePadding * opts.pixelRatio;
-  }
-  if (opts.type == 'rose') {
-    config$$1.pieChartLinePadding = opts.dataLabel === false ? 0 : opts.extra.rose.labelWidth * opts.pixelRatio || config$$1.pieChartLinePadding * opts.pixelRatio;
-  }
-  config$$1.pieChartTextPadding = opts.dataLabel === false ? 0 : config$$1.pieChartTextPadding * opts.pixelRatio;
-  config$$1.yAxisSplit = opts.yAxis.splitNumber ? opts.yAxis.splitNumber : config.yAxisSplit;
-
-  //屏幕旋转
-  config$$1.rotate = opts.rotate;
-  if (opts.rotate) {
-    var tempWidth = opts.width;
-    var tempHeight = opts.height;
-    opts.width = tempHeight;
-    opts.height = tempWidth;
-  }
-
-  //适配高分屏
-  opts.padding = opts.padding ? opts.padding : config$$1.padding;
-  for (var i = 0; i < 4; i++) {
-    opts.padding[i] *= opts.pixelRatio;
-  }
-  config$$1.yAxisWidth = config.yAxisWidth * opts.pixelRatio;
-  config$$1.xAxisHeight = config.xAxisHeight * opts.pixelRatio;
-  if (opts.enableScroll && opts.xAxis.scrollShow) {
-    config$$1.xAxisHeight += 6 * opts.pixelRatio;
-  }
-  config$$1.xAxisLineHeight = config.xAxisLineHeight * opts.pixelRatio;
-  config$$1.fontSize = opts.fontSize;
-  config$$1.titleFontSize = config.titleFontSize * opts.pixelRatio;
-  config$$1.subtitleFontSize = config.subtitleFontSize * opts.pixelRatio;
-  config$$1.toolTipPadding = config.toolTipPadding * opts.pixelRatio;
-  config$$1.toolTipLineHeight = config.toolTipLineHeight * opts.pixelRatio;
-  config$$1.columePadding = config.columePadding * opts.pixelRatio;
-  opts.$this = opts.$this ? opts.$this : this;
-
-  this.context = uni.createCanvasContext(opts.canvasId, opts.$this);
-  /* 兼容原生H5
-                                                                     this.context = document.getElementById(opts.canvasId).getContext("2d");
-                                                                     this.context.setStrokeStyle = function(e){ return this.strokeStyle=e; }
-                                                                     this.context.setLineWidth = function(e){ return this.lineWidth=e; }
-                                                                     this.context.setLineCap = function(e){ return this.lineCap=e; }
-                                                                     this.context.setFontSize = function(e){ return this.font=e+"px sans-serif"; }
-                                                                     this.context.setFillStyle = function(e){ return this.fillStyle=e; }
-                                                                     this.context.draw = function(){ }
-                                                                     */
-
-  opts.chartData = {};
-  this.event = new Event();
-  this.scrollOption = {
-    currentOffset: 0,
-    startTouchX: 0,
-    distance: 0,
-    lastMoveTime: 0 };
-
-
-  this.opts = opts;
-  this.config = config$$1;
-
-  drawCharts.call(this, opts.type, opts, config$$1, this.context);
-};
-
-Charts.prototype.updateData = function () {
-  var data = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  this.opts = assign({}, this.opts, data);
-  this.opts.updateData = true;
-  var scrollPosition = data.scrollPosition || 'current';
-  switch (scrollPosition) {
-    case 'current':
-      this.opts._scrollDistance_ = this.scrollOption.currentOffset;
-      break;
-    case 'left':
-      this.opts._scrollDistance_ = 0;
-      this.scrollOption = {
-        currentOffset: 0,
-        startTouchX: 0,
-        distance: 0,
-        lastMoveTime: 0 };
-
-      break;
-    case 'right':
-      var _calYAxisData = calYAxisData(this.opts.series, this.opts, this.config),
-      yAxisWidth = _calYAxisData.yAxisWidth;
-      this.config.yAxisWidth = yAxisWidth;
-      var offsetLeft = 0;
-      var _getXAxisPoints0 = getXAxisPoints(this.opts.categories, this.opts, this.config),
-      xAxisPoints = _getXAxisPoints0.xAxisPoints,
-      startX = _getXAxisPoints0.startX,
-      endX = _getXAxisPoints0.endX,
-      eachSpacing = _getXAxisPoints0.eachSpacing;
-      var totalWidth = eachSpacing * (xAxisPoints.length - 1);
-      var screenWidth = endX - startX;
-      offsetLeft = screenWidth - totalWidth;
-      this.scrollOption = {
-        currentOffset: offsetLeft,
-        startTouchX: offsetLeft,
-        distance: 0,
-        lastMoveTime: 0 };
-
-      this.opts._scrollDistance_ = offsetLeft;
-      break;}
-
-  drawCharts.call(this, this.opts.type, this.opts, this.config, this.context);
-};
-
-Charts.prototype.zoom = function () {
-  var val = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.opts.xAxis.itemCount;
-  if (this.opts.enableScroll !== true) {
-    console.log('请启用滚动条后使用！');
-    return;
-  }
-  //当前屏幕中间点
-  var centerPoint = Math.round(Math.abs(this.scrollOption.currentOffset) / this.opts.chartData.eachSpacing) + Math.round(
-  this.opts.xAxis.itemCount / 2);
-  this.opts.animation = false;
-  this.opts.xAxis.itemCount = val.itemCount;
-  //重新计算x轴偏移距离
-  var _calYAxisData = calYAxisData(this.opts.series, this.opts, this.config),
-  yAxisWidth = _calYAxisData.yAxisWidth;
-  this.config.yAxisWidth = yAxisWidth;
-  var offsetLeft = 0;
-  var _getXAxisPoints0 = getXAxisPoints(this.opts.categories, this.opts, this.config),
-  xAxisPoints = _getXAxisPoints0.xAxisPoints,
-  startX = _getXAxisPoints0.startX,
-  endX = _getXAxisPoints0.endX,
-  eachSpacing = _getXAxisPoints0.eachSpacing;
-  var centerLeft = eachSpacing * centerPoint;
-  var screenWidth = endX - startX;
-  var MaxLeft = screenWidth - eachSpacing * (xAxisPoints.length - 1);
-  offsetLeft = screenWidth / 2 - centerLeft;
-  if (offsetLeft > 0) {
-    offsetLeft = 0;
-  }
-  if (offsetLeft < MaxLeft) {
-    offsetLeft = MaxLeft;
-  }
-  this.scrollOption = {
-    currentOffset: offsetLeft,
-    startTouchX: offsetLeft,
-    distance: 0,
-    lastMoveTime: 0 };
-
-  this.opts._scrollDistance_ = offsetLeft;
-  drawCharts.call(this, this.opts.type, this.opts, this.config, this.context);
-};
-
-Charts.prototype.stopAnimation = function () {
-  this.animationInstance && this.animationInstance.stop();
-};
-
-Charts.prototype.addEventListener = function (type, listener) {
-  this.event.addEventListener(type, listener);
-};
-
-Charts.prototype.getCurrentDataIndex = function (e) {
-  var touches = null;
-  if (e.changedTouches) {
-    touches = e.changedTouches[0];
-  } else {
-    touches = e.mp.changedTouches[0];
-  }
-  if (touches) {
-    var _touches$ = getTouches(touches, this.opts, e);
-    if (this.opts.type === 'pie' || this.opts.type === 'ring' || this.opts.type === 'rose') {
-      return findPieChartCurrentIndex({
-        x: _touches$.x,
-        y: _touches$.y },
-      this.opts.chartData.pieData);
-    } else if (this.opts.type === 'radar') {
-      return findRadarChartCurrentIndex({
-        x: _touches$.x,
-        y: _touches$.y },
-      this.opts.chartData.radarData, this.opts.categories.length);
-    } else if (this.opts.type === 'funnel') {
-      return findFunnelChartCurrentIndex({
-        x: _touches$.x,
-        y: _touches$.y },
-      this.opts.chartData.funnelData);
-    } else if (this.opts.type === 'map') {
-      return findMapChartCurrentIndex({
-        x: _touches$.x,
-        y: _touches$.y },
-      this.opts);
-    } else if (this.opts.type === 'word') {
-      return findWordChartCurrentIndex({
-        x: _touches$.x,
-        y: _touches$.y },
-      this.opts.chartData.wordCloudData);
-    } else {
-      return findCurrentIndex({
-        x: _touches$.x,
-        y: _touches$.y },
-      this.opts.chartData.calPoints, this.opts, this.config, Math.abs(this.scrollOption.currentOffset));
-    }
-  }
-  return -1;
-};
-
-Charts.prototype.getLegendDataIndex = function (e) {
-  var touches = null;
-  if (e.changedTouches) {
-    touches = e.changedTouches[0];
-  } else {
-    touches = e.mp.changedTouches[0];
-  }
-  if (touches) {
-    var _touches$ = getTouches(touches, this.opts, e);
-    return findLegendIndex({
-      x: _touches$.x,
-      y: _touches$.y },
-    this.opts.chartData.legendData);
-  }
-  return -1;
-};
-
-Charts.prototype.touchLegend = function (e) {
-  var option = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-  var touches = null;
-  if (e.changedTouches) {
-    touches = e.changedTouches[0];
-  } else {
-    touches = e.mp.changedTouches[0];
-  }
-  if (touches) {
-    var _touches$ = getTouches(touches, this.opts, e);
-    var index = this.getLegendDataIndex(e);
-    if (index >= 0) {
-      this.opts.series[index].show = !this.opts.series[index].show;
-      this.opts.animation = option.animation ? true : false;
-      this.opts._scrollDistance_ = this.scrollOption.currentOffset;
-      drawCharts.call(this, this.opts.type, this.opts, this.config, this.context);
-    }
-  }
-
-};
-
-Charts.prototype.showToolTip = function (e) {
-  var option = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-  var touches = null;
-  if (e.changedTouches) {
-    touches = e.changedTouches[0];
-  } else {
-    touches = e.mp.changedTouches[0];
-  }
-  if (!touches) {
-    console.log("touchError");
-  }
-  var _touches$ = getTouches(touches, this.opts, e);
-  var currentOffset = this.scrollOption.currentOffset;
-  var opts = assign({}, this.opts, {
-    _scrollDistance_: currentOffset,
-    animation: false });
-
-  if (this.opts.type === 'line' || this.opts.type === 'area' || this.opts.type === 'column') {
-    var index = option.index == undefined ? this.getCurrentDataIndex(e) : option.index;
-    if (index > -1) {
-      var seriesData = getSeriesDataItem(this.opts.series, index);
-      if (seriesData.length !== 0) {
-        var _getToolTipData = getToolTipData(seriesData, this.opts.chartData.calPoints, index, this.opts.categories, option),
-        textList = _getToolTipData.textList,
-        offset = _getToolTipData.offset;
-        offset.y = _touches$.y;
-        opts.tooltip = {
-          textList: option.textList ? option.textList : textList,
-          offset: offset,
-          option: option,
-          index: index };
-
-      }
-    }
-    drawCharts.call(this, opts.type, opts, this.config, this.context);
-  }
-  if (this.opts.type === 'mix') {
-    var index = option.index == undefined ? this.getCurrentDataIndex(e) : option.index;
-    if (index > -1) {
-      var currentOffset = this.scrollOption.currentOffset;
-      var opts = assign({}, this.opts, {
-        _scrollDistance_: currentOffset,
-        animation: false });
-
-      var seriesData = getSeriesDataItem(this.opts.series, index);
-      if (seriesData.length !== 0) {
-        var _getMixToolTipData = getMixToolTipData(seriesData, this.opts.chartData.calPoints, index, this.opts.categories, option),
-        textList = _getMixToolTipData.textList,
-        offset = _getMixToolTipData.offset;
-        offset.y = _touches$.y;
-        opts.tooltip = {
-          textList: option.textList ? option.textList : textList,
-          offset: offset,
-          option: option,
-          index: index };
-
-      }
-    }
-    drawCharts.call(this, opts.type, opts, this.config, this.context);
-  }
-  if (this.opts.type === 'candle') {
-    var index = option.index == undefined ? this.getCurrentDataIndex(e) : option.index;
-    if (index > -1) {
-      var currentOffset = this.scrollOption.currentOffset;
-      var opts = assign({}, this.opts, {
-        _scrollDistance_: currentOffset,
-        animation: false });
-
-      var seriesData = getSeriesDataItem(this.opts.series, index);
-      if (seriesData.length !== 0) {
-        var _getToolTipData = getCandleToolTipData(this.opts.series[0].data, seriesData, this.opts.chartData.calPoints,
-        index, this.opts.categories, this.opts.extra.candle, option),
-        textList = _getToolTipData.textList,
-        offset = _getToolTipData.offset;
-        offset.y = _touches$.y;
-        opts.tooltip = {
-          textList: option.textList ? option.textList : textList,
-          offset: offset,
-          option: option,
-          index: index };
-
-      }
-    }
-    drawCharts.call(this, opts.type, opts, this.config, this.context);
-  }
-  if (this.opts.type === 'pie' || this.opts.type === 'ring' || this.opts.type === 'rose' || this.opts.type === 'funnel') {
-    var index = option.index == undefined ? this.getCurrentDataIndex(e) : option.index;
-    if (index > -1) {
-      var currentOffset = this.scrollOption.currentOffset;
-      var opts = assign({}, this.opts, {
-        _scrollDistance_: currentOffset,
-        animation: false });
-
-      var seriesData = this.opts._series_[index];
-      var textList = [{
-        text: option.format ? option.format(seriesData) : seriesData.name + ': ' + seriesData.data,
-        color: seriesData.color }];
-
-      var offset = {
-        x: _touches$.x,
-        y: _touches$.y };
-
-      opts.tooltip = {
-        textList: option.textList ? option.textList : textList,
-        offset: offset,
-        option: option,
-        index: index };
-
-    }
-    drawCharts.call(this, opts.type, opts, this.config, this.context);
-  }
-  if (this.opts.type === 'map' || this.opts.type === 'word') {
-    var index = option.index == undefined ? this.getCurrentDataIndex(e) : option.index;
-    if (index > -1) {
-      var currentOffset = this.scrollOption.currentOffset;
-      var opts = assign({}, this.opts, {
-        _scrollDistance_: currentOffset,
-        animation: false });
-
-      var seriesData = this.opts._series_[index];
-      var textList = [{
-        text: option.format ? option.format(seriesData) : seriesData.properties.name,
-        color: seriesData.color }];
-
-      var offset = {
-        x: _touches$.x,
-        y: _touches$.y };
-
-      opts.tooltip = {
-        textList: option.textList ? option.textList : textList,
-        offset: offset,
-        option: option,
-        index: index };
-
-    }
-    opts.updateData = false;
-    drawCharts.call(this, opts.type, opts, this.config, this.context);
-  }
-  if (this.opts.type === 'radar') {
-    var index = option.index == undefined ? this.getCurrentDataIndex(e) : option.index;
-    if (index > -1) {
-      var currentOffset = this.scrollOption.currentOffset;
-      var opts = assign({}, this.opts, {
-        _scrollDistance_: currentOffset,
-        animation: false });
-
-      var seriesData = getSeriesDataItem(this.opts.series, index);
-      if (seriesData.length !== 0) {
-        var textList = seriesData.map(function (item) {
-          return {
-            text: option.format ? option.format(item) : item.name + ': ' + item.data,
-            color: item.color };
-
-        });
-        var offset = {
-          x: _touches$.x,
-          y: _touches$.y };
-
-        opts.tooltip = {
-          textList: option.textList ? option.textList : textList,
-          offset: offset,
-          option: option,
-          index: index };
-
-      }
-    }
-    drawCharts.call(this, opts.type, opts, this.config, this.context);
-  }
-};
-
-Charts.prototype.translate = function (distance) {
-  this.scrollOption = {
-    currentOffset: distance,
-    startTouchX: distance,
-    distance: 0,
-    lastMoveTime: 0 };
-
-  var opts = assign({}, this.opts, {
-    _scrollDistance_: distance,
-    animation: false });
-
-  drawCharts.call(this, this.opts.type, opts, this.config, this.context);
-};
-
-Charts.prototype.scrollStart = function (e) {
-  var touches = null;
-  if (e.changedTouches) {
-    touches = e.changedTouches[0];
-  } else {
-    touches = e.mp.changedTouches[0];
-  }
-  var _touches$ = getTouches(touches, this.opts, e);
-  if (touches && this.opts.enableScroll === true) {
-    this.scrollOption.startTouchX = _touches$.x;
-  }
-};
-
-Charts.prototype.scroll = function (e) {
-  if (this.scrollOption.lastMoveTime === 0) {
-    this.scrollOption.lastMoveTime = Date.now();
-  }
-  var Limit = this.opts.extra.touchMoveLimit || 20;
-  var currMoveTime = Date.now();
-  var duration = currMoveTime - this.scrollOption.lastMoveTime;
-  if (duration < Math.floor(1000 / Limit)) return;
-  this.scrollOption.lastMoveTime = currMoveTime;
-  var touches = null;
-  if (e.changedTouches) {
-    touches = e.changedTouches[0];
-  } else {
-    touches = e.mp.changedTouches[0];
-  }
-  if (touches && this.opts.enableScroll === true) {
-    var _touches$ = getTouches(touches, this.opts, e);
-    var _distance;
-    _distance = _touches$.x - this.scrollOption.startTouchX;
-    var currentOffset = this.scrollOption.currentOffset;
-    var validDistance = calValidDistance(this, currentOffset + _distance, this.opts.chartData, this.config, this.opts);
-    this.scrollOption.distance = _distance = validDistance - currentOffset;
-    var opts = assign({}, this.opts, {
-      _scrollDistance_: currentOffset + _distance,
-      animation: false });
-
-    drawCharts.call(this, opts.type, opts, this.config, this.context);
-    return currentOffset + _distance;
-  }
-};
-
-Charts.prototype.scrollEnd = function (e) {
-  if (this.opts.enableScroll === true) {
-    var _scrollOption = this.scrollOption,
-    currentOffset = _scrollOption.currentOffset,
-    distance = _scrollOption.distance;
-    this.scrollOption.currentOffset = currentOffset + distance;
-    this.scrollOption.distance = 0;
-  }
-};
-if ( true && typeof module.exports === "object") {
-  module.exports = Charts;
-  //export default Charts;//建议使用nodejs的module导出方式，如报错请使用export方式导出
-}
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
-
-/***/ }),
+/* 234 */,
 /* 235 */,
 /* 236 */,
 /* 237 */,
@@ -37608,794 +33945,9 @@ if ( true && typeof module.exports === "object") {
 /* 321 */,
 /* 322 */,
 /* 323 */,
-/* 324 */
-/*!**********************************************************!*\
-  !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! regenerator-runtime */ 325);
-
-/***/ }),
-/* 325 */
-/*!************************************************************!*\
-  !*** ./node_modules/regenerator-runtime/runtime-module.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/**
- * Copyright (c) 2014-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-// This method of obtaining a reference to the global object needs to be
-// kept identical to the way it is obtained in runtime.js
-var g = (function() {
-  return this || (typeof self === "object" && self);
-})() || Function("return this")();
-
-// Use `getOwnPropertyNames` because not all browsers support calling
-// `hasOwnProperty` on the global `self` object in a worker. See #183.
-var hadRuntime = g.regeneratorRuntime &&
-  Object.getOwnPropertyNames(g).indexOf("regeneratorRuntime") >= 0;
-
-// Save the old regeneratorRuntime in case it needs to be restored later.
-var oldRuntime = hadRuntime && g.regeneratorRuntime;
-
-// Force reevalutation of runtime.js.
-g.regeneratorRuntime = undefined;
-
-module.exports = __webpack_require__(/*! ./runtime */ 326);
-
-if (hadRuntime) {
-  // Restore the original runtime.
-  g.regeneratorRuntime = oldRuntime;
-} else {
-  // Remove the global property added by runtime.js.
-  try {
-    delete g.regeneratorRuntime;
-  } catch(e) {
-    g.regeneratorRuntime = undefined;
-  }
-}
-
-
-/***/ }),
-/* 326 */
-/*!*****************************************************!*\
-  !*** ./node_modules/regenerator-runtime/runtime.js ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/**
- * Copyright (c) 2014-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-!(function(global) {
-  "use strict";
-
-  var Op = Object.prototype;
-  var hasOwn = Op.hasOwnProperty;
-  var undefined; // More compressible than void 0.
-  var $Symbol = typeof Symbol === "function" ? Symbol : {};
-  var iteratorSymbol = $Symbol.iterator || "@@iterator";
-  var asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator";
-  var toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
-
-  var inModule = typeof module === "object";
-  var runtime = global.regeneratorRuntime;
-  if (runtime) {
-    if (inModule) {
-      // If regeneratorRuntime is defined globally and we're in a module,
-      // make the exports object identical to regeneratorRuntime.
-      module.exports = runtime;
-    }
-    // Don't bother evaluating the rest of this file if the runtime was
-    // already defined globally.
-    return;
-  }
-
-  // Define the runtime globally (as expected by generated code) as either
-  // module.exports (if we're in a module) or a new, empty object.
-  runtime = global.regeneratorRuntime = inModule ? module.exports : {};
-
-  function wrap(innerFn, outerFn, self, tryLocsList) {
-    // If outerFn provided and outerFn.prototype is a Generator, then outerFn.prototype instanceof Generator.
-    var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator;
-    var generator = Object.create(protoGenerator.prototype);
-    var context = new Context(tryLocsList || []);
-
-    // The ._invoke method unifies the implementations of the .next,
-    // .throw, and .return methods.
-    generator._invoke = makeInvokeMethod(innerFn, self, context);
-
-    return generator;
-  }
-  runtime.wrap = wrap;
-
-  // Try/catch helper to minimize deoptimizations. Returns a completion
-  // record like context.tryEntries[i].completion. This interface could
-  // have been (and was previously) designed to take a closure to be
-  // invoked without arguments, but in all the cases we care about we
-  // already have an existing method we want to call, so there's no need
-  // to create a new function object. We can even get away with assuming
-  // the method takes exactly one argument, since that happens to be true
-  // in every case, so we don't have to touch the arguments object. The
-  // only additional allocation required is the completion record, which
-  // has a stable shape and so hopefully should be cheap to allocate.
-  function tryCatch(fn, obj, arg) {
-    try {
-      return { type: "normal", arg: fn.call(obj, arg) };
-    } catch (err) {
-      return { type: "throw", arg: err };
-    }
-  }
-
-  var GenStateSuspendedStart = "suspendedStart";
-  var GenStateSuspendedYield = "suspendedYield";
-  var GenStateExecuting = "executing";
-  var GenStateCompleted = "completed";
-
-  // Returning this object from the innerFn has the same effect as
-  // breaking out of the dispatch switch statement.
-  var ContinueSentinel = {};
-
-  // Dummy constructor functions that we use as the .constructor and
-  // .constructor.prototype properties for functions that return Generator
-  // objects. For full spec compliance, you may wish to configure your
-  // minifier not to mangle the names of these two functions.
-  function Generator() {}
-  function GeneratorFunction() {}
-  function GeneratorFunctionPrototype() {}
-
-  // This is a polyfill for %IteratorPrototype% for environments that
-  // don't natively support it.
-  var IteratorPrototype = {};
-  IteratorPrototype[iteratorSymbol] = function () {
-    return this;
-  };
-
-  var getProto = Object.getPrototypeOf;
-  var NativeIteratorPrototype = getProto && getProto(getProto(values([])));
-  if (NativeIteratorPrototype &&
-      NativeIteratorPrototype !== Op &&
-      hasOwn.call(NativeIteratorPrototype, iteratorSymbol)) {
-    // This environment has a native %IteratorPrototype%; use it instead
-    // of the polyfill.
-    IteratorPrototype = NativeIteratorPrototype;
-  }
-
-  var Gp = GeneratorFunctionPrototype.prototype =
-    Generator.prototype = Object.create(IteratorPrototype);
-  GeneratorFunction.prototype = Gp.constructor = GeneratorFunctionPrototype;
-  GeneratorFunctionPrototype.constructor = GeneratorFunction;
-  GeneratorFunctionPrototype[toStringTagSymbol] =
-    GeneratorFunction.displayName = "GeneratorFunction";
-
-  // Helper for defining the .next, .throw, and .return methods of the
-  // Iterator interface in terms of a single ._invoke method.
-  function defineIteratorMethods(prototype) {
-    ["next", "throw", "return"].forEach(function(method) {
-      prototype[method] = function(arg) {
-        return this._invoke(method, arg);
-      };
-    });
-  }
-
-  runtime.isGeneratorFunction = function(genFun) {
-    var ctor = typeof genFun === "function" && genFun.constructor;
-    return ctor
-      ? ctor === GeneratorFunction ||
-        // For the native GeneratorFunction constructor, the best we can
-        // do is to check its .name property.
-        (ctor.displayName || ctor.name) === "GeneratorFunction"
-      : false;
-  };
-
-  runtime.mark = function(genFun) {
-    if (Object.setPrototypeOf) {
-      Object.setPrototypeOf(genFun, GeneratorFunctionPrototype);
-    } else {
-      genFun.__proto__ = GeneratorFunctionPrototype;
-      if (!(toStringTagSymbol in genFun)) {
-        genFun[toStringTagSymbol] = "GeneratorFunction";
-      }
-    }
-    genFun.prototype = Object.create(Gp);
-    return genFun;
-  };
-
-  // Within the body of any async function, `await x` is transformed to
-  // `yield regeneratorRuntime.awrap(x)`, so that the runtime can test
-  // `hasOwn.call(value, "__await")` to determine if the yielded value is
-  // meant to be awaited.
-  runtime.awrap = function(arg) {
-    return { __await: arg };
-  };
-
-  function AsyncIterator(generator) {
-    function invoke(method, arg, resolve, reject) {
-      var record = tryCatch(generator[method], generator, arg);
-      if (record.type === "throw") {
-        reject(record.arg);
-      } else {
-        var result = record.arg;
-        var value = result.value;
-        if (value &&
-            typeof value === "object" &&
-            hasOwn.call(value, "__await")) {
-          return Promise.resolve(value.__await).then(function(value) {
-            invoke("next", value, resolve, reject);
-          }, function(err) {
-            invoke("throw", err, resolve, reject);
-          });
-        }
-
-        return Promise.resolve(value).then(function(unwrapped) {
-          // When a yielded Promise is resolved, its final value becomes
-          // the .value of the Promise<{value,done}> result for the
-          // current iteration.
-          result.value = unwrapped;
-          resolve(result);
-        }, function(error) {
-          // If a rejected Promise was yielded, throw the rejection back
-          // into the async generator function so it can be handled there.
-          return invoke("throw", error, resolve, reject);
-        });
-      }
-    }
-
-    var previousPromise;
-
-    function enqueue(method, arg) {
-      function callInvokeWithMethodAndArg() {
-        return new Promise(function(resolve, reject) {
-          invoke(method, arg, resolve, reject);
-        });
-      }
-
-      return previousPromise =
-        // If enqueue has been called before, then we want to wait until
-        // all previous Promises have been resolved before calling invoke,
-        // so that results are always delivered in the correct order. If
-        // enqueue has not been called before, then it is important to
-        // call invoke immediately, without waiting on a callback to fire,
-        // so that the async generator function has the opportunity to do
-        // any necessary setup in a predictable way. This predictability
-        // is why the Promise constructor synchronously invokes its
-        // executor callback, and why async functions synchronously
-        // execute code before the first await. Since we implement simple
-        // async functions in terms of async generators, it is especially
-        // important to get this right, even though it requires care.
-        previousPromise ? previousPromise.then(
-          callInvokeWithMethodAndArg,
-          // Avoid propagating failures to Promises returned by later
-          // invocations of the iterator.
-          callInvokeWithMethodAndArg
-        ) : callInvokeWithMethodAndArg();
-    }
-
-    // Define the unified helper method that is used to implement .next,
-    // .throw, and .return (see defineIteratorMethods).
-    this._invoke = enqueue;
-  }
-
-  defineIteratorMethods(AsyncIterator.prototype);
-  AsyncIterator.prototype[asyncIteratorSymbol] = function () {
-    return this;
-  };
-  runtime.AsyncIterator = AsyncIterator;
-
-  // Note that simple async functions are implemented on top of
-  // AsyncIterator objects; they just return a Promise for the value of
-  // the final result produced by the iterator.
-  runtime.async = function(innerFn, outerFn, self, tryLocsList) {
-    var iter = new AsyncIterator(
-      wrap(innerFn, outerFn, self, tryLocsList)
-    );
-
-    return runtime.isGeneratorFunction(outerFn)
-      ? iter // If outerFn is a generator, return the full iterator.
-      : iter.next().then(function(result) {
-          return result.done ? result.value : iter.next();
-        });
-  };
-
-  function makeInvokeMethod(innerFn, self, context) {
-    var state = GenStateSuspendedStart;
-
-    return function invoke(method, arg) {
-      if (state === GenStateExecuting) {
-        throw new Error("Generator is already running");
-      }
-
-      if (state === GenStateCompleted) {
-        if (method === "throw") {
-          throw arg;
-        }
-
-        // Be forgiving, per 25.3.3.3.3 of the spec:
-        // https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generatorresume
-        return doneResult();
-      }
-
-      context.method = method;
-      context.arg = arg;
-
-      while (true) {
-        var delegate = context.delegate;
-        if (delegate) {
-          var delegateResult = maybeInvokeDelegate(delegate, context);
-          if (delegateResult) {
-            if (delegateResult === ContinueSentinel) continue;
-            return delegateResult;
-          }
-        }
-
-        if (context.method === "next") {
-          // Setting context._sent for legacy support of Babel's
-          // function.sent implementation.
-          context.sent = context._sent = context.arg;
-
-        } else if (context.method === "throw") {
-          if (state === GenStateSuspendedStart) {
-            state = GenStateCompleted;
-            throw context.arg;
-          }
-
-          context.dispatchException(context.arg);
-
-        } else if (context.method === "return") {
-          context.abrupt("return", context.arg);
-        }
-
-        state = GenStateExecuting;
-
-        var record = tryCatch(innerFn, self, context);
-        if (record.type === "normal") {
-          // If an exception is thrown from innerFn, we leave state ===
-          // GenStateExecuting and loop back for another invocation.
-          state = context.done
-            ? GenStateCompleted
-            : GenStateSuspendedYield;
-
-          if (record.arg === ContinueSentinel) {
-            continue;
-          }
-
-          return {
-            value: record.arg,
-            done: context.done
-          };
-
-        } else if (record.type === "throw") {
-          state = GenStateCompleted;
-          // Dispatch the exception by looping back around to the
-          // context.dispatchException(context.arg) call above.
-          context.method = "throw";
-          context.arg = record.arg;
-        }
-      }
-    };
-  }
-
-  // Call delegate.iterator[context.method](context.arg) and handle the
-  // result, either by returning a { value, done } result from the
-  // delegate iterator, or by modifying context.method and context.arg,
-  // setting context.delegate to null, and returning the ContinueSentinel.
-  function maybeInvokeDelegate(delegate, context) {
-    var method = delegate.iterator[context.method];
-    if (method === undefined) {
-      // A .throw or .return when the delegate iterator has no .throw
-      // method always terminates the yield* loop.
-      context.delegate = null;
-
-      if (context.method === "throw") {
-        if (delegate.iterator.return) {
-          // If the delegate iterator has a return method, give it a
-          // chance to clean up.
-          context.method = "return";
-          context.arg = undefined;
-          maybeInvokeDelegate(delegate, context);
-
-          if (context.method === "throw") {
-            // If maybeInvokeDelegate(context) changed context.method from
-            // "return" to "throw", let that override the TypeError below.
-            return ContinueSentinel;
-          }
-        }
-
-        context.method = "throw";
-        context.arg = new TypeError(
-          "The iterator does not provide a 'throw' method");
-      }
-
-      return ContinueSentinel;
-    }
-
-    var record = tryCatch(method, delegate.iterator, context.arg);
-
-    if (record.type === "throw") {
-      context.method = "throw";
-      context.arg = record.arg;
-      context.delegate = null;
-      return ContinueSentinel;
-    }
-
-    var info = record.arg;
-
-    if (! info) {
-      context.method = "throw";
-      context.arg = new TypeError("iterator result is not an object");
-      context.delegate = null;
-      return ContinueSentinel;
-    }
-
-    if (info.done) {
-      // Assign the result of the finished delegate to the temporary
-      // variable specified by delegate.resultName (see delegateYield).
-      context[delegate.resultName] = info.value;
-
-      // Resume execution at the desired location (see delegateYield).
-      context.next = delegate.nextLoc;
-
-      // If context.method was "throw" but the delegate handled the
-      // exception, let the outer generator proceed normally. If
-      // context.method was "next", forget context.arg since it has been
-      // "consumed" by the delegate iterator. If context.method was
-      // "return", allow the original .return call to continue in the
-      // outer generator.
-      if (context.method !== "return") {
-        context.method = "next";
-        context.arg = undefined;
-      }
-
-    } else {
-      // Re-yield the result returned by the delegate method.
-      return info;
-    }
-
-    // The delegate iterator is finished, so forget it and continue with
-    // the outer generator.
-    context.delegate = null;
-    return ContinueSentinel;
-  }
-
-  // Define Generator.prototype.{next,throw,return} in terms of the
-  // unified ._invoke helper method.
-  defineIteratorMethods(Gp);
-
-  Gp[toStringTagSymbol] = "Generator";
-
-  // A Generator should always return itself as the iterator object when the
-  // @@iterator function is called on it. Some browsers' implementations of the
-  // iterator prototype chain incorrectly implement this, causing the Generator
-  // object to not be returned from this call. This ensures that doesn't happen.
-  // See https://github.com/facebook/regenerator/issues/274 for more details.
-  Gp[iteratorSymbol] = function() {
-    return this;
-  };
-
-  Gp.toString = function() {
-    return "[object Generator]";
-  };
-
-  function pushTryEntry(locs) {
-    var entry = { tryLoc: locs[0] };
-
-    if (1 in locs) {
-      entry.catchLoc = locs[1];
-    }
-
-    if (2 in locs) {
-      entry.finallyLoc = locs[2];
-      entry.afterLoc = locs[3];
-    }
-
-    this.tryEntries.push(entry);
-  }
-
-  function resetTryEntry(entry) {
-    var record = entry.completion || {};
-    record.type = "normal";
-    delete record.arg;
-    entry.completion = record;
-  }
-
-  function Context(tryLocsList) {
-    // The root entry object (effectively a try statement without a catch
-    // or a finally block) gives us a place to store values thrown from
-    // locations where there is no enclosing try statement.
-    this.tryEntries = [{ tryLoc: "root" }];
-    tryLocsList.forEach(pushTryEntry, this);
-    this.reset(true);
-  }
-
-  runtime.keys = function(object) {
-    var keys = [];
-    for (var key in object) {
-      keys.push(key);
-    }
-    keys.reverse();
-
-    // Rather than returning an object with a next method, we keep
-    // things simple and return the next function itself.
-    return function next() {
-      while (keys.length) {
-        var key = keys.pop();
-        if (key in object) {
-          next.value = key;
-          next.done = false;
-          return next;
-        }
-      }
-
-      // To avoid creating an additional object, we just hang the .value
-      // and .done properties off the next function object itself. This
-      // also ensures that the minifier will not anonymize the function.
-      next.done = true;
-      return next;
-    };
-  };
-
-  function values(iterable) {
-    if (iterable) {
-      var iteratorMethod = iterable[iteratorSymbol];
-      if (iteratorMethod) {
-        return iteratorMethod.call(iterable);
-      }
-
-      if (typeof iterable.next === "function") {
-        return iterable;
-      }
-
-      if (!isNaN(iterable.length)) {
-        var i = -1, next = function next() {
-          while (++i < iterable.length) {
-            if (hasOwn.call(iterable, i)) {
-              next.value = iterable[i];
-              next.done = false;
-              return next;
-            }
-          }
-
-          next.value = undefined;
-          next.done = true;
-
-          return next;
-        };
-
-        return next.next = next;
-      }
-    }
-
-    // Return an iterator with no values.
-    return { next: doneResult };
-  }
-  runtime.values = values;
-
-  function doneResult() {
-    return { value: undefined, done: true };
-  }
-
-  Context.prototype = {
-    constructor: Context,
-
-    reset: function(skipTempReset) {
-      this.prev = 0;
-      this.next = 0;
-      // Resetting context._sent for legacy support of Babel's
-      // function.sent implementation.
-      this.sent = this._sent = undefined;
-      this.done = false;
-      this.delegate = null;
-
-      this.method = "next";
-      this.arg = undefined;
-
-      this.tryEntries.forEach(resetTryEntry);
-
-      if (!skipTempReset) {
-        for (var name in this) {
-          // Not sure about the optimal order of these conditions:
-          if (name.charAt(0) === "t" &&
-              hasOwn.call(this, name) &&
-              !isNaN(+name.slice(1))) {
-            this[name] = undefined;
-          }
-        }
-      }
-    },
-
-    stop: function() {
-      this.done = true;
-
-      var rootEntry = this.tryEntries[0];
-      var rootRecord = rootEntry.completion;
-      if (rootRecord.type === "throw") {
-        throw rootRecord.arg;
-      }
-
-      return this.rval;
-    },
-
-    dispatchException: function(exception) {
-      if (this.done) {
-        throw exception;
-      }
-
-      var context = this;
-      function handle(loc, caught) {
-        record.type = "throw";
-        record.arg = exception;
-        context.next = loc;
-
-        if (caught) {
-          // If the dispatched exception was caught by a catch block,
-          // then let that catch block handle the exception normally.
-          context.method = "next";
-          context.arg = undefined;
-        }
-
-        return !! caught;
-      }
-
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        var record = entry.completion;
-
-        if (entry.tryLoc === "root") {
-          // Exception thrown outside of any try block that could handle
-          // it, so set the completion value of the entire function to
-          // throw the exception.
-          return handle("end");
-        }
-
-        if (entry.tryLoc <= this.prev) {
-          var hasCatch = hasOwn.call(entry, "catchLoc");
-          var hasFinally = hasOwn.call(entry, "finallyLoc");
-
-          if (hasCatch && hasFinally) {
-            if (this.prev < entry.catchLoc) {
-              return handle(entry.catchLoc, true);
-            } else if (this.prev < entry.finallyLoc) {
-              return handle(entry.finallyLoc);
-            }
-
-          } else if (hasCatch) {
-            if (this.prev < entry.catchLoc) {
-              return handle(entry.catchLoc, true);
-            }
-
-          } else if (hasFinally) {
-            if (this.prev < entry.finallyLoc) {
-              return handle(entry.finallyLoc);
-            }
-
-          } else {
-            throw new Error("try statement without catch or finally");
-          }
-        }
-      }
-    },
-
-    abrupt: function(type, arg) {
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        if (entry.tryLoc <= this.prev &&
-            hasOwn.call(entry, "finallyLoc") &&
-            this.prev < entry.finallyLoc) {
-          var finallyEntry = entry;
-          break;
-        }
-      }
-
-      if (finallyEntry &&
-          (type === "break" ||
-           type === "continue") &&
-          finallyEntry.tryLoc <= arg &&
-          arg <= finallyEntry.finallyLoc) {
-        // Ignore the finally entry if control is not jumping to a
-        // location outside the try/catch block.
-        finallyEntry = null;
-      }
-
-      var record = finallyEntry ? finallyEntry.completion : {};
-      record.type = type;
-      record.arg = arg;
-
-      if (finallyEntry) {
-        this.method = "next";
-        this.next = finallyEntry.finallyLoc;
-        return ContinueSentinel;
-      }
-
-      return this.complete(record);
-    },
-
-    complete: function(record, afterLoc) {
-      if (record.type === "throw") {
-        throw record.arg;
-      }
-
-      if (record.type === "break" ||
-          record.type === "continue") {
-        this.next = record.arg;
-      } else if (record.type === "return") {
-        this.rval = this.arg = record.arg;
-        this.method = "return";
-        this.next = "end";
-      } else if (record.type === "normal" && afterLoc) {
-        this.next = afterLoc;
-      }
-
-      return ContinueSentinel;
-    },
-
-    finish: function(finallyLoc) {
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        if (entry.finallyLoc === finallyLoc) {
-          this.complete(entry.completion, entry.afterLoc);
-          resetTryEntry(entry);
-          return ContinueSentinel;
-        }
-      }
-    },
-
-    "catch": function(tryLoc) {
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        if (entry.tryLoc === tryLoc) {
-          var record = entry.completion;
-          if (record.type === "throw") {
-            var thrown = record.arg;
-            resetTryEntry(entry);
-          }
-          return thrown;
-        }
-      }
-
-      // The context.catch method must only be called with a location
-      // argument that corresponds to a known catch block.
-      throw new Error("illegal catch attempt");
-    },
-
-    delegateYield: function(iterable, resultName, nextLoc) {
-      this.delegate = {
-        iterator: values(iterable),
-        resultName: resultName,
-        nextLoc: nextLoc
-      };
-
-      if (this.method === "next") {
-        // Deliberately forget the last sent value so that we don't
-        // accidentally pass it on to the delegate.
-        this.arg = undefined;
-      }
-
-      return ContinueSentinel;
-    }
-  };
-})(
-  // In sloppy mode, unbound `this` refers to the global object, fallback to
-  // Function constructor if we're in global strict mode. That is sadly a form
-  // of indirect eval which violates Content Security Policy.
-  (function() {
-    return this || (typeof self === "object" && self);
-  })() || Function("return this")()
-);
-
-
-/***/ }),
+/* 324 */,
+/* 325 */,
+/* 326 */,
 /* 327 */,
 /* 328 */,
 /* 329 */,
@@ -38410,7 +33962,137 @@ if (hadRuntime) {
 /* 338 */,
 /* 339 */,
 /* 340 */,
-/* 341 */
+/* 341 */,
+/* 342 */,
+/* 343 */,
+/* 344 */,
+/* 345 */,
+/* 346 */,
+/* 347 */,
+/* 348 */,
+/* 349 */,
+/* 350 */,
+/* 351 */,
+/* 352 */,
+/* 353 */,
+/* 354 */,
+/* 355 */,
+/* 356 */,
+/* 357 */,
+/* 358 */,
+/* 359 */,
+/* 360 */,
+/* 361 */,
+/* 362 */,
+/* 363 */,
+/* 364 */,
+/* 365 */,
+/* 366 */,
+/* 367 */,
+/* 368 */,
+/* 369 */,
+/* 370 */,
+/* 371 */,
+/* 372 */
+/*!******************************************************!*\
+  !*** G:/yjbank-uniapp/components/uni-popup/popup.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _message = _interopRequireDefault(__webpack_require__(/*! ./message.js */ 373));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+// 定义 type 类型:弹出类型：top/bottom/center
+var config = {
+  // 顶部弹出
+  top: 'top',
+  // 底部弹出
+  bottom: 'bottom',
+  // 居中弹出
+  center: 'center',
+  // 消息提示
+  message: 'top',
+  // 对话框
+  dialog: 'center',
+  // 分享
+  share: 'bottom' };var _default =
+
+
+{
+  data: function data() {
+    return {
+      config: config };
+
+  },
+  mixins: [_message.default] };exports.default = _default;
+
+/***/ }),
+/* 373 */
+/*!********************************************************!*\
+  !*** G:/yjbank-uniapp/components/uni-popup/message.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _created$created$meth;function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var _default = (_created$created$meth = {
+  created: function created() {
+    if (this.type === 'message') {
+      // 获取自组件对象
+      this.maskShow = false;
+      this.children = null;
+    }
+  } }, _defineProperty(_created$created$meth, "created", function created()
+{
+  if (this.type === 'message') {
+    // 不显示遮罩
+    this.maskShow = false;
+    // 获取子组件对象
+    this.childrenMsg = null;
+  }
+}), _defineProperty(_created$created$meth, "methods",
+{
+  customOpen: function customOpen() {
+    if (this.childrenMsg) {
+      this.childrenMsg.open();
+    }
+  },
+  customClose: function customClose() {
+    if (this.childrenMsg) {
+      this.childrenMsg.close();
+    }
+  } }), _created$created$meth);exports.default = _default;
+
+/***/ }),
+/* 374 */,
+/* 375 */,
+/* 376 */,
+/* 377 */,
+/* 378 */,
+/* 379 */,
+/* 380 */,
+/* 381 */,
+/* 382 */,
+/* 383 */,
+/* 384 */,
+/* 385 */,
+/* 386 */,
+/* 387 */,
+/* 388 */,
+/* 389 */,
+/* 390 */,
+/* 391 */,
+/* 392 */,
+/* 393 */,
+/* 394 */,
+/* 395 */,
+/* 396 */,
+/* 397 */,
+/* 398 */,
+/* 399 */,
+/* 400 */,
+/* 401 */,
+/* 402 */
 /*!*******************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/uview-ui/libs/util/emitter.js ***!
   \*******************************************************************/
@@ -38469,7 +34151,7 @@ function _broadcast(componentName, eventName, params) {
     } } };exports.default = _default;
 
 /***/ }),
-/* 342 */
+/* 403 */
 /*!***************************************************************************!*\
   !*** G:/yjbank-uniapp/node_modules/uview-ui/libs/util/async-validator.js ***!
   \***************************************************************************/
@@ -38796,7 +34478,7 @@ var types = {
   integer: function integer(value) {
     return types.number(value) && parseInt(value, 10) === value;
   },
-  "float": function _float(value) {
+  "float": function float(value) {
     return types.number(value) && !types.integer(value);
   },
   array: function array(value) {
@@ -39832,10 +35514,10 @@ Schema.warning = warning;
 Schema.messages = messages;var _default =
 
 Schema;exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/node-libs-browser/mock/process.js */ 343)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/node-libs-browser/mock/process.js */ 404)))
 
 /***/ }),
-/* 343 */
+/* 404 */
 /*!********************************************************!*\
   !*** ./node_modules/node-libs-browser/mock/process.js ***!
   \********************************************************/
@@ -39866,7 +35548,7 @@ exports.binding = function (name) {
     var path;
     exports.cwd = function () { return cwd };
     exports.chdir = function (dir) {
-        if (!path) path = __webpack_require__(/*! path */ 344);
+        if (!path) path = __webpack_require__(/*! path */ 405);
         cwd = path.resolve(dir, cwd);
     };
 })();
@@ -39879,7 +35561,7 @@ exports.features = {};
 
 
 /***/ }),
-/* 344 */
+/* 405 */
 /*!***********************************************!*\
   !*** ./node_modules/path-browserify/index.js ***!
   \***********************************************/
@@ -40189,143 +35871,13 @@ var substr = 'ab'.substr(-1) === 'b'
     }
 ;
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node-libs-browser/mock/process.js */ 343)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node-libs-browser/mock/process.js */ 404)))
 
 /***/ }),
-/* 345 */,
-/* 346 */,
-/* 347 */,
-/* 348 */,
-/* 349 */,
-/* 350 */,
-/* 351 */,
-/* 352 */,
-/* 353 */,
-/* 354 */,
-/* 355 */,
-/* 356 */,
-/* 357 */,
-/* 358 */,
-/* 359 */,
-/* 360 */,
-/* 361 */,
-/* 362 */,
-/* 363 */,
-/* 364 */,
-/* 365 */,
-/* 366 */,
-/* 367 */,
-/* 368 */,
-/* 369 */,
-/* 370 */,
-/* 371 */,
-/* 372 */,
-/* 373 */,
-/* 374 */,
-/* 375 */,
-/* 376 */,
-/* 377 */,
-/* 378 */,
-/* 379 */,
-/* 380 */,
-/* 381 */,
-/* 382 */,
-/* 383 */,
-/* 384 */,
-/* 385 */,
-/* 386 */,
-/* 387 */,
-/* 388 */,
-/* 389 */,
-/* 390 */,
-/* 391 */,
-/* 392 */,
-/* 393 */,
-/* 394 */,
-/* 395 */,
-/* 396 */,
-/* 397 */,
-/* 398 */,
-/* 399 */,
-/* 400 */,
-/* 401 */,
-/* 402 */,
-/* 403 */,
-/* 404 */,
-/* 405 */,
 /* 406 */,
 /* 407 */,
-/* 408 */
-/*!******************************************************!*\
-  !*** G:/yjbank-uniapp/components/uni-popup/popup.js ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _message = _interopRequireDefault(__webpack_require__(/*! ./message.js */ 409));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
-// 定义 type 类型:弹出类型：top/bottom/center
-var config = {
-  // 顶部弹出
-  top: 'top',
-  // 底部弹出
-  bottom: 'bottom',
-  // 居中弹出
-  center: 'center',
-  // 消息提示
-  message: 'top',
-  // 对话框
-  dialog: 'center',
-  // 分享
-  share: 'bottom' };var _default =
-
-
-{
-  data: function data() {
-    return {
-      config: config };
-
-  },
-  mixins: [_message.default] };exports.default = _default;
-
-/***/ }),
-/* 409 */
-/*!********************************************************!*\
-  !*** G:/yjbank-uniapp/components/uni-popup/message.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _created$created$meth;function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var _default = (_created$created$meth = {
-  created: function created() {
-    if (this.type === 'message') {
-      // 获取自组件对象
-      this.maskShow = false;
-      this.children = null;
-    }
-  } }, _defineProperty(_created$created$meth, "created", function created()
-{
-  if (this.type === 'message') {
-    // 不显示遮罩
-    this.maskShow = false;
-    // 获取子组件对象
-    this.childrenMsg = null;
-  }
-}), _defineProperty(_created$created$meth, "methods",
-{
-  customOpen: function customOpen() {
-    if (this.childrenMsg) {
-      this.childrenMsg.open();
-    }
-  },
-  customClose: function customClose() {
-    if (this.childrenMsg) {
-      this.childrenMsg.close();
-    }
-  } }), _created$created$meth);exports.default = _default;
-
-/***/ }),
+/* 408 */,
+/* 409 */,
 /* 410 */,
 /* 411 */,
 /* 412 */,
@@ -40350,18 +35902,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 /* 431 */,
 /* 432 */,
 /* 433 */,
-/* 434 */,
-/* 435 */,
-/* 436 */,
-/* 437 */,
-/* 438 */,
-/* 439 */,
-/* 440 */,
-/* 441 */,
-/* 442 */,
-/* 443 */,
-/* 444 */,
-/* 445 */
+/* 434 */
 /*!******************************************************!*\
   !*** G:/yjbank-uniapp/components/uni-icons/icons.js ***!
   \******************************************************/

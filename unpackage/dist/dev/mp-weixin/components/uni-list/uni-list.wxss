@@ -1,16 +1,11 @@
 
 .uni-list.data-v-34219f38 {
 
-		display: -webkit-box;
-		display: -webkit-flex;
 		display: flex;
 
 		background-color: #ffffff;
 		position: relative;
-		-webkit-box-orient: vertical;
-		-webkit-box-direction: normal;
-		-webkit-flex-direction: column;
-		        flex-direction: column;
+		flex-direction: column;
 		/* border-bottom-color: $uni-border-color;
  */
 		/* border-bottom-style: solid;

@@ -3,29 +3,44 @@
 		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
 	},
 	"pages": [{
-		"path": "pages/home/index/index"
+		"path": "pages/home/index"
 	}, {
 		"path": "pages/login/login"
-	}, {
-		"path": "pages/home/addMessage/addMessage"
 	}, {
 		"path": "pages/loan/loan"
 	}, {
 		"path": "pages/treehole/treehole"
 	}, {
-		"path": "pages/footprint/index/index"
+		"path": "pages/footprint/index"
 	}, {
-		"path": "pages/footprint/location/location"
+		"path": "pages/bet/list"
 	}, {
-		"path": "pages/wishlist/wishlist"
+		"path": "pages/expect/list"
 	}, {
-		"path": "pages/wishlist/add"
+		"path": "pages/add/list",
+		"style": {
+			"navigationBarTitleText": "新增"
+		}
 	}, {
-		"path": "pages/bet/betlist"
+		"path": "pages/add/addMessage",
+		"style": {
+			"navigationBarTitleText": "新增动态"
+		}
 	}, {
-		"path": "pages/bet/add"
+		"path": "pages/add/addExcept",
+		"style": {
+			"navigationBarTitleText": "新增期待"
+		}
 	}, {
-		"path": "pages/signin/signin"
+		"path": "pages/add/addBet",
+		"style": {
+			"navigationBarTitleText": "新增打赌"
+		}
+	}, {
+		"path": "pages/add/addLocation",
+		"style": {
+			"navigationBarTitleText": "新增足迹"
+		}
 	}, {
 		"path": "pages/calendar/calendar",
 		"style": {
@@ -35,18 +50,18 @@
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "小亚银行",
-		"navigationBarBackgroundColor": "#219511",
-		"backgroundColorTop": "#219511",
-		"backgroundColor": "#219511"
+		"navigationBarBackgroundColor": "#FF557F",
+		"backgroundColorTop": "#FF557F",
+		"backgroundColor": "#FF557F"
 	},
 	"condition": {
 		"current": 0,
 		"list": [{
-				"name": "小匀称打卡机",
-				"path": "pages/calendar/calendar"
-			},{
-				"name": "新增动态",
-				"path": "pages/home/addMessage/addMessage"
+				"name": "首页",
+				"path": "pages/home/index"
+			}, {
+				"name": "登录",
+				"path": "pages/login/login"
 			},
 			{
 				"name": "贷款",
@@ -58,7 +73,7 @@
 			},
 			{
 				"name": "足迹",
-				"path": "pages/footprint/index/index"
+				"path": "pages/footprint/map"
 			},
 			{
 				"name": "定位",

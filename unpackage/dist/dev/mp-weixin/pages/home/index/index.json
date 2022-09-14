@@ -1,9 +1,0 @@
-{
-  "usingComponents": {
-    "uni-grid": "/components/uni-grid/uni-grid",
-    "uni-grid-item": "/components/uni-grid-item/uni-grid-item",
-    "uni-card": "/components/uni-card/uni-card",
-    "uni-load-more": "/components/uni-load-more/uni-load-more",
-    "u-tabbar": "/node-modules/uview-ui/components/u-tabbar/u-tabbar"
-  }
-}

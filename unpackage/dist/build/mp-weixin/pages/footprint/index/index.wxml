@@ -1,1 +1,0 @@
-<view class="qiun-columns"><view class="qiun-bg-white qiun-title-bar qiun-common-mt"><view class="qiun-title-dot-light">地图</view></view><view class="qiun-charts"><canvas class="charts" canvas-id="canvasColumn" id="canvasColumn"></canvas></view><button data-event-opts="{{[['tap',[['goLocation',['$event']]]]]}}" class="location-btn" bindtap="__e">定位</button></view>

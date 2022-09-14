@@ -5,8 +5,11 @@
   },
   "setting": {
     "urlCheck": false,
+    "es6": true,
+    "postcss": false,
     "minified": true,
-    "es6": true
+    "newFeature": true,
+    "bigPackageSizeSupport": true
   },
   "compileType": "miniprogram",
   "libVersion": "",
@@ -27,14 +30,14 @@
     "miniprogram": {
       "list": [
         {
-          "name": "小匀称打卡机",
+          "name": "首页",
           "id": 0,
-          "pathName": "pages/calendar/calendar"
+          "pathName": "pages/home/index"
         },
         {
-          "name": "新增动态",
+          "name": "登录",
           "id": 1,
-          "pathName": "pages/home/addMessage/addMessage"
+          "pathName": "pages/login/login"
         },
         {
           "name": "贷款",
@@ -49,7 +52,7 @@
         {
           "name": "足迹",
           "id": 4,
-          "pathName": "pages/footprint/index/index"
+          "pathName": "pages/footprint/map"
         },
         {
           "name": "定位",

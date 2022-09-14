@@ -1,25 +1,16 @@
 
 .uni-badge.data-v-26a60cd2 {
 
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
-	-webkit-box-sizing: border-box;
-	        box-sizing: border-box;
+	box-sizing: border-box;
 	overflow: hidden;
 
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	        justify-content: center;
-	-webkit-box-orient: horizontal;
-	-webkit-box-direction: normal;
-	-webkit-flex-direction: row;
-	        flex-direction: row;
+	justify-content: center;
+	flex-direction: row;
 	height: 20px;
 	line-height: 20px;
 	color: #333;
-	-webkit-border-radius: 100px;
-	        border-radius: 100px;
+	border-radius: 100px;
 	background-color: #f1f1f1;
 	background-color: transparent;
 	text-align: center;
@@ -57,18 +48,18 @@
 }
 .uni-badge--warning.data-v-26a60cd2 {
 	color: #fff;
-	background-color: #f0ad4e;
+	background-color: #FF557F;
 }
 .uni-badge--warning-inverted.data-v-26a60cd2 {
-	color: #f0ad4e;
+	color: #FF557F;
 	background-color: transparent;
 }
 .uni-badge--error.data-v-26a60cd2 {
 	color: #fff;
-	background-color: #dd524d;
+	background-color: #FF557F;
 }
 .uni-badge--error-inverted.data-v-26a60cd2 {
-	color: #dd524d;
+	color: #FF557F;
 	background-color: transparent;
 }
 .uni-badge--small.data-v-26a60cd2 {

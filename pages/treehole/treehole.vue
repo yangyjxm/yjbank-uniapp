@@ -8,7 +8,7 @@
 			<view class="content">{{ item.content }}</view>
 			<view class="time">{{ item.time }}</view>
 		</view>
-		<uni-load-more :status="loadStatus"></uni-load-more>
+		<uni-load-more :status="loadStatus" :contentText="contentText"></uni-load-more>
 		<!-- <button class="location-btn" @click="signup">补录</button> -->
 		<view class='inputRoom'>
 			<input v-model="value" @input="onKeyInput" @confirm="addTreehole"></input>
@@ -45,10 +45,15 @@
 					'钮', '龚', '程', '嵇', '邢', '滑', '裴', '陆', '荣', '翁'
 				],
 				lastName: ['哥', '姐'],
-				loadStatus: "loading",
 				total: 0,
 				pageSize: 30,
-				pageNum: 0
+				pageNum: 0,
+				loadStatus: "loading",
+				contentText: {
+					contentdown: "上拉显示更多",
+					contentrefresh: "悄悄话加载中...",
+					contentnomore: "到我们爱发芽的地方啦~"
+				}
 			}
 		},
 		onLoad() {
@@ -98,7 +103,8 @@
 				uniCloud.callFunction({
 					name: 'addTreehole',
 					data: {
-						userid: getApp().globalData.userInfo.signature,
+						userid: getApp().globalData.userInfo.signature || 'unknown',
+						createBy: getApp().globalData.userInfo.nickName || 'unknown',
 						openid: uni.getStorageSync("openid"),
 						contentType: 'text',
 						content: this.value,

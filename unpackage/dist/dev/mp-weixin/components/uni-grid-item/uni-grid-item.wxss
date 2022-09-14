@@ -2,25 +2,16 @@
 .uni-grid-item.data-v-c05ffd80 {
 
 		height: 100%;
-		display: -webkit-box;
-		display: -webkit-flex;
 		display: flex;
 }
 .uni-grid-item__box.data-v-c05ffd80 {
 
-		display: -webkit-box;
-		display: -webkit-flex;
 		display: flex;
 		width: 100%;
 
 		position: relative;
-		-webkit-box-flex: 1;
-		-webkit-flex: 1;
-		        flex: 1;
-		-webkit-box-orient: vertical;
-		-webkit-box-direction: normal;
-		-webkit-flex-direction: column;
-		        flex-direction: column;
+		flex: 1;
+		flex-direction: column;
 		/* justify-content: center;
  */
 		/* align-items: center;

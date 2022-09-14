@@ -1,21 +1,12 @@
 
 .uni-load-more.data-v-5f6e5104 {
 
-	display: -webkit-box;
-	display: -webkit-flex;
 	display: flex;
 
-	-webkit-box-orient: horizontal;
-	-webkit-box-direction: normal;
-	-webkit-flex-direction: row;
-	        flex-direction: row;
+	flex-direction: row;
 	height: 40px;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	        align-items: center;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	        justify-content: center;
+	align-items: center;
+	justify-content: center;
 }
 .uni-load-more__text.data-v-5f6e5104 {
 	font-size: 15px;
@@ -190,12 +181,10 @@
 }
 .uni-load-more__img--android-MP>view.data-v-5f6e5104 {
 	position: absolute;
-	-webkit-box-sizing: border-box;
-	        box-sizing: border-box;
+	box-sizing: border-box;
 	width: 100%;
 	height: 100%;
-	-webkit-border-radius: 50%;
-	        border-radius: 50%;
+	border-radius: 50%;
 	border: solid 2px transparent;
 	border-top: solid 2px #777777;
 	-webkit-transform-origin: center;
