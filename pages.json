@@ -50,13 +50,16 @@
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "小亚银行",
-		"navigationBarBackgroundColor": "#ff0000",
-		"backgroundColorTop": "#ff0000",
-		"backgroundColor": "#ff0000"
+		"navigationBarBackgroundColor": "#f1a7c8",
+		"backgroundColorTop": "#f1a7c8",
+		"backgroundColor": "#f1a7c8"
 	},
 	"condition": {
 		"current": 0,
 		"list": [{
+				"name": "新增动态",
+				"path": "pages/add/addMessage"
+			},{
 				"name": "首页",
 				"path": "pages/home/index"
 			}, {

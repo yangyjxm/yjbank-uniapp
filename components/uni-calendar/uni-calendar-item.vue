@@ -113,7 +113,7 @@
 		width: 8px;
 		height: 8px;
 		border-radius: 8px;
-		background-color: #ff0000;
+		background-color: #f1a7c8;
 
 	}
 
@@ -133,7 +133,7 @@
 	}
 
 	.uni-calendar-item--extra {
-		color: #ff0000;
+		color: #f1a7c8;
 		opacity: 0.8;
 	}
 

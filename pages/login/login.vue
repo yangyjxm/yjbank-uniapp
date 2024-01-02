@@ -14,8 +14,45 @@
 	export default {
 		data() {
 			return {
-
+				messageData:[]
 			}
+		},
+		created(){
+				uniCloud.callFunction({
+					name: 'getMessage',
+					data: {
+						pageSize: 200,
+						pageNum: 0
+					}
+				}).then(res => {
+					this.messageData = res.result.data.map(obj=>obj.fileList)
+					console.log('this.messageData',this.messageData);
+					// for (let i = 0; i < res.result.data.length; i++) {
+					// 	// 腾讯云需要获取临时链接
+					// 	if (res.result.data[i].fileList) {
+					// 		uniCloud.getTempFileURL({
+					// 			fileList: [res.result.data[i].fileList],
+					// 			success: (res) => {
+					// 				// console.log('res', res);
+					// 				this.messageData[i].imgUrl = res
+					// 					.fileList[0].tempFileURL
+					// 				uniCloud.callFunction({
+					// 					name: 'updateMessage',
+					// 					data: {
+					// 						_id: this.messageData[i]._id,
+					// 						tempFileURL: this.messageData[i].imgUrl
+					// 					}
+					// 				}).then(res => {
+					// 				console.log('this.messageData[i]._id', this.messageData[i]._id);
+					// 				console.log('this.messageData[i].imgUrl', this.messageData[i].imgUrl);
+					// 					console.log('res', res);
+					// 				})
+					// 			}
+					// 		})
+					// 	}
+					// }
+					// console.log('this.messageData', this.messageData);
+				})
 		},
 		methods: {
 			// 旧版登录20210413前需适配微信接口改造
@@ -46,11 +83,10 @@
 								signature: res.signature
 							},
 							success() {
-								console.log(res);
+								console.log("userInfo",res);
 								uni.navigateBack({
 								    delta: 1
 								});
-								console.log(res);
 							}
 						})
 					},

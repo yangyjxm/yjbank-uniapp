@@ -33,7 +33,7 @@
 						longitude: 113.324520,
 						latitude: 23.21229
 					}],
-					color: "#FF0000DD",
+					color: "#f1a7c8DD",
 					width: 2,
 					dottedLine: true
 				}],

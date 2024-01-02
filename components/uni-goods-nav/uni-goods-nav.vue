@@ -11,7 +11,7 @@
 					</view>
 					<text class="uni-tab__text">{{ item.text }}</text>
 					<view class="flex uni-tab__dot-box">
-						<text v-if="item.info" :class="{ 'uni-tab__dots': item.info > 9 }" class="uni-tab__dot " :style="{'backgroundColor':item.infoBackgroundColor?item.infoBackgroundColor:'#ff0000',
+						<text v-if="item.info" :class="{ 'uni-tab__dots': item.info > 9 }" class="uni-tab__dot " :style="{'backgroundColor':item.infoBackgroundColor?item.infoBackgroundColor:'#f1a7c8',
 						color:item.infoColor?item.infoColor:'#fff'
 						}">{{ item.info }}</text>
 					</view>
@@ -65,7 +65,7 @@
 						},
 						{
 							text: '立即购买',
-							backgroundColor: '#ff0000',
+							backgroundColor: '#f1a7c8',
 							color: '#fff'
 						}
 					]
@@ -209,7 +209,7 @@
 		color: #ffffff;
 		text-align: center;
 		font-size: 12px;
-		background-color: #ff0000;
+		background-color: #f1a7c8;
 		border-radius: 15px;
 	}
 
@@ -225,6 +225,6 @@
 	}
 
 	.uni-tab__color-r {
-		background-color: #ff0000;
+		background-color: #f1a7c8;
 	}
 </style>

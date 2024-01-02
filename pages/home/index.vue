@@ -1,7 +1,7 @@
 <template>
 	<view class="home">
 		<!-- <uni-notice-bar showIcon="true" scrollable="true" single="true" text="🎉🎉🎉山东省烟台市欢迎小亚同志莅临指导🎉🎉🎉"></uni-notice-bar> -->
-		<uni-notice-bar showIcon="true" scrollable="true" single="true" text="云服务商切换中,部分功能暂不可用~~"></uni-notice-bar>
+		<uni-notice-bar showIcon="true" scrollable="true" single="true" text="⚠️云服务商切换,首页部分图片暂未完成迁移映射~~"></uni-notice-bar>
 		<view class="block">
 			<view class="block-first">在一起已经</view>
 			<view class="block-second">{{gap}}～</view>
@@ -41,8 +41,12 @@
 			</uni-grid>
 		</view>
 		<!-- 动态列表 -->
-		<uni-card v-for="item in messageData" :key="item.id" :mode="item.imgUrl ?'style': 'basic'" :is-shadow="true"
+	<!-- 	<uni-card v-for="item in messageData" :key="item.id" :mode="item.imgUrl ?'style': 'basic'" :is-shadow="true"
 			:thumbnail="item.imgUrl" :note="item.createBy + ' ' + item.createTime">
+			{{item.intro}}
+		</uni-card> -->
+		<uni-card v-for="item in messageData" :key="item.id" :mode="item.imgUrl ?'style': 'basic'" :is-shadow="true"
+			:thumbnail="item.imgUrl" :note="item.createTime">
 			{{item.intro}}
 		</uni-card>
 		<!-- 悬浮栏 -->

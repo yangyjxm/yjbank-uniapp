@@ -306,7 +306,7 @@
 	}
 
 	.redColor {
-		color: #ff0000;
+		color: #f1a7c8;
 	}
 
 	.TipArea {
@@ -320,7 +320,7 @@
 
 	.impTip {
 		display: inline-block;
-		color: #ff0000;
+		color: #f1a7c8;
 		font-size: 18px;
 		font-weight: bold;
 		margin: 0 6rpx;
