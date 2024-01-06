@@ -31,7 +31,7 @@
   margin: 0 !important;
 }
 .home .block {
-  background: #f1a7c8;
+  background: #c30003;
   padding-top: 10px;
   border-radius: 0 0 30% 30%;
   margin-bottom: 25px;
@@ -55,7 +55,7 @@
   margin: 10px auto;
   border-radius: 20px;
   padding: 10px 0;
-  color: #f1a7c8;
+  color: #c30003;
   box-shadow: 3px 3px 8px #888888;
 }
 .home .center {

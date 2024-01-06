@@ -46,13 +46,18 @@
 		"style": {
 			"navigationBarTitleText": "小匀称打卡机"
 		}
+	}, {
+		"path": "pages/contract/index",
+		"style": {
+			"navigationBarTitleText": "约定"
+		}
 	}],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "小亚银行",
-		"navigationBarBackgroundColor": "#f1a7c8",
-		"backgroundColorTop": "#f1a7c8",
-		"backgroundColor": "#f1a7c8"
+		"navigationBarBackgroundColor": "#c30003",
+		"backgroundColorTop": "#c30003",
+		"backgroundColor": "#c30003"
 	},
 	"condition": {
 		"current": 0,

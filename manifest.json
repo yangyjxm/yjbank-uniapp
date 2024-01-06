@@ -43,6 +43,7 @@
     "quickapp" : {},
     "mp-weixin" : {
         "appid" : "wxa88115e813d1c9d8",
+        "libVersion" : "latest",
         "setting" : {
             "urlCheck" : false,
             "minified" : true,

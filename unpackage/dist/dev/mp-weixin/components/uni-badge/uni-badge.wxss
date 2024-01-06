@@ -48,18 +48,18 @@
 }
 .uni-badge--warning.data-v-26a60cd2 {
 	color: #fff;
-	background-color: #f1a7c8;
+	background-color: #c30003;
 }
 .uni-badge--warning-inverted.data-v-26a60cd2 {
-	color: #f1a7c8;
+	color: #c30003;
 	background-color: transparent;
 }
 .uni-badge--error.data-v-26a60cd2 {
 	color: #fff;
-	background-color: #f1a7c8;
+	background-color: #c30003;
 }
 .uni-badge--error-inverted.data-v-26a60cd2 {
-	color: #f1a7c8;
+	color: #c30003;
 	background-color: transparent;
 }
 .uni-badge--small.data-v-26a60cd2 {

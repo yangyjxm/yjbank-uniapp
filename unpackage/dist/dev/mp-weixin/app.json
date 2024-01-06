@@ -12,15 +12,16 @@
     "pages/add/addExcept",
     "pages/add/addBet",
     "pages/add/addLocation",
-    "pages/calendar/calendar"
+    "pages/calendar/calendar",
+    "pages/contract/index"
   ],
   "subPackages": [],
   "window": {
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "小亚银行",
-    "navigationBarBackgroundColor": "#f1a7c8",
-    "backgroundColorTop": "#f1a7c8",
-    "backgroundColor": "#f1a7c8"
+    "navigationBarBackgroundColor": "#c30003",
+    "backgroundColorTop": "#c30003",
+    "backgroundColor": "#c30003"
   },
   "usingComponents": {}
 }

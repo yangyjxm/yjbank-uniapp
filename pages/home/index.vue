@@ -1,7 +1,7 @@
 <template>
 	<view class="home">
 		<!-- <uni-notice-bar showIcon="true" scrollable="true" single="true" text="🎉🎉🎉山东省烟台市欢迎小亚同志莅临指导🎉🎉🎉"></uni-notice-bar> -->
-		<uni-notice-bar showIcon="true" scrollable="true" single="true" text="⚠️云服务商切换,首页部分图片暂未完成迁移映射~~"></uni-notice-bar>
+		<!-- <uni-notice-bar showIcon="true" scrollable="true" single="true" text="⚠️云服务商切换,首页部分图片暂未完成迁移映射~~"></uni-notice-bar> -->
 		<view class="block">
 			<view class="block-first">在一起已经</view>
 			<view class="block-second">{{gap}}～</view>
@@ -14,10 +14,10 @@
 					<image src="@/static/home-icon/icon (2).png" mode="" style="width: 30px; height: 30px"></image>
 					<view>树洞</view>
 				</uni-grid-item>
-				<uni-grid-item class="center" index="3">
+				<!-- 	<uni-grid-item class="center" index="3">
 					<image src="@/static/home-icon/icon (3).png" mode="" style="width: 30px; height: 30px"></image>
 					<view>打卡</view>
-				</uni-grid-item>
+				</uni-grid-item> -->
 				<!-- <uni-grid-item class="center" index="4">
 					<image src="@/static/home-icon/icon (6).png" mode="" style="width: 30px; height: 30px"></image>
 					<view>足迹</view>
@@ -27,8 +27,8 @@
 					<view>提醒</view>
 				</uni-grid-item> -->
 				<uni-grid-item class="center" index="6">
-					<image src="@/static/home-icon/icon (4).png" mode="" style="width: 30px; height: 30px"></image>
-					<view>赌约</view>
+					<image src="@/static/home-icon/icon (3).png" mode="" style="width: 30px; height: 30px"></image>
+					<view>打赌</view>
 				</uni-grid-item>
 				<!-- 	<uni-grid-item class="center" index="7">
 					<image src="@/static/home-icon/icon (5).png" mode="" style="width: 30px; height: 30px"></image>
@@ -38,10 +38,14 @@
 					<image src="@/static/home-icon/icon (6).png" mode="" style="width: 30px; height: 30px"></image>
 					<view>新增</view>
 				</uni-grid-item> -->
+				<uni-grid-item class="center" index="9">
+					<image src="@/static/home-icon/icon (4).png" mode="" style="width: 30px; height: 30px"></image>
+					<view>约定</view>
+				</uni-grid-item>
 			</uni-grid>
 		</view>
 		<!-- 动态列表 -->
-	<!-- 	<uni-card v-for="item in messageData" :key="item.id" :mode="item.imgUrl ?'style': 'basic'" :is-shadow="true"
+		<!-- 	<uni-card v-for="item in messageData" :key="item.id" :mode="item.imgUrl ?'style': 'basic'" :is-shadow="true"
 			:thumbnail="item.imgUrl" :note="item.createBy + ' ' + item.createTime">
 			{{item.intro}}
 		</uni-card> -->
@@ -271,6 +275,11 @@
 					case 8:
 						uni.navigateTo({
 							url: '/pages/add/list'
+						})
+						break
+					case 9:
+						uni.navigateTo({
+							url: '/pages/contract/index'
 						})
 						break
 				}
