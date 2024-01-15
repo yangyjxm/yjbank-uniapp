@@ -145,11 +145,11 @@
 	}
 
 	.uni-tag-text--warning {
-		color: #c30003 !important;
+		color: #00A384 !important;
 	}
 
 	.uni-tag-text--error {
-		color: #c30003 !important;
+		color: #00A384 !important;
 	}
 
 	.uni-tag--primary {
@@ -186,34 +186,34 @@
 
 	.uni-tag--warning {
 		color: #fff;
-		background-color: #c30003;
+		background-color: #00A384;
 		border-width: 1rpx;
 		border-style: solid;
-		border-color: #c30003;
+		border-color: #00A384;
 	}
 
 	.warning-uni-tag--inverted {
-		color: #c30003;
+		color: #00A384;
 		background-color: #ffffff;
 		border-width: 1rpx;
 		border-style: solid;
-		border-color: #c30003;
+		border-color: #00A384;
 	}
 
 	.uni-tag--error {
 		color: #fff;
-		background-color: #c30003;
+		background-color: #00A384;
 		border-width: 1rpx;
 		border-style: solid;
-		border-color: #c30003;
+		border-color: #00A384;
 	}
 
 	.error-uni-tag--inverted {
-		color: #c30003;
+		color: #00A384;
 		background-color: #ffffff;
 		border-width: 1rpx;
 		border-style: solid;
-		border-color: #c30003;
+		border-color: #00A384;
 	}
 
 	.uni-tag--inverted {

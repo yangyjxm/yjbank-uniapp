@@ -25,10 +25,27 @@
 /* 透明度 */
 /* 文章场景相关 */
 .login {
+  padding-top: 80px;
   height: 100vh;
 }
+.login button::after {
+  display: none;
+}
+.login .avatarUrl {
+  background-color: #fff;
+}
+.login .avatarUrl image {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+}
+.login .submit {
+  width: 80%;
+  background-color: #00A384;
+  color: #ffffff;
+}
 .login .top {
-  background-color: #c30003;
+  background-color: #00A384;
   height: 50%;
   display: flex;
   align-items: center;
@@ -45,7 +62,7 @@
 }
 .login .bottom button {
   width: 50%;
-  background-color: #c30003;
+  background-color: #00A384;
   color: #fff;
   box-shadow: 3px 3px 8px #888888;
 }

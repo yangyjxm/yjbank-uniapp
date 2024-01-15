@@ -1,8 +1,7 @@
 {
   "description": "项目配置文件。",
   "packOptions": {
-    "ignore": [],
-    "include": []
+    "ignore": []
   },
   "setting": {
     "urlCheck": false,
@@ -10,60 +9,64 @@
     "postcss": false,
     "minified": true,
     "newFeature": true,
-    "bigPackageSizeSupport": true,
-    "babelSetting": {
-      "ignore": [],
-      "disablePlugins": [],
-      "outputPath": ""
-    }
+    "bigPackageSizeSupport": true
   },
   "compileType": "miniprogram",
   "libVersion": "latest",
   "appid": "wxa88115e813d1c9d8",
   "projectname": "yjb",
   "condition": {
+    "search": {
+      "current": -1,
+      "list": []
+    },
+    "conversation": {
+      "current": -1,
+      "list": []
+    },
+    "game": {
+      "current": -1,
+      "list": []
+    },
     "miniprogram": {
+      "current": 0,
       "list": [
         {
+          "name": "开屏页",
+          "id": 0,
+          "pathName": "pages/launch/launch"
+        },
+        {
           "name": "新增动态",
-          "pathName": "pages/add/addMessage",
-          "query": ""
+          "id": 1,
+          "pathName": "pages/add/addMessage"
         },
         {
           "name": "首页",
-          "pathName": "pages/home/index",
-          "query": ""
-        },
-        {
-          "name": "登录",
-          "pathName": "pages/login/login",
-          "query": ""
+          "id": 2,
+          "pathName": "pages/home/index"
         },
         {
           "name": "贷款",
-          "pathName": "pages/loan/loan",
-          "query": ""
+          "id": 3,
+          "pathName": "pages/loan/loan"
         },
         {
           "name": "树洞",
-          "pathName": "pages/treehole/treehole",
-          "query": ""
+          "id": 4,
+          "pathName": "pages/treehole/treehole"
         },
         {
           "name": "足迹",
-          "pathName": "pages/footprint/map",
-          "query": ""
+          "id": 5,
+          "pathName": "pages/footprint/map"
         },
         {
           "name": "定位",
-          "pathName": "pages/footprint/location/location",
-          "query": ""
+          "id": 6,
+          "pathName": "pages/footprint/location/location"
         }
       ]
     }
-  },
-  "editorSetting": {
-    "tabIndent": "insertSpaces",
-    "tabSize": 2
   }
 }

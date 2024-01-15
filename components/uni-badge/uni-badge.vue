@@ -123,21 +123,21 @@
 
 	.uni-badge--warning {
 		color: #fff;
-		background-color: #c30003;
+		background-color: #00A384;
 	}
 
 	.uni-badge--warning-inverted {
-		color: #c30003;
+		color: #00A384;
 		background-color: transparent;
 	}
 
 	.uni-badge--error {
 		color: #fff;
-		background-color: #c30003;
+		background-color: #00A384;
 	}
 
 	.uni-badge--error-inverted {
-		color: #c30003;
+		color: #00A384;
 		background-color: transparent;
 	}
 

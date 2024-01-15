@@ -115,19 +115,19 @@
 			// 检测是否已获取用户信息
 			// console.log('检测')
 			// console.log(getApp().globalData.userInfo)
-			uni.getStorage({
-				key: "userInfo",
-				success(res) {
-					getApp().globalData.userInfo = res.data
-					console.log('用户昵称:' + getApp().globalData.userInfo.nickName)
-				},
-				fail() {
-					console.log("尚未获得用户授权，无法取得用户信息。")
-					uni.navigateTo({
-						url: '/pages/login/login'
-					})
-				}
-			})
+			// uni.getStorage({
+			// 	key: "userInfo",
+			// 	success(res) {
+			// 		getApp().globalData.userInfo = res.data
+			// 		console.log('用户昵称:' + getApp().globalData.userInfo.nickName)
+			// 	},
+			// 	fail() {
+			// 		console.log("尚未获得用户授权，无法取得用户信息。")
+			// 		uni.navigateTo({
+			// 			url: '/pages/login/login'
+			// 		})
+			// 	}
+			// })
 		},
 		onReachBottom() {
 			if (this.messageData.length === this.total) {

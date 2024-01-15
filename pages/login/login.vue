@@ -1,12 +1,15 @@
 <template>
 	<view class="login">
-		<view class="top">
-			<image src="../../static/logo-white.png" style="width: 120px; height: 120px" mode=""></image>
-		</view>
-		<view class="bottom">
-			<!-- <button open-type="getUserInfo" @getuserinfo="getUserInfo">登陆</button> -->
-			<button @tap="getUserProfile">登录</button>
-		</view>
+		<button class="avatarUrl" open-type="chooseAvatar" @chooseavatar="onChooseAvatar">
+			<image :src="valiFormData.avatarUrl"></image>
+		</button>
+		<uni-forms ref="valiForm" :rules="rules" :modelValue="valiFormData">
+			<uni-forms-item label="昵称" required name="nickName">
+				<uni-easyinput type="nickname" v-model="valiFormData.nickName" :inputBorder="false"
+					placeholder="请输入昵称" />
+			</uni-forms-item>
+		</uni-forms>
+		<button class="submit" @click="submit()">提交</button>
 	</view>
 </template>
 
@@ -14,47 +17,69 @@
 	export default {
 		data() {
 			return {
-				messageData:[]
+				// 校验表单数据
+				valiFormData: {
+					nickName: '',
+					avatarUrl: 'https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0'
+				},
+				// 校验规则
+				rules: {
+					nickName: {
+						rules: [{
+							required: true,
+							errorMessage: '昵称不能为空'
+						}]
+					},
+				}
 			}
 		},
-		created(){
-				uniCloud.callFunction({
-					name: 'getMessage',
-					data: {
-						pageSize: 200,
-						pageNum: 0
-					}
-				}).then(res => {
-					this.messageData = res.result.data.map(obj=>obj.fileList)
-					console.log('this.messageData',this.messageData);
-					// for (let i = 0; i < res.result.data.length; i++) {
-					// 	// 腾讯云需要获取临时链接
-					// 	if (res.result.data[i].fileList) {
-					// 		uniCloud.getTempFileURL({
-					// 			fileList: [res.result.data[i].fileList],
-					// 			success: (res) => {
-					// 				// console.log('res', res);
-					// 				this.messageData[i].imgUrl = res
-					// 					.fileList[0].tempFileURL
-					// 				uniCloud.callFunction({
-					// 					name: 'updateMessage',
-					// 					data: {
-					// 						_id: this.messageData[i]._id,
-					// 						tempFileURL: this.messageData[i].imgUrl
-					// 					}
-					// 				}).then(res => {
-					// 				console.log('this.messageData[i]._id', this.messageData[i]._id);
-					// 				console.log('this.messageData[i].imgUrl', this.messageData[i].imgUrl);
-					// 					console.log('res', res);
-					// 				})
-					// 			}
-					// 		})
-					// 	}
-					// }
-					// console.log('this.messageData', this.messageData);
-				})
-		},
 		methods: {
+			submit() {
+				this.$refs['valiForm'].validate().then(res => {
+					console.log('success', res);
+					uni.showToast({
+						title: `校验通过`
+					})
+					uni.setStorage({
+						key: "userInfo",
+						data: this.valiFormData,
+						success() {
+							console.log("userInfo", res);
+							uni.navigateBack({
+								delta: 1
+							});
+						}
+					})
+					uni.login({
+						provider: 'weixin',
+						success: function(loginRes) {
+							console.log('成功点击登录按钮', loginRes)
+							let js_code = loginRes.code
+							uni.request({
+								method: 'GET',
+								url: 'https://api.weixin.qq.com/sns/jscode2session',
+								data: {
+									appid: 'wxa88115e813d1c9d8',
+									secret: 'a934255da1c34a19e6161f898dcf06f8',
+									js_code,
+									grant_type: 'authorization_code'
+								},
+								success: res => {
+									console.log('看看', res)
+									this.openid = res.data.openid
+								}
+							})
+						}
+					});
+				}).catch(err => {
+					console.log('err', err);
+				})
+			},
+			onChooseAvatar(e) {
+				this.valiFormData.avatarUrl = e.detail.avatarUrl
+				console.log('e.detail', e.detail.avatarUrl)
+				this.uploadFile();
+			},
 			// 旧版登录20210413前需适配微信接口改造
 			getUserInfo(details) {
 				console.log(details)
@@ -69,23 +94,23 @@
 			},
 			// 新版登录
 			getUserProfile() {
-				wx.getUserProfile({
+				uni.getUserProfile({
 					desc: '获取使用者头像、昵称',
 					lang: 'zh_CN',
 					success: function(res) {
-						// console.log(res.userInfo);
+						console.log(res.userInfo);
 						// getApp().globalData.userInfo = res.userInfo
 						// getApp().globalData.userInfo.signature = res.signature
 						uni.setStorage({
-							key : "userInfo",
+							key: "userInfo",
 							data: {
 								...res.userInfo,
 								signature: res.signature
 							},
 							success() {
-								console.log("userInfo",res);
+								console.log("userInfo", res);
 								uni.navigateBack({
-								    delta: 1
+									delta: 1
 								});
 							}
 						})
@@ -119,7 +144,28 @@
 
 <style lang="scss">
 	.login {
+		padding-top: 80px;
 		height: 100vh;
+
+		button::after {
+			display: none;
+		}
+
+		.avatarUrl {
+			background-color: #fff;
+
+			image {
+				width: 150px;
+				height: 150px;
+				border-radius: 10px;
+			}
+		}
+
+		.submit {
+			width: 80%;
+			background-color: $theme-color;
+			color: $uni-bg-color;
+		}
 
 		.top {
 			background-color: $theme-color;

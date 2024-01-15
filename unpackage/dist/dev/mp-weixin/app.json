@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/launch/launch",
     "pages/home/index",
     "pages/login/login",
     "pages/loan/loan",
@@ -19,9 +20,9 @@
   "window": {
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "小亚银行",
-    "navigationBarBackgroundColor": "#c30003",
-    "backgroundColorTop": "#c30003",
-    "backgroundColor": "#c30003"
+    "navigationBarBackgroundColor": "#00A384",
+    "backgroundColorTop": "#00A384",
+    "backgroundColor": "#00A384"
   },
   "usingComponents": {}
 }
