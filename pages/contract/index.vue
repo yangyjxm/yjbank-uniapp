@@ -1,5 +1,6 @@
 <template>
 	<view class="contract">
+		<uni-section title="居住计划" type="line"></uni-section>
 		<uni-table border stripe emptyText="暂无更多数据">
 			<!-- 表头行 -->
 			<uni-tr>
@@ -40,7 +41,18 @@
 				<uni-td>岛内共同居住为主，此时尽可能实现近而不邻</uni-td>
 			</uni-tr>
 		</uni-table>
-		一起住以后要买洗碗机，小亚负责做饭，不能天天点外卖
+		<uni-section title="生活" type="line"></uni-section>
+		<uni-group mode="card">
+			<view>一起住以后要买洗碗机，小亚负责做饭，不能天天点外卖 </view>
+		</uni-group>
+		<uni-section title="过年" type="line"></uni-section>
+		<uni-group mode="card">
+			<view>过年轮流两家过，或者偶尔一起，或者分开过 </view>
+		</uni-group>
+		<uni-section title="宠物" type="line"></uni-section>
+		<uni-group mode="card">
+			<view>待沟通 </view>
+		</uni-group>
 	</view>
 </template>
 
@@ -134,12 +146,7 @@
 </script>
 
 <style lang="scss">
-	.bet-list {
-		.bottom {
-			display: flex;
-			justify-content: space-between;
-
-			&-left {}
-		}
+	.contract {
+		padding-bottom: 50px;
 	}
 </style>

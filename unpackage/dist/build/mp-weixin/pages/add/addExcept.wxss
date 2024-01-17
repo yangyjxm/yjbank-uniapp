@@ -1,0 +1,1 @@
+.addExcept{padding:20px}.addExcept .uploadBtn{width:180rpx;line-height:90rpx;height:180rpx;font-size:24rpx;background-color:#eee;display:inline-block}.addExcept .uploadBtn:after{display:none}.addExcept .u-form-item--left{min-width:80px}.addExcept .u-button{position:fixed;bottom:20px;background-color:#00a384;border:none;color:#fff}

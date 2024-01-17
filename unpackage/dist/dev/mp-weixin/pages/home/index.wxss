@@ -32,9 +32,29 @@
 }
 .home .block {
   background: #00A384;
+  background-image: url("https://mp-0c94e1d0-ced8-4bdf-9912-4d17971f66df.cdn.bspapp.com/VKCEYUGU-0c94e1d0-ced8-4bdf-9912-4d17971f66df/01uxbhkt0soogye0x7oatk3331.jpg");
+  background-repeat: repeat;
+  background-size: cover;
   padding-top: 10px;
   border-radius: 0 0 30% 30%;
   margin-bottom: 25px;
+}
+.home .block-account {
+  display: inline-flex;
+  align-items: center;
+  background-color: transparent;
+  padding-top: 44px;
+  margin-left: 5%;
+  margin-bottom: 25px;
+  color: #fff;
+  font-weight: bold;
+}
+.home .block-account image {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 5px;
 }
 .home .block-first {
   color: #fff;

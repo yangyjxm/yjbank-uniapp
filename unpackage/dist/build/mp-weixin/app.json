@@ -1,0 +1,28 @@
+{
+  "pages": [
+    "pages/launch/launch",
+    "pages/home/index",
+    "pages/login/login",
+    "pages/loan/loan",
+    "pages/treehole/treehole",
+    "pages/footprint/index",
+    "pages/bet/list",
+    "pages/expect/list",
+    "pages/add/list",
+    "pages/add/addMessage",
+    "pages/add/addExcept",
+    "pages/add/addBet",
+    "pages/add/addLocation",
+    "pages/calendar/calendar",
+    "pages/contract/index"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "小亚银行",
+    "navigationBarBackgroundColor": "#00A384",
+    "backgroundColorTop": "#00A384",
+    "backgroundColor": "#00A384"
+  },
+  "usingComponents": {}
+}

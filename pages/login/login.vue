@@ -8,6 +8,9 @@
 				<uni-easyinput type="nickname" v-model="valiFormData.nickName" :inputBorder="false"
 					placeholder="请输入昵称" />
 			</uni-forms-item>
+			<uni-forms-item label="用户id" required name="openid">
+				<uni-easyinput v-model="valiFormData.openid" :inputBorder="false" placeholder="未获取到id" disabled />
+			</uni-forms-item>
 		</uni-forms>
 		<button class="submit" @click="submit()">提交</button>
 	</view>
@@ -19,8 +22,9 @@
 			return {
 				// 校验表单数据
 				valiFormData: {
-					nickName: '',
-					avatarUrl: 'https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0'
+					nickName: getApp().globalData.userInfo.nickName || '',
+					avatarUrl: getApp().globalData.userInfo.avatarUrl,
+					openid: getApp().globalData.userInfo.openid
 				},
 				// 校验规则
 				rules: {
@@ -36,43 +40,30 @@
 		methods: {
 			submit() {
 				this.$refs['valiForm'].validate().then(res => {
-					console.log('success', res);
+					console.log('success', res, this.valiFormData);
 					uni.showToast({
 						title: `校验通过`
 					})
-					uni.setStorage({
-						key: "userInfo",
-						data: this.valiFormData,
-						success() {
-							console.log("userInfo", res);
-							uni.navigateBack({
-								delta: 1
-							});
+					getApp().globalData.userInfo = {
+						openid: getApp().globalData.userInfo.openid,
+						...this.valiFormData
+					}
+					uniCloud.callFunction({
+						name: 'addUser',
+						data: {
+							openid: getApp().globalData.userInfo.openid,
+							...this.valiFormData
 						}
+					}).then(res => {
+						console.log('res', res)
+					}).catch(err => {
+						console.log('err', err)
 					})
-					uni.login({
-						provider: 'weixin',
-						success: function(loginRes) {
-							console.log('成功点击登录按钮', loginRes)
-							let js_code = loginRes.code
-							uni.request({
-								method: 'GET',
-								url: 'https://api.weixin.qq.com/sns/jscode2session',
-								data: {
-									appid: 'wxa88115e813d1c9d8',
-									secret: 'a934255da1c34a19e6161f898dcf06f8',
-									js_code,
-									grant_type: 'authorization_code'
-								},
-								success: res => {
-									console.log('看看', res)
-									this.openid = res.data.openid
-								}
-							})
-						}
+					uni.navigateBack({
+						delta: 1
 					});
-				}).catch(err => {
-					console.log('err', err);
+				}).catch(error => {
+					console.log('error', error);
 				})
 			},
 			onChooseAvatar(e) {
@@ -144,7 +135,7 @@
 
 <style lang="scss">
 	.login {
-		padding-top: 80px;
+		padding: 40px 20px 0;
 		height: 100vh;
 
 		button::after {
@@ -162,7 +153,7 @@
 		}
 
 		.submit {
-			width: 80%;
+			width: 100%;
 			background-color: $theme-color;
 			color: $uni-bg-color;
 		}

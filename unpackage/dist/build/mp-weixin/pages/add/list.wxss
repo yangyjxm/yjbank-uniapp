@@ -1,0 +1,1 @@
+.add-list{display:flex;flex-direction:column;justify-content:space-around;align-items:center;height:100vh}.add-list button{height:20vh;width:85vw;font-size:26px;line-height:20vh}

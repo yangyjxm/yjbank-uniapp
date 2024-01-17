@@ -11,7 +11,13 @@
 			}
 		}
 	}, {
-		"path": "pages/home/index"
+		"path": "pages/home/index",
+		"style": {
+			"navigationStyle": "custom",
+			"app-plus": {
+				"titleNView": false
+			}
+		}
 	}, {
 		"path": "pages/login/login"
 	}, {
@@ -68,13 +74,13 @@
 		"backgroundColorTop": "#00A384",
 		"backgroundColor": "#00A384"
 	},
-	"uniIdRouter": {
-		"loginPage": "pages/login/login", // 登录页面路径
-		"needLogin": [
-			"pages/loan/loan" // 需要登录才可访问的页面列表，可以使用正则语法
-		],
-		"resToLogin": true // 自动解析云对象及clientDB的错误码，如果是客户端token不正确或token过期则自动跳转配置的登录页面，配置为false则关闭此行为，默认true
-	},
+	// "uniIdRouter": {
+	// 	"loginPage": "pages/login/login", // 登录页面路径
+	// 	"needLogin": [
+	// 		"pages/loan/loan" // 需要登录才可访问的页面列表，可以使用正则语法
+	// 	],
+	// 	"resToLogin": true // 自动解析云对象及clientDB的错误码，如果是客户端token不正确或token过期则自动跳转配置的登录页面，配置为false则关闭此行为，默认true
+	// },
 	"condition": {
 		"current": 0,
 		"list": [{

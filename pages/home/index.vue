@@ -3,9 +3,12 @@
 		<!-- <uni-notice-bar showIcon="true" scrollable="true" single="true" text="🎉🎉🎉山东省烟台市欢迎小亚同志莅临指导🎉🎉🎉"></uni-notice-bar> -->
 		<!-- <uni-notice-bar showIcon="true" scrollable="true" single="true" text="⚠️云服务商切换,首页部分图片暂未完成迁移映射~~"></uni-notice-bar> -->
 		<view class="block">
+			<view class="block-account" @click="routerToLoginPage">
+				<image :src="userInfo.avatarUrl"></image>{{userInfo.nickName ? userInfo.nickName : '未登录'}}
+			</view>
 			<view class="block-first">在一起已经</view>
 			<view class="block-second">{{gap}}～</view>
-			<uni-grid :column="4" :show-border="false" :square="false" @change='change'>
+			<uni-grid :column="3" :show-border="false" :square="false" @change='change'>
 				<uni-grid-item class="center" index="1">
 					<image src="@/static/home-icon/icon (1).png" mode="" style="width: 30px; height: 30px"></image>
 					<view>贷款</view>
@@ -26,10 +29,10 @@
 					<image src="@/static/home-icon/icon (6).png" mode="" style="width: 30px; height: 30px"></image>
 					<view>提醒</view>
 				</uni-grid-item> -->
-				<uni-grid-item class="center" index="6">
+				<!-- <uni-grid-item class="center" index="6">
 					<image src="@/static/home-icon/icon (3).png" mode="" style="width: 30px; height: 30px"></image>
 					<view>打赌</view>
-				</uni-grid-item>
+				</uni-grid-item> -->
 				<!-- 	<uni-grid-item class="center" index="7">
 					<image src="@/static/home-icon/icon (5).png" mode="" style="width: 30px; height: 30px"></image>
 					<view>期待</view>
@@ -50,7 +53,7 @@
 			{{item.intro}}
 		</uni-card> -->
 		<uni-card v-for="item in messageData" :key="item.id" :mode="item.imgUrl ?'style': 'basic'" :is-shadow="true"
-			:thumbnail="item.imgUrl" :note="item.createTime">
+			:thumbnail="item.imgUrl" :note="item.createBy ? item.createBy + ' ' + item.createTime : item.createTime">
 			{{item.intro}}
 		</uni-card>
 		<!-- 悬浮栏 -->
@@ -66,6 +69,7 @@
 	export default {
 		data() {
 			return {
+				userInfo: {},
 				gap: '0天0时0分0秒',
 				list: [{
 					iconPath: "https://cdn.uviewui.com/uview/common/min_button.png",
@@ -112,6 +116,14 @@
 			this.getMessage()
 		},
 		onShow() {
+			this.userInfo = getApp().globalData.userInfo
+			// uni.getStorage({
+			// 	key: "userInfo",
+			// 	success: function(res) {
+			// 		this.userInfo = res.data
+			// 		console.log('this.userInfo', this.userInfo);
+			// 	}
+			// })
 			// 检测是否已获取用户信息
 			// console.log('检测')
 			// console.log(getApp().globalData.userInfo)
@@ -139,6 +151,14 @@
 			}
 		},
 		methods: {
+			// 跳转登录页
+			routerToLoginPage() {
+				// if (this.userInfo.nickName === '未登录') {
+				uni.navigateTo({
+					url: '/pages/login/login'
+				})
+				// }
+			},
 			// Fab点击事件
 			trigger(e) {
 				console.log(e.item.url)
@@ -298,9 +318,33 @@
 
 		.block {
 			background: $theme-color;
+			background-image: url("https://mp-0c94e1d0-ced8-4bdf-9912-4d17971f66df.cdn.bspapp.com/VKCEYUGU-0c94e1d0-ced8-4bdf-9912-4d17971f66df/01uxbhkt0soogye0x7oatk3331.jpg");
+			background-repeat: repeat;
+			background-size: cover;
 			padding-top: 10px;
 			border-radius: 0 0 30% 30%;
 			margin-bottom: 25px;
+		}
+
+		.block-account {
+			display: inline-flex;
+			align-items: center;
+			// background: $theme-color;
+			background-color: transparent;
+			padding-top: 44px;
+			margin-left: 5%;
+			margin-bottom: 25px;
+			color: #fff;
+			// font-size: 24px;
+			font-weight: bold;
+
+			image {
+				display: inline-block;
+				width: 32px;
+				height: 32px;
+				border-radius: 50%;
+				margin-right: 5px;
+			}
 		}
 
 		.block-first {

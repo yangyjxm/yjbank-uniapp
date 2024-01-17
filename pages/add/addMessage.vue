@@ -6,7 +6,8 @@
 			</u-form-item>
 			<u-form-item label="图片">
 				<image v-if="imgUrl" style="width:180rpx;height:180rpx" :src="imgUrl" mode="widthFix"></image>
-				<button v-else class="uploadBtn" @click="upload"><text style="font-size: 80rpx">+</text><br>选择图片</button>
+				<button v-else class="uploadBtn" @click="upload"><text
+						style="font-size: 80rpx">+</text><br>选择图片</button>
 			</u-form-item>
 			<!-- <u-form-item label="评分">
 				<u-rate :count="5" v-model="form.value"></u-rate>
@@ -40,7 +41,8 @@
 								success(info) {
 									const options = {
 										filePath: path,
-										cloudPath: Date.now() + '.' + info.type.toLowerCase()
+										cloudPath: Date.now() + '.' + info.type
+											.toLowerCase()
 									}
 									resolve(options)
 								},
@@ -100,9 +102,14 @@
 			submit() {
 				uniCloud.callFunction({
 					name: 'addMessage',
-					data: { ...this.form,
+					data: {
+						...this.form,
 						createBy: getApp().globalData.userInfo.nickName,
-						createTime: new Date().toLocaleString('zh', { year: 'numeric', month: '2-digit', day: '2-digit'}) + " " + new Date().toTimeString().slice(0,8)
+						createTime: new Date().toLocaleString('zh', {
+							year: 'numeric',
+							month: '2-digit',
+							day: '2-digit'
+						}) + " " + new Date().toTimeString().slice(0, 8)
 					}
 				}).then(res => {
 					uni.reLaunch({

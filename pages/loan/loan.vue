@@ -1,14 +1,15 @@
 <template>
 	<view class="loan">
-		<uni-segmented-control class="switch" :current="current" :values="items" @clickItem="onClickItem" style-type="text"
-		 active-color="#00A384"></uni-segmented-control>
+		<uni-segmented-control class="switch" :current="current" :values="items" @clickItem="onClickItem"
+			style-type="text" active-color="#00A384"></uni-segmented-control>
 		<view class="content">
 			<view v-if="current === 0">
 				<uni-list>
-					<uni-list-item v-for="(object,index) in unfinishData" :key="index" :rightText="object.title" clickable @click="open(object)"
-					 thumb="../../static/unfinish.png"></uni-list-item>
+					<uni-list-item v-for="(object,index) in unfinishData" :key="index" :rightText="object.title"
+						clickable @click="open(object)" thumb="../../static/unfinish.png"></uni-list-item>
 					<u-line />
-					<u-field v-model="newLoanTitle" label-width="0" placeholder="于此输入新的贷款" input-align="center" placeholder-style="color: #999;font-size: 12px">
+					<u-field v-model="newLoanTitle" label-width="0" placeholder="于此输入新的贷款" input-align="center"
+						placeholder-style="color: #999;font-size: 12px">
 					</u-field>
 					<u-line />
 					<button class="addBtn" @click="addNewLoan()">新增</button>
@@ -16,14 +17,14 @@
 			</view>
 			<view v-if="current === 1">
 				<uni-list>
-					<uni-list-item v-for="(object,index) in doingData" :key="index" :rightText="object.title" clickable @click="open(object)"
-					 thumb="../../static/doing.png"></uni-list-item>
+					<uni-list-item v-for="(object,index) in doingData" :key="index" :rightText="object.title" clickable
+						@click="open(object)" thumb="../../static/doing.png"></uni-list-item>
 				</uni-list>
 			</view>
 			<view v-if="current === 2">
 				<uni-list>
-					<uni-list-item v-for="(object,index) in finishData" :key="index" :rightText="object.title" clickable @click="open(object)"
-					 thumb="../../static/finish.png"></uni-list-item>
+					<uni-list-item v-for="(object,index) in finishData" :key="index" :rightText="object.title" clickable
+						@click="open(object)" thumb="../../static/finish.png"></uni-list-item>
 				</uni-list>
 			</view>
 		</view>
@@ -69,6 +70,10 @@
 			}
 		},
 		onLoad() {
+			uni.showLoading({
+				title: '加载中',
+				mask: true
+			});
 			this.countLoan()
 			this.queryLoanList()
 		},
@@ -88,6 +93,7 @@
 					}
 				}).then(res => {
 					this.unfinishData = res.result.data
+					uni.hideLoading();
 				})
 
 				uniCloud.callFunction({
@@ -160,7 +166,11 @@
 						title: this.newLoanTitle,
 						status: "0",
 						createBy: getApp().globalData.userInfo.nickName,
-						createTime: new Date().toLocaleString('zh', { year: 'numeric', month: '2-digit', day: '2-digit'}) + " " + new Date().toTimeString().slice(0,8)
+						createTime: new Date().toLocaleString('zh', {
+							year: 'numeric',
+							month: '2-digit',
+							day: '2-digit'
+						}) + " " + new Date().toTimeString().slice(0, 8)
 					}
 				}).then(res => {
 					this.queryLoanList()
