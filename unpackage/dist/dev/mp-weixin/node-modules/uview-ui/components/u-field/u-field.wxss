@@ -24,6 +24,13 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+.pig-btn.data-v-578c626d {
+  background-color: #00A384;
+  color: #ffffff;
+}
+.pig-btn.data-v-578c626d::before {
+  content: '';
+}
 .u-field.data-v-578c626d {
   font-size: 28rpx;
   padding: 20rpx 28rpx;

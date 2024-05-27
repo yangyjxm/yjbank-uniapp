@@ -1,17 +1,17 @@
 <template>
 	<view class="treehole">
-		<view :key='itme.id' v-for='(item,index) in msgList' class="block">
-			<!-- <view class="floor">{{ index }}楼</view> -->
-			<!-- <view class="floor">{{ firstName[(index % 200)] }}子{{ lastName[(index % 2)] }}:</view> -->
-			<!-- 					<view class="floor">{{ item.id }}楼</view>
-			<view class="floor">{{ firstName[(item.id % 200)] }}子{{ lastName[(item.id % 2)] }}</view> -->
-			<view class="content">{{ item.content }}</view>
-			<view class="time">{{ item.time }}</view>
-		</view>
+		<uni-group mode="card" :key='itme.id' v-for='(item,index) in msgList'>
+			<image :src="item.image" mode=""></image>
+			<view class="block">
+				<view class="name">{{ item.name }}</view>
+				<view class="time">{{ item.time }}</view>
+			</view>
+			<view class="content" v-html="item.content"></view>
+		</uni-group>
 		<uni-load-more :status="loadStatus" :contentText="contentText"></uni-load-more>
 		<!-- <button class="location-btn" @click="signup">补录</button> -->
 		<view class='inputRoom'>
-			<input v-model="value" @input="onKeyInput" @confirm="addTreehole"></input>
+			<input maxlength="-1" v-model="value" @input="onKeyInput" @confirm="addTreehole"></input>
 		</view>
 	</view>
 </template>
@@ -45,6 +45,23 @@
 					'钮', '龚', '程', '嵇', '邢', '滑', '裴', '陆', '荣', '翁'
 				],
 				lastName: ['哥', '姐'],
+				englishName: ["Kaehler", "Yngve", "Stehn", "Shenoy", "Thorberta", "Mogler", "Hrycyk", "Euzebia", "Boeve",
+					"Haydn", "Gourley", "Akhavan", "Muneera", "Fick", "Birton", "Bondoc", "Dartez", "Turini", "Chaple",
+					"Schissel", "Poventud", "Timonen", "Alle", "Penttila", "Panknin", "Delain", "Bogufal", "Allyn",
+					"Cannady", "Kaelber", "Oleda", "Groberg", "Baso", "Bunbury", "Govier", "Laughridge", "Schwope",
+					"Anding", "Ansley", "Fuessel", "Rezmer", "Tychicus", "Villavaso", "Wahlberg", "Beisert", "Noles",
+					"Inger", "Casini", "Bequette", "Zubal", "Josalind", "Hartmeyer", "Hammersley", "Larmour",
+					"Kielian", "Taher", "Labedz", "Sias", "Nicotera", "Momany", "Dannewitz", "Diglio", "Woss", "Zewe",
+					"Jonairys", "Fukayna", "Sunngifu", "Vaquerano", "Hostutler", "Huettel", "Juranek", "Maisy",
+					"Allete", "Stovern", "Kemble", "Kushmaul", "Maphet"
+				],
+				chineseName: ["凯勒", "英格夫", "斯泰恩", "谢诺伊", "索伯塔", "莫格勒", "赫里西克", "尤泽比亚", "博维", "海顿", "古利", "阿卡万", "穆内拉",
+					"菲克", "伯顿", "邦多克", "达特兹", "图里尼", "查普尔", "希塞尔", "波文图德", "蒂莫宁", "阿勒", "潘蒂拉", "潘克宁", "德莱恩", "博古法尔",
+					"阿林", "坎纳迪", "凯尔伯", "奥莱达", "格罗伯格", "巴索", "班伯里", "戈维尔", "劳克里奇", "施沃普", "安丁", "安斯利", "富塞尔", "雷兹梅尔",
+					"泰奇库斯", "维拉瓦索", "沃尔伯格", "贝塞特", "诺尔斯", "英格", "卡西尼", "贝奎特", "祖巴尔", "乔萨林德", "哈特迈耶", "哈默斯利", "拉莫尔",
+					"基利安", "塔希尔", "拉贝兹", "西亚斯", "尼科泰拉", "莫曼尼", "丹尼维茨", "迪格里奥", "沃斯", "泽维", "乔奈里斯", "富凯纳", "双义府",
+					"瓦克拉诺", "霍斯特勒", "韦特尔", "朱拉内克", "麦茜", "阿莱特", "斯托文", "肯布尔", "库什莫尔", "马菲特"
+				],
 				total: 0,
 				pageSize: 30,
 				pageNum: 0,
@@ -57,6 +74,10 @@
 			}
 		},
 		onLoad() {
+			uni.showLoading({
+				title: '加载中',
+				mask: true
+			});
 			this.queryTreeholeList()
 		},
 		onReachBottom() {
@@ -71,6 +92,7 @@
 		methods: {
 			// 获取树洞数据列表
 			queryTreeholeList() {
+				let _this = this
 				// this.$http.get('/weapp/queryTreeholeList', {}).then(res => {
 				// 	this.msgList = res.data.map(obj => ({
 				// 		id: obj.id,
@@ -86,7 +108,17 @@
 					}
 				}).then(res => {
 					this.total = res.result.count.total
-					this.msgList = [...this.msgList, ...res.result.data]
+					let newData = res.result.data.map(item => {
+						return {
+							...item,
+							name: _this.englishName[Math.floor(Math.random() * 75 + 1)],
+							image: '../../static/treehole/icon (' + String(Math.floor(Math.random() * 50 +
+								1)) + ').png'
+						}
+					})
+					// let newData = res.result.data
+					this.msgList = [...this.msgList, ...newData]
+					uni.hideLoading();
 				})
 			},
 			// 新增评论
@@ -144,13 +176,35 @@
 	.treehole {
 		padding-bottom: 70px;
 
+		image {
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+		}
+
 		.block {
-			padding: 10px;
-			border-bottom: 1px solid #ccc;
+			display: inline-block;
+			margin-left: 24px;
+			// padding: 10px;
+			// border-bottom: 1px solid #ccc;
 
 			// &:last-child {
 			// 	margin-bottom: 71px;
 			// }
+		}
+
+		.name {
+			// display: inline-block;
+			// margin-left: 24px;
+			color: #333;
+			font-size: 14px;
+		}
+
+		.time {
+			// display: inline-block;
+			// margin-left: 24px;
+			color: #ccc;
+			font-size: 12px;
 		}
 
 		.floor {
@@ -165,10 +219,6 @@
 			font-size: 14px;
 		}
 
-		.time {
-			color: #ccc;
-			font-size: 12px;
-		}
 
 		.inputRoom {
 			width: 750rpx;

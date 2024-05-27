@@ -24,6 +24,13 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+.pig-btn.data-v-3bf2dba7 {
+  background-color: #00A384;
+  color: #ffffff;
+}
+.pig-btn.data-v-3bf2dba7::before {
+  content: '';
+}
 .u-btn.data-v-3bf2dba7::after {
   border: none;
 }

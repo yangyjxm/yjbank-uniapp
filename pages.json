@@ -65,6 +65,11 @@
 		"style": {
 			"navigationBarTitleText": "约定"
 		}
+	}, {
+		"path": "pages/restaurant/index",
+		"style": {
+			"navigationBarTitleText": "餐厅"
+		}
 	}],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",

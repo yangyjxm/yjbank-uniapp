@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "餐厅",
+  "usingComponents": {
+    "d-goods-home": "/uni_modules/d-goods-home/components/d-goods-home/d-goods-home"
+  }
+}

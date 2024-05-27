@@ -1,5 +1,6 @@
 {
   "usingComponents": {
+    "uni-group": "/uni_modules/uni-group/components/uni-group/uni-group",
     "uni-load-more": "/components/uni-load-more/uni-load-more"
   }
 }

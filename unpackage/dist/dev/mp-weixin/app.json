@@ -14,7 +14,8 @@
     "pages/add/addBet",
     "pages/add/addLocation",
     "pages/calendar/calendar",
-    "pages/contract/index"
+    "pages/contract/index",
+    "pages/restaurant/index"
   ],
   "subPackages": [],
   "window": {

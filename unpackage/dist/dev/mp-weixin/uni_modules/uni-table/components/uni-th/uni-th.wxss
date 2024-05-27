@@ -24,6 +24,13 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+.pig-btn {
+  background-color: #00A384;
+  color: #ffffff;
+}
+.pig-btn::before {
+  content: '';
+}
 .uni-table-th {
   padding: 12px 10px;
   display: table-cell;

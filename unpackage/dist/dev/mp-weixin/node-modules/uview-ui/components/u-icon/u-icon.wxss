@@ -710,6 +710,13 @@
 .uicon-share-fill.data-v-172979f2:before {
 	content: "\e65e";
 }
+.pig-btn.data-v-172979f2 {
+  background-color: #00A384;
+  color: #ffffff;
+}
+.pig-btn.data-v-172979f2::before {
+  content: '';
+}
 .u-icon.data-v-172979f2 {
   display: inline-flex;
   align-items: center;

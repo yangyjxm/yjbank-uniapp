@@ -1,14 +1,17 @@
 <template>
 	<view class="home">
 		<!-- <uni-notice-bar showIcon="true" scrollable="true" single="true" text="🎉🎉🎉山东省烟台市欢迎小亚同志莅临指导🎉🎉🎉"></uni-notice-bar> -->
-		<!-- <uni-notice-bar showIcon="true" scrollable="true" single="true" text="⚠️云服务商切换,首页部分图片暂未完成迁移映射~~"></uni-notice-bar> -->
 		<view class="block">
-			<view class="block-account" @click="routerToLoginPage">
-				<image :src="userInfo.avatarUrl"></image>{{userInfo.nickName ? userInfo.nickName : '未登录'}}
+			<!-- <view class="loader"></view> -->
+			<view class="blank"></view>
+			<view class="loader" v-if="loading"></view>
+			<view class="block-account" v-else @click="routerToLoginPage">
+				<image :src="avatarUrl">
+				</image>{{nickName}}
 			</view>
 			<view class="block-first">在一起已经</view>
 			<view class="block-second">{{gap}}～</view>
-			<uni-grid :column="3" :show-border="false" :square="false" @change='change'>
+			<uni-grid :column="4" :show-border="false" :square="false" @change='change'>
 				<uni-grid-item class="center" index="1">
 					<image src="@/static/home-icon/icon (1).png" mode="" style="width: 30px; height: 30px"></image>
 					<view>贷款</view>
@@ -45,6 +48,10 @@
 					<image src="@/static/home-icon/icon (4).png" mode="" style="width: 30px; height: 30px"></image>
 					<view>约定</view>
 				</uni-grid-item>
+				<uni-grid-item class="center" index="10">
+					<image src="@/static/home-icon/icon (3).png" mode="" style="width: 30px; height: 30px"></image>
+					<view>餐厅</view>
+				</uni-grid-item>
 			</uni-grid>
 		</view>
 		<!-- 动态列表 -->
@@ -69,7 +76,10 @@
 	export default {
 		data() {
 			return {
-				userInfo: {},
+				loading: true,
+				userInfo: getApp().globalData.userInfo,
+				avatarUrl: 'https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0',
+				nickName: '点击登录',
 				gap: '0天0时0分0秒',
 				list: [{
 					iconPath: "https://cdn.uviewui.com/uview/common/min_button.png",
@@ -116,30 +126,7 @@
 			this.getMessage()
 		},
 		onShow() {
-			this.userInfo = getApp().globalData.userInfo
-			// uni.getStorage({
-			// 	key: "userInfo",
-			// 	success: function(res) {
-			// 		this.userInfo = res.data
-			// 		console.log('this.userInfo', this.userInfo);
-			// 	}
-			// })
-			// 检测是否已获取用户信息
-			// console.log('检测')
-			// console.log(getApp().globalData.userInfo)
-			// uni.getStorage({
-			// 	key: "userInfo",
-			// 	success(res) {
-			// 		getApp().globalData.userInfo = res.data
-			// 		console.log('用户昵称:' + getApp().globalData.userInfo.nickName)
-			// 	},
-			// 	fail() {
-			// 		console.log("尚未获得用户授权，无法取得用户信息。")
-			// 		uni.navigateTo({
-			// 			url: '/pages/login/login'
-			// 		})
-			// 	}
-			// })
+			this.getUserInfo()
 		},
 		onReachBottom() {
 			if (this.messageData.length === this.total) {
@@ -151,13 +138,50 @@
 			}
 		},
 		methods: {
+			// 获取用户信息
+			getUserInfo() {
+				console.log('首页获取用户信息')
+				let _this = this
+				uni.login({
+					provider: 'weixin',
+					success: function(loginRes) {
+						uniCloud.callFunction({
+							name: 'getOpenid',
+							data: {
+								js_code: loginRes.code
+							}
+						}).then(res => {
+							uniCloud.callFunction({
+								name: 'getUser',
+								data: {
+									openid: res.result.data.openid
+								}
+							}).then(response => {
+								if (response.result.data.length) {
+									_this.avatarUrl = response.result
+										.data[0].avatarUrl
+									_this.nickName = response.result
+										.data[0].nickName
+								}
+								console.log('用户信息获取完成', _this.nickName, _this.avatarUrl)
+							}).catch(err => {
+								console.log('err', err)
+							}).finally(() => {
+								_this.loading = false
+							})
+						}).catch(err => {
+							console.log('err', err)
+						})
+					}
+				});
+			},
 			// 跳转登录页
 			routerToLoginPage() {
-				// if (this.userInfo.nickName === '未登录') {
+				// this.getUserInfo()
+				// this.nickName = 'aaa'
 				uni.navigateTo({
 					url: '/pages/login/login'
 				})
-				// }
 			},
 			// Fab点击事件
 			trigger(e) {
@@ -302,6 +326,11 @@
 							url: '/pages/contract/index'
 						})
 						break
+					case 10:
+						uni.navigateTo({
+							url: '/pages/restaurant/index'
+						})
+						break
 				}
 			}
 		}
@@ -311,6 +340,44 @@
 <style lang="scss">
 	.home {
 		padding-bottom: 20rpx;
+
+		.blank {
+			height: 44px;
+		}
+
+		.loader {
+			margin: 6px 0 31px 0;
+			height: 20px;
+			width: 20px;
+			aspect-ratio: 1;
+			background: #25b09b;
+			box-shadow: 0 0 60px 15px #25b09b;
+			transform: translate(-80px);
+			clip-path: inset(0);
+			animation:
+				l4-1 0.5s ease-in-out infinite alternate,
+				l4-2 1s ease-in-out infinite;
+		}
+
+		@keyframes l4-1 {
+			100% {
+				transform: translateX(110px)
+			}
+		}
+
+		@keyframes l4-2 {
+			33% {
+				clip-path: inset(0 0 0 -100px)
+			}
+
+			50% {
+				clip-path: inset(0 0 0 0)
+			}
+
+			83% {
+				clip-path: inset(0 -100px 0 0)
+			}
+		}
 
 		.uni-noticebar {
 			margin: 0 !important;
@@ -331,7 +398,6 @@
 			align-items: center;
 			// background: $theme-color;
 			background-color: transparent;
-			padding-top: 44px;
 			margin-left: 5%;
 			margin-bottom: 25px;
 			color: #fff;

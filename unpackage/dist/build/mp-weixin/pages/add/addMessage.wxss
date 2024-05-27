@@ -1,1 +1,1 @@
-.addMessage{padding:20px}.addMessage .uploadBtn{width:180rpx;line-height:90rpx;height:180rpx;font-size:24rpx;background-color:#eee;display:inline-block}.addMessage .uploadBtn:after{display:none}
+.pig-btn{background-color:#00a384;color:#fff}.pig-btn::before{content:""}.addMessage{padding:20px}.addMessage .uploadBtn{width:180rpx;line-height:90rpx;height:180rpx;font-size:24rpx;background-color:#eee;display:inline-block}.addMessage .uploadBtn:after{display:none}

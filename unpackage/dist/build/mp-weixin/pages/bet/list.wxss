@@ -1,1 +1,1 @@
-.bet-list .bottom{display:flex;justify-content:space-between}
+.pig-btn{background-color:#00a384;color:#fff}.pig-btn::before{content:""}.bet-list .bottom{display:flex;justify-content:space-between}

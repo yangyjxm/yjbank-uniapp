@@ -24,12 +24,32 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+.pig-btn {
+  background-color: #00A384;
+  color: #ffffff;
+}
+.pig-btn::before {
+  content: '';
+}
 .treehole {
   padding-bottom: 70px;
 }
+.treehole image {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
 .treehole .block {
-  padding: 10px;
-  border-bottom: 1px solid #ccc;
+  display: inline-block;
+  margin-left: 24px;
+}
+.treehole .name {
+  color: #333;
+  font-size: 14px;
+}
+.treehole .time {
+  color: #ccc;
+  font-size: 12px;
 }
 .treehole .floor {
   display: inline-block;
@@ -40,10 +60,6 @@
   margin: 4px 0;
   color: #666;
   font-size: 14px;
-}
-.treehole .time {
-  color: #ccc;
-  font-size: 12px;
 }
 .treehole .inputRoom {
   width: 750rpx;

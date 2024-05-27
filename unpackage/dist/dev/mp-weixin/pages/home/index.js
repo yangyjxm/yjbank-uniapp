@@ -186,7 +186,10 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 var _default = {
   data: function data() {
     return {
-      userInfo: {},
+      loading: true,
+      userInfo: getApp().globalData.userInfo,
+      avatarUrl: 'https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0',
+      nickName: '点击登录',
       gap: '0天0时0分0秒',
       list: [{
         iconPath: "https://cdn.uviewui.com/uview/common/min_button.png",
@@ -226,38 +229,15 @@ var _default = {
     };
   },
   onLoad: function onLoad() {
-    var _this = this;
+    var _this2 = this;
     this.computedTime();
     var timeCount = setInterval(function () {
-      return _this.computedTime();
+      return _this2.computedTime();
     }, 1000);
     this.getMessage();
   },
   onShow: function onShow() {
-    this.userInfo = getApp().globalData.userInfo;
-    // uni.getStorage({
-    // 	key: "userInfo",
-    // 	success: function(res) {
-    // 		this.userInfo = res.data
-    // 		console.log('this.userInfo', this.userInfo);
-    // 	}
-    // })
-    // 检测是否已获取用户信息
-    // console.log('检测')
-    // console.log(getApp().globalData.userInfo)
-    // uni.getStorage({
-    // 	key: "userInfo",
-    // 	success(res) {
-    // 		getApp().globalData.userInfo = res.data
-    // 		console.log('用户昵称:' + getApp().globalData.userInfo.nickName)
-    // 	},
-    // 	fail() {
-    // 		console.log("尚未获得用户授权，无法取得用户信息。")
-    // 		uni.navigateTo({
-    // 			url: '/pages/login/login'
-    // 		})
-    // 	}
-    // })
+    this.getUserInfo();
   },
   onReachBottom: function onReachBottom() {
     if (this.messageData.length === this.total) {
@@ -269,13 +249,48 @@ var _default = {
     }
   },
   methods: {
+    // 获取用户信息
+    getUserInfo: function getUserInfo() {
+      console.log('首页获取用户信息');
+      var _this = this;
+      uni.login({
+        provider: 'weixin',
+        success: function success(loginRes) {
+          uniCloud.callFunction({
+            name: 'getOpenid',
+            data: {
+              js_code: loginRes.code
+            }
+          }).then(function (res) {
+            uniCloud.callFunction({
+              name: 'getUser',
+              data: {
+                openid: res.result.data.openid
+              }
+            }).then(function (response) {
+              if (response.result.data.length) {
+                _this.avatarUrl = response.result.data[0].avatarUrl;
+                _this.nickName = response.result.data[0].nickName;
+              }
+              console.log('用户信息获取完成', _this.nickName, _this.avatarUrl);
+            }).catch(function (err) {
+              console.log('err', err);
+            }).finally(function () {
+              _this.loading = false;
+            });
+          }).catch(function (err) {
+            console.log('err', err);
+          });
+        }
+      });
+    },
     // 跳转登录页
     routerToLoginPage: function routerToLoginPage() {
-      // if (this.userInfo.nickName === '未登录') {
+      // this.getUserInfo()
+      // this.nickName = 'aaa'
       uni.navigateTo({
         url: '/pages/login/login'
       });
-      // }
     },
     // Fab点击事件
     trigger: function trigger(e) {
@@ -294,7 +309,7 @@ var _default = {
     },
     // 获取动态信息列表
     getMessage: function getMessage() {
-      var _this2 = this;
+      var _this3 = this;
       uniCloud.callFunction({
         name: 'getMessage',
         data: {
@@ -302,10 +317,10 @@ var _default = {
           pageNum: this.pageNum
         }
       }).then(function (res) {
-        _this2.total = res.result.count.total;
-        _this2.messageData = [].concat((0, _toConsumableArray2.default)(_this2.messageData), (0, _toConsumableArray2.default)(res.result.data));
-        console.log('this.messageData', _this2.messageData);
-        _this2.messageData = _this2.messageData.map(function (obj) {
+        _this3.total = res.result.count.total;
+        _this3.messageData = [].concat((0, _toConsumableArray2.default)(_this3.messageData), (0, _toConsumableArray2.default)(res.result.data));
+        console.log('this.messageData', _this3.messageData);
+        _this3.messageData = _this3.messageData.map(function (obj) {
           return _objectSpread(_objectSpread({}, obj), {}, {
             imgUrl: obj.fileList
           });
@@ -323,7 +338,7 @@ var _default = {
           // 	})
           // }
         }
-        console.log('this.messageData', _this2.messageData);
+        console.log('this.messageData', _this3.messageData);
         // this.loadStatus = "noMore"
       });
     },
@@ -417,6 +432,11 @@ var _default = {
         case 9:
           uni.navigateTo({
             url: '/pages/contract/index'
+          });
+          break;
+        case 10:
+          uni.navigateTo({
+            url: '/pages/restaurant/index'
           });
           break;
       }

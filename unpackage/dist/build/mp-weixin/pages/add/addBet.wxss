@@ -1,1 +1,1 @@
-.addBet{padding:20px}
+.pig-btn{background-color:#00a384;color:#fff}.pig-btn::before{content:""}.addBet{padding:20px}

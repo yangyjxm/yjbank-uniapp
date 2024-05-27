@@ -1,0 +1,193 @@
+
+page {
+	background-color: #f2f2f2;
+}
+
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.pig-btn.data-v-db7e319e {
+  background-color: #00A384;
+  color: #ffffff;
+}
+.pig-btn.data-v-db7e319e::before {
+  content: '';
+}
+.myflex.data-v-db7e319e {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.text-overflow-two.data-v-db7e319e {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.text-overflow-one.data-v-db7e319e {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.vueBox.data-v-db7e319e {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.myThemeBg.data-v-db7e319e {
+  background-image: linear-gradient(-90deg, #ff4e8a, #ff8ec2);
+  background-image: linear-gradient(-90deg, #00A384, #00A384);
+  color: #fff;
+}
+.comShopVueTy.data-v-db7e319e {
+  width: 100%;
+  height: calc(100vh - 300rpx -10px);
+  background-color: #000;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.comShopVueTy .comShopVueType.data-v-db7e319e {
+  top: 0;
+  width: 100%;
+  height: calc(100vh - 300rpx -10px);
+  background-color: #fff;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+}
+.comShopVueTy .comShopVueType .comShopVueTypeLeft.data-v-db7e319e {
+  width: 30%;
+  height: 100%;
+  background-color: #fff;
+}
+.comShopVueTy .comShopVueType .comShopVueTypeLeft .comShopVueTypeLeftWrapper.data-v-db7e319e {
+  width: 100%;
+  background-color: #f2f2f2;
+  overflow-y: scroll;
+}
+.comShopVueTy .comShopVueType .comShopVueTypeRight.data-v-db7e319e {
+  width: 80%;
+  height: 100%;
+  background-color: #fff;
+  min-width: 325rpx;
+  min-height: 600rpx;
+  margin-left: 20rpx;
+}
+.comShopVueTy .comShopVueType .comShopVueTypeRight .comShopVueTypeRightNavBox.data-v-db7e319e {
+  width: 80rpx;
+  height: 40rpx;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24rpx;
+}
+.comVueGoods.data-v-db7e319e {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  margin: 25rpx 0 0rpx 0;
+  display: flex;
+  flex-direction: column;
+}
+.comVueGoods .comVueGoodsIg.data-v-db7e319e {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+}
+.comVueGoods .comVueGoodsImg.data-v-db7e319e {
+  width: 120rpx;
+  height: 120rpx;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+  flex: none;
+}
+.comVueGoods .comVueGoodsImg .comVueGoodsImgImg.data-v-db7e319e {
+  width: 120rpx;
+  height: 120rpx;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+  flex: none;
+}
+.comVueGoods .comVueGoodsRight.data-v-db7e319e {
+  flex: 1;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+.comVueGoods .comVueGoodsRight .comVueGoodsRightTitle.data-v-db7e319e {
+  font-size: 28rpx;
+}
+.comVueGoods .comVueGoodsRight .comVueGoodsRightDesc.data-v-db7e319e {
+  margin-top: 5rpx;
+  width: 350rpx;
+  height: 50rpx;
+  font-size: 24rpx;
+  color: #999;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.comVueGoods .comVueGoodsRight .comVueGoodsRightTag.data-v-db7e319e {
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  font-size: 24rpx;
+}
+.comVueGoods .comVueGoodsRight .comVueGoodsRightTag .comVueGoodsRightTagBox.data-v-db7e319e {
+  height: 40rpx;
+  border: 1px solid red;
+  border-radius: 20rpx;
+  padding: 0 20rpx;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.comVueGoods .comVueGoodsRight .comVueGoodsRightEnd.data-v-db7e319e {
+  width: 100%;
+  height: 50rpx;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.comVueGoods .comVueGoodsRight .comVueGoodsRightEnd .comVueGoodsRightEndLeft.data-v-db7e319e {
+  display: flex;
+}
+.comVueGoods .comVueGoodsRight .comVueGoodsRightEnd .comVueGoodsRightEndLeft .comVueGoodsRightEndLeftPrice.data-v-db7e319e {
+  margin-right: 20rpx;
+  font-size: 30rpx;
+}
+.comVueGoods .comVueGoodsRight .comVueGoodsRightEnd .comVueGoodsRightEndRight.data-v-db7e319e {
+  background-color: #fff;
+}
+

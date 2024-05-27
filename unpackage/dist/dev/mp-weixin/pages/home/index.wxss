@@ -24,8 +24,72 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+.pig-btn {
+  background-color: #00A384;
+  color: #ffffff;
+}
+.pig-btn::before {
+  content: '';
+}
 .home {
   padding-bottom: 20rpx;
+}
+.home .blank {
+  height: 44px;
+}
+.home .loader {
+  margin: 6px 0 31px 0;
+  height: 20px;
+  width: 20px;
+  aspect-ratio: 1;
+  background: #25b09b;
+  box-shadow: 0 0 60px 15px #25b09b;
+  -webkit-transform: translate(-80px);
+          transform: translate(-80px);
+  -webkit-clip-path: inset(0);
+          clip-path: inset(0);
+  -webkit-animation: l4-1 0.5s ease-in-out infinite alternate, l4-2 1s ease-in-out infinite;
+          animation: l4-1 0.5s ease-in-out infinite alternate, l4-2 1s ease-in-out infinite;
+}
+@-webkit-keyframes l4-1 {
+100% {
+    -webkit-transform: translateX(110px);
+            transform: translateX(110px);
+}
+}
+@keyframes l4-1 {
+100% {
+    -webkit-transform: translateX(110px);
+            transform: translateX(110px);
+}
+}
+@-webkit-keyframes l4-2 {
+33% {
+    -webkit-clip-path: inset(0 0 0 -100px);
+            clip-path: inset(0 0 0 -100px);
+}
+50% {
+    -webkit-clip-path: inset(0 0 0 0);
+            clip-path: inset(0 0 0 0);
+}
+83% {
+    -webkit-clip-path: inset(0 -100px 0 0);
+            clip-path: inset(0 -100px 0 0);
+}
+}
+@keyframes l4-2 {
+33% {
+    -webkit-clip-path: inset(0 0 0 -100px);
+            clip-path: inset(0 0 0 -100px);
+}
+50% {
+    -webkit-clip-path: inset(0 0 0 0);
+            clip-path: inset(0 0 0 0);
+}
+83% {
+    -webkit-clip-path: inset(0 -100px 0 0);
+            clip-path: inset(0 -100px 0 0);
+}
 }
 .home .uni-noticebar {
   margin: 0 !important;
@@ -43,7 +107,6 @@
   display: inline-flex;
   align-items: center;
   background-color: transparent;
-  padding-top: 44px;
   margin-left: 5%;
   margin-bottom: 25px;
   color: #fff;
