@@ -1,9 +1,9 @@
 <template>
 	<view class="launch">
 		<image src="../../static/launch-bak.png" mode=""></image>
+		<!-- <image src="../../static/launch.jpg" mode=""></image> -->
 		<div class="countdown" @click="routerToHome">跳转 | {{countdown}}s</div>
-		<!-- <div class="weddingCountdown">距离婚礼还有<span class="num">{{weddingCountdown}}</span>天</div> -->
-		<div class="weddingCountdown">距<br />离<br />婚<br />礼<br />还<br />有<br /><span
+		<div class="weddingCountdown">距<br />离<br />领<br />证<br />还<br />有<br /><span
 				class="num">{{weddingCountdown}}<br /></span>天</div>
 	</view>
 </template>
@@ -20,7 +20,7 @@
 		},
 		mounted() {
 			let m2 = Moment(); // 当下时间
-			let m1 = Moment('2024-04-20 00:00:00'); // 起始时间
+			let m1 = Moment('2024-06-04 00:00:00'); // 起始时间
 			this.weddingCountdown = m1.diff(m2, 'day')
 			this.time = setInterval(() => {
 				this.countdown--

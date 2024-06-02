@@ -18,7 +18,7 @@
     }
   },
   "compileType": "miniprogram",
-  "libVersion": "latest",
+  "libVersion": "3.4.4",
   "appid": "wxa88115e813d1c9d8",
   "projectname": "yjb",
   "condition": {},
